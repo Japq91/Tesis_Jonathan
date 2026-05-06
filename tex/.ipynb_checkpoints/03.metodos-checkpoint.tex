@@ -1,0 +1,330 @@
+\chapter{Metodologia}\label{ch:metodologia}
+
+\section{Desenho geral}\label{sec:diseno_general}
+
+O objetivo metodológico desta tese consiste em caracterizar a distribuição espacial e a magnitude dos máximos de precipitação e vento associados aos ciclones extratropicais do Atlântico Sul, adotando um marco de referência lagrangiano centrado no sistema. 
+A análise é condicionada sistematicamente por dois fatores determinantes: a fase do ciclo de vida e sua região de ciclogênese na América do Sul. 
+A estratégia experimental estrutura-se em uma sequência lógica: parte-se de uma base de dados preexistente de trajetórias e uma classificação objetiva de fases evolutivas; sobre esta base, extraem-se campos horários do reanálise ao redor do centro de cada sistema para construir compositos representativos e, finalmente, aplicam-se técnicas estatísticas para quantificar e caracterizar os extremos das variáveis de superfície selecionadas.
+
+\section{Dados do Reanálise ERA5}\label{sec:datos_era5}
+
+Para a caracterização dos campos atmosféricos utilizou-se o reanálise de quinta geração do ECMWF, ERA5, descrito por \citet{hersbach2020era5}. 
+Analisou-se o período compreendido entre 1979 e 2020, acessando especificamente as variáveis de precipitação e vento através do conjunto de dados \textit{``ERA5 hourly data on single levels from 1940 to present''} \citep{hersbach_era5_2023b}. 
+A escolha do ERA5 de alta resolução resulta crítica para este desenho experimental, já que permite superar as limitações documentadas por \citet{hodges2011comparison}, os quais demonstraram que os reanálises de gerações prévias apresentavam discrepâncias significativas na captura da intensidade máxima dos ciclones no Hemisfério Sul devido a resoluções espaciais insuficientes. 
+Esta capacidade superior do ERA5 responde diretamente à sua alta resolução espacial ($\sim$31 km) e temporal (horária). 
+Esta capacidade para resolver escalas finas é crítica neste estudo, já que, tal como demonstraram \citet{priestley2022improved} e \citet{dalanhese2023new}, a maior resolução reduz a subestimação da intensidade dos sistemas observada em gerações prévias de reanálises, permitindo uma representação mais realista dos gradientes de vento e dos núcleos de precipitação associados aos ciclones.
+
+No entanto, deve reconhecer-se uma limitação documentada na representação de extremos, tal como o mostra \citet{chen2024evaluation} na quantificação do ERA5 e encontraram que subestima sistematicamente os extremos do top 5\% de ciclones extratropicais, com vieses de -10,2\% em vento e -22,6\% em precipitação em relação a observações satelitais e estações superficiais.
+
+\subsection{Variáveis meteorológicas}\label{subsec:variables}
+A caracterização dos padrões espaciais realizou-se a partir de campos horários extraídos do ERA5, selecionando as variáveis de superfície:
+
+\begin{itemize}
+    \item Precipitação total acumulada.
+    \item Magnitude do vento em superfície (10 m).
+\end{itemize}
+
+A decisão de analisar os campos de vento e precipitação, e em conjunto, responde à necessidade de capturar a estrutura dos eventos individuais e compostos (\textit{compound events}). Investigações recentes de ciclones extratropicais em latitudes médias do hemisfério norte, como a de \citet{chen2025characteristics}, destacam que a coocorrência espaço-temporal de extremos de vento e precipitação gera características que diferem significativamente dos extremos isolados. 
+
+Nesse sentido, segundo \citet{zscheischler2018future}, a concorrência varia localmente segundo a orografia e o padrão meteorológico. Dado que a organização espacial desses eventos concorrentes é o resultado direto do forçante sinóptico associado aos ciclones, propõe-se avaliar ambas as variáveis em conjunto. Essa interação define o evento além de seus efeitos individuais e motiva a aplicação de técnicas multivariadas (MEOF) para desacoplar seus modos de variabilidade e analisar a coerência espacial nos sistemas do Atlântico Sul.
+
+\section{Base de trajetórias e fases}\label{sec:bd_ciclones}
+
+Para a identificação e caracterização dos sistemas, esta investigação utiliza uma versão enriquecida da base de ciclones no Atlântico Sul. Especificamente, emprega-se a base de dados processada por \citet{coutodesouza2024new}, quem tomou o catálogo original de trajetórias (\textit{tracking}) desenvolvido por \citet{gramcianinov2019properties} e lhe incorporou uma classificação objetiva das fases evolutivas mediante o algoritmo \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}. Desta forma, o insumo principal deste trabalho combina um acompanhamento espacial robusto com um diagnóstico dinâmico ao longo de todo o ciclo de vida do ciclone.
+
+Dado que os fundamentos dinâmicos que justificam o uso da vorticidade relativa e a segmentação do ciclo de vida já foram expostos nas Seções \ref{sec:tb_vorticidad} e \ref{subsec:tb_fases} da revisão bibliográfica, esta seção limita-se a descrever as especificações técnicas e os critérios de filtragem do conjunto de dados utilizado.
+
+Em sua construção original \citep{gramcianinov2019properties}, o catálogo base de trajetórias deriva-se dos campos do reanálise ERA5, aproveitando sua alta resolução para capturar sistemas de mesoescala e ciclogêneses orográficas, comuns na região de estudo \citep{gramcianinov2020analysis}. 
+% La identificación de los centros se realizó mediante el algoritmo TRACK, aplicando filtros de coherencia espacio-temporal para conservar únicamente sistemas con relevancia sinóptica. 
+Os parâmetros de configuração do algoritmo e os filtros aplicados detalham-se na Tabela \ref{tab:tracking_params}.
+
+\input{tabelas_pt/tab_tracking_params.tex}
+
+Sobre este acompanhamento espacial contínuo, a camada de enriquecimento metodológico de \citet{coutodesouza2024new} atribui uma etiqueta específica a cada passo de tempo da trajetória. Esta classificação, utilizando \textit{CycloPhaser}, avalia a taxa de mudança da vorticidade central, permitindo isolar com precisão matemática os momentos de desenvolvimento e decaimento do sistema. A Tabela \ref{tab:fases_def} resume as quatro fases evolutivas consideradas neste estudo.
+
+\input{tabelas_pt/tab_fases_def.tex}
+
+\section{Estratificação por regiões de ciclogênese}\label{sec:regiones_ciclogenesis}
+
+Para avaliar se as variáveis de superfície associadas aos ciclones poderiam variar segundo sua origem geográfica, a amostra está estratificada em três regiões de ciclogênese. 
+A definição espacial desses domínios segue estritamente a taxonomia de densidade proposta por \citet{gramcianinov2019properties}, delimitando os setores SBR, LPB e ARG mediante os recuadros de latitude e longitude detalhados na Tabela \ref{tab:regiones_coords}.
+
+\input{tabelas_pt/tab_regiones_coords.tex}
+
+Cabe destacar que esta segmentação geográfica corresponde-se com os distintos regimes dinâmicos (subtropical/híbrido para SBR, transicional para LPB e baroclínico para ARG) cujas características físicas e mecanismos de forçamento foram discutidos na Seção \ref{sec:tb_regiones} do Marco Teórico.
+
+% --- DEFINICIÓN DE LAS POBLACIONES DE ESTUDIO ---
+\section{Definição das populações de estudo}\label{sec:poblaciones_estudio}
+
+Para caracterizar a estrutura dos ciclones extratropicais e avaliar quantitativamente o efeito de sua intensidade dinâmica sobre as variáveis superficiais, a base de dados de trajetórias foi segmentada em dois níveis hierárquicos: primeiro definiu-se uma população climatológica base (População Global) e, a partir dela, extraiu-se o subconjunto p90 baseado no limiar de intensidade de vorticidade relativa em 850 hPa, $\zeta_{850}^{min}$). 
+A extração dessas populações realizou-se estratificando os resultados de forma independente para as três regiões de ciclogênese (SBR, LPB e ARG).
+
+\subsection{População Global: Climatologia de referência}\label{subsec:grupo_global}
+
+O objetivo da População Global é estabelecer o comportamento morfológico e estatístico médio dos ciclones com um desenvolvimento típico e completo na região. 
+Para conformá-la, aplicou-se um filtro de coerência evolutiva à base ciclones, selecionando unicamente aqueles ciclones que cumpriram com dois critérios fundamentais:
+
+\begin{enumerate}
+    \item Ciclo de vida completo: Presença confirmada sequencial das quatro fases de desenvolvimento: incipiente (\textit{incipient}), intensificação (\textit{intensification}), maturidade (\textit{mature}) e decadência (\textit{decay}).
+    \item Ausência de fases complexas: Excluíram-se categoricamente os sistemas que desenvolveram fases secundárias, de reintensificação (e.g., \textit{intensification 2}, \textit{mature 2}) ou fases residuais (\textit{residual}).
+\end{enumerate}
+
+Este duplo filtragem purga o ruído introduzido por vórtices efêmeros ou de evolução errática, buscando garantir uma amostra climatológica homogênea. 
+Para cada ciclone desta População Global, identificou-se o registro temporal correspondente à sua máxima intensidade (o extremo absoluto de vorticidade relativa a 850 hPa, $\zeta_{850}^{min}$) para alinhar os eventos e estabelecer a métrica de intensidade que se utilizará na segmentação posterior. 
+
+\subsection{Subconjunto de sistemas de alta intensidade (p90)}\label{subsec:subconjuntos_intensidad}
+
+Para avaliar a sensibilidade dos padrões espaciais e a magnitude das variáveis frente à severidade dinâmica do sistema, extraiu-se da População Global um estrato de alta intensidade.
+Este grupo compreende os 10\% de ciclones com os valores mais negativos de vorticidade relativa mínima em 850 hPa ($\zeta_{850}^{min}$), correspondentes ao primeiro decil da distribuição climatológica. Doravante, este estrato denominar-se-á estritamente \textbf{subconjunto p90}. A retenção exclusiva deste subconjunto de extremos — excluindo explicitamente os percentis intermediários ou inferiores — responde a uma prática metodológica de \textit{compositing} ciclônico. \citet{priestley2022improved} aplicam explicitamente este mesmo limiar estatístico de vorticidade para isolar as estruturas representativas dos ciclones mais intensos.
+No contexto específico do Atlântico Sudoeste, \citet{andrade2024composite} documentam que ciclones intensos (selecionados usando percentil 10 de pressão mínima) exibem padrões sinópticos diferenciados e de maiores impactos em superfície. 
+Esta convergência metodológica de selecionar sistemas intensos permite analisar o subconjunto p90 como uma população estatística e fisicamente relevante de ciclones extratropicais do Atlântico Sul.
+
+A Tabela \ref{tab:conteo_ciclones} documenta a redução do tamanho amostral desde a base crua até a conformação da População Global e o subconjunto de intensidade p90.
+
+\input{tabelas_pt/tab_conteo_ciclones.tex}
+
+\subsection{Estratificação de ciclones}\label{subsec:validacao_selecao}
+
+Um aspecto necessário desta estratificação é verificar se os sistemas do subconjunto p90 mantêm uma evolução temporal coerente. 
+A análise da fase em que se registra o pico de vorticidade (Tabela \ref{tab:fase_max_intensidad}) confirma que o subconjunto p90 respeita a estrutura dinâmica dominante: aproximadamente 83\% dos casos alcançam sua máxima intensidade durante a fase de maturidade, frente a menos de 5\% que o faz durante a fase de decadência. 
+Este comportamento dos ciclones mais intensos da base de dados é coerente com o observado na População Global e respalda o critério estatístico do percentil 90 para capturar sistemas sinopticamente maduros e organizados, excluindo vórtices transitorios ou de desenvolvimento difuso.
+
+\input{tabelas_pt/tab_fase_max_intensidad.tex}
+
+\subsection{Estratégia de análise comparativo}\label{subsec:estrategia_analise}
+
+Sobre o subconjunto p90 de alta intensidade — e comparando-o sistematicamente com a População Global de referência — aplicar-se-á integramente o fluxo metodológico detalhado nas seções subseqüentes: construção de campos por fase, extração de máximos, estimação de distribuições PDF, análise KDE de localização e decomposição EOF univariada e multivariada. 
+Esta estratégia comparativa entre a climatologia completa e o subconjunto de extremos (p90) permitirá avaliar se uma maior intensidade dinâmica do vórtice associa-se com mudanças significativas em: (i) a magnitude absoluta dos máximos de vento e precipitação, (ii) a distribuição espacial relativa destes máximos, e (iii) os padrões estruturais dominantes. 
+Como documentam \citet{andrade2024composite}, os ciclones mais intensos apresentam estruturas frontais e padrões de impacto distintivos em comparação com os sistemas de menor intensidade, hipótese que este desenho analítico busca quantificar para o Atlântico Sul.
+
+\section{Processamento Lagrangiano}\label{sec:procesamiento_lagrangiano}
+
+Para caracterizar a estrutura dos sistemas independentemente de sua localização geográfica, adota-se um marco de referência lagrangiano fundamentado nos princípios de acompanhamento objetivo de \citet{sinclair1994objective}. 
+Este enfoque, baseado no centramento sobre máximos de vorticidade, captura a evolução dinâmica de forma mais coerente que o acompanhamento tradicional por mínimos de pressão. 
+Como demonstrou posteriormente \citet{sinclair1997objective}, o uso isolado da pressão central ou da vorticidade em um único ponto apresenta severas limitações para inferir a intensidade dos impactos de um ciclone.
+Define-se um domínio móvel de $20^{\circ} \times 20^{\circ}$ para cada instante $t$ da trajetória. Esta técnica de composição permite isolar o sinal de mesoescala e extrair os campos horários de superfície, garantindo a representação física da extensão espacial de seus braços frontais.
+
+A análise realiza-se de forma separada para cada combinação de região de ciclogênese e fase do ciclo de vida, permitindo estratificar os resultados de maneira simultânea por estes dois fatores. 
+Para reduzir a variabilidade de alta frequência inerente aos dados horários e isolar a condição estrutural mais representativa de cada fase — evitando a contaminação introduzida pelos instantes de transição entre regimes dinâmicos adjacentes — aplica-se uma média centrada. 
+Especificamente, para cada ciclone e fase, selecionam-se os registros horários correspondentes ao núcleo temporal de dita fase — os dois ou três passos centrais segundo sua duração — e medeiam-se seus campos espaciais. 
+Este critério garante que o campo resultante reflita a condição arquetípica do regime em questão (incipiente, intensificação, maturidade ou decadência) e não uma mistura de dois estados sucessivos, gerando um único campo médio por ciclone--fase sobre o qual se executarão as técnicas estatísticas subseqüentes.
+
+\section{Caracterização estatística}\label{sec:tecnicas_estadisticas}
+
+\subsection{Extração de máximos -- densidade de probabilidade (PDF)}\label{subsec:extraccion_pdf}
+
+A partir do campo médio por ciclone--fase, delimita-se a área de análise aplicando uma máscara circular de $9.5^{\circ}$ de raio, centrada no sistema como se explica em \ref{sec:procesamiento_lagrangiano}. 
+Para a extração dos máximos, e com o objetivo de mitigar o impacto do ruído ou anomalias isoladas em escala de ponto de grade, aplicou-se um suavizado espacial bidimensional sobre os campos utilizando um filtro gaussiano ($\sigma = 0,25$) mediante a biblioteca \texttt{scipy.ndimage} de Python. 
+Dentro deste raio de influência contínuo e suavizado, identifica-se a magnitude do valor máximo absoluto da variável de interesse ($x_i$), ignorando valores fora do limite espacial, junto com sua localização em coordenadas relativas ao centro, denotada como $\mathbf{s}_i=(\Delta x_i,\Delta y_i)$. 
+Este procedimento gera, para cada combinação de região, fase evolutiva e variável, um conjunto de $m$ valores máximos empíricos e suas respectivas posições espaciais (um par magnitude-localização por cada evento).
+
+Para caracterizar a distribuição estatística das magnitudes máximas extraídas ($\{x_i\}_{i=1}^{m}$), estimou-se a função de densidade de probabilidade (PDF, do inglês) mediante a técnica de estimação de densidade por \textit{kernel} (KDE) unidimensional. 
+Este procedimento analítico foi implementado utilizando a classe \texttt{gaussian\_kde} da biblioteca \texttt{scipy.stats}. 
+
+A função estimada $\hat{f}(x)$ define-se como:
+
+\begin{equation}
+    \hat{f}(x) = \frac{1}{m h} \sum_{i=1}^{m} K\left(\frac{x - x_i}{h}\right),
+\label{eq:kde_pdf}
+\end{equation}
+
+onde $h$ é o parâmetro de suavização ou largura de banda (\textit{bandwidth}), e $K(\cdot)$ representa a função núcleo, e selecionou-se um núcleo gaussiano, expresso como:
+
+\begin{equation}
+    K(u) = \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{u^2}{2}\right),
+\label{eq:gaussian_kernel}
+\end{equation}
+
+onde o argumento $u = (x - x_i)/h$ representa a distância padronizada entre o valor a avaliar ($x$) e a observação empírica ($x_i$). 
+Conceitualmente, a função núcleo ($K$) atua como um fator de ponderação que toma cada observação individual e distribui sua contribuição de probabilidade sobre seu entorno imediato adotando forma de sino. 
+O parâmetro $h$ controla diretamente a amplitude desta distribuição local; neste trabalho, a biblioteca de cálculo determinou o valor ótimo de $h$ de forma automática aplicando a regra de estimação de Scott. 
+
+A adoção de distribuições KDE permite uma representação geométrica contínua e mais analítica dos dados, superando as limitações dos histogramas tradicionais. 
+Como assinala \citet{weglarczyk2018kernel}, a estimação por núcleos evita o viés inerente à seleção do número, largura e ponto de início das classes (\textit{binning}), já que preserva e utiliza a localização exata de cada observação individual. 
+Esta análise probabilística permite contrastar a distribuição das curvas para avaliar quantitativamente como evoluem as magnitudes das variáveis ao longo do ciclo de vida do ciclone e como diferem segundo a severidade do sistema e sua região de gênese.
+
+\subsection{Distribuição espacial -- KDE bidimensional}\label{subsec:kde_localizacion}
+
+Para caracterizar a distribuição espacial preferencial da ocorrência destes máximos, utiliza-se o conjunto de $m$ localizações relativas $\{\mathbf{s}_i\}_{i=1}^{m}$ extraídas no passo inicial.
+A partir destas posições, estende-se a formulação probabilística unidimensional definida previamente (Equação \ref{eq:kde_pdf}) para estimar um campo contínuo de densidade espacial mediante um KDE bidimensional, calculado como a média de núcleos centrados em cada máximo:
+
+\begin{equation}
+\hat f(\mathbf{s})=\frac{1}{m}\sum_{i=1}^{m} K_h(\mathbf{s}-\mathbf{s}_i),
+\label{eq:kde_simple}
+\end{equation}
+
+onde $\mathbf{s}=(\Delta x,\Delta y)$ é uma posição genérica dentro do domínio centrado e $h$ é o parâmetro de suavização espacial. Neste trabalho também se adota um núcleo gaussiano bidimensional:
+
+\begin{equation}
+K_h(\mathbf{u})=\frac{1}{2\pi h^2}\exp\!\left(-\frac{\|\mathbf{u}\|^2}{2h^2}\right).
+\label{eq:gauss_kernel_2d_simple}
+\end{equation}
+
+O resultado é um campo contínuo de densidade de probabilidade relativa que indica, para cada posição dentro do domínio centrado, a tendência espacial a encontrar o máximo da variável. 
+Desde o ponto de vista metodológico, a implementação de um KDE bidimensional apresenta vantagens substanciais frente aos métodos discretos de contagem; de acordo com \citet{weglarczyk2018kernel}, este enfoque elimina por completo a necessidade subjetiva de definir o tamanho e a orientação geométrica das células. Esta técnica de suavização contínuo resulta idônea para mapear de forma objetiva assimetrias na distribuição espacial dos impactos. Nesse sentido, \citet{gramcianinov2023impact} demonstraram a relevância de analisar a localização relativa dos extremos em um marco de referência centrado no sistema, evidenciando que os impactos mais severos tendem a confinar-se em setores preferenciais (como o oeste e noroeste no Atlântico Sul) e que esta configuração espacial assimétrica varia fortemente com a fase do ciclo de vida do ciclone.
+
+\subsection{Funções Ortogonais Empíricas (EOF) univariado}\label{subsec:eof_univariado}
+
+Para identificar os padrões espaciais dominantes de variabilidade na estrutura dos ciclones dentro do marco centrado, aplica-se uma análise de Funções Ortogonais Empíricas (EOF). 
+Embora tradicionalmente esta técnica se aplique a campos de variação suave, investigações recentes como a de \citet{sun2022evaluation} demonstraram a viabilidade e robustez de modelos baseados em funções ortogonais para extrair padrões espaciais e sua evolução temporal em dados de precipitação (na Coreia do Sul).
+Esta análise realiza-se de maneira separada para cada variável (V10, precipitação), região de ciclogênese e fase do ciclo de vida, utilizando o conjunto de $m$ campos médio por ciclone--fase.
+
+Prévio à análise, a cada campo subtrai-se a média da População Global do \textit{ensemble} em cada ponto de grade para obter as anomalias estruturais. Matematicamente, se $X(\tau, \mathbf{s})$ representa o campo da variável para o ciclone $\tau$ (com $\tau = 1, 2, \dots, m$) na posição espacial relativa $\mathbf{s} = (x, y)$, o campo de anomalias $X'(\tau, \mathbf{s})$ define-se como:
+\begin{equation}
+    X'(\tau, \mathbf{s}) = X(\tau, \mathbf{s}) - \frac{1}{m}\sum_{\tau=1}^{m}X(\tau, \mathbf{s})
+\end{equation}
+A partir desta matriz de anomalias calcula-se a matriz de covariância espacial, cuja diagonalização permite decompor o campo original em uma soma linear de $K$ modos ortogonais espaciais ($EOF_k$) e suas correspondentes amplitudes ou componentes principais ($PC_k$):
+\begin{equation}
+    X'(\tau, \mathbf{s}) = \sum_{k=1}^{K} PC_k(\tau) \cdot EOF_k(\mathbf{s})
+\end{equation}
+
+Cabe destacar que não se aplica uma remoção de tendência temporal (\textit{detrend}) à sequência de eventos. Dado que o eixo amostral está constituído por um índice de eventos discretos separados por intervalos de tempo irregulares ao longo do período 1979--2020, a aplicação de um ajuste linear cronológico padrão assumiria erroneamente um espaçamento temporal constante. Adicionalmente, desde um ponto de vista físico, o objetivo metodológico é isolar as características morfológicas da variabilidade intersistêmica associadas às distintas fases do ciclone, pelo que isolar ou eliminar as tendências climáticas de muito baixa frequência escapa ao desenho fundamental desta análise.
+
+Este método, adaptado ao domínio lagrangiano, permite isolar e comparar as estruturas espaciais mais recorrentes ou típicas associadas aos ciclones em cada contexto (região/fase), seguindo a lógica de análise de padrões aplicada em estudos sinópticos \citep{vera2002cold}.
+
+\subsection{Significância espacial: Bootstrap-t}\label{subsec:bootstrap_significancia}
+
+Para isolar os sinais físicos do ruído estocástico e avaliar a robustez dos padrões espaciais (autovetores) derivados da análise EOF, implementou-se o método de reamostragem não paramétrico \textit{Bootstrap-t}, desenvolvido originalmente por \citet{efron1993introduction}. Seguindo a metodologia exposta por \citet{hesterberg2015bootstrap}, sua correta aplicação neste enfoque resulta ótima para corrigir dinamicamente a assimetria inerente às distribuições de precipitação e vento. Geraram-se $R = 15.000$ subamostras com reposição, garantindo que o erro de Monte Carlo seja insignificante ao estimar as caudas da distribuição.
+
+Para cada iteração $b$, recalculou-se a análise EOF e obteve-se a estatística quase pivotal $t^*_b$:
+\begin{equation}
+    t^*_b = \frac{\hat{\theta}^*_b - \hat{\theta}}{SE^*_b}
+\end{equation}
+onde $\hat{\theta}$ representa a carga espacial original, $\hat{\theta}^*_b$ sua estimação na subamostra e $SE^*_b$ seu erro padrão estimado.
+
+Os intervalos de confiança a 95\% calcularam-se invertendo os quantis empíricos $q_{\alpha/2}$ e $q_{1-\alpha/2}$ (com $\alpha = 0,05$) da distribuição de $t^*$:
+\begin{equation}
+    (\hat{\theta} - q_{1-\alpha/2}SE, \hat{\theta} - q_{\alpha/2}SE)
+\end{equation}
+Os pontos de grade consideraram-se estatisticamente significativos se seu intervalo de confiança excluía o zero. 
+Todo o processamento estatístico e a decomposição matricial executaram-se no ambiente computacional Python. 
+Para a gestão dos dados multidimensionais empregou-se a biblioteca \texttt{xarray} \citep{hoyer2017xarray}, enquanto que a extração dos modos espaciais e a avaliação de sua significância mediante \textit{bootstrapping} implementaram-se utilizando \texttt{xeofs} \citep{rieger2024xeofs}.
+
+\subsection{Análise das Componentes Principais}\label{subsec:analisis_pc}
+
+Além da decomposição espacial tradicional dos campos mediante Funções Ortogonais Empíricas (EOF), realizou-se uma análise das propriedades estatísticas das Componentes Principais (PC, do inglês) associadas a cada modo. 
+Esta análise permite caracterizar a variabilidade e conexões físicas entre a estrutura espacial em superfície e a dinâmica dos ciclones.
+A PC1, que representa a amplitude temporal do modo dominante de variabilidade espacial, foi caracterizada mediante métricas descritivas de sua distribuição de probabilidade. 
+Dado que a PC1 captura a projeção de cada ciclone sobre o padrão estrutural mais recorrente da região, sua análise estatística permite inferir propriedades da População Global que não são evidentes desde o padrão espacial.
+
+Calcularam-se os seguintes estatísticos para a série de PC1 de cada variável, região e fase:
+A assimetria (\textit{skewness}, $\gamma_1$) calculou-se como:
+
+\begin{equation}
+    \gamma_1 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^3
+\end{equation}
+
+onde $m$ é o tamanho amostral, $\overline{PC_1}$ é a média da série e $\sigma_{PC_1}$ seu desvio padrão. A assimetria positiva indica uma cauda direita estendida, isto é, uma subpopulação de ciclones com amplitude anormalmente alta no modo dominante; assimetria negativa indica o padrão inverso.
+
+A curtose ($\gamma_2$) obteve-se mediante:
+
+\begin{equation}
+    \gamma_2 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^4 - 3
+\end{equation}
+
+valores positivos (leptocurtose) indicam distribuições com caudas pesadas e concentração central pronunciada, sugerindo que os ciclones ajustam-se estreitamente ao padrão arquetípico, exceto por uma subpopulação de sistemas com estruturas intensas ou atípicas em relação ao padrão dominante; valores negativos (platicurtose) indicam que os eventos extremos são menos frequentes e a população de ciclones apresenta maior homogeneidade estrutural, com a maioria dos sistemas agrupando-se próximo ao comportamento médio.
+
+\subsection{Relação entre PC1 e intensidade dinâmica do ciclone}\label{subsubsec:pc1_vorticidad}
+
+Para estabelecer a conexão física entre a estrutura dos campos de superfície e a intensidade sinóptica do sistema, avaliou-se a correlação entre a PC1 de cada variável (precipitação e vento) e o mínimo de vorticidade relativa a 850 hPa alcançado por cada ciclone durante seu ciclo de vida ($\zeta_{850}^{min}$).
+
+A correlação de Pearson calculou-se como:
+
+\begin{equation}
+    \rho(PC_1, \zeta_{850}^{min}) = \frac{\text{cov}(PC_1, \zeta_{850}^{min})}{\sigma_{PC_1} \cdot \sigma_{\zeta}}
+\end{equation}
+
+Esta relação permite responder se o modo dominante de variabilidade espacial se intensifica sistematicamente com a profundidade do vórtice ciclônico, ou se, pelo contrário, a estrutura de precipitação e vento responde a forçantes adicionais independentes da intensidade do centro do ciclone. Uma correlação significativa e negativa (dado que $\zeta_{850}^{min}$ é negativa no Hemisfério Sul) indicaria que os ciclones mais intensos apresentam maior projeção sobre o padrão estrutural dominante; uma correlação fraca sugeriria que a organização espacial dos impactos está modulada por fatores locais (orografia, instabilidade convectiva, interação com frentes preexistentes) e que não necessariamente escalam linearmente com a vorticidade do núcleo.
+
+\subsection{Coesência entre modos dominantes de precipitação e vento}\label{subsubsec:coherencia_pc1}
+
+Para avaliar se os padrões espaciais dominantes de precipitação e vento variam conjuntamente ou respondem a dinâmicas independentes, calculou-se a correlação entre as PC1 de ambas as variáveis dentro de cada região e fase evolutiva:
+
+\begin{equation}
+    \rho = \text{corr}(PC_1^{\text{precip}}, PC_1^{\text{viento}})
+\end{equation}
+
+Esta correlação quantifica o grau de acoplamento entre a variabilidade estrutural de ambos os campos. Valores próximos a +1 indicam que os extremos de precipitação e vento organizam-se espacialmente de maneira coerente (eventos compostos bem estruturados); valores próximos a 0 sugerem que a variabilidade espacial de precipitação está controlada por outros processos locais (convecção, orografia) independentes da configuração do campo de vento em escala sinóptica.
+
+% Adicionalmente, se construyeron diagramas de dispersión de $PC_1^{\text{precip}}$ vs $PC_1^{\text{viento}}$ para identificar cuadrantes predominantes y detectar la existencia de ciclones con comportamientos atípicos (alta PC en una variable, baja en la otra), que podrían indicar desacoplamiento entre los procesos dinámicos y termodinámicos del sistema.
+
+\subsection{EOF combinado (multivariado) precipitação--vento}\label{subsec:eof_multivariado}
+
+Para avaliar a covariabilidade espacial entre os campos de precipitação e vento, realiza-se uma análise EOF combinado (MEOF). Dado que estas variáveis possuem unidades físicas e intervalos de variância díspares (mm/h vs. m/s), é um requisito metodológico padronizar as séries antes de sua integração para evitar que a variável com maior magnitude numérica domine os modos resultantes \citep{wilks2019statistical_ch13}. 
+
+O procedimento analítico consta de três passos fundamentais:
+
+(i) Calcular as anomalias de cada campo em relação à sua média da População Global.
+
+(ii) Normalizar ditas anomalias dividindo-as pelo desvio padrão espacialmente médio de cada variável, assegurando um peso equiparável na matriz de covariância combinada. 
+Isto com o fim de preservar os gradientes espaciais nativos de cada campo físico, este fator define-se como um escalar global único. 
+Matematicamente, o campo padronizado $Z_{V}(\tau, \mathbf{s})$ para a variável $V$ no ciclone $\tau$ obtém-se como:
+
+\begin{equation}
+    Z_{V}(\tau, \mathbf{s}) = \frac{V'(\tau, \mathbf{s})}{\frac{1}{A}\int_{A} \sigma_{V}(\mathbf{s}) \, d\mathbf{s}}
+\end{equation}
+
+onde $V'$ é o campo de anomalias, $\sigma_{V}(\mathbf{s})$ é o desvio padrão temporal no ponto $\mathbf{s}$, e $A$ é a área total do domínio.
+
+(iii) Concatenar espacialmente os campos padronizados para formar um vetor de estado combinado ou ampliado, seguindo o esquema de análise de padrões acoplados descrito por \citet{bretherton1992intercomparison}:
+
+\begin{equation}\label{eq:meof_vector}
+    \mathbf{Y}(\tau) = \big[ Z_P(\tau), Z_W(\tau) \big]
+\end{equation}
+
+A análise EOF aplicada a esta matriz combinada $\mathbf{Y}(\tau)$ permite obter os modos acoplados que explicam a variância conjunta do sistema, seguindo a base matemática de decomposição multivariada para eventos compostos validada por \citet{liang2018multivariate}. A aplicação desta técnica é instrumental para responder a questões recentes levantadas por \citet{sinclair2023relationship}, permitindo revelar se os núcleos de precipitação intensa co-localizam-se sistematicamente com os gradientes de vento mais fortes e como esta coerência estrutural evolui ao longo do ciclo de vida.
+
+\subsection{Protótipos conceituais}\label{subsec:prototipos}
+
+Para cumprir com o Objetivo Específico 4, desenvolveu-se um procedimento de síntese visual que integra, em uma representação composta única por região e fase evolutiva, quatro fontes de informação estatística derivadas das análises prévias: a distribuição espacial de probabilidade dos máximos de cada variável (KDE bidimensional, Seção~\ref{subsec:kde_localizacion}) e o padrão espacial dominante de variabilidade estrutural conjunta das variáveis (EOF multivariado, Seção~\ref{subsec:eof_multivariado}). 
+Nesta análise, o procedimento realiza-se para cada combinação região--fase, tanto para a População Global quanto para a amostra do subconjunto de ciclones intensos (p90), preservando assim a representatividade dos padrões obtidos.
+
+\subsubsection{Sobreposição de camadas estatísticas}
+
+Cada protótipo compõe-se por quatro camadas estatísticas sobrepostas em um único painel de coordenadas lagrangianas $(\Delta x, \Delta y)$, centrado no núcleo do ciclone dentro do domínio de $9.5^{\circ}$ de raio definido na Seção~\ref{subsec:extraccion_pdf}.
+As quatro camadas são:
+
+\paragraph{Camada 1 e 2 — Isolinhas do KDE bidimensional de localização de máximos (precipitação e vento).}
+
+A partir da superfície de densidade $\hat{f}(\mathbf{s})$ calculada segundo a Equação~\ref{eq:kde_simple} para cada variável, extraíram-se dois níveis de contorno correspondentes aos percentis 75 e 90 da distribuição acumulada da densidade. 
+O procedimento de cálculo destes níveis consiste em ordenar todos os valores da superfície de densidade de menor a maior, calcular a probabilidade acumulada normalizada sobre esse vetor ordenado, e identificar o valor de densidade $\hat{f}^*$ que corresponde à fração de probabilidade desejada. Formalmente:
+
+\begin{equation}
+    \hat{f}^*_q = \hat{f}_{(k)}, \quad \text{onde } k = \min\left\{j \; : \; 
+    \frac{\sum_{i=1}^{j}\hat{f}_{(i)}}{\sum_{i=1}^{m}\hat{f}_{(i)}} \geq q \right\},
+\label{eq:nivel_contorno_kde}
+\end{equation}
+
+sendo $\hat{f}_{(i)}$ os valores da densidade ordenados ascendentemente e $q$ a fração acumulada desejada ($q = 0,75$ ou $q = 0,90$). 
+A isolinha correspondente ao percentil 75 delimita a região que concentra 75\% da massa de probabilidade acumulada da densidade, e por tanto encerra uma área mais extensa; a do percentil 90 
+encerra o núcleo mais denso de ocorrência de máximos, representando a zona de maior concentração espacial dos valores extremos. 
+% Estos contornos se trazaron aplicando un suavizado gaussiano ($\sigma = 2$) sobre la superficie de densidad previa a la visualización, con el objetivo de eliminar artefactos de alta frecuencia numérica sin alterar la posición de los núcleos de densidad.
+
+Adicionalmente, sobre cada superfície KDE identifica-se a coordenada modal $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$, definida como a posição do pico máximo de densidade:
+
+\begin{equation}
+    (\Delta x_{\text{moda}}, \Delta y_{\text{moda}}) = 
+    \underset{(\Delta x, \Delta y)}{\arg\max} \; \hat{f}(\Delta x, \Delta y),
+\label{eq:moda_kde}
+\end{equation}
+
+e assinala-se no painel mediante um marcador estelar. 
+Esta coordenada representa a localização relativa ao centro do ciclone onde estatisticamente é mais frequente encontrar o máximo da variável analisada.
+
+\paragraph{Camada 3 e 4 — Isolinhas do \textit{loading} espacial do MEOF$_1$ (precipitação e vento).}
+
+Sobre o mesmo painel sobrepõem-se as isolinhas dos \textit{loadings} espaciais por variável do primeiro modo da análise EOF multivariado (MEOF$_1$) descrito na Seção~\ref{subsec:eof_multivariado}. 
+Dado que o vetor de estado combinado $\mathbf{Y}(\tau) = [Z_P(\tau), Z_W(\tau)]$ concatena ambas as variáveis em um único autovetor (Equação~\ref{eq:meof_vector}), o MEOF$_1$ produz simultaneamente um 
+\textit{loading} espacial para precipitação ($\text{EOF}_{1,P}$) e outro para vento ($\text{EOF}_{1,W}$), ambos extraídos do mesmo modo dominante de covariabilidade conjunta. 
+São estes dois subpadrões acoplados os que se graficam no protótipo, preservando a coerência espacial entre ambas as variáveis imposta pela decomposição multivariada e garantindo que as estruturas visualizadas reflitam o modo de variabilidade que maximiza simultaneamente a variância conjunta de precipitação e vento.
+
+A partir do campo de cada \textit{loading} espacial ($\text{EOF}_{1,P}$ e $\text{EOF}_{1,W}$), extraem-se dois conjuntos de níveis de contorno mediante percentis aplicados separadamente sobre os valores positivos e negativos do autovetor: os percentis 33 e 66 dos valores positivos (representados com linha sólida) e os percentis 33 e 66 do valor absoluto dos valores negativos (representados com linha descontínua), aplicando previamente um suavizado gaussiano ($\sigma = 2$). Esta estratégia 
+de limiarização relativa garante que os contornos reflitam a estrutura interna do padrão dominante de covariabilidade independentemente da magnitude absoluta do \textit{loading}, tornando comparáveis os padrões entre distintas combinações região--fase. As regiões de carga positiva indicam setores onde a variável tende a apresentar anomalias positivas em relação à média climatológica do \textit{ensemble} quando o 
+modo dominante se ativa; as regiões de carga negativa indicam supressão relativa da variável nesse mesmo contexto dinâmico.
+
+\subsubsection{Estrutura da figura de protótipos}
+
+O resultado é uma figura matricial de $3 \times 4$ painéis (3 regiões de ciclogênese $\times$ 4 fases evolutivas) onde cada painel integra simultaneamente as quatro camadas descritas: KDE de precipitação (contornos em azul), KDE de vento (contornos em vermelho), $\text{EOF}_{1,P}$ de precipitação (isolinhas em verde) e $\text{EOF}_{1,W}$ de vento (isolinhas em laranja). 
+A sobreposição destas quatro camadas no espaço lagrangiano centrado no ciclone permite identificar visualmente o grau de acoplamento espacial entre a variabilidade estrutural dominante multivariada (MEOF) e a distribuição de probabilidade dos máximos (KDE): uma alta coincidência espacial entre o núcleo do KDE e a região de carga positiva do EOF indica que o padrão dominante de variabilidade está diretamente associado à ocorrência dos valores extremos, enquanto que um desacoplamento entre ambas as camadas sinala a existência de processos locais ou assimetrias frontais que organizam os impactos em 
+setores distintos ao padrão modal. 
+A coordenada de cada variável, anotada na legenda interna de cada painel como $(\Delta x, \Delta y)$ em graus, quantifica explicitamente o deslocamento preferencial dos máximos em relação ao centro do vórtice ciclônico. Esta síntese constitui a representação mais compacta e completa da pegada de severidade dos ciclones extratropicais do Atlântico Sul, integrando em um único diagrama as dimensões espacial, probabilística e modal dos campos de precipitação e vento em superfície.

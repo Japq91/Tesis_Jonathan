@@ -1,0 +1,109 @@
+% ----------------------------------------------------------
+\chapter{Revisão Bibliográfica}\label{cap:revbibliografica}
+% ----------------------------------------------------------
+%%%%%%%% SECTION 1
+\section{Dinâmica de ciclones extratropicais}\label{sec:mt_fundamentos}
+
+\subsection{Dinâmica no Atlântico Sul}\label{subsec:mt_definicion}
+Embora a teoria clássica defina os ciclones extratropicais como vórtices de núcleo frio impulsionados por instabilidade baroclínica \citep{hoskins2002new}, a caracterização dos sistemas no Atlântico Sul requer matizes adicionais. Em sua tese de doutorado, \citet{coutodesouza2024thesis} realiza uma revisão exaustiva da física destes sistemas, concluindo que a definição adiabática padrão é insuficiente para a região. Embora a instabilidade baroclínica proporcione o ambiente favorável para a gênese, a evolução e a intensidade do sistema podem ser fortemente moduladas por processos diabáticos associados à liberação de calor latente, especialmente em eventos de transição ou com características híbridas. Este comportamento é ilustrado pelos experimentos de sensibilidade numérica apresentados por \citet{reboita2022from}, onde a supressão dos fluxos de calor latente altera de maneira substancial a estrutura térmica e a intensidade do vórtice.
+
+% --- VORTICIDADE RELATIVA E RASTREAMENTO ---
+\subsection{Vorticidade relativa}\label{subsec:mt_vorticidad}
+Dada esta complexidade térmica e a rapidez dos sistemas no Hemisfério Sul, a pressão ao nível médio do mar (MSLP) resulta frequentemente em uma métrica inadequada para a detecção precoce. Seguindo a recomendação metodológica de \citet{sinclair1997objective}, este estudo utiliza a vorticidade relativa em 850 hPa ($\zeta_{850}$) como variável de rastreamento.
+
+Fisicamente, a vorticidade relativa define-se como:
+
+\begin{equation}
+    \zeta = \mathbf{k} \cdot (\nabla \times \mathbf{V}) = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}
+\end{equation}
+
+Onde $u$ e $v$ são as componentes zonal e meridional do vento, respectivamente. Segundo \citet{hoskins2005new}, o uso de $\zeta$ permite filtrar o escoamento de grande escala e capturar a rotação induzida por estes forçantes de mesoescala antes que se manifestem no campo de pressão, permitindo uma identificação mais precisa das fases incipientes. Além disso, a literatura recente, como em \citet{gramcianinov2019properties}, utiliza $\zeta_{850}$ para identificar com precisão as regiões de ciclogênese.
+
+Da mesma forma, \citet{padilhareinke2024objective} validam que os algoritmos baseados neste nível isobárico são mais eficientes para capturar a posição do ciclone durante sua etapa de maior intensidade. Recentemente, o uso de $\zeta_{850}$ estendeu-se para além do simples rastreamento (\textit{tracking}) em direção à caracterização estrutural. \citet{coutodesouza2024new} demonstram que a evolução temporal desta variável é o preditor mais confiável para segmentar objetivamente o ciclo de vida em fases dinâmicas (incipiente, intensificação, maturidade e decaimento). Em um contexto global, a análise de \textit{clusters} de \citet{corner2025classification} ratifica a vorticidade relativa em 850 hPa como uma das métricas irredutíveis necessárias para descrever a intensidade e a estrutura dos ciclones extratropicais no hemisfério norte.
+
+
+%%%%%%%% SECTION 2
+\section{Evolução estrutural e ciclo de vida}\label{sec:mt_evolucion}
+
+\subsection{Assimetria e Fratura Frontal}\label{subsec:mt_modelos}
+A distribuição espacial dos impactos em superfície (vento e precipitação) está condicionada pelo modelo conceitual que descreve a evolução do ciclone. Diferentemente do modelo Norueguês clássico, que apresenta uma oclusão simétrica, os ciclones oceânicos intensos do Atlântico Sul costumam seguir o modelo de Fratura Frontal proposto por \citet{shapiro1990life}. Neste paradigma, a frente fria se fratura e se separa do centro, permitindo o isolamento de uma massa de ar quente no núcleo (\textit{warm seclusion}). Esta configuração favorece assimetrias intensas nas variáveis de superfície, onde os máximos de vento e precipitação se desacoplam do centro da baixa pressão, um traço recorrente documentado na climatologia regional por \citet{reboita2010south}.
+
+\subsection{Fases do ciclo de vida}\label{subsec:mt_fases}
+
+Para caracterizar a evolução temporal destes impactos, este estudo adota a segmentação do ciclo de vida em quatro etapas dinâmicas discretas. Esta classificação segue a metodologia objetiva do pacote computacional \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}, aplicado por \citet{coutodesouza2024new}, o qual utiliza a taxa de variação da vorticidade relativa para definir os seguintes regimes estruturais:
+
+\begin{enumerate}
+    \item \textbf{Incipiente:} Corresponde ao surgimento inicial do núcleo de vorticidade organizada. No contexto regional, esta fase está frequentemente associada à interação entre um cavado em altitude e forçantes de superfície, como a orografia dos Andes ou gradientes térmicos costeiros.
+    
+    \item \textbf{Intensificação:} Período caracterizado pelo rápido crescimento da vorticidade ciclônica (e consequente queda da pressão central). Segundo a análise energética de \citet{coutodesouza2024thesis}, esta etapa é impulsionada por uma forte retroalimentação entre a instabilidade dinâmica e os fluxos de calor latente e sensível provenientes do oceano.
+    
+    \item \textbf{Maturidade:} Etapa onde o sistema atinge sua intensidade máxima (pico de vorticidade) e sua maior extensão horizontal. É nesta fase onde os ciclones intensos do Atlântico Sul manifestam tipicamente a estrutura de \textit{warm seclusion} ou seclusão quente, isolando o núcleo térmico do escoamento ambiental.
+    
+    \item \textbf{Decaimento:} Fase final marcada pelo enfraquecimento progressivo do vórtice. Este processo ocorre devido ao atrito superficial e à interrupção da conversão de energia baroclínica uma vez que o sistema se ocluiu completamente ou entrou em uma zona barotrópica.
+\end{enumerate}
+
+%%%%%%%% SECTION 3
+\section{Regiões de ciclogênese}\label{sec:mt_regiones}
+
+A interação entre o escoamento de oeste, a topografia dos Andes e a Temperatura da Superfície do Mar (TSM) define três regiões de gênese com características físicas diferenciadas \citep{gramcianinov2019properties}:
+
+\subsection{Região Sul-Sudeste do Brasil (SBR)}\label{subsec:mt_sbr}
+Localiza a densidade máxima de ciclogênese de ciclones entre as latitudes $20^\circ$S e $30^\circ$S, esta região encontra-se sob a influência direta da Corrente do Brasil e dos fluxos de umidade tropical. Segundo \citet{reboita2022from}, que utiliza a região RG1 (análoga à SBR), os ciclones aqui apresentam frequentemente um sinal energético "híbrido": 
+
+% Entre as latitudes $20^\circ$S e $30^\circ$S, esta região encontra-se sob a influência direta da Corrente do Brasil e dos fluxos de umidade tropical. Segundo \citet{reboita2022from}, a RG1 (análoga à SBR) constitui uma das regiões preferenciais de ciclogênese na costa sul/sudeste do Brasil, e o estudo de caso do ciclone Raoni ilustra como sistemas que atuam nesse setor podem apresentar características subtropicais durante o seu ciclo de vida.
+
+
+embora se iniciem por instabilidade baroclínica, sua intensificação é fortemente modulada por processos diabáticos e pela instabilidade da camada limite marinha, o que favorece o desenvolvimento de convecção no setor quente \citep{marrafon2022classificacao}. A análise energética de \citet{coutodesouza2024thesis} revela que, diferentemente das regiões austrais, os ciclones na SBR apresentam uma conversão de energia "mista", onde os processos diabáticos (liberação de calor latente) desempenham um papel tão importante quanto a baroclinicidade.
+
+% --- REGIÃO DA BACIA DO PRATA E URUGUAI (LPB) ---
+\subsection{Bacia do Prata e Uruguai (LPB)}\label{subsec:mt_lpb}
+A região compreendida entre $30^\circ$S e $40^\circ$S constitui um dos principais \textit{hotspots} de ciclogênese no Atlântico Sul Ocidental. Seu mecanismo dominante é a ciclogênese de sotavento: como estabelecem \citet{gan1994influence}, o escoamento de oeste experimenta uma compressão e posterior estiramento vertical da coluna de vorticidade ao atravessar os Andes. Por conservação da vorticidade potencial, este estiramento no flanco oriental induz uma queda de pressão em superfície que favorece a iniciação da rotação ciclônica. Neste contexto, \citet{reboita2010south} mostram que esta região caracteriza-se por uma alta frequência de sistemas ciclônicos e uma forte interação com o transporte de umidade proveniente de latitudes tropicais, enquanto o aporte de ar quente e úmido associado ao Jato de Baixos Níveis (SALLJ) resulta determinante para a intensidade da precipitação \citep{crespo2020potential}.
+% Reboita et al. (2010), Clim Dyn, p. 1338
+% "Associated to these troughs (transient and semi-stationary), there is moisture transport from Amazon basin to the La Plata basin at low levels, which is related to the low level jet eastern of the Andes, contributing for the development of the cyclone systems in this region."
+% Reboita et al. (2010), Clim Dyn, p. 1339
+% "The upper level subtropical jet can also influence these cyclogenesis as well as the air–sea processes interactions through latent and sensible heat transfer."
+% --- REGIÃO DA PATAGÔNIA E ARGENTINA (ARG) ---
+\subsection{Patagônia e Argentina (ARG)}\label{subsec:mt_arg}
+O setor austral ($>40^\circ$S, ou sua similar RG3) responde a um regime dinâmico clássico dominado pela baroclinicidade de grande escala. Diferentemente dos focos subtropicais, \citet{hoskins2005new} descrevem esta zona como governada pela instabilidade baroclínica, onde a gênese depende do jato polar e da passagem de ondas de Rossby. Aqui, \citet{simmonds2000variability} indicam que os sistemas ciclônicos dependem menos de forçantes locais de superfície e mais da dinâmica da alta troposfera. Como resultado, estes sistemas tendem a apresentar uma evolução mais rápida e diretamente acoplada ao escoamento de altos níveis, em contraste com as regiões subtropicais do sudeste do Brasil \citep{vera2002cold}.
+
+%%%%%%%% SECTION 4
+\section{Estruturas espaciais}\label{sec:mt_compuestos}
+
+A complexidade inerente aos ciclones extratropicais do Atlântico Sul requer superar a análise univariada tradicional. Nesta seção, fundamenta-se a adoção do paradigma de "evento composto" e descrevem-se as ferramentas estatísticas avançadas (MEOF e KDE) necessárias para capturar sua estrutura assimétrica e a distribuição de seus máximos.
+
+% --- EVENTOS COMPOSTOS ---
+\subsection{Eventos compostos}\label{subsec:mt_compound_def}
+Historicamente, a intensidade dos ciclones tem sido caracterizada mediante métricas pontuais, como a pressão mínima central ou a vorticidade máxima. No entanto, a literatura recente adotou a abordagem de \textit{compound events} (eventos compostos), definidos formalmente por \citet{zscheischler2018future} como situações em que a combinação de múltiplas forçantes climáticas (ex., vento e precipitação extremos) gera magnitudes conjuntas maiores do que a soma de seus componentes individuais.
+
+% --- INTERAÇÃO MULTIVARIADA E DINÂMICA DE EVENTOS COMPOSTOS ---
+No contexto da dinâmica extratropical, \citet{chen2025characteristics} estabelecem que a interação entre o campo de vento e a precipitação não é linear nem espacialmente homogênea. A ocorrência conjunta destes extremos responde a mecanismos físicos acoplados: a intensificação dinâmica costuma ser modulada por processos diabáticos (liberação de calor latente), o que sugere uma dependência estatística entre ambas as variáveis que varia conforme a fase de vida do sistema. Portanto, para caracterizar integralmente a dinâmica do sistema, requer-se uma abordagem multivariada que quantifique esta covariabilidade física.
+
+% --- DECOMPOSIÇÃO MODAL E ACOPLAMENTO (EOF/MEOF) ---
+\subsection{Decomposição modal e acoplamento (EOF/MEOF)}\label{subsec:mt_math_meof}
+Para isolar padrões coerentes dentro deste acoplamento físico, a análise de Funções Ortogonais Empíricas (EOF) e sua extensão multivariada (MEOF) estabeleceram-se como o padrão metodológico. Segundo \citet{hannachi2007empirical}, esta técnica permite decompor a variabilidade de um campo turbulento em modos ortogonais de variância máxima, separando o sinal físico robusto do ruído de mesoescala.
+
+% --- MEOF E NORMALIZAÇÃO DE VARIÁVEIS ---
+Especificamente para eventos compostos, \citet{liang2018multivariate} demonstraram a eficácia do MEOF ao aplicá-lo sobre um vetor de estado normalizado $\mathbf{Z}$, que combina variáveis com unidades distintas:
+\begin{equation}
+    \mathbf{Z}(t) = \left[ \frac{X'_{precip}(t)}{\sigma_{precip}}, \frac{X'_{vento}(t)}{\sigma_{vento}} \right]
+\end{equation}
+Esta normalização permite identificar se os máximos de precipitação e vento covariam espacialmente ou se apresentam defasagens estruturais sistemáticas. Da mesma forma, abordagens recentes de classificação objetiva, como o PCA esparso utilizado por \citet{corner2025classification}, validam o uso de espaços de fase reduzidos para distinguir entre regimes dinâmicos sem depender exclusivamente de limiares arbitrários de pressão.
+
+
+% --- ESTIMATIVA DE DENSIDADE (KDE) E ASSIMETRIA ---
+\subsection{Estimativa de Densidade (KDE)}\label{subsec:mt_kde_asimetria}
+Uma vez estabelecido o acoplamento entre variáveis, é crítico resolver sua distribuição espacial. Os ciclones extratropicais são sistemas altamente assimétricos, onde os máximos raramente coincidem com o centro geométrico da baixa pressão:
+
+\begin{itemize}
+    \item \textbf{Precipitação:} Controlada pelo \textit{Warm Conveyor Belt} (WCB), tende a concentrar-se no setor sudeste (no Hemisfério Sul) durante a etapa de desenvolvimento. %\citep{oertel2021warm}.
+    \item \textbf{Vento:} Os máximos costumam associar-se ao jato no setor quente ou ao escoamento pós-frontal, expandindo-se radialmente à medida que o sistema amadurece.
+\end{itemize}
+
+% --- FUNDAMENTAÇÃO MATEMÁTICA DA KDE E "PEGADA" DINÂMICA ---
+Devido a este desacoplamento, o uso de médias simples ou grades fixas tende a suavizar excessivamente as estruturas de mesoescala. Para resolver isso, \citet{priestley2022improved} e \citet{han2025system} propõem o uso da Estimativa de Densidade por Kernel (KDE). Matematicamente, para uma amostra de $n$ localizações de máximos em coordenadas relativas $(X_i)$, a densidade estimada $\hat{f}(x)$ define-se como:
+
+\begin{equation}
+    \hat{f}(x) = \frac{1}{nh} \sum_{i=1}^{n} K\left(\frac{x - X_i}{h}\right)
+\end{equation}
+
+Esta técnica transforma nuvens de pontos discretos em uma superfície de probabilidade contínua, permitindo visualizar a "pegada" (\textit{footprint}) física do ciclone. Sua aplicação é especialmente relevante quando se segmenta a análise por etapas evolutivas (incipiente, intensificação, maturidade, decaimento), tal como sugerem \citet{coutodesouza2024new} com seu algoritmo \textit{CycloPhaser}, já ajudaria na análise da distribuição espacial dos campos extremos ao longo do ciclo de vida do sistema.

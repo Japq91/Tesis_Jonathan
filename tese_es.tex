@@ -1,0 +1,79 @@
+\makeatletter
+\def\input@path{{./aux/}}
+\makeatother
+\documentclass{iagtese_es}
+\usepackage[T1]{fontenc}        % ← agrega esta
+\usepackage[utf8]{inputenc}     % ← y esta
+\usepackage{pdflscape}
+
+						% padrões de formatação.
+						%	
+%\documentclass{iagtese_en}	% declaração da classe iagtese em
+						% ingles.
+% Para escrever a tese em 
+						% ingles, descomente esta linha e 
+						% comente a linha anterior.
+%				%	
+%\hypercolor				% links coloridos para a versao
+						% on line da tese. Para usar esta
+						% opcao descomente esta linha.
+% 	
+\begin{document}			% início do documento
+\input{tex_es/capa.tex}			% arquivo para inserir a capa
+\pagestyle{empty}			% padrão de formatação para parte
+						% inicial do texto
+\maketitle					% 
+%
+%\input{tex_es/vcorrigida.tex}
+%
+% QUITAR COMENTADO AQUI
+%
+\Dedicatoria				%
+\input{tex_es/dedicatoria.tex}		%						% componentes iniciais do trabalho
+\      
+\Agradecimentos			%
+\input{tex_es/agradecimentos.tex}	% caso não queira adicionar algum
+						% deles, simplesmente remova as
+						% linhas correspondentes.
+\Epigrafe					%  
+\input{tex_es/epigrafe.tex}		%						%
+\Resumo					%
+\input{tex_es/resumo.tex}		%						%
+\Abstract					%
+\input{tex_es/abstract.tex}		%						%
+\listoffigures 				% lista de figuras (opcional)
+\listoftables 				% lista de tabelas (opcional)
+\tableofcontents 			% sumário						%
+\cleardoublepage			%
+\pagestyle{fancy}			% formatação para corpo do texto
+%
+% TERMINAR COMENTADO AQUI
+%
+\input{tex_es/01.vf2_introducao.tex}		%
+\input{tex_es/02.vf3_fundamentacao.tex}    	% inserir os capítulos do seu
+\input{tex_es/03.vf4_metodos.tex}		% trabalho.
+% \input{tex_es/04.vf2_result01_w10.tex}		% trabalho.
+% \input{tex_es/04.vf2_result02_tp.tex}		% trabalho.
+% \input{tex_es/04.vf1_result03_meof.tex}		% trabalho.
+% \input{tex_es/04.vf1_result04_prototipo.tex}		% trabalho.
+% \input{tex_es/05.conclusao.tex}		% 
+       						%
+						%
+%\begin{thebibliography}{99}	% referências bibliográficas (dê
+%\input{tex_es/bibliografia.tex} 	% preferência ao bibTeX).
+%\end{thebibliography}		% caso não use o bibTeX, remova os
+						% comentarios das três linhas
+						% e comente a linha \bibliography
+						%
+\bibliography{tex_es/bibliografia}	% bibliografia utilizando bibTeX,
+						% referente ao arquivo
+						% bibliografia.bib na pasta tex_es/
+						%
+% \begin{apendice}			% inicio do ambiente apendice
+% \input{tex_es/apendicea.tex}		% texto referente ao apendice
+% \end{apendice}				% fim do ambiente apendice.
+% caso
+						% nao utilize apendice, remova as
+						% 3 linhas de comando.
+						%
+\end{document}				% fim do arquivo

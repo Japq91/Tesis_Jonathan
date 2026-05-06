@@ -1,0 +1,50 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1.}Introducción}{19}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objetivos del Proyecto de Investigación}{25}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Objetivo General}{25}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Específicos}{25}{subsection.1.1.2}%
+\contentsline {chapter}{\numberline {2.}Fundamentos teóricos}{27}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Ciclones extratropicales en el Atlántico Sur}{27}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Detección lagrangiana de ciclones}{28}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Marco de referencia lagrangiano}{28}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Variable de seguimiento: vorticidad relativa en 850 hPa}{28}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Estratificación por intensidad dinámica y homogeneidad evolutiva}{29}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Regiones de ciclogénesis}{30}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Sur-sureste de Brasil (SBR)}{31}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Cuenca del Río de la Plata (LPB)}{31}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Argentina (ARG)}{32}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Ciclo de vida y modelos conceptuales}{32}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Modelo conceptual de estructura interna}{32}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Fases del ciclo de vida}{33}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Estructura superficial y máximos}{34}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Asimetría espacial de los máximos}{34}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Acoplamiento estructural de viento y precipitación en superficie}{36}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Herramientas estadísticas para la caracterización estructural}{36}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}Compositing centrado en el sistema}{36}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Estimación de densidad por kernel (KDE): PDF de magnitudes y de posición}{37}{subsubsection.2.5.3.2}%
+\contentsline {subsubsection}{\numberline {2.5.3.3}Descomposición modal EOF y MEOF}{38}{subsubsection.2.5.3.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.4}Significancia estadística mediante Bootstrap-t}{39}{subsubsection.2.5.3.4}%
+\contentsline {chapter}{\numberline {3.}Metodología}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diseño general}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Datos}{41}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Reanálisis ERA5}{41}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Variables meteorológicas}{42}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Base de trayectorias y fases}{42}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Construcción de las poblaciones de estudio}{44}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Población Global: climatología de referencia}{44}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Subconjunto de alta intensidad (p90)}{45}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Análisis comparativo}{45}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Procesamiento lagrangiano}{46}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Caracterización estadística univariada}{47}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Extracción de máximos y distribución de probabilidad (PDF)}{47}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Distribución espacial de los máximos}{47}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Análisis de Funciones Ortogonales Empíricas (EOF) univariado}{48}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Significancia espacial: Bootstrap-t}{49}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Análisis de las Componentes Principales (PC1)}{50}{subsection.3.5.5}%
+\contentsline {section}{\numberline {3.6}Análisis multivariado y prototipos estructurales}{51}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}EOF combinado (MEOF) precipitación--viento}{51}{subsection.3.6.1}%
+\contentsline {paragraph}{Paso 1 — Anomalías.}{51}{section*.9}%
+\contentsline {paragraph}{Paso 2 — Normalización por desviación estándar espacialmente promediada.}{51}{section*.10}%
+\contentsline {paragraph}{Paso 3 — Concatenación espacial.}{51}{section*.11}%
+\contentsline {subsection}{\numberline {3.6.2}Construcción de los prototipos estructurales}{52}{subsection.3.6.2}%
+\contentsline {chapter}{Refer\^encias}{55}{chapter*.12}%

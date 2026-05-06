@@ -1,0 +1,131 @@
+% ----------------------------------------------------------
+\chapter{Resultados e Discussões -- Viento a 100 metros}\label{cap:resultados_wind100}
+% ----------------------------------------------------------
+
+% ==============================================================================
+% SECCIÓN PRINCIPAL: PDF DE VIENTO A 100 METROS
+% ==============================================================================
+%
+\section{Distribución estadística de las magnitudes máximas de viento a 100 metros}\label{sec:pdf_wind100}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/PDFsigma025_wind100.png}
+\caption[PDF de magnitudes máximas de viento a 100 metros]{Estimación de las funciones de densidad de probabilidad (PDF) mediante la técnica de densidad por kernel para las magnitudes máximas del viento a 100 metros de altura. La matriz de paneles organiza la evolución temporal en filas, correspondientes a las fases de desarrollo evolutivo: Incipiente (a-c), Intensificación (d-f), Madurez (g-i) y Decaimiento (j-l). Las columnas separan la muestra según la región de ciclogénesis (SBR, LPB y ARG). Se contrasta la distribución de la Población Global de referencia (sombreado gris) frente a los estratos definidos por el pico máximo de vorticidad en su ciclo vital: sistemas débiles (p10, línea punteada azul), sistemas moderados (p50, línea continua verde) y sistemas extremos (p90, línea seccionada roja).}
+\label{fig:pdf_wind100}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:pdf_wind100} expone el modelado de las funciones de densidad de probabilidad (PDF) para los valores máximos del campo de viento a 100 metros de altitud, extraídos sobre el dominio lagrangiano que acompaña al núcleo ciclónico. Este nivel vertical es analizado de forma homóloga al nivel superficial (10 metros), estratificando la muestra transversalmente a través de las cuatro fases del ciclo de vida y las tres regiones de génesis. El objetivo es comparar rigurosamente el comportamiento estadístico de la Población Global basal frente a los estratos de sistemas definidos por su intensidad dinámica intrínseca (p10, p50 y p90).
+
+% ¿Cómo es?
+El rasgo morfológico más sobresaliente es el marcado corrimiento de todo el espectro hacia magnitudes superiores en comparación con el viento superficial, exhibiendo además una separación inter-estrato mucho más severa. Durante la fase incipiente (paneles a-c), las distribuciones de todos los grupos presentan un apilamiento unimodal centrado entre 14 y 18 m/s. Sin embargo, la divergencia estructural entre poblaciones se vuelve extrema al alcanzar la madurez (paneles g-i): mientras que el estrato moderado (p50) localiza su pico de máxima probabilidad alrededor de los 20 m/s, la curva del subconjunto extremo (p90) se ubica drásticamente desplazada hacia la derecha. En LPB (h) y ARG (i), el p90 en madurez alcanza modos superiores a los 25 a 28 m/s, desarrollando colas de probabilidad largas y pesadas que invaden el régimen de 32 a 40 m/s, revelando una altísima dispersión intra-grupo hacia valores críticos. Al entrar en la fase de decaimiento (paneles j-l), las curvas extremas pierden agudeza y se aplanan, denotando la relajación del gradiente de presión, pero sin llegar a solaparse nuevamente con la población moderada.
+
+% ¿Por qué es así?
+La amplificación general de las magnitudes absolutas y el ensanchamiento de la brecha entre los estratos de intensidad respecto al nivel de 10 metros obedecen al desacoplamiento parcial de la fricción superficial. A 100 metros de altura, en la cima de la capa de Ekman, el flujo se encuentra significativamente menos frenado por la rugosidad aerodinámica del océano o el continente. Esto permite que la respuesta cinemática al forzamiento termodinámico —el intenso gradiente de presión característico de los vórtices extremos del p90— se exprese con una magnitud casi geostrófica. En ARG, la prevalencia de vientos a 100 metros extremadamente veloces y con colas pesadas en el p90 refleja un acoplamiento profundo y directo con las anomalías de viento asociadas al chorro polar de niveles superiores durante la fase de máxima baroclinia.
+
+% ¿Para qué?
+Cuantificar matemáticamente esta distribución probabilística en la capa límite superior es un requisito ineludible para el sector de la ingeniería eólica y la evaluación de cargas estructurales, dado que los 100 metros representan la altura estándar del buje en aerogeneradores modernos. La evidencia estadística dictamina que utilizar la población media o el estrato moderado (p50) para estimar el riesgo cinemático en estas altitudes introduce un error de subestimación sistémico inaceptable. Identificar que un evento originado en LPB o ARG clasificado como extremo superará con alta probabilidad los 30 m/s justifica la imperativa necesidad de diseñar los umbrales de seguridad y supervivencia de las turbinas eólicas basándose estrictamente en las PDF del subconjunto p90, aislando la amenaza real de las métricas promediadas.
+
+% ==============================================================================
+% SECCIÓN PRINCIPAL: KDE ESPACIAL DE VIENTO A 100 METROS
+% ==============================================================================
+
+\section{Distribución espacial de máximos de viento a 100 metros: población global}\label{sec:kde_espacial_wind100_global}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/kde_wind100_global_fasesxreg.png}
+\caption[Distribución espacial (KDE) de viento máximo a 100 m - Población Global]{Estimación de densidad espacial bidimensional (KDE) para la ubicación geométrica de los máximos de magnitud del viento a 100 metros de altura en la Población Global de referencia. La matriz organiza la evolución espacial a través de las fases evolutivas Incipiente (a-c), Intensificación (d-f), Madurez (g-i) y Decaimiento (j-l), segregadas por las regiones de ciclogénesis SBR, LPB y ARG. El dominio lagrangiano abarca $20^{\circ} \times 20^{\circ}$ con centro en el núcleo del sistema $(0,0)$. La barra de colores cuantifica la densidad de probabilidad relativa escalada por $10^{-4}$.}
+\label{fig:kde_wind100_global}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_wind100_global} proyecta el campo probabilístico continuo, derivado de la estimación de densidad por kernel, que describe la ubicación espacial preferencial de los picos de viento a 100 metros de altura. Al igual que en el nivel superficial, este análisis se aplica sobre la Población Global (población base) en un marco de referencia móvil anclado al centro de bajas presiones, trazando la evolución topológica del máximo impacto cinemático en función de la región de ciclogénesis y su maduración a lo largo de las cuatro fases del ciclo de vida.
+
+% ¿Cómo es?
+Al promediar todo el catálogo climatológico, la distribución espacial de los máximos a 100 metros mantiene una firma predominantemente difusa y elongada a lo largo de todo el ciclo de vida. En las etapas iniciales (paneles a-c), la localización del viento máximo carece de un anclaje claro, presentando extensiones amplias e incluso zonas de densidad separadas, como se nota al sureste del centro en LPB (panel b). A medida que los ciclones avanzan hacia las etapas de intensificación y madurez (paneles d-i), el campo converge paulatinamente hacia el sector oeste y noroeste del núcleo ciclónico, pero estabilizándose apenas en densidades de rango medio (tonos verdes y celestes, entre 9 y $15 \times 10^{-4}$). Al ingresar en el decaimiento (paneles j-l), esta incipiente organización se relaja, expandiendo nuevamente el área de probabilidad sobre el cuadrante occidental.
+
+% ¿Por qué es así?
+La alta dispersión geométrica obedece a la vasta heterogeneidad estructural al promediar un catálogo masivo dominado por ciclones ordinarios y débiles. En estos sistemas, la configuración del campo de viento depende fuertemente de la variabilidad del flujo sinóptico de fondo. La leve consolidación temporal hacia el sector oeste/noroeste durante la madurez refleja la huella aerodinámica típica del sector frío del ciclón, donde el gradiente isobárico suele ser más pronunciado. A 100 metros de altura, la fricción superficial es marginal; sin embargo, en un sistema de intensidad promedio, la falta de una arquitectura termodinámica excepcionalmente profunda impide que el flujo casi geostrófico se concentre en un único punto focal consistente, resultando en un mapa de probabilidades diluido.
+
+% ¿Para qué?
+Mapear esta distribución establece la línea de base estructural probabilística para la cima de la capa límite. Es fundamental para demostrar estadísticamente que un catálogo promediado de eventos no posee una simetría geométrica rígida ni un punto de impacto predecible. En el contexto de la evaluación de recursos eólicos costa afuera, este patrón medio confirma que bajo condiciones climatológicas normales, la energía cinética extrema se encuentra distribuida de manera variable, proporcionando el sustrato necesario para contrastar y dimensionar posteriormente la hiperconcentración asociada a los estratos de gran severidad.
+
+\vspace{1em}
+
+\section{Distribución espacial de máximos de viento a 100 metros: Subconjunto extremo (p90)}\label{sec:kde_espacial_wind100_p90}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/kde_wind100_p90_fasesxreg.png}
+\caption[Distribución espacial (KDE) de viento máximo a 100 m - Subconjunto p90]{Estimación de densidad espacial bidimensional (KDE) de la ubicación de los máximos de magnitud del viento a 100 metros para el subconjunto de ciclones intensos (percentil 90). La disposición de los paneles (a-l) y el formato del dominio lagrangiano replican a la Figura \ref{fig:kde_wind100_global}, empleando la misma escala colorimétrica ($10^{-4}$) para evidenciar el agudo contraste en la concentración y previsibilidad del impacto cinemático en eventos extremos.}
+\label{fig:kde_wind100_p90}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_wind100_p90} representa el modelado espacial KDE enfocado exclusivamente en el estrato de ciclones catalogados como extremos. Esta muestra aísla la firma geométrica de los vientos máximos a 100 metros de altitud para los vórtices más violentos y profundos de la base de datos, agrupados por haber alcanzado los valores de vorticidad mínima dentro del primer decil de la distribución durante su historia vital. El análisis desglosa la evolución de esta arquitectura cinemática a través de las fases de desarrollo y los tres principales focos ciclogenéticos.
+
+% ¿Cómo es?
+A diferencia de la dispersión climatológica, el campo probabilístico del estrato p90 exhibe una contracción topológica drástica, revelando una estructura altamente concentrada. Al alcanzar la fase de madurez (paneles g-i), se erige un núcleo hiperlocalizado de máxima densidad anclado sólidamente en el cuadrante noroeste. En las regiones de SBR (g) y LPB (h), el epicentro de este núcleo alcanza el tope de la escala de probabilidad (tonos cálidos, superando los $23 \times 10^{-4}$), indicando una recurrencia espacial casi absoluta. En ARG (i), el patrón es análogamente coherente, aunque ligeramente más estirado sobre el eje zonal. De manera notable, al transitar hacia el decaimiento (paneles j-l), los sistemas del p90 conservan una estructura espacial significativamente más compacta y confinada cerca del núcleo que su contraparte de la Población Global. 
+
+% ¿Por qué es así?
+Esta violenta contracción hacia un foco denso y agudo demuestra que, en sistemas extremos, la intensa rotación cerrada de mesoescala domina y anula la dispersión geométrica generada por el flujo ambiental de fondo. El desacoplamiento parcial de la fricción superficial a 100 metros facilita que las estructuras dinámicas severas, como las corrientes de chorro de bajo nivel (\textit{low-level jets}) envueltas en la retaguardia del frente frío, operen sin perturbaciones mecánicas, focalizando todo el momento cinético en un radio crítico y específico. La mayor agudeza observada en SBR y LPB frente a ARG responde a que los desarrollos subtropicales y de latitud media-baja suelen adquirir arquitecturas más compactas (como seclusiones cálidas pronunciadas) promovidas por intensos flujos diabáticos, empaquetando el gradiente de presión destructivo en un volumen espacial minúsculo.
+
+% ¿Para qué?
+La cuantificación geométrica de este núcleo asimétrico es un descubrimiento central para la mitigación del riesgo en infraestructuras elevadas (como aerogeneradores marinos o líneas de transmisión). Certifica de manera concluyente que el grado de severidad dinámica de un ciclón predetermina su coherencia espacial, forzando a que las ráfagas extremas a 100 metros se sistematicen mecánicamente en un sector predecible (noroeste). Para el pronóstico operativo, esto implica que una vez clasificado un sistema inminente como "extremo" en SBR o LPB, el azimut y el radio exacto del daño catastrófico sobre las turbinas eólicas pueden anticiparse con un elevado grado de certidumbre determinística, optimizando las maniobras de puesta en bandera (\textit{pitching}) de las aspas por cuadrantes específicos.
+
+% ==============================================================================
+% SECCIÓN: PATRONES DOMINANTES DE VARIABILIDAD (EOF) - VIENTO A 100 METROS
+% ==============================================================================
+
+\section{Patrones dominantes de variabilidad del viento a 100 metros: Análisis EOF}\label{sec:eof1_wind100}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/pca1_wind100_global_fasesxreg.png}
+\caption[EOF1 de viento a 100 metros - Población Global]{Primer modo espacial (EOF1) de la magnitud del viento a 100 metros para la Población Global de referencia. La disposición matricial organiza la evolución por regiones de ciclogénesis en columnas (SBR, LPB y ARG) y las fases de desarrollo evolutivo en filas (Incipiente, Intensificación, Madurez y Decaimiento), etiquetadas de la a) a la l). Sobre cada panel se indica el porcentaje de la varianza espacial total explicada (\textit{exp\_var}) por esta componente principal. La escala cromática divergente cuantifica las anomalías estructurales relativas al centro del vórtice.}
+\label{fig:eof1_wind100_global}
+\end{figure}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/pca1_wind100_p90_fasesxreg.png}
+\caption[EOF1 de viento a 100 metros - Subconjunto p90]{Primer modo espacial (EOF1) de la magnitud del viento a 100 metros para el estrato de ciclones extremos (percentil 90). El formato de los paneles (a-l), la nomenclatura de varianza explicada y el dominio espacial mantienen una correspondencia estricta con la Figura \ref{fig:eof1_wind100_global}, permitiendo el contraste topológico directo entre la dinámica intrínseca de los sistemas severos y el patrón climatológico medio.}
+\label{fig:eof1_wind100_p90}
+\end{figure}
+
+% ¿Qué es?
+Las Figuras \ref{fig:eof1_wind100_global} y \ref{fig:eof1_wind100_p90} presentan el primer modo de las Funciones Ortogonales Empíricas (EOF1) extraído de la descomposición espectral del campo espacial de viento a 100 metros de altitud. Este diagnóstico multivariado aísla matemáticamente la señal de variabilidad más robusta y recurrente en la capa límite superior. El análisis se aplica de manera dual: primero sobre la Población Global para establecer la línea base aeroelástica, y luego de forma exclusiva sobre el estrato de intensidad extremo (p90), rastreando la evolución del modo dominante según el origen geográfico y la fase vital. Los campos espaciales complementarios para los estratos de menor intensidad (p10 y p50) se documentan en el Apéndice \ref{apendice:eof} para garantizar la trazabilidad del análisis.
+
+% ¿Cómo es?
+En la Población Global (Figura \ref{fig:eof1_wind100_global}), el modo dominante ejerce un control absoluto, capturando entre el $28.9\%$ y el $58.6\%$ de la varianza total (alcanzando su máxima representatividad en la madurez de SBR). Topológicamente, preserva e incluso amplifica la estructura dipolar norte-sur identificada en el nivel superficial, presentando contornos muy suaves y bandas expansivas. Por el contrario, al evaluar el subconjunto extremo (Figura \ref{fig:eof1_wind100_p90}), el patrón dipolar se fractura radicalmente y su dominancia matemática colapsa, absorbiendo apenas entre el $24.3\%$ y el $38.0\%$ de la energía. En LPB durante su madurez (panel h), emerge un núcleo de anomalía positiva excepcionalmente denso, compacto y elongado hacia el sur/sureste del centro (tonos rojo oscuro, $>+0.04$). ARG en madurez (panel i) desarrolla una compleja firma asimétrica y concéntrica, mientras que en las fases de decaimiento extremo (paneles j-l), las bandas anómalas permanecen fuertemente ancladas al vórtice, configurando gradientes espaciales mucho más agresivos que la relajación estrictamente zonal observada en la población.
+
+% ¿Por qué es así?
+La persistencia de un gran dipolo meridional de alta varianza en la población media reafirma que, al promediar miles de sistemas ordinarios a 100 metros de altura, la variabilidad depende pura y exclusivamente de las fluctuaciones en el flujo geostrófico de fondo (el desplazamiento de la corriente en chorro o el ensanchamiento baroclínico). Sin embargo, la disrupción de esta simetría y la caída de la varianza en el p90 prueban empíricamente que, bajo un forzamiento dinámico extremo, la robusta arquitectura interna del sistema toma el control absoluto. La hiperconcentración de núcleos anómalos evidencia inestabilidades agudas en las corrientes en chorro de bajo nivel (\textit{low-level jets}) asociadas al frente frío, las cuales, al operar cerca del tope de la capa de Ekman, fluctúan de manera violenta, no lineal y libres de la disipación friccional mecánica que atenúa estos gradientes cerca del suelo.
+
+% ¿Para qué?
+La extracción rigurosa de estas firmas asimétricas en la capa límite superior resulta fundamental para la estimación de riesgos en infraestructuras costa afuera. Demostrar estadísticamente que un estrato de vórtices extremos no solo incrementa su velocidad escalar, sino que fractura y concentra su varianza en núcleos hipercompactos (particularmente al sur y sureste del centro en madurez), permite refinar de manera determinística la modelación de fatiga aerodinámica sobre el rotor de las turbinas eólicas. Esto ratifica que los códigos de diseño deben incorporar forzosamente dimensiones asimétricas de mesoescala para prever impactos reales, descartando el peligroso supuesto de que la amenaza climática a 100 metros se distribuye de manera suave o concéntrica.
+
+\section{Varianza explicada por los modos principales (EOF1-EOF5): Viento a 100 metros}\label{sec:var_exp_wind100}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/all_expvar_wind100_mean2times.png} % Ajusta el nombre de tu archivo
+\caption[Varianza explicada por los primeros cinco modos (EOF1-EOF5) de viento a 100 m]{Fraccionamiento de la varianza espacial total contenida en los primeros cinco modos dominantes (EOF1 a EOF5) del campo de viento a 100 metros de altura. Se contrasta la distribución de la Población Global frente a los estratos de intensidad (p10, p50 y p90) a lo largo del ciclo de vida.}
+\label{fig:var_exp_wind100}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:var_exp_wind100} expone el fraccionamiento de la varianza espacial distribuida en los primeros cinco modos ortogonales (EOF1 a EOF5) para la magnitud del viento a 100 metros de altura. Al igual que en el nivel superficial, esta métrica diagnóstica contrasta el grado de dimensionalidad estructural de la Población Global frente a los estratos definidos por su severidad dinámica (p10, p50 y p90), abarcando todas las regiones y fases.
+
+% ¿Cómo es?
+A 100 metros de altitud, la dicotomía entre la población y los eventos extremos se vuelve aún más extrema. Por un lado, la Población Global concentra su energía de manera casi singular: el EOF1 absorbe con altísima consistencia entre el $28.9\%$ y el $58.6\%$ de la varianza total, generando un declive pronunciado hacia los modos EOF2-EOF5, que quedan estadísticamente minimizados. Por otro lado, en el estrato p90, la dominancia del primer modo se desploma a valores de entre $24.3\%$ y $38.0\%$. Esta caída del EOF1 obliga a que la varianza restante se redistribuya hacia las componentes ortogonales de orden superior, aplanando notablemente el gráfico de barras/puntos para los eventos severos.
+
+% ¿Por qué es así?
+La extrema agudeza del modo 1 en la Población Global se debe a la desvinculación parcial de la capa límite friccional; sin el "ruido" topográfico, el viento casi geostrófico del ciclón promedio obedece limpiamente al dipolo del flujo sinóptico. No obstante, en el estrato p90 ocurre el fenómeno físico de fragmentación termodinámica: al liberarse de la fricción, la enorme inestabilidad del vórtice extremo facilita el desarrollo violento de corrientes en chorro de niveles bajos (\textit{low-level jets}) y oclusiones rápidas. Estas múltiples turbulencias de mesoescala rompen el flujo univariado, repartiendo la energía cinética en los modos ortogonales secundarios (EOF2-EOF5).
+
+% ¿Para qué?
+Determinar la fuerte redistribución de la varianza hacia modos secundarios en sistemas severos resulta crítico para la industria de las energías renovables. Constatar que a 100 metros (la altura estándar del buje) la energía de un p90 se reparte en múltiples patrones estructurales, certifica que las cargas de viento extremo son espacialmente caóticas. Esto alerta a la ingeniería eólica sobre el peligro de subestimar la fatiga aerodinámica: los modelos de evaluación de riesgo costa afuera deben utilizar parametrizaciones multiescalares capaces de soportar ráfagas hiperlocalizadas que cambian rápidamente de forma, descartando las proyecciones basadas en un solo patrón dominante.
+
+

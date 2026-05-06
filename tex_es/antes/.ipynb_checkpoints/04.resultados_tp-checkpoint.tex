@@ -1,0 +1,147 @@
+% ----------------------------------------------------------
+\chapter{Resultados e Discussões}\label{cap:resultados}
+% ==============================================================================
+% SECCIÓN: PDF tp
+% ==============================================================================
+
+\section{Precipitación total}
+
+\subsection{Distribución estadística de las magnitudes máximas de precipitación}\label{subsec:pdf_precip}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/PDF_tp.png}
+\caption[PDF de magnitudes máximas de precipitación total]{Funciones de densidad de probabilidad (PDF) estimadas mediante KDE para las magnitudes máximas de precipitación total (mm/h). Los paneles organizan la evolución del ciclo de vida en filas: Incipiente (a-c), Intensificación (d-f), Madurez (g-i) y Decaimiento (j-l), estratificados por región de ciclogénesis en columnas (SBR, LPB, ARG). Se compara el comportamiento de la Población Global de referencia (área sombreada gris) con los estratos definidos por el pico máximo de vorticidad en su ciclo vital: sistemas débiles (p10, línea punteada azul), sistemas moderados (p50, línea continua verde) y sistemas extremos (p90, línea seccionada roja).}
+\label{fig:pdf_precip}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:pdf_precip} modela paramétricamente la distribución estadística de los máximos espaciales de precipitación total, expresada en milímetros por hora (mm/h). Estos campos fueron extraídos y promediados sistemáticamente dentro del mismo dominio lagrangiano de $20^\circ \times 20^\circ$ utilizado para los campos cinemáticos. El análisis desglosa el espectro hidrometeorológico contrastando los estratos independientes definidos por su severidad dinámica (p10, p50 y p90) frente a la Población Global, aislando de este modo el comportamiento pluviométrico para cada etapa evolutiva y cada región ciclogenética.
+
+% ¿Cómo es?
+A diferencia de la respuesta cinemática observada en los campos de viento, las distribuciones pluviométricas exhiben un comportamiento fuertemente no lineal y contraintuitivo. En las fases iniciales de incipiencia e intensificación (paneles a-f), SBR y LPB muestran distribuciones anchas donde los ciclones extremos (p90) presentan una leve tendencia hacia mayores tasas de precipitación, con colas pesadas extendiéndose hasta los 60 mm/h. Sin embargo, al alcanzar la fase de madurez (paneles g-h) y profundizarse hacia el decaimiento (paneles j-k), ocurre una divergencia estructural drástica: la curva del estrato p90 en SBR y LPB colapsa hacia la izquierda, desarrollando un pico modal sumamente estrecho en valores mínimos de precipitación (entre 2 y 5 mm/h). Simultáneamente, la población moderada (p50) y la Población Global retienen distribuciones mucho más extendidas y pluviosas centradas entre los 15 y 20 mm/h. Por su parte, ARG (paneles c, f, i, l) manifiesta un régimen independiente donde todas las distribuciones, sin importar el estrato de intensidad, permanecen fuertemente sesgadas hacia magnitudes bajas (moda en $\sim$5 mm/h), destacándose únicamente una dispersión ligeramente mayor para el p90 durante la intensificación.
+
+% ¿Por qué es así?
+El desacople evidente entre la máxima intensidad dinámica y la máxima precipitación durante la fase de madurez revela que los vórtices extremos (p90) evolucionan estructuralmente hacia sistemas profunda y rápidamente ocluidos. Al alcanzar su clímax rotacional, estos ciclones severos agotan su acceso a la masa de aire tropical húmedo e inestable (transportada por la cinta transportadora cálida o \textit{warm conveyor belt}). En su lugar, el núcleo lagrangiano experimenta una pronunciada intrusión seca (\textit{dry slot}): aire frío, subsidente y de baja humedad proveniente de la alta troposfera o estratosfera que se enrosca hacia el centro del sistema. Esta dinámica suprime drásticamente la convección profunda en el dominio central, resultando en un colapso de las tasas pluviométricas extremas. Los sistemas moderados (p50), al no ocluirse de forma tan violenta o prematura, logran sostener una mayor interacción baroclínica activa y mantener sus bandas frontales hidratadas por más tiempo. En la región de ARG, la permanente deficiencia hidrológica en todos los grupos refleja el forzamiento del frente polar en latitudes altas, donde el contenido de humedad absoluta es intrínsecamente bajo y la dinámica es regida por advecciones predominantemente frías y secas desde el Pacífico sur.
+
+% ¿Para qué?
+La cuantificación de este comportamiento estadístico invertido es fundamental para la gestión de riesgos múltiples (\textit{compound hazards}). Permite refutar empíricamente la hipótesis de que la severidad del forzamiento dinámico se traduce invariablemente en un incremento de la lluvia extrema a lo largo de todo el ciclo de vida. Demostrar que, en el Atlántico Sur, los ciclones responsables de los vientos más destructivos tienden a "secarse" en su núcleo durante su madurez es crítico para los pronósticos hidrometeorológicos. Esto indica a los sistemas de alerta temprana que las máximas amenazas por inundación relámpago (\textit{flash floods}) asociadas a eventos extremos (p90) ocurrirán predominantemente durante las etapas de génesis e intensificación, o bien estarán asociadas a sistemas de intensidad rotacional moderada (p50) que mantienen configuraciones termodinámicas óptimas para el anclaje convectivo prolongado.
+
+% ==============================================================================
+% SECCIÓN PRINCIPAL: KDE ESPACIAL DE PRECIPITACION
+% ==============================================================================
+
+\subsection{Distribución espacial de máximos de precipitación: Climatología global}\label{subsec:kde_espacial_tp_global}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/kde_tp_global_fasesxreg.png}
+\caption[Distribución espacial (KDE) de precipitación máxima - Población Global]{Estimación de densidad espacial bidimensional (KDE) para la ubicación geométrica de los máximos de precipitación total (mm/h) en la Población Global de referencia. El mapeo se desarrolla sobre un dominio lagrangiano de $20^{\circ} \times 20^{\circ}$ relativo al núcleo ciclónico $(0,0)$. La matriz detalla la evolución a través de las fases evolutivas en filas (Incipiente, Intensificación, Madurez y Decaimiento) y la región de ciclogénesis en columnas (SBR, LPB y ARG). La barra colorimétrica lateral cuantifica la densidad de probabilidad relativa escalada por $10^{-4}$.}
+\label{fig:kde_tp_global}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_tp_global} expone el campo continuo de probabilidad geométrica derivado del estimador de densidad por kernel (KDE), el cual modela la ubicación espacial preferencial de los picos de precipitación total. Este mapa probabilístico caracteriza el comportamiento hidrológico promedio de los sistemas extratropicales, rastreando cómo el área de máximo forzamiento pluviométrico se posiciona e interactúa con el núcleo de bajas presiones a lo largo de su ciclo de vida para las distintas regiones ciclogenéticas de Sudamérica.
+
+% ¿Cómo es?
+A diferencia de los campos cinemáticos (viento) que alcanzan su máxima organización y concentración espacial durante la madurez, la distribución espacial de la precipitación presenta su núcleo de mayor densidad y cohesión de forma temprana, durante la fase de intensificación (paneles d, e, f). En esta etapa, particularmente en SBR y LPB, se configura un foco sumamente agudo (alcanzando tonos naranjas y rojos, con densidades entre 21 y $27 \times 10^{-4}$) ubicado de manera precisa en el cuadrante sureste del centro (longitudes positivas y latitudes negativas). Sin embargo, al transitar hacia la fase de madurez (paneles g-i), este núcleo denso colapsa dramáticamente: la densidad máxima cae hacia el rango de los azules y celestes, y el área de probabilidad se elonga y difumina hacia el este y sureste, alejándose del centro. Durante el decaimiento (paneles j-l), la señal pierde casi por completo su anclaje geométrico.
+
+% ¿Por qué es así?
+La hiperconcentración pluviométrica en el cuadrante sureste durante la intensificación responde a la dinámica canónica del sector cálido del ciclón, donde la cinta transportadora cálida (\textit{warm conveyor belt}) inyecta humedad tropical que asciende forzadamente sobre la rampa frontal. El drástico colapso espacial y la difusión de la señal en la madurez se explican por el proceso de oclusión: a medida que el sistema alcanza su desarrollo, la masa de aire frío envuelve el núcleo, se produce la intrusión seca (\textit{dry slot}) desde niveles medios y altos, y la convección profunda cercana al centro se suprime, desplazando las bandas de precipitación intensa hacia la periferia frontal externa y perdiendo coherencia espacial relativa al centro de rotación. 
+
+% ¿Para qué?
+Esta caracterización geométrica de la Población Global es un pilar analítico para la meteorología operativa. Demuestra cuantitativamente que el momento y el lugar de mayor amenaza hidrológica en un ciclón ordinario están desacoplados de su plenitud dinámica. Saber que el área de máximo riesgo por lluvias intensas se ancla invariablemente en el cuadrante sureste de forma acotada exclusivamente durante la intensificación, optimiza el despliegue de alertas tempranas por crecidas repentinas antes de que el sistema alcance su mínima presión central o sus vientos máximos.
+
+\vspace{1em}
+
+\subsection{Distribución espacial de máximos de precipitación: Subconjunto extremo (p90)}\label{subsec:kde_espacial_tp_p90}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/kde_tp_p90_fasesxreg.png}
+\caption[Distribución espacial (KDE) de precipitación máxima - Subconjunto p90]{Estimación de densidad espacial bidimensional (KDE) de la ubicación de los máximos de precipitación para el subconjunto de ciclones intensos (percentil 90). El formato de visualización (a-l) y la escala de probabilidad ($10^{-4}$) mantienen estricta correspondencia con la Figura \ref{fig:kde_tp_global}, facilitando la evaluación directa de la asimetría y el desacople hidrodinámico en los sistemas más profundos del catálogo.}
+\label{fig:kde_tp_p90}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_tp_p90} ilustra la firma espacial preferencial de las precipitaciones máximas calculada de forma exclusiva para el estrato de los vórtices dinámicamente más extremos. Este mapeo geométrico aísla la arquitectura pluviométrica de los sistemas que alcanzaron los valores mínimos de vorticidad dentro del primer decil de la distribución durante su historia vital, documentando su asimetría hidrológica a lo largo del proceso de desarrollo en las diferentes zonas de ciclogénesis. Los mapas correspondientes a los estratos de menor intensidad (p10 y p50) se incluyen en el Apéndice \ref{apendice:kde_tp} para referencia.
+
+% ¿Cómo es?
+El patrón del estrato extremo exhibe una erosión estructural pronunciada y un comportamiento espacial marcadamente difuso en comparación con la climatología. Durante la intensificación (paneles d-f), el núcleo de densidad máxima logra posicionarse en el cuadrante sureste, pero sus valores de probabilidad (tonos verdes a amarillos, entre 13 y $19 \times 10^{-4}$) son notablemente inferiores y menos cohesivos que los de la Población Global en la misma fase. El fenómeno más anómalo se consolida durante la madurez (paneles g-i): el área de máxima precipitación es expulsada del entorno del núcleo central, migrando hacia los límites exteriores del cuadrante sureste y este, con densidades paupérrimas (tonos azules oscuros). El vórtice central queda representado como una vasta región geométricamente desprovista de núcleos máximos de lluvia, evidenciando una sequedad central (\textit{drying out}) que domina hasta la disipación.
+
+% ¿Por qué es así?
+La pobre concentración espacial pluviométrica y la expulsión periférica de las lluvias durante la madurez de los eventos extremos (p90) obedece a la violencia de su oclusión tridimensional. Estos ciclones poseen un forzante dinámico tan profundo que envuelven su centro con aire frío y cortan de manera prematura el suministro de energía estática húmeda hacia el núcleo. La potente intrusión estratosférica (\textit{dry intrusion}) y la subsidencia de aire frío en el interior del sistema limpian de nubosidad profunda el entorno inmediato al centro de rotación (formando frecuentemente estructuras análogas a un "ojo"), fragmentando la precipitación máxima y arrojándola hacia bandas periféricas sumamente distantes, desorganizadas y alejadas del dominio de los vientos más severos.
+
+% ¿Para qué?
+Documentar esta paradoja geométrica resulta trascendental para comprender la naturaleza de los eventos compuestos (\textit{compound hazards}). Prueba concluyentemente que los ciclones clasificados como extremos por su intensidad dinámica (p90) son inherentemente ineficientes para focalizar precipitaciones torrenciales cerca de su centro neurálgico durante su fase de mayor madurez. Para la gestión de riesgos, esto determina que la superposición espacial exacta de daños estructurales masivos (por vientos extremos cerca del centro) e inundaciones catastróficas (por lluvias extremas) es físicamente incompatible en la misma ventana de tiempo y espacio; ambas amenazas operan en sectores geográficos (noroeste vs. sureste/periferia) y etapas evolutivas (madurez vs. intensificación) completamente desacoplados.
+
+% ==============================================================================
+% SECCIÓN: PATRONES DOMINANTES DE VARIABILIDAD (EOF) - PRECIPITACIÓN
+% ==============================================================================
+
+\subsection{Patrones dominantes de variabilidad de la precipitación: EOF1 Climatología global}\label{subsec:eof1_tp_global}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/pca1_tp_global_fasesxreg.png}
+\caption[EOF1 de la precipitación total - Población Global]{Primer modo espacial (EOF1) del campo de precipitación total (mm/h) para la Población Global de referencia. Los paneles describen la evolución temporal por fases: Incipiente (a-c), Intensificación (d-f), Madurez (g-i) y Decaimiento (j-l), segregadas por región de ciclogénesis (SBR, LPB, ARG). En el encabezado de cada panel se cuantifica el porcentaje de la varianza total explicada (\textit{exp\_var}). La escala cromática divergente (centrada en blanco para aislar zonas de nula variabilidad) representa las anomalías estructurales relativas al centro de bajas presiones.}
+\label{fig:eof1_tp_global}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:eof1_tp_global} despliega el primer modo de la Función Ortogonal Empírica (EOF1) aplicado a los campos espaciales de precipitación total. Este cálculo estadístico aísla geométricamente el patrón dominante de variabilidad hidrológica en la Población Global de sistemas extratropicales. Permite mapear las áreas relativas donde se producen las fluctuaciones pluviométricas más consistentes a lo largo de las cuatro fases evolutivas en la cuenca sudamericana. Los mapas correspondientes a los estratos independientes de menor intensidad (p10 y p50) se incluyen en el Apéndice \ref{apendice:eof} para su consulta.
+
+% ¿Cómo es?
+El espectro de la varianza revela que, al promediar la climatología entera, el primer modo explica una fracción consistentemente baja de la variabilidad, oscilando entre un $11.1\%$ (ARG, incipiente) y un máximo de $16.4\%$ (ARG, madurez). Desde la perspectiva topológica, la firma espacial está dominada por una intensa banda de anomalía positiva (tonos rojos y bordó, superando $+0.04$) que se origina en el centro o ligeramente al este del mismo, y se proyecta extendiéndose fuertemente hacia el cuadrante sureste. A medida que el sistema transita desde la intensificación (paneles d-f) hacia la madurez (g-i), esta banda se consolida y se elonga. Las anomalías negativas (tonos azules, $-0.01$ a $-0.02$) son difusas, ocupando principalmente los sectores norte y noroeste del dominio, mientras que las vastas áreas en blanco indican zonas donde la varianza pluviométrica univariada es estadísticamente nula.
+
+% ¿Por qué es así?
+La baja captura de varianza general corrobora la naturaleza episódica y multiescalar de la precipitación, la cual obedece a factores convectivos sumamente heterogéneos. La pronunciada banda de anomalía positiva proyectada hacia el sureste delinea la firma climatológica clásica de la zona frontal activa. Específicamente, traza el eje de la cinta transportadora cálida (\textit{warm conveyor belt}) y el frente frío asociado , donde el ascenso forzado de las masas de aire húmedo inyectadas desde los subtrópicos rige la inestabilidad hidrológica de un ciclón ordinario.
+
+% ¿Para qué?
+La extracción de este patrón base es metodológicamente esencial para determinar cómo se organiza el forzamiento pluviométrico en un evento estándar. Comprobar que el ciclón promedio descarga su mayor fluctuación en una banda diagonal al sureste permite establecer un canon estructural. Esta línea de base sirve para medir rigurosamente si los ciclones extremos (p90) simplemente intensifican este formato de banda frontal o si, impulsados por dinámicas más violentas, reconfiguran por completo la topología geométrica del peligro por lluvias torrenciales.
+
+\vspace{1em}
+
+\subsection{Patrones dominantes de variabilidad de la precipitación: EOF1 Subconjunto extremo (p90)}\label{subsec:eof1_tp_p90}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/pca1_tp_p90_fasesxreg.png}
+\caption[EOF1 de la precipitación total - Subconjunto p90]{Primer modo espacial (EOF1) del campo de precipitación total para el estrato de ciclones extremos (percentil 90). El diseño matricial de paneles (a-l) y la escala de anomalías estandarizada replican las condiciones de la Figura \ref{fig:eof1_tp_global}, permitiendo identificar empíricamente la asimetría, agudeza y curvatura que desarrollan las bandas de precipitación máxima bajo forzamientos dinámicos severos.}
+\label{fig:eof1_tp_p90}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:eof1_tp_p90} ilustra la primera componente ortogonal (EOF1) calculada de forma exclusiva para el estrato de eventos hidrometeorológicos extremos. Este filtrado paramétrico aísla el patrón subyacente de variabilidad convectiva de los ciclones que alcanzaron el decil de mayor profundidad y tasa rotacional en su historia vital, trazando sus asimetrías a través de las fases evolutivas y estratificando los resultados según su foco geográfico de origen.
+
+% ¿Cómo es?
+Al focalizar en el percentil extremo, la representatividad estadística del primer modo experimenta un salto cualitativo robusto, escalando para explicar entre el $13.8\%$ y un dramático $36.5\%$ (LPB, decaimiento) de la varianza pluviométrica total. Estructuralmente, el estrato p90 exhibe una deformación geométrica severa frente a la climatología: la banda de anomalía positiva se vuelve marcadamente más aguda y adopta una curvatura pronunciada en forma de coma . En la fase de intensificación (paneles d, e, f), el foco rojo oscuro ($>+0.04$) se compacta justo en el borde sureste del centro. Al ingresar en la madurez (g, h, i) y decaimiento (j, k, l), la anomalía se estira y "envuelve" al sistema por el sur, desarrollando una arquitectura fuertemente arqueada. En SBR y LPB, el arco frontal de variabilidad se desprende del núcleo de bajas presiones, rodeándolo a gran distancia con márgenes muy afilados (zonas blancas de nula varianza interior).
+
+% ¿Por qué es así?
+El incremento en la varianza explicada y la agudización del patrón en forma de coma demuestran que los fuertes forzamientos cinemáticos en los vórtices extremos imponen un altísimo grado de coherencia organizativa sobre la precipitación, subyugando el "ruido" convectivo aleatorio. La violenta curvatura de la banda anómala es la manifestación empírica de un proceso de oclusión acelerado y profundo . El intenso flujo ciclónico enrolla los frentes, envolviendo el núcleo con aire frío y obligando al ascenso convectivo máximo a retroceder hacia la periferia elongada del sistema. Esta intensa deformación cinemática (\textit{wrap-around}) limpia el centro geométrico del sistema y acota la máxima inestabilidad pluviométrica a un arco periférico de gradientes letales.
+
+% ¿Para qué?
+Cuantificar esta topología asimétrica es el pináculo del análisis de impacto hidrológico, ya que demuestra irrefutablemente que la variabilidad de un evento extremo obedece a una geometría hiper-enfocada de "coma" y no a un esparcimiento radial continuo. A nivel operativo, anticipar la morfología y rotación espacial de esta banda anómala proporciona a las agencias de protección civil la capacidad de delimitar polígonos de alerta por inundaciones repentinas sumamente precisos y asimétricos. Además, fundamenta físicamente el desacople de las amenazas compuestas: el radio de devastación por viento máximo en el centro operará sobre un dominio espacial que no coincide con el violento arco periférico de máxima descarga pluviométrica.
+
+\subsection{Varianza explicada por los modos principales (EOF1-EOF5): Precipitación total}\label{subsec:var_exp_precip}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/all_expvar_tp_mean2times.png} 
+\caption[Varianza explicada por los primeros cinco modos (EOF1-EOF5) de precipitación]{Fraccionamiento de la varianza espacial total contenida en los primeros cinco modos dominantes (EOF1 a EOF5) del campo de precipitación total. Se contrasta la distribución de la varianza de la Población Global frente a los estratos de intensidad dinámica (p10, p50 y p90) a lo largo de las fases evolutivas para cada región de ciclogénesis.}
+\label{fig:var_exp_tp}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:var_exp_tp} expone el fraccionamiento de la varianza espacial distribuida en los primeros cinco modos ortogonales (EOF1 a EOF5) del campo de precipitación total. Este desglose permite identificar el grado de complejidad y dimensionalidad del forzamiento hidrológico. La evolución de esta métrica se contrasta entre la Población Global de referencia y los estratos independientes definidos por su severidad dinámica (p10, p50 y p90) a lo largo del dominio lagrangiano en la cuenca sudamericana.
+
+% ¿Cómo es?
+En marcado contraste con la alta cohesión univariada observada en la dinámica del viento, la varianza de la precipitación presenta una distribución mucho más aplanada y dispersa a lo largo de casi todas las poblaciones. Para la Población Global y los sistemas moderados (p50), el modo EOF1 apenas logra explicar entre el $10.7\%$ y el $18.4\%$ de la variabilidad espacial total. En consecuencia, la energía se encuentra severamente fragmentada, obligando a que los modos de orden superior (EOF2, EOF3 e incluso EOF4) retengan fracciones sustanciales de información (típicamente entre el $7\%$ y el $13\%$). Sin embargo, se distingue una anomalía notoria en el estrato extremo (p90) originado en SBR y LPB: durante la fase de decaimiento, el modo dominante (EOF1) absorbe súbitamente el $26.2\%$ y un espectacular $36.5\%$ de la varianza total, respectivamente, quebrando esta tendencia dispersa y revelando una organización tardía inusitadamente fuerte frente al resto de los modos.
+
+% ¿Por qué es así?
+La precipitación es un fenómeno gobernado por dinámicas no lineales, episódicas y de mesoescala. Mientras que el campo de viento obedece a un gradiente de presión continuo, las precipitaciones dependen de frentes activos, convección embebida y liberación asimétrica de calor latente, resultando en campos inherentemente fragmentados. Reconstruir matemáticamente estos núcleos caóticos exige apoyarse en múltiples componentes ortogonales simultáneas (EOF2-EOF5). El excepcional "salto" de varianza del EOF1 para el p90 de SBR y LPB durante el decaimiento sugiere que estos vórtices extremos evolucionan hacia sistemas profundamente ocluidos. En esta etapa final, la banda de precipitación se desconecta del caos convectivo y se enrolla (\textit{wrap-around}) en una estructura en forma de coma altamente coherente y cuasi-estacionaria, dominando por completo la matriz de varianza.
+
+% ¿Para qué?
+Este diagnóstico evidencia estadísticamente que el impacto pluviométrico de los ciclones convencionales no puede ser caracterizado fiablemente extrayendo un único patrón espacial dominante, justificando metodológicamente la necesidad de retener múltiples modos. Sin embargo, también demuestra que los eventos extremos (p90) poseen la capacidad termodinámica de organizar lluvias letales en geometrías altamente coherentes al final de su vida. Esta confirmación cuantitativa da sustento directo a la implementación posterior de Funciones Ortogonales Empíricas combinadas (MEOF) para forzar matemáticamente el análisis unificado de los gradientes cinemáticos y los núcleos pluviométricos, y así evaluar el verdadero grado de (des)acople entre el viento y la lluvia.
+
+

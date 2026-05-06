@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: tese_es.aux
+The style file: iag_es.bst
+Database file #1: tex_es/bibliografia.bib
+Warning--entry type for "hersbach_era5_2023b" isn't style-file defined
+--line 305 of file tex_es/bibliografia.bib
+Warning--can't use both author and editor fields in shapiro1999bridge
+Warning--can't use both author and editor fields in shapiro1990life
+You've used 65 entries,
+            2768 wiz_defined-function locations,
+            978 strings with 21187 characters,
+and the built_in function-call counts, 34200 in all, are:
+= -- 3275
+> -- 2730
+< -- 86
++ -- 992
+- -- 954
+* -- 3521
+:= -- 6227
+add.period$ -- 0
+call.type$ -- 65
+change.case$ -- 579
+chr.to.int$ -- 65
+cite$ -- 67
+duplicate$ -- 797
+empty$ -- 1161
+format.name$ -- 1049
+if$ -- 6199
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 66
+newline$ -- 202
+num.names$ -- 260
+pop$ -- 440
+preamble$ -- 1
+purify$ -- 643
+quote$ -- 0
+skip$ -- 979
+stack$ -- 0
+substring$ -- 1748
+swap$ -- 157
+text.length$ -- 62
+text.prefix$ -- 318
+top$ -- 0
+type$ -- 576
+warning$ -- 2
+while$ -- 261
+width$ -- 0
+write$ -- 717
+(There were 3 warnings)

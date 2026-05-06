@@ -1,0 +1,167 @@
+% ----------------------------------------------------------
+\chapter{Resultados e Discussões -- Precipitación total}\label{cap:resultados_tp}
+% ----------------------------------------------------------
+
+% ==============================================================================
+% SECCIÓN: ANÁLISIS MULTIVARIADO (MEOF) - VIENTO A 100M Y PRECIPITACIÓN
+% ==============================================================================
+
+\section{Análisis de covarianza espacial multivariada (MEOF): Viento a 100 metros y Precipitación}
+
+El Análisis de Funciones Ortogonales Empíricas Multivariadas (MEOF) permite evaluar la interacción espacial simultánea entre el campo cinemático en la capa límite superior (viento a 100 metros) y el campo hidrológico en superficie (precipitación total). Al normalizar y combinar ambas variables en una única matriz, este método extrae los modos dominantes de variabilidad acoplada. Para cada modo, el resultado genera dos firmas espaciales emparejadas: una para la precipitación y otra para el viento. La covarianza física se interpreta vinculando geográficamente las anomalías del mismo signo (positivas con positivas, negativas con negativas), revelando cómo ambas amenazas se comportan de manera conjunta.
+
+\section{Fase Incipiente}\label{sec:meof_incipiente}
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/incipient_global_fasesxreg.png} 
+\caption[MEOF1 de viento a 100 m y precipitación - Fase Incipiente]{Primer modo espacial multivariado (MEOF1) correspondiente a la fase Incipiente para la Población Global. La matriz organiza los resultados en columnas según la región de ciclogénesis (SBR, LPB y ARG). Para cada columna, la fila superior expone el patrón espacial de la precipitación total, mientras que la fila inferior despliega el patrón covariante del viento a 100 metros. Los colores indican el signo y magnitud de la anomalía. Se detalla la varianza conjunta explicada (\textit{exp\_var}) extraída por este modo acoplado.}
+\label{fig:meof_incipiente}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:meof_incipiente} presenta el primer modo multivariado (MEOF1) durante la fase de génesis o incipiente (Ic). Este mapeo ilustra la firma espacial acoplada en el momento en que el sistema comienza a organizar su circulación cerrada. El análisis evalúa el comportamiento de la Población Global, estableciendo la línea base de cómo se vinculan estadísticamente las señales de lluvia y viento cuando el vórtice apenas está naciendo. (Nota: Los mapas del estrato p90 se presentarán a continuación para establecer el contraste con la dinámica de severidad extrema).
+
+% ¿Cómo es?
+En la Población Global, el modo acoplado temprano explica una fracción moderada de la varianza conjunta (entre el $13.9\%$ en LPB y el $17.8\%$ en SBR). Al examinar los mapas emparejados, el acople espacial resulta sumamente difuso. En la fila superior, las anomalías de precipitación carecen de cohesión geométrica, presentando núcleos positivos dispersos y amorfos. Al buscar la señal covariante en la fila inferior (viento a 100 metros), las áreas de anomalía positiva correspondientes exhiben un gradiente igualmente débil y desorganizado. Es decir, aunque estadísticamente existe una covarianza, la activación de las lluvias no se vincula con una estructura cinemática consolidada. 
+
+% ¿Por qué es así?
+Esta falta de organización conjunta en la etapa temprana responde a las condiciones termodinámicas promedio que originan la ciclogénesis común. En la Población Global, la inestabilidad baroclínica inicial suele estar débilmente forzada, resultando en un campo cinemático incipiente que apenas es arrastrado por el entorno ambiental, y una convección (precipitación) que responde a forzantes térmicos locales más que a una dinámica de mesoescala unificada. Al carecer de altas tasas de vorticidad que actúen como un motor organizador central, las señales de viento y lluvia operan de manera casi independiente, reflejándose en mapas emparejados con baja asimetría y pobre definición estructural.
+
+% ¿Para qué?
+Establecer esta línea base de desacople incipiente es fundamental para la validación metodológica. Demuestra que, bajo condiciones climatológicas ordinarias, la génesis de un ciclón no produce un impacto conjunto estructurado. Este patrón difuso será el contraste analítico exacto necesario para demostrar cómo, en los eventos extremos (p90), el poderoso forzamiento de la vorticidad inicial obliga a que ambas filas (lluvia y viento) adquieran firmas espaciales fuertemente definidas y covariantes desde el "minuto cero" de su ciclo de vida.
+
+\vspace{1em}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/incipient_p90_fasesxreg.png} 
+\caption[MEOF1 de viento a 100 m y precipitación (p90) - Fase Incipiente]{Primer modo espacial multivariado (MEOF1) correspondiente a la fase Incipiente para el estrato extremo (p90). Manteniendo la misma disposición en columnas (SBR, LPB, ARG) y en filas emparejadas (precipitación arriba, viento abajo) de la Figura \ref{fig:meof_incipiente}, este mapa permite contrastar la organización prematura de la covarianza conjunta en sistemas condicionados por una alta vorticidad de base.}
+\label{fig:meof_incipiente_p90}
+\end{figure}
+
+% ¿Cómo es en el p90?
+A diferencia de la dispersión observada en el grupo global, el estrato p90 revela una organización prematura notable. Además de alcanzar picos de varianza conjunta del $19.4\%$ (SBR), la morfología de los mapas emparejados es mucho más focalizada. Al observar la fila superior, la señal positiva de precipitación comienza a estructurarse en bandas más cohesivas (típicamente hacia el sector este/sureste). Simultáneamente, esta señal covaría temporalmente con zonas de anomalía positiva en la fila inferior (viento) que presentan gradientes mucho más afilados y compactos.
+
+% ¿Por qué y Para qué en el p90?
+Esta profunda diferencia estructural evidencia que los sistemas p90 nacen condicionados por un fuerte forzamiento de escala sinóptica que imprime una intensa vorticidad desde el instante de génesis. Esta rotación vigorosa obliga a la matemática del sistema a alinear rápidamente los flujos de humedad con las aceleraciones cinemáticas. A nivel de pronóstico inmediato, comprobar empíricamente que la firma de lluvia (arriba) y la firma de viento (abajo) ya muestran un acople severo prematuro permite identificar el potencial destructivo de un ciclón extremo mucho antes de que alcance su madurez plena.
+
+\section{Fase de Intensificación}\label{sec:meof_intensificacion}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/intensification_global_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación - Fase de Intensificación]{Primer modo espacial multivariado (MEOF1) correspondiente a la fase de Intensificación para la Población Global. La matriz organiza los resultados en columnas según la región de ciclogénesis (SBR, LPB y ARG). Para cada columna, la fila superior expone la anomalía espacial de precipitación, y la fila inferior su contraparte covariante de viento a 100 metros. Se detalla la varianza conjunta explicada (\textit{exp\_var}) para dimensionar la coherencia de la energía acoplada durante el período de profundización del sistema.}
+\label{fig:meof_intensificacion}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:meof_intensificacion} proyecta el primer modo multivariado (MEOF1) correspondiente a la fase de Intensificación (It). Este mapeo extrae la covarianza espacial dominante durante el período en el que el sistema experimenta su mayor caída de presión relativa y su circulación se consolida. El análisis evalúa cómo se ajustan geográficamente los patrones de precipitación (fila superior) y viento a 100 metros (fila inferior) en la Población Global, sirviendo como contraste para el comportamiento anómalo del estrato de severidad extrema (p90).
+
+% ¿Cómo es?
+Al transitar hacia esta fase, la Población Global experimenta un claro aumento en la organización matemática de su acople. El MEOF1 gana representatividad, explicando ahora entre un $18.6\%$ (ARG) y un $23.1\%$ (SBR) de la varianza conjunta. Visualmente, al emparejar los mapas por columna, se observa un acople extenso: en la fila superior, emergen zonas amplias de anomalías positivas de precipitación (principalmente hacia el sector sureste), las cuales covarían espacialmente con vastos gradientes positivos de viento en la fila inferior. Es decir, el aumento del viento y el aumento de la lluvia ocupan dominios geográficos grandes y mayormente superpuestos.
+
+% ¿Por qué es así?
+El incremento de la varianza conjunta y la extensión de las áreas anómalas en la Población Global obedecen a un desarrollo estructural estándar. A medida que la onda baroclínica se amplifica de forma gradual, el sistema organiza sus frentes de manera predecible, acoplando el flujo de viento a la lluvia en un área extensa y homogénea. Al no existir tasas extremas de vorticidad que perturben el flujo, la matemática del MEOF logra capturar fácilmente este comportamiento lineal conjunto.
+
+\vspace{1em}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/intensification_p90_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación (p90) - Fase de Intensificación]{Primer modo espacial multivariado (MEOF1) en la fase de Intensificación para el estrato extremo (p90). Manteniendo la disposición en columnas (SBR, LPB, ARG) y filas emparejadas (precipitación arriba, viento abajo), este mapa revela cómo la alta vorticidad fragmenta la varianza total pero hiper-concentra las firmas espaciales covariantes.}
+\label{fig:meof_intensificacion_p90}
+\end{figure}
+
+% ¿Cómo es en el p90?
+En agudo contraste, el estrato extremo (p90) sufre una aparente fragmentación estadística: la representatividad matemática del MEOF1 cae a valores de entre $11.7\%$ (ARG) y $16.0\%$ (LPB). Sin embargo, al observar las columnas emparejadas, la firma espacial de esta varianza reducida es extraordinariamente más agresiva. La señal de precipitación en la fila superior se contrae, formando núcleos positivos hiperconcentrados y asimétricos. Al mismo tiempo, su contraparte en la fila inferior muestra que las anomalías de viento asociadas se estrechan en gradientes muy severos y compactos. El acople existe, pero se ha reducido a franjas espaciales minúsculas y altamente activas.
+
+% ¿Por qué y Para qué en el p90?
+La caída de la varianza acoplada, paradójicamente acompañada de firmas espaciales mucho más agudas, es la huella estadística de un desarrollo dinámico violento. Al forzarse por tasas de vorticidad extremas, el sistema pierde su linealidad suave y desarrolla estructuras de mesoescala hiperlocalizadas. Las aceleraciones rápidas del viento y los pulsos de convección profunda rompen el acople a gran escala, concentrando la energía covariante en sectores muy estrechos. Para la modelación de impactos, esto demuestra que durante la intensificación de un vórtice extremo, la amenaza combinada (ráfagas fuertes simultáneas con lluvias torrenciales) no ocurre en grandes extensiones, sino en "corredores" asimétricos y altamente destructivos, exigiendo alertas focalizadas en lugar de avisos regionales amplios.
+
+\section{Fase de Madurez}\label{sec:meof_madurez}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/mature_global_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación - Fase de Madurez]{Primer modo espacial multivariado (MEOF1) correspondiente a la fase de Madurez para la Población Global. La matriz organiza los resultados en columnas según la región de ciclogénesis (SBR, LPB y ARG). Para cada columna, la fila superior expone la anomalía espacial de precipitación, y la fila inferior su contraparte covariante de viento a 100 metros. Se detalla la varianza conjunta explicada (\textit{exp\_var}) extraída en el momento de mayor intensidad organizativa del sistema.}
+\label{fig:meof_madurez}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:meof_madurez} expone el primer modo multivariado (MEOF1) correspondiente a la fase de Madurez (M). Este análisis captura la covarianza espacial en el clímax evolutivo del ciclón extratropical, momento en el cual el sistema registra su valor máximo absoluto de vorticidad. El mapeo evalúa la Población Global para establecer el patrón de solapamiento geográfico esperado entre la amenaza hidrológica (fila superior) y la cinemática a 100 metros (fila inferior), sirviendo de base para dimensionar la fractura espacial que ocurre en los eventos extremos.
+
+% ¿Cómo es?
+Al alcanzar la madurez, la Población Global revela el nivel de organización conjunta más alto de todo su ciclo de vida. La representatividad del MEOF1 alcanza su pico máximo, explicando entre el $21.9\%$ (ARG) y el $27.0\%$ (SBR) de la varianza conjunta. Visualmente, al emparejar los mapas por columna, el acople es extenso y armónico: las amplias áreas de anomalías positivas de precipitación (fila superior) covarían directamente con vastos sectores de anomalías positivas de viento (fila inferior). Ambos campos comparten un dominio geográfico mayormente superpuesto, indicando que las lluvias más intensas y los vientos más fuertes coexisten en las mismas franjas espaciales.
+
+% ¿Por qué es así?
+La alta varianza acoplada y la superposición espacial en la Población Global ratifican que un ciclón ordinario sostiene un desarrollo estructural ordenado. Al no poseer un forzamiento rotacional extremo, el gradiente cinemático fluye de forma constante y lineal, arrastrando y alimentando la precipitación dentro del mismo sector geográfico. El motor del sistema organiza ambas variables al unísono, permitiendo que la matemática del MEOF capture una fuerte covarianza directa.
+
+\vspace{1em}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/mature_p90_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación (p90) - Fase de Madurez]{Primer modo espacial multivariado (MEOF1) en la fase de Madurez para el estrato extremo (p90). Manteniendo la misma disposición geométrica en columnas (SBR, LPB, ARG) y en filas emparejadas (precipitación arriba, viento abajo), este mapa evidencia la abrupta fractura topológica y el desacople espacial de las amenazas producidas por la vorticidad extrema.}
+\label{fig:meof_madurez_p90}
+\end{figure}
+
+% ¿Cómo es en el p90?
+Por el contrario, al evaluar el estrato extremo (p90) en su madurez, la matemática del MEOF revela una topología completamente fracturada. La representatividad del modo acoplado sufre una fuerte caída frente a la población, situándose entre el $15.9\%$ (ARG) y el $19.6\%$ (SBR). Al examinar las columnas emparejadas, se devela la causa de esta baja varianza: un severo desacople geográfico. En la fila superior, la señal de precipitación máxima es expulsada hacia una banda periférica estrecha y elongada, dejando un vasto "agujero" de anomalía nula en el centro del sistema. Simultáneamente, al buscar la señal covariante en la fila inferior, se observa que los gradientes anómalos de viento se concentran de forma hiper-aguda precisamente cerca del centro de rotación.
+
+% ¿Por qué y Para qué en el p90?
+Esta evidente fractura topológica es la demostración estadística del extremo forzamiento rotacional. En un evento p90, la vorticidad es tan intensa que limpia de inestabilidad profunda el núcleo del sistema (generando una pronunciada sequedad central asimétrica) y empuja la humedad hacia bandas exteriores . Como el viento máximo se ancla en el centro pero la precipitación se concentra en la periferia, ambas variables dejan de superponerse en el espacio, provocando el desplome de la covarianza lineal (MEOF1). Para la evaluación de riesgos compuestos, esto es un hallazgo determinante: confirma que en la madurez de un ciclón extremo, las ráfagas destructivas a 100 metros y las precipitaciones torrenciales golpean en zonas geográficas separadas. Esta fragmentación exige protocolos de mitigación asimétricos, asumiendo que el daño aeroelástico sobre turbinas eólicas en el núcleo no coincidirá con las áreas de inundación periférica.
+
+
+\section{Fase de Decaimiento}\label{sec:meof_decaimiento}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/decay_global_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación - Fase de Decaimiento]{Primer modo espacial multivariado (MEOF1) correspondiente a la fase de Decaimiento para la Población Global. La matriz organiza los resultados en columnas según la región de ciclogénesis (SBR, LPB y ARG). Para cada columna, la fila superior expone la anomalía espacial de precipitación, y la fila inferior su contraparte covariante de viento a 100 metros. Se detalla la varianza conjunta explicada (\textit{exp\_var}) a medida que la intensidad de la vorticidad del sistema comienza a declinar.}
+\label{fig:meof_decaimiento}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:meof_decaimiento} presenta el primer modo multivariado (MEOF1) correspondiente a la fase de Decaimiento (D). Este análisis evalúa cómo se desarma o persiste la firma espacial acoplada una vez que el ciclón supera su pico máximo de vorticidad y entra en su etapa de disipación. La evaluación de la Población Global permite observar el patrón de relajación geométrica estándar, sirviendo como contraste para determinar si el estrato extremo (p90) disipa sus amenazas conjuntas de manera uniforme o si retiene estructuras asimétricas de riesgo tardío.
+
+% ¿Cómo es?
+Durante el decaimiento, la Población Global experimenta un retroceso en su organización matemática respecto a la fase de madurez. La varianza conjunta disminuye a valores entre el $17.1\%$ (ARG) y el $22.3\%$ (SBR). Al examinar los mapas emparejados por región, se observa una clara pérdida de cohesión espacial. En la fila superior, las anomalías de precipitación se fragmentan y pierden su curvatura frontal, volviéndose amplias y difusas. Paralelamente, la señal covariante en la fila inferior muestra que los gradientes anómalos de viento a 100 metros también se relajan y dispersan. La superposición geográfica se mantiene, pero la intensidad conjunta de los gradientes se desdibuja.
+
+% ¿Por qué es así?
+La relajación del acople y la dispersión geométrica en la Población Global reflejan el proceso de disipación termodinámica habitual. A medida que el forzamiento rotacional (vorticidad) disminuye de forma constante, el sistema pierde su motor organizador primario. Los frentes se debilitan y ambas variables dejan de estar forzadas a concentrarse en áreas específicas, resultando en un mapa de covarianza lineal que explica progresivamente menos varianza y muestra contornos más suaves y dilatados.
+
+\vspace{1em}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/decay_p90_fasesxreg.png} % Ajusta el nombre de tu archivo
+\caption[MEOF1 de viento a 100 m y precipitación (p90) - Fase de Decaimiento]{Primer modo espacial multivariado (MEOF1) en la fase de Decaimiento para el estrato extremo (p90). Manteniendo la disposición en columnas (SBR, LPB, ARG) y filas emparejadas (precipitación arriba, viento abajo), este mapa ilustra la fuerte asimetría regional y el reacople periférico que sufren los sistemas ocluidos tras alcanzar su máxima severidad.}
+\label{fig:meof_decaimiento_p90}
+\end{figure}
+
+% ¿Cómo es en el p90?
+En el estrato p90, el comportamiento del acople durante el decaimiento exhibe una marcada asimetría según la región de origen. Mientras SBR y ARG mantienen covarianzas fracturadas y relativamente bajas (alrededor del $16.5\%$ y $16.7\%$ respectivamente), la región de LPB registra un súbito y notable incremento, capturando el $23.3\%$ de la varianza acoplada. Al inspeccionar la columna de LPB, la anomalía conjunta deja de estar desacoplada por el centro (como ocurría en la madurez) y vuelve a alinearse. En la fila superior, la precipitación se organiza en una banda curva y periférica muy nítida, la cual covaría exactamente con un anillo residual de fuertes gradientes de viento en la fila inferior.
+
+% ¿Por qué y Para qué en el p90?
+El sorpresivo reacople topológico en el p90 de LPB evidencia la transición hacia un vórtice profundamente ocluido . Aunque la vorticidad máxima del sistema ya fue superada, el ciclón extremo retiene una inercia rotacional enorme. Esta circulación cerrada envuelve la humedad remanente (\textit{wrap-around}), confinándola rígidamente en una banda curva de precipitación que se superpone de manera exacta con el corredor periférico de los vientos más intensos que aún sobreviven. La matemática del MEOF captura una alta covarianza lineal porque los restos estructurales del ciclón han quedado "bloqueados" en una misma geometría perimetral conjunta. Para la gestión de emergencias, este hallazgo es crítico: demuestra cuantitativamente que un evento severo, incluso en su fase de declive, no implica el cese inmediato del riesgo compuesto. El sistema ocluido es capaz de organizar ráfagas a 100 metros y lluvia simultánea en bandas residuales estrechas, justificando el mantenimiento de alertas asimétricas sobre regiones costeras mucho después del paso del núcleo principal.
+
+\section{Varianza conjunta explicada por los modos principales (MEOF1-MEOF5)}\label{sec:var_exp_meof}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/meof_mean2times.png} 
+\caption[Varianza conjunta explicada por los modos acoplados (MEOF1-MEOF5)]{Fraccionamiento de la varianza conjunta total contenida en los primeros cinco modos espaciales multivariados (MEOF1 a MEOF5). Se contrasta la distribución de la covarianza entre el viento a 100 metros y la precipitación para la Población Global frente a los estratos de intensidad dinámica (p10, p50 y p90) a lo largo de las fases evolutivas y las regiones de ciclogénesis.}
+\label{fig:var_exp_meof}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:var_exp_meof} expone la distribución de la varianza conjunta a lo largo de los primeros cinco modos ortogonales empíricos multivariados (MEOF1 a MEOF5). Este desglose paramétrico permite identificar el grado de dimensionalidad y la complejidad geométrica del acople entre el campo cinemático a 100 metros y el campo pluviométrico. La evolución de esta métrica contrasta el comportamiento de la Población Global de referencia frente a los estratos definidos por su máxima tasa de vorticidad (p10, p50 y p90) en la cuenca sudamericana.
+
+% ¿Cómo es?
+El análisis numérico revela que el fraccionamiento de la covarianza difiere radicalmente según la severidad del estrato. En la Población Global, la energía acoplada tiende a concentrarse progresivamente en el primer modo: el MEOF1 crece de forma consistente hasta dominar el espectro durante la madurez, capturando entre el $21.9\%$ y el $27.0\%$ de la varianza conjunta. Esto genera un declive abrupto hacia los modos secundarios (por ejemplo, el MEOF2 retiene apenas entre el $6.8\%$ y el $8.3\%$). Por el contrario, al evaluar el estrato extremo (p90), la dominancia del modo principal colapsa durante las fases de intensificación y madurez (cayendo a valores de entre $11.7\%$ y $19.6\%$). Consecuentemente, la distribución espectral se aplana, evidenciando que una porción sustancial de la covarianza es transferida hacia las componentes de orden superior (el MEOF2 y MEOF3 absorben fracciones más elevadas, superando repetidamente el $11\%$). La única excepción notable en el p90 ocurre en LPB durante el decaimiento, donde el MEOF1 recupera bruscamente una alta varianza ($23.3\%$).
+
+% ¿Por qué es así?
+La alta concentración de covarianza en el MEOF1 de la Población Global confirma que los ciclones ordinarios se acoplan de manera simple y predecible; los gradientes de viento y la lluvia covarían en escalas espaciales amplias sin mayores distorsiones termodinámicas. Sin embargo, el aplanamiento y la transferencia de varianza hacia modos secundarios en el estrato p90 es la manifestación matemática de la fragmentación de mesoescala. Al alcanzar tasas extremas de vorticidad, el sistema sufre el agudo desacople espacial evidenciado en los mapas anteriores: la lluvia es expulsada a la periferia mientras el viento severo se concentra en el núcleo. Esta extrema asimetría topológica y topológica obliga al sistema matemático a requerir de múltiples modos ortogonales simultáneos (MEOF2-MEOF5) para lograr reconstruir la compleja interacción de ambas amenazas. El pico tardío en LPB refleja simplemente la oclusión final, donde la rotación residual vuelve a confinar ambas variables en una única banda periférica altamente coherente (\textit{wrap-around}).
+
+% ¿Para qué?
+Esta métrica constituye una demostración cuantitativa de que el riesgo compuesto en eventos de severidad extrema es inherentemente multidimensional. Concluye estadísticamente que la amenaza conjunta (ráfagas destructivas y lluvias torrenciales) en los sistemas p90 es espacialmente caótica y asimétrica. Para las aplicaciones de evaluación de riesgo, este hallazgo ratifica que modelar el impacto de un ciclón severo asumiendo un único patrón de acople simple (como es válido en la población media) subestimará críticamente los gradientes hiperlocalizados y el desacople geográfico que gobiernan el verdadero impacto sobre las infraestructuras críticas.

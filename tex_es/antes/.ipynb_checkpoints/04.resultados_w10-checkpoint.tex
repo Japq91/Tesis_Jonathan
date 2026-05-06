@@ -1,0 +1,143 @@
+% ----------------------------------------------------------
+\chapter{Resultados e Discussões}\label{cap:resultados}
+% ----------------------------------------------------------
+% ==============================================================================
+% SECCIÓN PRINCIPAL: PDF DE VIENTO A 10 METROS
+% ==============================================================================
+\section{Viento resultante a 10 metros}
+
+\subsection{Distribución estadística de las magnitudes máximas de viento a 10 metros}\label{subsec:pdf_wind10}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/PDF_wind10.png}
+\caption[PDF de magnitudes máximas de viento a 10 metros]{Funciones de densidad de probabilidad (PDF) estimadas mediante KDE para las magnitudes máximas de viento a 10 metros. Las columnas indican la región de ciclogénesis (SBR, LPB, ARG) y las filas la evolución a través de las fases del ciclo de vida (Ic, It, M, D). Se contrasta la climatología de referencia global (sombreado gris) con los subconjuntos definidos por percentiles de los máximos de vorticidad alcanzados en su ciclo vital: p10 (sistemas débiles, azul punteado), p50 (sistemas moderados, verde continuo) y p90 (sistemas extremos, rojo seccionado).}
+\label{fig:pdf_wind10}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:pdf_wind10} presenta un conjunto de funciones de densidad de probabilidad estimadas mediante la técnica de densidad por kernel con un núcleo gaussiano, las cuales describen la distribución estadística de las magnitudes máximas del viento en superficie a 10 metros. Estos valores máximos fueron extraídos sistemáticamente de los campos horarios del reanálisis ERA5 dentro de un dominio lagrangiano de $20^\circ \times 20^\circ$ centrado en el núcleo de cada sistema. La muestra global se encuentra estratificada por región de ciclogénesis (SBR, LPB, ARG) y dividida en subconjuntos de intensidad dinámica definidos según el pico máximo absoluto de vorticidad alcanzado durante todo el ciclo de vida de cada ciclón: sistemas débiles (p10), sistemas moderados (p50) y eventos extremos (p90). Transversalmente, la evolución de estos grupos estáticos se evalúa a lo largo de las cuatro fases de desarrollo (Ic, It, M, D) obtenidas mediante el algoritmo \textit{CycloPhaser}.
+
+% ¿Cómo es?
+Durante la fase incipiente (Ic), las distribuciones para todos los estratos de intensidad presentan una morfología unimodal estrecha y altamente superpuesta, con frecuencias máximas concentradas en el rango de 10 a 17 m/s. A medida que los sistemas evolucionan independientemente hacia las fases de intensificación (It) y madurez (M), se hace evidente la divergencia entre los grupos: la curva del subconjunto extremo (p90) se desplaza drásticamente hacia la derecha, alcanzando en la fase M picos modales en el rango de 20 a 25 m/s y colas extendiéndose hasta los 30 m/s. Este comportamiento lo distancia claramente de la curva moderada (p50), que mantiene su máximo alrededor de los 15 a 17 m/s. Regionalmente, en la etapa de madurez de SBR y LPB, el p90 exhibe picos de densidad agudos (valores de $\sim$0.18) y acotados en altas velocidades, mientras que ARG muestra una distribución p90 más ancha y aplanada. Finalmente, en la fase de decaimiento (D), las curvas p90 retroceden levemente hacia magnitudes menores y aumentan su dispersión, preservando no obstante una separación inconfundible respecto a los sistemas más débiles.
+
+% ¿Por qué es así?
+La máxima separación de las distribuciones en la fase de madurez refleja el momento en que los ciclones expresan su pleno potencial dinámico, alcanzando su mínimo absoluto de vorticidad relativa a 850 hPa y maximizando el gradiente horizontal de presión superficial. La marcada divergencia del subconjunto p90 evidencia que estos vórtices poseen, desde su génesis, un entorno o forzante más inestable que culmina en campos de viento sustancialmente más severos que un desarrollo baroclínico estándar. Las variaciones morfológicas interregionales reflejan distintos forzamientos físicos: los sistemas extremos de SBR y LPB logran picos de viento más agudos y definidos gracias a la influencia de procesos diabáticos y anomalías de vorticidad potencial que favorecen desarrollos explosivos, mientras que en ARG, la dinámica baroclínica clásica del frente polar y la dispersión orográfica de los Andes generan respuestas cinemáticas más variables.
+
+% ¿Para qué?
+La cuantificación de estas distribuciones permite comparar objetivamente cómo evolucionan las magnitudes más probables y la extensión de los valores extremos entre vórtices de distinta naturaleza y región. Al confirmar que los ciclones clasificados dinámicamente como extremos (p90) se separan sistemáticamente de la población moderada a medida que maduran, se valida la pertinencia de la clasificación basada en vorticidad. Este hallazgo es fundamental para la operatividad meteorológica, demostrando que los sistemas de SBR y LPB con alto potencial de profundización deben ser monitoreados con criterios de alerta diferenciados del comportamiento climatológico medio debido a su marcada propensión a generar vientos críticos.
+
+% ==============================================================================
+% SECCIÓN PRINCIPAL: KDE ESPACIAL DE VIENTO A 10 METROS
+% ==============================================================================
+
+\subsection{Distribución espacial de máximos de viento a 10 metros: Climatología global}\label{subsec:kde_espacial_global}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/kde_wind10_global_fasesxreg.png}
+\caption[Distribución espacial (KDE) de viento máximo a 10 metros - Población Global]{Estimación de densidad espacial bidimensional (KDE) de la ubicación de los máximos de magnitud de viento a 10 metros para la Población Global. Las columnas separan las regiones de ciclogénesis (SBR, LPB, ARG) y las filas indican las fases evolutivas (Ic, It, M, D). El dominio lagrangiano está centrado en el ciclón ($0^\circ, 0^\circ$).}
+\label{fig:kde_wind_global}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_wind_global} presenta el campo de densidad espacial bidimensional (KDE) que cartografía la ubicación geográfica relativa donde se registra el viento máximo a 10 metros. Este análisis corresponde a la Población Global (climatología de referencia), evaluando todo el espectro de ciclones extratropicales sin discriminar por su intensidad dinámica. El mapeo probabilístico se estructura sobre un dominio de coordenadas relativas centrado en el núcleo de baja presión y evalúa la evolución espacial a lo largo de las cuatro fases de vida para las tres regiones de ciclogénesis.
+
+% ¿Cómo es?
+A nivel global, la distribución espacial de los vientos máximos se caracteriza por ser amplia, difusa y con gradientes de probabilidad suaves. Las zonas de máxima densidad (tonos amarillos y verdes tenues) abarcan áreas extensas que, en las fases iniciales, rodean de manera casi simétrica el centro de baja presión. A medida que el ciclón avanza hacia la madurez, se observa una leve preferencia de localización en los cuadrantes del norte y oeste, pero manteniendo una alta dispersión posicional. La densidad máxima rara vez supera valores de $10 \times 10^{-4}$, indicando que no existe un foco único y recurrente donde el impacto del viento golpee invariablemente cuando se promedia toda la climatología.
+
+% ¿Por qué es así?
+Esta alta dispersión y baja coherencia espacial es el resultado estadístico de combinar un catálogo masivo donde predominan los sistemas débiles y típicos. Estos ciclones ordinarios presentan una gran variabilidad en su tamaño, configuración frontal y trayectoria. Físicamente, en sistemas con un forzante dinámico débil, el flujo sinóptico de fondo suele tener una magnitud comparable a la circulación propia del vórtice, lo que desplaza la ubicación del viento máximo en función del gradiente de presión ambiental dominante en lugar de estar anclado a la dinámica interna del ciclón.
+
+% ¿Para qué?
+La caracterización de la Población Global es esencial porque establece la línea base de dispersión espacial. Al demostrar que en un catálogo promedio el viento máximo puede ocurrir en un radio muy amplio y variable, se justifica la necesidad metodológica de estratificar la muestra por intensidad. Este mapa general permite cuantificar, por contraste, el grado de organización geométrica y concentración destructiva que logran aislar los subconjuntos de mayor severidad.
+
+\subsection{Distribución espacial de máximos de viento a 10 metros: Subconjunto extremo (p90)}\label{subsec:kde_espacial_p90}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/kde_wind10_p90_fasesxreg.png}
+\caption[Distribución espacial (KDE) de viento máximo a 10 metros - Subconjunto p90]{Estimación de densidad espacial bidimensional (KDE) de la ubicación de los máximos de magnitud de viento a 10 metros para el subconjunto de ciclones intensos (percentil 90). El formato, dominio lagrangiano, fases evolutivas y escala de densidad ($10^{-4}$) son idénticos a los presentados en la climatología global para permitir la comparación estructural directa de las asimetrías de impacto.}
+\label{fig:kde_wind_p90}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:kde_wind_p90} expone el campo de densidad espacial (KDE) de los máximos de viento a 10 metros, calculado exclusivamente para el estrato de sistemas extremos (percentil 90). Esta muestra aísla a los vórtices dinámicamente más severos del catálogo, agrupados por haber alcanzado los valores mínimos de vorticidad relativa a 850 hPa dentro del primer decil de la distribución durante su historia vital. Los mapas de densidad correspondientes a los estratos independientes de menor intensidad (sistemas débiles p10 y moderados p50) ilustran el contraste estructural según la severidad del sistema y se encuentran documentados en el Apéndice \ref{apendice:kde_espacial}.
+
+% ¿Cómo es?
+A diferencia de la dispersión observada en la Población Global, la arquitectura espacial del estrato p90 exhibe una concentración dramáticamente superior. Al evolucionar hacia la fase de madurez, se configura un núcleo hiperlocalizado de alta densidad en el cuadrante noroeste (aproximadamente a $-3^{\circ}$ de longitud y $+2^{\circ}$ a $+3^{\circ}$ de latitud relativa). Las magnitudes de densidad en el epicentro de las regiones SBR y LPB alcanzan el extremo superior de la escala cromática (tonos naranjas y rojos, con valores entre 23 y $29 \times 10^{-4}$), denotando una altísima recurrencia espacial. En contraste, la región ARG, aunque marcadamente más concentrada que la muestra global, presenta un núcleo maduro ligeramente menos agudo. Al ingresar a la fase de decaimiento, el núcleo asimétrico pierde cierta agudeza pero preserva tenazmente su posicionamiento geográfico preferencial en el sector noroeste.
+
+% ¿Por qué es así?
+La extrema agudeza del campo de densidad confirma que los ciclones más profundos poseen, por naturaleza, una arquitectura cinemática sumamente robusta y predecible donde la intensa circulación del vórtice domina por completo sobre el flujo de fondo. La ubicación hiperconcentrada en el cuadrante noroeste es la firma característica de sistemas profundamente ocluidos que desarrollan corrientes en chorro de niveles bajos (como el \textit{sting jet} o la cinta transportadora fría) inducidas por formidables gradientes báricos. Las diferencias interregionales respaldan este marco: SBR y LPB se benefician de interacciones diabáticas y flujos de calor latente que fomentan un desarrollo tipo explosivo, empaquetando el momento cinético en un sector espacial muy estrecho, mientras que en ARG la dinámica baroclínica del frente polar y la topografía andina generan estructuras marginalmente más elongadas.
+
+% ¿Para qué?
+La cuantificación visual de esta hiperconcentración responde un interrogante fundamental de la tesis, demostrando que el grado de severidad dinámica de un ciclón predetermina drásticamente su coherencia espacial. Para la operatividad meteorológica, certifica que los sistemas extremos originados en el Atlántico Sur concentrarán casi invariablemente su potencial destructivo en un radio y cuadrante muy específicos (noroeste) respecto a su centro. Esta previsibilidad geométrica es una herramienta vital para emitir alertas tempranas precisas y mitigar riesgos sobre la infraestructura costera durante el pico de madurez de los eventos severos.
+
+% ==============================================================================
+% SECCIÓN: PATRONES DOMINANTES DE VARIABILIDAD (EOF) - VIENTO A 10 METROS
+% ==============================================================================
+
+\subsection{Patrones dominantes de variabilidad del viento a 10 metros: EOF1 Climatología global}\label{subsec:eof1_wind10_global}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/pca1_wind10_global_fasesxreg.png}
+\caption[EOF1 de la magnitud del viento a 10 metros - Población Global]{Primer modo espacial (EOF1) de la magnitud del viento a 10 metros para la Población Global de referencia. Los paneles (a-c) corresponden a la fase incipiente (Ic) para las regiones SBR, LPB y ARG, respectivamente; (d-f) a la intensificación (It); (g-i) a la madurez (M); y (j-l) al decaimiento (D). El título de cada panel indica el porcentaje de varianza explicada (\textit{exp\_var}) por este modo dominante. Los colores cálidos (fríos) representan anomalías positivas (negativas) de la estructura del viento relativo al centro del ciclón en un dominio de $20^{\circ} \times 20^{\circ}$.}
+\label{fig:eof1_wind10_global}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:eof1_wind10_global} presenta el primer modo de las Funciones Ortogonales Empíricas (EOF1) del campo de viento a 10 metros de altura, obtenido mediante la descomposición de la varianza total espacial sobre el dominio lagrangiano centrado en el ciclón. Este análisis se aplica sobre la Población Global (climatología de referencia) y se encuentra estratificado por región de ciclogénesis y fase de desarrollo, permitiendo aislar la estructura espacial más recurrente o el patrón dominante de fluctuación de los vientos superficiales a lo largo del ciclo de vida. Los mapas de los modos espaciales correspondientes a los estratos de menor intensidad (p10 y p50) se documentan en el Apéndice \ref{apendice:eof_wind10} para referencia complementaria.
+
+% ¿Cómo es?
+El patrón EOF1 global se caracteriza por explicar una alta proporción de la energía del sistema, oscilando entre el $30.9\%$ y el $57.4\%$ de la varianza total, incrementando su representatividad hacia las fases de madurez y decaimiento. Morfológicamente, domina una estructura dipolar de gran escala orientada meridionalmente. Durante la intensificación (d, f) y madurez (g, i) en SBR y ARG, se observan anomalías negativas extendidas al norte del centro (tonos azules, $-0.01$ a $-0.02$) y anomalías positivas marcadas al sur (tonos rojos, $+0.02$ a $+0.03$). La región LPB en intensificación (e) muestra un patrón morfológicamente distinto, con un núcleo anómalo positivo centralizado. Finalmente, en la fase de decaimiento (j, k, l), el dipolo se homogeneiza y adopta una disposición estrictamente zonal en todas las regiones, separando el dominio en una mitad norte negativa y una mitad sur fuertemente positiva.
+
+% ¿Por qué es así?
+La presencia de este dipolo norte-sur de gran escala en la climatología media, sumado a su alta varianza explicada, indica que la principal fuente de variabilidad en el viento de los ciclones típicos está dictada por su interacción con el flujo zonal de fondo (los vientos del oeste de latitudes medias) y las fluctuaciones del gradiente latitudinal de temperatura. Las variaciones capturadas por la EOF1 reflejan desplazamientos en la latitud relativa de las corrientes en chorro o expansiones del diámetro del sistema. En el decaimiento, cuando la baroclinicidad se agota y el vórtice se debilita, la estructura circulatoria del ciclón pierde definición y la variabilidad queda completamente subyugada a los desplazamientos del gradiente de presión meridional del entorno sinóptico subyacente.
+
+% ¿Para qué?
+La extracción de este patrón univariado cumple la función de establecer la línea base de variabilidad estructural para el ciclón extratropical promedio. Identificar que la fluctuación principal en sistemas ordinarios obedece a un dipolo meridional permite separar matemáticamente las alteraciones inducidas por el entorno de aquellas generadas por la propia dinámica interna del vórtice. Este marco de referencia es instrumental para evaluar si los eventos extremos manifiestan modos espaciales organizativos diferentes o simplemente amplifican la señal de la climatología media. 
+
+\vspace{1em}
+
+\subsection{Patrones dominantes de variabilidad del viento a 10 metros: EOF1 Subconjunto extremo (p90)}\label{subsec:eof1_wind10_p90}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/pca1_wind10_p90_fasesxreg.png}
+\caption[EOF1 de la magnitud del viento a 10 metros - Subconjunto p90]{Primer modo espacial (EOF1) de la magnitud del viento a 10 metros para el subconjunto de ciclones intensos (p90). La disposición de los paneles (a-l) por región de ciclogénesis (columnas) y fase evolutiva (filas) es idéntica a la Figura \ref{fig:eof1_wind10_global}. Se detalla la varianza explicada (\textit{exp\_var}) en cada panel y la barra de color estandarizada para evaluar las diferencias en las firmas espaciales de los eventos extremos frente al comportamiento climatológico.}
+\label{fig:eof1_wind10_p90}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:eof1_wind10_p90} ilustra la primera Función Ortogonal Empírica (EOF1) calculada exclusivamente a partir de los campos espaciales del subconjunto de ciclones extremos (percentil 90). Este análisis descompone el campo de viento relativo a 10 metros para aislar las fluctuaciones dominantes en los sistemas que, durante su ciclo vital, registraron los mínimos absolutos de vorticidad dentro del primer decil de la distribución. El resultado representa los modos de variabilidad intrínseca más característicos de los sistemas con mayor severidad dinámica, desglosados por fase de vida y zona de origen.
+
+% ¿Cómo es?
+La proporción de varianza explicada por el modo EOF1 en los sistemas extremos se reduce drásticamente frente a la climatología, oscilando entre el $25.4\%$ y el $37.6\%$. Su topología difiere sustancialmente del dipolo suave de la Población Global, mostrando firmas espacialmente complejas e hiperlocalizadas. En la fase de intensificación de SBR (d), emerge una fuerte anomalía positiva elongada hacia el suroeste (rojo oscuro, $>+0.03$). Más destacable es el comportamiento en madurez (g, h, i): LPB (h) exhibe un dipolo fuertemente inclinado con un núcleo positivo sumamente intenso y compacto justo al sur-sureste del centro, mientras que ARG (i) desarrolla un patrón tripolar complejo, con una marcada anomalía negativa en el núcleo rodeada de bandas de variabilidad positiva al sur. En el decaimiento (j, k, l), aunque retorna una estructura pseudozonal, los gradientes anómalos son notablemente más estrechos y confinados cerca del núcleo en comparación con la relajación expansiva observada en la climatología.
+
+% ¿Por qué es así?
+La quiebra del patrón dipolar simple y la aparición de núcleos hiperlocalizados sugieren que en los eventos extremos, la intensa circulación cerrada de mesoescala domina sobre el flujo de fondo. El núcleo compacto y potente observado en la madurez de LPB (h) evidencia variabilidad en la posición exacta y severidad de estructuras mesoescalares como la cinta transportadora fría (\textit{cold conveyor belt}) o la oclusión frontal rápida, forzadas por altas tasas de vorticidad. En ARG, la anomalía negativa central durante la madurez indica fluctuaciones en el tamaño o intensidad del "ojo" o seclusión cálida (\textit{warm seclusion}) del ciclón muy profundo, un rasgo característico de la alta organización baroclínica en altas latitudes.
+
+% ¿Para qué?
+La cuantificación de estos modos revela que un ciclón extremo no es equivalente a un ciclón ordinario escalado linealmente, sino que su mayor severidad dinámica modifica sustancialmente la coherencia espacial del sistema. Identificar estas firmas asimétricas y compactas es clave para la meteorología sinóptica aplicada, ya que demuestra que la variabilidad de los vientos más destructivos se rige por procesos de mesoescala internos al vórtice, lo cual exige enfoques de pronóstico capaces de resolver la dinámica estructural fina en los cuadrantes inmediatos al centro del ciclón.
+
+\subsection{Varianza explicada por los modos principales (EOF1-EOF5): Viento a 10 metros}\label{subsec:var_exp_wind10}
+
+\begin{figure}[htbp]
+%\centering
+\includegraphics[width=\textwidth]{images/all_expvar_wind10_mean2times.png} 
+\caption[Varianza explicada por los primeros cinco modos (EOF1-EOF5) de viento a 10 m]{Fraccionamiento de la varianza espacial total contenida en los primeros cinco modos dominantes (EOF1 a EOF5) del viento a 10 metros. Se contrasta la distribución de la varianza de la Población Global frente a los estratos de intensidad (p10, p50 y p90) a lo largo del ciclo de vida para cada región de ciclogénesis.}
+\label{fig:var_exp_wind10}
+\end{figure}
+
+% ¿Qué es?
+La Figura \ref{fig:var_exp_wind10} sintetiza el fraccionamiento de la varianza espacial distribuida en los primeros cinco modos ortogonales (EOF1 a EOF5) del campo de viento superficial. Este desglose permite evaluar la dimensionalidad y cohesión de la energía cinética. Se contrasta el comportamiento de la Población Global de referencia frente a los estratos de distinta intensidad dinámica intrínseca (p10, p50 y p90) a lo largo de las fases evolutivas.
+
+% ¿Cómo es?
+El análisis revela una divergencia drástica en la distribución de la varianza entre las poblaciones. En la Población Global, el modo EOF1 ejerce un dominio abrumador, capturando hasta el $57.1\%$ (LPB) y el $57.4\%$ (SBR) de la varianza en la fase de madurez. Esto genera una caída abrupta entre el primer modo y los modos de orden superior (EOF2 a EOF5), los cuales retienen porciones marginales de energía. Por el contrario, al evaluar el estrato extremo (p90), el "rascacielos" del modo principal colapsa: el EOF1 no logra superar el $37.6\%$ de representatividad, registrando mínimos de hasta $25.4\%$ durante la intensificación en ARG. Consecuentemente, la varianza del p90 se reparte y aplana, inflando la importancia relativa de los modos secundarios (EOF2 y EOF3).
+
+% ¿Por qué es así?
+La alta concentración de energía en un solo modo (EOF1) para el grupo global corrobora que los ciclones ordinarios son gobernados casi exclusivamente por un gradiente de gran escala impuesto por el flujo sinóptico de fondo. Sin embargo, el aplanamiento de la varianza en los eventos severos (p90) confirma estadísticamente la fragmentación multiescalar. Al intensificarse, el vórtice extremo genera intensas perturbaciones internas no lineales: frentes excepcionalmente activos, corrientes en chorro de bajos niveles y seclusiones térmicas. Estas estructuras de mesoescala compiten entre sí por la energía cinética del campo, obligando a la matemática a utilizar múltiples modos ortogonales (EOF2-EOF5) para poder reconstruir el caos cinemático del ciclón.
+
+% ¿Para qué?
+Esta métrica constituye una demostración cuantitativa irrefutable de que la severidad extrema no equivale a un simple escalado lineal de un ciclón ordinario. Concluir que los eventos extremos (p90) requieren múltiples dimensiones espaciales para ser explicados es crítico para la modelación numérica: demuestra que parametrizar vientos destructivos asumiendo los patrones simples de la climatología media subestimará sistemáticamente la agresividad, la naturaleza asimétrica y la localización real de las ráfagas.

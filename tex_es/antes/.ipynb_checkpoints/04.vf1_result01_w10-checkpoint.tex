@@ -1,0 +1,299 @@
+\chapter{Viento a 10 metros}\label{cap:resultados_wind10}
+
+\section{Fundamentos y estructura del análisis}\label{sec:intro_wind10}
+
+El viento en superficie de los ciclones extratropicales es de interés como agente de impacto sobre actividades marítimas, infraestructura costera y sistemas ecológicos terrestres \citep{gramcianinov2023impact}. 
+La urgencia de caracterizar estos impactos se alinea con las proyecciones del IPCC \citep{masson2022tendencias}. 
+La vulnerabilidad estructural ante estos sistemas ha sido recientemente expuesta por \citet{bartolomei2024extremos}, quienes documentan la letalidad y los severos daños causados por ciclones invernales en el sur de Brasil. 
+Además, modelaciones climáticas de alta resolución proyectan que el calentamiento global intensificará específicamente el sector cálido de estos ciclones, incrementando significativamente los vientos y la precipitación en sus etapas de desarrollo \citep{gentile2025response}. 
+A diferencia de variables sinópticas como la vorticidad relativa o la presión al nivel del mar, que caracterizan la dinámica interna del vórtice, el campo de viento a 10 metros integra forzantes de múltiples escalas — desde procesos baroclínicos de sistema sinóptico hasta fenómenos mesoescalares como chorros de bajo nivel, descargas descendientes y seclusiones térmicas. 
+Esta naturaleza multi-escalar hace que la caracterización estadística del viento superficial resulte particularmente desafiante: la población de ciclones abarca desde sistemas débiles y someros, cuyos campos de viento responden predominantemente al flujo de fondo, hasta vórtices intensos que desarrollan organizaciones asimétricas complejas con núcleos de velocidad extremos localizados en sectores específicos del cuadrante.
+
+El presente capítulo busca establecer la arquitectura espacial del viento máximo a 10 metros durante el ciclo de vida de los ciclones extratropicales del Atlántico Sudoccidental y limite con Sudamérica. 
+Específicamente, se busca: (i) cuantificar la evolución de las distribuciones de magnitud del viento según la intensidad dinámica del sistema y su región de génesis; (ii) determinar la localización espacial preferencial de los máximos de viento en un sistema de coordenadas relativo al centro del ciclón; y (iii) descomponer la estructura espacial de la variabilidad del viento para identificar patrones dominantes y su evolución estadística durante las fases.
+
+El análisis se estructura siguiendo una progresión que va desde la descripción estadística hacia el intento de comprensión dinámica. La Sección \ref{sec:pdf_wind10} examina las funciones de densidad de probabilidad (PDF) de las magnitudes máximas, estableciendo diferencias fundamentales entre ciclones ordinarios e intensos (percentil 90 de vorticidad relativa en 850 hPa). Las Secciones \ref{sec:kde_espacial_global} y \ref{sec:kde_espacial_p90} analizan la distribución de probabilidad espacial bidimensional (PDFe) de estos máximos mediante estimaciones de densidad kernel (KDE), contrastando la dispersión característica de la población general contra la organización asimétrica hiperconcentrada observada en sistemas severos. Finalmente, las Secciones \ref{sec:var_exp_wind10} a \ref{subsec:res_dinamica_pc1} emplean funciones ortogonales empíricas (EOF) para descomponer la estructura modal de la variabilidad del viento.
+
+Los hallazgos de este capítulo se complementarán el análisis posterior del campo de precipitación (Capítulo \ref{cap:resultados_tp}), donde se explorará la hipótesis de que la distribución espacial de los máximos de viento y precipitación no necesariamente coinciden, respondiendo a mecanismos físicos diferenciados dentro de la arquitectura del ciclón.
+
+% --- SECCIÓN PRINCIPAL: PDF DE VIENTO A 10 METROS ---
+
+\section{Distribución de magnitudes (PDF)}\label{sec:pdf_wind10}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/PDF_wind10_sigma025.png}
+\caption[PDF de magnitudes máximas de viento a 10 metros]{Funciones de densidad de probabilidad (PDF) para las magnitudes máximas de viento a 10 metros. Las columnas indican la región de ciclogénesis (SBR, LPB, ARG) y las filas la evolución a través de las fases del ciclo de vida (Ic, It, M, D). Se contrasta la población global (referencia, sombreado gris) con los subconjuntos definidos por percentiles de los máximos de vorticidad relativa en 850 hPa alcanzados en su ciclo vital: $p90$ (sistemas intensos, linea roja).}
+\label{fig:pdf_wind10}
+\end{figure}
+
+La Figura \ref{fig:pdf_wind10} presenta las funciones de densidad de probabilidad que describen la distribución estadística de los máximos de viento en superficie a 10 metros. 
+Estos valores fueron extraídos sistemáticamente del dominio lagrangiano como se explica en \ref{subsec:extraccion_pdf}. 
+Este enfoque es consistente con metodologias previas aplicadas en el Atlántico Sudoccidental, como el de \citet{cardoso2022synoptic}, y responde a la evolución física del sistema; como demostró \citet{simmonds2000size}, el radio de los ciclones en superficie tiende a incrementarse sistemáticamente a medida que evolucionan hacia la madurez en ambos hemisferios. 
+Además, esta gran extensión es crítica para capturar la forzante sobre el océano; \citet{sasaki2021intraseasonal} han resaltado el papel fundamental de estos ciclones en la variabilidad intraestacional de las olas en el Atlántico Sur occidental, donde la configuración del viento en superficie determina la transferencia de energía hacia el estado del mar. 
+Por tanto, el dominio adoptado permite integrar de forma robusta tanto el núcleo del sistema como los vientos asociados.
+La muestra se encuentra estratificada por región de ciclogénesis (SBR, LPB, ARG) y su evolución se evalúa transversalmente a lo largo de las cuatro fases de desarrollo (Ic, It, M, D). El análisis contrasta la Población Global de referencia contra el subconjunto de sistemas intensos ($p90$).
+
+Durante la fase incipiente (Ic; paneles a, b y c), tanto la Población Global como el subconjunto $p90$ presentan distribuciones unimodales estrechas parcialmente superpuesta, con frecuencias máximas concentradas en el rango de 10 a 17 m/s. A medida que los sistemas evolucionan independientemente hacia las fases de intensificación (It; paneles d, e y f) y madurez (M; paneles g, h e i), se hace evidente la divergencia entre los grupos: la curva del subconjunto $p90$ se desplaza drásticamente hacia la derecha, alcanzando en la fase M un pico modal en el rango de 20 a 22 m/s y colas extendiéndose hasta los 30 m/s, mientras que la Población Global mantiene su máximo alrededor de los 12-15 m/s con una distribución más estrecha y simétrica. Regionalmente, en la etapa de madurez de SBR (g), el $p90$ exhibe un pico de densidad ($\sim$0.18) y acotado en altas velocidades; LPB (h) presenta igualmente un desplazamiento hacia velocidades mayores, aunque con un pico más bajo y distribución más extendida ($\sim$0.07), mientras que ARG (i) muestra la distribución más ancha y aplanada de las tres regiones, evidenciando una mayor heterogeneidad en la intensidad de sus sistemas. Finalmente, en la fase de decaimiento (D; paneles j, k y l), las curvas del subconjunto $p90$ retroceden levemente hacia magnitudes menores y aumentan su dispersión, preservando no obstante una separación inconfundible respecto a los sistemas más débiles.
+
+La máxima separación de las distribuciones en la fase de madurez refleja el momento en que los ciclones intensos ($p90$) expresan su pleno potencial dinámico, alcanzando su mínimo absoluto de vorticidad relativa a 850 hPa y maximizando el gradiente horizontal de presión superficial. La marcada diferencia respecto a la Población Global evidencia que estos vórtices poseen, desde su génesis, un entorno o forzante más inestable que culmina en campos de viento sustancialmente más severos que el desarrollo estándar de la climatología media.
+
+Las variaciones interregionales reflejan distintos forzamientos físicos predominantes. Tal como sostiene \citet{gramcianinov2024early}, los sistemas en las regiones SBR y LPB alcanzan intensidades de viento más extremas debido a la fuerte influencia de procesos termodinámicos en niveles bajos —como la advección cálida y la convergencia de humedad de origen oceánico y continental—, factores que los modelos de alta resolución logran representar con mayor fidelidad. 
+Esta dependencia termodinámica se ilustra en el análisis del ciclón Raoni realizado por \citet{reboita2022from}, donde se evidenció que los flujos turbulentos de calor sensible y latente desde el océano, junto con el transporte de humedad continental por vientos, fueron decisivos para fortalecer el sistema y organizar la convección. 
+
+Este aspecto termodinámico es analizado por \citet{russo2025impacts}, quienes sostienen que, si bien la ciclogénesis inicial depende frecuentemente de procesos dinámicos de niveles altos, la inyección masiva de humedad y flujos de calor latente resulta fundamental durante las fases de intensificación y madurez
+
+Mientras tanto, en ARG, la dinámica baroclínica clásica del frente polar y la perturbación topográfica de los Andes generan respuestas cinemáticas más variables y distribuciones más aplanadas. 
+De acuerdo con \citet{gan1994influence}, la cordillera induce severas distorsiones espaciales en el flujo de niveles bajos, mientras que \citet{vera2002cold} detallan la profunda modificación en la estructura tridimensional de las ondas al cruzar el relieve andino. 
+Esta modulación orográfica explica la mayor heterogeneidad e irregularidad geométrica en el campo de vientos superficiales para los sistemas generados en esta región.
+
+La cuantificación de estas distribuciones permite comparar objetivamente cómo evolucionan las magnitudes más probables y la extensión de los valores entre ciclones de distinta génesis. 
+Al confirmar que los ciclones clasificados dinámicamente como intensos $p90$ se separan sistemáticamente de la población a medida que maduran, se valida la pertinencia de la clasificación basada en vorticidad. 
+En la fase de madurez, el subgrupo $p90$ desplaza su mayor probabilidad hacia los 23 m/s, lo que representa un incremento de aproximadamente el 50\% en la intensidad del viento de la poblacion global. 
+Las colas en las distribuciones $p90$ alcanzan magnitudes críticas de hasta 30 m/s. Este corrimiento coincide con los registros documentados por \citet{padilhareinke2026characterization} y \citet{gramcianinov2020analysis} para los eventos severos del Atlántico Sur. 
+\citet{padilhareinke2026characterization} reportan una intensidad media de viento a 10 metros de 70.0 km/h ($\approx$ 19.4 m/s), con un umbral para eventos intensos $p90$ de 84.4 km/h ($\approx$ 23.4 m/s) y magnitudes extremas que alcanzan hasta 113.21 km/h ($\approx$ 31.4 m/s) en las colas de la distribución. 
+Estos rangos son consistentes con lo documentado por \citet{gramcianinov2020analysis}, quienes reportan, para el invierno austral (JJA), velocidades máximas medias de entre 21.2 ± 4.8 m/s y 23.4 ± 4.8 m/s, con valores del percentil 90 de entre 27.3 y 30.2 m/s y del percentil 95 de hasta 32.1 m/s en bases de datos de alta resolución como CFSR/CFSv2. 
+Desde una perspectiva analítica, lo observado en el Hemisferio Norte por \citet{corner2025classification}, quienes emplean un método de clasificación de ciclones distinto, se identifica que el grupo de los ciclones más débiles presenta una moda en la velocidad del viento a 10 metros de 12.5 m/s, en contraste, ciclones más intensos alcanzan los 22.5 m/s. 
+Las colas en las distribuciones de este subconjunto $p90$ alcanzan magnitudes críticas de hasta 32 m/s
+
+Como subraya \citet{gramcianinov2023impact}, identificar tempranamente sistemas intensos resulta indispensable, ya que estos vientos anómalos son los forzantes para eventos asociados que suponen un riesgo directo para las regiones costeras y marítimas.
+
+% --- SECCIÓN PRINCIPAL: KDE ESPACIAL DE VIENTO A 10 METROS ---
+
+\section{Distribución espacial de máximos (PDFe)}
+
+\subsection{Población Global}\label{sec:kde_espacial_global}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/kde_wind10_global_fasesxreg.png}
+\caption[PDF espacial de viento máximo a 10 metros - Población Global]{Estimación de densidad espacial bidimensional de la ubicación de los máximos de magnitud de viento a 10 metros para la Población Global. Las columnas separan las regiones de ciclogénesis (SBR, LPB, ARG) y las filas indican las fases evolutivas (Ic, It, M, D). El dominio lagrangiano está centrado en el ciclón ($0^\circ, 0^\circ$).}
+\label{fig:kde_wind_global}
+\end{figure}
+
+La Figura~\ref{fig:kde_wind_global} presenta el campo de densidad espacial sobre el dominio lagrangiano de $20^\circ \times 20^\circ$ previamente definido. 
+A nivel global, la distribución se caracteriza por ser amplia, difusa y con gradientes de probabilidad suaves. 
+En las fases iniciales (Ic; paneles a, b y c), las zonas de máxima densidad abarcan áreas extensas que no definen una estructura simétrica alrededor del centro del ciclón. 
+Esta falta de organización inicial es consistente con la alta variabilidad en la intensidad de los sistemas descrita por \citet{reboita2010south}, quien destaca una abundante ocurrencia de ciclones que inician con una estructura débil o somera. 
+En fases tempranas, estos sistemas suelen presentar circulaciones asimétricas, coincidiendo con \citet{gozzo2017climatology} sobre la dificultad de estos vórtices para organizar una circulación cerrada.
+
+A medida que los sistemas avanzan hacia la madurez (M; paneles g, h e i), se observa una leve preferencia de localización en el cuadrante noroeste, manteniendo diferencias posicionales entre regiones. 
+Como sugiere \citet{dossantos2023response}, esta evolución espacial asimétrica está ligada a las zonas baroclínicas, donde los máximos gradientes térmicos horizontales interactúan con los chorros en la alta troposfera.
+En esta etapa, la densidad máxima en ARG (i) alcanza valores de $\approx$\,19--21 $\times 10^{-4}$, mientras que SBR (g) y LPB (h) alcanzan mayor densidad en áreas más restringidas, indicando un foco más recurrente para la localización de vientos máximos. 
+Este contraste regional responde a forzantes distintos: mientras que los sistemas en ARG están modulados principalmente por la advección térmica, la mayor concentración en SBR y LPB se favorece por la advección de aire cálido y húmedo junto al desarrollo de bajas orográficas en etapas iniciales \citep{gramcianinov2019properties, cardoso2022synoptic}.
+Esta alta dispersión espacial es inherente al uso de un catálogo masivo donde los sistemas varían desde configuraciones débiles hasta atípicas. 
+Como señala \citet{sinclair1994objective}, los métodos de identificación basados en vorticidad capturan un espectro amplio que incluye numerosos ciclones débiles, móviles y de menor duración. 
+Físicamente, cuando la interacción baroclínica es débil, el flujo sinóptico de niveles medios o altos domina la circulación y el sistema es gobernado por anomalías en la alta troposfera que no logran consolidar un acoplamiento profundo, modificando la ubicación del viento máximo en función de gradientes de presión transitorios \citep{hoskins2005new}.
+
+La caracterización de esta dispersión demuestra que, en la población general, el máximo de viento puede ocurrir en un radio muy amplio y variable. 
+Esta heterogeneidad justifica metodológicamente la estratificación por intensidad, respaldada por \citet{corner2025classification} y \citet{eisenstein2023identification}, quienes destacan que la diversidad de estos sistemas exige clasificarlos para aislar los eventos severos. 
+Aunque esta estratificación es habitual en el Hemisferio Norte, su aplicación sistemática en el Hemisferio Sur permanece como necesidad crítica. 
+El contraste contra esta línea base revela inmediatamente la organización geométrica de los sistemas intensos, cuya arquitectura espacial se examina a continuación.
+
+\subsection{Subconjunto de ciclones intensos $p90$}\label{sec:kde_espacial_p90}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/kde_wind10_p90_fasesxreg.png}
+\caption[PDF espacial de viento máximo a 10 metros - Subconjunto p90]{Estimación de densidad espacial bidimensional de la ubicación de los máximos de magnitud de viento a 10 metros para el subconjunto de ciclones intensos. El formato, dominio lagrangiano, fases evolutivas y escala de densidad ($10^{-4}$) son idénticos a los presentados en la Figura~\ref{fig:kde_wind_global} para permitir la comparación estructural directa de las asimetrías de densidad}
+\label{fig:kde_wind_p90}
+\end{figure}
+
+Al contrastar esta línea base contra el subconjunto de sistemas intensos ($p90$), la reorganización espacial resulta drástica. La Figura~\ref{fig:kde_wind_p90} revela que la arquitectura de los vientos máximos deja de ser difusa para configurar un núcleo de alta densidad marcadamente concentrado en el cuadrante noroeste durante la fase de madurez (M; paneles g, h e i), localizado aproximadamente a $-1^{\circ}$ a $-2^{\circ}$ de longitud y entre $+1^{\circ}$ y $+2^{\circ}$ de latitud relativa al centro. Las magnitudes de densidad alcanzadas en SBR (g) son particularmente
+extremas (valores entre 23 y $27 \times 10^{-4}$, tonos naranja--rojizos), mientras que LPB (h) alcanza valores de $\approx$\,23--25\,$\times 10^{-4}$, denotando una recurrencia espacial para la localización de los vientos máximos. 
+Por su parte, ARG (i) exhibe igualmente una concentración respecto a la población global, aunque con un núcleo de densidad comparativamente menor y ligeramente más disperso. 
+En la fase de decaimiento (D; paneles j, k y l), este núcleo asimétrico se mantiene anclado en el sector noroeste, a diferencia del comportamiento en la población global durante esta etapa.
+
+Esta hiperconcentración en el cuadrante noroeste (Hemisferio Sur) constituye la firma espacial cinemática de los ciclones profundos maduros. Como ha sido documentado para el Hemisferio Norte (cuadrante suroeste) por \citet{clark2005sting} y \citet{han2025system}, los sistemas extratropicales más intensos empaquetan sus vientos extremos en el sector posterior, asociados específicamente a la zona de fractura frontal y al desarrollo de intensas corrientes en chorro de niveles bajos (\textit{sting jet} o cinta transportadora fría). 
+Esta distinción dinámica es fundamental, ya que como precisan \citet{martinez2014cold}, los vientos más intensos en la retaguardia del núcleo suelen ser el producto combinado de la cinta transportadora fría (CCB) y los \textit{sting jets} transitorios. 
+Curiosamente, aunque \citet{stankovic2025surface} demuestran que los extremos absolutos de viento en superficie a escala global tienden a ser mayores en los océanos del Hemisferio Norte debido a una mayor baroclinicidad, los valores registrados en las colas de la distribución $p90$ de la región alcanzan valores similares.
+
+Al aplicar el efecto espejo producto de la circulación ciclónica inversa entre hemisferios, la configuración dinámica del sector posterior correspondería espacialmente al cuadrante noroeste. 
+Físicamente, la consolidación de este núcleo extremo responde a procesos de transferencia de cantidad de movimiento: en las inmediaciones del frente frío se desarrollan intensas corrientes descendentes que transportan el momento horizontal de la alta troposfera hacia la capa límite \citep{hyeok2024extrem}. 
+No obstante, debe considerarse que los datos de reanálisis ERA5 pueden subestimar la intensidad real del viento debido a limitaciones de resolución. 
+\citet{priestley2022improved} han documentado sistemáticamente esta limitación, demostrando que la incapacidad de los modelos globales para resolver de forma explícita las estructuras de mesoescala dentro de la tormenta conduce a una subestimación inherente de las magnitudes extremas. 
+Sumado a esto, como demuestran \citet{gentile2023observed}, los chorros de la cinta transportadora fría (CCBb) en ciclones maduros están asociados con capas límite significativamente más profundas, potenciadas por la inestabilidad que genera el aire frío al circular sobre aguas oceánicas relativamente cálidas; esto induce flujos de calor positivos que facilitan una mezcla vertical descendente altamente eficiente de aire de alta velocidad hacia la superficie, manifestándose en la PDFe como un empaquetamiento localizado a 10 metros, sector donde el CCBb constituye el principal motor de vientos a pesar de que modelos como ERA5 tienden a subestimar sus intensidades en aproximadamente 4.5~m~s$^{-1}$
+
+Las diferencias interregionales observadas en la Figura~\ref{fig:kde_wind_p90} —particularmente la mayor concentración en SBR y LPB respecto a ARG— respaldan este marco dinámico. Por un lado, \citet{reboita2018extratropical} destaca que el Atlántico Sudoccidental es un entorno donde las interacciones diabáticas y los fuertes flujos de calor latente océano-atmósfera fomentan la rápida intensificación de los sistemas. Conectando estos procesos térmicos con una zonificación específica, \citet{gramcianinov2023impact} señala que los ciclones originados particularmente en SBR y LPB capitalizan estas condiciones para generar desarrollos de tipo explosivo, empaquetando el momento cinético en un sector espacial muy estrecho. Por el contrario, en ARG, la dinámica baroclínica clásica del frente polar y la perturbación topográfica de los Andes generan estructuras marginalmente más elongadas que dejarán las ubicaciones de los máximos de viento menos concentradas.
+
+La cuantificación de esta concentración demuestra que el grado de severidad de un ciclón predetermina su patrón espacial. Los sistemas intensos originados en el Atlántico Sur concentrarán casi invariablemente sus máximos de viento a 10 metros en un radio y cuadrante particular respecto a su centro. Tal como destaca \citet{dalanhese2023new} para el litoral sudamericano, esta previsibilidad geométrica es una herramienta importante para conocer la espacialidad de las posibles afectaciones que puedan ocurrir durante estos eventos severos.
+
+% --- SECCIÓN: PATRONES DOMINANTES DE VARIABILIDAD (EOF) - VIENTO A 10 METROS ---
+
+\section{Organización estructural: Análisis EOF}\label{sec:eof_wind10}
+\subsection{Fraccionamiento de varianza}\label{sec:var_exp_wind10}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{images/w10/all_expvar_wind10_mean2times.png} 
+\caption[Varianza explicada por los primeros cinco modos (EOF1-EOF5) de viento a 10 m]{Fraccionamiento de la varianza espacial total contenida en los primeros cinco modos dominantes (EOF1 a EOF5) del viento a 10 metros. Se contrasta la distribución de la varianza de la Población Global frente al subconjunto de intensidad $p90$ a lo largo del ciclo de vida para cada región de ciclogénesis.}
+\label{fig:var_exp_wind10}
+\end{figure}
+
+La Figura \ref{fig:var_exp_wind10} sintetiza el fraccionamiento de la varianza espacial distribuida en los primeros cinco modos ortogonales (EOF1 a EOF5) del campo de viento superficial. 
+Se contrasta el comportamiento de la Población Global de referencia frente a los estratos de distinta intensidad dinámica intrínseca ($p90$) a lo largo de las fases evolutivas.
+
+El análisis revela una divergencia drástica en la distribución de la varianza entre la Población Global y el subconjunto $p90$. 
+En la Población Global, el modo EOF1 ejerce un dominio abrumador, capturando hasta el 57.1\% (LPB) y el 57.4\% (SBR) de la varianza durante la fase de madurez, que es donde el dominio del EOF1 resulta más pronunciado en estas regiones. 
+Esto genera una caída abrupta entre el primer modo y los modos de orden superior (EOF2 a EOF5), los cuales retienen porciones marginales de varianza explicada, confirmando que en la climatología media la dinámica del viento está gobernada por un patrón espacial dominante. 
+Por el contrario, en el subconjunto $p90$, la concentración de varianza en EOF1 se reduce drásticamente: el EOF1 no logra superar el 37.6\% de representatividad, registrando mínimos de hasta 25.4\% durante la intensificación en ARG. 
+Consecuentemente, la varianza del $p90$ se reparte y aplana entre múltiples modos, inflando la importancia relativa de los modos secundarios (EOF2 y EOF3).
+
+La alta concentración de energía en un solo modo (EOF1) para la Población Global corrobora que los ciclones típicos son gobernados por un gradiente de gran escala impuesto por el flujo sinóptico de fondo. 
+Sin embargo, el aplanamiento de la varianza en los eventos $p90$ confirma estadísticamente la fragmentación multiescalar. 
+Tal como establece la teoría matemática de \citet{hannachi2007empirical}, un espectro de autovalores más plano es el indicador de que la energía de un sistema se ha distribuido entre múltiples modos competitivos. 
+Al intensificarse, el vórtice genera perturbaciones internas no lineales: frentes excepcionalmente activos, corrientes en chorro de bajos niveles y seclusiones térmicas. 
+Estas estructuras de mesoescala compiten entre sí por la energía cinética del campo, obligando a la descomposición matemática a utilizar múltiples dimensiones ortogonales (EOF2-EOF5) para poder reconstruir el caos cinemático del ciclón.
+
+Esta métrica constituye una demostración cuantitativa que la severidad no equivale a un simple escalado lineal de un ciclón ordinario. 
+Concluir que los eventos $p90$ requieren múltiples dimensiones espaciales para ser explicados: demuestra que parametrizar vientos destructivos asumiendo los patrones simples de la población media subestimará sistemáticamente la agresividad, la naturaleza asimétrica y la localización de los máximos.
+
+\subsection{Patrones espaciales dominantes (EOF1)}\label{subsec:eof1_wind10}
+
+\subsubsection{Población Global}\label{subsubsec:eof1_wind10_global}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/pca1_wind10_global_fasesxreg.png}
+\caption[EOF1 de la magnitud del viento a 10 metros - Población Global]{Primer modo espacial (EOF1) de la magnitud del viento a 10 metros para la Población Global de referencia. Los paneles (a-c) corresponden a la fase incipiente (Ic) para las regiones SBR, LPB y ARG, respectivamente; (d-f) a la intensificación (It); (g-i) a la madurez (M); y (j-l) al decaimiento (D). El título de cada panel indica el porcentaje de varianza explicada (\textit{exp\_var}) por este modo dominante. Los colores cálidos (fríos) representan anomalías positivas (negativas) de la estructura del viento relativo al centro del ciclón en un dominio de $20^{\circ} \times 20^{\circ}$.}
+\label{fig:eof1_wind10_global}
+\end{figure}
+
+La Figura~\ref{fig:eof1_wind10_global} presenta el primer modo de las Funciones Ortogonales Empíricas (EOF1) del campo de viento a 10 metros, obtenido mediante la descomposición de la varianza total espacial sobre el dominio lagrangiano. 
+Tal como se evidenció en el fraccionamiento de energía (Sección~\ref{sec:var_exp_wind10}), en la Población Global el patrón EOF1 domina ampliamente la varianza del sistema, exhibiendo valores que oscilan entre el 31.9\% y el 57.4\% según la región y fase. 
+Morfológicamente, rige una estructura de gran escala donde las anomalías positivas dominan el cuadrante norte y la periferia del dominio (tonos rojos, $+0.01$ a $+0.02$), mientras que una zona de anomalías negativas o neutras se concentra alrededor y al sur del centro del vórtice (tonos blancos--azules claros). 
+La región LPB en intensificación (e) muestra un patrón morfológicamente distinto, con un núcleo anómalo positivo centralizado. Finalmente, en la fase de decaimiento (j, k, l), el dipolo se homogeneiza y adopta una disposición estrictamente zonal en todas las regiones, separando el dominio en una mitad norte negativa y una mitad sur fuertemente positiva.
+
+La presencia de este dipolo norte-sur de gran escala, sumado a su alta varianza explicada, indica que la principal fuente de variabilidad en el viento de los ciclones típicos está dictada por su interacción con el flujo zonal de fondo (los vientos del oeste de latitudes medias) y las fluctuaciones del gradiente latitudinal de temperatura. 
+Como detalla \citet{hannachi2007empirical}, la emergencia de una estructura dipolar dominante (EOF1) constituye la firma matemática que representa el desplazamiento posicional de una corriente. 
+Físicamente, en el Hemisferio Sur, esto se traduce en desplazamientos de la latitud relativa de las corrientes en chorro en la alta troposfera.
+De acuerdo con \citet{hoskins2005new} y \citet{dossantos2023response}, la evolución estructural de los ciclones ordinarios depende fuertemente de este acoplamiento baroclínico profundo; por lo tanto, las anomalías capturadas por la EOF1 reflejan cómo el sistema expande o contrae su campo de viento en respuesta a la posición del chorro. 
+
+El hecho de que las anomalías positivas de este dipolo se concentren marcadamente al sur del centro (tonos rojos en d, f, g, i) responde a la asimetría térmica característica de los sistemas del Atlántico Sur. 
+Tal como describen \citet{sinclair1997objective} y \citet{reboita2010south}, a medida que los ciclones se intensifican y ganan latitud, el gradiente horizontal de presión tiende a maximizarse en su sector austral debido a la interacción de la circulación ciclónica con los anticiclones migratorios, acelerando los vientos en esa franja. 
+La excepción geométrica observada en la región LPB (e) durante su intensificación respalda esta dependencia de los forzantes físicos: de acuerdo con \citet{gramcianinov2019properties}, los sistemas en esta zona están fuertemente modulados en sus etapas iniciales por la influencia de la baja orográfica, lo que genera una varianza del viento anclada a forzantes topográficos centralizados, retrasando temporalmente la imposición del dipolo zonal de gran escala. 
+En el decaimiento, al agotarse la baroclinicidad y debilitarse el vórtice, la circulación ciclónica pierde definición y la variabilidad queda supeditada a los desplazamientos del gradiente de presión meridional del entorno sinóptico.
+La extracción de este patrón univariado cumple la función de establecer la línea base de variabilidad estructural para el ciclón extratropical promedio. 
+
+\subsubsection{Subconjunto p90}\label{subsubsec:eof1_wind10_p90}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/pca1_wind10_p90_fasesxreg.png}
+\caption[EOF1 de la magnitud del viento a 10 metros - Subconjunto p90]{Primer modo espacial (EOF1) de la magnitud del viento a 10 metros para el subconjunto de ciclones intensos (p90). La disposición de los paneles (a-l) por región de ciclogénesis (columnas) y fase evolutiva (filas) es idéntica a la Figura~\ref{fig:eof1_wind10_global}. Se detalla la varianza explicada (\textit{exp\_var}) en cada panel y la barra de color estandarizada para evaluar las diferencias en las firmas espaciales de los eventos intensos frente al comportamiento climatológico.}
+\label{fig:eof1_wind10_p90}
+\end{figure}
+
+El contraste contra la organización dipolar de la población general revela que los ciclones intensos no amplifican linealmente el patrón base, sino que reconfiguran radicalmente su arquitectura modal. 
+La Figura~\ref{fig:eof1_wind10_p90} ilustra que, en p90, la proporción de energía capturada por el modo EOF1 se reduce drásticamente, oscilando entre el 25.4\% y el 37.6\%, y su topología difiere sustancialmente al mostrar firmas espacialmente complejas e hiperlocalizadas. 
+En la fase de intensificación de SBR (d), emerge una fuerte anomalía positiva que cubre la mayor parte del dominio, con mayor intensidad en el norte y noroeste (rojo oscuro, $>+0.03$). 
+Más destacable es el comportamiento en madurez (g, h, i): LPB (h) exhibe un dipolo fuertemente inclinado con un núcleo negativo sumamente intenso y compacto al sur del centro, rodeado por una región de anomalías positivas que domina el sector norte y noroeste del dominio; ARG (i) desarrolla un patrón complejo donde la anomalía positiva cubre el norte y la periferia sur, con una región de transición en el centro. 
+En el decaimiento (j, k, l), aunque retorna una estructura pseudozonal, los gradientes anómalos son notablemente más estrechos y confinados cerca del núcleo en comparación con la relajación expansiva observada en la población general.
+
+La quiebra del patrón dipolar simple y la hiperlocalización de las anomalías son la manifestación espacial de la fragmentación de energía multiescalar discutida previamente.
+Físicamente, esto confirma que en estos eventos la intensa circulación cerrada de mesoescala domina sobre el flujo de fondo. 
+El núcleo compacto y potente observado en la madurez de LPB (h) evidencia variabilidad en la posición exacta y severidad de estructuras mesoescalares. 
+De acuerdo con el marco dinámico documentado por \citet{clark2005sting} y \citet{han2025system} —y coherente con la localización espacial discutida en la Sección~\ref{sec:kde_espacial_p90}—, la cinta transportadora fría (CCB) y los procesos de fractura frontal rápida impulsados por altas tasas de vorticidad se traducen modalmente en un EOF1 compacto y localizado, incapaz de capturarse mediante un patrón de gran escala. 
+Por otro lado, en ARG (i), la aparición de un patrón tripolar con una anomalía negativa central durante la madurez indica fluctuaciones en el tamaño de la seclusión cálida (\textit{warm seclusion}). 
+Como detallan \citet{schultz2021antecedents} y \citet{reboita2022from}, la formación de esta seclusión cálida en el núcleo, rodeada por un anillo de vientos, es el rasgo evolutivo del modelo conceptual de Shapiro-Keyser, una vía de desarrollo característica de ciclones con alta organización baroclínica.
+
+La cuantificación de estos modos revela que un ciclón intenso no es equivalente a un ciclón ordinario, sino que su severidad dinámica modifica la arquitectura del sistema. 
+Como enfatizan \citet{corner2025classification} y \citet{eisenstein2023identification}, la severidad del viento no depende únicamente de la sinóptica, sino de la manifestación de estas características mesoescalares. 
+
+
+\subsection{Significancia estadística}\label{subsec:res_significancia_madurez}
+
+Para discriminar entre señales físicas robustas y fluctuaciones estocásticas propias del remuestreo, se evaluó la significancia estadística de los autovectores espaciales mediante el método Bootstrap-$t$ (Sección \ref{subsec:bootstrap_significancia}). 
+La Figura \ref{fig:xeof_madurez_global} documenta los tres primeros modos (EOF1--EOF3) y sus respectivas series temporales (PC1--PC3) para la Población Global en fase de madurez, mientras que la Figura \ref{fig:xeof_madurez_p90} presenta el análisis equivalente para el subconjunto intenso $p90$.
+El achurado delimita las áreas donde la EOF es estadísticamente significativas al 95\% de confianza.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/xeof_global_wind10_mature.png}
+\caption[Significancia espacial de los EOFs en fase de madurez - Población Global]{Descomposición EOF del viento a 10 m para la Población Global en fase de madurez. Paneles (a, c, e): mapas de los tres primeros modos espaciales (EOF1--EOF3) con achurado indicando significancia estadística al 95\% (test Bootstrap-$t$). Paneles (b, d, f): series temporales correspondientes de las Componentes Principales (PC1--PC3). La línea gris delimita los percentiles 2.5 y 97.5 de la distribución bootstrap.}
+\label{fig:xeof_madurez_global}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/w10/xeof_p90_wind10_mature.png}
+\caption[Significancia espacial de los EOFs en fase de madurez - Subconjunto p90]{Descomposición EOF del viento a 10 m para el subconjunto intenso ($p90$) en fase de madurez. La disposición de paneles es idéntica a la Figura \ref{fig:xeof_madurez_global}.}
+\label{fig:xeof_madurez_p90}
+\end{figure}
+
+En la Población Global (Figura \ref{fig:xeof_madurez_global}), el modo dominante (EOF1) exhibe áreas de significancia estadística que abarcan prácticamente todo el dominio, particularmente en los sectores norte y sur donde se localizan los máximos del dipolo baroclínico (paneles a, g, m). 
+Esta extensión espacial de la significancia indica que el patrón dipolar no es un artefacto de la muestra, sino una característica física estable y reproducible de los ciclones maduros. 
+Consistente con el alto porcentaje de varianza explicada (43--57\%), las series de PC1 (paneles b, h, n) muestran amplitudes que oscilan ampliamente y dominan sobre las fluctuaciones de PC2 y PC3, las cuales permanecen confinadas dentro de los límites de confianza (líneas grises) y representan meramente ruido de fondo o variabilidad intra-sistémica menor.
+
+Por el contrario, en el subconjunto $p90$ (Figura \ref{fig:xeof_madurez_p90}), las áreas significativas del EOF1 experimentan una dramática contracción hacia núcleos compactos próximos al centro del vórtice (paneles a, g, m). 
+En SBR y LPB, la significancia se restringe a pequeños parches alrededor del núcleo y el flanco sur, mientras que en ARG el patrón tripolar presenta significancia únicamente en el anillo periférico sur. 
+Esta contracción espacial confirma que, en ciclones intensos, el modo dominante pierde coherencia espacial fuera del núcleo inmediato; la estructura del viento ya no está gobernada por un gradiente sinóptico extendido, sino por procesos de mesoescala localizados (seclusiones térmicas, jets de bajo nivel) que varían sustancialmente entre eventos individuales.
+
+Más crítico aún es el comportamiento de las series temporales en el grupo $p90$ (paneles b, d, f y h, j, l). A diferencia del grupo Global donde PC2 y PC3 son residuales, aquí las amplitudes de PC2 (línea azul en paneles d, j) y PC3 (paneles f, l) presentan magnitudes comparables a las de PC1 y con frecuencia superan los límites de confianza del 95\%, cruzando los límites de confianza de manera sistemática. 
+Esto demuestra estadísticamente que los modos secundarios han dejado de ser ``ruido'' para convertirse en portadores de varianza física significativa. 
+La competencia energética entre múltiples PCs refleja la fragmentación dinámica del campo de viento: cuando un ciclón es intenso, su estructura cinemática ya no puede describirse mediante un único patrón espacial dominante, sino que requiere la superposición de varios modos ortogonales competitivos.
+
+La contracción de las áreas significativas en el grupo $p90$ indica que la predictibilidad espacial del campo de viento se reduce drásticamente en estos ciclones. 
+Mientras que en sistemas ordinarios podemos confiar en que el patrón dipolar extendido representará fielmente la distribución de vientos, en sistemas severos solo el núcleo inmediato del vórtice presenta una señal robusta; los flancos y cuadrantes periféricos están dominados por variabilidad estocástica o estructuras transitorias de mesoescala que escapan al primer modo. 
+
+\section{Componentes principales (PC1)}\label{subsec:res_dinamica_pc1}
+
+La fragmentación de la varianza y la contracción de las áreas significativas observadas en la fase de madurez (Sección \ref{subsec:res_significancia_madurez}) tienen su contraparte temporal en el comportamiento estadístico de las Componentes Principales. 
+Mientras que en la Población Global la PC1 domina establemente la evolución del sistema —evidenciado por sus amplitudes superiores y áreas significativas extensas—, en los ciclones intensos la competencia entre múltiples modos ortogonales (Figura \ref{fig:xeof_madurez_p90}) se traduce en propiedades estadísticas distintivas: una correlación débil con el forzante sinóptico.
+
+\input{tabelas_es/tab_momentos_global_w10.tex}
+
+\subsubsection{Población Global: Patrón sinóptico dominante}
+
+Las Tablas \ref{tab:momentos_global_w10} y \ref{tab:corr_global_w10} documentan las métricas estadísticas de la PC1 para la Población Global. Al evaluar la evolución de la población media, la distribución de la PC1 exhibe una progresiva \textit{normalización} estructural. 
+En las tres regiones (SBR, LPB y ARG), los valores de curtosis oscilan de forma consistente entre $-0.30$ y $-1.03$ durante la intensificación y madurez, evidenciando distribuciones platicúrticas sin colas extremas dominantes. 
+Notablemente, el régimen transicional de LPB muestra la mayor variabilidad inicial (skewness $+0.99$, leptocurtosis $+1.32$ en fase incipiente), mientras que SBR y ARG presentan poblaciones más homogéneas desde etapas tempranas.
+El rasgo evolutivo más contundente emerge en el acoplamiento con la vorticidad: en todas las regiones, la correlación inicial —que oscila entre $-0.35$ (LPB) y $-0.57$ (SBR)— experimenta un \textit{fortalecimiento sistemático} hasta alcanzar su máximo en la madurez ($-0.890$ en SBR, $-0.868$ en LPB y $-0.860$ en ARG), cayendo levemente durante el decaimiento ($\rho < -0.75$).
+
+\input{tabelas_es/tab_corr_global_w10.tex}
+
+Este acoplamiento casi lineal (que explica hasta $r^2 \approx 0.79$ de la varianza en SBR) demuestra que, en los ciclones ordinarios, la variabilidad espacial del viento está gobernada directamente por el gradiente de presión a escala sinóptica. 
+La progresiva simetrización de la distribución de PC1 (skewness tendiendo a cero) evidencia que, a medida que el vórtice se intensifica, los campos de viento convergen hacia una configuración prototípica, dominada por el primer modo de variabilidad. 
+Entonces, para la mayoría de los ciclones, la estructura espacial del viento no es arbitraria, sino que se organiza en torno a un patrón coherente (EOF1). 
+La severidad extrema rompe dicha organización, permitiendo que el sistema explore múltiples configuraciones espaciales válidas.
+La diferencia entre regiones reside en la velocidad de esta convergencia: mientras SBR exhibe un acoplamiento fuerte desde etapas incipientes, LPB requiere la fase de intensificación para alcanzar dicho estado (pasando de $\rho = -0.35$ a $-0.71$), reflejando su carácter transicional donde la organización frontal emerge solo cuando el forzante baroclínico se establece con suficiente intensidad.
+En sistemas de intensidad regular (Población Global), es posible inferir con confianza el patron espacial de la circulación superficial observando únicamente la vorticidad relativa en 850 hPa.
+
+\subsubsection{Subconjunto ($p90$): Desacoplamiento estructural}
+
+Las Tablas \ref{tab:momentos_p90_w10} y \ref{tab:corr_p90_w10} exponen los parámetros estadísticos para grupo de ciclones más intensos (p90). 
+La dinámica de los eventos intensos rompe drásticamente con la linealidad observada en la Población Global. 
+En lugar de intensificarse hacia la madurez, la correlación entre PC1 y vorticidad exhibe un colapso estructural en las regiones baroclínicas: en ARG cae progresivamente desde $-0.43$ (incipiente) hasta un mínimo de $-0.26$ en madurez, mientras que LPB y SBR muestran correlaciones estancadas o en descenso ($-0.37$ y $-0.44$, respectivamente). 
+Este colapso correlacional es consistente con la pérdida de significancia espacial observada en el modo dominante (Figura \ref{fig:xeof_madurez_p90}, paneles a, g, m): cuando el patrón espacial solo es robusto en el núcleo inmediato del vórtice pero no en los flancos (como documentó el test Bootstrap-$t$ en la sección anterior), su amplitud temporal (PC1) deja de escalar coherentemente con la intensidad ($\zeta_{850}^{min}$).
+
+\input{tabelas_es/tab_momentos_p90_w10.tex}
+
+Paralelamente, las distribuciones de probabilidad revelan una \textit{heterogeneización} marcada. 
+LPB exhibe leptocurtosis ($\gamma_2 = +0.96$) y fuerte asimetría negativa ($\gamma_1 = -0.88$) durante la intensificación, indicando una población bimodal de configuraciones estructurales. 
+SBR, por su parte, mantiene estabilidad durante el desarrollo pero exhibe una bifurcación extrema en el decaimiento: una leptocurtosis ($\gamma_2 = +3.95$) con skewness positivo ($+1.15$), evidenciando que los ciclones intensos no siguen un único camino estructural hacia la disipación.
+Esta caída correlacional es la expresión cuantitativa del desacoplamiento mesoescalar ya evidenciado espacialmente en la Sección~\ref{subsec:res_significancia_madurez}. 
+Cuando un ciclón se profundiza, la organización del viento a 10 metros deja de obedecer puramente al mínimo de vorticidad y pasa a ser controlada por procesos secundarios: génesis de seclusiones cálidas en ARG, organización convectiva profunda independiente en SBR, o interacciones orográficas persistentes en LPB. 
+
+La emergencia de curtosis positiva en LPB (intensificación/madurez) y SBR (decaimiento) demuestra que la severidad se alcanza a través de una \textit{diversidad de estructuras asimétricas} que el modo dominante no captura. 
+Sorprendentemente, el acoplamiento solo se recupera abruptamente durante el decaimiento (alcanzando $-0.74$ en ARG), sugiriendo que, una vez disipadas las anomalías térmicas de mesoescala (fricción y pérdida de gradiente), la circulación remanente vuelve a alinearse linealmente con el vórtice residual.
+
+\input{tabelas_es/tab_corr_p90_w10.tex}
+
+Este hallazgo cuantitativo prueba que alcanzar la severidad dinámica máxima induce un \textit{desacople temporal} entre el campo de viento superficial y la vorticidad del ciclón durante la fase de madurez.
+Esto indica que parametrizar la evolución cinemática de un ciclón severo utilizando únicamente $\zeta_{850}$ resultará insuficiente en el momento crítico de ocurrencia, ya que la distribución de los vientos obedece a alteraciones internas de mesoescala que escapan de la linealidad sinóptica. 
+
+\section{Síntesis}\label{sec:sintesis_wind10}
+
+En la Población Global, el viento superficial se organiza como una respuesta pasiva al forzante baroclínico sinóptico: las PDFs muestran distribuciones unimodales estrechas, los máximos se dispersan ampliamente en el dominio lagrangiano (PDFe difuso), y la varianza espacial se concentra en un único modo dipolar (EOF1) que escala coherentemente con la vorticidad relativa ($\rho < -0.85$ en madurez). 
+En contraste, los sistemas intensos (p90) exhiben una arquitectura cinemática cualitativamente diferente. 
+La transición hacia la madurez genera: 
+(i) colas extendidas en las PDFs alcanzando 30 m s$^{-1}$ con modas desplazadas hacia 20–25 m s$^{-1}$; 
+(ii) una hiperconcentración espacial de los máximos en el cuadrante noroeste (Hemisferio Sur), coherente con la dinámica de la cinta transportadora fría y procesos de fractura frontal; y 
+(iii) una fragmentación de la varianza entre múltiples modos ortogonales (EOF1–EOF3), donde el modo dominante pierde significancia espacial fuera del núcleo inmediato y su amplitud (PC1) se desacopla de la intensidad sinóptica ($\rho \approx -0.26$ a $-0.44$). 
+
+En ciclones no intensos el campo de viento puede inferirse linealmente desde la vorticidad mínima, mientras que, en sistemas severos la distribución de vientos máximos obedece a procesos de mesoescala —seclusiones térmicas, descargas descendientes y chorros de bajo nivel— que exigen diagnósticos adicionales (estabilidad estática, humedad en sectores cálidos) durante la fase crítica de madurez. 
+Las diferencias regionales modulan estas tendencias generales. 
+Los sistemas originados en SBR y LPB desarrollan núcleos de viento más intensos y coherentes, favorecidos por flujos de calor latente oceánico y configuraciones orográficas que organizan la convección, mientras que los ciclones de ARG presentan mayor heterogeneidad estructural.
+
+El establecimiento de esta base —que vincula la severidad (p90) con una organización espacial específica y predecible del viento máximo— constituye el punto de partida para evaluar la relación con otros campos de variables como la precipitación. 
+Esta integración multivariada puede aportar conocimiento desde el paradigma de los eventos compuestos; asi como lo muestra la investigacion de \citet{zscheischler2018future}, donde la concurrencia espacial y temporal de múltiples peligros físicos produce impactos socioeconómicos sustancialmente mayores a los de cada variable actuando de forma aislada.
