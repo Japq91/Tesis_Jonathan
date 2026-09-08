@@ -1,0 +1,155 @@
+============================================================
+CARTILLA DE ESTUDIO — Dalanhese et al. 2023 — climatología de ciclogénesis en Sudamérica (sotavento vs costa)
+============================================================
+
+REFERENCIA COMPLETA
+Dalanhese, Luthiene, Stuivenvolt-Allen, Jacob, LaPlante, Matthew, Wang, Shih-Yu, Costa,
+Thales Lessa, da Silva, Heloisa Dias Ferreira, & Belem, Andre Luiz. (2023). A new
+climatology of South American extratropical cyclogenesis with an intercomparison among
+ERA5, JRA55 and the Brazilian Navy. International Journal of Climatology, 43(15),
+7050-7066.
+DOI: 10.1002/joc.8251
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual (con ALERTA de posible desajuste de cita —
+ver sección 4)
+Se cita 1 vez (Cap04-Viento) para respaldar la "previsibilidad geométrica" de los máximos de
+viento a 10 m respecto al cuadrante del ciclón. Sin embargo, tras revisar el paper completo,
+este NO trata sobre la distribución espacial de máximos de viento relativa al centro del
+ciclón, sino sobre climatología comparativa de ciclogénesis (sotavento de los Andes vs.
+costera) en Sudamérica. Ver ALERTA detallada en la sección 4.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (dominio 20°N-70°S, con extensión menor a los trópicos)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (MSLP) + clasificación manual — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio construye una nueva climatología de ciclogénesis extratropical en Sudamérica,
+comparando tres fuentes de datos independientes: dos reanálisis (ERA5 y JRA55) y un
+seguimiento manual de 11 años de cartas sinópticas de la Marina de Brasil (MB), no
+publicado previamente. El objetivo central es caracterizar y diferenciar los mecanismos que
+producen ciclogénesis "de sotavento" (lee, al este de los Andes) frente a ciclogénesis
+"costera" (coastal, cerca del Atlántico), y explorar su relación con anomalías de
+temperatura superficial del mar y modos de variabilidad climática (ENSO, AMM, AMO). Es un
+estudio climatológico regional centrado en el origen (génesis) de los ciclones, no en la
+estructura de vientos superficiales durante su ciclo de vida maduro.
+
+2. METODOLOGÍA
+- Datos: ERA5 (0.25°x0.25°) y JRA55 (~55 km, 1.25°x1.25°) con salidas cada 12 horas (0000 y
+  1200 UTC), usando MSLP y viento zonal/meridional a 10 m; además, un conjunto de datos
+  construido manualmente a partir de más de 8000 cartas sinópticas de la Marina de Brasil
+  (MB) para el periodo 2010-2020 (11 años), que cubren 20°N-70°S, 90°W-0°W.
+- Seguimiento: identificación y clasificación manual (visual) de sistemas en ERA5 y JRA55
+  como casos de sotavento o costeros, validada por comparación visual con las cartas MB en
+  tres meses de muestra (enero 2010, noviembre 2016, mayo 2020). Se optó por un método
+  manual en lugar de automático para evitar sobreidentificación o subidentificación de
+  sistemas pequeños o poco profundos.
+- Criterios de selección: isobara cerrada con umbral de 1010 hPa mantenida a lo largo de una
+  trayectoria lógica; duración mínima de 72 horas; interacción con áreas costeras para los
+  casos de sotavento (originados justo al este de los Andes).
+- Período de análisis extendido: 1979-2020 (41 años) para ERA5 y JRA55; 2010-2020 (11 años)
+  para MB.
+- Análisis del presupuesto de vorticidad (ecuación de balance de vorticidad) para distinguir
+  la contribución de advección de vorticidad vs. estiramiento de vórtice (vortex stretching)
+  como mecanismos generadores de ciclogénesis en cada región.
+
+3. HALLAZGOS CLAVE
+- Las tres bases de datos coinciden en que las condiciones favorables para inestabilidad se
+  ubican ampliamente entre 20°S y 45°S, y en que los ciclones más intensos (MSLP más baja)
+  ocurren en latitudes más australes.
+- Frecuencia anual media de eventos: ERA5 = 38 eventos/año, JRA55 = 48 eventos/año, MB = ~65
+  eventos/año (en su periodo de 11 años); las discrepancias son menores para ciclones de
+  sotavento (ERA5=13, JRA55=16, MB=20 eventos/año) que para los costeros (ERA5=22, JRA55=32,
+  MB=45 eventos/año).
+- Las velocidades de desplazamiento de los ciclones en ERA5 y JRA55 se ubican generalmente
+  entre 20 y 50 km/h, aunque en algunos casos superan los 150 km/h, coincidiendo en general
+  con las trayectorias de la Marina de Brasil.
+- Se documenta que la ciclogénesis costera es más frecuente que la de sotavento en todos los
+  conjuntos de datos, y que los ciclones costeros predominan en la estación cálida
+  (noviembre-marzo) mientras que los de sotavento son más frecuentes en invierno.
+- Hallazgo más novedoso del estudio: una oscilación de baja frecuencia ("seesaw"),
+  década a década, entre las frecuencias de ciclogénesis de sotavento y costera, con
+  comportamiento anticorrelacionado entre ambos tipos; la ciclogénesis costera parece
+  intensificarse con anomalías cálidas del Pacífico, mientras que la de sotavento es más
+  común con anomalías negativas en esa misma cuenca — sugiriendo un rol teleconectivo de
+  las diferencias de temperatura oceánica entre cuencas.
+- El estiramiento de vórtice (vortex stretching) domina como mecanismo generador en la
+  ciclogénesis de sotavento (asociado al flujo del oeste sobre los Andes), mientras que la
+  ciclogénesis costera se explica tanto por estiramiento de vórtice como por advección de
+  vorticidad, siendo esta última más prominente cerca de la confluencia Brasil-Malvinas.
+
+4. RELACIÓN CON TU TESIS — ALERTA DE POSIBLE DESAJUSTE DE CITA
+Cap04-Viento (L125): "Esta previsibilidad geométrica, señalada por \citet{dalanhese2023new}
+para el Atlántico Sudoccidental, resulta necesaria para modelar la distribución espacial
+exacta del acoplamiento cinemático entre el ciclón y la capa límite superficial."
+
+Tras una revisión completa del texto del paper (introducción, métodos, resultados,
+discusión y conclusiones), NO se encontró ningún contenido relativo a: (a) la distribución
+espacial de los máximos de viento a 10 m respecto al centro/cuadrante del ciclón, (b) el
+acoplamiento cinemático entre el ciclón y la capa límite superficial, ni (c) previsibilidad
+geométrica de estructuras de viento. El paper trata exclusivamente de climatología de
+ciclogénesis (ubicación de génesis, mecanismos de sotavento vs. costa, frecuencia,
+estacionalidad, velocidad de desplazamiento y teleconexiones oceánicas de baja frecuencia).
+La única referencia a "previsibilidad geométrica" verificable en el paper es la de las
+ubicaciones de génesis (concentradas de forma consistente entre 20°S y 45°S en los tres
+conjuntos de datos) y las trayectorias curvas que los ciclones siguen hacia el Atlántico Sur
+en dirección a África — no la posición de los máximos de viento respecto al centro
+ciclónico durante su ciclo de vida maduro.
+
+RECOMENDACIÓN: revisar esta cita en el Cap04-Viento antes de la defensa. Es posible que:
+(1) se haya confundido esta referencia con otra fuente (p. ej. cardoso2022synoptic, que sí
+se cita en el mismo capítulo para la concentración de vientos máximos en cuadrantes
+específicos), o (2) se pretendiera citar la consistencia geométrica de las regiones de
+génesis/trayectorias (que sí está en el paper) en lugar de la de los máximos de viento
+superficiales. Se sugiere verificar con el asesor si la cita debe redirigirse o
+reformularse para reflejar fielmente el contenido de Dalanhese et al. (2023).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El equipo (Utah State University y Universidade Federal Fluminense) construye una
+climatología híbrida original al incorporar por primera vez datos no publicados de la
+Marina de Brasil (Marinha do Brasil) como validación independiente de los reanálisis ERA5 y
+JRA55. Dialoga con la línea de investigación de ciclogénesis de sotavento de los Andes
+(Gramcianinov et al. 2019; Hoskins & Hodges 2005; Gan & Rao 1994) y con estudios de
+teleconexiones océano-atmósfera en el Atlántico Sur (Kayano et al. 2019, sobre AMO;
+Reboita et al. 2015, 2021, sobre El Niño).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores:
+- El registro de la Marina de Brasil cubre solo 11 años (2010-2020), un periodo mucho más
+  corto que los 41 años de ERA5/JRA55, limitando su uso como referencia climatológica
+  independiente de largo plazo.
+- La identificación y clasificación de sistemas en ERA5/JRA55 se realizó de forma manual
+  (visual), lo que introduce cierta subjetividad interpretativa por parte de los analistas,
+  aunque los autores argumentan que esto evita los errores de sobre/subidentificación de
+  los esquemas automáticos en datos de alta resolución.
+- Existen discrepancias metodológicas entre los tres conjuntos de datos: las trayectorias de
+  ERA5 y JRA55 siguen diferencias de presión a nivel del mar, mientras que las de la Marina
+  de Brasil son una clasificación de sistemas identificados por analistas navales, lo que
+  produce distribuciones de frecuencia distintas (la MB detecta más sistemas de corta vida,
+  de 1-2 días).
+- El estudio es específico para la climatología de ciclogénesis (origen) de Sudamérica; no
+  aborda en absoluto la estructura de vientos superficiales del ciclón maduro ni su
+  distribución espacial relativa al centro de vorticidad, tema para el cual, según esta
+  revisión, no debería usarse como referencia (ver ALERTA en sección 4).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿Qué evidencia da Dalanhese et al. (2023) sobre la distribución espacial de los
+  máximos de viento en superficie respecto al centro del ciclón?" R: Ninguna directamente;
+  el paper no aborda ese tema. Su aporte real es una climatología comparativa de
+  ciclogénesis de sotavento vs. costera en Sudamérica, con un hallazgo de oscilación de baja
+  frecuencia teleconectada con anomalías de SST del Pacífico. La cita en el Cap04-Viento de
+  la tesis debería revisarse porque el respaldo que ofrece actualmente el texto no coincide
+  con el contenido verificado del paper.
+- P: "¿Cuáles son las diferencias en frecuencia de ciclogénesis entre ERA5, JRA55 y la
+  Marina de Brasil?" R: ERA5 detecta 38 eventos/año, JRA55 48 eventos/año, y MB ~65
+  eventos/año en su periodo de 11 años; las mayores discrepancias ocurren en los casos
+  costeros.
+- P: "¿Qué mecanismo dinámico domina la ciclogénesis de sotavento de los Andes según este
+  estudio?" R: El estiramiento de vórtice (vortex stretching), asociado al flujo del oeste
+  sobre la cordillera y a la cizalladura direccional del viento.
+- P: "¿Qué es el 'seesaw' de baja frecuencia que documentan los autores?" R: Una oscilación
+  década a década entre las frecuencias de ciclogénesis de sotavento y costera, con
+  comportamiento anticorrelacionado, asociada a diferencias de temperatura oceánica entre
+  cuencas (Pacífico) que actuarían como mecanismo teleconectivo.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/dalanhese2023new.md

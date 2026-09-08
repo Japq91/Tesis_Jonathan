@@ -1,0 +1,135 @@
+============================================================
+CARTILLA DE ESTUDIO — Hersbach et al. 2023 — dataset ERA5 (CDS, Copernicus)
+============================================================
+
+REFERENCIA COMPLETA
+Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Horányi, A.,
+Muñoz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I., Schepers,
+D., Simmons, A., Soci, C., Dee, D., & Thépaut, J.-N. (2023). ERA5 hourly
+data on single levels from 1940 to present [Data set]. Copernicus Climate
+Change Service (C3S), Climate Data Store (CDS). Versión 1.0.
+DOI: 10.24381/cds.adbb2d47
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario (pero necesario para la
+reproducibilidad)
+Se cita una sola vez, en el Capítulo 3 (Métodos), siempre en conjunto con
+\citet{hersbach2020era5}: no es un hallazgo científico ni un paper de
+investigación, sino la referencia formal y obligatoria (exigida por la
+política de atribución de datos de Copernicus/C3S) del producto de datos
+específico descargado del Climate Data Store (CDS) para construir toda la
+base de datos de la tesis.
+
+HEMISFERIO DE ESTUDIO: Global (no restringido a un hemisferio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (es el dataset CDS/Copernicus, no un estudio de rastreo)
+
+------------------------------------------------------------
+ADVERTENCIA METODOLÓGICA: no existe archivo .md/.pdf de esta referencia en
+el repositorio local de papers (papers/files_MD/), porque no es un artículo
+científico con texto narrativo, sino la entrada de catálogo de un conjunto
+de datos (dataset) en el Climate Data Store de Copernicus. Esta cartilla se
+elaboró exclusivamente a partir de (a) los metadatos bibliográficos
+verificados del archivo .bib de la tesis y (b) conocimiento general
+confiable y públicamente disponible sobre el catálogo CDS y el producto
+"ERA5 hourly data on single levels from 1940 to present", complementado con
+el contexto de uso citado en la propia tesis. No se debe presentar ninguna
+cifra "extraída del texto" de este ítem, dado que no tiene cuerpo narrativo
+propio: sus características técnicas (resolución, periodo, variables) son
+las mismas descritas en el artículo científico hersbach2020era5.
+
+1. ¿DE QUÉ TRATA ESTA REFERENCIA?
+No es un "paper" sino la ficha de citación estándar de un producto de datos
+del Climate Data Store (CDS) de Copernicus: el conjunto "ERA5 hourly data
+on single levels from 1940 to present", que contiene las variables de
+superficie y de niveles simples (p. ej., viento a 10 m, precipitación
+total, presión a nivel del mar, temperatura a 2 m, humedad, radiación,
+etc.) del reanálisis ERA5 descrito científicamente en
+\citet{hersbach2020era5}, distribuidas en una grilla regular horaria desde
+1940 en adelante (con la extensión más temprana 1940-1978 publicada después
+del artículo original de 2020). Su función es exclusivamente de acceso y
+distribución de datos: permite a cualquier investigador descargar
+exactamente los mismos campos horarios usados en la tesis, vía la interfaz
+CDS de Copernicus (registro gratuito y API programática cdsapi).
+
+2. METODOLOGÍA (del propio dataset, no de un estudio)
+- Fuente: Copernicus Climate Change Service (C3S), operado por el ECMWF.
+- Producto: "ERA5 hourly data on single levels from 1940 to present",
+  versión 1.0.
+- Contenido: variables de un solo nivel (superficie/niveles simples) del
+  reanálisis ERA5 (ver hersbach2020era5 para la descripción científica
+  completa del sistema de asimilación, resolución y periodo).
+- Formato de acceso: descarga vía la interfaz web del CDS o la API
+  `cdsapi` en formato GRIB o NetCDF, en grilla regular (típicamente 0.25°
+  x 0.25°, equivalente a la resolución nativa de ~31 km de ERA5).
+- En la tesis: se accedió específicamente a este conjunto para el periodo
+  1979-2020, consistente con el rango temporal declarado en el Capítulo 3
+  de Métodos.
+
+3. HALLAZGOS CLAVE
+No aplica en sentido estricto: al ser un dataset y no un estudio, no
+reporta "hallazgos" científicos propios. Su relevancia es puramente
+metodológica: garantiza la trazabilidad y reproducibilidad del origen
+exacto de los datos usados (versión, DOI, fecha de acceso), tal como exige
+la política de citación de datos de C3S/Copernicus.
+
+4. RELACIÓN CON TU TESIS
+Se cita junto con \citet{hersbach2020era5} en el Capítulo 3 (Métodos, L22):
+"Para la caracterización de los campos de superficie se utilizó el
+reanálisis de quinta generación del ECMWF, ERA5 \citep{hersbach2020era5},
+accediendo específicamente al conjunto de datos ``ERA5 hourly data on
+single levels from 1940 to present'' \citep{hersbach_era5_2023b} para el
+período 1979-2020." Esta doble citación separa correctamente la referencia
+científica del sistema de reanálisis (el "qué es ERA5" y cómo se produjo)
+de la referencia de datos concreta (el "de dónde exactamente se descargaron
+los archivos usados en esta tesis"), una práctica de buenas prácticas de
+reproducibilidad cada vez más exigida en climatología y ciencias de datos
+ambientales.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Forma parte del ecosistema de productos de datos climáticos operado por el
+Copernicus Climate Change Service (C3S) de la Unión Europea, implementado
+por el ECMWF, el mismo equipo autor de hersbach2020era5. El CDS distribuye,
+además de este conjunto de niveles simples horarios, productos análogos
+para niveles de presión, datos mensuales, y el ensemble de incertidumbre
+(EDA), todos derivados del mismo sistema ERA5 descrito en el artículo
+científico. Es la vía de acceso estándar y recomendada oficialmente para
+cualquier estudio (incluyendo gramcianinov2020analysis, priestley2022improved
+y hyeok2024extrem) que utilice datos ERA5.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- No aplica el concepto de "limitaciones de estudio" al ser un dataset; las
+  limitaciones técnicas relevantes (sesgos, resolución, cobertura temporal)
+  son las mismas documentadas en hersbach2020era5 (ver esa cartilla).
+- Limitación práctica reconocible: el dataset está sujeto a actualizaciones
+  y reprocesamientos por parte de C3S (por eso se especifica versión 1.0);
+  descargas realizadas en fechas distintas podrían diferir levemente si el
+  producto fue reprocesado, razón por la cual se recomienda registrar la
+  fecha de acceso además del DOI (tal como indica la nota "Consultado de la
+  Climate Data Store (CDS) de Copernicus" en el propio registro .bib de la
+  tesis).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué cita dos referencias distintas para ERA5 (hersbach2020era5 y
+  hersbach_era5_2023b)?
+  R: La primera es el artículo científico que describe el sistema de
+  reanálisis; la segunda es la citación formal, exigida por Copernicus/C3S,
+  del conjunto de datos específico descargado del Climate Data Store para
+  garantizar la trazabilidad y reproducibilidad exacta de los archivos
+  usados.
+- P: ¿Qué variables específicas de este dataset usó en su tesis?
+  R: Variables de niveles simples/superficie —viento a 10 m, precipitación
+  total, presión a nivel del mar, y otras variables de superficie— para el
+  periodo 1979-2020 (ver Capítulo 3 de Métodos para el detalle completo).
+- P: ¿Este "dataset" tiene el mismo respaldo científico que el artículo de
+  2020?
+  R: Sí; el dataset distribuye exactamente los campos generados por el
+  mismo sistema de asimilación descrito y validado en hersbach2020era5; la
+  citación separada responde a una convención de atribución de datos, no a
+  una diferencia en el contenido científico.
+
+------------------------------------------------------------
+Fuente verificada: NO EXISTE archivo .md/.pdf local para esta referencia
+(es un dataset, no un artículo narrativo). Cartilla elaborada a partir de
+los metadatos bibliográficos del archivo .bib de la tesis y de conocimiento
+general confiable sobre el catálogo del Climate Data Store (CDS) de
+Copernicus, más el contexto textual de citación dentro de la propia tesis
+(bundle_5.txt, Cap03-Métodos L22).

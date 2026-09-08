@@ -1,0 +1,164 @@
+============================================================
+CARTILLA DE ESTUDIO — Couto de Souza et al. 2024 — CycloPhaser: fases del ciclo de vida en el Atlántico Sur
+============================================================
+
+REFERENCIA COMPLETA
+Couto de Souza, Danilo, Silva Dias, Pedro Leite da, Gramcianinov, Carolina Barnez,
+Laviola da Silva, Matheus Bonjour, & De Camargo, Ricardo. (2024). New perspectives on
+South Atlantic storm track through an automatic method for detecting extratropical
+cyclones' lifecycle. International Journal of Climatology, 44, [en prensa].
+DOI: 10.1002/joc.8539
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita al menos 7 veces en 4 capítulos distintos (Introducción, Fundamentación, Métodos, y
+de forma implícita en todos los resultados). Es la fuente directa de la base de datos de
+trayectorias y de la segmentación en cuatro fases del ciclo de vida (incipiente,
+intensificación, madurez, decaimiento) sobre la cual se construye TODO el análisis empírico
+de la tesis (MEOF, prototipos, estratificación por fase).
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (ζ850, CycloPhaser) — misma variable que la tesis (ES la fuente de la base de datos de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio presenta CycloPhaser, un paquete de Python de código abierto que detecta de
+forma automática y objetiva las fases del ciclo de vida de ciclones extratropicales a
+partir de la serie temporal de vorticidad relativa mínima en el centro del sistema y su
+derivada. Se aplica esta metodología a una base de datos de trayectorias del Atlántico Sur
+(1979-2020, dominio 15°S-55°S, 75°W-20°E) para caracterizar estadísticamente la climatología
+de fases (duración, desplazamiento, velocidad, vorticidad, tasa de crecimiento) y para
+producir mapas de densidad de trayectorias por fase y por región de génesis. Es, a la vez,
+un paper metodológico (presentación de la herramienta CycloPhaser) y un estudio
+climatológico regional del Atlántico Sur.
+
+2. METODOLOGÍA
+- Datos de trayectorias: base de datos "Atlantic extratropical cyclone tracks database"
+  (Gramcianinov et al. 2020b), obtenida con el algoritmo TRACK (Hodges, 1994, 1995;
+  Hoskins & Hodges, 2002) sobre vientos ERA5 a 850 hPa, con criterios de duración mínima de
+  24 h y desplazamiento mínimo de 1000 km. Total: 33,376 sistemas detectados en el Atlántico
+  Sur (1979-2020).
+- Filtrado: se excluyen sistemas que pasan >80% de su ciclo de vida sobre el continente
+  (para omitir bajas térmicas y vaguadas de sotavento); se retienen configuraciones de tipo
+  de ciclo de vida que representan al menos 1% del total y que presentan al menos una fase
+  "madura", resultando en 28,458 sistemas analizados (~85% del total con origen en el
+  Atlántico Sur, ~95% de los tipos de ciclo de vida más frecuentes).
+- Algoritmo CycloPhaser: preprocesa la serie de vorticidad relativa en el centro del ciclón
+  con filtro Lanczos (opcional) y doble suavizado Savitzky-Golay; calcula la primera
+  derivada de la vorticidad; detecta picos y valles para identificar las fases de
+  intensificación (de un pico a un valle) y decaimiento (de un valle a un pico), exigiendo
+  que cada intervalo cubra al menos 7.5% de la duración total de la serie; identifica la
+  fase madura usando picos/valles de vorticidad y de su derivada (intervalos definidos
+  entre el valle de vorticidad y el 12.5% del tiempo hacia el valle/pico de derivada
+  precedente/siguiente, con un mínimo de 3% de la duración total de la serie); introduce
+  una fase "residual" para casos de reintensificación espuria post-decaimiento no atribuible
+  al ciclo de vida real; finalmente marca la fase "incipiente" (los primeros 40% del tramo
+  hacia el siguiente valle/pico de derivada de vorticidad en transiciones
+  incipiente-intensificación o incipiente-decaimiento).
+- Análisis de densidad de trayectorias por fase mediante estimación de densidad de núcleo
+  (KDE, Hodges 1996), normalizada a ciclones por 10^6 km^2 por mes (capa esférica de 5°).
+- Regiones de génesis consideradas: ARG (Argentina sudoriental), LA-PLATA (desembocadura
+  del Río de la Plata), SE-BR (sudeste de Brasil), más regiones menos estudiadas: SE-SAO
+  (Atlántico sudoriental), SA-NAM (costa de Sudáfrica/Namibia), AT-PEN (Península
+  Antártica) y WEDDELL (Mar de Weddell).
+
+3. HALLAZGOS CLAVE
+- De los 39 tipos de ciclo de vida inicialmente detectados, la configuración de cuatro fases
+  (incipiente, intensificación, madurez, decaimiento) es, por mucho, la más común,
+  representando aproximadamente el 60% de los sistemas analizados.
+- El segundo tipo más frecuente (7.3%) sigue el ciclo completo pero carece de fase
+  incipiente; el tercer y quinto tipo (5.8% y 4.0%) presentan decaimiento temprano; el
+  cuarto y sexto tipo (menos frecuentes) recorren el ciclo completo dos veces (desarrollo
+  secundario).
+- Duración media del ciclo de vida (sistemas con al menos una fase madura): 90.72 +/- 58.12
+  horas (3.78 +/- 2.42 días), con pico entre 30 y 60 horas; desplazamiento medio de 3269 +/-
+  2290 km, mayormente entre 1000 y 1500 km.
+- Velocidad de traslación media de ~13.9 +/- 5.5 m/s, coherente con estudios previos
+  (Gramcianinov et al. 2019, 2020a; Hoskins & Hodges, 2005); los ciclones son más lentos
+  durante la fase madura, lo cual se relaciona con la ocurrencia de olas extremas
+  (Gramcianinov et al. 2023).
+- La distribución de vorticidad media es bimodal y sesgada a la izquierda, con picos cerca
+  de 2 y entre 4-5 (x10^-5 s^-1), y un valor promedio de 4.1 +/- 1.8 (x10^-5 s^-1); los
+  sistemas son más intensos durante la fase madura, mostrando el rango más amplio de
+  valores de vorticidad.
+- La tasa de crecimiento media es simétrica alrededor de cero (equilibrio dinámico), con
+  las tasas más altas durante la intensificación y las más bajas durante el decaimiento.
+- Las regiones ARG, LA-PLATA y SE-BR son las principales zonas de génesis (fase incipiente)
+  en la costa sudamericana; ARG mantiene densidades de trayectorias similares en ambas
+  estaciones (DJF y JJA, >30 ciclones/10^6 km^2/mes), mientras que LA-PLATA presenta mayor
+  actividad en JJA y SE-BR en DJF.
+- Las fases de madurez convergen cerca de la costa antártica (~70°S, 30°E), mientras que la
+  fase de decaimiento presenta una dispersión mucho más amplia, reflejando alta movilidad y
+  decaimiento temprano en algunos sistemas.
+
+4. RELACIÓN CON TU TESIS
+Este paper es la base metodológica y de datos de toda tu tesis:
+- Cap01-Introduccion (L78, L81, L103, L121): se adopta directamente "la base de datos de
+  trayectorias de \citet{coutodesouza2024new}, fundamentada en el seguimiento por vorticidad
+  relativa a 850 hPa"; y "la segmentación objetiva desarrollada por \citet{coutodesouza2024new}
+  mediante el algoritmo CycloPhaser, que define cuatro fases dinámicas discretas."
+- Cap02-Fundamentacion (L50, L139): se valida la superioridad de zeta_850 sobre MSLP citando
+  que Couto de Souza et al. "identifican la evolución temporal de esta variable como el
+  predictor más confiable para definir sus fases"; se adopta explícitamente la segmentación en
+  cuatro fases discretas del CycloPhaser aplicada por estos autores.
+- Cap03-Metodos (L46): se describe que "\citet{coutodesouza2024new} procesaron el catálogo
+  incorporando una clasificación objetiva de las fases evolutivas mediante el algoritmo
+  CycloPhaser [...] el cual evalúa la tasa de cambio de la vorticidad relativa en 850 hPa
+  para segmentar matemáticamente los momentos de desarrollo y decaimiento de cada sistema."
+La tesis usa esta base de trayectorias y fases ya clasificadas (SBR, LPB, ARG como regiones de
+génesis, correspondientes a SE-BR, LA-PLATA y ARG en el paper) como insumo lagrangiano para su
+propio análisis MEOF de viento y precipitación en cada fase del ciclo de vida.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El grupo de investigación (Instituto de Astronomía, Geofísica y Ciencias Atmosféricas,
+Universidad de São Paulo, con Gramcianinov como coautora clave) mantiene una línea consolidada
+de climatología de ciclones del Atlántico Sur basada en el algoritmo TRACK y en la base de
+datos de trayectorias de Gramcianinov et al. (2020b), sobre la cual este trabajo añade la capa
+de segmentación de fases mediante CycloPhaser (publicado también como deSouza2025CycloPhaser
+en tu bibliografía). Dialoga directamente con climatologías previas del Atlántico Sur (Sinclair
+1995; Reboita et al. 2010a; Gramcianinov et al. 2019, 2020a; Mendes et al. 2010) y con enfoques
+de segmentación de ciclo de vida del Hemisferio Norte (Bengtsson et al. 2009; Schemm et al.
+2018; Rudeva & Gulev 2007).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores:
+- El análisis se realiza en un único nivel atmosférico (850 hPa), lo que limita la capacidad
+  de explorar el desarrollo vertical de los ciclones y las interacciones entre distintas
+  altitudes; los autores sugieren que investigaciones futuras incorporen un enfoque
+  multinivel.
+- Los umbrales específicos de detección de fases (7.5% para intensificación/decaimiento, 3%
+  mínimo para la fase madura, 12.5% para sus límites, 40% para la fase incipiente) fueron
+  calibrados empíricamente mediante un proceso iterativo sobre una muestra representativa de
+  trayectorias, lo cual introduce cierta arbitrariedad metodológica, aunque los autores
+  documentan pruebas de sensibilidad (Figuras S1-S4 del material suplementario).
+- Las regiones SE-SAO, SA-NAM, AT-PEN y WEDDELL están mucho menos estudiadas en la
+  literatura previa, por lo que las conclusiones sobre la dinámica de sus fases residuales
+  son más especulativas y se reconocen explícitamente como limitadas por la escasez de
+  investigación existente.
+- La comparación con estudios previos muestra discrepancias en los valores de vorticidad
+  inicial (fase incipiente), atribuidas a diferencias en los criterios de exclusión y en la
+  tendencia de la vorticidad a decrecer cuando la fase incipiente es seguida de
+  intensificación, lo cual podría introducir un sesgo hacia valores más bajos en esa fase.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿Cómo define CycloPhaser objetivamente las cuatro fases del ciclo de vida?" R:
+  Mediante picos y valles en la serie temporal de vorticidad relativa central (a 850 hPa) y
+  su primera derivada, tras un doble suavizado con filtro Savitzky-Golay; intensificación va
+  de un pico a un valle, decaimiento de un valle a un pico, madurez se define entre el valle
+  de vorticidad y ventanas del 12.5% del tiempo hacia los extremos de la derivada, e
+  incipiente cubre el 40% inicial hacia la siguiente transición.
+- P: "¿Qué proporción de los ciclones del Atlántico Sur sigue el patrón de cuatro fases
+  completo que usas en tu tesis?" R: Aproximadamente 60% de los 28,458 sistemas analizados
+  siguen la configuración completa incipiente-intensificación-madurez-decaimiento; el resto
+  presenta variantes (sin fase incipiente, decaimiento temprano, ciclos dobles, etc.).
+- P: "¿Por qué se eligió la vorticidad a 850 hPa y no la MSLP como variable de seguimiento y
+  segmentación?" R: Porque la vorticidad relativa a 850 hPa permite aislar la circulación del
+  sistema del flujo de fondo y detectar etapas tempranas (isobaras aún no cerradas) que los
+  algoritmos basados en presión mínima tienden a omitir, además de ser el predictor más
+  confiable identificado por los autores para definir las fases del ciclo de vida.
+- P: "¿Esta metodología captura ciclones subtropicales o tropicales por error?" R: Los
+  propios autores señalan que puede detectar ocasionalmente sistemas subtropicales, pero
+  constituyen una minoría; en el registro histórico de la región solo hay dos casos
+  documentados de ciclones tropicales (huracán Catarina y la tormenta tropical Iba).
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/coutodesouza2024new.md

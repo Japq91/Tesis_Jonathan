@@ -1,0 +1,145 @@
+============================================================
+CARTILLA DE ESTUDIO — Andrade et al. 2024 — Análisis compuesto de ciclones explosivos
+============================================================
+
+REFERENCIA COMPLETA
+Andrade, H. N., Nunes, A. B., Teixeira, M. S., de Quadro, M. F. L., de Avila, V. D., de Oliveira, F. S. C.,
+& Alves, R. C. M. (2024). Composite Analysis of Explosive Cyclones in the Southern Atlantic Ocean.
+International Journal of Climatology, 1–17. DOI: 10.1002/joc.8737
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita al menos 5 veces en 4 capítulos distintos (Fundamentación, Viento, Precipitación, MEOF); sustenta
+tanto el criterio de selección de ciclones intensos como el mecanismo físico de acoplamiento viento-precipitación
+y el comportamiento de la trayectoria durante el decaimiento.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (método manual OBSM, mínimos de PNMM) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio aborda la pregunta de cómo se estructuran dinámica y termodinámicamente los ciclones explosivos
+("bombs") del Atlántico Sur durante su fase de intensificación rápida (24 h), y si esa estructura difiere según
+la intensidad de la explosividad (débil, moderada, intensa). Es un estudio observacional/diagnóstico basado en
+reanálisis ERA5, que emplea la técnica de campos compuestos (composite fields) centrados en el ciclón para
+extraer el "comportamiento promedio" del ciclo de vida explosivo. Es relevante porque conecta la teoría clásica
+del frente polar (Bjerknes y Solberg 1922) y el modelo de Shapiro–Keyser con observaciones regionales del
+Atlántico Sudoccidental, una región con escasa cobertura de estudios compuestos de este tipo comparada con
+el Atlántico Norte.
+
+2. METODOLOGÍA
+
+- Datos: reanálisis ERA5 (0.25°×0.25°, resolución horaria, 139 niveles verticales), variables en 37 niveles de
+  presión y en superficie.
+- Dominio: 15°S–60°S, 75°W–10°W.
+- Período: enero 2010 a diciembre 2020 (11 años), con intervalo temporal de 3 h.
+- Método de rastreo: manual (Observational Method, OBSM), identificando mínimos de PNMM con isóbaras
+  cerradas cada 4 hPa mediante GrADS; se descartan sistemas cuyo desplazamiento supere 5° de latitud/longitud
+  entre pasos consecutivos.
+- Criterio de explosividad: Tasa de Profundización Normalizada (NDR, Sanders & Gyakum 1980) ≥ 1 Bergeron;
+  clasificación en débil (1.00≤NDR<1.30), moderado (1.30≤NDR≤1.80) e intenso (NDR>1.80).
+- Muestra: 271 casos totales (127 débiles, 104 moderados, 40 intensos).
+- Dominio de composición: 15° de latitud (N/S) y 30° de longitud (E/O) centrado en el ciclón, 9 pasos de tiempo
+  (t0 a t8) cubriendo las 24 h explosivas.
+- Variables compuestas: PNMM, geopotencial (500 y 1000 hPa), espesor 500/1000 hPa, velocidad vertical
+  (omega) en 500 hPa, viento en 250 hPa, flujos de calor latente y sensible en superficie.
+
+3. HALLAZGOS CLAVE
+
+- Se identificaron 271 ciclones explosivos en 2010–2020 (~25 casos/año), con invierno como estación dominante
+  y mayor densidad de ciclogénesis cerca de Uruguay, la costa de Brasil y el Golfo de San Matías.
+- Los ciclones explosivos siguen inicialmente el modelo clásico de Bjerknes y Solberg, pero al final de la fase
+  explosiva —especialmente en los casos moderados e intensos— evolucionan hacia una estructura tipo
+  Shapiro–Keyser (posible "T invertida" con desplazamiento transversal del frente frío respecto al cálido).
+- Existe una transición de un régimen baroclínico a uno barotrópico al final de la fase explosiva; la inclinación
+  horizontal del cavado en altura pasa de ligeramente positiva a negativa durante el desarrollo.
+- El desplazamiento se vuelve menos zonal a medida que aumenta la intensidad (los sistemas intensos migran de
+  noroeste a sureste en un rango de latitud más restringido y no ocurren cerca de la costa a altas latitudes).
+- Los movimientos verticales ascendentes (omega en 500 hPa) son más vigorosos al inicio de la fase explosiva
+  para todas las intensidades, y disminuyen al alcanzar la intensidad máxima, coincidiendo con la reducción de
+  la precipitación.
+- Los flujos de calor latente muestran una contribución destacada del sector noreste (cálido) durante las
+  primeras 9 h de desarrollo en los ciclones intensos, evidenciando el aporte de aguas más cálidas a menor
+  latitud; los flujos de calor sensible presentan un "dipolo horizontal" (pérdida de calor oceánico en el sector
+  frío, ganancia en el sector cálido, de magnitud aproximadamente equivalente).
+- Los ciclones intensos muestran un núcleo de viento máximo al sureste del centro que, durante el desarrollo,
+  transiciona del lado ecuatorial al lado polar del jet en niveles altos.
+
+NOTA DE VERIFICACIÓN: en el texto completo revisado del artículo (International Journal of Climatology,
+DOI 10.1002/joc.8737) no se encontró de forma literal la cifra específica de "56% de los sistemas que superan
+ambos umbrales simultáneamente" ni una comparación explícita de trayectorias por MSLP vs. viento máximo a
+10 m citada en el Cap. 2 (L177) de la tesis. El artículo sí documenta el desplazamiento hacia el sur/océano
+abierto de los sistemas más intensos a medida que profundizan (Cap. 6, L35), lo cual está bien respaldado por
+el texto. Se recomienda verificar la cifra del 56% contra el artículo original en PDF (tablas o figuras no
+capturadas en la extracción de texto) antes de la defensa, ya que no pudo confirmarse en el archivo .md analizado.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap. 2 (Fundamentación, L59 y L65): se usa para justificar la pertinencia de aislar ciclones intensos en el
+  diseño metodológico, indicando que "los ciclones intensos (seleccionados usando criterios presion) exhiben
+  patrones sinópticos diferenciados y mayor coherencia entre los extremos de viento en superficie y la
+  intensidad del sistema".
+- Cap. 2 (Fundamentación, L177): se cita para sustentar la afirmación sobre el desplazamiento hacia el sur de
+  las trayectorias de los ciclones más intensos y la cifra del 56% de coincidencia costera (ver nota de
+  verificación arriba).
+- Cap. 5 (Precipitación, L70): se usa para respaldar el mecanismo físico por el cual "la advección de aire frío
+  y seco sobre aguas cálidas potencia además la evaporación, cuya condensación libera calor que intensifica la
+  circulación y organiza el ascenso en las áreas de mayor precipitación", en el contexto de comparar SBR/LPB
+  frente a ARG.
+- Cap. 4 (Viento, L121): se cita junto con coutodesouza2024thesis para sustentar que "las interacciones
+  diabáticas y los flujos de calor latente océano-atmósfera sostienen la inestabilidad baroclínica de baja
+  troposfera que capitalizan los ciclones de SBR y LPB".
+- Cap. 6 (MEOF, L35): se usa como respaldo central para explicar por qué la fase de decaimiento tiene menor
+  relevancia práctica: "los ciclones más intensos del Atlántico Sudoccidental desplazan su trayectoria hacia el
+  sur y el océano abierto a medida que profundizan".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Hugo Nunes Andrade y colaboradores (Universidad Federal de Rio Grande, Universidad Federal de Pelotas,
+Instituto Federal de Santa Catarina) forman parte de un grupo brasileño dedicado a la climatología de
+ciclogénesis explosiva en el Atlántico Sur, con una línea de continuidad clara: Avila, Nunes y Alves (2016, 2021),
+Andrade, Nunes y Alves (2022a), Andrade, Nunes y Teixeira (2022b) y este trabajo de 2024 comparten el mismo
+método de rastreo manual (OBSM) y criterios de clasificación NDR. El artículo referenciado en tu tesis
+(International Journal of Climatology, 2024) es la culminación de esa serie, ampliando el análisis compuesto a
+tres niveles de intensidad con un período de 11 años. El grupo dialoga directamente con la literatura clásica de
+ciclogénesis explosiva del Atlántico Norte (Sanders y Gyakum 1980; Sanders 1986; Wang y Rogers 2001) y con
+estudios del Shapiro–Keyser (Schultz, Keyser y Bosart 1998; Reboita et al. 2017, 2022).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El rastreo manual, aunque más confiable para sistemas asimétricos o elongados, es intensivo en tiempo y
+  depende de la experiencia del analista, introduciendo cierta subjetividad en la determinación del mínimo de
+  PNMM.
+- La muestra de sistemas intensos es reducida (40 casos) frente a débiles (127) y moderados (104), lo que puede
+  limitar la robustez estadística de los compuestos para la categoría más extrema, la más relevante para
+  impactos costeros.
+- El análisis se restringe a un solo producto de reanálisis (ERA5), sin validación cruzada con otro reanálisis
+  o con observaciones in situ.
+- La ventana temporal fija de 9 pasos (24 h) para "estandarizar" la fase explosiva puede no capturar
+  adecuadamente sistemas con evoluciones asimétricas en el tiempo, y el propio estudio reconoce que "la
+  explicación completa requiere un análisis más largo".
+- El análisis de flujos de calor latente reconoce explícitamente que estos no pueden observarse directamente en
+  los niveles donde se estima su mayor efecto (800–700 hPa) con la reanálisis usada, limitando la evidencia a
+  inferencias indirectas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Cómo valida usted la cifra del 56% que atribuye a Andrade et al. (2024) si no aparece de forma explícita en
+  el cuerpo del artículo revisado?" — Respuesta: reconocer que se debe revisar la fuente original (posible
+  contenido en tablas/figuras no extraídas en el texto), y en caso de no confirmarse, atribuir la cifra a un
+  análisis propio de la tesis o corregir la cita.
+- "¿Por qué usa un estudio de ciclones explosivos (definidos por caída de presión) para justificar un criterio
+  de selección basado en viento máximo?" — Respuesta: el paper muestra que la intensidad por presión y la
+  severidad de superficie (viento, flujos de calor) están acopladas, lo que motiva pero no reemplaza la
+  necesidad de un criterio propio basado en vorticidad/viento en la tesis.
+- "¿Es representativo un análisis compuesto de 11 años para capturar la variabilidad interanual e interdecadal
+  de los ciclones explosivos en el Atlántico Sur?" — Respuesta: el propio estudio no evalúa tendencias
+  decadales; el compuesto captura un comportamiento promedio robusto para el período pero no examina
+  variabilidad de baja frecuencia (ENSO, modos anulares).
+- "¿Cómo se relaciona la transición de Shapiro–Keyser documentada aquí con la fase de decaimiento que usted
+  describe en el MEOF?" — Respuesta: el estudio muestra que la transición ocurre hacia el final de la fase
+  explosiva, coincidiendo con el desplazamiento hacia el sur/océano abierto que la tesis usa para argumentar la
+  menor relevancia costera del decaimiento.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/andrade2024composite.md

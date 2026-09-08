@@ -1,0 +1,238 @@
+============================================================
+CARTILLA DE ESTUDIO — Gramcianinov et al. 2019 — regionalización SBR/LPB/ARG
+============================================================
+
+REFERENCIA COMPLETA
+Gramcianinov, C. B., Hodges, K. I. y Camargo, R. (2019). The properties and
+genesis environments of South Atlantic cyclones. Climate Dynamics, 53,
+4115-4140. DOI: 10.1007/s00382-019-04778-1
+
+NOTA IMPORTANTE SOBRE LA FICHA BIBLIOGRÁFICA: la entrada .bib de la tesis
+(bibliografia.bib) lista como autores a "Gramcianinov, Carolina B; Campos, RM;
+de Camargo, R; da Rocha, RP", pero la portada real del artículo (verificada en
+el .md, línea 4) indica únicamente tres autores: "C. B. Gramcianinov, K. I.
+Hodges, R. Camargo". El volumen, páginas y DOI del .bib sí son correctos. Este
+desajuste en la lista de autores (posiblemente heredado por copia de otra
+entrada de Gramcianinov, ver más abajo) debería corregirse antes de la
+defensa, ya que un jurado puede verificarlo fácilmente en Google Scholar.
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Es la referencia más citada de toda la tesis: aparece en los siete capítulos
+sustantivos (Introducción, Fundamentación, Métodos, Viento, Precipitación,
+MEOF) con al menos diez pasajes distintos. Define la regionalización SBR/LPB/
+ARG que estructura toda la estratificación regional del trabajo y aporta el
+catálogo de trayectorias base sobre el que se construye la metodología.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (ζ850) — misma variable que la tesis (calculada sobre NCEP-CFSR, NO ERA5)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio produce una nueva climatología de ciclones del Atlántico Sur para
+entender las condiciones que llevan a la ciclogénesis en distintas regiones
+del dominio. Es un estudio climatológico basado en seguimiento automatizado
+(tracking) de trayectorias, no un estudio de caso. Las preguntas científicas
+son: (1) ¿cuáles son los principales mecanismos forzantes que controlan el
+desarrollo ciclónico en cada región de génesis del Atlántico Sur durante su
+estación más activa?, y (2) ¿existen diferencias en los precursores de génesis
+y en la estructura de los ciclones intensos que se originan en distintas
+regiones? Es el estudio fundacional que la tesis del usuario adopta como base
+de su regionalización SBR/LPB/ARG y de su catálogo de trayectorias.
+
+2. METODOLOGÍA
+
+- Datos: 32 años (1979-2010) de datos de 6 horas del NCEP Climate Forecast
+  System Reanalysis (CFSR; Saha et al. 2010) — modelo espectral T382
+  (~38 km) con 64 niveles verticales híbridos. IMPORTANTE: este estudio NO usa
+  ERA5; usa vientos de NCEP-CFSR para calcular la vorticidad relativa.
+- Variable de seguimiento: vorticidad relativa a 850 hPa (no MSLP), calculada
+  a partir de los vientos de CFSR, con filtrado espectral T42 para aislar la
+  escala sinóptica. Se justifica el uso de vorticidad sobre MSLP porque el
+  gradiente de presión superficial es fuerte entre 20°S y 40°S y los ciclones
+  pueden no tener una isobara cerrada hasta alcanzar latitudes mayores o
+  intensificarse (argumento tomado de Sinclair 1994 y Hoskins & Hodges 2002,
+  no una validación original de este estudio).
+- Algoritmo de tracking: programa TRACK (Hodges 1994, 1995, 1999), con
+  restricciones adaptativas de Hoskins & Hodges (2005) y un ajuste adicional
+  (barrera orográfica artificial) para mejorar la detección sobre los Andes.
+- Diagnóstico: variables muestreadas en un radio desde el centro del ciclón
+  para caracterizar el ambiente de génesis; composites centrados en el ciclón
+  (temperatura equivalente potencial a 925 hPa, MSLP, vorticidad potencial a
+  300 hPa, humedad relativa, advección térmica, omega a 700 hPa) en tres
+  instantes: 12 h antes de la génesis, en la génesis, y 24 h después.
+- Dominio: Atlántico Sur completo, incluyendo océano abierto (15°S-55°S,
+  75°O-20°E).
+
+3. HALLAZGOS CLAVE
+
+- Se identifican CUATRO regiones principales de ciclogénesis en el Atlántico
+  Sur (no tres): la costa sur-sureste de Brasil (SE-BR, ~30°S), la región de
+  descarga del Río de la Plata sobre el continente (LA PLATA, ~35°S), la costa
+  sureste de Argentina (ARG, 40°S-55°S) y una cuarta región oceánica en el
+  Atlántico Sudeste (SE-SAO, centrada en 45°S, 10°O) — esta última no incluida
+  en la regionalización de tres zonas que adopta la tesis del usuario.
+- Número total de eventos de ciclogénesis (1980-2010): SE-BR 856 (27.6±2.2 por
+  año), LA PLATA 1157 (37.3±3.1 por año), ARG 2972 (95.9±4.6 por año) y SE-SAO
+  3666 (118.3±5.8 por año), sobre un total de 12,754 eventos en todo el
+  dominio (411.4±10.2 por año).
+- Al norte de 35°S, la ciclogénesis responde a dos procesos distintos según la
+  estación: en verano domina el forzamiento de niveles bajos asociado al
+  transporte de humedad; en invierno domina un chorro de niveles altos más
+  fuerte que actúa mediante inestabilidad baroclínica.
+- Al sur de 35°S, los ciclones se desarrollan en un ambiente altamente
+  baroclínico durante todo el año, con influencia menor de los procesos
+  húmedos.
+- Los composites de estructura muestran mecanismos diferenciados por región:
+  SE-BR está asociada a desarrollo secundario sobre frentes en cola (con
+  evidencia de "frentes viejos" en verano); LA PLATA está sustentada por
+  advección cálida promovida por bajas térmico-orográficas (CL y NAL) a
+  sotavento de los Andes; ARG se asocia al desarrollo baroclínico clásico,
+  reforzado por la interacción de vaguadas de niveles medios con los Andes y
+  la baja estabilidad estática en verano; SE-SAO se desarrolla en un régimen
+  altamente baroclínico en el sector frío de un ciclón "padre".
+- SE-BR y ARG son más activas en verano (DJF); LA PLATA y SE-SAO son más
+  activas en invierno (JJA), aunque la variabilidad estacional no es evidente
+  para SE-BR y ARG en términos del número de ciclones por región.
+
+4. RELACIÓN CON TU TESIS
+
+Gramcianinov et al. (2019) es citado en al menos diez pasajes distintos, con
+usos que van desde la regionalización estructural hasta mecanismos físicos
+puntuales:
+
+- Cap01-Introduccion (L37): es la fuente explícita de la regionalización que
+  organiza toda la tesis: "Adoptando la regionalización propuesta por
+  \citet{gramcianinov2019properties}, este estudio se centra en tres regiones
+  clave: [SBR, LPB, ARG]". La tesis reduce las cuatro regiones del paper
+  original a tres, omitiendo SE-SAO (oceánica, fuera del foco continental).
+- Cap02-Fundamentacion (L50): se cita junto con padilhareinke2024objective
+  para sustentar la superioridad de ζ₈₅₀ sobre MSLP en estudios regionales del
+  Atlántico Sur — aunque, como se documentó arriba, este argumento proviene
+  originalmente de Sinclair (1994), adoptado (no generado) por Gramcianinov et
+  al.
+- Cap02-Fundamentacion (L86): "la interacción entre el flujo de los oestes, la
+  topografía de los Andes y la Temperatura Superficial del Mar define tres
+  regiones de génesis con características físicas diferenciadas" — resume (con
+  cierta simplificación, ya que el paper trata explícitamente CUATRO regiones)
+  los mecanismos de la Sección 5 del artículo.
+- Cap03-Metodos (L41, L59): es la fuente del catálogo de trayectorias base y
+  de la delimitación espacial de las tres regiones (Tabla de regiones y
+  coordenadas). AQUÍ ESTÁ EL PUNTO MÁS DELICADO: el texto metodológico dice
+  "el catálogo de trayectorias desarrollado por \citet{gramcianinov2019properties}
+  a partir del reanálisis ERA5" — pero el artículo original NO usa ERA5, usa
+  NCEP-CFSR (1979-2010). Esta misma frase aparece también en la Tabla de
+  parámetros de tracking (tab_tracking_params.tex, que atribuye "Fuente de
+  datos: ERA5" a esta cita) y en el Abstract de la tesis. Ver "Nota especial"
+  más abajo.
+- Cap05-Precipitacion (L38, L43): sustenta que "la combinación de
+  baroclinicidad costera y disponibilidad de humedad determina la evolución de
+  los sistemas" y que los ciclones de ARG están dominados por baroclinicidad
+  de latitudes medias con menos eventos de precipitación intensa que SBR/LPB —
+  coherente con los hallazgos de composites del artículo.
+- Cap04-Viento (L47, L79, L175): se usa para sustentar (a) la incursión de
+  anomalías de vorticidad potencial en niveles altos durante la ciclogénesis
+  continental, (b) el desarrollo de la circulación ciclónica durante
+  intensificación, y (c) el hallazgo más específico y textualmente fiel del
+  paper: que los ciclones de LPB "están modulados en sus etapas iniciales por
+  la influencia de la baja orográfica" — esto corresponde directamente al
+  hallazgo del artículo de que "the LA PLATA cyclones development is
+  influenced by an orographic low in their early stages" (Abstract).
+- Cap06-MEOF (L160): se cita de forma genérica para justificar la
+  disponibilidad de flujos de calor latente oceánico y la interacción con el
+  chorro de capas bajas en SBR/LPB frente a la modulación orográfica en ARG.
+
+NOTA ESPECIAL — ERROR DETECTADO Y CORREGIDO ENTRE VERSIONES DEL CAPÍTULO 1:
+Al comparar las versiones de borrador del capítulo de Introducción, se
+encontró que una versión anterior (01.vf7_introducao.tex, línea 37) tradujo el
+nombre de la región SBR como "(\textit{South Brazil}, SBR)", mientras que la
+versión revisada y actualmente activa en la compilación de la tesis
+(01.vr1_introducao.tex, línea 31, la que efectivamente se incluye vía
+\input en tese_es.tex) corrige la traducción a "(\textit{Southeast Brazil},
+SBR)". Esta corrección es importante porque el nombre original en el artículo
+de Gramcianinov et al. es "Southern Brazilian coast" / abreviado "SE-BR" (no
+"South Brazil" ni "SBR"); la tesis acuña su propia sigla "SBR" como
+adaptación, y la traducción "Southeast Brazil" es la más fiel al original.
+Se recomienda verificar que esta corrección se mantenga consistente en TODO el
+documento final (abstract, fundamentación, metodología), ya que el error
+"South Brazil" pudo sobrevivir en otras secciones no revisadas.
+
+PROBLEMA ADICIONAL NO CORREGIDO (recomendación para antes de la defensa): la
+atribución del catálogo de trayectorias a "ERA5" citando a Gramcianinov et al.
+(2019) —presente en Cap03-Metodos, en la Tabla de parámetros de tracking y en
+el Abstract— es inconsistente con la metodología real del artículo (NCEP-CFSR,
+1979-2010, T382/~38 km). Esto NO aparece corregido en ninguna versión revisada
+(vr1) del texto. Es probable que el catálogo real usado en la tesis combine el
+método de tracking de Gramcianinov et al. (vorticidad a 850 hPa, restricciones
+de Hoskins & Hodges) pero aplicado sobre ERA5 por otro trabajo (posiblemente
+coutodesouza2024new o deSouza2025CycloPhaser, quienes sí trabajan con
+CycloPhaser sobre ERA5). Si esto es así, la redacción debería aclarar que la
+TAXONOMÍA regional y el algoritmo de tracking provienen de Gramcianinov et al.
+(2019), pero que el reanálisis usado (ERA5) y el período (1979-2020) son una
+adaptación posterior, no el producto original de ese artículo. Esta es una
+pregunta altamente probable del jurado (ver Sección 7).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Carolina B. Gramcianinov, con Kevin I. Hodges (autor del algoritmo TRACK,
+Universidad de Reading) como coautor, inaugura aquí su línea de investigación
+sobre climatología objetiva de ciclones del Atlántico Sur mediante tracking de
+vorticidad relativa. Esta línea se extiende directamente en gramcianinov2020
+analysis (comparación ERA5 vs. CFSR/CFSv2), gramcianinov2023impact (vínculo
+ciclón-oleaje extremo) y gramcianinov2024early (proyecciones climáticas con
+modelos regionales CORDEX). El artículo también dialoga con la tradición
+previa de climatologías del Atlántico Sur (Gan y Rao 1991; Sinclair 1994,
+1995; Hoskins y Hodges 2005; Reboita et al. 2010a), a las que refina mediante
+mayor resolución y restricciones de tracking adaptadas a la orografía andina.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Usa NCEP-CFSR (1979-2010), un reanálisis de menor resolución (~38 km, T382)
+  y más antiguo que ERA5 (~31 km, disponible desde 1979-presente); esto limita
+  la comparabilidad directa con estudios posteriores basados en ERA5, salvo
+  que se verifique consistencia entre productos (tarea abordada precisamente
+  por gramcianinov2020analysis).
+- El propio artículo reconoce que la barrera orográfica artificial impuesta
+  para mejorar el tracking sobre los Andes "podría influir en la posición de
+  la región de génesis" (según discusión en gramcianinov2020analysis, que
+  reevalúa este método).
+- Los composites se limitan a instantes discretos (12 h antes, en génesis, 24 h
+  después) y no cubren el ciclo de vida completo del sistema con la resolución
+  temporal fina que sí aplica la tesis del usuario mediante CycloPhaser.
+- La región SE-SAO, con la mayor densidad de eventos de todo el dominio
+  (3666), queda fuera del alcance de la tesis, que se concentra únicamente en
+  las tres regiones costeras/continentales de Sudamérica.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "Su tesis dice que el catálogo de trayectorias de Gramcianinov et al. (2019)
+  se construyó a partir de ERA5, pero ese artículo usa NCEP-CFSR. ¿Puede
+  aclarar esto?" Respuesta sugerida: reconocer la imprecisión en la redacción
+  y aclarar que lo que se adopta de Gramcianinov et al. (2019) es la
+  metodología de tracking por vorticidad a 850 hPa y la regionalización
+  SBR/LPB/ARG, mientras que el catálogo específico usado en la tesis (basado
+  en ERA5, 1979-2020) proviene de una aplicación posterior de ese método
+  (por ejemplo, vía CycloPhaser/coutodesouza2024new), y comprometerse a
+  corregir la redacción para reflejar esta distinción.
+- "¿Por qué su tesis usa tres regiones de ciclogénesis (SBR, LPB, ARG) si el
+  artículo original define cuatro?" Respuesta: la cuarta región (SE-SAO) es
+  oceánica y no forma parte del interés continental/costero de la tesis, que
+  se centra en los impactos costeros sobre Sudamérica.
+- "¿Qué evidencia específica de Gramcianinov et al. (2019) sustenta la
+  afirmación de que LPB está modulada por una baja orográfica en sus etapas
+  iniciales?" Respuesta: es un hallazgo textual del abstract y de la Sección 5
+  del artículo ("the LA PLATA cyclones development is influenced by an
+  orographic low in their early stages"), verificado directamente en el
+  archivo fuente.
+- "¿La superioridad de la vorticidad relativa sobre el MSLP fue demostrada por
+  Gramcianinov et al. o es una idea adoptada de otros autores?" Respuesta: es
+  un argumento adoptado de Sinclair (1994) y Hoskins & Hodges (2002); Gramcianinov
+  et al. lo aplican pero no lo demuestran de forma original en este artículo.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gramcianinov2019properties.md (abstract,
+introducción, Sección 2 Datos y métodos incl. 2.2 TRACK y 2.3 Validación,
+Sección 3 Track density y Tabla 2 de conteo de ciclogénesis, Sección 6 Summary
+and final remarks). Comparación cruzada con tex_es/01.vf7_introducao.tex,
+tex_es/01.vr1_introducao.tex, tex_es/03.vf5_metodos.tex,
+tex_es/03.vr1_metodos.tex y tabelas_es/tab_tracking_params.tex.

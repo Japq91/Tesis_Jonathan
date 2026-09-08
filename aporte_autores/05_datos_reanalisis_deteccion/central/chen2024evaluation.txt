@@ -1,0 +1,160 @@
+============================================================
+CARTILLA DE ESTUDIO — Chen et al. 2024 — evaluación de ERA5 en ciclones extratropicales
+============================================================
+
+REFERENCIA COMPLETA
+Chen, T.-C., Collet, F. y Di Luca, A. (2024). Evaluation of ERA5 precipitation and
+10-m wind speed associated with extratropical cyclones using station data over
+North America. International Journal of Climatology, 44(3), 729-747.
+DOI: 10.1002/joc.8339
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en tres capítulos distintos (Fundamentación, Métodos, Precipitación) para
+sustentar una limitación metodológica reconocida explícitamente: el sesgo de ERA5 en
+la representación de los extremos de viento y precipitación asociados a ciclones
+extratropicales, con cifras textuales exactas (-10.2% en viento, -22.6% en
+precipitación) que la tesis reproduce fielmente para calificar la fiabilidad del
+subconjunto p90.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (Norteamérica)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar Y vorticidad relativa a 850 hPa (ambas variables combinadas en la detección)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio evalúa la habilidad del reanálisis ERA5 (ECMWF) para representar la
+velocidad de viento a 10 m y la precipitación asociadas a ciclones extratropicales
+(ETC) sobre Norteamérica central y oriental, usando datos de estación como
+referencia observacional independiente. Aborda un vacío señalado explícitamente por
+los autores: aunque ERA5 se usa ampliamente en estudios climáticos de ciclones
+extratropicales, pocos trabajos habían cuantificado su desempeño específicamente
+sobre tierra y, en particular, para los eventos más extremos. Es un estudio de
+evaluación/validación de producto de reanálisis, no un estudio dinámico o de
+mecanismos.
+
+2. METODOLOGÍA
+
+- Reanálisis evaluado: ERA5 (ECMWF, Cycle 41r2), resolución horizontal ~31 km, 137
+  niveles verticales, con esquema de nube/precipitación de gran escala (variables
+  pronósticas para lluvia y nieve precipitantes) y esquema de convección profunda
+  revisado; la precipitación total en ERA5 es la suma de la precipitación convectiva
+  parametrizada y la precipitación de gran escala.
+- Datos de referencia: Integrated Surface Database (ISD, NOAA-NCEI), ~3000
+  estaciones, ~420 millones de reportes, región 10°N-75°N y 120°W-40°W (Norteamérica
+  central y oriental), periodo 2005-2019.
+- Identificación y seguimiento de ETC: algoritmo objetivo aplicado sobre presión a
+  nivel del mar y vorticidad relativa en 850 hPa de ERA5.
+- Dos cantidades evaluadas para cada ETC: un promedio espacial (WSavg, PRavg) y un
+  extremo espacial (percentil 95 dentro del radio del ciclón: WS95, PR95) en un radio
+  constante alrededor del centro.
+- Comparación adicional para el 5% de ETC más intensos (top 5% de WSavg/PRavg),
+  usando dos métodos: Método I (comparando todos los centros de ciclón identificados
+  independientemente en ISD y en ERA5) y Método II (comparando solo los centros de
+  ciclón coincidentes/emparejados entre ambos conjuntos de datos).
+- Métricas de error: sesgo normalizado medio (NMB), raíz del error cuadrático medio
+  normalizado (NRMSE) y coeficiente de correlación (CC).
+
+3. HALLAZGOS CLAVE
+
+- Para la velocidad de viento promedio (WSavg) espacialmente promediada, ERA5
+  muestra buen desempeño: NMB de -0.7% y NRMSE de 14.3%, con tendencia a
+  sobreestimar vientos débiles y subestimar vientos fuertes.
+- Para la precipitación promedio (PRavg), el desempeño de ERA5 es peor que para
+  viento: NMB de -10.4% y NRMSE de 56.5%, con fuerte tendencia a subestimar valores
+  altos.
+- El mejor desempeño para ambas variables se encuentra en DJF (invierno boreal) y el
+  peor en JJA (verano boreal), atribuido en parte a que las precipitaciones
+  convectivas de verano no son bien resueltas por procesos parametrizados.
+- Comparado con los ETC promedio, el desempeño de ERA5 se deteriora para el 5% de
+  ETC más extremos: NMB de -10.2% y NRMSE de 12.5% para WSavg top5% (viento), y NMB
+  de -22.6% y NRMSE de 42.6% para PRavg top5% (precipitación) — cifras que la tesis
+  del usuario reproduce textualmente.
+- Para los extremos locales dentro de cada ciclón (WS95/PR95), el sesgo también es
+  negativo y de mayor magnitud que para los promedios espaciales: NMB de -17.0% para
+  WS95 y de -7.2% para PR95 (Tabla 1 del artículo), confirmando que ERA5 tiene menor
+  habilidad para capturar valores extremos locales que promedios espaciales.
+- Solo el 64% de los eventos del top 5% de PRavg en ISD son capturados como top 5%
+  en ERA5 (2068 de 3242 casos), y esta tasa de coincidencia cae aún más (54%) al
+  considerar el top 1%.
+- Existe una dependencia espacial de los sesgos con la orografía: subestimación
+  marcada de viento sobre las Montañas Rocosas, y sesgos de precipitación
+  relacionados con regiones de mayor intensidad de precipitación/viento observada.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en tres pasajes clave:
+- Cap02-Fundamentacion (L186): "ERA5 presenta sesgos documentados en la
+  representación de los extremos más intensos \citep{chen2024evaluation}, cuya
+  magnitud y consecuencias para el subconjunto p90 se discuten en detalle en la
+  Sección de datos ERA5" — introduce la limitación de forma general.
+- Cap03-Metodos (L24): reproduce las cifras exactas del artículo: "\citet{chen2024evaluation}
+  demuestran que ERA5 subestima sistemáticamente los extremos del 5% de ciclones
+  extratropicales más intensos, con sesgos del -10.2% en viento y -22.6% en
+  precipitación respecto a observaciones en Estados Unidos de America" — estas
+  cifras corresponden exactamente a NMB de WSavg-top5% (-10.2%) y PRavg-top5%
+  (-22.6%, método I) de la Tabla 1 del paper, verificadas como fieles al texto
+  original.
+- Cap05-Precipitacion (L25): explica el mecanismo físico de la precipitación en
+  ERA5: "la precipitación total resulta de la suma de la componente estratiforme de
+  gran escala y la convectiva parametrizada, siendo esta última la que controla la
+  cola superior de la distribución" — consistente con la descripción metodológica
+  del artículo sobre el esquema de nube/precipitación de ERA5.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de Di Luca (UQAM, Université du Québec à Montréal, junto con Chen y
+Collet) trabaja en evaluación de reanálisis y modelos climáticos regionales para
+fenómenos extremos. El artículo dialoga directamente con Campos et al. (2022), quien
+evaluó vientos de ERA5 sobre el océano Atlántico usando datos satelitales de mayor
+resolución y encontró subestimaciones de 10-15% en presencia de ciclones —
+resultado que Chen et al. (2024) extienden y refinan sobre tierra usando estaciones
+in situ. Se enmarca en la línea más amplia de estudios de evaluación de reanálisis
+para ciclones extratropicales (Hodges et al., 2011; Neu et al., 2013; Di Luca et al.,
+2015), aportando la novedad de centrarse específicamente en el desempeño sobre
+continente (donde la asimilación de observaciones es más densa pero la topografía
+compleja introduce errores adicionales) y en los extremos superiores de la
+distribución, en contraste con estudios previos centrados en promedios o solo en
+océano.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El dominio geográfico se limita a Norteamérica central y oriental (10°N-75°N,
+  120°W-40°W); no hay evaluación directa para el Atlántico Sudoccidental, por lo que
+  la tesis extrapola el hallazgo cualitativo (ERA5 subestima extremos) sin verificar
+  si la magnitud exacta (-10.2%/-22.6%) es representativa de la región de estudio.
+  Esta es una limitación que el propio jurado podría señalar.
+- La evaluación depende de estaciones ISD terrestres; sobre el océano —donde ocurre
+  buena parte de la actividad ciclónica del Atlántico Sudoccidental estudiada en la
+  tesis— no hay verificación directa en este artículo.
+- Existe una disparidad de escala inherente entre ERA5 (celdas de ~31×31 km) y las
+  observaciones puntuales de estación, reconocida explícitamente por los autores como
+  una fuente de discrepancia no atribuible únicamente a errores del reanálisis.
+- El periodo de estudio (2005-2019) es más corto y más reciente que el de algunos
+  estudios climatológicos de ciclones subtropicales citados en la tesis (p. ej.,
+  cardoso2022synoptic: 1979-2015).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Es válido aplicar las cifras de sesgo de ERA5 de Chen et al. (2024), obtenidas
+  para Norteamérica, directamente al Atlántico Sudoccidental? Respuesta: no de forma
+  literal; la tesis las usa como evidencia cualitativa general (ERA5 subestima
+  sistemáticamente los extremos) y como orden de magnitud de referencia, no como
+  valor exacto transferido a la región de estudio, reconociendo la limitación
+  regional del estudio original.
+- ¿Por qué el sesgo es mayor para precipitación que para viento en ERA5? Respuesta:
+  porque la precipitación depende más fuertemente de procesos convectivos
+  parametrizados (no resueltos explícitamente), especialmente en verano, mientras que
+  el viento a 10 m está más directamente vinculado al campo de presión de gran escala
+  que ERA5 representa mejor.
+- ¿Qué consecuencia práctica tiene este sesgo para el subconjunto p90 de tu tesis?
+  Respuesta: implica que los valores absolutos de viento y precipitación extrema del
+  p90 basados en ERA5 probablemente están subestimados respecto a la realidad
+  observacional, por lo que las conclusiones de la tesis deben interpretarse como
+  conservadoras (el sesgo tendería a atenuar, no a exagerar, la severidad real de los
+  extremos).
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/chen2024evaluation.md (resumen/abstract,
+introducción, sección 2.1 de datos ERA5 y esquema de precipitación, sección 2.2
+ISD, y Tabla 1 con las métricas NMB/NRMSE/CC para WSavg, WSavg-top5%, WS95, PRavg,
+PRavg-top5% y PR95).

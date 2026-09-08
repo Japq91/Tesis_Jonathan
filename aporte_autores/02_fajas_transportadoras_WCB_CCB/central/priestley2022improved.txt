@@ -1,0 +1,155 @@
+============================================================
+CARTILLA DE ESTUDIO — Priestley & Catto 2022 — estructura de vientos/airstreams en modelos
+============================================================
+
+REFERENCIA COMPLETA
+Priestley, M. D. K., & Catto, J. L. (2022). Improved representation of extratropical cyclone
+structure in HighResMIP models. Geophysical Research Letters, 49(5), e2021GL096708. Wiley
+Online Library. DOI: 10.1029/2021GL096708
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en 7 ubicaciones distintas a lo largo de 4 capítulos (Introducción, Fundamentación,
+Resultados de Viento, Resultados de Prototipos): sustenta tanto la elección metodológica del
+criterio percentílico p90 y del compositing centrado en el ciclón, como la discusión sobre
+sesgos de subestimación de viento en reanálisis/modelos, y sirve como referente comparativo
+directo para la organización espacial de los máximos de viento (CCB/WCB) en los prototipos
+del Capítulo 7.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (HN y HS, DJF/JJA)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio evalúa cuán bien los modelos climáticos de las generaciones CMIP6 y HighResMIP
+representan la ESTRUCTURA Y LA INTENSIDAD DEL VIENTO de los ciclones extratropicales (ETC),
+comparando contra el reanálisis ERA5 como referencia ("baseline"). El análisis se centra
+explícitamente en los "airstreams" o cinturones de transporte de la teoría conceptual de
+ciclones: el cinturón transportador cálido (WCB), el cinturón transportador frío (CCB) y la
+intrusión seca (DI). Cubre ambos hemisferios (NH y SH) y ambas estaciones (DJF, JJA). Es
+relevante para la tesis porque valida metodológicamente la técnica de compositing centrado en
+el ciclón sobre el percentil 90 de vorticidad, y documenta con precisión geométrica dónde se
+ubican los máximos de viento del CCB y del WCB respecto al centro ciclónico.
+
+NOTA IMPORTANTE — CUIDADO CON ATRIBUCIONES INDEBIDAS: Este paper trata EXCLUSIVAMENTE sobre
+la representación de vientos y airstreams (estructura dinámica) en modelos climáticos
+CMIP6/HighResMIP frente a ERA5. NO analiza el campo de precipitación en ningún momento del
+artículo (ni en el resumen, ni en los resultados, ni en las conclusiones). El propio texto de
+la tesis lo advierte explícitamente en el Cap07 (L67): "Cabe precisar que dicho estudio no
+analiza el campo de precipitación, por lo que la comparación se limita estrictamente al
+viento." Al responder preguntas del jurado o redactar cualquier síntesis, NO se debe atribuir
+a Priestley & Catto (2022) ningún hallazgo sobre lluvia/precipitación asociada a ciclones.
+
+2. METODOLOGÍA
+- Datos de referencia: reanálisis ERA5 (Hersbach et al., 2020), periodo 1979-2014.
+- Modelos CMIP6: 27 modelos de 20 centros (experimentos históricos acoplados DECK), con
+  resolución nominal de 100, 250 o 500 km; se usan viento zonal/meridional en 850 hPa y 250
+  hPa, y presión a nivel medio del mar (MSLP) cada 6 horas.
+- Modelos HighResMIP: experimento hist-1950, 6 modelos de alta resolución (25, 50 o 100 km) y
+  sus 6 contrapartes de baja resolución, de 6 centros distintos, para aislar el efecto directo
+  de la resolución.
+- Identificación y seguimiento de ciclones: método de Hodges (1994, 1995, 1999) sobre
+  vorticidad relativa en 850 hPa, truncamiento espectral a T42 (eliminando números de onda <5),
+  tracks de al menos 48 h, vorticidad máxima ≥1×10⁻⁵ s⁻¹, desplazamiento >1000 km.
+- Criterio percentílico: solo se analizan los ciclones en el percentil 90 (10% superior) de
+  vorticidad ciclónica máxima en su pico de intensidad (48.1 y 42.8 ciclones por temporada en
+  NH para DJF y JJA respectivamente, en ERA5).
+- Compositing: los campos se rotan y alinean para que todos los ciclones se desplacen de oeste
+  a este; los compuestos de MSLP y viento se construyen en el momento de vorticidad máxima
+  sobre un dominio de ~20° centrado en el punto de la trayectoria, en perspectiva relativa al
+  sistema (se resta la velocidad de propagación del ciclón al viento).
+
+3. HALLAZGOS CLAVE
+- Los modelos CMIP6 subestiman sistemáticamente la profundidad de la MSLP: en NH DJF, mínimo
+  de 970.1 hPa en CMIP6 frente a 968.3 hPa en ERA5 (p<0.05); HighResMIP simula 967 hPa,
+  significativamente más profundo que ERA5.
+- El CCB (viento en 850 hPa) alcanza en ERA5 velocidades superiores a 35 m/s en NH DJF; los
+  modelos CMIP6 subestiman esta corriente en más de 2 m/s en amplias áreas polares y hacia
+  atrás del centro, especialmente en el flanco occidental donde el CCB envuelve al ciclón
+  formando el chorro de bajos niveles (low-level jet).
+- Los máximos de viento del CCB se organizan en ERA5 en dos agrupaciones (clusters): la más
+  fuerte a ~3° del centro con velocidades de ~35.5 m/s, y otra a ~3.5° con vientos algo más
+  débiles; en el flanco trasero (rear flank), los máximos se ubican a 3° y 3.5° del centro con
+  velocidades de ~30 m/s.
+- Los modelos HighResMIP reducen la mayoría de los sesgos presentes en CMIP6 tanto en invierno
+  como en verano, en ambos hemisferios, con vientos más intensos y presiones superficiales más
+  profundas.
+- En el nivel superior (250 hPa), el jet de altura muestra en ERA5 velocidades máximas de al
+  menos 50 m/s en DJF, rotando ciclónicamente desde el noroeste hacia el flanco sur; los
+  modelos CMIP6 subestiman el viento al sureste y este del centro en hasta 3.6 m/s, sesgo
+  asociado a una representación incorrecta del ascenso del WCB.
+- Las características de gran escala (ancho excesivo y componente zonal del jet, insuficiente
+  giro anticiclónico del flujo al sureste del ciclón) NO mejoran con la resolución: son sesgos
+  compartidos por CMIP6 y HighResMIP por igual.
+
+4. RELACIÓN CON TU TESIS
+Se cita en múltiples puntos clave:
+- Cap02-Fundamentación (L31, L56, L62, L197): sustenta la elección metodológica del criterio
+  percentílico p90 de vorticidad ciclónica para construir compuestos representativos de los
+  sistemas más intensos, y valida la técnica de compositing centrado en el ciclón: "Siguiendo
+  la práctica establecida por \citet{priestley2022improved}, quienes seleccionan el 10% de
+  ciclones con mayor vorticidad ciclónica en su pico de intensidad para construir compositos
+  representativos, el umbral del percentil 90 permite aislar los sistemas más intensos..."
+- Cap01-Introducción (L66, L85): se usa como evidencia de que los modelos/reanálisis de menor
+  resolución subestiman los vientos extremos por no resolver estructuras de mesoescala, lo que
+  motiva el uso de ERA5 (mayor resolución) en la tesis.
+- Cap04-Viento (L113, L123): comparación geométrica directa. La tesis afirma: "De manera
+  consistente, \citet{priestley2022improved} documentan que los máximos superficiales asociados
+  al CCB se organizan típicamente a un radio de aproximadamente 3-3.5° respecto al centro
+  ciclónico y concentrados en el flanco posterior del sistema, una geometría coherente con el
+  núcleo aquí identificado." También se cita junto con hodges2011comparison para advertir sobre
+  la subestimación inherente de vientos extremos en ERA5 por limitaciones de resolución.
+- Cap07-Prototipos (L67): comparación más elaborada y explícita, estableciendo una analogía
+  topológica (por inversión de circulación entre hemisferios) entre la separación CCB
+  (posterior-occidental)/WCB (sureste-este) de Priestley & Catto y la separación
+  noroeste-sureste documentada en los prototipos del Atlántico Sudoccidental. Aquí mismo la
+  tesis aclara la limitación de comparación solo al viento, no a precipitación.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Matthew Priestley y Jennifer Catto (Universidad de Exeter, Reino Unido) trabajan en la
+evaluación sistemática de modelos climáticos (CMIP6/HighResMIP) respecto a la estructura de
+ciclones extratropicales, construyendo sobre trabajos previos de Catto (clasificación de
+ciclones, Catto 2016) y de Priestley et al. (2020, sobre storm tracks en CMIP6). Este paper
+se inscribe en el proyecto HighResMIP (Haarsma et al., 2016) dentro de CMIP6, y su enfoque de
+compositing sobre el percentil 90 de vorticidad sigue la tradición metodológica de Bengtsson
+et al. (2007, 2009), Catto et al. (2010) y Dacre et al. (2012), la misma línea de compositing
+centrado en el ciclón adoptada en esta tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El análisis cubre el periodo 1979-2014, más corto que el usado en la tesis (1979-2020).
+- Se enfoca en promedios estacionales/composites, no en la evolución temporal del ciclo de
+  vida del sistema (fases incipiente/intensificación/decaimiento), a diferencia del enfoque
+  de esta tesis.
+- El propio estudio reconoce que ninguno de los modelos HighResMIP incrementa la resolución
+  vertical respecto a sus versiones estándar, lo que podría limitar la mejora de sesgos
+  relacionados con la interacción estratosfera-troposfera (p.ej. el giro anticiclónico del
+  WCB cerca de la tropopausa).
+- No se analiza precipitación en absoluto (ver nota especial arriba), por lo que cualquier
+  comparación con los resultados de precipitación de la tesis debe hacerse con otras
+  referencias (p.ej. pepler2020dimensional, reboita2018extratropical).
+- El estudio no distingue explícitamente entre fases del ciclo de vida del ciclón (solo usa
+  el momento de vorticidad máxima), por lo que la comparación con los prototipos por fase de
+  esta tesis es "especular" según reconoce el propio texto de la tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Priestley & Catto (2022) también analizan precipitación en sus compuestos de ciclones?
+  R: No. El estudio se limita estrictamente a la estructura y velocidad del viento en 850 hPa
+  y 250 hPa (CCB, WCB, DI) y a la presión a nivel del mar; no incluye ningún análisis de
+  precipitación. La propia tesis lo aclara explícitamente en el Cap07.
+- P: ¿Por qué comparar la organización de vientos del Hemisferio Norte (Priestley & Catto) con
+  los prototipos del Hemisferio Sur de tu tesis?
+  R: Por inversión de la circulación ciclónica entre hemisferios (sentido horario en el HS vs.
+  antihorario en el HN), la organización espacial CCB/WCB documentada para el HN es
+  topológicamente análoga —aunque especularmente invertida— a la organización
+  noroeste-sureste encontrada en los prototipos p90 del Atlántico Sudoccidental.
+- P: ¿Qué tan comparable es el criterio p90 de Priestley & Catto con el usado en tu tesis?
+  R: Es prácticamente el mismo criterio: percentil 90 de vorticidad ciclónica en el pico de
+  intensidad, usado para aislar los sistemas dinámicamente más intensos y construir
+  compuestos representativos mediante rotación/alineación de las trayectorias.
+- P: ¿Qué explica la subestimación de vientos en los modelos climáticos según este estudio?
+  R: La incapacidad de resolver explícitamente las estructuras de mesoescala asociadas a los
+  airstreams (CCB, WCB), agravada por una representación insuficiente de procesos diabáticos
+  y ascenso demasiado débil en el WCB; la resolución más alta de HighResMIP mejora esto en
+  la escala del ciclón, pero no en la escala sinóptica más amplia (jet demasiado ancho y zonal).
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/priestley2022improved.md

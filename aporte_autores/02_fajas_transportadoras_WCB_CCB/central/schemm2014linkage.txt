@@ -1,0 +1,127 @@
+============================================================
+CARTILLA DE ESTUDIO — Schemm & Wernli 2014 — vínculo WCB-CCB y vorticidad potencial
+============================================================
+
+REFERENCIA COMPLETA
+Schemm, S., y Wernli, H. (2014). The Linkage between the Warm and the Cold
+Conveyor Belts in an Idealized Extratropical Cyclone. Journal of the Atmospheric
+Sciences, 71(4), 1443-1459. American Meteorological Society. DOI: 10.1175/JAS-D-13-0177.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 5 veces en 4 capítulos distintos (Cap02-Fundamentación x2, Cap04-Viento
+x2, Cap06-MEOF), siendo la referencia que sustenta el mecanismo dinámico preciso
+(vorticidad potencial) detrás del máximo de viento en la cola del frente doblado.
+
+HEMISFERIO DE ESTUDIO: No aplica (simulación idealizada, sin hemisferio real)
+VARIABLE DE RASTREO DE CICLONES: No aplica (ciclón seguido manualmente dentro de la simulación idealizada; sin algoritmo de rastreo)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Estudio idealizado (simulaciones numéricas) que investiga el vínculo dinámico
+entre la cinta transportadora cálida (WCB, warm conveyor belt) y la fría (CCB,
+cold conveyor belt) en un ciclón extratropical idealizado, mediante análisis
+Lagrangiano de trayectorias y la perspectiva de vorticidad potencial (PV, del
+inglés potential vorticity). Pregunta central: ¿cómo se conectan física y
+dinámicamente el WCB y el CCB, y cómo esa conexión determina la estructura y
+desarrollo del ciclón? Es relevante porque establece, con simulaciones
+controladas, el mecanismo físico exacto (calentamiento diabático → anomalías de
+PV) que explica por qué el chorro de bajo nivel más intenso se localiza en la
+cola del frente doblado (bent-back front), un rasgo estructural central del
+modelo de ciclón ocluido.
+
+2. METODOLOGÍA
+Dos simulaciones idealizadas con el modelo regional COSMO en un canal periódico
+zonal de 16800 km x 8400 km, resolución horizontal ~21 km (0.18°), 60 niveles
+verticales hasta 12 km: (a) simulación "idealizada", con microfísica simplificada
+tipo Kessler (solo condensación/evaporación de agua líquida, sin fricción,
+turbulencia ni convección parametrizada) y (b) simulación "extendida", con el
+paquete físico operacional completo del Servicio Meteorológico Alemán (DWD)
+sobre superficie oceánica. Se sigue el ciclón secundario ("downstream") que se
+desarrolla por dispersión de onda, cuya evolución sigue de cerca la descrita por
+Shapiro y Keyser (1990). Se calculan trayectorias forward de 2 días desde cada
+punto de malla bajo 800 hPa; criterio Lagrangiano: WCB = trayectorias con
+ascenso ≥500 hPa en 48 h; CCB = trayectorias que permanecen bajo 800 hPa e
+incrementan su PV por encima de un umbral de 2 PVU al menos una vez en 48 h.
+
+3. HALLAZGOS CLAVE
+- Se identificaron ~1300 trayectorias WCB en la simulación idealizada y ~1500 en
+  la extendida; ~1500 trayectorias CCB en ambas simulaciones.
+- El WCB incrementa su PV hasta ~0.9 PVU al pasar por debajo de la zona de
+  máxima liberación de calor latente a niveles medios (día 7, hora 2), y luego
+  se reduce a ~0.2 PVU al alcanzar el outflow superior (440 hPa, ~315-318 K).
+- El CCB inicia en torno a 980 hPa, asciende suavemente (20 hPa en la
+  simulación idealizada durante el primer día, 5 hPa en la extendida) y su PV se
+  incrementa hasta ~3 PVU (idealizada, horas 24-36) o ~2.2 PVU (extendida,
+  hora 36), coincidiendo con su paso bajo el máximo de calentamiento diabático.
+- El CCB llega a la cola del frente doblado (bent-back front) con PV alta en
+  ambas simulaciones, lo que localiza allí el jet de bajo nivel más intenso —
+  este es el vínculo mecanístico central: calentamiento diabático del WCB →
+  incremento de PV del CCB → intensificación del jet de bajo nivel.
+- Las tendencias totales de PV son mayores para el CCB que para el WCB; la
+  tendencia friccional de PV, aunque de menor amplitud que la debida al
+  calentamiento latente, contribuye proporcionalmente más al CCB que al WCB.
+- La simulación extendida (física completa) muestra mayor variabilidad de PV,
+  un WCB más fuerte, un bent-back front más débil y desacoplado del sector
+  cálido, y ausencia de una seclusión cálida definida en 850 hPa —a diferencia
+  de la simulación idealizada, donde sí se forma—, atribuida a la fricción
+  superficial y al enfriamiento por flujos de calor sensible descendentes.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación, L129, cita textual: "Según \citet{schemm2014linkage} en
+  el HN, el CCB se desplaza a baja altura a lo largo del lado frío del frente
+  curvado, experimentando un aumento de vorticidad potencial al pasar por debajo
+  de la región de máxima liberación de calor latente generada por el WCB
+  ascendente, localizando así el jet de bajo nivel más intenso en el extremo
+  del frente curvado."
+- Cap02, L173 y Cap04-Viento, L117 y L257, reiteran el mismo mecanismo como
+  fundamento de por qué los vientos más intensos en la retaguardia del núcleo
+  ciclónico surgen del aumento de vorticidad potencial inducido diabáticamente.
+- Cap06-MEOF, L157: se usa para interpretar la configuración acoplada CCB-WCB
+  observada en el análisis MEOF como corroboración de un vínculo termodinámico
+  dinámicamente conectado (no aislado) entre ambas cintas transportadoras.
+Es la referencia dinámica cuantitativa (con mecanismo físico de PV explícito)
+que sustenta, en varios capítulos, la localización del máximo de viento.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Sebastian Schemm y Heini Wernli (ETH Zúrich) son referentes del marco Lagrangiano/
+de vorticidad potencial para el estudio de ciclones extratropicales (Wernli y
+Davies 1997; Wernli 1997; Madonna et al. 2014). Este trabajo formaliza, por
+primera vez, un criterio Lagrangiano objetivo y reproducible para seleccionar la
+CCB —hasta entonces descrita solo cualitativamente por autores como Carlson
+(1980) y Schultz (2001)—, análogo al criterio ya establecido para el WCB. El
+criterio metodológico se retoma explícitamente después en sawada2021heavy (otro
+paper de tu tesis) para definir WCB/CCB/DI sobre datos reales de Japón, y el
+estudio se conecta conceptualmente con el modelo Shapiro-Keyser (1990) al seguir
+justamente el ciclón cuya evolución reproduce ese ciclo de vida.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Son simulaciones idealizadas en canal periódico sin orografía ni variabilidad
+  estacional real; la transferencia directa a casos reales requiere verificación
+  adicional.
+- La simulación "extendida" excluye deliberadamente los procesos de fase de
+  hielo por simplicidad (reconocido explícitamente por los autores), aunque
+  reconocen que estos procesos también pueden modificar el campo de PV.
+- El criterio Lagrangiano de selección de la CCB no puede identificar la rama
+  anticiclónica ascendente del CCB (reconocido explícitamente por los autores).
+- Los resultados dependen de la ventana temporal elegida (2 días) y del umbral
+  de PV (2 PVU); su sensibilidad se discute pero no se explora exhaustivamente.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué sustentar un mecanismo aplicado a datos reales del Atlántico Sur con
+  un estudio idealizado? Porque el diseño idealizado aísla el mecanismo físico
+  puro (calentamiento diabático → PV → viento) sin la complejidad de forzantes
+  reales, permitiendo atribuir con confianza el mecanismo antes de buscarlo en
+  reanálisis.
+- ¿Cuál es exactamente el criterio Lagrangiano de selección del CCB? Trayectorias
+  que permanecen bajo 800 hPa y cuya PV supera 2 PVU en algún momento de las 48 h.
+- ¿Cómo se relaciona este mecanismo con el marco histórico-conceptual de
+  Schultz y Keyser (2021)? Este paper aporta el mecanismo dinámico cuantitativo
+  (PV/calentamiento diabático), mientras que Schultz y Keyser aportan el
+  contexto histórico-conceptual del modelo Shapiro-Keyser en el que se enmarca.
+- ¿El mecanismo es robusto entre la simulación idealizada y la de física
+  completa? Cualitativamente sí (mismo signo y mecanismo de PV), aunque
+  cuantitativamente el bent-back front resulta más débil y no se forma una
+  seclusión cálida definida en la simulación con física completa.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/schemm2014ccb.md

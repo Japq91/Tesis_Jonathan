@@ -1,0 +1,159 @@
+============================================================
+CARTILLA DE ESTUDIO — Hersbach et al. 2020 — el reanálisis global ERA5
+============================================================
+
+REFERENCIA COMPLETA
+Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A.,
+Muñoz-Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D.,
+Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G., Bechtold, P.,
+Biavati, G., Bidlot, J., Bonavita, M., De Chiara, G., Dahlgren, P., Dee, D.,
+Diamantakis, M., Dragani, R., Flemming, J., Forbes, R., Fuentes, M., Geer,
+A., Haimberger, L., Healy, S., Hogan, R. J., Hólm, E., Janisková, M.,
+Keeley, S., Laloyaux, P., Lopez, P., Lupu, C., Radnoti, G., de Rosnay, P.,
+Rozum, I., Vamborg, F., Villaume, S., & Thépaut, J.-N. (2020). The ERA5
+global reanalysis. Quarterly Journal of the Royal Meteorological Society,
+146(730), 1999-2049. DOI: 10.1002/qj.3803
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en al menos 2 ubicaciones (Introducción, Métodos): es la fuente de
+datos primaria y fundacional de toda la tesis. Prácticamente la totalidad
+del análisis (viento, precipitación, MEOF, prototipos) se construye sobre
+campos derivados de este reanálisis.
+
+HEMISFERIO DE ESTUDIO: Global (no restringido a un hemisferio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (el reanálisis en sí no rastrea ciclones; es la base de datos atmosférica de fondo)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Este artículo describe el reanálisis atmosférico, de superficie terrestre y
+de olas oceánicas de quinta generación del ECMWF (European Centre for
+Medium-Range Weather Forecasts), ERA5, que sucede a ERA-Interim. No es un
+estudio de un fenómeno físico específico, sino un artículo de descripción
+metodológica y técnica de un producto de datos: documenta el sistema de
+asimilación de datos (4D-Var), la resolución espacial y temporal, el
+periodo cubierto, el conjunto de observaciones asimiladas, el componente de
+incertidumbre (ensemble), y una evaluación general de fortalezas y
+problemas conocidos del producto. Es relevante para la tesis porque ERA5 es
+el dataset base de todo el trabajo (1979-2020), y este artículo es la
+referencia canónica que se debe citar al usar dicho reanálisis.
+
+2. METODOLOGÍA
+- Sistema de asimilación: 4D-Var (ciclo del IFS Cy41r2), con ventanas de
+  asimilación de 12 horas.
+- Resolución: 31 km horizontal (TL639) para el análisis determinístico de
+  alta resolución (HRES), frente a 80 km (TL255) de ERA-Interim; 137
+  niveles verticales híbridos desde la superficie hasta 0.01 hPa.
+- Frecuencia de salida: horaria en todos los campos (frente a 6-horaria en
+  ERA-Interim para análisis, 3-horaria para pronósticos).
+- Componente de incertidumbre: Ensemble of Data Assimilation (EDA) de 10
+  miembros, a menor resolución (TL319) y frecuencia 3-horaria.
+- Periodo cubierto: 1950 hasta la actualidad (la extensión 1950-1978 se
+  liberó en etapas posteriores a la publicación del artículo); el cuerpo
+  principal del artículo se enfoca en 1979 en adelante, periodo común con
+  ERA-Interim.
+- Observaciones: 94.6 mil millones de observaciones asimiladas entre 1979 y
+  2019 (todas las fuentes combinadas); aumento sostenido de datos por
+  satélite desde los años 2000.
+- Latencia de producción: 5 días (frente a 2-3 meses en ERA-Interim).
+
+3. HALLAZGOS CLAVE (características y evaluación del producto)
+- La resolución de 31 km y la salida horaria permiten resolver
+  explícitamente estructuras de mesoescala (frentes, chorros de bajo nivel)
+  que ERA-Interim (80 km) suavizaba.
+- Estudios de validación independientes citados en el artículo muestran que
+  ERA5 tiene buen desempeño representando viento, temperatura y humedad en
+  el Ártico y la Antártida, y un cierre excelente del balance energético
+  ártico.
+- Problemas conocidos documentados explícitamente por los propios autores:
+  sesgo frío en la estratosfera baja y sesgo cálido cerca de la estratopausa
+  (peor ajuste a radiosondas por encima de 10 hPa); un chorro tropical del
+  oeste anómalamente intenso en la mesosfera; discontinuidades sistemáticas
+  en los puntos de transición entre "streams" de producción (p. ej., un
+  salto sistemático de ~0.25 m/s en el viento a 10 m sobre París a las 1000
+  UTC).
+- "Rainbombs": en condiciones muy específicas (aire húmedo, forzamiento
+  orográfico de bajo nivel con vientos convergentes de baja intensidad),
+  ERA5 produce ocasionalmente cantidades de precipitación irrealmente altas
+  en puntos de grilla aislados (del orden de diez episodios por año,
+  concentrados mayormente en África, en zonas orográficas).
+- Profundidad de nieve irrealmente alta en regiones montañosas por encima
+  de ~1500 m, debido al esquema de una sola capa de nieve del IFS.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L85): "La viabilidad de esta caracterización
+  estructural reside en la disponibilidad del reanálisis ERA5
+  \citep{hersbach2020era5}, cuya resolución espacial (~31 km) y temporal
+  (horaria) permite resolver los gradientes de presión y los flujos de
+  humedad que generaciones anteriores de datos suavizaban." Se complementa
+  con \citet{priestley2022improved} (mayor resolución captura mejor la
+  mesoescala) y \citet{gramcianinov2020analysis} (validación específica
+  para el Atlántico Sur), reconociendo a la vez que "ERA5 presenta sesgos
+  documentados en la representación de los extremos más intensos", cuya
+  discusión se remite a la Sección de datos ERA5 de la tesis.
+- Cap03-Métodos (L22): "Para la caracterización de los campos de
+  superficie se utilizó el reanálisis de quinta generación del ECMWF, ERA5
+  \citep{hersbach2020era5}, accediendo específicamente al conjunto de
+  datos ``ERA5 hourly data on single levels from 1940 to present''
+  \citep{hersbach_era5_2023b} para el período 1979-2020." Aquí se cita en
+  conjunto con la referencia del dataset específico (hersbach_era5_2023b)
+  usado para la descarga de datos vía Copernicus CDS.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Hans Hersbach lidera el equipo de reanálisis del ECMWF, dentro del
+Copernicus Climate Change Service (C3S). ERA5 es la quinta generación de
+reanálisis del ECMWF, sucediendo a FGGE (1979), ERA-15 (1979-1994), ERA-40
+(1957-2002) y ERA-Interim (1979-2019), cada una con mejoras sucesivas en
+resolución y sofisticación del sistema de asimilación (de OI a 4D-Var). En
+la tesis, ERA5 es también la fuente de datos validada específicamente para
+el Atlántico Sur por \citet{gramcianinov2020analysis} y utilizada como
+referencia de verdad terreno (baseline) en \citet{priestley2022improved}
+para evaluar modelos CMIP6/HighResMIP; asimismo es la fuente de datos del
+estudio de \citet{hyeok2024extrem} sobre vientos extremos en ciclones del
+Atlántico Norte.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Sesgos documentados: frío/cálido en estratosfera baja/estratopausa;
+  chorro mesosférico tropical anómalamente intenso; discontinuidades de
+  viento en capa límite en las transiciones de ventana de asimilación;
+  "rainbombs" (precipitación puntual irrealmente alta); sobreestimación de
+  nieve en montañas por encima de 1500 m.
+- El propio artículo advierte que, respecto a ERA-Interim, algunos aspectos
+  no mejoraron (p. ej., el sesgo estratosférico se mantiene o incluso
+  empeora el ajuste a radiosondas).
+- La cobertura de observaciones es más escasa antes de 1979 y,
+  particularmente, en el Hemisferio Sur en los años 1950, lo que podría
+  afectar la homogeneidad temporal si se usaran esos años (no es el caso
+  de la tesis, que usa 1979-2020).
+- El artículo no evalúa específicamente el desempeño de ERA5 para ciclones
+  extratropicales del Atlántico Sur; esa validación regional específica se
+  apoya en referencias posteriores citadas aparte en la tesis
+  (gramcianinov2020analysis, priestley2022improved).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué se usó ERA5 y no otro reanálisis (MERRA-2, JRA-55)?
+  R: Por su mayor resolución espacial (31 km) y temporal (horaria) frente a
+  productos previos, su componente de incertidumbre por ensemble, su
+  validación específica para el Atlántico Sur (gramcianinov2020analysis) y
+  su uso extendido como referencia (baseline) en estudios comparables
+  (priestley2022improved).
+- P: ¿Cuáles son las limitaciones de ERA5 más relevantes para tu estudio de
+  extremos de viento y precipitación?
+  R: Los propios autores documentan discontinuidades sistemáticas de viento
+  en capa límite en las transiciones de ventana de asimilación (~0.25 m/s)
+  y episodios aislados de precipitación irrealmente alta ("rainbombs"),
+  aunque estos últimos son infrecuentes y concentrados geográficamente
+  (mayormente en África); la tesis discute estos sesgos en su sección de
+  datos ERA5.
+- P: ¿Cuál es la diferencia entre citar hersbach2020era5 y
+  hersbach_era5_2023b?
+  R: hersbach2020era5 es el artículo científico que describe el sistema
+  ERA5 en su totalidad; hersbach_era5_2023b es la cita formal del conjunto
+  de datos específico (“ERA5 hourly data on single levels”) descargado del
+  Climate Data Store (CDS) de Copernicus, requerida por las políticas de
+  atribución de datos de C3S.
+- P: ¿Qué resolución y periodo de ERA5 usó exactamente la tesis?
+  R: Datos horarios en niveles simples de superficie, resolución ~31 km,
+  periodo 1979-2020.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/hersbach2020era5.md

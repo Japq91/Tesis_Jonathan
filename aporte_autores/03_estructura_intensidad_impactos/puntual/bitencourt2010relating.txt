@@ -1,0 +1,141 @@
+============================================================
+CARTILLA DE ESTUDIO — Bitencourt et al. 2010 — Viento costero y ciclones extratropicales, sur de Brasil
+============================================================
+
+REFERENCIA COMPLETA
+Bitencourt, D. P., Manoel, G., Acevedo, O. C., Fuentes, M. V., Muza, M. N., Rodrigues, M. L. y
+Quadro, M. F. L. (2010/2011). Relating winds along the Southern Brazilian coast to extratropical
+cyclones. Meteorological Applications, 18(2), 223-229. Publicado online 17 de septiembre de 2010.
+DOI: 10.1002/met.232
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en la Introducción, como el respaldo empírico directo y específico de la
+afirmación de que la asociación entre el viento observado en la costa y los ciclones extratropicales
+confirma la ocurrencia de pérdidas socioeconómicas. No es una referencia metodológica que la tesis
+adopte (usa un algoritmo de rastreo distinto, basado en presión), pero es la evidencia observacional
+puntual que sostiene la oración exacta donde se inserta.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (costa sur de Brasil, Océano Atlántico Sudoccidental)
+VARIABLE DE RASTREO DE CICLONES: Laplaciano de la presión a nivel del mar (∇²p), esquema objetivo de
+Murray y Simmonds (1991) — variable proporcional a la vorticidad geostrófica del nivel, pero distinta
+de la ζ850 usada en la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio investiga si el viento observado en superficie a lo largo de la costa sur de Brasil está
+efectivamente asociado con la posición y la intensidad de los ciclones extratropicales que se mueven
+sobre el Atlántico Sudoccidental. Los autores parten de la premisa (avalada por literatura previa,
+p. ej. Gan y Rao 1991, Sinclair 1994/1995) de que los eventos de viento intenso en esa costa suelen
+atribuirse a ciclones extratropicales, pero señalan que pocos estudios habían establecido esa
+asociación de forma directa y cuantitativa a partir de observaciones en superficie. Para ello,
+comparan el viento máximo horario observado en nueve estaciones meteorológicas automáticas del
+litoral sur brasileño (INMET/EPAGRI) con la profundidad (D, medida por el Laplaciano de presión) y la
+distancia (d) del centro del ciclón más cercano identificado mediante un esquema objetivo de rastreo.
+
+2. METODOLOGÍA
+
+- Datos de viento: velocidad máxima horaria a 10 m en nueve estaciones automáticas (Chuí, Rio Grande,
+  Tramandaí, Siderópolis, Urussanga, São José, Ilha do Arvoredo, São Francisco do Sul y Ponta do Sul),
+  promediada sobre las 6 h previas a cada hora sinóptica (0000, 0600, 1200, 1800 UTC), lo que los
+  autores llaman "viento medio observado" (Wob). Periodo: 4 de agosto de 2005 al 19 de octubre de
+  2008 (más de tres años), sin relleno de vacíos de datos.
+- Identificación y rastreo de ciclones: esquema objetivo desarrollado en la Universidad de Melbourne
+  por Murray y Simmonds (1991), basado en el Laplaciano de la presión a nivel del mar (∇²p), aplicado
+  sobre el dominio 15°-45°S, 20°-60°W con reanálisis NCEP/NCAR (grilla de 2.5°). Se clasifican como
+  sistemas "fuertes" aquellos con ∇²p > 0.7 hPa°lat⁻²; "débiles" entre 0.2 y 0.7; se descartan valores
+  < 0.2 hPa°lat⁻².
+- Análisis estadístico: para cada estación se calcula el coeficiente de correlación (r) entre Wob y la
+  profundidad D del ciclón más cercano, para intervalos de distancia (d) de 300 km, evaluado con la
+  prueba t de Student a niveles de significancia de 0.5% y 0.1%. Adicionalmente, se dividen las
+  profundidades en cuartiles (25%) para comparar la distribución de Wob según la intensidad del
+  ciclón más cercano.
+
+3. HALLAZGOS CLAVE
+
+- La asociación estadísticamente significativa entre el viento observado y la profundidad del ciclón
+  ocurre únicamente al sur de 28°S; al norte de esa latitud no se detecta una asociación significativa
+  con los datos disponibles.
+- La única excepción es la estación de Ilha do Arvoredo (cerca de 27°S), donde sí existe cierta
+  asociación entre viento y profundidad ciclónica para distancias entre 0-300 km y 1501-1800 km,
+  atribuible a su ubicación en una pequeña isla (a 40 km de la costa, 73 m de altitud), lo que la hace
+  más vulnerable a la proximidad del ciclón que las estaciones continentales.
+- Los ciclones influyen sobre el campo de viento observado hasta 1200 km tierra adentro para las tres
+  estaciones más australes (Chuí, Rio Grande, Tramandaí); cerca de los 28°S también hay algo de
+  asociación con ciclones a más de 1200 km de la costa, aunque con menor significancia estadística.
+  No hay asociación con ciclones muy cercanos a la costa (0-300 km) en esas estaciones del norte.
+- Los valores máximos de Wob se producen con ciclones de profundidad D entre 9 y 16 hPa y a distancias
+  d entre 300 y 850 km de la estación; los ciclones más someros que 6 hPa no influyen apreciablemente
+  en el viento observado, incluso cuando el sistema está muy cerca de la costa.
+- La asociación entre viento y profundidad del ciclón es más marcada para distancias menores a 900 km,
+  lo que coincide aproximadamente con el radio climatológico promedio (R ≈ 6° de latitud) de los
+  ciclones del Hemisferio Sur reportado por Simmonds y Keay (2000a).
+- Efectos topográficos locales modulan la asociación: en Urussanga y São José, montañas/relieve al
+  este bloquean el efecto de los ciclones oceánicos; en Siderópolis, la mayor altitud de la estación
+  incrementa la correlación para distancias intermedias (601-900 km) respecto a Urussanga.
+- Los propios autores reconocen limitaciones: la falta de significancia estadística al norte de 28°S
+  (pese a que esa zona subtropical del Atlántico es reconocidamente ciclogenética, según Gan y Rao
+  1991 y Sinclair 1994/1995); la correlación se calculó entre el viento y la profundidad del ciclón
+  más cercano en cada hora sinóptica, sin considerar la evolución temporal del sistema; y la tasa de
+  profundización (hPa/h), que podría tener un efecto importante sobre la magnitud del viento, no fue
+  considerada en el análisis.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita una única vez, en el Capítulo 1 (Introducción, L15), inmediatamente después de mencionar los
+impactos socioeconómicos de los ciclones invernales (bartolomei2024extremos) y su papel como
+motores de tormentas costeras (miranda2026patterns): "La asociación directa entre el viento observado
+en la costa y estos sistemas confirma además la ocurrencia de pérdidas socioeconómicas
+\citep{bitencourt2010relating}." El paper aporta precisamente esa pieza del argumento: es el estudio
+que demuestra, con datos observacionales de estaciones en tierra (no solo con reanálisis o modelos),
+que el viento realmente sentido en la costa del sur de Brasil está estadísticamente ligado a la
+profundidad y la posición de los ciclones extratropicales — cerrando el vínculo causal entre "sistema
+sinóptico" y "daño observado en superficie" que motiva el estudio de impactos de la tesis. No aporta
+metodología ni resultados que la tesis reutilice directamente (usa vorticidad relativa a 850 hPa, no
+el Laplaciano de presión), sino que funciona como evidencia observacional corroborante.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El equipo reúne investigadores de FUNDACENTRO, CPTEC/INPE, UFSM, IFSC e EPAGRI (Brasil), combinando
+meteorología sinóptica con datos operacionales de estaciones automáticas del sur de Brasil. El estudio
+se apoya explícitamente en el mismo esquema de identificación objetiva de ciclones (Murray y Simmonds
+1991) que emplean Simmonds y Murray (1999) y otros trabajos de la escuela de Melbourne (Simmonds y
+Keay 2000a, 2000b), y dialoga con la climatología de cyclogénesis sudamericana de Gan y Rao (1991) —
+ambas referencias también presentes en tu bibliografía. Es, dentro de tu tesis, uno de los pocos
+estudios que trabaja con observaciones in situ de estaciones terrestres (en lugar de datos de
+reanálisis en rejilla) para vincular ciclones y viento costero.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Periodo de estudio relativamente corto (poco más de tres años, 2005-2008), sin relleno de vacíos de
+  datos, lo que reduce el número de comparaciones disponibles para algunas estaciones y rangos de
+  distancia (algunas celdas de la Tabla II carecen de datos suficientes).
+- La resolución de 2.5° de la presión de reanálisis NCEP/NCAR puede limitar la correcta determinación
+  de la profundidad de ciclones pequeños o de rápida evolución, como los propios autores reconocen.
+- La correlación no controla por la tasa de profundización del sistema (hPa/h) ni por la fase del
+  ciclo de vida del ciclón, factores que podrían modular independientemente la intensidad del viento
+  observado en superficie.
+- Falta de asociación estadísticamente significativa al norte de 28°S limita la generalización de los
+  resultados a toda la costa brasileña, restringiendo las conclusiones a la porción sur del dominio.
+- El análisis es principalmente correlacional (no compuestos espaciales ni EOF), por lo que no
+  caracteriza la estructura espacial completa del campo de viento alrededor del ciclón, a diferencia
+  del enfoque de la tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Por qué citar un estudio que usa el Laplaciano de presión y no vorticidad relativa, si su tesis
+  usa ζ850?" — Respuesta: la cita no es metodológica sino evidencial; el paper demuestra con datos de
+  estaciones en tierra que el viento costero observado está estadísticamente ligado a la posición e
+  intensidad del ciclón, respaldando la premisa de impacto socioeconómico que motiva la tesis,
+  independientemente de la variable de rastreo empleada.
+- "¿Hasta qué distancia de la costa influyen los ciclones en el viento observado, según este estudio?"
+  — Respuesta: hasta 1200 km tierra adentro para las estaciones más australes (sur de 28°S), con
+  mayor influencia entre 300 y 850 km para ciclones intensos (D entre 9-16 hPa).
+- "¿Qué limita la generalización de este hallazgo a toda la costa que aborda su tesis (Brasil, Uruguay,
+  Argentina)?" — Respuesta: el estudio no encontró asociación significativa al norte de 28°S, y su
+  dominio de estaciones se limita a la costa sur de Brasil, sin cubrir Uruguay ni Argentina.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/bitencourt2010relating.md (texto completo: resumen, introducción,
+sección 2 "Data and methods", sección 3 "Results" con Tabla II de correlaciones, sección 4 "Summary
+and concluding remarks", y lista de referencias).

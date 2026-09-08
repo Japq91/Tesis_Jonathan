@@ -1,0 +1,165 @@
+============================================================
+CARTILLA DE ESTUDIO — Hart 2003 — espacio de fases de ciclones (fase termal)
+============================================================
+
+REFERENCIA COMPLETA
+Hart, R. E. (2003). A cyclone phase space derived from thermal wind and
+thermal asymmetry. Monthly Weather Review, 131(4), 585-616. American
+Meteorological Society. DOI: 10.1175/1520-0493(2003)131<0585:ACPSDF>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en 3 ubicaciones distintas en 3 capítulos diferentes (Introducción,
+Resultados de Viento, Resultados de Precipitación): aporta el marco
+conceptual del "continuo estructural" de los ciclones (en oposición a
+categorías discretas) que sustenta la interpretación de la heterogeneidad
+morfológica del Atlántico Sur, y el mecanismo de seclusión cálida se usa
+explícitamente para interpretar tanto la banda arqueada del EOF1 de
+precipitación como el espacio de fases del viento en superficie.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (predominantemente; transición tropical-extratropical)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (MSLP) + parámetros de Cyclone Phase Space — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El artículo propone un "espacio de fases del ciclón" (cyclone phase space)
+objetivo y tridimensional, derivado del viento térmico y de la asimetría
+térmica, que permite clasificar y seguir la evolución estructural de
+cualquier ciclón (tropical, extratropical o híbrido) dentro de un continuo
+único, en lugar de categorías estáticas mutuamente excluyentes. Es un
+estudio metodológico-climatológico: define los parámetros del espacio de
+fases, ilustra casos de estudio (transición extratropical, transición
+subtropical/tropical, desarrollo de seclusiones cálidas) y presenta una
+climatología de 20 años de ocupación de dicho espacio de fases en el
+Hemisferio Norte. Es relevante para la tesis porque establece el marco
+conceptual estándar con el que la comunidad meteorológica describe la
+evolución termal-estructural de los ciclones a lo largo de su ciclo de vida.
+
+2. METODOLOGÍA
+- Casos ilustrativos: análisis operacionales de 1° del NOGAPS (Navy
+  Operational Global Atmospheric Prediction System) y reanálisis de 2.5°
+  NCEP-NCAR.
+- Definición de tres parámetros del espacio de fases:
+  (i) B: asimetría de espesor (thickness) 900-600 hPa relativa al
+      movimiento de la tormenta, calculada dentro de un radio de 500 km
+      (rango explorado: 250-1000 km), que distingue estructura simétrica/no
+      frontal (tropical) de asimétrica/frontal (extratropical). Umbral
+      B ≈ 10 m separa estructuras frontales de no frontales.
+  (ii) -V_T^L: viento térmico en la capa baja (900-600 hPa), indicador de
+       núcleo cálido/frío en niveles bajos.
+  (iii) -V_T^U: viento térmico en la capa alta (600-300 hPa), indicador de
+        núcleo cálido/frío en niveles altos.
+- Climatología de 20 años (1980-1999): ~17 000 ciclones con vida útil de al
+  menos 24 h, clasificados usando reanálisis NCEP-NCAR de 2.5°, en el
+  dominio 120°O-0°, 10°-70°N (exclusivamente Hemisferio Norte, cuencas
+  Atlántico Norte y Pacífico Norte; no incluye el Atlántico Sur).
+- Criterio adicional para "intensificadores rápidos": caída de al menos
+  24 hPa en 24 h (criterio de Sanders y Gyakum 1980).
+
+3. HALLAZGOS CLAVE
+- Los ciclones de núcleo cálido (principalmente ciclones extratropicales
+  con seclusión cálida) tienen, en promedio, una intensidad (MSLP mínima)
+  10 hPa menor (más profunda) que los ciclones de núcleo frío, a resolución
+  de 2.5°.
+- La presión mínima analizada más baja para un ciclón de núcleo cálido fue
+  14 hPa menor que la del ciclón de núcleo frío más intenso registrado.
+- Los ciclones de núcleo cálido muestran mucha mayor variabilidad en su
+  distribución de intensidad que los de núcleo frío.
+- Los intensificadores rápidos (≥24 hPa/24h) tienden a iniciar el proceso
+  con asimetría térmica moderada a alta y una estructura de núcleo frío
+  fuerte y verticalmente uniforme (-V_T^L ≈ -V_T^U); un núcleo frío no
+  uniforme (marcadamente distinto entre capa baja y alta) no conduce a
+  intensificación rápida.
+- Solo en las seclusiones cálidas más intensas (presión inferior a 940 hPa
+  a 2.5°) el parámetro -V_T^U se vuelve levemente positivo, indicando
+  núcleo cálido de tropósfera completa, análogo estructural del ciclón
+  tropical.
+- A resolución de 2.5° se subestima fuertemente la ocurrencia de ciclones
+  tropicales y de núcleo cálido de tropósfera completa; se requieren
+  análisis de 1°-1.25° o más finos para resolver adecuadamente dicha
+  estructura.
+
+4. RELACIÓN CON TU TESIS
+Se cita en tres puntos clave:
+- Cap01-Introducción (L31): fundamenta la afirmación de que "los sistemas
+  transitan a lo largo de un continuo estructural en lugar de pertenecer a
+  categorías estáticas", enmarcando conceptualmente la coexistencia en el
+  Atlántico Sur de ciclones subtropicales de estructura térmica híbrida
+  (evans2012climatology) y ciclones de tipo Shapiro-Keyser con seclusión
+  cálida (gozzo2013air), en contraste con climatologías regionales de
+  largo plazo (gozzo2014subtropical).
+- Cap05-Precipitación (L202): "Según \citet{hart2003cyclone}, el paso a la
+  madurez y decaimiento en p90 implica el desarrollo de seclusiones cálidas
+  que dictan la ubicación de los forzantes frontogénicos; este marco
+  describe el contexto evolutivo general, mientras que la forma específica
+  de la banda arqueada del EOF1 deriva de los procesos de oclusión y
+  forzantes oceánicos ya descritos." Aquí el mecanismo de seclusión cálida
+  de Hart se usa como marco evolutivo general, no como explicación
+  geométrica directa del patrón EOF (esa distinción se hace explícita en
+  el propio texto).
+- Cap04-Viento (L211): "Esta separación morfológica concuerda con el
+  espacio de fases de \citet{hart2003cyclone}, que demuestra que las
+  fluctuaciones en la asimetría térmica y..." — se usa el espacio de fases
+  como referente de validación conceptual de la separación morfológica
+  encontrada en los compuestos de viento.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Robert E. Hart (Penn State) construye sobre la tradición de Bjerknes y
+Solberg (1922, modelo noruego), Shapiro y Keyser (1990, extensión del
+modelo con seclusión cálida) y trabajos previos propios y de Hart y Evans
+(2001) sobre transición extratropical. El "cyclone phase space" (CPS) se
+convirtió en herramienta estándar operacional (diagramas de fase en tiempo
+real, mencionados en el propio artículo) y es ampliamente usado en
+climatologías posteriores de ciclones híbridos y subtropicales, incluyendo
+los estudios de Evans y Guishard, Gozzo et al. y Dutra et al. sobre el
+Atlántico Sur (evans2012climatology, gozzo2013air, gozzo2014subtropical),
+que la propia tesis cita en el mismo párrafo para contrastar el caso
+específico del Atlántico Sudoccidental frente al marco genérico de Hart.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El dominio climatológico del estudio (17 000 ciclones, 1980-1999) cubre
+  exclusivamente el Hemisferio Norte (120°O-0°, 10°-70°N); no incluye datos
+  del Atlántico Sur ni del hemisferio sur en general (salvo mención breve
+  de "algunos casos" en Evans and Hart 2003).
+- La resolución de 2.5° (NCEP-NCAR) subestima significativamente la
+  frecuencia y la estructura de núcleo cálido de tropósfera completa; el
+  propio autor reconoce que se requiere mayor resolución (1°-1.25°) para
+  refinar estos resultados.
+- El algoritmo de seguimiento (tracking) automatizado tiene dificultades
+  conocidas para distinguir ciclones en proximidad cercana, lo cual el
+  autor señala puede poner "en duda" los diagramas de fase resultantes en
+  esos casos.
+- El radio de 500 km usado para calcular B se basa en el tamaño promedio de
+  ciclones tropicales (Frank 1977); el propio autor advierte que un radio
+  fijo puede ser insuficiente para ciclones tropicales muy pequeños.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Hart (2003) realizó su climatología en el Atlántico Sur?
+  R: No. Su climatología de 20 años (~17 000 ciclones) se limita al
+  Hemisferio Norte (Atlántico Norte y Pacífico Norte, 10°-70°N). En la
+  tesis se usa únicamente el marco conceptual (continuo estructural,
+  parámetros del espacio de fases, mecanismo de seclusión cálida), no sus
+  estadísticas específicas, que no son directamente transferibles al
+  Atlántico Sudoccidental sin adaptación.
+- P: ¿Cuáles son los tres parámetros del espacio de fases de Hart?
+  R: B (asimetría térmica 900-600 hPa dentro de 500 km, frontal/no
+  frontal), -V_T^L (viento térmico 900-600 hPa) y -V_T^U (viento térmico
+  600-300 hPa), estos dos últimos indicando núcleo frío o cálido en capa
+  baja y alta respectivamente.
+- P: ¿Qué relación tiene la seclusión cálida con la banda arqueada del EOF1
+  de precipitación en tu Cap05?
+  R: La seclusión cálida descrita por Hart (2003) es el contexto evolutivo
+  general de la etapa de madurez/decaimiento (ubicación de los forzantes
+  frontogénicos), pero la tesis aclara explícitamente que la forma
+  geométrica específica de la banda del EOF1 obedece a procesos de
+  oclusión y forzantes oceánicos descritos en secciones previas, no
+  directamente al mecanismo de Hart.
+- P: ¿Por qué la resolución de los datos es relevante para aplicar este
+  marco conceptual a tu tesis?
+  R: Porque Hart (2003) demuestra que a 2.5° se subestiman fuertemente las
+  estructuras de núcleo cálido de tropósfera completa; esto refuerza, por
+  analogía, la justificación metodológica de usar ERA5 (31 km) en la tesis
+  para resolver mejor las estructuras térmicas y frontales de los ciclones
+  del Atlántico Sudoccidental.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/hart2003cyclone.md

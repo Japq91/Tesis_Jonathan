@@ -1,0 +1,142 @@
+============================================================
+CARTILLA DE ESTUDIO — Vera et al. 2002 — ondas baroclínicas subtropicales y Andes
+============================================================
+
+REFERENCIA COMPLETA
+Vera, Carolina S.; Vigliarolo, Paula K.; Berbery, Ernesto Hugo. (2002). Cold Season
+Synoptic-Scale Waves over Subtropical South America. Monthly Weather Review, 130(3),
+684-699. American Meteorological Society. DOI: 10.1175/1520-0493(2002)130<0684:CSSSWO>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en cuatro capítulos distintos (Introducción, Fundamentación, Resultados de
+Viento y Resultados de Precipitación), sustentando el mecanismo dinámico clave de
+convergencia de bajo nivel al este de los Andes y el forzamiento de la asimetría
+NW-SE de la precipitación.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (EEOF sobre el campo de viento; no es un algoritmo de rastreo de ciclones individuales)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio identifica, mediante un análisis de funciones ortogonales empíricas
+extendidas (EEOF), los patrones de onda sinóptica más activos durante el invierno
+austral sobre Sudamérica subtropical, y los diagnostica físicamente con métodos
+de composición (composites). Se enfoca en el "modo subtropical" (par de EEOF 3-4),
+que representa ondas que se propagan a lo largo del chorro subtropical y cruzan
+los Andes cerca de 30°S. El objetivo central es describir cómo la topografía andina
+modifica la estructura tridimensional de las perturbaciones ciclónicas y
+anticiclónicas, y el papel de las perturbaciones ciclónicas de nivel superior en
+facilitar la precipitación sobre el sudeste de Sudamérica. Es un estudio de
+diagnóstico dinámico observacional (reanálisis + composites), de gran relevancia
+para entender la ciclogénesis y la modulación orográfica en la región de estudio
+de la tesis.
+
+2. METODOLOGÍA
+- Datos: 15 inviernos australes (junio-agosto 1979-1993) de reanálisis diario
+  (1200 UTC) del ECMWF (ERA-15), resolución de grilla 2°x2°, 10 niveles verticales.
+- Precipitación: proxy de radiación de onda larga saliente (OLR) de NOAA, y datos
+  diarios de estaciones pluviométricas en Argentina.
+- Técnica: EEOF (extended EOF) de 4 rezagos de 1 día, aplicada a la perturbación
+  del viento meridional en 300 hPa, calculada sobre la matriz de correlación,
+  dominio 130°O-20°O y 80°S-10°S.
+- Composites: se seleccionan situaciones con coeficientes temporales del modo
+  subtropical mayores/menores a ±1 desviación estándar; 94 situaciones para el
+  caso ciclónico (composite positivo) y 93 para el caso anticiclónico (composite
+  negativo); significancia estadística verificada con t-test al 5%.
+- Se analiza también la ecuación de vorticidad relativa en 925 hPa y la ecuación
+  termodinámica en 500 hPa para diagnosticar mecanismos.
+
+3. HALLAZGOS CLAVE
+- Los primeros cuatro EEOF explican 7%, 6.35%, 5.2% y 4.8% de la varianza total,
+  respectivamente; el par EEOF 3-4 (modo subtropical) representa la misma onda en
+  cuadratura de fase.
+- La perturbación de bajo nivel avanza siguiendo la forma de la Cordillera de los
+  Andes y sufre una migración ecuatorial abrupta en el lado de sotavento,
+  desacoplándose temporalmente de la perturbación de nivel superior (que progresa
+  casi sin ser afectada por la orografía).
+- El término de divergencia de viento cerca de la superficie (convergencia de
+  bajo nivel) es el factor principal en el desarrollo de vorticidad ciclónica de
+  bajo nivel al este de los Andes, entre el día 0 y el día +1.
+- El calor latente liberado por eventos de precipitación (diagnosticado vía
+  ecuación termodinámica en 500 hPa) es el principal contribuyente al reforzamiento
+  del movimiento vertical ascendente al este del ciclón, retroalimentando la
+  intensificación del sistema (fuente diabática de energía).
+- El modo subtropical explica más del 60% de la precipitación media invernal
+  acumulada sobre el centro y noreste de Argentina durante los 5 días del episodio.
+- En el 60% de los casos del composite, el ciclón se refuerza una vez sobre el
+  océano (más de 1000 km al este de la orografía), asociado a las aguas cálidas de
+  la Corriente de Brasil como fuente adicional de humedad y calor; estos casos
+  oceánicos muestran una profundización 25% mayor y una caída de altura geopotencial
+  en 24 h un 50% mayor que los casos de intensificación sobre tierra.
+- Los flujos de humedad convergen con orientación NW-SE, con máxima convergencia
+  sobre Uruguay, y la humedad/flujos de humedad son máximos alrededor de 850 hPa
+  sobre Sudamérica subtropical (vs. máximo en superficie sobre el océano).
+
+4. RELACIÓN CON TU TESIS
+Este paper sustenta el mecanismo dinámico central que explica por qué la
+intensificación ciclónica ocurre al este de los Andes y por qué la precipitación se
+organiza en bandas NW-SE. En el Capítulo 1 (Introducción, L40) se afirma: "Al este de
+los Andes, la convergencia de viento en niveles bajos es el principal factor de
+intensificación de estos sistemas \citep{vera2002cold}, favoreciendo las condiciones
+que provocan precipitaciones intensas en el sureste de Sudamérica." En el Capítulo 5
+(Precipitación, L79) se usa para explicar la asimetría de la precipitación: "el flujo
+canalizado desde latitudes tropicales hacia el flanco este del vórtice, documentado
+por \citet{vera2002cold}, intensifica esta asimetría, resultando en núcleos más
+densos y extendidos." En el Capítulo 4 (Viento, L47) se cita junto con Gan y Rao
+(1994) para explicar cómo la orografía "induce distorsiones espaciales en el flujo
+de niveles bajos y modifica la estructura de las ondas." En el Capítulo 2
+(Fundamentación, L10 y L108) se usa para contrastar el comportamiento subtropical
+(Brasil) frente al comportamiento extratropical (Argentina) de los ciclones,
+apoyando la regionalización SBR/LPB/ARG que estructura la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Carolina Vera (CIMA/UBA-CONICET) es una figura central en la dinámica de la
+circulación de Sudamérica, y este trabajo se enmarca en una línea de estudios sobre
+el storm track del Hemisferio Sur y la influencia orográfica de los Andes que
+incluye antecedentes propios (Vera y Vigliarolo 2000; Berbery y Vera 1996) y se
+conecta con trabajos posteriores citados en la tesis como Gan y Rao (1994),
+Simmonds y Keay (2000/simmonds2000variability), Reboita et al. (2022), Cardoso et al.
+(2022) y Yanase et al. (2014), formando una cadena de evidencia sobre cómo la
+orografía andina, la baroclinicidad y el transporte de humedad determinan el
+desarrollo ciclónico en la región. Es una continuación metodológica de estudios de
+EEOF (Weare y Nasstrom 1982) aplicados específicamente a Sudamérica.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El análisis se basa en reanálisis ERA-15 de resolución relativamente gruesa
+  (2°x2°) y en solo 15 inviernos, lo que limita la robustez estadística de casos
+  individuales (aunque los composites se validan con test de significancia).
+- El estudio se enfoca exclusivamente en el modo subtropical (EEOF 3-4); el modo
+  subpolar (EEOF 1-2) no se analiza en profundidad.
+- La contribución relativa de flujos de calor sensible/latente superficiales
+  (aire-mar) a la ciclogénesis costera se reconoce explícitamente como fuera del
+  alcance del artículo ("beyond the goal of this paper"), quedando como pregunta
+  abierta para estudios futuros de interacción océano-atmósfera.
+- Los análisis de humedad se advierten como potencialmente cuestionables en
+  regiones de observación dispersa (los propios autores señalan esta cautela).
+- El estudio es de naturaleza diagnóstica/composite, no de sensibilidad causal
+  mediante modelado numérico controlado (a diferencia de Seluchi y Saulo 1998,
+  que sí usa simulaciones numéricas).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué la convergencia de bajo nivel es el mecanismo dominante y no la
+  advección de vorticidad en altura? R: Vera et al. (2002) muestran mediante la
+  ecuación de vorticidad en 925 hPa que el término de divergencia (convergencia)
+  domina el cambio de vorticidad ciclónica de bajo nivel entre día 0 y +1, aunque
+  reconocen que procesos de niveles altos son necesarios como condición previa
+  (consenso de Uccellini 1990).
+- P: ¿Cómo se relaciona el 60% de intensificación oceánica reportado por Vera et
+  al. con tu propio análisis regional (SBR/LPB/ARG)? R: El estudio muestra que el
+  refuerzo oceánico produce ciclones más profundos (25% mayor profundización), lo
+  cual es coherente con by qué SBR/LPB muestran señales de precipitación distintas
+  a ARG en tu tesis.
+- P: ¿El dominio EEOF (subtropical, ~30°S) es representativo de todo tu dominio de
+  estudio? R: El estudio se centra en el paso por los Andes entre 20-40°S; para
+  zonas más australes (ARG extratropical) es más relevante considerar el modo
+  subpolar u otros mecanismos, lo cual matiza la aplicabilidad directa.
+- P: ¿Qué tan robusto es el vínculo climatológico (60% de precipitación explicada)
+  frente a la variabilidad interanual? R: El 40% restante corresponde a sistemas
+  más débiles y otros sistemas frontales asociados a EEOF 1 y 2, por lo que el
+  mecanismo no es exclusivo del modo subtropical.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/vera2002cold.md

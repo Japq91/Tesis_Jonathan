@@ -1,0 +1,158 @@
+============================================================
+CARTILLA DE ESTUDIO — Martínez-Alvarado et al. 2014 — CCB y sting jet distintos
+============================================================
+
+REFERENCIA COMPLETA
+Martínez-Alvarado, Oscar; Baker, Laura H.; Gray, Suzanne L.; Methven, John;
+Plant, Robert S. (2014). Distinguishing the Cold Conveyor Belt and Sting Jet
+Airstreams in an Intense Extratropical Cyclone. Monthly Weather Review, 142(8),
+2571-2595. American Meteorological Society. DOI: 10.1175/MWR-D-13-00348.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en tres capítulos distintos (Fundamentación, Viento y MEOF), sustentando
+la distinción física entre la cinta transportadora fría (CCB) y el sting jet
+(SJ) como masas de aire diferenciadas, mecanismo clave para interpretar los
+vientos intensos en la retaguardia del núcleo ciclónico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio analiza la estructura tridimensional de la región de vientos fuertes
+al ecuador y en la retaguardia del centro de un ciclón extratropical intenso
+("Friedhelm", 8 de diciembre de 2011, Reino Unido), combinando observaciones
+aerotransportadas (in situ y dropsondes) obtenidas durante la campaña de campo
+DIAMET con simulaciones de un modelo numérico de predicción meteorológica
+(MetUM). El objetivo es determinar el origen de dos corrientes de aire
+("airstreams") previamente asociadas a vientos fuertes en esa región: la cinta
+transportadora fría (cold conveyor belt, CCB) y el sting jet (SJ), y establecer
+si constituyen masas de aire físicamente distintas mediante trazadores químicos.
+Es un estudio observacional-numérico de mesoescala de gran relevancia para la
+dinámica de ciclones tipo Shapiro-Keyser.
+
+2. METODOLOGÍA
+- Caso de estudio: ciclón "Friedhelm", desarrollado según el modelo conceptual
+  de Shapiro-Keyser, con vientos fuertes sobre el Reino Unido el 8 de diciembre
+  de 2011 (IOP8 de la campaña DIAMET).
+- Observaciones: dos vuelos de investigación a través del ciclón con mediciones
+  in situ y dropsondes (resolución vertical de sondeo ~10 m), incluyendo
+  trazadores químicos (CO, ozono y humedad específica) para distinguir masas de
+  aire.
+- Modelo: MetUM (Met Office Unified Model) versión 7.3, modelo de diferencias
+  finitas, terrain-following con coordenada híbrida de altura (Charney-Phillips),
+  inicializado a las 0000 UTC del 8 de diciembre de 2011 desde el análisis del
+  Met Office; resolución horizontal de 12 km (comparable a la usada por Clark
+  et al. 2005 en un caso análogo).
+- Técnica: cálculo de trayectorias de parcelas hacia atrás (back-trajectory
+  analysis) dentro de la simulación MetUM para identificar tipos de airstream
+  llegando a las regiones de viento fuerte, en cuatro instantes distintos (0900,
+  1300, 1600 y 1800 UTC).
+- Diagnóstico de inestabilidades de mesoescala: se evalúan las condiciones
+  necesarias para inestabilidad simétrica condicional (CSI) a lo largo de las
+  trayectorias de cada airstream.
+
+3. HALLAZGOS CLAVE
+- Se identificaron tres tipos distintos de airstream mediante trayectorias:
+  dos (S1 y S3) asociados a la CCB, que viajan tres cuartas partes alrededor del
+  ciclón ascendiendo lentamente desde la capa límite mientras se mantienen en el
+  flanco frío del frente retrocedido; y uno (S2) asociado al sting jet, que
+  desciende desde la cabeza nubosa en el lado oeste del ciclón hacia el
+  este-sureste, acelerando marcadamente durante el descenso.
+- Las observaciones de trazadores químicos (CO, ozono, humedad específica)
+  muestran por primera vez que los airstreams de la CCB y el sting jet son
+  masas de aire físicamente distintas, incluso en ocasiones en que los máximos
+  de viento de bajo nivel asociados no están espacialmente separados.
+- En el modelo, la CCB experimenta calentamiento latente lento por ascenso
+  resuelto débil y convección, mientras que el sting jet experimenta un
+  enfriamiento débil asociado a microfísica durante su descenso subsaturado.
+- Los airstreams de la CCB (S1 y S3) atraviesan predominantemente regiones
+  estables, mientras que más del 50% de la trayectoria del sting jet atraviesa
+  regiones que satisfacen condiciones de inestabilidad simétrica condicional
+  (CSI), sugiriendo que la CSI es una candidata plausible para explicar el
+  bandeamiento nuboso observado en la cabeza nubosa y al sur del ciclón.
+- Las localizaciones de los airstreams de la CCB (S1, S3) en el modelo
+  coinciden con los vientos más fuertes observados a la hora del cruce de
+  dropsondes y se encontraron saturados; el airstream del sting jet (S2)
+  coincide con una región observada de aire subsaturado (50% < RH_ice < 80%).
+- El modelo reproduce razonablemente la estructura de vientos y temperatura,
+  pero subestima el mezclado turbulento en etapas tardías del ciclón (gradientes
+  de viento y humedad demasiado abruptos comparados con las observaciones).
+
+4. RELACIÓN CON TU TESIS
+Este paper es fundacional para la interpretación de los vientos en el cuadrante
+noroeste de los prototipos de ciclones de la tesis, al establecer que la CCB (no
+el sting jet) es el principal motor de la circulación de bajo nivel en la fase
+de oclusión. En el Capítulo 2 (Fundamentación, L134) se afirma: "La distinción
+observacional entre el CCB y el SJ fue establecida por \citet{martinez2014cold}
+en el HN, quienes mediante trazadores químicos demostraron que ambas corrientes
+constituyen masas de aire físicamente distintas." En el Capítulo 4 (Viento,
+L117) se precisa: "los vientos más intensos en la retaguardia del núcleo son el
+producto combinado de la CCB, cuyo chorro de bajo nivel se intensifica por el
+aumento de vorticidad potencial inducido diabáticamente bajo el ascenso de la
+cinta cálida \citep{schemm2014linkage, blanchard2021warm}." En el Capítulo 6
+(MEOF, L155) se usa para interpretar el patrón de viento del cuadrante
+noroeste: "La organización del viento en el cuadrante noroeste es consistente
+con la caracterización de la CCB como principal motor de la circulación de
+bajo nivel en la fase de oclusión, documentada observacionalmente por
+\citet{martinez2014cold}."
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Oscar Martínez-Alvarado, Suzanne L. Gray y John Methven (University of
+Reading) forman parte de un grupo británico especializado en la dinámica de
+ciclones extratropicales intensos y sting jets, con antecedentes directos en
+Browning (2004) y Clark et al. (2005), quienes introdujeron y modelaron
+inicialmente el concepto de sting jet. El presente estudio se enmarca en la
+campaña de campo DIAMET (Diabatic Influences on Mesoscale Structures in
+Extratropical Storms), que buscó caracterizar observacionalmente estos
+fenómenos con vuelos de investigación. Se conecta en la tesis con trabajos
+posteriores citados como schemm2014linkage, blanchard2021warm (mecanismo de
+intensificación diabática de la CCB), schultz2021antecedents (ciclo de vida
+Shapiro-Keyser) y eisenstein2023identification (climatología europea de la
+CCB), formando una cadena de evidencia sobre el rol de la CCB en la circulación
+de bajo nivel de ciclones ocluidos.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un estudio de caso único (el ciclón Friedhelm), lo que limita la
+  generalización estadística directa a una climatología completa de ciclones;
+  los propios autores señalan la necesidad de más "experimentos de alta
+  resolución" para generalizar.
+- La resolución del modelo (12 km) no pudo resolver fielmente el espaciamiento
+  observado de las bandas nubosas (20-50 km), aunque el modelo desarrolló su
+  propio bandeamiento por CSI de forma cualitativamente consistente.
+- El modelo mostró errores sistemáticos de humedad: la región central de alta
+  humedad relativa fue demasiado extensa y la nube profunda se ubicó demasiado
+  cerca del centro del ciclón respecto a las observaciones.
+- El estudio se limita al Hemisferio Norte (Reino Unido, Atlántico Norte); su
+  aplicación al Atlántico Sudoccidental en la tesis es una extrapolación
+  conceptual del mecanismo dinámico, no una validación regional directa.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Cómo se distinguen físicamente la CCB y el sting jet si a veces coinciden
+  espacialmente sus máximos de viento? R: Mediante trazadores químicos (CO,
+  ozono, humedad específica) y diagnóstico de temperatura potencial equivalente,
+  que muestran firmas termodinámicas distintas (calentamiento latente lento en
+  la CCB por ascenso resuelto/convección vs. enfriamiento microfísico durante
+  descenso subsaturado en el sting jet), incluso cuando los máximos de viento no
+  están espacialmente separados.
+- P: ¿Qué papel juega la inestabilidad simétrica condicional (CSI) según el
+  estudio? R: Se identifica como candidata plausible (no confirmada de forma
+  concluyente) para explicar el bandeamiento nuboso observado en la cabeza
+  nubosa y al sur del ciclón, dado que el sting jet atraviesa mayoritariamente
+  regiones con condiciones favorables a CSI.
+- P: ¿Por qué tu tesis prioriza la CCB sobre el sting jet para explicar el
+  viento del cuadrante noroeste? R: Porque Martínez-Alvarado et al. (2014)
+  muestran que los airstreams tipo CCB (S1, S3) coinciden con los vientos más
+  fuertes observados en dropsondes y con la circulación mayoritaria de bajo
+  nivel, mientras que el sting jet (S2) es un fenómeno más localizado asociado
+  al descenso desde la cabeza nubosa.
+- P: ¿Es aplicable este mecanismo (originado en un caso del Atlántico Norte) a
+  ciclones del Atlántico Sudoccidental? R: El mecanismo dinámico (intensificación
+  de la CCB por vorticidad potencial diabática) es generalizable por derivar de
+  la estructura genérica del ciclo de vida Shapiro-Keyser, respaldado además por
+  climatologías europeas posteriores (eisenstein2023identification) y estudios
+  de mecanismo (schemm2014linkage), aunque no existe validación observacional
+  directa en el Atlántico Sur.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/martinez2014cold.md

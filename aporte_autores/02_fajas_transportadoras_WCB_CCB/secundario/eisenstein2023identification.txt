@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Eisenstein et al. 2023 — climatologia objetiva de rachas de viento mesoescalares en ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Eisenstein, Leah; Sinclair, Victoria A.; Gregow, Hilppa. (2023). [Nota: el título indicado en el BIB de la tesis, "Objective identification of sting jets in ERA5 and their climatology in the North Atlantic", corresponde a los metadatos citados en bibliografia.bib; el documento fuente verificado (papers/files_MD/eisenstein2023identification.md) corresponde en realidad al artículo "Identification of high-wind features within extratropical cyclones using a probabilistic random forest – Part 2: Climatology over Europe" de Eisenstein, L.; Schulz, B.; Pinto, J. G.; Knippertz, P., Weather and Climate Dynamics, 4, 981–999, 2023. Ambos títulos comparten clave de cita (eisenstein2023identification); se recomienda verificar con el candidato cuál es el PDF/MD efectivamente usado antes de la defensa]. Journal/Weather and Climate Dynamics, 4(4), 981–1032 (paginación combinada de Parte 1 y 2). DOI: 10.5194/wcd-4-981-2023
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en 6 ubicaciones a lo largo de 4 capítulos (Introducción, Fundamentación, Viento x3, MEOF), sustentando de forma recurrente el argumento de que la intensidad y localización de los vientos máximos en un ciclón dependen de estructuras de mesoescala internas, no solo de la intensidad sinóptica global del sistema.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (algoritmo de Murray & Simmonds 1991) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio (Parte 2 de una serie de dos artículos) desarrolla la primera climatología objetiva de largo plazo (19 temporadas de invierno extendido, octubre-marzo, 2000–2019) de cinco features mesoescalares generadores de viento extremo en ciclones extratropicales del Atlántico Norte/Europa: el warm jet (WJ, chorro cálido), el cold jet (CJ, chorro frío, que incluye al sting jet SJ), la convección frontal fría (CFC) y los vientos del sector frío (CS). Usa la herramienta RAMEFI (RAndom-forest-based MEsoscale wind Feature Identification), un bosque aleatorio probabilístico entrenado con observaciones de superficie de 12 tormentas invernales europeas (introducido en la Parte 1 del estudio), aplicado aquí sobre observaciones de estación y sobre el reanálisis regional de alta resolución COSMO-REA6. Es relevante porque aporta la primera cuantificación climatológica objetiva —más allá de estudios de caso individuales— de dónde y cuándo ocurren estas estructuras generadoras de viento extremo dentro del ciclón.
+
+2. METODOLOGÍA
+
+Datos: observaciones horarias de superficie de la Deutscher Wetterdienst (DWD, 2001–2020, ~750 estaciones) y el reanálisis regional COSMO-REA6 (grid ~6-7 km, dominio CORDEX europeo, forzado por ERA-Interim en el borde, disponible 1995–2019). Se analizan 19 temporadas de invierno extendido (octubre-marzo). Los ciclones se identifican y siguen con un algoritmo objetivo basado en mínimos de presión (Murray y Simmonds 1991; Pinto et al. 2005) sobre datos de ERA5, con criterios de duración mínima de 1 día y desplazamiento mínimo de 1000 km, resultando en 1910 ciclones sobre ~20000 pasos temporales. RAMEFI asigna probabilísticamente cada punto de grilla/estación a una de las cinco categorías (WJ, CFC, CJ, CS, NF=sin feature) bajo condiciones "ventosas" (percentil 98 normalizado > 0.8). Los resultados se presentan en dos marcos: relativo a la Tierra (Earth-relative) y relativo al centro del ciclón (system-relative, ±15° zonal, -15° a +5° meridional).
+
+3. HALLAZGOS CLAVE
+
+- En la perspectiva MAXP (feature más probable) sobre datos gridded, el CS (cold sector) es la causa más frecuente de vientos altos (~50% de los casos), seguido del WJ (~36%), mientras que el CJ (más dañino) solo alcanza ~10.1% y la CFC apenas ~1.8%.
+- Bajo la perspectiva ACCP (probabilidades acumuladas, que pondera la incertidumbre), el CJ y la CFC combinados suben a ~19% (un incremento de ~60% respecto a MAXP), evidenciando que estas features —aunque menos frecuentes como "la más probable"— tienen mayor incertidumbre de detección, no menor relevancia real.
+- Espacialmente, el WJ ocurre predominantemente en el cuadrante sureste del ciclón, bordeado al oeste por la CFC (estrecha); el CS ocurre en el cuadrante suroeste; el CJ ocurre más cerca del centro del ciclón, a veces extendiéndose al cuadrante sureste.
+- Temporalmente dentro del ciclo de vida, el WJ y la CFC tienden a ocurrir más temprano en el ciclo de vida del ciclón, mientras que el CJ y el CS dominan en etapas posteriores (siendo el CS la causa más común de vientos altos en Europa oriental, donde los ciclones tienden a ocluirse).
+- El CJ muestra las velocidades de viento más altas en promedio (mediana ~15 m/s, percentil 99 >25 m/s), mientras que la CFC muestra las ráfagas más altas en términos relativos (factor de ráfaga hasta 3, por su asociación con convección/inestabilidad).
+- Se observa una ligera tendencia declinante de largo plazo en el número de tormentas invernales, consistente con la disminución general de tormentas invernales en un clima que se calienta (Catto et al. 2019), aunque el test de Mann-Kendall no mostró significancia estadística dado el corto período de 19 años.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita repetidamente para sustentar el argumento —desarrollado en la Introducción y retomado en los capítulos de resultados— de que la intensidad y localización de los vientos extremos en un ciclón dependen de estructuras de mesoescala internas cuya posición varía con el ciclo de vida, y no de una métrica escalar única de intensidad sinóptica. Citas relevantes:
+(1) Cap01-Introducción, L57: "En el HN, \citet{eisenstein2023identification} destacan además que los mayores impactos en superficie suelen estar asociados a estructuras de mesoescala específicas, como los cinturones de transporte frío (CCB), cuya localización espacial respecto al centro de vorticidad varía durante el ciclo de vida del sistema."
+(2) Cap02-Fundamentación, L174: vincula esta heterogeneidad estructural con la idea de que "la intensidad de los máximos del viento no puede capturarse mediante una única métrica central".
+(3) Cap04-Viento, L89, L111 y L213: se usa reiteradamente para justificar metodológicamente la estratificación por intensidad de los sistemas y para trazar la analogía hemisférica entre los sting jets/CCB del HN y el cuadrante noroeste (invertido por la circulación austral) donde se concentran los vientos extremos en el Atlántico Sur.
+(4) Cap06-MEOF, L155: respalda la caracterización de la CCB (cold conveyor belt) como principal motor de la circulación de bajo nivel en la fase de oclusión, en paralelo con la climatología europea de Eisenstein et al.
+Esta cita es clave para justificar la necesidad de la estratificación por fases e intensidad que la tesis realiza (usando CycloPhaser y subconjuntos p90), trasladando un argumento validado en el Hemisferio Norte al contexto, menos estudiado sistemáticamente, del Atlántico Sur.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de Eisenstein, Schulz, Pinto y Knippertz (KIT, Alemania) desarrolla una línea de identificación objetiva de features de viento mesoescalares mediante aprendizaje automático (random forest), iniciada en la Parte 1 (Eisenstein et al. 2022a, método y estudios de caso) y consolidada en esta Parte 2 (climatología). Esta línea dialoga con otros enfoques objetivos recientes y paralelos citados en el propio paper —Manning et al. (2022) y Gentile y Gray (2023)— que usan gradientes térmicos/de humedad para identificar sting jets y CCBs de forma cinemática, y con climatologías previas más subjetivas (Hewson y Neu 2015; Earl et al. 2017; Parton et al. 2010). En la tesis, esta cita se articula con otros estudios de estructuras de mesoescala del Hemisferio Norte (clark2005sting, clark2018sting, martinez2014cold) y con el trabajo de corner2025classification y sinclair2023relationship, que en conjunto arman el argumento de que las métricas escalares de intensidad son insuficientes y que se requiere análisis estructural/mesoescalar, replicando para el Atlántico Sur una discusión ya consolidada en el Atlántico Norte y Europa.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Reconocidas explícitamente por los autores: (a) RAMEFI fue entrenado sobre solo 12 casos de tormenta, lo cual limita la generalización a la diversidad completa de configuraciones ciclónicas; (b) al aplicar el modelo sobre puntos de grilla oceánicos, los autores señalan que "no ha sido evaluado sistemáticamente" en esa superficie, por lo que los resultados allí deben tratarse con cautela; (c) la proporción de "sin feature" (NF) es mucho más alta en las observaciones de estación que en COSMO-REA6 (posiblemente por valores faltantes en los datos de estación), complicando la comparación directa entre ambas fuentes; (d) el período de 19 años es demasiado corto para establecer significancia estadística robusta en las tendencias de largo plazo; (e) el estudio se circunscribe geográficamente a Europa occidental y central, por lo que su aplicabilidad directa al Atlántico Sur exige la extrapolación conceptual (más que empírica) que hace la tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Cómo trasladas un hallazgo del Hemisferio Norte (CCB, sting jets) a tu región de estudio en el Atlántico Sur? Respuesta: la tesis usa el hallazgo como analogía estructural (no como dato empírico directo), señalando que la inversión de la circulación ciclónica entre hemisferios traslada el sector de vientos extremos del cuadrante noroeste/suroeste (HN) al cuadrante equivalente invertido en el hemisferio austral, mientras que el mecanismo físico subyacente (features de mesoescala moduladas por el ciclo de vida) se considera generalizable.
+- ¿Qué evidencia tienes de que existan estructuras equivalentes a la CCB o al sting jet en el Atlántico Sur? Respuesta: la propia tesis reconoce que esto constituye una extrapolación conceptual respaldada por la coincidencia de patrones observados (concentración de viento en un cuadrante específico, dependiente de la fase del ciclo de vida), pero no una identificación explícita de sting jets australes con una herramienta como RAMEFI.
+- ¿Qué tan robusta es la climatología de Eisenstein et al. dado el entrenamiento con solo 12 tormentas? Respuesta: los propios autores mitigan esta limitación evaluando el modelo con validación cruzada en la Parte 1, y la climatología de la Parte 2 se basa en aplicar el modelo ya validado sobre 19 años completos de datos, no solo sobre los 12 casos de entrenamiento.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/eisenstein2023identification.md

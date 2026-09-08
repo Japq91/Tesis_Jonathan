@@ -1,0 +1,156 @@
+============================================================
+CARTILLA DE ESTUDIO — Martin 1999 — forzamiento Q-G y el trowal airstream
+============================================================
+
+REFERENCIA COMPLETA
+Martin, Jonathan E. (1999). Quasigeostrophic Forcing of Ascent in the Occluded
+Sector of Cyclones and the Trowal Airstream. Monthly Weather Review, 127(1),
+70-88. American Meteorological Society. DOI:
+10.1175/1520-0493(1999)127<0070:QFOAIT>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en tres capítulos distintos (Precipitación, MEOF y Prototipos),
+sustentando el mecanismo dinámico fundamental que explica la banda de
+precipitación enroscada (wrap-around) en el cuadrante ocluido de los ciclones,
+uno de los pilares conceptuales de la interpretación estructural de la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio investiga la dinámica del ascenso en el sector ocluido de ciclones
+extratropicales mediante un análisis cuasigeostrófico (Q-G) del vector Q,
+particionado en sus componentes a lo largo de la isentropa (Q_s) y a través de
+ella (Q_n). Basado en simulaciones numéricas de tres ciclones ocluidos de
+Norteamérica, el trabajo identifica la estructura tridimensional del "trowal"
+(trough of warm air aloft) y describe el "trowal airstream": una corriente de
+aire que asciende cicloónicamente desde la capa límite del sector cálido y
+fluye a través de la estructura ocluida, siendo responsable de la nubosidad y
+precipitación "wrap-around" características de los sistemas ocluidos. Es un
+estudio de dinámica de mesoescala basado en modelización numérica de casos
+reales, fundacional para la interpretación estructural de ciclones ocluidos.
+
+2. METODOLOGÍA
+- Modelo: University of Wisconsin-Nonhydrostatic Modeling System (UW-NMS,
+  Tripoli 1992), con anidamiento móvil bidireccional (grillas de 160 km y 80 km
+  de resolución horizontal; solo se usaron los datos de 80 km).
+- Vertical: 40 niveles, con espaciamiento de 200 m en los cinco niveles más
+  bajos, estiramiento geométrico gradual hasta 404 m de espaciamiento promedio
+  en los siguientes 18 niveles y 700 m en los 17 niveles superiores; techo del
+  modelo en 19.2 km.
+- Inicialización: interpolación directa desde las inicializaciones Eta de NCEP
+  (90.5 km), con actualización de fronteras laterales cada 6 h; simulaciones de
+  36 h para cada uno de los tres casos, usando pronósticos a 12 y 18 h.
+- Microfísica: paquete explícito (agua nube, agua lluvia, cristales prístinos,
+  cristales de nieve, agregados y graupel) y parametrización convectiva de
+  Emanuel (1991) modificada.
+- Casos analizados: tres ciclones ocluidos de Norteamérica, incluyendo el del
+  23 de octubre de 1996 y el del 19 de enero de 1995 (analizados con detalle en
+  superficie, 850, 700 y 500 hPa) y trayectorias de parcelas de aire calculadas
+  con diferenciación hacia adelante (paso de tiempo de 24.5 min).
+- Técnica diagnóstica: ecuación omega cuasigeostrófica con partición natural del
+  vector Q en componentes Q_s (a lo largo de la isentropa, asociada a
+  frontogénesis tradicional) y Q_n (a través de la isentropa, asociada a
+  frontogénesis rotacional), siguiendo a Kurz (1988, 1992) y Keyser et al. (1992).
+
+3. HALLAZGOS CLAVE
+- La convergencia de Q_s crea simultáneamente la cresta térmica isobárica
+  característica de la estructura térmica de ciclones ocluidos y provee el
+  soporte dinámico predominante para el ascenso dentro del cuadrante ocluido.
+- La ausencia de convergencia significativa de Q_n en el sector ocluido sugiere
+  que la frontogénesis cuasigeostrófica (en el sentido tradicional) juega un
+  papel subordinado tanto en forzar movimientos verticales como en afectar
+  cambios estructurales tridimensionales en esa región de ciclones en fase
+  post-madurez.
+- La corriente ascendente ciclónica identificada (el "trowal airstream"), que se
+  origina en la capa límite del sector cálido y fluye a través de la porción
+  trowal de la estructura ocluida, está sustentada por el forzamiento Q-G
+  identificado (convergencia de Q_s).
+- Este airstream es responsable de la producción de la nubosidad y
+  precipitación "wrap-around" comúnmente asociadas a sistemas ocluidos.
+- La estructura tridimensional del trowal es fácilmente identificable en la
+  salida del modelo dado el uso de tecnologías de visualización emergentes
+  (para la época), y este patrón se documentó consistentemente en los tres
+  ciclones analizados.
+- El trowal puede localizarse aproximadamente como una cresta de alta
+  temperatura potencial (equivalente) en un corte horizontal, o más precisamente
+  como un cañón tridimensional inclinado en una isosuperficie de temperatura
+  potencial (equivalente).
+
+4. RELACIÓN CON TU TESIS
+Este es uno de los papers estructuralmente más importantes de la tesis: aporta
+el mecanismo dinámico que explica la banda de precipitación enroscada
+observada en los prototipos y en el análisis MEOF. En el Capítulo 5
+(Precipitación, L110) se afirma: "Esto genera la clásica banda de precipitación
+enroscada (\textit{wrap-around precipitation}) en el cuadrante ocluido,
+responsable de la nubosidad característica de los sistemas ocluidos
+\citep{martin1999forcing}." En el Capítulo 6 (MEOF, L154) se indica: "El patrón
+de precipitación enroscada en el cuadrante sureste capturado por el MEOF1
+corresponde a la geometría del \textit{trowal airstream} descrita originalmente
+por \citet{martin1999forcing}." En el Capítulo 7 (Prototipos, L46) se usa para
+explicar la configuración de cuadrantes diferenciados del prototipo p90: "el
+remanente de humedad del WCB es arrastrado por la circulación ciclónica hacia
+la periferia, quedando confinado en el frente retrocedido (\textit{bent-back
+front}) y formando la banda de precipitación enroscada (\textit{wrap-around
+precipitation}) en el cuadrante sureste y sur \citep{martin1999forcing}."
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Jonathan E. Martin (University of Wisconsin-Madison) desarrolló esta línea de
+investigación sobre la estructura frontal y termal de ciclones ocluidos en una
+serie de artículos publicados en Monthly Weather Review: Martin (1998a, Parte
+I: estructura frontal y proceso de oclusión clásica), Martin (1998b, Parte II:
+forzamiento frontal de un evento extremo de nieve) y Martin (1998c, sobre el
+término de deformación en la ecuación omega cuasigeostrófica). El presente
+artículo (1999) culmina esta serie al proveer la explicación dinámica formal
+(mediante partición del vector Q) que sus trabajos previos habían dejado
+pendiente. Se conecta con la tradición del modelo conceptual de Shapiro-Keyser
+(citado en la tesis vía martinez2014cold y schultz2021antecedents) y con
+estudios posteriores de la banda enroscada en otras cuencas oceánicas (sawada2021heavy,
+citado en la tesis para el Pacífico noroccidental).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se basa en solo tres casos de estudio de Norteamérica continental
+  en invierno; no evalúa ciclones oceánicos ni sistemas del Hemisferio Sur, lo
+  que requiere extrapolación conceptual (no empírica) para su aplicación al
+  Atlántico Sudoccidental en la tesis.
+- Las simulaciones usan un modelo de mesoescala de 1999 con resolución de 80 km
+  y esquemas de microfísica y convección de esa época, sin verificación por
+  radar (para el caso del 7 de noviembre de 1996, los propios autores señalan
+  que los datos de reflectividad radar no estaban disponibles).
+- El análisis es diagnóstico (basado en simulaciones de casos reales, no en
+  observaciones directas de trayectorias de aire), por lo que las conclusiones
+  sobre el trowal airstream dependen de la fidelidad del modelo UW-NMS a la
+  dinámica real.
+- No se cuantifica estadísticamente la frecuencia o intensidad típica de la
+  banda wrap-around en una climatología amplia; el estudio es de naturaleza
+  mecanicista/conceptual, no climatológica.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué la convergencia de Q_s y no de Q_n explica el ascenso en el
+  sector ocluido? R: Porque Q_s captura la contribución geostrófica a la tasa de
+  cambio de la magnitud del gradiente de temperatura potencial (frontogénesis
+  tradicional), mientras que Q_n captura la contribución a la rotación de dicho
+  gradiente (frontogénesis rotacional); Martin (1999) muestra que es la
+  convergencia de Q_s la que domina el forzamiento de ascenso observado.
+- P: ¿Es válido aplicar el concepto de trowal airstream, desarrollado para
+  ciclones continentales de Norteamérica, a ciclones oceánicos del Atlántico
+  Sudoccidental? R: El mecanismo dinámico (ascenso ciclónico de aire cálido
+  húmedo confinado en el frente retrocedido) es generalizable por ser un
+  resultado de la geometría del ciclo de vida ocluido (Shapiro-Keyser), aunque
+  la tesis reconoce que la magnitud y disponibilidad de humedad difieren entre
+  cuencas oceánicas (véase también kodama2019perspective).
+- P: ¿Cómo se diferencia el trowal airstream de la cinta transportadora cálida
+  (WCB)? R: El trowal airstream es el remanente del WCB que, tras ser arrastrado
+  por la circulación ciclónica hacia la periferia del sistema en oclusión, queda
+  confinado en el frente retrocedido, generando la banda de precipitación
+  enroscada; no es una corriente de aire distinta al WCB sino su continuación
+  estructural en la fase ocluida.
+- P: ¿Qué evidencia observacional independiente respalda estos hallazgos
+  basados en modelo? R: La tesis cita a sawada2021heavy como evidencia satelital
+  independiente en ciclones invernales del Pacífico noroccidental que confirma
+  que la interacción entre la intrusión seca y el WCB genera precipitación
+  organizada en banda durante la oclusión.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/martin1999forcing.md

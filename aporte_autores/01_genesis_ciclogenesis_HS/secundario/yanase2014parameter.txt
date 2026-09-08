@@ -1,0 +1,143 @@
+============================================================
+CARTILLA DE ESTUDIO — Yanase et al. 2014 — espacio de parámetros ambientales del desarrollo ciclónico
+============================================================
+
+REFERENCIA COMPLETA
+Yanase, W., Niino, H., Hodges, K., & Kitabatake, N. (2014). Parameter spaces of
+environmental fields responsible for cyclone development from tropics to extratropics.
+Journal of Climate, 27(2), 652-671. American Meteorological Society. DOI:
+10.1175/JCLI-D-13-00153.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 3 veces, en los Capítulos 4 (Viento) y 5 (Precipitación), siempre como respaldo del
+argumento de que el desarrollo ciclónico depende sensiblemente de la humedad y la
+baroclinicidad ambientales, sin aportar datos numéricos directos usados en la tesis.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación explícita HS/HN) [confirmado directamente en el PDF fuente: el estudio analiza y compara sistemáticamente "Southern and Northern Hemispheres (SH/NH)" a lo largo de todo el artículo, incluyendo diferencias estacionales y de distribución geográfica entre ambos]
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 900 hPa (Hodges — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio introduce y aplica el "espacio de parámetros ambientales" (Environmental
+Parameter Space, EPS), una técnica para relacionar directamente la frecuencia de desarrollo
+de ciclones con variables ambientales (en vez de con la posición geográfica). Usando 30 años
+de reanálisis y seguimiento objetivo de ciclones, muestra que el desarrollo ciclónico global
+tiene una distribución bimodal en latitud: activo en los trópicos (ciclones tropicales, TC) y
+en latitudes extratropicales (ciclones extratropicales, EC), pero inactivo en el subtrópico.
+El objetivo es cuantificar qué parámetros ambientales —principalmente la intensidad
+potencial (asociada a TCs) y la baroclinicidad (asociada a ECs)— explican esta distribución
+bimodal, y evaluar el papel adicional de la humedad relativa y la velocidad vertical. Es
+relevante para la tesis porque provee un marco conceptual (no una cifra puntual) sobre cómo
+la baroclinicidad y la disponibilidad de humedad ambiental condicionan conjuntamente el
+desarrollo y la estructura espacial de los ciclones extratropicales.
+
+2. METODOLOGÍA
+- Datos: reanálisis JRA-25 (Dic. 1981-Dic. 2004) y JCDAS (Ene. 2005-Nov. 2011) de la Agencia
+  Meteorológica de Japón, resolución espectral T106 (~1.25°), 40 niveles sigma verticales,
+  datos 6-horarios promediados a resolución diaria; complementado con ERA-Interim (T255,
+  0.75°) y el catálogo IBTrACS para validación de ciclones tropicales.
+- Seguimiento de ciclones: algoritmo de Hodges (1994, 1995, 1999) sobre la vorticidad
+  relativa a 900 hPa truncada a T42; se retienen solo trayectorias con vida ≥2 días.
+- Clasificación de tipo de ciclón: índice de viento térmico -∇VT (Hart 2003) evaluado en la
+  troposfera baja (600-900 hPa) y alta (300-600 hPa) a partir de anomalías de altura
+  geopotencial, distinguiendo ciclones tropicales (núcleo cálido), extratropicales (núcleo
+  frío) e híbridos.
+- Definición de "etapa de desarrollo": periodo en que la tasa de crecimiento de la vorticidad
+  ciclónica excede 0.1 día⁻¹, con vorticidad máxima >5×10⁻⁵ s⁻¹ a resolución T42.
+- Parámetros ambientales analizados: intensidad potencial (PI, análoga a la de ciclones
+  tropicales, Bister & Emanuel 2002), baroclinicidad/tasa de crecimiento de Eady (BC,
+  Hoskins & Valdes 1990) a 850 hPa, humedad relativa a 600 hPa y velocidad vertical de
+  presión a 500 hPa; se filtran señales de los propios ciclones con un filtro temporal
+  (media móvil de 20 días) y espacial (Kurihara et al. 1993).
+- Análisis EPS unidimensional (frecuencia de ciclones vs. un parámetro) y bidimensional
+  (dos parámetros simultáneos), más "eficiencia ciclónica" (frecuencia normalizada por área
+  ambiental disponible).
+
+3. HALLAZGOS CLAVE
+- La intensidad potencial (PI) y la baroclinicidad (BC) son los parámetros ambientales
+  esenciales que explican la distribución bimodal de ciclones: la frecuencia total de
+  ciclones en el EPS de PI muestra picos alrededor de 0 y 70 m/s, asociados a ECs y TCs
+  respectivamente.
+- El desarrollo ciclónico responde a dos mecanismos combinados: (A) el área ambiental con
+  valores intermedios de PI/BC es pequeña (explica parcialmente la baja frecuencia en el
+  subtrópico), y (B) la dinámica ciclónica es intrínsecamente muy sensible a cambios ligeros
+  del parámetro ambiental en esa región intermedia (mecanismo dominante según el análisis
+  EPS 2D y la "eficiencia ciclónica").
+- La humedad relativa y la velocidad vertical no son parámetros esenciales para determinar
+  el tipo de ciclón (no producen distribución bimodal por sí solas), pero sí modulan su
+  desarrollo: la frecuencia de ciclones es prácticamente nula quando la humedad relativa a
+  600 hPa es menor a 20%, indicando que los entornos secos son desfavorables para el
+  desarrollo ciclónico.
+- La relación entre ciclones y su entorno en el espacio EPS es similar entre el Hemisferio
+  Sur y el Hemisferio Norte, aunque la distribución geográfica —particularmente la
+  uniformidad longitudinal— difiere marcadamente entre hemisferios (más uniforme en el HS,
+  menos en el HN, atribuido a la distribución de continentes y orografía).
+- El análisis EPS bidimensional (PI vs. BC) muestra que los ECs se desarrollan
+  preferentemente en la región de baja PI y alta BC, no porque los ECs "prefieran" baja PI,
+  sino porque la alta baroclinicidad favorable para su desarrollo ocurre únicamente en esa
+  región del espacio ambiental.
+
+4. RELACIÓN CON TU TESIS
+Este paper se cita tres veces como fundamento conceptual sobre los controles ambientales del
+desarrollo ciclónico, sin aportar cifras directamente comparables con el Atlántico
+Sudoccidental. En el Capítulo 5 (Precipitación, L38): "\citet{yanase2014parameter} sugieren
+que el desarrollo ciclónico es sensible a la humedad y baroclinicidad del entorno", usado
+para introducir la idea de que la disparidad en las colas de distribución (viento,
+precipitación) entre regiones se asocia a distintas forzantes regionales, antes de
+profundizar con evidencia específica del Atlántico Sur (Gramcianinov et al. 2019). En el
+Capítulo 4 (Viento, L47): "Este entorno está fuertemente condicionado por la baroclinicidad
+ambiental y los gradientes térmicos horizontales \citep{yanase2014parameter}", vinculando la
+orografía y la ciclogénesis en el este continental con anomalías de vorticidad potencial en
+niveles altos. En L85 del mismo capítulo, se cita junto con dos Santos et al. (2023) para
+argumentar que la evolución espacial asimétrica de los ciclones está ligada a zonas
+baroclínicas donde los máximos gradientes térmicos horizontales interactúan con los chorros
+en la alta troposfera, un marco consistente con la definición de baroclinicidad (BC) usada
+en el paper.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Wataru Yanase e Hiroshi Niino (Universidad de Tokio), junto con Kevin Hodges (Universidad de
+Reading, desarrollador del algoritmo de seguimiento de ciclones TRACK usado también en
+Sinclair & Catto 2023 y en Stanković & Caballero 2025) y Naoko Kitabatake (Agencia
+Meteorológica de Japón), representan una línea de investigación centrada en la transición
+ciclón tropical-extratropical y en marcos ambientales unificados para clasificar ciclones a
+través del espectro tropical-extratropical (basándose en el esquema de fases ciclónicas de
+Hart 2003). El paper dialoga con la literatura clásica de intensidad potencial para ciclones
+tropicales (Bister & Emanuel 2002; Emanuel 1986) y de baroclinicidad/tasa de crecimiento de
+Eady para ciclogénesis extratropical (Eady 1949; Hoskins & Valdes 1990), ofreciendo un marco
+que integra ambas tradiciones en un único espacio de parámetros.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El análisis EPS detallado se enfoca principalmente en la temporada de verano y otoño en el
+  Hemisferio Sur y Norte, no cubre en detalle todas las estaciones ni todas las cuencas
+  oceánicas con el mismo nivel de detalle.
+- Usa JRA-25/JCDAS, un reanálisis de resolución moderada (~1.25°) y generación anterior a
+  ERA5, con las limitaciones propias de reanálisis más antiguos para representar sistemas de
+  mesoescala o de núcleo pequeño.
+- El estudio no analiza específicamente el Atlántico Sudoccidental ni provee estadísticas
+  separadas para esa cuenca; su aporte a la tesis es conceptual (marco de parámetros
+  ambientales), no empírico-regional.
+- La clasificación de tipo de ciclón mediante el índice de viento térmico de Hart (2003)
+  depende de umbrales "algo arbitrarios", como reconocen los propios autores, lo que introduce
+  cierta ambigüedad en los límites entre categorías (TC, EC, híbrido).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué es el "espacio de parámetros ambientales" (EPS) y en qué se diferencia de un
+  análisis geográfico convencional?
+  R: En vez de graficar la frecuencia de ciclones en el espacio geográfico (latitud-
+  longitud), el EPS grafica la frecuencia de ciclones directamente en función del valor de
+  un parámetro ambiental (p.ej. baroclinicidad), lo que permite relacionar de forma más
+  directa la dinámica del ciclón con su entorno, independientemente de dónde ocurra
+  geográficamente ese valor del parámetro.
+- P: ¿Por qué la humedad relativa no es un parámetro "esencial" si la tesis enfatiza tanto
+  el papel de la humedad en la precipitación?
+  R: El paper distingue entre parámetros que determinan el TIPO de ciclón (TC vs. EC, donde
+  PI y BC son esenciales) y parámetros que modulan su DESARROLLO e intensidad sin cambiar el
+  tipo (donde la humedad relativa sí importa, especialmente en el límite inferior: <20% de
+  humedad suprime casi por completo el desarrollo ciclónico).
+- P: ¿Este paper aporta evidencia directa sobre el Atlántico Sudoccidental?
+  R: No; su aporte es un marco conceptual general (sensibilidad del desarrollo ciclónico a
+  baroclinicidad y humedad ambiental) que la tesis complementa con evidencia regional
+  específica de otros autores (p.ej. Gramcianinov et al. 2019, Gan 1994, Crespo et al. 2020).
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/yanase2014parameter.md

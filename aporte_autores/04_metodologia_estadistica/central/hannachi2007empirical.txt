@@ -1,0 +1,166 @@
+============================================================
+CARTILLA DE ESTUDIO — Hannachi et al. 2007 — revisión de EOF y técnicas afines
+============================================================
+
+REFERENCIA COMPLETA
+Hannachi, A., Jolliffe, I. T. y Stephenson, D. B. (2007). Empirical orthogonal
+functions and related techniques in atmospheric science: A review.
+International Journal of Climatology, 27(9), 1119-1152.
+DOI: 10.1002/joc.1499
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central (para el marco metodológico
+estadístico)
+Se cita en al menos siete pasajes en cinco capítulos (Introducción,
+Fundamentación, Viento, Precipitación, MEOF). Es la referencia teórica que
+sustenta TODO el aparato de interpretación EOF/MEOF de la tesis: el concepto
+de MEOF como "PCA de grupos múltiples", los criterios de interpretación del
+espectro de autovalores, y el significado físico de la estructura dipolar del
+EOF1 y de los modos secundarios.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es un artículo de revisión (no un estudio original con datos propios en su
+mayor parte) sobre las funciones ortogonales empíricas (EOF) y técnicas
+relacionadas en ciencias atmosféricas. Reconstruye el desarrollo histórico del
+método desde su introducción en meteorología a fines de la década de 1940,
+discute sus limitaciones geométricas (dependencia del dominio, falta de
+localización, degeneración de patrones), y presenta extensiones metodológicas
+—EOF rotadas (REOF), EOF extendidas, EOF complejas/Hilbert (HEOF), EOF en
+frecuencia (FDEOF), PCA de tres modos/grupos múltiples— con aplicaciones
+ilustrativas propias (p. ej., presión a nivel del mar del Hemisferio Norte en
+invierno, NCEP/NCAR 1948-2000). Su relevancia para la tesis es puramente
+metodológica: provee el marco conceptual y los criterios de interpretación
+estadística usados para el análisis EOF univariado y MEOF multivariado.
+
+2. METODOLOGÍA
+
+- No es un estudio de un sistema físico específico, sino una revisión técnica
+  con ejemplos ilustrativos.
+- Ejemplo de aplicación propio: EOF de anomalías de presión a nivel del mar
+  (SLP) mensual de invierno (DJF) sobre el Hemisferio Norte, datos NCEP/NCAR
+  (Kalnay et al. 1996; Kistler et al. 2001), rejilla 2.5°×2.5°, período enero
+  1948-diciembre 2000, con ponderación por la raíz cuadrada del coseno de la
+  latitud.
+- Marco teórico cubierto: descomposición en valores singulares (SVD) de la
+  matriz de datos; regla práctica de North et al. (1982) para estimar la
+  incertidumbre de los autovalores y detectar su degeneración; PCA de tres
+  modos (three-mode PCA) o "PCA de grupos múltiples" (multiple group PCA),
+  que generaliza el EOF ordinario al caso de dos o más grupos de variables
+  simultáneas —el fundamento conceptual directo del MEOF usado en la tesis.
+- También cubre EOF extendidas (para estructuras propagantes), EOF complejas/
+  Hilbert (HEOF, para ondas propagantes en el tiempo), y métodos de
+  remuestreo/Monte Carlo para estimar incertidumbre.
+
+3. HALLAZGOS CLAVE (criterios metodológicos, no resultados físicos)
+
+- La "regla de North" (North et al., 1982): si dos o más autovalores son
+  degenerados (indistinguibles dentro de su incertidumbre estadística), los
+  patrones EOF correspondientes MEZCLAN arbitrariamente los patrones
+  poblacionales verdaderos, y cualquier combinación lineal de esos patrones es
+  tan significativa como cada uno por separado — este es el fundamento
+  estadístico exacto que la tesis invoca para interpretar el "aplanamiento del
+  espectro de autovalores" como indicador de un sistema complejo y
+  multidimensional.
+- Un espectro de autovalores "liso" (sin separación clara entre modos) hace
+  difícil la truncación del número de EOF a retener; se recomienda que el
+  tercer autovalor no esté demasiado cerca del cuarto o de autovalores
+  superiores para justificar la retención de tres EOF líderes.
+- El PCA de tres modos ("multiple group PCA") permite tratar simultáneamente
+  ubicaciones espaciales, tiempos y un conjunto de variables atmosféricas
+  distintas como dimensiones agrupables, aplicando EOF ordinario sobre esa
+  estructura combinada — es la base conceptual formal del MEOF (EOF
+  multivariado de viento+precipitación) usado en la tesis.
+- Los EOF tienden a ser difíciles de interpretar por sus propiedades
+  geométricas: son de alcance global (no localizado) y ortogonales tanto en
+  espacio como en tiempo, lo que puede producir estructuras dipolares o
+  multipolares que reflejan restricciones matemáticas de ortogonalidad más que
+  procesos físicos discretos separables.
+- En el ejemplo de aplicación, los dos primeros autovalores del espectro de
+  SLP del Hemisferio Norte en DJF aparecen no degenerados y separados del
+  resto, pero el espectro completo es "generalmente liso", lo que dificulta la
+  truncación.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap01-Introduccion (L101): establece el análisis de Funciones Ortogonales
+  Empíricas Multivariadas (MEOF) como "el marco apropiado" para capturar la
+  covariabilidad de viento y precipitación, distinguiéndolo del EOF univariado
+  — corresponde directamente al concepto de "multiple group PCA" del artículo.
+- Cap02-Fundamentacion (L235): identifica el MEOF con el "PCA de grupos
+  múltiples" descrito por Hannachi et al. — cita precisa y fiel de la
+  terminología del artículo.
+- Cap05-Precipitacion (L139) y Cap04-Viento (L146, L172, L240): aplican los
+  "criterios de interpretación EOF" del artículo para leer: (a) que la
+  distribución de varianza entre varios modos indica heterogeneidad del campo
+  de precipitación (requiere de varios modos ortogonales), (b) que un
+  aplanamiento del espectro de autovalores indica energía distribuida entre
+  modos competitivos, (c) que la estructura dipolar del EOF1 es la "firma
+  matemática" del desplazamiento posicional de una corriente de gran escala, y
+  (d) que el EOF2 captura estructuras ortogonales al modo dominante
+  (fluctuaciones de mesoescala). Estos son usos razonables y consistentes con
+  el marco general de interpretación EOF del artículo, aunque conviene
+  precisar que Hannachi et al. (2007) NO analizan viento ni precipitación de
+  ciclones extratropicales del Atlántico Sur: los criterios se aplican por
+  analogía general, no por un hallazgo específico replicado.
+- Cap06-MEOF (L19): reitera que un espectro de autovalores aplanado es el
+  "indicador estadístico de un sistema complejo y multidimensional" —
+  aplicación directa de la regla de North discutida arriba.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Abdel Hannachi (Universidad de Reading en 2007, luego Universidad de
+Estocolmo/MISU) es una autoridad reconocida en métodos de reducción
+dimensional para ciencias climáticas. Este artículo de revisión, coescrito con
+Ian T. Jolliffe (autor del libro de referencia "Principal Component Analysis")
+y David B. Stephenson, se ha convertido en una referencia estándar y
+ampliamente citada sobre EOF en meteorología. Sienta las bases conceptuales que
+Hannachi retoma y extiende 16 años después en hannachi2023eof (Common EOFs),
+que aborda específicamente el caso de comparación entre múltiples grupos
+(modelos/reanálisis) mediante diagonalización simultánea — una progresión
+natural del "multiple group PCA" discutido aquí.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un artículo de revisión, no un estudio con datos propios extensos; su
+  único ejemplo aplicado (SLP del Hemisferio Norte, NCEP/NCAR 1948-2000) no es
+  representativo de campos de viento/precipitación de ciclones del Atlántico
+  Sur, por lo que su aplicabilidad a la tesis es conceptual/estadística, no
+  empírica.
+- Los criterios de interpretación (regla de North, degeneración de autovalores)
+  son generales y no específicos de sistemas ciclónicos; su aplicación a los
+  campos de la tesis requiere asumir que las propiedades estadísticas
+  genéricas del EOF se sostienen igual en el dominio lagrangiano centrado en
+  el ciclón.
+- El artículo data de 2007; no incorpora desarrollos metodológicos
+  posteriores en aprendizaje automático o reducción dimensional no lineal para
+  campos climáticos de alta dimensión.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Qué es exactamente un 'PCA de grupos múltiples' y por qué lo llama MEOF?"
+  Respuesta: es la generalización del EOF ordinario a dos o más grupos de
+  variables (p. ej., viento y precipitación) analizados conjuntamente,
+  descrita por Hannachi et al. (2007) como three-mode/multiple group PCA; la
+  tesis adopta el término MEOF (EOF multivariado) como sinónimo aplicado a su
+  caso específico de dos campos de superficie.
+- "¿Cómo sabe que el aplanamiento del espectro de autovalores refleja
+  complejidad física y no simplemente ruido de muestreo?" Respuesta: mediante
+  la regla de North (1982) discutida en Hannachi et al. (2007), que provee un
+  criterio de incertidumbre estadística para distinguir autovalores
+  genuinamente separados de autovalores degenerados; la tesis complementa esto
+  con remuestreo Bootstrap-t al 95%.
+- "¿Este artículo analiza ciclones extratropicales o campos de viento y
+  precipitación específicamente?" Respuesta: no; es una revisión metodológica
+  general sobre EOF aplicada a ejemplos de circulación de gran escala (SLP);
+  su uso en la tesis es como fundamento estadístico-interpretativo, no como
+  fuente de resultados físicos sobre ciclones.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/hannachi2007empirical.md (abstract,
+introducción sobre motivación y limitaciones de EOF, sección sobre
+degeneración del espectro de autovalores y regla de North -líneas ~400-470-,
+sección sobre PCA de tres modos/grupos múltiples -líneas ~3220-3235-).

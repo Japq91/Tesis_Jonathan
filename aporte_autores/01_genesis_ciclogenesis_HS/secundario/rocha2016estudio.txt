@@ -1,0 +1,47 @@
+============================================================
+CARTILLA DE ESTUDIO — Rocha, Aravéquia & Ribeiro (2016) — Ciclogénesis costera Sur/Sudeste de Brasil
+============================================================
+
+REFERENCIA COMPLETA
+Rocha, Fabio Pinto da; Aravéquia, José Antonio; Ribeiro, Bruno Zanetti. (2016). Estudo de Ciclones e de Padrões de Circulação Atmosférica no Oceano Atlântico Sul Próximo à Costa das Regiões Sul e Sudeste do Brasil Usando Dados da Reanálise do ERA-Interim. Revista Brasileira de Meteorologia, 31(2), 141-156. DOI: 10.1590/0102-778631220140151
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en 2 pasajes (Cap04-Viento y Cap05-Precipitacion) como respaldo empírico regional específico de los mecanismos dinámicos de ciclogénesis en la costa Sur/Sudeste de Brasil (SBR), un dato puntual pero relevante para anclar el marco dinámico a la región de estudio de la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (MSLP, mínimo local <1015 hPa) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un estudio observacional-climatológico (no de modelado) que caracteriza los ciclones extratropicales y los patrones de circulación atmosférica asociados que se forman en el Océano Atlántico Sur próximo a la costa de las regiones Sur y Sudeste de Brasil, usando reanálisis ERA-Interim para los meses de octubre a abril de 2003 a 2013. Desarrolla un método objetivo de detección e identificación de ciclones (fecha, ubicación e intensidad) y construye compuestos (promedios) de variables atmosféricas alrededor de las fechas de ciclogénesis, con el fin de mejorar la comprensión de estos sistemas y, en última instancia, apoyar la mejora de los modelos numéricos de pronóstico regional. Es relevante para la tesis porque documenta, con datos de reanálisis en la misma región (Atlántico Sudoccidental cercano a Brasil), la combinación de forzantes dinámicos que favorecen la ciclogénesis costera.
+
+2. METODOLOGÍA
+Datos: Reanálisis ERA-Interim (ECMWF), resolución horizontal de 0,5° de latitud por 0,5° de longitud, resolución temporal de 12 h (00 y 12 UTC). Periodo de estudio: octubre a abril de los años 2003 a 2013 (10 temporadas). Área de estudio: 15°S-35°S de latitud y 50°W-30°W de longitud (Atlántico Sur próximo a la costa Sur/Sudeste de Brasil). Método objetivo de detección: mínimo local de presión al nivel medio del mar inferior a 1015 hPa, asociado a un gradiente medio de presión de 0,4 hPa/100 km estimado en un área de 5°x5° (121 puntos de grilla), con persistencia mínima de 24 h (tres horarios sinópticos consecutivos). Variables analizadas en los compuestos: presión al nivel medio del mar (hPa), líneas de corriente y anomalías del viento en 250, 500 y 850 hPa, vorticidad relativa en 500 hPa. Se incluye un estudio de caso (precipitación intensa en la Región Serrana de Río de Janeiro, enero de 2011) para validar el método frente a cartas sinópticas del INPE/CPTEC.
+
+3. HALLAZGOS CLAVE
+- Se identificaron 169 casos de ciclones en el periodo de estudio, equivalente a un promedio aproximado de 17 casos por temporada octubre-abril (rango 9-27 casos/temporada según la Tabla 2).
+- La temporada 2008/2009 presentó una frecuencia anómalamente alta (27 casos frente al promedio de 17), mientras que 2003/2004 mostró una disminución notable (9 casos).
+- El tiempo de vida de los ciclones dentro del área de estudio fue de al menos 24 h, llegando hasta 8 días en algunos casos (promedio general de 1,7 días); dos ciclones destacados (dic/2009 y abr/2010) alcanzaron mínimos de presión inferiores a 1000 hPa y 990 hPa, respectivamente.
+- El análisis de compuestos revela que la ciclogénesis en la región (centrada aproximadamente en 25°S, 43°W, con isóbara media de 1012 hPa) es favorecida por la combinación de: (i) difluencia del escoamiento en altura (250 hPa) asociada a la Alta de Bolivia y al Cavado del Nordeste; (ii) un cavado (vaguada) en niveles medios (500 hPa) con anomalía negativa de vorticidad; y (iii) convergencia del escoamiento en niveles bajos (850 hPa), identificada como decisiva para estimular la ciclogénesis.
+- En 850 hPa se observa convergencia del flujo bien pronunciada desde la Amazonía hacia la región donde se posiciona el ciclón, además de escoamiento proveniente de latitudes más altas por la circulación anticiclónica.
+- Los ciclones que se forman en la costa Sur/Sudeste de Brasil se desplazan hacia el este o sudeste con velocidad media de 9 m/s, recorriendo distancias de aproximadamente 2700 km y con tiempo de vida medio de 3 días (dato de literatura previa citado, Reboita et al. 2009, reproducido en el paper).
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 4 (Viento, L44) se usa para reforzar que "en la costa del sur y sudeste de Brasil, \citet{rocha2016estudio} muestran además que la difluencia en altura, un cavado en niveles medios y, especialmente, la convergencia en bajos niveles favorecen la ciclogénesis regional" — es decir, sustenta el mecanismo dinámico tripartito (difluencia en altura + cavado en niveles medios + convergencia en bajos niveles) que la tesis retoma como marco de ciclogénesis costera. En el Capítulo 5 (Precipitación, L175) se cita específicamente el hallazgo de que "la convergencia en 850 hPa facilita además un aporte constante de humedad desde la Amazonía hacia la zona de formación en SBR", usado para sustentar la disponibilidad de humedad remota (de origen amazónico) que alimenta la banda transportadora cálida (WCB) en la subregión SBR de la tesis, en contraste con el mecanismo de humedad de origen local/tropical descrito por gozzo2017climatology.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Se inscribe en la tradición brasileña de climatologías objetivas de ciclones extratropicales del Atlántico Sur (Gan y Rao 1991; Pezza y Ambrizzi 2003; Mendes et al. 2007/2009; Reboita et al. 2009), que emplean reanálisis y esquemas de detección basados en mínimos de presión y gradientes de presión superficial. El estudio adapta específicamente el criterio de Mendes et al. (2009) a la región costera Sur/Sudeste, y dialoga con los trabajos de Hoskins y Hodges (2005) sobre el origen de las ciclogénesis en bajos niveles asociadas a ondas preexistentes en niveles medios/altos. Es un antecesor metodológico (no dinámico-mecanicista en sentido estricto) de estudios posteriores citados en la tesis como gozzo2017climatology, que profundizan en el rol de los flujos de calor latente y el transporte de humedad tropical.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El periodo de estudio es relativamente corto (10 temporadas, 2003-2013) y restringido a los meses de octubre a abril (semestre cálido), por lo que no cubre la variabilidad interanual completa ni la temporada fría.
+- El propio estudio reconoce que no existen conclusiones firmes sobre el impacto directo de ENSO en la ciclogénesis en esta área específica, pese a notar coincidencias entre años La Niña/El Niño y anomalías de frecuencia.
+- El estudio de caso individual (enero de 2011) mostró que los modelos numéricos de pronóstico (ETA 20 km del CPTEC/INPE y GFS) tuvieron deficiencias serias para prever el cierre de la baja presión y su intensidad en plazos de 24-72 h, lo que limita la aplicabilidad operativa inmediata del método objetivo propuesto.
+- El esquema de detección depende de un umbral de gradiente de presión (0,4 hPa/100 km) elegido empíricamente por comparación con estudios previos, lo que introduce cierta subjetividad metodológica pese a llamarse "método objetivo".
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué se eligió citar un estudio de 2016 basado en ERA-Interim y no una reanálisis más reciente (p. ej. ERA5) para sustentar el mecanismo de ciclogénesis regional? Respuesta: el valor del paper no es la reanálisis en sí sino la caracterización dinámica local (difluencia+cavado+convergencia) validada específicamente para la subregión SBR, coherente con hallazgos posteriores en ERA5.
+- ¿El aporte de humedad amazónica descrito por Rocha et al. es consistente todo el año o solo en el semestre cálido? Respuesta: el estudio cubre solo octubre-abril, por lo que la generalización a la ciclogénesis de invierno debe hacerse con cautela.
+- ¿Qué tan robusta es la cifra de "17 casos por temporada" frente al método de detección elegido? Respuesta: es sensible al umbral de gradiente de presión utilizado (0,4 hPa/100 km); el propio estudio muestra en su Tabla 1 que otros umbrales (0,2 a 1,0 hPa/100 km) generan conteos de 16 a 2 casos, evidenciando la dependencia metodológica del conteo absoluto.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/rocha2016estudo.md

@@ -1,0 +1,129 @@
+============================================================
+CARTILLA DE ESTUDIO — Stanković & Caballero 2025 — asimetría hemisférica de vientos extremos
+============================================================
+
+REFERENCIA COMPLETA
+Stanković, A., & Caballero, R. (2025). Surface Wind Extremes Are Stronger in the Northern
+Hemisphere Oceans than in the Southern Ocean. Geophysical Research Letters, 52(20),
+e2025GL118024. DOI: 10.1029/2025GL118024
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez, en el Capítulo 4 (Viento), como contraste hemisférico que matiza —sin
+contradecir— la magnitud de los extremos de viento en la cola p90 de la región de estudio.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (Atlántico Norte, Pacífico Norte y Océano Austral, comparación explícita)
+VARIABLE DE RASTREO DE CICLONES: Algoritmo topológico sobre viento a 10 m (Engelke et al. 2021) — no es vorticidad ni MSLP como la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio aborda una aparente paradoja: si bien se sabe que el Océano Austral (Hemisferio
+Sur) tiene los vientos superficiales medios más intensos del planeta ("roaring forties",
+"furious fifties"), no estaba establecido si también alberga los eventos de viento más
+extremos. Los autores comparan sistemáticamente cuencas oceánicas de latitud media del
+Hemisferio Norte (Atlántico Norte, Pacífico Norte) con el Océano Austral usando datos de
+reanálisis y satelitales, y seguimiento de ciclones. Es relevante para la tesis porque
+ofrece evidencia reciente y directa de que, pese a que el HS tiene vientos medios más
+fuertes, los extremos (colas de la distribución) son estadísticamente más intensos en el
+HN, un contraste que ayuda a contextualizar la magnitud de los extremos observados en el
+Atlántico Sudoccidental.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA5 (ECMWF, 1979-2020, 0.25°, 6-horario) y producto satelital NOAA
+  Blended SeaWinds v1.2 (1988-2017, 0.25°, 6-horario); pruebas de sensibilidad con JRA-3Q y
+  MERRA-2.
+- Definición de regiones objetivo: tres regiones contiguas (Atlántico Norte, Pacífico Norte,
+  Océano Austral) donde el percentil 98 anual de la velocidad máxima diaria a 10 m supera
+  18 m/s en ERA5, excluyendo franjas costeras de Groenlandia y la Antártida (vientos
+  katabáticos).
+- Seguimiento de ciclones: algoritmo topológico basado en métodos de Engelke et al. (2021) y
+  Hanley & Caballero (2012), que provee ubicaciones horarias de centros de ciclones en ERA5;
+  se clasifica cada celda como "dentro" (in-cyclone) si está a ≤1000 km de un centro de
+  ciclón, o "fuera" (out-of-cyclone).
+- Cálculo de velocidad de viento a 10 m, velocidad a 700 hPa, energía cinética de remolinos
+  (EKE) integrada verticalmente y tasa de crecimiento de Eady (EGR) instantánea entre 500 y
+  850 hPa.
+- Estadística: percentiles (mediana, 98°, 99.9°) con intervalos de confianza por bootstrapping
+  m-de-n y por error estándar interanual; se considera una diferencia "estadísticamente
+  distinguible" cuando los intervalos de confianza no se solapan.
+- Descomposición algebraica de la diferencia en probabilidad de excedencia entre cuencas en
+  cuatro términos: distribución de viento intra-ciclón, fracción de área cubierta por
+  ciclones, distribución fuera de ciclón, y fracción de área fuera de ciclón.
+
+3. HALLAZGOS CLAVE
+- Los vientos medianos son más fuertes en el Hemisferio Sur (Océano Austral) que en las
+  cuencas del HN, confirmando trabajo previo (Monahan 2006a, b).
+- Sin embargo, existe una asimetría hemisférica estadísticamente distinguible en los
+  extremos: el HN, particularmente el Atlántico Norte, exhibe extremos de viento superficial
+  más fuertes que el Océano Austral (percentiles 98 y 99.9 estadísticamente distinguibles).
+- Alrededor del 60% de las excedencias del percentil 98 ocurren en invierno en ambas cuencas
+  del HN, frente a un 38% en el Océano Austral (Tabla 1), reflejando la estacionalidad más
+  débil del HS.
+- La gran mayoría de las excedencias del percentil 98 ocurre dentro del radio de 1000 km de
+  un centro de ciclón: 81% (Atlántico Norte), 85% (Pacífico Norte) y 68% (Océano Austral) en
+  ERA5 durante el invierno.
+- La descomposición muestra que el término dominante en la diferencia de probabilidad de
+  excedencia (viento >20 m/s) entre el Atlántico Norte y el Océano Austral es la diferencia
+  en la distribución de viento "dentro del ciclón" (Término I), con la mayor frecuencia de
+  ciclones como contribución secundaria.
+- Los extremos de la tasa de crecimiento de Eady (EGR) a mesoescala media son más frecuentes
+  en el HN, atribuidos principalmente al término de cizalladura vertical del viento,
+  consistente con mayor baroclinicidad.
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 4 (Viento, L119) el paper se cita inmediatamente después de la discusión sobre
+el CCB (cold conveyor belt) de Gentile et al. (2023), como matiz hemisférico: "Aunque
+\citet{stankovic2025surface} reportan extremos absolutos mayores en el Hemisferio Norte por
+su mayor baroclinicidad, los valores en la cola p90 de la región alcanzan magnitudes
+similares." Es decir, el paper se usa para reconocer que en términos absolutos y globales
+el HN presenta los extremos más intensos (respaldado por el hallazgo de asimetría
+hemisférica del estudio), pero el texto de la tesis contrasta esto con la observación propia
+de que la cola p90 del Atlántico Sudoccidental alcanza magnitudes comparables, sugiriendo que
+la región de estudio, aunque climatológicamente menos baroclínica que el Atlántico Norte, no
+es necesariamente "menos extrema" en su propia distribución de p90.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Aleksa Stanković y Rodrigo Caballero (Universidad de Estocolmo, Bolin Centre for Climate
+Research) tienen una línea de investigación sobre extremos de viento en latitudes medias y
+su relación con la dinámica de ciclones y la baroclinicidad de gran escala, construyendo
+sobre Stanković et al. (2024) —que analiza extremos de viento cerca de la superficie en el
+Atlántico Norte central asociados a interacción ciclón-ciclón— y dialogando con la
+literatura sobre asimetrías hemisféricas de storm tracks (Hoskins & Hodges 2002, 2005;
+Chemke et al. 2022) y sobre vientos extremos ligados a ciclones (Gentile et al. 2023, 2025).
+Es un trabajo muy reciente (2025) que aporta evidencia actualizada y complementaria a la
+climatología clásica de Monahan (2006a, b) sobre vientos superficiales oceánicos.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El análisis se limita a tres cuencas predefinidas (Atlántico Norte, Pacífico Norte, Océano
+  Austral) mediante un umbral subjetivo (percentil 98 >18 m/s); no incluye el Atlántico
+  Sudoccidental como región separada, por lo que no hay comparación directa con la zona de
+  estudio de la tesis.
+- El análisis de tendencias temporales resultó inconcluso: distintos productos de
+  reanálisis dan tendencias de signo opuesto para cada cuenca.
+- Los vientos de reanálisis a 10 m están sujetos a incertidumbres en la parametrización de
+  la capa límite, y los datos de escaterómetro subestiman vientos altos por degradación de
+  la señal de retrodispersión, limitaciones que los propios autores reconocen.
+- El mecanismo físico completo de la asimetría (más allá de la baroclinicidad y el EGR) se
+  deja como pregunta abierta para investigación futura (p.ej. papel de sting jets, warm
+  conveyor belts, seeding corriente arriba).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: Si el Hemisferio Norte tiene extremos de viento más fuertes, ¿no contradice esto la
+  relevancia de estudiar el Atlántico Sudoccidental?
+  R: No; el hallazgo es sobre extremos absolutos a escala de cuenca oceánica completa, pero
+  la tesis muestra que la cola p90 específica de la región de estudio alcanza magnitudes
+  comparables a las del HN, es decir, la región no es "benigna" en términos relativos pese a
+  su menor baroclinicidad climatológica.
+- P: ¿Qué mecanismo proponen los autores para explicar la mayor intensidad de extremos en el
+  HN?
+  R: Mayor baroclinicidad de gran escala (mayor tasa de crecimiento de Eady en niveles
+  medios, principalmente por cizalladura vertical del viento), asociada a gradientes
+  térmicos superficiales más marcados (p.ej. corrientes de frontera oeste cálidas) y, en el
+  Atlántico Norte específicamente, a interacción ciclón-ciclón.
+- P: ¿Cómo definen "extremo" en este estudio y es comparable al p90 usado en tu tesis?
+  R: Usan percentiles 98 y 99.9 de la velocidad de viento diaria máxima dentro de regiones de
+  storm track predefinidas; es un criterio percentílico similar en espíritu al p90 de la
+  tesis, aunque aplicado a la velocidad de viento en sí y no a una métrica de vorticidad del
+  ciclón.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/stankovic2025surface.md

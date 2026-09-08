@@ -1,0 +1,165 @@
+============================================================
+CARTILLA DE ESTUDIO — Gramcianinov et al. 2023 — ciclones y oleaje extremo
+============================================================
+
+REFERENCIA COMPLETA
+Gramcianinov, C., de Camargo, R., Campos, R., Guedes Soares, C. y Silva Dias,
+P. (2022, publicado en línea; volumen de revista fechado 2023). Impact of
+extratropical cyclone intensity and speed on the extreme wave trends in the
+Atlantic Ocean. Climate Dynamics, 60, 1447-1466. DOI: 10.1007/s00382-022-06390-2
+
+NOTA: la entrada .bib de la tesis registra el año 2022 (fecha de aceptación/
+publicación en línea), mientras que la clave de cita "gramcianinov2023impact"
+y el volumen de la revista corresponden al número impreso de 2023 (Climate
+Dynamics 60). Ambas fechas son defendibles (2022 online-first, 2023 de
+volumen), pero conviene mantener consistencia en la bibliografía final.
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central (para el argumento de motivación e
+impacto costero)
+Se cita en al menos seis pasajes en cuatro capítulos (Introducción,
+Fundamentación, Viento, Prototipos). Es la referencia clave que sustenta la
+motivación general de la tesis (el viento en superficie como forzante de
+oleaje extremo) y el punto de contraste explícito en el capítulo de
+Prototipos, donde el trabajo del usuario extiende los resultados climatológicos
+de este artículo mediante estratificación por fase evolutiva.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (línea Gramcianinov/Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio analiza los eventos de oleaje extremo asociados a ciclones
+extratropicales y sus tendencias en el Atlántico Norte y Sur, vinculando
+directamente cada ciclón (identificado y seguido mediante vorticidad relativa
+a 850 hPa) con eventos de oleaje extremo cercanos mediante un esquema
+automatizado. Es un estudio climatológico de 42 años (1979-2020) que evalúa
+cambios de clima presente comparando dos ventanas de 21 años. La pregunta
+central es cómo la intensidad y la velocidad de desplazamiento del ciclón
+modulan las tendencias de oleaje extremo, más allá de los cambios en la
+posición del storm track.
+
+2. METODOLOGÍA
+
+- Datos atmosféricos y de oleaje: ERA5, 1979-2020, salidas horarias.
+- Identificación y tracking de ciclones: vorticidad relativa a 850 hPa
+  (mismo enfoque de la línea Gramcianinov/Hodges).
+- Asociación ciclón-oleaje: esquema automatizado que busca una región de
+  oleaje extremo dentro de 1500 km del centro del ciclón, con criterios que
+  excluyen eventos dominados por swell (oleaje remoto no generado localmente).
+- Evaluación de cambio climático: comparación de dos ventanas de 21 años
+  dentro del período de 42 años total.
+- Variables analizadas: intensidad del ciclón (vorticidad, viento máximo a
+  10 m), velocidad de desplazamiento (speed), y su relación con la ocurrencia
+  y tendencia de eventos de oleaje extremo.
+
+3. HALLAZGOS CLAVE
+
+- Los eventos de oleaje extremo asociados a ciclones se concentran
+  preferentemente en el límite occidental (oeste) de los dominios oceánicos,
+  cerca de las regiones de ciclogénesis, mientras que el lado este-hacia el
+  polo presenta la mayor densidad de ocurrencias asociada a una mayor densidad
+  de trayectorias y al predominio de ciclones en etapa madura.
+- La fase del ciclo de vida del ciclón influye fuertemente en la ocurrencia de
+  oleaje extremo: en etapas tempranas se esperan vientos fuertes pero con
+  cambios rápidos de dirección del frente que comprometen la persistencia del
+  fetch; en la mitad del storm track predominan ciclones maduros que combinan
+  intensidad y estructura estable, generando un fetch más amplio.
+- Los ciclones asociados a oleaje extremo son, como es de esperar, más
+  intensos, pero además presentan una velocidad de desplazamiento MÁS LENTA
+  que la climatología general, lo que prolonga el tiempo de interacción entre
+  el viento y la superficie oceánica.
+- Las tendencias del storm track por sí solas NO explican los cambios
+  observados en la ocurrencia de oleaje extremo durante el período (42 años);
+  en cambio, el balance entre intensidad y velocidad de desplazamiento del
+  ciclón sí explica dichos cambios: un aumento local de intensidad incrementa
+  los extremos de oleaje, pero una disminución de intensidad no
+  necesariamente reduce el oleaje, porque una menor velocidad de
+  desplazamiento puede compensar la pérdida de intensidad.
+- Los cambios observados en la ocurrencia de eventos de oleaje extremo
+  relacionados con ciclones son de hasta 7.5 ocurrencias por mes por área,
+  cifra pequeña en términos absolutos pero con impacto considerable dado el
+  intervalo de 42 años analizado.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap01-Introduccion (L15): sustenta la afirmación de que, en el hemisferio
+  sur, los ciclones extratropicales representan "el fenómeno de severidad
+  geofísica dominante para la zona costera regional" — coherente con el marco
+  motivacional del artículo (impactos costeros vía oleaje extremo).
+- Cap02-Fundamentacion (L178): documenta que los impactos más severos se
+  confinan en sectores preferenciales del dominio centrado en el ciclón (oeste
+  y noroeste en el Atlántico Sur) y que esta asimetría espacial varía con la
+  fase del ciclo de vida — esto es fiel al hallazgo de que la fase evolutiva
+  modula la ocurrencia de oleaje extremo, aunque el artículo original no
+  presenta explícitamente un "prototipo" espacial por fase como sí hace la
+  tesis.
+- Cap04-Viento (L3, L58): se cita para sustentar que "el viento en superficie
+  es un forzante dinámico que transfiere momento continuo al océano,
+  modulando la formación de oleaje anómalo", y que identificar tempranamente
+  sistemas intensos es indispensable porque estos vientos son forzantes de
+  eventos de riesgo costero directo.
+- Cap07-Prototipos (L59, L77) — el uso más profundo y de mayor valor
+  argumentativo: la tesis contrasta explícitamente sus prototipos
+  (estratificados por fase evolutiva) con los "análisis climatológicos que
+  promedian el ciclo de vida completo" —como Gramcianinov et al. (2023)—
+  señalando que esta distinción de fase no puede inferirse de dicho enfoque
+  climatológico agregado. También usa el hallazgo de que la velocidad de
+  traslación del sistema "modula directamente la duración del forzante y la
+  extensión espacial de los campos dinámicos" para proponer líneas de trabajo
+  futuro (estratificación adicional por velocidad de traslación).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Este artículo cierra el arco de la línea de Gramcianinov sobre el vínculo
+ciclón-oleaje: parte de la climatología de ciclones (2019), pasa por la
+validación de reanálisis (2020), y culmina aquí conectando directamente la
+dinámica del ciclón con el impacto oceánico (oleaje extremo), en colaboración
+con Carlos Guedes Soares (ingeniería oceánica, CENTEC-Lisboa) y Ricardo M.
+Campos (NOAA/AOML). Se apoya en estudios previos de clima de olas extremas en
+el Atlántico Norte (Takbash et al. 2019; Ponce de León y Bettencourt 2021) y
+Sur (Gramcianinov et al. 2020c, 2021a, referencias internas del propio grupo).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El criterio de asociación ciclón-oleaje (1500 km del centro, exclusión de
+  swell) es una elección metodológica que puede subestimar eventos de oleaje
+  remoto genuinamente vinculados a un ciclón lejano.
+- El análisis de tendencias (42 años divididos en dos ventanas de 21) tiene
+  poder estadístico limitado para detectar señales de cambio climático
+  robustas; el propio artículo reconoce que "no es posible concluir" de forma
+  determinante sobre varias de las tendencias regionales.
+- Es un análisis climatológico agregado que promedia todo el ciclo de vida del
+  ciclón, sin la estratificación explícita por fase evolutiva (incipiente,
+  intensificación, madurez, decaimiento) que sí aplica la tesis del usuario —
+  reconocido en el propio texto de la tesis como la limitación que motiva el
+  enfoque de prototipos condicionales.
+- Se limita a la ocurrencia de oleaje extremo como variable de impacto; no
+  incorpora precipitación ni otros impactos costeros simultáneos (que sí
+  aborda la tesis en su enfoque multivariado viento-precipitación).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿En qué se diferencia su análisis de prototipos del enfoque climatológico
+  de Gramcianinov et al. (2023)?" Respuesta: ese artículo promedia todo el
+  ciclo de vida del ciclón y vincula intensidad/velocidad con oleaje extremo
+  de forma agregada; la tesis estratifica explícitamente por fase evolutiva y
+  por régimen de intensidad (Población Global vs. p90), mostrando que
+  patrones como la co-localización viento-precipitación son transitorios y no
+  estáticos.
+- "¿Por qué la velocidad de desplazamiento del ciclón es relevante para su
+  tesis si usted no la analiza directamente?" Respuesta: Gramcianinov et al.
+  (2023) demuestran que la velocidad modula la duración del forzante eólico
+  sobre el océano; la tesis reconoce esto como limitación y línea de trabajo
+  futuro explícita en el capítulo de Prototipos.
+- "¿Los hallazgos de este artículo sobre oleaje son directamente aplicables a
+  los impactos de precipitación que usted estudia?" Respuesta: el mecanismo
+  reportado (viento sostenido como forzante) es específico del acoplamiento
+  océano-atmósfera; para precipitación, el mecanismo dominante es la
+  convergencia de humedad y el WCB, tratado con literatura distinta
+  (browning1986conceptual, gramcianinov2024early).
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gramcianinov2023impact.md (abstract,
+Sección 1 Introducción, resultados de patrones espaciales y tendencias
+Secciones 3-4, Sección 5 Conclusion).

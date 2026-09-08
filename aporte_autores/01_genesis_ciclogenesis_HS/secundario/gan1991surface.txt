@@ -1,0 +1,149 @@
+============================================================
+CARTILLA DE ESTUDIO — Gan y Rao 1991 — Ciclogénesis superficial pionera sobre Sudamérica
+============================================================
+
+REFERENCIA COMPLETA
+Gan, M. A. y Rao, V. B. (1991). Surface cyclogenesis over South America. Monthly Weather Review,
+119(5), 1293-1302. DOI: 10.1175/1520-0493(1991)119<1293:SCOSA>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una sola vez, en la Introducción, como antecedente histórico/pionero de la climatología de
+ciclogénesis en la región, en la misma secuencia narrativa que reboita2010south y jones1993climatology.
+No aporta metodología ni resultados que la tesis reutilice, sino contexto histórico sobre la
+estacionalidad y la variabilidad interanual de la ciclogénesis sudamericana.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (Sudamérica, aproximadamente 15°-50°S, 30°-90°W)
+VARIABLE DE RASTREO DE CICLONES: Identificación manual/visual de isobaras cerradas en cartas de presión
+en superficie (persistencia mínima de 4 tiempos de análisis consecutivos) — método pre-objetivo,
+distinto de la ζ850 automatizada de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es una nota de "Notes and Correspondence" de Monthly Weather Review que calcula la frecuencia de
+ciclogénesis superficial sobre Sudamérica (aproximadamente el área encerrada por 15°-50°S y
+30°-90°W) usando 10 años (1979-1988) de cartas de presión en superficie. Los autores señalan que,
+salvo por unos pocos estudios, la investigación sobre regiones preferenciales de ciclogénesis se había
+concentrado en el Hemisferio Norte, y que los estudios previos sobre Sudamérica (Taljaard 1972, Necco
+1982, Satyamurty et al. 1990) usaban periodos cortos (1-2 años) o se basaban mayormente en imágenes de
+satélite, con desacuerdos entre sí sobre la estación de mayor ciclogénesis. El objetivo del trabajo es
+resolver esa discrepancia usando un registro de 10 años de cartas de superficie y explorar además las
+características atmosféricas (estabilidad estática, número de Richardson) responsables de la
+variación estacional e interanual encontrada.
+
+2. METODOLOGÍA
+
+- Datos: cuatro cartas de superficie por día (0000, 0600, 1200, 1800 UTC), enero de 1979 a diciembre
+  de 1988 (10 años, ~14 600 cartas), obtenidas del Instituto de Atividades Espaciais (IAE, Brasil) y
+  analizadas por la Fuerza Aérea Brasileña; dominio de las cartas: 0°-60°S, 30°-100°W.
+- Datos complementarios: valores mensuales medios de ocho estaciones de radiosonda (para el número de
+  Richardson Ri y la estabilidad estática S) y datos mensuales de precipitación de 12 estaciones de
+  superficie del sur de Brasil (Boletim Agroclimatológico, INEMET), usados para relacionar la
+  ciclogénesis con anomalías de lluvia.
+- Criterio de ciclogénesis: se requiere al menos una isobara cerrada alrededor de un centro de baja
+  presión (intervalos de análisis de 2 mb), que debe persistir al menos 4 tiempos de análisis
+  consecutivos; el momento de iniciación es el de la primera aparición de la isobara cerrada. La
+  dirección de movimiento de los centros formados en la región de estudio se obtiene comparando la
+  posición inicial y la posición 24 h después.
+
+3. HALLAZGOS CLAVE
+
+- Se identificaron 1091 casos de ciclogénesis superficial en los 10 años analizados (Tabla 2, total
+  1979-1988).
+- La frecuencia de ciclogénesis es claramente mayor en invierno que en cualquier otra estación: los
+  totales estacionales acumulados (Tabla 3) son 305 en invierno (junio-agosto), 302 en otoño
+  (marzo-mayo), 268 en primavera (septiembre-noviembre) y 207 en verano (diciembre-febrero).
+- Por mes, la mayor frecuencia se da en mayo (134 casos en los 10 años) y la menor en diciembre (71
+  casos), con un máximo secundario en octubre (105 casos) (Tabla 2).
+- Existe variabilidad interanual marcada: los años de El Niño (1983, 1986 y 1987, con índice de
+  Oscilación del Sur negativo) muestran mayor frecuencia de ciclogénesis —1983 es explícitamente el
+  año de máxima frecuencia—, mientras que 1981 (índice de Oscilación del Sur positivo) es el año de
+  menor frecuencia. [Nota de fidelidad: la Tabla 2 del artículo (frecuencia mensual por año) se
+  reconstruyó en la extracción de texto con artefactos de formato de tabla que dificultan leer con
+  certeza cada celda individual; por eso aquí se reportan solo las afirmaciones explícitas del texto en
+  prosa —qué año fue el máximo y cuál el mínimo—, sin citar las cifras totales por año, que no se
+  pudieron verificar con confianza dígito a dígito.]
+- Se identifican dos centros preferenciales de ciclogénesis en la distribución espacial anual: uno
+  sobre el Golfo de San Matías, Argentina (42.5°S, 62.5°W), y otro sobre Uruguay (~31.5°S, 55°W). El
+  centro de Uruguay es más intenso en invierno, mientras que el del Golfo de San Matías lo es en
+  verano.
+- Los autores proponen que el centro de Uruguay está asociado a ciclogénesis de sotavento de los Andes
+  (superposición de una perturbación baroclínica móvil con una onda estacionaria forzada por la
+  montaña, siguiendo a Hayes et al. 1987), mientras que el centro del Golfo de San Matías responde
+  principalmente a inestabilidad baroclínica local de los oestes.
+- El número de Richardson (Ri) y la estabilidad estática son sistemáticamente menores en invierno que
+  en verano, y menores durante el invierno de 1983 (máxima ciclogénesis, El Niño) que durante el
+  invierno de 1981 (mínima ciclogénesis), lo que los autores atribuyen a una mayor cizalladura del
+  viento del oeste durante los años de El Niño.
+- La dirección predominante de movimiento de los ciclones es hacia el sureste en las bandas 15°-30°S y
+  30°-40°S, y hacia el este en la banda 40°-50°S, en todas las estaciones del año (Tabla 5).
+- La variabilidad interanual de la ciclogénesis es consistente con la variabilidad de las anomalías de
+  precipitación en el sur de Brasil: los años de El Niño (1983, 1987) muestran anomalías de lluvia
+  positivas en casi todas las estaciones analizadas, mientras que 1981 muestra anomalías negativas en
+  casi todas ellas (Tabla 4) — lo que, según los autores, explica la correlación negativa conocida
+  entre la precipitación del sur de Brasil y el índice de Oscilación del Sur (Aceituno 1988; Rao y
+  Hada 1990).
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 1 (Introducción, L22-24), inmediatamente después de mencionar la climatología
+regional de reboita2010south y antes de la climatología hemisférica de jones1993climatology: "Ya desde
+una perspectiva pionera, \citet{gan1991surface} habían cuantificado que la ciclogénesis sobre esta
+misma región es más frecuente en invierno y que su variabilidad interanual repercute en la
+precipitación del sur de Brasil." Esta afirmación es fielmente consistente con el contenido verificado
+del artículo: Gan y Rao (1991) efectivamente cuantifican (i) el máximo invernal de ciclogénesis
+(305 casos en invierno frente a 207 en verano, sobre 10 años) y (ii) el vínculo entre la variabilidad
+interanual de la ciclogénesis (asociada al ENOS) y las anomalías de precipitación del sur de Brasil.
+La referencia cumple una función puramente histórica/contextual: establece que la estacionalidad
+invernal de la ciclogénesis regional —premisa que sustenta el enfoque de la tesis en sistemas
+extratropicales intensos— ya había sido cuantificada tres décadas antes con datos de superficie.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Manoel Alonso Gan (CPTEC/INPE) es uno de los investigadores fundacionales de la climatología de
+ciclogénesis sudamericana; este artículo (parte de su tesis doctoral, según los agradecimientos)
+antecede y es citado como antecedente directo por trabajos posteriores del propio grupo y de terceros,
+incluyendo bitencourt2010relating (que reutiliza el mismo argumento de estacionalidad invernal) y
+reboita2010south. El estudio dialoga con la climatología pionera de Taljaard (1972) basada en
+metodología manual/sinóptica clásica del Hemisferio Sur, y precede a los esquemas de rastreo objetivo
+(Murray y Simmonds 1991; Sinclair 1994) que la tesis y buena parte de la literatura posterior adoptan
+en su lugar.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El método de identificación de ciclogénesis es manual/visual sobre cartas de presión analizadas por
+  pronosticadores, sin un algoritmo objetivo y reproducible, a diferencia de los esquemas basados en
+  vorticidad relativa (Murray y Simmonds 1991; Sinclair 1994) adoptados en estudios posteriores y en
+  la propia tesis.
+- La resolución de las cartas de superficie (originadas del análisis manual del IAE/Fuerza Aérea
+  Brasileña) no está estandarizada como una grilla de reanálisis moderna, lo que dificulta la
+  comparación directa y reproducible con climatologías posteriores basadas en ERA5 u otros reanálisis.
+- El periodo de estudio (10 años, 1979-1988) es corto en comparación con los reanálisis multidecadales
+  usados en estudios más recientes, limitando la robustez estadística de los dos centros de
+  ciclogénesis identificados y de la relación con el ENOS.
+- El estudio se limita a la ciclogénesis en superficie (inicio del ciclo de vida), sin caracterizar la
+  intensidad, la trayectoria completa, ni los impactos de viento o precipitación asociados a los
+  sistemas ya maduros, aspectos centrales en la tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Qué aporta esta referencia de 1991 que no aporten estudios más recientes y con reanálisis de mayor
+  resolución, como reboita2010south?" — Respuesta: se usa como antecedente histórico que demuestra que
+  la estacionalidad invernal de la ciclogénesis regional y su vínculo con la variabilidad
+  interanual/ENOS ya estaba cuantificada desde comienzos de los años 90 con datos de superficie,
+  reforzando la solidez de una premisa que la tesis no necesita volver a demostrar.
+- "¿Este estudio usa el mismo umbral o variable de detección que su tesis?" — Respuesta: no; usa
+  identificación manual de isobaras cerradas sobre cartas de presión en superficie, mientras que la
+  tesis usa vorticidad relativa a 850 hPa con un algoritmo objetivo automatizado.
+- "¿Cuáles son los dos centros de ciclogénesis identificados por Gan y Rao (1991) y cómo se relacionan
+  con los mecanismos de ciclogénesis que usted discute en su tesis?" — Respuesta: el centro de Uruguay
+  (ciclogénesis de sotavento andino) y el centro del Golfo de San Matías (inestabilidad baroclínica
+  local), ambos consistentes con los mecanismos de ciclogénesis sudamericana descritos por reboita2010south
+  y otras referencias de génesis que sí discute en detalle la tesis.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_PDF/gan1991surface.pdf, leído directamente en su totalidad (el archivo
+papers/files_MD/gan1991surface.md está roto: solo contiene 20 líneas sin el cuerpo del artículo). Se
+revisaron resumen, introducción, sección 2 "Data source and methodology", sección 3 "Results and
+discussion" (incluyendo Tablas 2-5 y Figuras 2-3 de distribución espacial de ciclogénesis) y la sección
+4 "Summary and concluding remarks".

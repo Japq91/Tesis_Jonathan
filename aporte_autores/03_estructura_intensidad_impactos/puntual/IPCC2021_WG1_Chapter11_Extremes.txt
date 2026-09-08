@@ -1,0 +1,132 @@
+============================================================
+CARTILLA DE ESTUDIO — IPCC 2021 (AR6, Cap. 11) — extremos climáticos y ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Seneviratne, S. I.; Zhang, X.; Adnan, M.; Badi, W.; Dereczynski, C.; Di Luca, A.;
+Ghosh, S.; Iskandar, I.; Kossin, J.; Lewis, S.; Otto, F.; Pinto, I.; Satoh, M.;
+Vicente-Serrano, S. M.; Wehner, M.; Zhou, B. (2021). Weather and Climate Extreme
+Events in a Changing Climate. En: Climate Change 2021: The Physical Science
+Basis. Contribution of Working Group I to the Sixth Assessment Report of the
+IPCC (Masson-Delmotte, V. et al., eds.), pp. 1513-1766. Cambridge University
+Press. DOI: 10.1017/9781009157896.013
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez, en el Capítulo 4 (Resultados de Viento), para calificar
+el nivel de certeza (alta vs. media confianza) de las proyecciones de cambio
+climático sobre precipitación e intensidad dinámica de ciclones extratropicales.
+
+HEMISFERIO DE ESTUDIO: Global (no restringido a un hemisferio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (informe de síntesis; no es un estudio de rastreo de ciclones)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es el Capítulo 11 del Sexto Informe de Evaluación (AR6) del IPCC, Grupo de
+Trabajo I, dedicado a eventos climáticos extremos en un clima cambiante. No es
+un artículo de investigación primaria sino una síntesis de evaluación experta
+(assessment report) que revisa y pondera cientos de estudios sobre extremos de
+temperatura, precipitación, sequías, ciclones tropicales y extratropicales,
+asignando niveles de confianza (baja/media/alta) y probabilidad calibrados según
+el lenguaje IPCC. La sección 11.7 se enfoca específicamente en ciclones
+extratropicales (ETC), evaluando su detección, atribución y proyecciones futuras
+de frecuencia, intensidad dinámica y precipitación asociada.
+
+2. METODOLOGÍA
+- No involucra datos ni modelización propia; es una revisión sistemática y
+  síntesis de evidencia de la literatura científica publicada hasta el cierre
+  del AR6 (aproximadamente 2021), incluyendo estudios con modelos CMIP5, CMIP6,
+  HighResMIP, CORDEX y reanálisis.
+- Metodología de evaluación: lenguaje calibrado de incertidumbre del IPCC
+  (niveles de confianza: baja, media, alta; términos de probabilidad), siguiendo
+  el protocolo estándar de los informes de evaluación.
+- Para ciclones extratropicales (Sección 11.7), se sintetizan estudios de
+  detección/atribución (p. ej. desplazamiento hacia los polos del storm track del
+  HS) y de proyección (p. ej. Zappa et al. 2013b; Chang 2014, 2017, 2018; Seiler y
+  Zwiers 2016b; Kodama et al. 2019, este último también citado en la tesis).
+
+3. HALLAZGOS CLAVE
+- Alta confianza en que los modelos climáticos de resolución gruesa (CMIP5,
+  CMIP6) subestiman la intensidad dinámica de los ETC, incluyendo los más
+  extremos, medida por gradiente de presión, vorticidad media y viento cerca de
+  superficie; los modelos de mayor resolución (HighResMIP, CORDEX) muestran mejor
+  desempeño.
+- Alta confianza en que el desplazamiento hacia los polos del storm track del
+  Hemisferio Sur está vinculado a la actividad humana, principalmente por
+  emisiones de sustancias que agotan el ozono; baja confianza en la atribución de
+  cambios en el número de ETC en el Hemisferio Norte.
+- Confianza media en que los cambios en la intensidad dinámica (p. ej. velocidad
+  del viento) de los ETC serán pequeños en el futuro, aunque los cambios en la
+  ubicación del storm track pueden producir cambios sustanciales en vientos
+  extremos locales.
+- Alta confianza en que la tasa de precipitación promedio y máxima asociada a
+  los ETC aumentará con el calentamiento, con la magnitud del incremento ligada
+  al aumento de vapor de agua atmosférico (aproximadamente 7% por °C de
+  calentamiento superficial, siguiendo Clausius-Clapeyron).
+- Confianza media en que los cambios proyectados en la intensidad de los ETC
+  (viento y precipitación) dependen de la resolución y formulación (representación
+  explícita o implícita de la convección) de los modelos climáticos.
+- Alta confianza en que la nevada asociada a ETC invernales disminuirá en el
+  futuro, debido a temperaturas troposféricas más altas que reducen la proporción
+  de precipitación en forma de nieve.
+
+4. RELACIÓN CON TU TESIS
+Este documento aporta el respaldo de máxima autoridad (consenso científico
+internacional) para calificar la asimetría de certeza entre proyecciones de
+precipitación y de viento en ciclones extratropicales, un punto que la tesis
+usa para contextualizar sus propios hallazgos regionales. En el Capítulo 4
+(Viento, L5) se afirma: "Esta proyección es asimétrica en su nivel de certeza:
+el IPCC atribuye alta confianza al aumento de las tasas de precipitación
+asociadas a estos sistemas, pero solo confianza media a los cambios en su
+intensidad dinámica (viento) \citep{IPCC2021_WG1_Chapter11_Extremes}." Esta
+cita sigue inmediatamente a una referencia a proyecciones regionales específicas
+del Atlántico Sudoccidental (gentile2025response; dejesus2021multimodel),
+situando esos resultados regionales dentro del marco de confianza más amplio
+del IPCC.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El Capítulo 11 del AR6 es producto de un equipo de autores coordinadores
+liderados por Sonia I. Seneviratne (ETH Zürich), especialista en extremos
+climáticos y interacciones suelo-atmósfera, con coautores especializados en
+distintos tipos de extremos (Kossin en ciclones tropicales, Satoh en modelización
+de alta resolución -coautor también de kodama2019perspective, citado en la
+tesis-). El capítulo sintetiza y da continuidad a evaluaciones previas (AR5,
+Seneviratne et al. 2012, SREX) y se apoya extensamente en estudios de detección
+y proyección de ciclones extratropicales que incluyen a Kodama et al. (2019),
+también citado directamente en la tesis, cerrando así un vínculo directo entre
+ambas fuentes.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Al ser una síntesis de evaluación (no investigación primaria), su nivel de
+  detalle regional es limitado; las conclusiones sobre ETC se presentan
+  mayormente a escala hemisférica (HN/HS), sin desagregación específica para el
+  Atlántico Sudoccidental.
+- Las conclusiones dependen de la calidad y cobertura de los estudios primarios
+  disponibles hasta la fecha de cierre del informe (~2021), por lo que estudios
+  posteriores (p. ej. gentile2025response, citado inmediatamente antes en la
+  tesis) pueden refinar o modificar estas conclusiones.
+- El lenguaje de confianza (alta/media/baja) es una síntesis cualitativa de
+  consenso experto, no una medida estadística única; distintos estudios
+  subyacentes pueden usar métricas de intensidad diferentes (presión, vorticidad,
+  viento), lo que introduce heterogeneidad reconocida por el propio capítulo.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué hay más confianza en el aumento de precipitación que en el cambio
+  de intensidad de viento de los ciclones? R: Porque el aumento de precipitación
+  responde a un mecanismo termodinámico simple y robusto (Clausius-Clapeyron,
+  ~7%/°C), mientras que los cambios en intensidad dinámica dependen de balances
+  más complejos (baroclinicidad, resolución del modelo, representación de
+  convección) que varían entre modelos.
+- P: ¿Cómo se relaciona esta cita con los resultados propios de tu tesis sobre
+  viento? R: Se usa para enmarcar la incertidumbre esperable en proyecciones de
+  viento del Atlántico Sudoccidental, contrastando con la mayor robustez de las
+  proyecciones de precipitación citadas en el mismo párrafo.
+- P: ¿Es una fuente primaria o secundaria? R: Es una fuente secundaria de
+  síntesis (assessment report); su valor radica en la autoridad del consenso
+  científico calibrado, no en datos originales.
+- P: ¿El IPCC evalúa específicamente el Atlántico Sudoccidental? R: No de forma
+  explícita en los pasajes citados; la evaluación es mayormente hemisférica, por
+  lo que la tesis complementa esta síntesis global con estudios regionales
+  específicos (dejesus2021multimodel, gentile2025response).
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/IPCC2021_WG1_Chapter11_Extremes.md

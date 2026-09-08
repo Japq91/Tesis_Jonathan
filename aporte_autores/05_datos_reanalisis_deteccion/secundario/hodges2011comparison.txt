@@ -1,0 +1,153 @@
+============================================================
+CARTILLA DE ESTUDIO — Hodges et al. 2011 — comparación de reanálisis y estructura del viento en ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Hodges, K. I., Lee, R. W., & Bengtsson, L. (2011). A Comparison of Extratropical
+Cyclones in Recent Reanalyses ERA-Interim, NASA MERRA, NCEP CFSR, and JRA-25.
+Journal of Climate, 24(18), 4888-4906. American Meteorological Society.
+DOI: 10.1175/2011JCLI4097.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita dos veces en el Capítulo 04 (Viento): una para sustentar la asimetría
+estructural del campo de viento (máximos a la izquierda de la trayectoria) y
+otra para justificar la limitación de resolución de ERA5 al estimar intensidades
+extremas.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (DJF en el HN, JJA en el HS)
+VARIABLE DE RASTREO DE CICLONES: Ambas variables: MSLP y vorticidad relativa a 850 hPa
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El artículo compara sistemáticamente los ciclones extratropicales identificados
+en cuatro reanálisis atmosféricos recientes —ERA-Interim, NASA MERRA, NCEP CFSR
+y JRA-25— para el periodo satelital moderno (1979-2009), evaluando ambos
+hemisferios en invierno (DJF en el HN, JJA en el HS). Es un estudio metodológico
+de intercomparación (no un estudio de mecanismos físicos), cuyo objetivo es
+doble: (1) determinar el grado de acuerdo entre reanálisis respecto a las
+propiedades de los ciclones (densidad, intensidad, trayectorias) y (2) evaluar
+si los reanálisis más nuevos mejoran respecto al más antiguo (JRA-25). Es
+altamente relevante para cualquier tesis que use reanálisis (como ERA5) para
+climatologías de ciclones, porque cuantifica la incertidumbre estructural
+asociada a la resolución del modelo subyacente.
+
+2. METODOLOGÍA
+
+- Datos: cuatro reanálisis (JRA-25 en T106/125 km; ERA-Interim en T255/80 km;
+  NASA MERRA en ~55 km; NCEP CFSR en T382/38 km), periodo base 1989-2009
+  (ERA-Interim como referencia por ser el más corto).
+- Identificación de ciclones: esquema de seguimiento objetivo de Hodges
+  (1994, 1995, 1999), aplicado tanto a MSLP como a vorticidad relativa a 850 hPa
+  (ζ850), a resolución T63 (MSLP) y T42 (vorticidad) tras remover el fondo de
+  gran escala (armónicos esféricos ≤5).
+- Filtro: sistemas que duran ≥2 días y se desplazan >1000 km (excluye
+  mesociclones y sistemas cuasi-estacionarios); se excluyen los trópicos
+  (30°S-30°N).
+- Comparación: estadística espacial (densidad de trayectorias y de génesis),
+  test de significancia Monte Carlo (Hodges 2008); test de Kolmogorov-Smirnov
+  para comparar distribuciones de intensidad máxima (MSLP, vientos a 925 hPa,
+  ζ850); "matching" de las mismas tormentas entre reanálisis (separación media
+  <4° geodésicos, solape temporal ≥50%); composites de ciclones (los 100 más
+  intensos por hemisferio) siguiendo la metodología de Bengtsson et al. (2009)
+  y Catto et al. (2010), con vientos "system-relative" a 925 hPa.
+
+3. HALLAZGOS CLAVE
+
+- Los composites horizontales muestran que los vientos relativos al sistema más
+  intensos ("the strongest winds") se ubican a la izquierda de la dirección de
+  movimiento del ciclón, con un flujo de aire hacia atrás relativo al movimiento
+  que gira ciclónicamente en torno al centro; esto contrasta con los vientos
+  relativos a tierra, que típicamente ocurren detrás y a la derecha de la
+  dirección de movimiento (Catto et al. 2010).
+- Las mayores diferencias entre reanálisis ocurren en las intensidades máximas,
+  no en el número o la posición de los ciclones: NASA MERRA muestra sistemáticamente
+  ciclones más profundos e intensos en MSLP y viento (aunque no tiene la mayor
+  resolución), mientras JRA-25 (la de menor resolución, T106/125 km) tiene
+  consistentemente las intensidades más débiles en todas las variables.
+- Las diferencias entre reanálisis se amplifican progresivamente al pasar de
+  MSLP a viento y luego a vorticidad, evidenciando que los campos de menor
+  escala (viento, vorticidad) son más sensibles a la resolución que la presión.
+- En el Hemisferio Sur, el número de coincidencias ("matches") entre ERA-Interim
+  y JRA-25 es notablemente menor que en el Hemisferio Norte (67% vs. ~80%),
+  indicando mayor incertidumbre en la representación de ciclones sobre el HS,
+  asociada a la menor densidad histórica de observaciones satelitales allí.
+- Existe una convergencia general entre los reanálisis de mayor resolución
+  (ERA-Interim, NASA MERRA, NCEP CFSR) en cuanto a número y distribución de
+  ciclones, mientras JRA-25 permanece como un caso aparte más débil e impreciso.
+
+4. RELACIÓN CON TU TESIS
+
+Capítulo 04 (Resultados de viento), línea 112: se usa para sustentar que "los
+máximos de viento se localizan preferentemente a la izquierda de la dirección
+de propagación", en contraste con los hallazgos de Laurila et al. (2021) sobre
+la migración de rachas hacia el sector posterior tras el frente frío. Esta es
+una cita de patrón estructural robusto de composites, coherente con la
+descripción original del paper (vientos "system-relative" máximos a la
+izquierda del movimiento).
+
+Capítulo 04, línea 123: se cita junto con Priestley et al. (2022) para
+argumentar que "los datos de reanálisis ERA5 pueden subestimar la intensidad
+real del viento debido a limitaciones de resolución", ya que "la incapacidad de
+los modelos globales para resolver de forma explícita las estructuras de
+mesoescala conduce a una subestimación inherente de las magnitudes extremas".
+Esto es consistente con el hallazgo del paper de que JRA-25 (menor resolución)
+subestima sistemáticamente la intensidad frente a reanálisis de mayor
+resolución, y con la discusión general de que las variables de pequeña escala
+(viento, vorticidad) son las más sensibles a la resolución del modelo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Kevin Hodges es el desarrollador del esquema de seguimiento objetivo de
+ciclones (Hodges 1994, 1995, 1996, 1999) ampliamente usado en climatología de
+storm tracks, y coautor de Hoskins & Hodges (2005), citado también en esta
+tesis como referencia central sobre storm tracks del Hemisferio Sur. Este
+artículo de 2011 continúa y actualiza estudios previos de intercomparación de
+reanálisis (Hodges et al. 2003, 2004; Bengtsson et al. 2006, 2009) aplicando la
+misma metodología a la nueva generación de reanálisis de alta resolución. Forma
+parte de una línea de trabajo dedicada a cuantificar la incertidumbre
+observacional/de modelo en climatologías de ciclones extratropicales,
+relevante para cualquier estudio (como esta tesis) que dependa de un único
+reanálisis (ERA5) para caracterizar ciclones.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El estudio se limita al periodo satelital (1989-2009 para la comparación
+  principal) y a los meses de invierno de cada hemisferio (DJF/JJA), sin cubrir
+  todas las estaciones en el análisis principal.
+- Los reanálisis comparados no incluyen ERA5 (posterior a este estudio), por lo
+  que la extrapolación de sus conclusiones sobre subestimación de intensidad a
+  ERA5 es una inferencia razonable pero no una comparación directa.
+- El foco está en ciclones sinópticos (que duran >2 días y viajan >1000 km);
+  los autores señalan explícitamente que sistemas de menor escala como los
+  mesociclones son probablemente más sensibles a las observaciones disponibles
+  y a la asimilación de datos, un aspecto que el estudio no evalúa en detalle.
+- La comparación de composites usa solo los 100 ciclones más intensos por
+  hemisferio, una muestra relativamente pequeña para generalizar sobre la
+  estructura de todos los ciclones extratropicales.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- P: ¿Por qué es válido extrapolar los hallazgos de Hodges et al. (2011) —que no
+  usan ERA5— para justificar limitaciones de ERA5 en su tesis?
+  R: Porque el mecanismo identificado (subestimación de intensidad por
+  resolución insuficiente para resolver estructuras de mesoescala) es un
+  argumento físico general sobre resolución de reanálisis, no específico de una
+  versión particular; ERA5 comparte esta limitación estructural aunque con
+  mejor resolución que sus predecesores.
+- P: ¿Qué variable (MSLP, viento o vorticidad) muestra mayor divergencia entre
+  reanálisis según este estudio, y por qué es relevante para su tesis de viento?
+  R: El viento y la vorticidad muestran mayor divergencia que la MSLP, porque
+  dependen de derivadas espaciales de menor escala; esto es relevante porque mi
+  tesis analiza directamente campos de viento, más sensibles a la resolución
+  que la presión.
+- P: ¿Cómo se relaciona la asimetría izquierda/derecha de los vientos
+  encontrada por Hodges et al. con la dinámica frontal en el Atlántico
+  Sudoccidental?
+  R: La asimetría "system-relative" (máximos a la izquierda) refleja la
+  rotación ciclónica intrínseca superpuesta al desplazamiento; en mi tesis se
+  contrasta con la asimetría "earth-relative" documentada por otros autores
+  (p. ej. Laurila et al. 2021) ligada a procesos frontales específicos.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/hodges2011comparison.md

@@ -1,0 +1,53 @@
+============================================================
+CARTILLA DE ESTUDIO — Reboita et al. 2022 — Del ciclón Shapiro-Keyser al subtropical Raoni
+============================================================
+
+REFERENCIA COMPLETA
+Reboita, Michelle Simões; Gozzo, Luiz Felippe; Crespo, Natália Machado; Custodio, Maria de Souza; Lucyrio, Vinícius; de Jesus, Eduardo Marcos; da Rocha, Rosmeri Porfirio. (2022). From a Shapiro-Keyser extratropical cyclone to the subtropical cyclone Raoni: An unusual winter synoptic situation over the South Atlantic Ocean. Quarterly Journal of the Royal Meteorological Society, 148(748), 3170-3193. DOI: 10.1002/qj.4349
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Es una de las referencias más citadas de la tesis (7 apariciones en Cap01, Cap02, Cap04 y Cap05). Aporta la explicación mecanística a nivel de proceso (calentamiento diabático, seclusión cálida, sensibilidad a los flujos turbulentos de calor) que la tesis usa repetidamente para interpretar sus propios resultados de composites de viento, precipitación y fases del ciclo de vida.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (ciclón subtropical Raoni, Atlántico Sur)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (seguimiento por mínimo de MSLP cada 6 h) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un estudio de caso de un ciclón inusual de junio de 2021 (bautizado Raoni por la Marina brasileña) cerca de Uruguay y el sur de Brasil, que evolucionó de ciclón extratropical con rasgos del modelo Shapiro-Keyser a ciclón subtropical, en pleno invierno austral (estación desfavorable climatológicamente para transiciones subtropicales). El estudio responde cuatro preguntas: (a) ¿qué forzó la ciclogénesis extratropical?, (b) ¿qué mecanismos generaron los rasgos Shapiro-Keyser?, (c) ¿alcanzó fase tropical (como sugirió la NOAA) o solo subtropical (como clasificó la Marina brasileña)?, y (d) ¿qué procesos impulsaron la transición subtropical? Combina diagnóstico con reanálisis ERA5 y experimentos numéricos de sensibilidad con el modelo WRF.
+
+2. METODOLOGÍA
+- Diagnóstico: ERA5 (0.25°), seguimiento por mínimo de MSLP cada 6 h; Cyclone Phase-Space (CPS, Hart 2003) con umbrales adaptados para ciclones subtropicales del Atlántico Sur (B<25 m, -VTL<-10, -VTU>-50, siguiendo Gozzo et al. 2014 y de Jesus et al. 2021a); secciones verticales de temperatura potencial equivalente, viento y vorticidad potencial; función frontogenética (Petterssen/Schultz et al. 1998).
+- Experimentos numéricos: modelo WRF (v3.8), dos configuraciones: CTRL (física completa) y NOFLUX (flujos turbulentos de calor superficiales apagados), ambas forzadas por ERA5.
+- Datos adicionales: temperatura de brillo IR (GridSat-B1) para seguir la actividad convectiva asociada al ciclón.
+
+3. HALLAZGOS CLAVE
+- El ciclón evolucionó de extratropical (patrón T-bone, fractura frontal, seclusión cálida — modelo Shapiro-Keyser) a subtropical únicamente, sin alcanzar fase tropical, confirmando la clasificación de la Marina brasileña frente a la etiqueta de "tormenta tropical" de la NOAA (basada solo en apariencia satelital, técnica de Dvorak).
+- El experimento CTRL reproduce trayectoria, presión central y diagrama CPS muy similares al ERA5; el experimento NOFLUX simula un sistema notablemente más débil, de vida más corta, sin el desplazamiento hacia el noreste y sin transición subtropical (los parámetros CPS permanecen extratropicales durante todo el ciclo de vida).
+- El 28 de junio, el viento medio a 10 m superó 16 m/s en ERA5, 14 m/s en CTRL y no superó 12 m/s en NOFLUX, cuantificando el papel de los flujos turbulentos de calor en la intensificación.
+- CTRL simula un incremento de ~300 W/m² en los flujos totales de calor superficial entre el 27 y 28 de junio, retroalimentando vientos de niveles bajos más intensos (mecanismo tipo WISHE).
+- El calentamiento diabático en CTRL debilita el núcleo frío de niveles medios-altos del cut-off, favoreciendo la seclusión cálida; en NOFLUX el cut-off permanece más frío e intenso, impidiendo dicha seclusión.
+- Mecanismo propuesto: el cut-off de niveles medios-altos genera un entorno de bajo cizallamiento vertical que organiza la convección alimentada por los flujos turbulentos de calor mar-atmósfera, intensificando la seclusión cálida, profundizando la presión superficial e incrementando el viento de niveles bajos.
+
+4. RELACIÓN CON TU TESIS
+Se cita en múltiples capítulos con funciones distintas:
+- Cap01-Introducción (L37, L40, L61): sustenta que en la región SBR "\citet{reboita2022from} documentan frecuentes sistemas híbridos y transiciones tropicales", y que "la advección de aire cálido y húmedo en el flanco oriental del ciclón... actúa como una fuente diabática que, al liberar calor latente, refuerza la intensidad del sistema" — reflejo directo del mecanismo WISHE/retroalimentación de calor latente hallado en el paper.
+- Cap02-Fundamentación (L14, L90): cita el hallazgo de que "la supresión de los flujos de calor latente altera la estructura térmica y la intensidad del vórtice estudiado" (comparación CTRL vs NOFLUX), y ancla terminológicamente "la región SBR (referida como RG1 en \citet{reboita2022from})".
+- Cap04-Viento (L208): junto con schultz2021antecedents y shapiro1999bridge, sustenta que la seclusión cálida rodeada por un anillo de vientos es el rasgo evolutivo característico del modelo de Shapiro-Keyser.
+- Cap05-Precipitación (L200): cita el mecanismo por el cual "el calentamiento diabático reduce el cizallamiento vertical del viento y facilita el alineamiento entre los sistemas de niveles bajos y altos, consolidando la seclusión cálida" — usado directamente para interpretar los propios composites de precipitación en la fase de decaimiento de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Reboita (UNIFEI), junto con Gozzo, Crespo, de Jesus y da Rocha (USP), articula en este paper el marco climatológico RG1/RG2/RG3 (de reboita2010south/reboita2018extratropical) con la línea de investigación en ciclones subtropicales liderada por Gozzo (Gozzo et al. 2013, 2014) y de Jesus, aplicando el Cyclone Phase Space de Hart (2003) y experimentos de sensibilidad con WRF. El mecanismo diabático/de flujos turbulentos de calor que en reboita2018extratropical se explora a escala climatológica/de proyección, aquí se demuestra a nivel de proceso físico para un caso individual sin precedentes documentados en el Atlántico Sur.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un estudio de caso único (n=1); los propios autores lo enmarcan explícitamente como "sin precedentes" (ningún otro ciclón subtropical documentado en el Atlántico Sur se originó de una seclusión cálida tipo Shapiro-Keyser), lo que limita la generalización climatológica del hallazgo.
+- El experimento NOFLUX es una prueba de sensibilidad idealizada/extrema (eliminación total de los flujos), no un escenario realista; aísla el mecanismo pero no cuantifica rangos de sensibilidad realistas.
+- No se probaron configuraciones alternativas de esquema de capa límite o resolución en WRF, por lo que la magnitud exacta del efecto (más allá de su existencia) podría depender de esas elecciones.
+- Los propios autores señalan que la ruptura de onda de Rossby (RWB) es solo una de varias explicaciones posibles para la formación del cut-off, y que "otros mecanismos... merecen ser investigados en un trabajo futuro".
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué demuestra el experimento NOFLUX y por qué es relevante para tu tesis? R: Al apagar los flujos turbulentos de calor en WRF, el ciclón simulado resulta más débil, de vida más corta y no logra ni la transición subtropical ni el desplazamiento hacia el noreste — evidencia causal (no solo correlacional) de que los flujos de calor superficie-atmósfera son decisivos para la intensificación, lo cual sustenta el mecanismo diabático usado para interpretar los composites propios de viento y precipitación.
+- P: ¿El ciclón Raoni llegó a fase tropical? R: No; el CPS y las secciones verticales muestran que solo alcanzó la fase subtropical, coincidiendo con la clasificación de la Marina brasileña y contradiciendo la clasificación de tormenta tropical de la NOAA (basada solo en apariencia satelital).
+- P: ¿Es generalizable el mecanismo de Raoni a todos los ciclones de SBR? R: No necesariamente; es un caso único e inédito (única transición subtropical documentada a partir de un ciclón Shapiro-Keyser en el Atlántico Sur), por lo que su valor es mecanístico/cualitativo y no climatológico.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/reboita2022from.md

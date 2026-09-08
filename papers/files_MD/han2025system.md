@@ -1,0 +1,2585 @@
+RESEARCH ARTICLE The System for Classification of Low‐Pressure Systems
+10.1029/2024JD041287 (SyCLoPS): An All‐In‐One Objective Framework for
+Large‐Scale Data Sets
+KeyPoints:
+• Thefirstall‐inclusivelow‐pressure
+system(LPS)detectionandclassifica- YushanHan1 andPaulA.Ullrich1,2
+tionframeworkforclimatedataand
+modeloutputsisproposed 1DepartmentofLand,AirandWaterResources,UniversityofCalifornia,Davis,Davis,CA,USA,2DivisionofPhysical
+• Theframeworksubstantiallyextends
+andLifeSciences,LawrenceLivermoreNationalLaboratory,Livermore,CA,USA
+LPStracklengthswhileimproving
+tropicalcyclonedetectionskill
+• Theframeworkisusefultostudythe Abstract Weproposethefirstunifiedobjectiveframework(SyCLoPS)fordetectingandclassifyingall
+frequency,structure,development,
+windimpact,andprecipitation typesoflow‐pressuresystems(LPSs)inagivendataset.Weusethestate‐of‐the‐artautomatedfeaturetracking
+contributionofeachtypeofLPS softwareTempestExtremes(TE)todetectandtrackLPSfeaturesgloballyinERA5andcompute16parameters
+fromcommonlyfoundatmosphericvariablesforclassification.APythonclassifierisimplementedtoclassify
+SupportingInformation: allLPSsatonce.Theframeworkassigns16differentlabels(classes)toeachLPSdatapointanddesignatesfour
+SupportingInformationmaybefoundin differenttypesofhigh‐impactLPStracks,includingtracksoftropicalcyclone(TC),monsoonalsystem,
+theonlineversionofthisarticle.
+subtropicalstormandpolarlow.Theclassificationprocessinvolvesdisentanglinghigh‐altitudeanddrierLPSs,
+differentiatingtropicalandnon‐tropicalLPSsusingnovelcriteria,andoptimizingforthedetectionofthefour
+Correspondenceto: typesofhigh‐impactLPS.AcomparisonofourlabelswiththoseintheInternationalBestTrackArchivefor
+Y.Han,
+ClimateStewardship(IBTrACS)revealedanoverallaccuracyof95%indistinguishingbetweentropical
+yshhan@ucdavis.edu
+systems,extratropicalcyclones,anddisturbances.SyCLoPSproducesabetterTCdetectionskillcomparedto
+thepreviousalgorithms,highlightedbyanapproximately6%reductioninthefalsealarmratecomparedtothe
+Citation:
+previousTEalgorithm.Theverticalcrosssectioncompositeofthefourtypesofhigh‐impactLPSwedetecteach
+Han,Y.,&Ullrich,P.A.(2025).The
+systemforclassificationoflow‐pressure showsdistinctstructuralcharacteristics.Finally,wedemonstratethatSyCLoPSisvaluableforinvestigating
+systems(SyCLoPS):Anall‐in‐one variousaspectsofLPSsinclimatedata,suchastheevolutionofasingleLPStrack,patternsofLPSfrequencies,
+objectiveframeworkforlarge‐scaledata
+andprecipitationorwindinfluenceassociatedwithaparticularLPSclass.
+sets.JournalofGeophysicalResearch:
+Atmospheres,130,e2024JD041287.
+https://doi.org/10.1029/2024JD041287 PlainLanguageSummary Wecreateanewobjectiveframework(SyCLoPS)thatcandetect,track,
+andcategorizedifferentkindsofcyclones(low‐pressuresystems)indatasets.Weuseanadvancedsoftware
+Received2APR2024 calledTempestExtremestospotcyclonesgloballyinERA5reanalysisandthenuseaPythonprogramtosortall
+Accepted16DEC2024
+cyclonesinto16differentgroupsbasedontheircharacteristics.Wealsoidentifyfourtypesofsignificant
+cyclonetracks:tracksoftropicalcyclones,monsoonalsystems,subtropicalstorms,andpolarlows.The
+frameworkcanrecognizecyclonesoverhigh‐elevationareasanddrycyclones.Itcanalsoefficientlyseparate
+tropicallow‐pressuresystemsandextratropical(non‐tropical)systemsusinganovelmethod.Wecompareour
+resultsagainstexistingcatalogsandfindthattheframeworkproducesobjectivelytrackedtropicalcyclonesthat
+bettermatchtheobservations,andthelabelsgivenbytheframeworkareingoodagreementwiththosegivenin
+thesubjectivecatalogs.Wealsoshowthedistinctverticalstructuresforthefourtypesofsignificantcycloneswe
+identify.Finally,wedemonstratethatSyCLoPScanhelpusunderstandvariousaspectsoflow‐pressuresystems
+inclimatedata,likehowtheyevolveovertime,wheretheyoccurmorefrequently,andtheirrelatedextreme
+weather.
+1. Introduction
+Inresponsetothegrowingneedforadvancedimpacts‐relevantmodelandclimatedataanalysis,objectivefeature
+detectionhasemergedasakeytoolfordetectingandtrackingvariousmeteorologicalfeaturesinlarge‐scaledata
+sets.Researchersgiveconsiderableattentiontodetectingandtrackinglow‐pressuresystems(LPSs),orcyclones,
+which are often drivers for high‐impact weather including high winds and extreme precipitation. Some more
+©2025.TheAuthor(s).
+significantLPSs,suchastropicalcyclones(TCs),monsoonlows(MLs)ormonsoondepressions(MDs),sub-
+Thisisanopenaccessarticleunderthe
+termsoftheCreativeCommons tropicalcyclones(SCs),andextratropicalcyclones(EXs),arecommonlytrackedusingspecializedtrackingal-
+AttributionLicense,whichpermitsuse, gorithms in reanalysis and climate model outputs to derive their climatology and perform climate projections
+distributionandreproductioninany
+(e.g.,Guishardetal.,2009;Hurley&Boos,2015;Neuetal.,2013;Robertsetal.,2020a,2020b).Tropical‐like
+medium,providedtheoriginalworkis
+properlycited. cyclones(TLCs)refertothosestormsinthesubtropicsandthepolarregionsthatsharemanysimilaritieswith
+HANANDULLRICH 1of31
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+TCs,includingMediterraneanhurricanesandpolarlows(PLs).Theyarecapableofproducingsignificantcoastal
+hazards (Toomey et al., 2022), but more rigorous automated tracking has only occurred relatively recently
+because of advances in model resolution and observations (e.g., Flaounas et al., 2023; Stoll, 2022; Stoll
+etal.,2018;Zhangetal.,2021).
+TempestExtremes(TE;Ullrich&Zarzycki,2017;Ullrichetal.,2021)isanall‐inclusive,state‐of‐the‐artauto-
+matedLagrangianfeaturetrackingsoftwarepackage.Itisdesignedtorobustlyandefficientlydetect,track,and
+analyzeanynodalorarealfeaturesinlarge‐scaledatasetswithuser‐friendlycommandlinesandusingparal-
+lelizedC++.TEhasbeenoptimizedforTCdetectionusinggeopotentialthicknessandmeansealevelpressure
+(MSLP)closedcontourcriteria(Zarzycki&Ullrich,2017).Bourdinetal.(2022)foundthatTCdetectionusing
+TEoutperformsothermethodsforthereanalysisdatasetERA5(Hersbachetal.,2020).Vishnuetal.(2020)used
+TEtotrackmonsoonalsystems(MSs),whichincludesMLsandMDs,intheNorthIndianOceanacrossdifferent
+reanalysisproducts,andobservedhighsuccessrates.TE'sdetectorhasalsobeencombinedwiththecyclonephase
+space(CPS)ofHart(2003),whichclassifiesstormsbasedonthermalwindandthermalasymmetryparameters.
+Forexample,Zarzyckietal.(2017)usedTEandCPStotrackbothTCsandpost‐TCs/EXsbasedonLPSs'thermal
+structure,anddetectextratropicaltransition.Zhangetal.(2021)usedasimilarapproachtodetectMediterranean
+hurricanes.
+AlthoughTE'salgorithmsarepowerfulforLPSdetection,whenappliedstandaloneitgenerallyneedstoadopt
+strict criteria to avoid mischaracterizing features. Unfortunately, this issue is unavoidable when using any
+specialized method, and controlslike seasonality,topographical masks, and latitudinalbounds arerequired to
+avoidpollutingthedatasetwithincorrectdetections(i.e.,falsealarms).Forexample,TE'sTCdetectionalgorithm
+enforces a 50° highest latitude and a 150 m2s−2 highest surface geopotential limit on detected LPS tracks.
+Another popularTC trackalgorithm TRACK requires TC tracks to start between 30°S and 30°N (K. Hodges
+etal.,2017).Vishnuetal.(2020)trackedMSsonlybetweenJuneandSeptemberandinpartsoftheNorthIndian
+Ocean, further requiring detected LPSs to maintain at least 24 hr offshore. Stoll (2022) tracked PLs by first
+excludingtracksoutsideofthe30–80°bandofbothhemispheresandexcludingfeaturesoverdefinedopenwater
+regions.Sincetheaforementionedalgorithmsarealldesignedforsingle‐typeLPSdetection,theyalsoneedto
+filterothertypesofLPStracksorothertypesofLPSnodes(datapoints)inadetectedtrackthatdon'tmeetthe
+specifiedcriteriaandthresholds.Withtheselimitations,featurestrackedbytheexistingalgorithmsoftenendor
+breakabruptlyandareshorterinlengththananalogsinmanuallytrackeddatasets.Consequently,information
+from the complete LPS lifespan is not available. While the CPS approach can classify the thermal structure
+evolutionofanLPSthroughoutitslifetime,itisnotdesignedforbroaderLPSclassification,asdifferenttypesof
+LPSoftensharesimilarthermalstructures.Forexample,matureTCs,somepost‐TCs,EXsexperiencingwarm
+seclusionandsomesubtropicalorhybridcyclonescanallbecategorizedasshallowordeepsymmetricwarm‐core
+systems according to the CPS (Hart, 2003). Conversely, cold‐core systems are ubiquitous across latitudes, as
+evidencedbytheprevalenceoflow‐levelcoldcoresinmanyweaktropicalsystems(Hopschetal.,2010;Hunt
+etal.,2016;Reedetal.,1977).Hence,warm/coldcorecriteriaarelikelyinsufficienttoeffectivelyclassifyglobal
+LPSs.
+Instead of trying to develop multiple specialized trackers, we propose a new objective framework, called the
+SystemforClassificationofLow‐PressureSystems(SyCLoPS),todetect,track,andclassifyalldetectableLPSs
+worldwide at once, without any spatial or seasonal limitations. We test our framework in ERA5, and focus
+exclusivelyonsurface‐levelLPSs(soupper‐leveldisturbancesandlowsareoutofourscope).Thedetectionand
+trackingarecompletedusingTEcommands,andtheclassificationisdoneinaseparatePythonclassifierthat
+assigns 16 different types of LPS labels/classes (TC, ML, EX, SC, PL, etc.) and 4 types of high‐impact LPS
+tracks,whichareTCTrack,MSTrack,andtwotypesofTLCTracks(subtropicalTLC(STLC)andPLtracks).
+The classification process is based primarily on conventional definitions and physical (dynamical/thermody-
+namic) nature of different LPSs, and is simplified to the extent possible. The atmospheric variables used for
+classificationarecommonlyfoundinreanalysisandclimatemodeloutputsandtheparametersusedtoclassify
+LPSs can be directly computed by TE for each detected LPS node. Basic machine learning techniques and
+mathematical optimization are used to refine our thresholds against archives of observed and subjectively
+identifiedLPSs.Theresultingframeworkinvolvesonlythresholdsonbasicmeteorologicalfieldsandincludesno
+“blackbox”elements.
+HANANDULLRICH 2of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Table1
+InitialismTableforLow‐PressureSystemTypesandDetectionSkillMetrics
+Initialism Fullterm Definition
+HAL High‐altitudeLow LPSsfoundathighaltitudeswithoutawarmcore
+THL Thermallow Shallowsystemsfeaturingadryandwarmlowercore
+HATHL High‐altitudeThermalLow LPSsfoundathighaltitudeswithawarmcore
+DOTHL Deep(Orographic)ThermalLow Non‐shallowLPSsfeaturingadryandwarmlowercoredrivenbytopography
+TC TropicalCyclone LPSsthatwouldbenamedinIBTrACS
+TD TropicalDepression DefinedinSection4.2
+TLO TropicalLow Non‐shallowtropicalsystemsthatfallshortofTDrequirements
+MD MonsoonDepression TDsdevelopinginmonsoonalenvironment.AlsodenotedasTD(MD)
+ML MonsoonLow TLOsdevelopinginmonsoonalenvironment.AlsodenotedasTLO(ML)
+MS MonsoonalSystem MonsoonLPSs(MDsplusMLs)
+TLC Tropical‐LikeCyclone Non‐tropicalLPSsthatresembleTCs
+SS(STLC) SubtropicalStorm(SubtropicalTropical‐LikeCyclone) TypeofTLC.DefinedinSection2
+PL(PTLC) PolarLow(PolarTropical‐LikeCyclone) TypeofTLC.DefinedinSection2
+SC SubtropicalCyclone DefinedinSection4.3
+EX ExtratropicalCyclone Mosttypicalnon‐tropicalcyclones
+DS Disturbance ShallowLPSsorwaveswithweaksurfacecirculations.DSD,DSTandDSEaredry,
+tropicalandextratropicalDSs
+QS Quasi‐stationary LPSsthatstayrelativelylocalized
+HR/FAR/IR HitRate/FalseAlarmRate/InfrequencyRate DefinedinSections5.1and5.3
+HRMFAR HitRateMinusFalseAlarmRate TCdetectionskillmetric.SeeSection5.1
+CSI CriticalSuccessIndex MSdetectionskillmetric.SeeSection5.2
+HRMIR HitRateMinusInfrequencyRate TLCdetectionskillmetric.SeeSection5.3
+ThenewframeworkproducesconsiderablylongerLPStracksbecauseofthelowdetectionthresholdwechoose.
+ThelabeledLPSnodesarealsodirectlycomparabletothesubjectiveLPSstatus(labels)intheInternationalBest
+TrackArchiveforClimateStewardship(IBTrACS)(Knappetal.,2010).Labeledtracksarealsocomparableto
+othersubjectiveTC,MS,andTLCtrackcatalogs.Whencomparedtothesecatalogs,theframeworkmaintainsor
+improves on the LPS detection skill of the specialized trackers (under a variety of metrics) without imple-
+mentation of the aforementioned restrictions. For example, other TC detection frameworks will often pick up
+somestrongerwarm‐coreextratropicalorsubtropicalsystemsthatwerenotrecordedinIBTrACSeveniflat-
+itudinalboundswereenforced(Bourdinetal.,2022).Thenewalgorithmaddressesthisproblem,leadingtoa
+noticeableincreaseinTCdetectionskillwithoutfurtherpost‐processing.
+Themanuscriptisstructuredasfollows.Section2summarizesallthedatasetsweusetoverifyourclassification
+thresholdsandquantifyLPSdetectionskill.Sections3–5explainthegeneraldetectionandclassificationpro-
+cessesandjustifyeachoftheconditionswesetforclassification.InSection6,weincludesomehighlightsfrom
+theclassifiedLPScataloganddiscusspotentialapplicationsoftheSyCLoPSframework.Section7concludesthe
+paperandaddressesknownlimitations.Forthereaders'convenience,Table1summarizedalltheinitialismsand
+definitionsofLPStypes(classes)anddetectionskillmetricsweuseinthisarticle.
+2. Data
+We detect, track, and classify LPSs from 1979 to 2022 in ERA5 at 3‐hourly frequency. ERA5 is used for
+developingSyCLoPSsinceweincludedetectionofsmallormesoscalefeatureslikeearly‐stageTCsandTLCs,
+whichrequirereanalysiswithfinerdataresolution.AlthoughSyCLoPSisdevelopedusingERA5,itusesasmall
+numberofcommonlyoutputmeteorologicalfieldsandsoisintendedtobeapplicabletootherglobalorregional
+meteorologicaldatasets.AlistofERA5variablesusedinSyCLoPSisgiveninAppendixA.Sinceclimatemodel
+dataoftenhaveadifferentformatandfrequency,andmaybemissingsomeoftheERA5variablesusedtodevelop
+HANANDULLRICH 3of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+SyCLoPS,weperformadaptationexperimentsonSyCLoPSusingalternativeERA5fieldstodemonstratehow
+SyCLoPS could be adapted to climate model outputs (Appendix B). The results show that SyCLoPS can be
+slightlymodifiedtoadapttoavarietyofdataformatswhilemaintaininggoodperformance.
+Bydesign,SyCLoPSusesTE'sclosedcontourcriteriatocomputemanyofitsclassificationparameterssincethe
+closedcontourcriteriaislargelyinsensitivetomodelresolution(Ullrich&Zarzycki,2017).TE'sclosedcontour
+criteriausesgraphsearchtoensurethatallpathsalongtheunstructuredgridfromafield'slocalmaximum(or
+minimum)decrease(orincrease)beforereachingaspecifiedgreat‐circledistance(GCD).Forexample,apositive
+closed contour in MSLP with delta MSLP (ΔMSLP) uses graph search to ensure that all paths along the un-
+structured grid from a local minimum (MSLP ) pass through a node with value greater than or equal to
+0
+MSLP + ΔMSLPbeforereachingthespecifiedGCD.
+0
+Fourtypesofhigh‐impactLPSwedetect,whichincludesTCs,MSsandtwotypesofTLCs,areverifiedagainst
+foursubjectivedatasetstoevaluatedetectionskill.TCsareverifiedagainstthewidelyusedIBTrACSdataset.
+Specifically, we verify against 3510 main‐type tracks from 1979 to 2021 inclusive that meet the minimum
+requirementforaTCtobeconsideredformedandnamedbyglobalagencies—withpeakwindspeedsofatleast
+34knots(17.5ms−1).Hence,TCdetectioninSyCLoPSfollowsthesamedefinitionastheagencies.Wereferto
+this subset of IBTrACS as IB‐TC. For MSs, we use the Sikka archive Sikka (2006) for verification, which
+providesmanually‐identifiedNorthIndianOceanmonsoonalsystempositionsonhistoricsurfaceweathermaps
+atdailyfrequency,digitizedbyHurleyandBoos(2015).
+InSyCLoPS,weregardsubtropicalstorms(SSs)andpolarlows(PLs)asTLCsthatdevelopinthesubtropicsand
+thepolarregions.Hence,theycanalsobedenotedasSTLCsandpolarTLCs(PTLCs).Fewsubjectivedatasets
+areavailableforthesetwotypesofTLCs.SSsareregardedasthemoreintensesubtropicalorhybridcyclonesthat
+carryatleastgale‐forcesurfacesustainedwinds(Guishardetal.,2009;NationalHurricaneCenter,n.d.).Med-
+iterraneanTLCs(hurricanes)maybeviewedasbeingamongglobalSSs,andtheyareperhapsmostwellstudied,
+withrelativelymoreobservationaldataavailable.However,existingsubjectivedatasetsforthosestormsarestill
+veryincomplete.ToreconstructamorecrediblesubjectivearchiveforMediterraneanTLCs(representingSSs),
+weobtainthesubjectivelytrackeddatafromFlaounasetal.(2023),whereintrainedmeteorologistsidentifyand
+trackMediterraneancyclones,includingTLCsandothernoticeablesystemsintheregion,usingERA5'sMSLP
+field.WethenusethecycloneinformationtableprovidedinFlaounasetal.(2023)andtwoonlinesources(see
+DataAvailabilityStatementsection)toselecttracksthatcanbepotentiallyclassifiedasSSs(asdefinedabove),
+whileavoidingweakersystems.WealsoobservethatIBTrACScontainsafewsubtropicalstormrecords,which
+agenciestendtorecordwhentheyhavethepotentialtotransformintoTCs.However,theserecordsarelargely
+incompleteandcanoftenbeconfusedwithweakerTCs,sowedonotseparatethemfromtheTCarchiveand
+includethemintheSSarchive.
+We verify PL detection against the well‐known and widely‐used STARS (sea surface temperature (SST) and
+AltimeterSynergyforImprovedForecastingofPolarLows)dataset(Noeretal.,2011).ThissubjectivePLdata
+setisconstructedbasedonthefrequentlycitedPLdefinitionfromRasmussenandTurner(2003)—“Apolarlowis
+asmall,butfairlyintensemaritimecyclonethatformspolewardofthemainbarocliniczone(thepolarfrontor
+othermajorbarocliniczone).Thehorizontalscaleofthepolarlowisapproximatelybetween200and1,000km
+and surface winds near or above gale force.” STARS contains 185 polar lows subjectively identified by the
+Norwegian Meteorological Institute from 2002 to 2011 in parts of the Nordic Seas, based on synoptic‐scale
+analysis in their weather model and satellite infrared data. There exists other less popular subjective PL data
+setsthatrecordsubstantiallymorePLs,includingmanyLPSsub‐centersinmulti‐centerPLcases,foundinthe
+sameregionusingdifferentsatellitedata(Stoll,2022).ThisimpliesthereisambiguityinthePLdefinition,likely
+aggravatedbyalackofnear‐surfaceobservationsforaccurateevaluations.Itshouldalsobenotedthatamodel/
+dataresolutionascoarseasERA5maysimplybeincapableof“seeing”somesmallormulti‐centeredTLCcases,
+regardlessofthedetectioncriteriaapplied.Forexample,Stoll(2022)reportedthatonly61%–81%ofPLsinthe
+existingPLdatasetshaveamatchedLPStrackinERA5.
+InourobjectivelytrackedLPSdataset,wematchourtrackstothetracksineachsubjectivedatasetusingdifferent
+matchingalgorithms,describedTextS1inSupportingInformationS1.ToavoidmisclassificationofMSs,wealso
+use an objectively tracked North Atlantic easterly wave (EW) data set (Lawton et al., 2022) to construct a
+HANANDULLRICH 4of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+correspondingsurfaceLPSdataset(alsoseeTextS1inSupportingInformationS1).ThesematchedTC,MS,SS,
+PL,andEWdatasetsarelaterusedintheclassificationanddataanalysisprocess.
+3. The Overall Workflow
+MSLP is the starting point for our LPS node detection. Although prior research has also employed 850 hPa
+vorticityorstreamfunctionfieldstodetectmonsoonLPSsandothercyclones(e.g.,K.I.Hodges,1994;Hurley&
+Boos,2015;Vishnuetal.,2020),weconsider MSLPapreferablevariablefortworeasons:(a)localminima/
+maxima of MSLP are widely used in meteorological agency operations to locate surface pressure systems,
+including LPSs in IBTrACS; and (b) there is a global agency consensus on the definition of MSLP (Knapp
+etal.,2010).Further,low‐levelvorticityorstreamfunctiondatamaynotbedirectlyavailableinmanydatasets
+when intersecting with the surface, and they have opposite signs for cyclonic systems in the Northern and
+SouthernHemispheres,whichcouldleadtotracksacrossequatorialregionsbecomingdisconnectediftheyarenot
+detected and tracked twice using different signs. These factors all contribute to the computational burden of
+detectingLPSsgloballywithoutspatiallimitations.
+MSLPsignalsmaybegenerallyweakerinthetropics,whichmakesitdifficulttodifferentiatesomeweakerLPSs
+associatedwithtropicalwaves.Tocapturethesefeaturesinthetracker,wehaveaimedforthelowestreasonable
+detectionthreshold.Withthisinmind,anLPSnode(center)isflaggedatalocalminimumMSLPiftheMSLP
+valueislowerthanitssurroundingbyatleast10Pa(0.1hPa)within5.5°GCDfromthenode(a10‐Padelta
+positive closed contour criterion). Although we find this is an extremely low threshold, very weak EWs
+(particularlythoseoverland)thatdon'thavetheminimalsurfaceclosedMSLPcontourwillnotbedetected.
+ThefirststeptakenbyTEispointwisedetectionofLPSnodes.BesidestheMSLPclosedcontourcriterion,we
+alsorequirethatnodalcandidateslocatedwithin6°GCDofeachothermergeintoasinglenode,preservingthe
+onewiththelowestMSLPvalue,whichalignswiththespecificationinZarzyckiandUllrich(2017).Thesecond
+step in TE connects consecutive nodes in timeand form LPS tracks, which requires tuning argument specifi-
+cationsinTEtomeetthefollowingcriteria:
+1. LPSsmustatleastsustainforatimespanof18hrtoavoidtoomanyweak,short‐lived,diurnallows.
+2. Nodalcandidatesintwoconsecutivetimestepsmustbelocatedwithin4°GCDdistanceofeachother.This
+specificationischosenbasedonthefactthatthetranslationspeedofthefastestEXsrarelygoover40ms−1,or
+about140kmperhour(Bernhardt&DeGaetano,2012;Lodiseetal.,2022).
+3. Amaximumallowablegapof12hrwithinatrackisimplemented.Alongergaptimeisnotpreferredbecauseit
+mayincludetoomanyweakdiurnallows.
+4. ToexcludenegligibleLPSs,atrackmustcontainatleast5timestepsduringwhichtheMSLPattheLPSnode
+is100Palowerthanitssurrounding(withina5.5°GCDfromthenode).
+Atotalof7,781,105datapoints(nodes)and379,301distincttracksareidentifiedinthe44‐yearperiodfrom1979
+to2022.Thewholetrackingprocesstakesabout2hrusing2NERSCPerlmutternodes(eachwith128threads).
+Duringthefirsttwosteps,TEalsoconvenientlycomputes15parameters(datacolumns)frominputvariablefields
+and outputs them to each node in the detected LPS tracks. In the third step of TE, we prepare the data for
+computing the LPS size parameter (LPSAREA) by running additional TE commands. After completing TE
+procedures, a Python classifier script is implemented to first compute LPSAREA and form the input (LPS)
+catalog for classification, structured in accordance with our catalog column table in Appendix C. The input
+catalogincludesalistof16parametersthatareusedthroughouttheclassificationprocessexplainedbelow.The
+PythonclassifierthenclassifieseachLPSnodebasedonconditionsonthoseinputparametersandassignsthem
+labelsfromthe16distinctclasses,followingtheworkflowillustratedintheaccompanyingflowchart(Figure1).
+Wecalltheoutputofthisclassificationworkflowtheclassified(LPS)catalog.Thestructureofthiscatalogcan
+alsobefoundinAppendixC.PleaserefertoTextS5inSupportingInformationS1forabriefexplanationforthe
+selectionofthespecificationsintheparametersusedintheinputcatalog.TEcommandsusedtoimplementthe
+frameworkareprintedTextS6inSupportingInformationS1.TherequiredTEandPythonscriptfiles,bothLPS
+catalogs, and a manual for using SyCLoPS data are all uploaded to Zenodo (see Data Availability Statement
+section).
+Mostofthecriteriachosenforclassificationofthesesystemsarelargelyinsensitivetoclimatechangebecause
+theyarebasedonconventionaldefinitions(thenatureofLPSs)andsubjectivedatasets.Namely,anamedtropical
+HANANDULLRICH 5of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure1. Adepictionofthelow‐pressuresystem(LPS)classificationworkflow.Theworkflowbeginsinthetop‐left.Acompletelistofparametersisgivenin
+AppendixC,andacompletelistofconditionsisprovidedinAppendixD.Sectionnumbersarenotedinthefigurebeloweachconditiontoindicatewheredetailscanbe
+foundinthetext.LPSfullnamesandshortlabelsgivenbySyCLoPS'soutput(theclassifiedcatalog)aredenotedinred.
+cyclonewillalwayshaveadeepwarmcore,developinalow‐shearenvironment,andsatisfyacertainintensity
+threshold in all climates. Other important criteria that are potentially more sensitive to global warming are
+justifiedinthenextsection.
+NotethatweusetheLPScatalogsmainlyforthepurposeoftestingourclassificationconditionsforclassifyingall
+16LPSclasses,withanemphasisonTCs(sincetheyarethemostinfluentialandwell‐documentedtypeofLPS).
+Hence,theprovidedcatalogsmaynotbethemostcomprehensiveglobalLPSdatasetforcertainfeatures,aswe
+filteroutnumerousveryweaksystemsanddonotincludethesmallestandmostshort‐livedsystemsthatarelikely
+tobepoorlyrepresentedinERA5data.Ourdetectionspecificationsshouldbeenoughforgeneralhigh‐impact
+LPSs;however,someverysmallandshort‐livedbutdetectablehigh‐impactsystems,suchascertainPLs,can
+bemissedbecauseoftheratherlargenodemergingdistance(6°GCD),the18hrminimumtimerequirement,or
+the3‐hourlydetectionrate.Forthesecases,usersmayselecttheirownregionsandLPSfeaturesofinterestand
+runTEcommandswithalternativespecificationsbeforeperformingclassification.Weprovideonesuchexample
+TEcommandalternationfordetectingPLsintheNordicSeasTextS7inSupportingInformationS1.
+Figure1showstheLPSclassificationflowchart.Thechartflowsfromtoptobottomthroughfivemajorbranches
+todisentangleeachmajorclassofLPS.BoxeswithredtextsindicatethefinalLPSclassificationfullnamesand
+HANANDULLRICH 6of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+short labels. Details of the conditions applied in the flowchart can be found in Appendix D. The first branch
+(green)isthehigh‐altitudebranch,whereweapplythehigh‐altitudeconditiontoextractthoseLPSswithasurface
+elevation (ZS) higher than the 850 hPa geopotential height (Z850; typically around 1,500 m) from the input
+catalog,giventhatmostofthemoreinfluentialLPSsoccurataloweraltitude.Althoughnotasimportant,someof
+these high‐altitude lows can be major contributors to precipitation over or near plateaus (Li et al., 2019;
+Tucker,1999).Thesecondbranch(yellow)isthedrybranch.Inthisbranch,wesegregatethoseLPSsthathardly
+produceanyprecipitationduetotheirdrylow‐levelcirculation.Thisgenerallyincludesthermally‐drivenshallow
+thermal/heat low systems, which can affect local cold fronts and heat waves (Reeder et al., 2000; Spengler
+etal.,2005).Thirdisthetropicalbranch(blue),whichcontainsseveralimpactfulfeaturessuchasTCs,MDsand
+MLs.Atthislevel,theremainingunclassifiedLPSswillbedeterminedtobetropicalornon‐tropicalbasedonthe
+tropical condition described in Section 4.2. The fourth branch (purple) is the extratropical branch, where we
+segregateTLCs(SSsandPLs)andthendifferentiateSCsfromthemosttypicalEXs.Detailsoftheconditions
+usedintheclassificationprocesswillbediscussedfurtherinthenextsection.
+Thetrackconditionsfoundingrayinthebottom‐rightofFigure1areusedinthesecondstepoftheclassification
+inthePythonclassifier.Theyprovideadditionalusefulinformationforreferencepurposes,butdonotaffectany
+LPSnodelabelsassignedinthefirststep:ifatrackmeetsspecifictrackcondition(s)usingatimestepthreshold,
+thetrackwillbelabeledasoneormoretypesofthefourhigh‐impactLPStracksintheclassifiedcatalog.Wealso
+introducethequasi‐stationary(QS)trackconditionthatcanidentifythoseLPStracksthatarerelativelylocalized
+nearcoastlinesoronlandsothattheycanbefilteredoutorselectedwhenneeded.SeeTextS3inSupporting
+Information S1 for information on how we establish the QS thresholds. As there's no hard cut‐off between a
+tropicalandnon‐tropicalsystem,weadditionallyestablishthetransitionconditionalongwiththetropicalcon-
+dition to define a transition zone to address the ambiguity of the more hybrid and marginal tropical systems
+potentiallyundertransition.Forexample,in the“Tropical_Flag”columnoftheclassifiedcatalog,ifanyLPS
+nodemeetsthetropicalcondition(regardlessofwhetherotherconditionsaremet),thevalueinthiscolumnisset
+to1.
+AsshowninAppendixC,extratropicalandtropicaltransitioncompletion(denotedas“EXT”and“TT”)nodesare
+alsonotedin theclassifiedcatalogalongwithotherLPS trackinformation forreferencepurposes. Wedefine
+extratropicaltransitioncompletionnodesasthefirstLPSnodesalongthetrackwithanon‐tropicallabelafterthe
+lastTCnode,andtropicaltransitioncompletionnodesasthefirstTCnodebeforethelastnon‐TCnodeinTC
+tracksthatoriginateasanon‐tropicalLPSorwithinthetransitionzonedefinedinSection4.
+4. Justification for Classification Conditions
+4.1. High‐AltitudeandDryBranchConditions
+Inthehigh‐altitudebranch,weseparatetwoclassesbasedonthemid‐level/upper‐levelwarmcorecriterion.In
+this study,we use geopotential thickness to detect theexistence of warmcores, similar to the criteria used in
+ZarzyckiandUllrich(2017)fordetectingtheupper‐levelwarmcoreofTCs.ZarzyckiandUllrich(2017)sug-
+gested that geopotential thickness is more effective at detecting TCs in climate data than a single‐layer tem-
+peraturecriterionbecauseitbettercapturesthefullverticalstructureoftheupper‐levelwarmcore.Geopotential
+thicknessisalsoasmoothermeteorologicalfieldthatissubjecttolessdatanoisethansingle‐leveltemperature.
+LOWTKCC,MIDTKCC,andUPPTKCCarethenegativeclosedcontourcriteriaofthegeopotentialthickness
+between700hPaand925hPa,500hPaand700hPa,and300and500hPa,respectively,overa6.5°GCDfromthe
+maximumthicknesswithin1.0°GCDofanLPSnode.Hence,athresholdoflessthan0m2s−2 forthesethree
+criteriameansthatthethicknessnearthedetectedlocationisgreaterthanitssurroundings,indicatingthepresence
+ofawarmcoreofanLPS.Inthiscase,ifMIDTKCCorUPPTKCCislessthan0m2s−2,itindicatesthatahigh‐
+altitudeLPSiswarm‐coredatthoselevelsandmaybethermallydriven.Ifthisconditionismet,thelabel“High‐
+altitude Thermal Low (HATHL)” is used in the classified catalog; otherwise, the label “High‐altitude Low
+(HAL)”isused.
+ThedrynessconditiondetermineswhetheranLPSnodewillenterthedrybranch:Itrequiresthataverage850hPa
+relativehumidityovera2.5°GCD(RH850AVG)islessthan60%.Thisthresholdisdeterminedbythelowest
+track‐maximumRH850AVG(themaximumRH850AVGofallnodeswithinatrack)inthematchedPLandSS
+dataset,chosentopreventmisclassificationofsignificantnon‐tropicalsystemsintherelativelydriersubtropical/
+HANANDULLRICH 7of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure2. ERA5RelativeHumidity(RH)at100hPaduringanexampleofanextratropicaltransitioncase(Hurricane“Lee”of2023)at(a)onedaybeforetransition
+(b)duringtranistion,and(c)soonaftertransition.MSLPisshownusingblackcontours.NotethatRHat100hPacanexceed100%insomedatasets,reflecting
+supersaturation.
+extratropical regions. Additionally, 850 hPa relative humidity (RH) thresholds are also deemed insensitive to
+climatechangeasRHatthislevelgenerallyrespondsweaklytosurfacewarming,especiallyinpolarandtropical
+regions(Lau&Kim,2015;Merlisetal.,2024;Sherwoodetal.,2010).Therefore,weconsiderRH850AVGat
+60%asafethresholdtoseparatedryconvectivesystemsfrommoistconvectivesystems.Next,theLOWTKCC<
+0m2s−2 criterionisusedtoexamineLPSs'low‐levelwarmcores.Iftheconditionisnotmet,thenodewillbe
+classifiedasa“DryDisturbance(DSD)”inthecatalog;otherwise,wecheckthecycloniccondition.
+The cyclonic condition uses average 500 hPa relative vorticity over a 2.5° GCD radius (VO500AVG) to
+determineifanLPShascycloniccirculationbeyondmid‐level(i.e.,isshallow).Atypicalheatlowisconsidered
+to have a dry and warm low‐level (between 925 hPa and 700 hPa) core and is shallow (not extending over
+500hPa)innature(e.g.,Hoinka&Castro,2003;Lavaysseetal.,2009;Smith,1986).Hence,ifanLPSnodedoes
+notqualifyforthecycloniccondition,itwillbelabeledasa“ThermalLow(THL)”inthecatalog.However,some
+deeper THLs still emerge near elevated topography in the daytime, such as the type II southwest vortex in
+southwestChina(Fengetal.,2016),sotheremainingLPSsinthedrybrancharelabeled“Deep(Orographic)
+ThermalLows(DOTHL).”
+4.2. TropicalBranchConditions
+Thenextstepintheclassificationframeworkfocusesontropicalsystems.Traditionally,tropicalsystemssuchas
+TCshavebeenidentifiedusingawarm‐corecriterion(e.g.,K.Hodgesetal.,2017;Robertsetal.,2020a,2020b;
+Zarzycki & Ullrich, 2017). However, in the course of this work we found that this criterion is often satisfied
+outside of the tropics and leads to many false alarms in the classification. This observation motivated us to
+examineother fields. Wedonotconsider temperatureparameters sincetheycanbethermally‐forced bylocal
+topography, and various types of LPSs can exist over similar SSTs in the subtropical oceans in different
+dynamical and thermodynamic environments. Consequently, we found that maximum relative humidity at
+100hPawithin2.5°GCDofLPSnode(RH100MAX)ismorereliableandflexiblefordisentanglingtropicaland
+extratropicalsystemsasaproxyof“tropicality.”Therearetworeasonsthatphysicallygroundthischoice.First,
+RHat100hPaisdistinctlyhigherinthetropics.Thisisbecauseonlyinthetropicsisthetropopauseoftenfound
+above100hPa,asaresultofactivemoistconvection.RHishightherebecauseofthelowtropopausetemperature
+andpresenceofupper‐levelmoisture.RH100MAXalsodecreasessharplyinthesubtropics,reflectingthedy-
+namicsofthetroposphereandthetransitionbetweenthetropicsandsubtropicsneartheedgeoftheHadleycells
+(see Figure S1 in Supporting Information S1 for an illustration of the 1979–2022 global mean RH100MAX).
+Second,higherRH100MAXvaluesindicatethepresenceofdeepconvectionassociatedwithatropicalsystem,
+andsothisparameterissensitivetoextratropicaltransitionscenariosduringwhichitdecreasesrapidlywhileTCs
+graduallylosetheirdeepconvectivecoresandbecomepost‐tropical.
+To illustrate the behavior of RH100MAX during extratropical transition, we examine a recent extratropical
+transition case (2023 hurricane “Lee”) plotted with RH at 100 hPa in Figure 2. In Figure 2a, the system was
+embeddedinaregionofhigh‐level100hPaRHtwodaysbeforetransitioncompletion(between00and06UTC,
+Sep15)asdefinedbytheNationalHurricaneCenter.InFigure2b,lessthanonedaybeforetransitioncompletion,
+HANANDULLRICH 8of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+the surrounding RH had dropped as the hurricane enters the subtropics.
+However,a beltofhigher RH remains stretched outfromthedeep tropics,
+indicatingthesystem'sremaining“tropicality.”RH100MAXisstillover90%
+atthispoint,asindicatedbythebluishcolorwithinthe2.5°GCDcircle.In
+Figure 2c, hours after transition completion, we can see that the 100 hPa
+environment near the hurricane had become warm and dry, leading to a
+dramaticdecreaseinRH100MAX.
+In addition to RH100MAX, average environmental deep‐layer wind speed
+shearbetween200hPaand850hPaovera10.0°GCD(DEEPSHEAR)isalso
+used to distinguish tropical systems in the subtropics, especially during
+extratropicaltransition.Deep‐layershearisagoodphysics‐relatedindicator
+ofbaroclinicityoranunfavorableenvironmentfortropicaldeepconvection.
+Post‐TCs and general SCs/EXs primarily derive energy from baroclinic
+sourcesandareoftensurroundedbymuchmoreintensewindshearcompared
+totropicalsystems.
+Thetropical(andtransition)conditionwithRH100MAXandDEEPSHEAR
+isconstructedasfollows.First,weusetwoLPSnodeclustersthatarehardto
+distinguishifweweretouseaSST‐basedorwarm‐corecriteria.Onenode
+clusterconsistsofallthematchedtropicalsystemsrecordedinIBTrACSin
+thesubtropics(thetropicalcluster),andtheotherconsistsofpotentialsub-
+tropicalsystemsoverrelativelywarmSSTsthatarenotrecordedanywherein
+Figure3. KernelDensityEstimate(KDE)ontheRH100MAX‐
+IBTrACS (the subtropical cluster). Note that both clusters (especially the
+DEEPSHEARplaneforthetropicalclusterandthesubtropicalcluster.The
+KDElevelsare0.25,0.5,0.75,and0.9.Graydottedlinesindicatethe unverifiedsubtropicalcluster)willinevitablyincludesomemisclassifiedor
+classificationthresholdsdeterminedbythedecisiontreeclassifier. transitionalLPSs.Detailsofhowweselectthesetwoclusterscanbefoundin
+Text S2 in Supporting Information S1. We then apply the decision tree
+classifieroverRH100MAXandDEEPSHEARusingGiniindexsplittingcriteriatothenodesinthetwoclusters
+withatreedepthof2.ResultsinFigure3showthatthetropicalandsubtropicalclustersarebestdistinguishedbya
+minimumRH100MAXthresholdofabout20%(roundedofftothenearest5%)andamaximumDEEPSHEARof
+10ms−1,withabestaccuracyscoreofnearly80%.Theaccuracyscoresmentionedinthisarticlearethebest
+classificationaccuracyscoresadecisiontreemodelcanachievetocorrectlyclassifytwosetsofLPSsgivena
+groundtruth.WeperformasensitivitytestasdemonstratedTextS2andFigureS2inSupportingInformationS1.
+The result shows that these two thresholds are relatively stable and insensitive to the SST threshold used for
+selectingthesetwoclusters.TheelongatedoutercontoursofthetropicalclustertowardtheleftinFigure3are
+likelymadeupofsomeLPSsnearorafterextratropical/tropicaltransition(forreference,about5%oflabelsin
+IBTrACS are “Extratropical”), but also some “drier” tropical systems in drier or less convective basins. For
+example,whileonly6or0.6%ofWesternNorthPacificTCtrackshaveatrack‐maximumRH100MAXunder
+50%,94or17%ofTCtracksintheNorthAtlanticfallintothisrange,with24tracksfallingunder20%.According
+totheseresults,the20%thresholdwillserveastheminimumRH100MAXrequirementinthetropicalcondition,
+andthe10ms−1thresholdwillbetheminimumDEEPSHEARrequirementinthetransitioncondition,asstronger
+tropicalsystemscantolerateamuchgreaterDEEPSHEARvalue,suchasinmanyextratropicaltransitioncases.
+WealsonoticethatDEEPSHEARofsomeweakLPSsclosertotheequatorcanslightlyexceedthe10ms−1
+thresholdduetothetropicaleasterlyjet.Thecoresoftropicaleasterlyjetsat200hPaaremostcommonlyfound
+near5°Nto15°N(Lu&Ding,1989).Hence,weimposethatthetransitionconditionwillnotbetriggeredwhen
+anLPSiswithin15°latitudesoftheequator.
+TofindtheupperlimitofDEEPSHEARforthetropicalcondition,weselect883extratropicaltransitiontracks
+from the matched TC data sets whose pairs in IBTrACS have a “ET (Extratropical)” or “MX (Mixture, con-
+tradictingnaturereportsfromdifferentagencies)”labelfollowingthelast“TS(TropicalSystem)”labelinthe
+“NATURE”column,andherewedefinethetimeofthelast“TS”labelastheextratropicalcompletiontimeof
+eachextratropicaltrack.Thepre‐transitionclusterisdefinedbythosenodesthatare3–24hrbeforethetransition
+completion,andthepost‐transitionclusterismadeupofthosethatare3–24hraftertransitioncompletion.We
+applythedecisiontreeclassifierbasedonDEEPSHEARtofindtheboundarybetweenthetwoclusters.Withan
+accuracyscoreof65%,theresultsshowthattheoptimalDEEPSHEARthresholdtodistinguishthetwoclustersis
+HANANDULLRICH 9of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+around18ms−1.Theaccuracyscoreisnothigh,butitistobeexpected—mostTCsgraduallytransformintoEXs,
+suggestingpotentialsubjectivityintheirclassification.WedonotroundofftheDEEPSHEARthresholdtothe
+nearest5ms−1sinceenvironmentalwindsheartypicallychangesslowlyinmagnitudealonganLPStrack.This
+resultisalsostabletosmallchangesintheselectionofthetimerangeforeachcluster.
+Finally,weconsider55%astheupperlimitofRH100MAXforthetransitionconditionforthreereasons:(a)Ifwe
+applythedecisiontreeclassifierbasedsolelyonRH100MAXtoseparatethetropicalandnon‐tropicalcluster,the
+thresholdforRH100MAXwillbeabout55%witha74%accuracyscore;(b)themedianRH100MAXisabout
+55% at the time of extratropical transition completion as defined above, and (c) the median track‐minimum
+RH100MAX in the matched EW data set (the matched tropical LPS data set with the lowest average
+RH100MAX)isalsoabout55%.Insummary,thetropicalconditionreferstoRH100MAX>20%andDEEP-
+SHEAR < 18 ms−1. Upon fulfillment of the tropical condition, the transition condition is satisfied when
+RH100MAX<55%orDEEPSHEAR>10ms−1,andthelatitudeispolewardof15°.
+IfonlytheRH100MAXandDEEPSHEARthresholdsareincludedinthetropicalcondition,wefindthatasmall
+numberofpolarsystemscouldalsosatisfythetropicalcondition.AsshownFigureS1inSupportingInforma-
+tionS1,polarregionscanalsofeaturearelativelyhigher100hPaRHthatpotentiallyexceedstheRH100MAX
+thresholdinourtropicalcondition.Thisismostlytheresultofpersistentdarknessduringpolarwintertime,which
+allowstheupperairtemperaturetofalltoexceptionallylowvaluesdespitealackofmoisture.Ontheotherhand,
+DEEPSHEARalsotendstobequitelowinpolarregions,astheyarenotinthemainbarocliniczone.Itshouldbe
+fairly easy to further separate these false alarms, since polar regions are not adjacent to the tropics and are
+thereforedistinctlycolder.Aplotoftheairtemperatureat850hPaatthenode(T850)distributionforallsystems
+satisfyingtheRH100MAXandDEEPSHEARthresholdsindicatesthattropicalsystemsandpolarsystemsare
+separatefromeachotherbya∼15K(270–285K)gap(seeFigureS3ainSupportingInformationS1).Hence,an
+additionalT850criterion(T850>280K)isincludedtofurtherdistinguishthetwosystems.Giventhatthegap
+thatseparatestheT850ofthevastmajorityofthepolarsystemsandtheT850thresholdislarge(∼10K),andthe
+factthatmostofthesepolarsystemsresideneartheAntarcticcontinent,whereclimatecoolinghasbeenobserved
+overthepastdecades(Doranetal.,2002;Olivaetal.,2017),weexpectthisconditiontoholdevenunderworst‐
+casescenariosofglobalwarming,inwhichtheglobalaveragetemperatureispredictedtoincreaseby4–5Kby
+theendofthecentury(Masson‐Delmotteetal.,2021).
+We also expect the proposed RH100MAX threshold to remain validunder the more extreme global warming
+scenarios. Merlis et al. (2024) showed that climate model simulations with a uniform +4K SST perturbation
+resultsintropicalRHat100hPaincreasingatamodestrateof0.5%–1%per1KSSTwarming.Thisismainlydue
+to the expansion of the Hadley cells (Sherwood et al., 2010). A fixed RH100MAX threshold will therefore
+realisticallyreflecttropicalexpansionunderglobalwarming.RHat100hPainthesubtropicsandmidlatitudes
+showsevensmallerchanges(∼0%–0.5%K−1),mostlikelyduetotherisingextratropicaltropopause(fromabout
+200to250hPa)atarateof∼‐5hPaper1Ksurfacewarming(Luetal.,2007).Inanotherexperimentusing33
+climatemodels,subtropicalandmidlatitudinalRHat100hPashowsanaverageincreaseoflessthan2%toward
+theendofthe140‐yearsimulationperiodduringwhichCO isprescribedtoincreaseby1%peryear(Lau&
+2
+Kim,2015).Thischangeisconsideredminimalgiventheuncertaintiesinherentinthechosenthreshold.
+Furtherdownthetropicalbranch,thecyclonicconditiondetermineswhetheranLPSisshallowandsoshouldbe
+tagged as a “Tropical Disturbance (DST)” in the classified catalog. The next step involves the TC condition,
+whichidentifiestropicalcyclones(TCs)andlabels“TC”inthecatalog.Theconditionsforthisstepareobtained
+bycriterion(parameterthreshold)optimizationandarediscussedinSection5.1.Tropicaldepressions(TDs)are
+sometimesreferredtoastheweakestTCsbeforetheirpotentialformation.Therefore,theTDconditionrequires
+anLPStoatleasthaveweakupper‐levelwarmcores(UPPTKCC<0m2s−2).Wedonotrequirealow‐level
+warm core for TDs as many weaker tropical systems develop a upper‐level warm core before a stable low‐
+level warm core is established (Hopsch et al., 2010; Hunt et al., 2016; Reed et al., 1977). We additionally
+require thegreatestpositive closedcontourdeltaof MSLPovera5.5° GCD(MSLPCC55) to exceed160Pa,
+determinedbythemedianLPSnode'sMSLPCC55attheIBTrACStrackstarttimeofeachmatchedTCtrack,as
+agenciestendtostartrecordingLPSswhentheyarereachingTDwindspeedintensities(typicallyaround20to25
+knots).RegardlessofwhetheranLPSsatisfiestheTDcondition,theMSconditionisalsoappliedtoseparate
+monsoonalandnon‐monsoonalLPSs.TheMSconditionisobtainedbyoptimizationanddiscussedinSection5.2.
+AfterboththeTDandMSconditionshavebeenchecked,theclassifierassignsoneofthefourTDandtropicallow
+HANANDULLRICH 10of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+(TLO)labelsaccordingly,asshowninFigure1.Specifically,monsoonalsystemsthatsatisfyboththeMSandTD
+conditionsandonlytheMSconditionareconsideredMDsandMLsandarelabeled“TD(MD)”and“TLO(ML),”
+respectively,intheclassificationcatalog.Similarly,(non‐monsoonal)TDsandTLOsthatdonotsatisfytheMS
+conditionarelabeled“TD”and“TLO”inthecatalog.
+4.3. ExtratropicalBranchConditions
+LPSnodesthatdonotsatisfythetropicalconditionarenon‐tropical(extratropical)systemsintheextratropical
+branch.Thecyclonicconditionseparates“ExtratropicalDisturbance(DSE)”intheclassifiedcatalogbeforethey
+areexaminedundertheTLCconditionobtainedbyoptimization.ThecriteriaforidentifyingTLClabelsinthe
+catalog,whichinclude“SS(STLC)”and“PL(PTLC),”willbediscussedinSection5.3.TheremainingLPSnodes
+willgothroughthesubtropicalcyclone(SC)conditionwhichfollowsthegeneraldefinitionofatypicalSC—a
+non‐frontal LPS that features a shallow warm core and an upper‐level cold low isolated/detached from the
+midlatitude westerlies extending its circulation to the surface in the subtropics (U.S. Navy, 1994; Evans &
+Braun,2012).OurSCconditionstatesthatanLPSmust:(a)haveapositiveclosedcontourdeltaofgeopotentialat
+500hPaovera3.5°GCDreferencedtotheminimumvaluewithin1.0°GCD(Z500CC)greaterthan0m2s−2to
+satisfytheupper‐levelcoldlowcharacteristic;(b)haveaLOWTKCClessthan0m2s−2toguaranteethatthelow‐
+level is warm‐cored; and (c) have the maximum poleward 200 hPa wind speed within 1.0° GCD longitude
+(WS200PMX) greater than30ms−1 (an effectiveminimumwindspeedfor identifyingjetstreams, seeKoch
+etal.(2006))toincreasethelikelihoodofthesystembeingequatorwardofthepolarjet.SinceWS200PMXmight
+not be reliable in some regional models, alternatives to WS200PMX criteria used in SyCLoPS are listed and
+explainedTextS4inSupportingInformationS1.WedonotrequireEXstobecold‐coredsincemanyShapiro‐
+KeyserEXscanbewarm‐coredduetothewarmseclusionintheirmaturestage(Schultz&Keyser,2021).
+5. Criteria Optimization for High‐Impact LPS Detection
+AsdiscussedinSection4,thecriteriaforTCs,MSs(MDsandMLs),andTLCsallrelyoncriterionoptimization.
+Inthissection,wedescribetheoptimizationprocedureforthesefourclassesofLPS:Specifically,weoptimize
+each type of LPS's detection skill against different skill metrics discussed below to find the best selected
+parameterthresholdcombinationcontingentuponconditionsupstreamoftheworkflow.Theselectionofthese
+parametersisprimarilybasedonphysicalintuitionandpreviousstudies.Sinceouroptimizationcriteriaarebased
+oncomparison to subjectively labeled LPStracks, theoptimization procedurealso labels LPS tracks bytrack
+conditionsusingthenodecountparameter(thecountofnodeswithaspecificlabelwithinatrack)tomorestably
+defineanLPStrack.Consideringthatmanyclimatedatasetshavea6‐hourlytemporalresolution(insteadofthe
+3‐hourlyresolutionweareusinginthisversionofthecatalog),westartwithaminimumnodecountof2during
+theoptimization.
+5.1. TCConditionOptimization
+TheTCconditionfollowsthecyclonicconditioninthetropicalbranch.Toidentifyvariablesfortheoptimization
+procedure, we require the greatest positive closed contour delta of MSLP over a 2.0° GCD (MSLPCC20) to
+satisfy some minimum value, LOWTKCC to be less than 0 m2s−2 (indicating a low‐level warm core), and
+UPPTKCC to satisfy some maximum value in magnitude, since TCs are generally characterized by compact
+MSLPcontoursanddeepwarmcores.WeuseaMSLPCC20criterioninsteadofamaximumwindspeedcriterion
+because the latter is much more sensitive to model resolution and can be more easily distorted by complex
+topography.WealsodemandthenodecountofTC‐labelednodeswithinatracktohavesomeminimumvalueto
+defineaTCtrack.Evenlyspacedvaluesofthesethreeparameters(over3,000combinations)areconsideredto
+findthemaximumdetectionskill.
+A“test”TCdatasetisconstructedbasedoneachpossible3‐parametercombinationforthe1979–2021period,
+anditiscomparedtothereferencedatasetIB‐TC.A“hit”occursifthetestdatasetismatchedtoatrackinthe
+referencedatasetbyappearingwithin2°GCDfromareferencedatasetdatapointatthesametimestamp.A
+“miss”occursifatrackinthereferencedatasetdoesnothaveamatchinthetestdataset.A“falsealarm”isatrack
+foundinthetestdatasetbutisnotmatchedtoanytracksinthereferencedataset.TheTCdetectionskillmetric
+usedhereisthehitrate(HR)minusfalsealarmrate(FAR),expressedasHRMFAR.HRisdefinedastheratioof
+HANANDULLRICH 11of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure4. Detectionskilloptimizationfor(a)TC,(b)MS,and(c)Tropical‐likecycloneusingdifferentparameterthresholdcombinationsanddetectionskillsmetrics
+shadedbytheirmetricscores.Thenumbersinpanels(a,c)representtheoptimizedtimestepforeachcombination(theoptimalnodecountinpanel(c)isuniformly2for
+everycombination).Theredrectangleinpanels(a,c)indicatewherethemetricscoresaremaximizedandconsequentlythefinalthresholdschosen.Inpanel(b),the
+yellowtriangleindicatesthemaximizedscore,andtheredrectanglemarksthefinalthresholdschosen.Inpanel(c),themetricscoreshadingisonlyshownforthe
+HR=0.8zone.
+hitstothetotalnumberofhitsplusmisses,andFARisdefinedastheratiooffalsealarmstothetotalnumberof
+detected/selectedtracks.
+Figure4ashowsthedetectionskillofallchosencombinationsoftheMSLPCC20andUPPTKCCthresholds,with
+theoptimalnodecountshownatthetopofeachcombination.Thebestdetectioncriteriacombinationfoundis
+UPPTKCC <− 107m2s−2 (− 11 m),MSLPCC20 > 215Pa (210 Pa is also acceptable since it yields a near‐
+identical score), and TC‐labeled node count > 8 with HRMFAR reaching 64%. More Details about the TC
+detectionperformancearediscussedinSection6.Insummary,UPPTKCC<− 107.8m2s−2andMSLPCC20>
+215 Pa are used to define the TC condition along with LOWTKCC < 0 m2s−2, and the node step threshold
+specifiesthattheremustbeatleast83‐hourlytimestepsofTC‐labelednodeswithinatrackforthetracktobea
+TCtrack(theTCtrackcondition).
+5.2. MSConditionOptimization
+ForMSdetectionoptimizationunderglobaldetectionandwithoutseasonalconstraints,wedemandcriteriathat
+could separate MSs from other weaker tropical LPSs, such as EWs. MSs are considered to be born within
+monsoontroughsasopposedtotheintertropicalconvergencezone(ITCZ)orupper‐leveleasterlywaves.Ac-
+cordingtoNationalHurricaneCenter(n.d.)'sdefinition,monsoontroughsarecharacterizedbytheirwesterlyflow
+southofthetrough,comparedtoeasterlytradewindsonbothsidesoftheITCZ.Furthermore,onsetsofregional
+summer monsoons are often defined as a pattern of a change in wind speed and direction toward stronger
+westerlies(e.g.,Ganetal.,2004;Qian&Lee,2000).Thus,wedeveloptheU850DIFFparameter,whichisthe
+HANANDULLRICH 12of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+differencebetweentheweightedareameanofthepositiveandnegativevaluesof850hPaU‐componentwind
+overa5.5°GCD.Thisallowsustodeterminewhetherwesterlywinds(positiveU‐componentwindmagnitudes)
+oreasterlywinds(negativeU‐componentwindmagnitudes)dominatethelocal850hPaenvironmentofasystem.
+TheplotoftheU850DIFFdistributionfortheMSandEWmatcheddatasetsshowsthatU850DIFF=0ms−1
+effectively segregates the two clusters (see Figure S3b in Supporting Information S1). Hence, we select
+U850DIFF>0asaminimalrequirementfortheMScondition.
+As implied by the matched MS and EW data sets, MSs in the North Indian Ocean usually have a higher
+RH850AVGthanNorthAtlanticEWs.Thisisnotsurprising,asmonsoonregionsaregenerallyconsideredto
+havemoreconvectiveactivityandlargermoisturetransport.GiventhatVishnuetal.(2020)alsousedaaveraged
+850hPaRHcriteriontoexcludenon‐monsoonalsystems,wedecidetorequireaminimumRH850AVGthreshold
+intheMScondition.
+CriticalSucessIndex(CSI)asdefinedbelowbyVishnuetal.(2020)isthemetricforevaluatingMSdetection
+skill.
+hits
+CSI= (1)
+hits+(misses+falsealarms)/2
+A“hit”hereisdefinedasatrackinthetestdatasethavingatleastonenodethatiswithin3.0°GCDofatrack
+pointintheSikkadatasetonthesamedate,andthetrackmustalsoexistinthematchedMSdataset.SinceTCs
+areincludedintheSikkadatasetandareconsideredthemostintensemonsoonLPSsbytheIndianMeteorological
+Department, tracks that already satisfy the TC track condition and are in the matched MS data set are auto-
+maticallyconsideredmatched(hits).Weapplythedetectionoptimizationoverthesamedomainandseasonas
+Vishnuetal.(2020),exceptthatweincorporatetheentireavailabledataperiodratherthanjustaportionofit.We
+compute CSI of all the selected threshold combinations to find where CSI is maximal. The result shown in
+Figure4csuggeststhatthemaximumCSIreaches0.83forRH850AVG=80%andMStimestep=16.Ourbest
+CSIisthusidenticaltothevaluefoundinVishnuetal.(2020),insupportoftheframework'sabilitytodetect
+weaker tropical systems. We finally choose the second highest CSI (also over 0.83) combination,
+RH850AVG=85%andthenodecount=10,forthedesiredthresholdsbecausewewouldliketoincludeshorter
+MStracks.Followingtheseresults,theMSconditionissetasRH850AVG>85%andU850DIFF>0ms−1,and
+atrackisconsideredtobeaMStrackonlyif10ormoreofits3‐hourlynodessatisfytheMSconditionandare
+labeled as “TD(MD)” or “TLO(ML)” in the classified catalog. The MS track label highlights those weaker
+tropicalLPStracksthataremorestablylabeledasmonsoonalsystems,althoughtheycanalsocoincidewithTC‐
+labeledtracks(i.e.,TCtracksdetectedbySyCLoPS)perourstandards.EWsandothertropicalwavesarelikelyto
+be included in the non‐monsoonal TDs/TLOs that fall short of the MS condition, as well as other weak LPS
+classes (i.e., tropical/dry disturbances). One may assume that westward‐propagating disturbances and non‐
+monsoonalTDs/TLOsthatmeetthetropicalcondition(indicatedby“Tropical_Flag=1”intheclassifiedcat-
+alog)andarenotinMS‐labeledtracksaremainlyeasterlywaves.
+5.3. TLCConditionOptimization
+“Tropical‐likecyclones”referstonon‐tropicalLPSsthatresemble“real”TCsincertainways.Forinstance,a
+matureMediterraneanhurricanemayhaveadistincteyewallandadeepwarm‐corestructuredespitelowerSSTs
+andgreaterbaroclinityinanon‐tropicalenvironment(Pytharoulisetal.,2000).PLs(sometimesreferredtoas
+intensepolarmesoscalecycloneorArctichurricanes)andMediterraneanhurricanes(abranchofSSs),although
+stillvaguelydefined,mayallbedescribedasagroupofmesoscale(small),intense,andshort‐lived(intermsof
+theirTLC‐stagelifespan)LPSsthatcanbeclassifiedas“tropical‐like.”Basedonthedefinitionsmentionedin
+Section2,themostnoticeabledifferencebetweenPLs(PTLCs)andSSs(STLCs)mightbethatPLsdevelopnorth
+ofthepolarfrontorthemainbarocliniczoneincoldairmasses,comparedtoSSsemergingfromthesubtropics.
+Theterm“hurricane‐likeextratropicalcyclone”isalsousedinRomeroandEmanuel(2017)togroupMediter-
+raneanhurricanesandNorthAtlanticPLstogether.Here, weadoptasimilarviewthatSSsandPLsarecom-
+parabletooneanotherbutdifferentfromtypicalextratropical/subtropicalcyclonesandcouldbeflaggedunderthe
+sameTLCcondition.TheconventionaldefinitionofPLsasbeingnorthofthepolarfrontcanthenbeusedto
+distinguishbetweenthem.Underthisframing,SyCLoPSoffersameansforthefirstobjectiveglobalidentifi-
+cationofallTLCsystemsinclimatedata.
+HANANDULLRICH 13of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Sinceaminimumrequirementofneargale‐forcewindintensitysimilartoTCsisrequiredtodefineSSsandPLs,
+similarparameterssuchasMSLPCC20andLOWTKCCareusedtodetectTLCsaswedidtodetectTCs.We
+expect TLCs to have, on average, a shallower/weaker warm‐core structure compared to TCs. Hence, we first
+impose a minimum requirement for the two warm core criteria (LOWTKCC < 0 m2s−2 and MIDTKCC <
+0 m2s−2). Static‐stability or open‐water criteria used in previous PL detection studies (Stoll, 2022; Stoll
+etal.,2018;Zappaetal.,2014)arenotconsideredhereastheyappeartoorestrictivetoglobalTLCdetection.For
+example, PLs may also appear closer to the baroclinic zone in a more sheared environment (Montgomery &
+Farrell,1992;Terpstraetal.,2016),andintensestormactivitycanoftenoccuroverAntarcticseaice(Hepworth
+etal.,2022).TheothersignificantdistinctionofTLCsistheirsmallormesoscalesizes.Thus,wegenerateLPS
+sizeblobsandcomputetheLPSsize(extent)measuredbytheLPSAREAparameterasdescribedinAppendixE,
+in addition to the parameters directly computed by TE to evaluate the defined two‐dimensional size (area) of
+LPSs.
+We use the combined matched SS and PL data set, which consist of 174 tracks, as our reference data set for
+optimization.Weconcedethatit’sdifficulttoevaluateorcompareglobalTLCdetectionskillsbecausecredible
+TLCs'recordsarelimitedandregionalinscope,andtheirdefinitioninexact.Toovercomethis,wefirstremove12
+tracks in the reference data set that have a track‐maximum MSLPCC20 lower than 215 Pa (the MSLPCC20
+standard for TCs) to further avoid including tracks that are too weak to be considered TLCs. Second, we
+acknowledgethatsomeTLCscouldbeembeddedwithinasynoptic‐scalecirculationortroughinthebackground,
+sometimeswithatwinlownearby(seeFigureS4inSupportingInformationS1foranexample),andthuswill
+appearlarge(orbezeroifembeddedinasystemwithlowerMSLP)usingoursizecomputationmethod.Towork
+aroundthisobservation,wedeterminethatLPSswithMSLPCC20>420Pa(90%percentileofdetectednon‐
+tropical, non‐shallow LPSs' MSLPCC20) and a ratio of MSLPCC20 to MSLPCC55 greater than 0.5 (reflect-
+ingthepresenceofadominantandmorecompactLPScorewithinthelargersystem)satisfytheembeddedTLC
+alternatecriterionandareexemptfromtheLPSAREArequirements.Third,sincethescopeandqualityofthe
+referencedatasetisconstrained,FARbecomesrathermeaninglessandisreplacedbytheinfrequencyrate(given
+thatTLCsareinfrequent),definedasthefractionofselectedTLCtracksamongalldetectedtracksthathaveat
+leastonenodethatpassesthecyclonicconditionintheextratropicalbranch(a0.1infrequencyrateasdefined
+wouldcorrespondtoa45occurrencepermonthinthisSyCLoPSLPSdataset).Hence,thedetectionskillsmetric
+weusefortheTLCconditionistheHRminusinfrequencyrate,orHRMIR.Here,HRissimplydefinedasthe
+fractionoftracksthataredetected(hits)inthereferencedataset.Giventhelimitedsamplesize,HRisroundedto
+thenearesttenth(i.e.,0.750and0.849willberoundedto0.8)toroughlyreflectits90%confidenceinterval(CI)
+andpotentialsamplingerrors.
+We iterate the selected range of MSLPCC20 and LPSAREA threshold combinations for TLC condition opti-
+mization.ThebestHRattainedisatthe0.8levelasshownbytheshadingintheupperleftzoneofFigure4b.
+Withinthiszone,theTLCconditionisoptimalwhenIRisthesmallest(11.9%)atMSLPCC20>190Paand
+LPSAREA< 5.5 × 105 km2 (giventhatLPSAREA is nonzero)on topof the other thresholds wementioned
+above.TheLPSAREAthresholdchosenhereagreeswiththemeso‐αscalerange(i.e.,roughlya400–500kmLPS
+radius),whichalignswiththeuppersizerangeofmanystudiedTLCs(e.g.,Fitaetal.,2007;Hollandetal.,1987;
+Noeretal.,2011;Rasmussen&Turner,2003).Duetotheshort‐livednatureofTLCs,HRMIRinallcombinations
+maximizeswhenthenodecountequals2.LPSnodesthathavebeentaggedasTLCwillthenbefurtherclassified
+asPLsorSSsdependingonwhethertheyarelocatedfurthernorthtothepolarjet(WS200PMX<25ms−1).
+Trackswith23‐hourlyTLC‐labelednodes(PLorSS)andatleastonePLorSS‐labelednodearethenassigned
+“PL(PTLC)”or“SS(STLC)”tracklabels.Foranalternativetest,weremovetheembeddedTLCcriterionand
+performtheoptimization.TheresultsshowanidenticalHR,aslightlylowerIR,and72%overlappeddetected
+TLC tracks (i.e., LPS tracks picked up by both TLC detection algorithms) when MSLPCC20 > 145 Pa and
+LPSAREA<7.0 × 105km2.Thus,itmaybetreatedasanalternativeTLCcondition,althoughitrisksexcluding
+manyembeddedTLCnodes.
+6. Results and Applications
+6.1. MainResults
+InFigure5a,weplotthekerneldensityestimate(KDE)ontheRH100MAX‐DEEPSHEARcoordinateofall6‐
+hourlysampledLPSnodesthathavepassedthesecond(dry)branchandmeetthecyclonicconditiontoverifythe
+HANANDULLRICH 14of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure5. (a)The10KDElevelsevenlydistributedbetween0and1ofalltheselecteddetectedlow‐pressuresystem(LPS)nodes(bluecontours)andthewarm‐coreLPS
+nodes(redfilledcontours);and(b)the3KDElevelssetat0.1,0.5,and0.9ofthefivematcheddatasetsontheRH100MAX‐DEEPSHEARcoordinate.
+efficacyofourtropicalandtransitionconditions.OurresultsdemonstratethevalidityofusingRH100MAXand
+DEEPSHEAR thresholds as the foundation for these conditions. The KDE clearly depicts two main clusters,
+separatedbyRH100MAXandDEEPSHEAR.Thesolid‐lineanddash‐lineboundariesdelineatethetropicaland
+transition conditions. The RH100MAX transition threshold cuts through the narrowest part of the KDE. The
+cluster centered inside the tropical condition bounds is the tropical system cluster, while the cluster centered
+outsidetheboxisthenon‐tropicalsystemcluster,whichisapparentfromFigure5b,wheretheKDEsofthefive
+matcheddatasetsareplacedontheRH100MAX‐DEEPSHEARcoordinate.Withinthetropicalsystemcluster,
+theTCclusterspansthewidestrangeasitincludesLPSsundergoingextratropicaltransitionandatpost‐TCstage,
+whereastheMSandEWclustershavethehighestandlowestmeanRH100MAXvaluesrespectively.Mostofthe
+matchedtropicalLPSsarewithinthetransitionboundaries(whichmaybedeemedasthedeeptropics).Insidethe
+non‐tropicalsystemcluster,theSSclusterhasahighermeanDEEPSHEARvaluethanthePLcluster.Thered
+filledcontoursinFigure5adepicttheKDEofwarm‐coresystems,definedasthepreviouslyselectedLPSnodes
+thatmeetthecriterionofUPPTKCC<− 58.8m2s−2 (− 6m).TheKDEshowsthatsystemswithaupper‐level
+warmcorecanexistinbothtropicalandnon‐tropicalclusters,andthus,thewarm‐corecriteriamaynotbeideal
+forclassifyingLPSsacrossthespectrum. Accordingto theclassifiedcatalog,thevast majority ofthelabeled
+tropicalsystemsareconfinedwithin40degreesoftheequator.
+SyCLoPS LPS labels are generally in good agreement with the labels in IBTrACS. Two types of labels are
+providedinIBTrACS:first,thelabelsinthe“NATURE”columnassignedbyglobalWMOagencies,andsecond,
+thelabelsassignedbyUSmeteorologicalagenciesinthe“USA_STATUS”column.TheWMOlabelsaremore
+generalthantheUSAlabels,astheUSAlabelsincludemoreclassesbasedonLPSintensity.Miscellaneouslabels
+thatarevaguelydefinedandhaveasmallsamplesizearenotincludedinthecomparison.Informationaboutthe
+two agencies' labels can be found on the IBTrACS website and in Landsea and Franklin (2013). Labels are
+comparedwhenLPSnodesinourdatasetandIBTrACStrackpointsliewithin2.0°GCDofeachotheratthesame
+timestamp.Figure6showstheprobabilityofsuccess(POS)forcorrectlylabelinganLPSnodeofaparticular
+class(settingIBTrACS labelsas groundtruth). Overall,95%ofthematched nodesarein agreementwiththe
+WMOlabels,mainlycontributedbythehigh“TS”POSof97%(WMO's“TS”labelrefersto“tropicalsystem”).
+SinceWMO's“DS(disturbance)”labelalsoexists,weregard“TS”asallnon‐shallowtropicalsystems,whichis
+equivalent to all tropical system labels but “DST” in our labeling system. This result suggests that very few
+tropicalsystemsaremistakenlylabeledasnon‐tropicalsystemsbyourclassification.Theextratropicalsystem
+POSisat78%whenwecomparelabelsintheextratropicalbranchtothe“ET(extratropical)”labelofWMO.The
+majority of the extratropical records in IBTrACS are post‐TCs immediately after extratropical transition.
+Therefore,itsuggestsarathersmallerrorintheextratropicaltransitioncompletiontimejustifiedbyourclas-
+sificationwhencomparedtoIBTrACS.Breakingdownthetropicalsystems,ourTCPOSremainsatarelatively
+highlevelof74%againstTClabelsgivenbyUSAagencies,whileTD(whichincludesTDandMD)hasamuch
+HANANDULLRICH 15of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure6. Probabilityofsuccess(POS)ofourlabelswhencomparedtolabelsgivenbyWMO(redbars)andUSAagencies
+(orangebars).Seetextfordetails.POSvaluesareshownonthetopofbarswith95%confidencelevelerrorbarsdenoted.
+lowerPOSof47%.WefindthatTDsarealmostequallylikelytobemisclassifiedasTCsandtropicallows(TLOs
+and MLs), which reflects ambiguity in their definitions and inevitable biases in LPS intensity evaluations by
+agencies,reanalysis,andourclassification.IfTDisconsideredacategoryofTCforbothourandIBTrACSlabels,
+thePOSof“TC+TD”risesto85%.TheweakestsystemlabelsinIBTrACS,including“LO(low)”and“DS/DB
+(disturbance),”aremorevaguelydefined.TheyareoftenusedatthestartofTCtracks,andthelabeledLPSsmay
+nothaveadiscerniblesurfacecenter(Landsea&Franklin,2013;NationalHurricaneCenter,n.d.).Hence,we
+treatthemasthesamelabel,whichisequivalenttoTLOsystems(TLOandML),disturbances(DST,DSDand
+DSE),andthermallowsystems(THL,DOTHL,andHATHL)inourlabelingsystem.Probabilityofsuccessof
+about50%isrealizedforthiscategorycomparedtolabelsofWMOandUSAagencies.Similarly,theyaresubject
+tobiasesinintensityevaluationsandtheirexactdefinitions.WhenTDsareincludedinthisclassforbothourand
+IBTrACSlabels,thePOSincreasesto78%.
+TCdetectionskillisimprovedusingSyCLoPS'sTCtracklabelswhencomparedtothepreviousTEalgorithm
+(theZarzycki&Ullrichmethod;Zarzycki&Ullrich,2017).FortheZarzycki&Ullrichmethod,TCtracksare
+identified when nodes in a trackthat satisfy UPPTKCC < − 58.8 m2s−2 (− 6 m),MSLPCC55 > 200Pa, WS
+(maximumwindspeedat10mwithin2.0°GCD)>10ms−1,andZS<150m2s−2aredetectedforatleast54hr
+equatorward of 50° latitude. We resample the detected TC data set to match the 6‐hourly data frequency of
+IBTrACS.TheHRMFARofZarzycki&UllrichiscomputedagainstthesameIB‐TCdatasetfortheperiodof
+1979–2021 using the same definition of hits and false alarms mentioned in 5.1. Table 2 summarizes the TC
+detection skill metrics of both methods. The mean start (end) time differences in the table refer to the time
+differencesbetweenthestart(end)timeofthedetectedTCtrackandthecorrespondingIB‐TCtrack'sstart(end)
+time. To summarize, the detection skill improvements are: (a) HRMFAR is increased by 7.5% due to a 5.5%
+decreaseinFARanda2%increaseinHR;and(b)theearlydetectionofthepre‐TCstageandlatedetectionofthe
+post‐TCstagearesignificantlyimproved,extendingTCtracklengthbyanaverageof136hr.Theeffectsofthese
+improvementsarerevealedinFigure7.TracksdetectedusingSyCLoPSarevisiblylongeratbothends(thepre‐
+TCstageandthepost‐TCstage)comparedtothosetrackedbytheZarzycki&Ullrichmethod.Notably,thenew
+approachmorecloselymatchesIBTrACSobservationsintheSouthAtlanticandtheSoutheastPacific,among
+othersubtropicaloceans,bylargelyreducingfalsealarmsinthoseregions.Wealsonoticethatmanyofficialwind
+datainIBTrACS'stracksaremissinginearlieryearsinbasinsoftheIndianOcean(sotheyarenotincludedinIB‐
+TC)duetothefactthatsomeagenciesdidnotaccepttheirregionalresponsibilityuntiltheearly1990s.Hence,
+Table2
+DetectionSkillComparisonBetweenSyCLoPSandtheZarzycki&UllrichMethod
+Method HR FAR HRMFAR Meanstarttimedifference(hr) Meanendtimedifference(hr)
+Zarzycki&Ullrich 76.2% 20.1% 56.1% 28 − 30
+SyCLoPS 78.2% 14.6% 63.6% − 49 28
+HANANDULLRICH 16of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure7. 1979–2021TCtracksastrackedby(a)SyCLoPS,and(b)theZarzycki&Ullrichmethod.Blackdotsarethefirst
+locationsoffalsealarmtracks.Blueandreddotsareextratropicalandtropicaltransitioncompletionlocationsindicatedby
+SyCLoPS.1337extratropicaltransitioncasesand195tropicaltransitioncasesaredetected.
+manyfalsealarmsinthetropicalIndianOceanforbothmethodscouldactuallyberealTCs(hits).Discrepancies
+inwindmeasurementstandards,observations,andoperationalproceduresamongagenciesfordifferentbasinsare
+alsonotedinSchrecketal.(2014),suggestingthepresenceofa“TCgrayzone”duetothesebiases—thatis,a
+range of parameter values where different experts would draw different conclusions on theclassification of a
+feature.Therefore,perfectlymatchingasubjectiveTCdatasetislikelyimpossible.Theblueandreddotsshow
+theextratropicalandtropicaltransitioncompletionpositionsofapplicableTCtracksindicatedbytheclassified
+catalog.About40%oftheidentifiedTCtracksundergoextratropicaltransition,whichiscomparabletotheglobal
+extratropicaltransitionfractionsusingaCPSmethodreportedinDattetal.(2022).WecomparethedetectedTC
+tracks of SyCLoPS that have a match to an extratropical transition case recorded in IBTrACS and find that
+SyCLoPSdetects87%ofallsuchextratropicaltransitionswithanaverage(median)errorof+10(+6)hoursinthe
+transition completion time (i.e., the timestamp of the first labeled extratropical node after the TC stage). The
+HRMFARofthisnewalgorithmmaybefurtherelevatedthroughpost‐processingoperationssuchaseliminating
+QS tracks or marginal TC tracks that primarily reside in the transition zone. We advise being cautious when
+eliminatinganymarginalTCssincetheycanresideinthe“TCgrayzone.”Asanexample,the2001Australia
+“Duck”isaclassicmarginalTC(seeGardeetal.,2010).Althoughthisstormwasnotrecordedbytheagencyand
+HANANDULLRICH 17of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure8. 1979–2022annualfrequencyof(a)tropicalcyclone(TC),(b)subtropicalstorm(SS),(c)polarlow(PL),(d)monsoonalsystem(MS(MDandML)),(e)non‐
+monsoonaltropicaldepression(TD)andtropicallow(TLO),(f)sameas(e),butwithquasi‐stationary(QS)tracksfiltered,(g)subtropicalcyclone(SC),(h)extratropical
+cyclone(EX),(i)disturbances(DSD,DSTandDSE),(j)thermallow(THL),(k)deep(orographic)thermallow(DOTHL),and(l)high‐altitudeLPSs(HALand
+HATHL)asmeasuredby3‐hourlynodesper2°×2°grid.
+itdoesnotsatisfyourTCtrackcondition,itislabeledas“TC”atfourtimestepsunderourclassification.See
+FigureS8inSupportingInformationS1foralabeledtrackmapofthisspecialcase.
+Major globally detected LPS annual frequencies for the different classes of LPSs are shown in Figure 8. In
+general, the frequencies of these systems are in accordance with observations. Please refer to Figure S5 in
+SupportingInformationS1forafrequencybarplotofallLPSclasses.ThefirstrowofFigure8containstheleast
+frequentLPSclasses,followedbyMSinthesecondrow,whichareallhigh‐impactLPSsthatcanbeconsidered
+extremes.TCfrequenciesareconsistentwiththeirtrackactivityinthetropicsandduringextratropicaltransition
+(Figure8a).InFigure8b,SSsaremorefrequentintheMediterraneanSea,themoststudiedhotspotforthese
+features.Theyarealsocommonlyfoundinthestorm‐trackregions(WesternNorthPacificandthenorthwestern
+Atlantic,asdefinedinBlackmonetal.(1977)),thesouthwestAtlantic,thesoutheastPacific,theJapanSea,and
+theTasmanSeaclosetoSoutheastAustralia.Thoseregionsareallwellknownfortheirintenseortropical‐like
+LPS activities, which include Australian east‐coast cyclones, Chilean storms, Japanese south‐coast explosive
+cyclones,TLCs/mesocyclonesintheSeaofJapanandtheYellowSea,andsubtropicalstormsacrosstheAtlantic
+(seee.g.,Cavicchiaetal.,2018;Gozzoetal.,2014;Guishardetal.,2009;Heo&Ha,2008;Iwaoetal.,2012;
+Shimadaetal.,2014;Winckleretal.,2017).Weexpectthatthesuccessfulclassificationofsubtropicalstormsis
+effectiveforreducingTCfalsealarmsintheSyCLoPSframework.PLactivityreachesasfarsouthastheSeaof
+Japan,andtheyaremostprevalentintheNordicSeas,theGulfofAlaska,andoverorneartheseaiceofthe
+HANANDULLRICH 18of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+SouthernOcean(Figure8c).Intensepost‐TCsaresometimesclassifiedasTLCsinourframework,andremoving
+themhasonlyaminorimpactonthefrequenciesofSSsandPLs. MSsaremainlyconstrainedin thetropical
+monsoonregiondefinedinLiandZeng(2003)andhavetwoevidenthotspotsintheNorthIndianOceanandnear
+theGulfofTonkinintheSouthChinaSea(Figure8d).Non‐monsoonalTLOsandTDsarefoundthroughoutthe
+tropics, with some overlap with MS activity and evidence of QS tracks shown by localized high frequencies
+mainly near rainforest regions (Figure 8e). After filtering those QS tracks labeled by the QS track condition,
+strongLPSoccurrenceslargelydisappear,leavingotherfeaturesmostlyuntouched.SCsaremorewidespreadbut
+lessconcentratedcomparedtoSSs(Figure8g).EXisthemostcommontypeofLPSlabeled,anditisomnipresent
+outsideofthetropics(Figure8h).Disturbancesarefoundgloballyacrosslatitudes,andTHLsandDOTHLsare
+locatedprimarilyonaridlands(Figures8i–8k).Finally,high‐altitudeLPSsoccupymountainousareas,including
+partsoftheAntarcticcontinent(Figure8l).
+Weshow theverticalcrosssection compositesatthelatitudeof LPS'scenterforthesixselectedLPS classes
+labeled by SyCLoPS in Figure 9. TCs feature a classic dumbbell‐like structure resembling the shape of a
+cumulonimbus,asindicatedbythetwoRHmaximaatthelower‐andtheupper‐level(Figure9a).Diabaticheating
+orlatentheatreleaseinTCs,assuggestedbythecyclonicpotentialvorticity(PV)contours,isevidentthroughout
+thelower‐levelandupper‐level.Thedeepwarm‐corestructuresuggestedbythepotentialtemperaturecontoursis
+mostevidentintheTCcomposite.Figure9bshowsthatatypicalTHLfeaturesaclassicwarmanddrylow‐level
+core,whichislargelyconstrainedtotheboundarylayer.AsshowninFigures9cand9d,weakertropicalsystems
+havefarlessdevelopedconvectionandwarmcorescomparedtoTCs.MSshavecomparativelyhigherRHateach
+levelandaslightlymoredevelopedlower‐levelcirculationthanothertypicalTDs/TLOs.Aneastwardtiltofthe
+RHfieldbelow300hPaisalsonoticeableinthenon‐monsoonalTDandTLOcompositeinFigure9d.Cyclonic
+PVcontoursstretchingdownfromthesubtropicaltropopauseintheSScomposite(Figure9e)implythatsome
+SSsundergoadownwarddevelopmentpathway,extractingcyclonicPVfromupper‐levelPVanomaliesorPV
+streamers, which agrees with the Mediterranean hurricane development mechanisms described in Flaounas
+etal.(2022).ThewarmcoreandthediabaticheatingaremoreconstrainedtothelowerlevelforPLs,asdepicted
+inFigure9g.Theglobalpatterns(Figures9eand9g)ofSSandPLalsoappeartohavelessnoise(inducedbylocal
+topography)andanenhancedPVsignalintheverticalstructureofSSandPLcomparedtothepatterns(Figures9f
+and9h)representedbyregionalSSsandPLsassociatedwiththerecordsinthesubjectiveSSandPLdatasets.
+DespitethefactthatbothTCsandTLCs(SSsandPLs)haverelativelydeepwarmcores,theupper‐levelRHof
+SSsandPLs(asshowninFigures9eand9f)issignificantlylowerthanthatofTCsandothertropicalsystems.
+ThisdistinctionsupportsourchoiceoftheRH100MAXcriterioninthetropicalcondition.
+6.2. OtherApplications
+WenowshowsomesimpleapplicationsbasedontheclassifiedcatalogproducedbySyCLoPS.Onemajorbenefit
+ofSyCLoPSisthatitcanrevealafairlycompletehistoryofeachLPStrack,sothattheevolutionofanLPScanbe
+effectivelytraced.Thus,ausefulapplicationisshowingatrackalongwithitslabelednodes,suchastheexample
+in Figure 10. The example depicts the track history of the Western North Pacific typhoon Mindulle in 2021.
+Mindulleisfirstdetectedasadisturbanceneartheequator,thengraduallyintensifiesasanon‐monsoonalTLO/
+TD before it becomes stably labeled as TCs. It completes its extratropical transition around 40° N and later
+developsintoaSSandPLbeforedissipatingasaEXinAlaska.Thegenesistime(thefirstTDlabeltime),thefirst
+TCrecordtime,andthetransitioncompletiontimeareallwithin12hrofthecorrespondingIBTrACSrecords,
+whiletherecordgivenbySyCLoPSfurtherextendstheIBTrACStracklength.Aphasediagramdisplayedbythe
+DEEPSHEAR‐RH100MAXcoordinateisattachedtothefigure.ThephaseevolutionshowsthattheRH100MAX
+oftheTCstaysatahighlevelwhiletheenvironmentalwindsheargraduallyincreases.Thesystem'sRH100MAX
+decreases sharply during extratropical transition, which is completed when the TC no longer satisfies the
+DEEPSHEAR criteria from the tropical condition. In its final stage, the system enters a lower‐sheared envi-
+ronmentwithverylowRH100MAX.MoreexampleslikethisofdifferentLPSclasses(includingNorthAtlantic
+hurricanes,the“Duck,”anMS,andTLCs)canbefoundinFiguresS7–S9inSupportingInformationS1.
+ThelabelednodescanalsobecombinedwiththeLPSsizeblobswegeneratedwhencomputingLPSAREAto
+derivetheaccumulatedintegratedkineticenergy(IKE;Powell&Reinhold,2007)oftargetedLPSs.FigureS6in
+SupportingInformationS1showsanillustrationofthelabeledLPSsizeblobs.IKEisdirectlycorrelatedwiththe
+potentialdestructivenessofLPSs,asittakesthesizeparameterintoaccount.TheIKEofanLPSisdefinedasthe1
+m‐deepmeankineticenergyatthesurfacelevel(hereapproximatedbythe925hPalevel)withintheLPSextent
+HANANDULLRICH 19of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure9. Verticalcrosssectioncompositesoflow‐pressuresystem(LPS)nodeclassifiedas(a)tropicalcyclone(TC),(b)thermallow(THL),(c)monsoonalsystem(MS
+(MDandML)),(d)non‐monsoonaltropicaldepression(TD)andtropicallow(TLO),(e–f)SSandSSsinthematched‐SSdataset,and(g–h)PLandPLsinthematched‐
+PLdataset.Darkpinkdashedlinesarecontoursofcyclonicpotentialvorticity(unit:PVU(1.0 × 10−6m2s−1Kkg−1)),andblackcontoursarepotentialtemperature
+(K).TheTC,MS,SSandPLcompositesareeachbasedon1,000randomlychosennodestaggedwiththespecifictypeoflabelinthespecifictypeofLPStrack(i.e.,1000
+TC‐labelednodesinTC‐labeledtracks).Thenon‐monsoonalTLO/TDcompositeisbasedon1,000randomlychosennodeslabeled“TLO”or“TD,”exceptthoseinMSor
+QStracks.TheTHLcompositeisbasedon1,000randomlychosenTHL‐lablednodes.
+HANANDULLRICH 20of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure10. Anexampleofdifferentlow‐pressuresystemlabelsinaTC(2021Typhoon“Mindulle”)lifetime.Thephase
+diagramshowsitsevolutionontheRH100MAX‐DEEPSHEARcoordinatewiththetropicalconditionthresholdoutlinedin
+dashedlines.WeconvertallinstancesofsupersaturationofRH100MAXto100%inthephasediagram.SandEindicatesthe
+startandtheendofthetrack.ThecrossmarksindicatethepositionofthestartofIBTrACSrecord(black),thefirstIBTrACS
+TCrecord(red),IBTrACSextratropicaltransitioncompletion(purple),andtheendofIBTrACSrecord(gray).
+wedefineforLPSAREA.AccumulatedIKEofanLPScanbeusefultostudytrendsinLPSactivity(Kreussler
+etal.,2021).InFigure11,weshowtheaccumulatedIKE(intrillionjoules,TJ)ofthefourtypesofhigh‐impact
+LPSnodesfrom1979to2022.Specifically,blobsassociatedwithTCs(TCnodes)inTC‐labeledtracks,TDsand
+TLOs (MD, ML, TD andTLO nodes) in MS‐labeled tracks, SSs in SS‐labeledtracks, and PLsin PL‐labeled
+tracks are selected, respectively, for their IKE accumulations. The results indicate that TCs have the most
+widespreadandseverewindimpactoverland,whilethekineticenergyofMSsaccumulatesthemostalongthe
+coastoftheBayofBengal.SSsarekineticallyactiveinseveralhotspotsglobally.Theinfluencefromtheirwinds
+extendstoplacesincludingtheeastcoastoftheUnitedStates,southeastAustraliaandNewZealand,southern
+Chile,northernJapan,andtheMediterraneancoasts,amongother.BesidestheAntarcticregion,PLsposethe
+greatestthreatstothecoastsoftheNordicSeasandtheGulfofAlaska.IKE'sspatialdistributionpatternsmay
+appeardifferentfromtheLPSfrequenciesbecauseIKEisstormsize‐sensitive.Forexample,eventhoughhighTC
+frequenciesarefoundconcentratedintheEasternPacificbasin(Figure8a),TCIKEisfarmoreprominentinthe
+Western North Pacific basin due to its largest mean observed TC size among all major basins (Chavas &
+Emanuel,2010).Similarly,IKEforSSintheMediterraneanSeaappearmuchsmallercomparedtootherhotspots
+liketheWesternNorthPacificandthenorthwestAtlantic,asTLCsinanopenoceanbasincanberelativelylarger
+withouttopographicconstraints.ThoselargerTLCscanpossiblybeembeddedTLCsor“twin‐cyclones”likethe
+oneshowninFigureS4inSupportingInformationS1,andtheirexistenceisdocumentedinmanycasestudiesin
+thetwobasins(e.g.,Fuetal.,2018;Yamamoto,2012;Yokoyama&Yamamoto,2019).
+ObjectivelytrackedLPSsareoftenusedinfractionalprecipitationcontributionstudiestoteaseoutthecontri-
+butionofeachLPStypetothetotalprecipitation(e.g.,Prat&Nelson,2013;Preinetal.,2023).Theoutputsfrom
+ourframeworkcouldbeagoodsourceforthispurpose,asprecipitationblobscanbederivedandlabeledina
+similarmannerasforthesizeblob.Blobs(areas)thatsatisfythesmoothed850hPacyclonicrelativevorticity
+(CRV)threshold(CRV>2 × 10−5s−1)andaminimum3‐hourlytotalprecipitationthresholdof0.3mmper3hr
+HANANDULLRICH 21of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure11. IntegratedKineticEnergy(IKE)of(a)tropicalcyclone(TC),(b)monsoonalsystem(MS),(c)subtropicalstorm(SS),and(d)polarlow(PL)accumulated
+overthe1979–2022period.
+(0.1 mm hr−1) are highlighted as LPS‐associated precipitation and tagged with LPS labels (see Figure S6 in
+SupportingInformationS1).Weconsiderthisdynamicprecipitationdetectionmethodmoreflexiblethanafixed
+or uniform radius method that was often implemented in previous studies (e.g., Dare et al., 2012; Stansfield
+etal.,2020).Weselecteachclassofhigh‐impactLPSnodesandtheirassociatedprecipitationblobsinthesame
+wayaswedoforIKE.Wedemonstratethefractionalcontributionofprecipitationfromthefourtypesofhigh‐
+impactLPSnodesinFigure12.TheresultssuggestthatTCscontributeover40%oftotalprecipitationalongthe
+coastsofnorthwesternAustraliaandsouthofBajaCalifornia.MSsareresponsibleforalargerfractionoftotal
+precipitationthanTCsthroughoutSouthAsiaandinlandChina.SSsmakeupabout5%oftotalprecipitationalong
+thecoastalregionoftheMediterraneanSeaandabout6%–7%nearnorthernJapanandthecoastsalongtheJapan
+Sea.PLsareresponsibleforseveralpercentoftotalprecipitationintheUnitedKingdom,northernEurope,and
+alongthecoastofAlaska.SinceTLCsareactiveinthewinterseason,onemayexpectheavysnowfallastheform
+oftheirprecipitation.
+7. Summary and Conclusions
+Inthisstudy,weproposeanall‐in‐onedetectionandclassificationframeworkwhichwerefertoastheSystemfor
+ClassificationofLow‐PressureSystems(SyCLoPS).Inessence,SyCLoPScombinesmultiplespecializedLPS
+detectorsintoasingleframework,whichhastheeffectofimprovingclassificationperformanceforindividual
+featuresthroughacomprehensivetreatmentofboundarycases.SyCLoPSisdevelopedatoptheTempestExtremes
+(TE)softwarepackage(Ullrich,2024;Ullrichetal.,2021;Ullrich&Zarzycki,2017).Itistunedandsubsequently
+appliedtotheERA5reanalysis.Totheauthors'bestknowledge,thisworkrepresentsthefirstattempttoclassifyall
+LPSsinasingleglobaldataset.Classificationparametersandthresholdsaresetusingconventionaldefinitions,
+observations, andphysicalintuition,with someassistancefrom mathematicaloptimizationandbasic machine
+learningmethods.Tosummarize,SyCLoPSperformsdetectionandclassificationfollowingtwomainsteps:Firstis
+todetectandtrackLPSsspanningallintensitiesgloballyandcomputetheinputatmosphericparametersasshownin
+AppendixCusingTEcommands.Second,aPythonclassifierisappliedtoconstructtheinputcatalogandtakeinthe
+inputparametersforclassifying(labeling)alldetectedLPSnodesandtracksfollowingtheworkflowshownin
+Figure1.Theclassifieralsoincorporatesadditionalinformationaboutthenodesandtracks,suchasextratropical
+transitionnodesandwhethertheLPStrackshouldbeconsideredquasi‐stationary,intothefinalclassifiedLPS
+HANANDULLRICH 22of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Figure12. Fractionalprecipitationcontributionsfrom(a)tropicalcyclone(TC),(b)monsoonalsystem(MS),(c)subtropicalstorm(SS),and(d)polarlow(PL)forthe
+1979–2022period.
+catalogtogetherwiththeLPSnodeandtracklabels.TheclassificationprocessofSyCLoPSfeaturesthefollowing
+novelties:
+1. Becauseasingleintuitiveworkflowisemployed,allLPSnodesareassignedoneofthe16LPSclasslabelsat
+once.NoLPSnodeisrepeatedordoublyclassified.Consequently,LPSphaseevolutioncanbetracedusingthe
+labelednodesasshowninFigure10.
+2. Notopographical,latitudinal,ortemporalrestrictionsneedtobeappliedinordertousethisframework,andthe
+detectionthresholdislowenoughtoincludeveryweakLPSnodesinthedetectedLPStracks.Asaresult,a
+muchmorecompleteLPSlifecyclecanbeobtainedforeachLPStrack.
+3. Toaddresstheinsufficiencyofusingwarm‐corecriteriatodisentangletropicalsystems,SyCLoPSproposesa
+newwaytoobjectivelyandphysicallydefinetropicalandnon‐tropicalsystemsusing100hPalevelrelative
+humidityandlarge‐scaledeep‐layerwindshear.
+4. SyCLoPS features the first global TLC (subtropical storms and polar lows) detection scheme by detecting
+similarphysicalfeaturestotropicalcyclonesamongnon‐tropicalsystemcandidates.
+UsingtheLPStracklabelsintheclassifiedcatalog,ourresultsshowthattheunifiedframeworkimprovesuponthe
+previously reported best TCdetection skillwithTE (Bourdinetal.,2022; Zarzycki& Ullrich, 2017) byboth
+increasingHRandloweringFAR.WefoundthattheloweredFARismainlycontributedbysuccessfullyidenti-
+fying subtropical storms in the subtropics. Detection skill for MS is comparable to previous work (Vishnu
+etal.,2020).UponcomparingthelabelsgivenbySyCLoPStothecorrespondingIBTrACSlabels,weobservethat
+SyCLoPScanreasonablylabeltheLPSstatusindifferentstagesofaTC.Wealsodemonstratethattheresulting
+classifiedcatalogcanbeusedtostudytheevolution,annualfrequencies,verticalcross‐sectioncomposites,IKE
+accumulation,andfractionalprecipitationcontributionofeachLPSclass.Thesepotentialapplicationsareuseful
+HANANDULLRICH 23of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+forgeneralLPSstudies,anditcouldbevaluableifappliedtoclimatemodeloutputstoinvestigatethetrendsofLPS
+activitiesundertheeffectsofclimatechange.SyCLoPSmayalsobeapplicableinreal‐timeoperationsandweather
+modeloutputs.Furthermore,informationintheclassifiedcatalogmaybeusedasdatalabelstotrainamachine
+learningmodel.WeintendtopursueadditionalresearchtasksonthosetopicsusingSyCLoPS.
+UsersmayalsopersonalizetheframeworktomeettheirownneedswiththedataandcodesprovidedinSyCLoPS.
+Forexample,thedetectionprocedureforasingletypeofLPSinagivendatasetcanbeeasilyisolatedfollowinga
+singlepathfromtheworkflow.UsersmayalsomodifytheTEspecificationstooptimizedetectionforaspecific
+typeofLPS(inaspecificregion)liketheoneweshowTextS7inSupportingInformationS1.MoreLPSsub‐classes
+maybederivedfromSyCLoPScatalogsandthedetectionofotheratmosphericfeatures.Forexample,weaker
+tropicalLPSsmaybeseparatedintodifferentclassesbymatchingthemtodistincttropicalwavesinthelower
+troposphere,andTLCsmaybedividedintothosethatdevelopinafront‐shearenvironmentversusareverse‐shear
+environment.
+There are some notable limitations in SyCLoPS. Firstly, SyCLoPS is based upon ERA5 data set, so the
+thresholds and parameter choices could be biased if applied directly to another global or regional data set.
+WhilewehaveproposedsomesuggestionsthatwouldallowSyCLoPStoadapttodifferentdatasets,andhave
+showninAppendixBthatSyCLoPS'sperformanceisstableacrossdifferentadaptationexperiments,morefine‐
+tuninginthedetectionandclassificationprocessesmayberequired.Itshouldalsobenotedthatadatasetwith
+aresolutioncoarserthanERA5maybeinsufficientfordetectionandclassificationofsmallerfeaturessuchas
+early‐stageTCsandTLCs.Second,althoughSyCLoPSfeaturesdetectionandclassificationofLPSsoverany
+terrain,signalsinMSLPoranylow‐levelatmosphericfieldscanbedistortedbyelevatedorroughtopography.
+Detection over or near those regions are subject to greater errors, especially for weak systems. Third, ulti-
+mately, the hard cut‐off threshold we impose between LPS phases is somewhat arbitrary: namely, there is
+alwaysagrayzoneortransitionzonewhenitcomestothethresholdsforagivenLPS.Nonetheless,objective
+LPS detection and classification reduces biases introduced by human error and subjectivity because an
+objectivestandardcanbestrictlyfollowed.However,bynatureanLPScanexistinan“impure”andsomewhat
+ambiguous state, which is contrary to fixed thresholds. This conflict is most obvious when a detected LPS
+persists at the edge of our defined thresholds, leading to its classification jumping between two labels. And
+lastly, confidence in detecting and classifying global TLC systems is still low due to a lack of global obser-
+vations. The method for calculating LPS size in TE as described in Appendix E for classifying TLCs can be
+further improved to more accurately represent the size of a smaller TLC in a larger circulation or the back-
+groundflow.Weexpectthattherewillbeotherdeficienciesdiscoveredandquestionsraisedinthepracticaluse
+ofthisexperimentalframework.Hence,weaimtoaddresstheremainingissuesandevolvethealgorithmsfor
+future versions of this framework.
+Appendix A: Variables Used in SyCLoPS
+TableA1
+Additionally,10‐mUandV‐componentWind(VAR_10UandVAR_10V)
+TableA1 areusedtocalculatethemaximumsurfacewindspeed(WS)ofanLPSasa
+DefaultERA5VariablesUsedinSyCLoPSforDetectionandClassification referenceinformationintheclassifiedcatalog.Itdoesnotplayaroleinthe
+Variablename Pressurelevel(hPa) detectionandclassificationprocess.
+U‐componentWind(U) 925,850,200c AlthoughSyCLoPSistestedon3‐hourlydata,assuggestedinAppendixB
+V‐componentWind(V) 925,850,200c below, it's possible to use 6‐hourly data or even lower frequency data for
+Temperature(T) 850 parameters that change more slowly and smoothly. The recommended TE
+RelativeHumidity(R)a 850,100 commandsforimplementinga6‐hourlyfrequencydetectionunderSyCLoPS
+frameworkareincludedTextS6inSupportingInformationS1.
+MeanSeaLevelPressure(MSL) SeaLevel
+Geopotential(Z) Surface,925,700,500,300c
+Appendix B: Experiments for Climate Model Data RelativeVorticity(VO)b 500
+Adaptations
+aSpecific humidity can be converted to R with additional temperature in-
+formation.bVOcanalsobecomputedbyUandVifnotdirectlyavailable. Four adaptation experiments are performed on SyCLoPS to test how SyC-
+cThesedefaultlevelscanbereplacedby250hPa.SeeAppendixBfordetails.
+LoPS can be adapted to a typical high‐resolution climate model output. In
+HANANDULLRICH 24of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+ 21698996, 2025, 1, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287 by University Of Sao Paulo - Brazil, Wiley Online Library on [28/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+| Journal | of Geophysical | Research: | Atmospheres |     |     |
+| ------- | -------------- | --------- | ----------- | --- | --- |
+10.1029/2024JD041287
+thesehigh‐resolutionmodels(e.g.,thoseintheHighresMIPsubmission),RHat100hPaisusuallyonlyavailable
+indailyfrequency,soourfirstexperimentresamplesERA53‐hourlyRHdatatodailyfrequency(daily‐mean)and
+recalculatesRH100MAXforclassification(i.e.,eachgridpointwillhavethesameRHMAX100for83‐hourly
+timestepsinaday).Mostclimatemodelsonlyoutput6‐hourlyfrequency(insteadof3)formanyofthefieldswe
+useinSyCLoPS.Therefore,thesecondexperimentresamplesthe3‐hourlyfrequencyinputcatalogofSyCLoPS
+to6‐hourlyfrequency(similartousinga6‐hourlydetectionrate)beforeperformingthesameclassification.In
+addition,thenumberofnodes(timesteps)neededtosatisfytheTC,MS,SSandPLtrackconditionsishalvedto
+reflectthefrequencychange.Forexample,4 TCnodes (insteadof8)in atrackarerequired fortheTCtrack
+conditionunder6‐hourlyfrequencydata.
+Finally,someclimatemodeloutputsonlyhave250hPadatainsteadofthe200hPadata(usedinDEEPSHEAR
+andWS200PMX)or300hPadata(usedinUPPTKCC)weuseinSyCLoPS.Therefore,thethirdexperimentopts
+touse250hPadatainERA5andthesubsequentadjustmentstotheclassificationconditionsareneededtoachieve
+theoptimaldetectionskills(ortomatchouroriginaldefinitiontojustifythepolarjet/front):
+1. Inthetropicalcondition,theDEEPSHEARthresholdischangedto:DEEPSHEAR<13ms−1
+2. TCConditionischangedto:MSLPCC20>225Pa,LOWTKCC<0m2s−2andUPPTKCC<− 147m2s−2.
+3. TCTrackConditionischanged:Atleast63‐hourlyTC‐labelednodesinatrackarerequiredtosatisfytheTC
+TrackCondition.
+4. WS200PMX should be renamed to WS250PMX with the following changes: In the SC condition, use
+WS250PMX>35ms−1.AndtoseparateSSandPL,useWS250PMX>30ms−1
+TheresultsoftheseadaptationexperimentsaresummarizedinTableB1below.Asshown,thedetectionskillsand
+labelingaccuracyofthethreeadaptationexperimentsaregenerallyverysimilartotheoriginalalgorithm,sug-
+gesting the flexibility of SyCLoPS in adapting to climate model data. It's also not surprising that the TLC
+detectionskilldegradesmorenoticeablyatalowersamplingfrequencyinthe6‐hourlydatafrequencyexperiment
+giventhatmanyTLCsaretransient.
+TableB1
+AdaptationExperimentPerformance
+| Method   |     | TCdetection | Labelaccuracy | MSdetection | TLCdetection |
+| -------- | --- | ----------- | ------------- | ----------- | ------------ |
+| Original |     | HR=78.2%    | TS:96.6%      | CSI=0.83    | HR≈80%       |
+FAR=14.6% TC:74%
+|                    |     | HRMFAR=63.6% | EX:78%   |          | IR=11.9% |
+| ------------------ | --- | ------------ | -------- | -------- | -------- |
+| Daily‐meanRH100MAX |     | HR=78.0%     | TS:96.6% | CSI=0.83 | HR≈80%   |
+|                    |     | FAR=14.7%    | TC:74%   |          | IR=11.7% |
+HRMFAR=63.3% EX:79%
+| 6‐hourlyFrequency |     | HR=78.4%  | TS:96.6% | CSI=0.82 | HR≈70%   |
+| ----------------- | --- | --------- | -------- | -------- | -------- |
+|                   |     | FAR=15.2% | TC:75%   |          | IR=14.8% |
+HRMFAR=63.2%
+EX:78%
+| 250hPaParameters |     | HR=78.7%  | TS:96.3% | CSI=0.83 | HR≈80%   |
+| ---------------- | --- | --------- | -------- | -------- | -------- |
+|                  |     | FAR=15.1% | TC:72%   |          | IR=11.6% |
+HRMFAR=63.6% EX:84%
+HANANDULLRICH 25of31
+
+ 21698996, 2025, 1, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287 by University Of Sao Paulo - Brazil, Wiley Online Library on [28/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+| Journal | of Geophysical |     | Research: |     | Atmospheres |     |
+| ------- | -------------- | --- | --------- | --- | ----------- | --- |
+10.1029/2024JD041287
+|     | Appendix | C: Catalog | Column | Table |     |     |
+| --- | -------- | ---------- | ------ | ----- | --- | --- |
+TableC1
+TableC1
+ColumnTablefortheInputCatalog(Top)andClassifiedCatalog(Bottom)
+|     | Column  |     | Unit |     |                                                       | Description |
+| --- | ------- | --- | ---- | --- | ----------------------------------------------------- | ----------- |
+|     | TID     |     | –    |     | LPStrackID(0‐based)inboththeinputandclassifiedcatalog |             |
+|     | ISOTIME |     | –    |     | UTCtimestamp(ISOtime)oftheLPSnodeinbothcatalogs       |             |
+|     | LAT     |     | °    |     | LatitudeoftheLPSnodeinbothcatalogs                    |             |
+|     | LON     |     | °    |     | LongitudeoftheLPSnodeinbothcatalogs                   |             |
+|     | MSLP    |     | Pa   |     | MeansealevelpressureattheLPSnodeinbothcatalogs        |             |
+MSLPCC20 Pa GreatestpositiveclosedcontourdeltaofMSLPovera2.0°GCD
+(thecoreofanLPS)
+MSLPCC55 Pa GreatestpositiveclosedcontourdeltaofMSLPovera5.5°GCD
+DEEPSHEAR ms−1 Averagedeep‐layerwindspeedshearbetween200hPaand850hPa
+overa10.0°GCD
+UPPTKCC m2s−2 Greatestnegativeclosedcontourdeltaoftheupper‐levelthickness
+between300hPaand500hPaovera6.5°GCD,referencedtothe
+maximumvaluewithin1.0°GCD
+MIDTKCC m2s−2 Greatestnegativeclosedcontourdeltaofthemiddle‐levelthickness
+between500hPaand700hPaovera3.5°GCD,referencedtothe
+maximumvaluewithin1.0°GCD
+|     | LOWTKCCa |     | m2s−2 |     |     |     |
+| --- | -------- | --- | ----- | --- | --- | --- |
+Greatestnegativeclosedcontourdeltaofthelower‐levelthickness
+between700hPaand925hPaovera3.5°GCD,referencedtothe
+maximumvaluewithin1.0°GCD
+m2s−2
+Z500CC Greatestpositiveclosedcontourdeltaofgeopotentialat500hPa
+overa3.5°GCDreferencedtotheminimumvaluewithin
+1.0°GCD
+|     | VO500AVG |     | s−1   |     | Averagerelativevorticityovera2.5°GCD         |     |
+| --- | -------- | --- | ----- | --- | -------------------------------------------- | --- |
+|     | RH100MAX |     | %     |     | Maximumrelativehumidityat100hPawithin2.5°GCD |     |
+|     | RH850AVG |     | %     |     | Averagerelativehumidityovera2.5°GCDat850hPa  |     |
+|     | T850     |     | K     |     | Airtemperatureat850hPaattheLPSnode           |     |
+|     | Z850     |     | m2s−2 |     | Geopotentialat850hPaattheLPSnode             |     |
+|     | ZS       |     | m2s−2 |     | GeopotentialatthesurfaceattheLPSnode         |     |
+U850DIFF ms−1sr Differencebetweentheweightedareameanofpositiveandnegative
+valuesof850hPaU‐componentwindovera5.5°GCD
+ms−1
+|     | WS200PMX |     |     |     | Maximumpolewardvalueof200hPawindspeedwithin1.0°GCD |     |
+| --- | -------- | --- | --- | --- | -------------------------------------------------- | --- |
+longitude
+km2
+|     | RAWAREA   |     |      |     | Therawdefinedsize(seeAppendixE)oftheLPS      |     |
+| --- | --------- | --- | ---- | --- | -------------------------------------------- | --- |
+|     | LPSAREA   |     | km2  |     | TheadjusteddefinedsizeoftheLPSinbothcatalogs |     |
+|     | WS        |     | ms−1 |     | Maximumwindspeedatthe10‐mlevelwithin2.0°GCD  |     |
+|     | Full_Name |     | –    |     | ThefullLPSnamebasedontheclassification       |     |
+Short_Label – TheassignedLPSlabel(theabbreviationofthefullname)
+Tropical_Flag – 1iftheLPSisdesignatedasatropicalsystem,otherwise0
+Transition_Zone – 1iftheLPSisinthedefinedtransitionzone,otherwise0
+Track_Info – “TC,”“MS,”“SS(STLC),”“PL(PTLC),”“QS”denotedforTC,
+MS,SS,PLandQStracks;“EXT,”“TT”denotedforextratropical
+andtropicaltransitioncompletionnodes
+IKE TJ TheintegratedkineticenergycomputedbasedontheLPSsizeblobs
+thatareusedtodefineRAWAREA
+a925hPamaybereplacedby850hPaifdataatthislevelisunavailableinsomedatasets.
+HANANDULLRICH 26of31
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Appendix D: Condition List
+TableD1
+TableD1
+ClassificationConditions
+Conditionname Conditions
+High‐altitudeConditiona Z850>ZS
+DrynessCondition RH850AVG<60%
+CyclonicCondition VO500AVG≥(<)0s−1ifLAT≥(<)0°
+TropicalCondition RH100MAX>20%;DEEPSHEAR<18ms−1;T850>280K
+TransitionCondition TropicalCondition=True;DEEPSHEAR>10ms−1orRH100MAX<55%
+TCCondition MSLPCC20>215Pa;LOWTKCC<0m2s−2;UPPTKCC<− 107.8m2s−2
+TDCondition MSLPCC55>160Pa;UPPTKCC<0m2s−2
+MSCondition U850DIFF>0ms−1;RH850AVG>85%
+TLCConditionb MSLPCC20>190Pa;LOWTKCCandMIDTKCC<0m2s−2;(LPSAREA<5.5 × 105
+km2;LPSAREA>0km2)or(MSLPCC20>420Pa;MSLPCC20:MSLPCC55>0.5)
+SCCondition LOWTKCC<0m2s−2;Z500CC>0m2s−2;WS200PMXc>30ms−1
+TCTrackCondition Atleast8(8+)3‐hourlyTC‐labelednodesinanLPStrack
+MSTrackCondition 10+3‐hourly“TLO(ML)”or“TD(MD)”‐labelednodesinanLPStrack
+SSTrackCondition 2+3‐hourlyTLC‐labelednodes(“SS(STLC)”or“PL(PTLC)”)and1“SS(STLC)”‐labeled
+nodeinanLPStrack
+PLTrackCondition 2+3‐hourlyTLC‐labelednodes(“SS(STLC)”or“PL(PTLC)”)and1“PL(PTLC)”‐labeled
+nodeinanLPStrack
+QSTrackCondition SeeTextS3inSupportingInformationS1fordetails
+aItcanbesimplycheckingZ850dataavailability(nullornot)insomedatasets.bSeeSection5.3forapotentialalternative.
+cWS200PMXcriteriausedinthisframeworkmaybesupplementedbyotherparametersinsomeregionalmodels.SeeTextS4
+inSupportingInformationS1fordetails.
+Appendix E: LPSAREA Computation
+TocalculateLPSsize,werefertothedefinitionofTCsizewhichistypicallydeterminedbyaTC'soutersurface
+wind radius. We first use TE to detect blobs (areas) of smoothed 850 hPa cyclonic relative vorticity (CRV)
+>2 × 10−5s−1 and925hPawindspeed>12ms−1.Analternativeconditiontothisdetectionrequirementis
+CRV>4 × 10−5s−1 sothatTCeyesandEXs'centralweakerwindareascanbecaptured.Windspeedfrom
+925hPaisusedforthiscalculation,foritisacommonlyfoundlowermodellevelabovethesurfacelevel.Surface
+levelwindsarenotusedsincetheycanbegreatlydistortedbycomplextopography.The12ms−1 thresholdis
+obtainedusingalogwindprofilefromthe8or9ms−1surfaceouterwindspeedthresholdoftenfoundinTC‐size‐
+relatedstudiesusingERA5orclimatemodels(e.g.,Bianetal.,2021;Stansfieldetal.,2020).ThesmoothedCRV
+fieldisusedtocontroltheboundaryofanLPSsothattheouterwindfieldsarelesslikelytoconnectwithan
+unrelatedsystemnearby.EachdetectedsizeblobisthenassignedtoadetectedLPSnodeifthenodeiswithin5°
+GCDofthecentroidoftheblobatthesametimestamp,orotherwisewithintheregionboundedbytheminimum/
+maximumlatitude/longitude(extent)oftheblob.Informationonthecentroid,extent,andsize(area)ofeachblob
+canbedirectlyoutputbyTE.Ifmultiplenodesarefoundforoneblob,theblobisassignedtothenodewiththe
+lowestMSLP.Next,theareasofalltheblobspairedwitheachnodeareaddedtogetherasrawLPSsizes(areas).
+ToavoidmisclassifyingEXs/SCsasTLCsnearshorelineswithelevatedtopography,weadjusttherawLPSsize
+iftheLPSisclosetothoseshorelineswithitswindfieldlargelyaffectedbytopography.Specifically,wemultiply
+therawLPSsizeby2ifonly30%–70%ofsurfacegeopotentialwithin5°GCDofanLPSissmallerthan7,000
+m2s−2(approximatelythe925hPalevel).ThisadjustedLPSsizeisdefinedasLPSAREA(inkm2).Foraquick
+comparison,thesizesof2010–2021WesternNorthPacificTCscomputedbyourmethodandthesizesgivenby
+theJapanMeteorologicalAgencyinIBTrACShaveareasonablyhighcorrelationcoefficientof0.63,withvery
+HANANDULLRICH 27of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+highstatisticalsignificance.Furthermore,theaverageandmedianglobalPLsize(inradius)givenbyLPSAREA
+is231and206kmwhichareveryclosetothe221and200kmsuggestedbythePLradiusrecordsintheSTARS
+dataset.Thenon‐adjusted(raw)LPSsizecomputedbythismethodisincludedasthe“RAWAREA”columnin
+theinputcatalog.TheTEcommandsforcomputingtheLPSAREAparameterareprintedTextS6inSupporting
+InformationS1.
+Data Availability Statement
+Thelatestversion(version2.2.3)ofTempestExtremes(TE)canbeaccessedfromhttps://doi.org/10.5281/zenodo.
+13830377 (Ullrich, 2024). The input and the classified catalog created in this study, the shell script for TE
+commands,thePythonClassifierandausermanualareallavailableviatheZenodorepository(Han&Ullrich,
+2024)athttps://doi.org/10.5281/zenodo.10906284.Weaimtokeepupdatingthisonlinedatasettoreflectnew
+improvements.TheERA5datasetwasobtainedfromtheResearchDataArchive(EuropeanCentereforMedium‐
+Range Weather Forecasts, 2019) at the National Center for Atmospheric Research (https://doi.org/10.5065/
+BH6N‐5N20). The IBTrACS archive (Knapp et al., 2018) can be retrieved from https://www.ncei.noaa.gov/
+products/international‐best‐track‐archive.TheSTARSpolarlowlist(Noeretal.,2011)isavailableat:https://
+projects.met.no/polarlow/stars‐dat. The following two websites were used to evaluate the status of tracked
+Mediterranean cyclones: https://meteorologia.uib.eu/medicanes/medicanes_list.html maintained by the meteo-
+rology group of the University of the Balearic Islandsor and http://medicanes.altervista.org run by Daniele
+Bianchino.Theobjectivelytrackedeasterlywavedatasetisdownloadedfromhttps://doi.org/10.17605/OSF.IO/
+J4HPQpublishedbyLawtonandMajumdar(2018).
+Acknowledgments References
+ThisworkissupportedbytheProgramfor
+Bernhardt,J.E.,&DeGaetano,A.T.(2012).Meteorologicalfactorsaffectingthespeedofmovementandrelatedimpactsofextratropicalcyclones
+ClimateModelDiagnosisand
+Intercomparison(PCMDI)underthe alongtheUSEastCoast.NaturalHazards,61(3),1463–1472.https://doi.org/10.1007/s11069‐011‐0078‐0
+Bian,G.‐F.,Nie,G.‐Z.,&Qiu,X.(2021).Howwellisoutertropicalcyclonesizerepresentedintheera5reanalysisdataset?Atmospheric auspicesoftheU.S.DepartmentofEnergy
+Research,249,105339.https://doi.org/10.1016/j.atmosres.2020.105339 atLawrenceLivermoreNational
+Blackmon,M.L.,Wallace,J.M.,Lau,N.‐C.,&Mullen,S.L.(1977).Anobservationalstudyofthenorthernhemispherewintertimecirculation.
+LaboratoryundercontractDE‐AC52‐
+JournaloftheAtmosphericSciences,34(7),1040–1053.https://doi.org/10.1175/1520‐0469(1977)034<1040:aosotn>2.0.co;2
+07NA27344.TheauthorsthankColin
+Bourdin,S.,Fromang,S.,Dulac,W.,Cattiaux,J.,&Chauvin,F.(2022).Intercomparisonoffouralgorithmsfordetectingtropicalcyclonesusing
+Zarzycki,KevinReed,andHaoyuZhuang
+era5.GeoscientificModelDevelopment,15(17),6759–6786.https://doi.org/10.5194/gmd‐15‐6759‐2022
+forhelpfuldiscussionandfeedback.The
+authorsthankS.Vishnuforprovidingthe Cavicchia,L.,Dowdy,A.,&Walsh,K.(2018).EnergeticsanddynamicsofsubtropicalAustralianeastcoastcyclones:Twocontrastingcases.
+MonthlyWeatherReview,146(5),1511–1525.https://doi.org/10.1175/mwr‐d‐17‐0316.1
+electronicversionoftheSikkaarchive
+Chavas,D.R.,&Emanuel,K.A.(2010).Aquikscatclimatologyoftropicalcyclonesize.GeophysicalResearchLetters,37(18).https://doi.org/
+convertedbySarahDitchek.Theauthors
+10.1029/2010gl044558
+thankEmmanouilFlaounasforsharingthe
+Dare,R.A.,Davidson,N.E.,&McBride,J.L.(2012).TropicalcyclonecontributiontorainfalloverAustralia.MonthlyWeatherReview,140(11),
+subjectivelytrackedMediterranean
+3606–3619.https://doi.org/10.1175/mwr‐d‐11‐00340.1
+cyclonedata.Theauthorsarealsovery
+gratefulforthethoroughandconstructive Datt,I.,Camargo,S.J.,Sobel,A.H.,McTAGGART‐COWAN,R.,&Wang,Z.(2022).Aninvestigationoftropicalcyclonedevelopment
+pathwaysasanindicatorofextratropicaltransition.JournaloftheMeteorologicalSocietyofJapan.Ser.II,100(4),707–724.https://doi.org/10.
+commentsfromMalcolmRobertsand
+2151/jmsj.2022‐037
+AliceMillerandtwootheranonymous
+Doran,P.T.,Priscu,J.C.,Lyons,W.B.,Walsh,J.E.,Fountain,A.G.,McKnight,D.M.,etal.(2002).Antarcticclimatecoolingandterrestrial
+reviewers.
+ecosystemresponse.Nature,415(6871),517–520.https://doi.org/10.1038/nature710
+Emanuel,K.(2005).Genesisandmaintenanceofmediterraneanhurricanes.AdvancesinGeosciences,2,217–220.https://doi.org/10.5194/adgeo‐
+2‐217‐2005
+European Centre for Medium‐Range Weather Forecasts. (2019). Research data archive at the national center for atmospheric research,
+computationalandinformationsystemslaboratory[Dataset].https://doi.org/10.5065/BH6N‐5N20
+Evans,J.L.,&Braun,A.(2012).AclimatologyofsubtropicalcyclonesinthesouthAtlantic.JournalofClimate,25(21),7328–7340.https://doi.
+org/10.1175/jcli‐d‐11‐00212.1
+Feng,X.,Liu,C.,Fan,G.,Liu,X.,&Feng,C.(2016).ClimatologyandstructuresofsouthwestvorticesintheNCEPclimateforecastsystem
+reanalysis.JournalofClimate,29(21),7675–7701.https://doi.org/10.1175/jcli‐d‐15‐0813.1
+Fita,L.,Romero,R.,Luque,A.,Emanuel,K.,&Ramis,C.(2007).Analysisoftheenvironmentsofsevenmediterraneantropical‐likestormsusing
+anaxisymmetric,nonhydrostatic,cloudresolvingmodel.NaturalHazardsandEarthSystemSciences,7(1),41–56.https://doi.org/10.5194/
+nhess‐7‐41‐2007
+Flaounas,E.,Aragão,L.,Bernini,L.,Dafis,S.,Doiteau,B.,Flocas,H.,etal.(2023).Acompositeapproachtoproducereferencedatasetsfor
+extratropicalcyclonetracks:Applicationtomediterraneancyclones.WeatherandClimateDynamics,4(3),639–661.https://doi.org/10.5194/
+wcd‐4‐639‐2023
+Flaounas,E.,Davolio,S.,Raveh‐Rubin,S.,Pantillon,F.,Miglietta,M.M.,Gaertner,M.A.,etal.(2022).Mediterraneancyclones:Current
+knowledgeandopenquestionsondynamics,prediction,climatologyandimpacts.WeatherandClimateDynamics,3(1),173–208.https://doi.
+org/10.5194/wcd‐3‐173‐2022
+Fu,S.‐M.,Sun,J.‐H.,Li,W.‐L.,&Zhang,Y.‐C.(2018).Investigatingthemechanismsassociatedwiththeevolutionsoftwinextratropical
+cyclonesoverthenorthwestPacificOceaninmid‐January2011.JournalofGeophysicalResearch:Atmospheres,123(8),4088–4109.https://
+doi.org/10.1002/2017jd027852
+Gan,M.A.,Kousky,V.E.,&Ropelewski,C.F.(2004).ThesouthAmericamonsooncirculationanditsrelationshiptorainfalloverwest‐central
+Brazil.JournalofClimate,17(1),47–66.https://doi.org/10.1175/1520‐0442(2004)017<0047:tsamca>2.0.co;2
+HANANDULLRICH 28of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Garde,L.A.,Pezza,A.B.,&Bye,J.A.T.(2010).Tropicaltransitionofthe2001Australianduck.MonthlyWeatherReview,138(6),2038–2057.
+https://doi.org/10.1175/2009mwr3220.1
+Gozzo,L.F.,daRocha,R.P.,Reboita,M.S.,&Sugahara,S.(2014).SubtropicalcyclonesoverthesouthwesternsouthAtlantic:Climatological
+aspectsandcasestudy.JournalofClimate,27(22),8543–8562.https://doi.org/10.1175/jcli‐d‐14‐00149.1
+Guishard,M.P.,Evans,J.L.,&Hart,R.E.(2009).Atlanticsubtropicalstorms.PartII:Climatology.JournalofClimate,22(13),3574–3594.
+https://doi.org/10.1175/2008jcli2346.1
+Han,Y.,&Ullrich,P.A.(2024).Thesystemforclassificationoflow‐pressuresystems(syclops)dataset(basedonera5)[Dataset].Zenodo.https://
+doi.org/10.5281/zenodo.10906284
+Hart,R.E.(2003).Acyclonephasespacederivedfromthermalwindandthermalasymmetry.MonthlyWeatherReview,131(4),585–616.https://
+doi.org/10.1175/1520‐0493(2003)131<0585:acpsdf>2.0.co;2
+Heo,K.‐Y.,&Ha,K.‐J.(2008).SnowstormoverthesouthwesterncoastoftheKoreanpeninsulaassociatedwiththedevelopmentofmesocyclone
+overtheyellowsea.AdvancesinAtmosphericSciences,25(5),765–777.https://doi.org/10.1007/s00376‐008‐0765‐2
+Hepworth,E.,Messori,G.,&Vichi,M.(2022).AssociationbetweenextremeatmosphericanomaliesoverAntarcticseaice,southernoceanpolar
+cyclonesandatmosphericrivers.JournalofGeophysicalResearch:Atmospheres,127(7),e2021JD036121.https://doi.org/10.1029/
+2021jd036121
+Hersbach,H.,Bell,B.,Berrisford,P.,Hirahara,S.,Horányi,A.,Muñoz‐Sabater,J.,etal.(2020).Theera5globalreanalysis.QuarterlyJournalof
+theRoyalMeteorologicalSociety,146(730),1999–2049.https://doi.org/10.1002/qj.3803
+Hodges,K.,Cobb,A.,&Vidale,P.L.(2017).Howwellaretropicalcyclonesrepresentedinreanalysisdatasets?JournalofClimate,30(14),
+5243–5264.https://doi.org/10.1175/jcli‐d‐16‐0557.1
+Hodges,K.I.(1994).Ageneralmethodfortrackinganalysisanditsapplicationtometeorologicaldata.MonthlyWeatherReview,122(11),2573–
+2586.https://doi.org/10.1175/1520‐0493(1994)122<2573:agmfta>2.0.co;2
+Hoinka,K.P.,&Castro,M.D.(2003).TheIberianPeninsulathermallow.QuarterlyJournaloftheRoyalMeteorologicalSociety:Ajournalofthe
+atmosphericsciences,appliedmeteorologyandphysicaloceanography,129(590),1491–1511.https://doi.org/10.1256/qj.01.189
+Holland,G.J.,Lynch,A.H.,&Leslie,L.M.(1987).Australianeast‐coastcyclones.PartI:Synopticoverviewandcasestudy.MonthlyWeather
+Review,115(12),3024–3036.https://doi.org/10.1175/1520‐0493(1987)115<3024:aeccpi>2.0.co;2
+Hopsch,S.B.,Thorncroft,C.D.,&Tyle,K.R.(2010).AnalysisofAfricaneasterlywavestructuresandtheirroleininfluencingtropical
+cyclogenesis.MonthlyWeatherReview,138(4),1399–1419.https://doi.org/10.1175/2009mwr2760.1
+Hunt,K.M.,Turner,A.G.,Inness,P.M.,Parker,D.E.,&Levine,R.C.(2016).OnthestructureanddynamicsofIndianmonsoondepressions.
+MonthlyWeatherReview,144(9),3391–3416.https://doi.org/10.1175/mwr‐d‐15‐0138.1
+Hurley,J.V.,&Boos,W.R.(2015).Aglobalclimatologyofmonsoonlow‐pressuresystems.QuarterlyJournaloftheRoyalMeteorological
+Society,141(689),1049–1064.https://doi.org/10.1002/qj.2447
+Iwao,K.,Inatsu,M.,&Kimoto,M.(2012).RecentchangesinexplosivelydevelopingextratropicalcyclonesoverthewinternorthwesternPacific.
+JournalofClimate,25(20),7282–7296.https://doi.org/10.1175/jcli‐d‐11‐00373.1
+Knapp,K.R.,Diamond,H.J.,Kossin,J.P.,Kruk,M.C.,&Schreck,C.J.(2018).Internationalbesttrackarchiveforclimatestewardship
+(IBTrACS)project,version4[Dataset].NOAANationalCentersforEnvironmentalInformation.https://doi.org/10.25921/82ty‐9e16
+Knapp,K.R.,Kruk,M.C.,Levinson,D.H.,Diamond,H.J.,&Neumann,C.J.(2010).Theinternationalbesttrackarchiveforclimatestewardship
+(IBTrACS)unifyingtropicalcyclonedata.BulletinoftheAmericanMeteorologicalSociety,91(3),363–376.https://doi.org/10.1175/
+2009bams2755.1
+Koch,P.,Wernli,H.,&Davies,H.C.(2006).Anevent‐basedjet‐streamclimatologyandtypology.InternationalJournalofClimatology:A
+JournaloftheRoyalMeteorologicalSociety,26(3),283–301.https://doi.org/10.1002/joc.1255
+Kreussler,P.,Caron,L.‐P.,Wild,S.,LoosveldtTomas,S.,Chauvin,F.,Moine,M.‐P.,etal.(2021).Tropicalcycloneintegratedkineticenergyin
+anensembleofhighresmipsimulations.GeophysicalResearchLetters,48(5),e2020GL090963.https://doi.org/10.1029/2020gl090963
+Landsea,C.W.,&Franklin,J.L.(2013).Atlantichurricanedatabaseuncertaintyandpresentationofanewdatabaseformat.MonthlyWeather
+Review,141(10),3576–3592.https://doi.org/10.1175/mwr‐d‐12‐00254.1
+Lau,W.K.,&Kim,K.‐M.(2015).RobustHadleycirculationchangesandincreasingglobaldrynessduetoCO warmingfromCMIP5model
+2
+projections.ProceedingsoftheNationalAcademyofSciences,112(12),3630–3635.https://doi.org/10.1073/pnas.1418682112
+Lavaysse,C.,Flamant,C.,Janicot,S.,Parker,D.J.,Lafore,J.‐P.,Sultan,B.,&Pelon,J.(2009).SeasonalevolutionofthewestAfricanheatlow:A
+climatologicalperspective.ClimateDynamics,33(2–3),313–330.https://doi.org/10.1007/s00382‐009‐0553‐4
+Lawton,Q.,&Majumdar,S.(2018).ObjectivetrackingofAfricaneasterlywavesinreanalysisdata(updatedthrough2022)[Dataset].OSF.
+https://doi.org/10.17605/OSF.IO/J4HPQ
+Lawton,Q.A.,Majumdar,S.J.,Dotterer,K.,Thorncroft,C.,&Schreck,C.J.,III.(2022).Theinfluenceofconvectivelycoupledkelvinwaveson
+Africaneasterlywavesinawave‐followingframework.MonthlyWeatherReview,150(8),2055–2072.https://doi.org/10.1175/mwr‐d‐21‐
+0321.1
+Li,J.,&Zeng,Q.(2003).Anewmonsoonindexandthegeographicaldistributionoftheglobalmonsoons.AdvancesinAtmosphericSciences,
+20(2),299–302.https://doi.org/10.1007/s00376‐003‐0016‐5
+Li,L.,Zhang,R.,Wen,M.,Duan,J.,&Qi,Y.(2019).CharacteristicsoftheTibetanplateauvorticesandtherelatedlarge‐scalecirculations
+causingdifferentprecipitationintensity.TheoreticalandAppliedClimatology,138(1–2),849–860.https://doi.org/10.1007/s00704‐019‐
+02870‐4
+Lodise,J.,Merrifield,S.,Collins,C.,Rogowski,P.,Behrens,J.,&Terrill,E.(2022).Globalclimatologyofextratropicalcyclonesfromanew
+tracking approach and associated wave heights from satellite radar altimeter. Journal of Geophysical Research: Oceans, 127(11),
+e2022JC018925.https://doi.org/10.1029/2022jc018925
+Lu,J.,&Ding,Y.(1989).Climaticstudyonthesummertropicaleasterlyjetat200hPa.AdvancesinAtmosphericSciences,6(2),215–226.https://
+doi.org/10.1007/bf02658017
+Lu,J.,Vecchi,G.A.,&Reichler,T.(2007).ExpansionoftheHadleycellunderglobalwarming.GeophysicalResearchLetters,34(6).https://doi.
+org/10.1029/2006gl028443
+Masson‐Delmotte,V.,Zhai,P.,Pirani,S.,Connors,C.,Péan,S.,Berger,N.,etal.(2021).IPCC,2021:Summaryforpolicymakers.InClimate
+change2021:Thephysicalsciencebasis.contributionofworkinggroupItothesixthassessmentreportoftheintergovernmentalpanelon
+climatechange.
+Merlis,T.M.,Cheng,K.‐Y.,Guendelman,I.,Harris,L.,Bretherton,C.S.,Bolot,M.,etal.(2024).Climatesensitivityandrelativehumidity
+changesinglobalstorm‐resolvingmodelsimulationsofclimatechange.ScienceAdvances,10(26),eadn5217.https://doi.org/10.1126/sciadv.
+adn5217
+HANANDULLRICH 29of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Montgomery,M.T.,&Farrell,B.F.(1992).Polarlowdynamics.JournaloftheAtmosphericSciences,49(24),2484–2505.https://doi.org/10.
+1175/1520‐0469(1992)049<2484:pld>2.0.co;2
+NationalHurricaneCenter.(n.d.).GlossaryofNHCterms.NationalHurricaneCenterandCentralPacificHurricaneCenter.https://www.nhc.
+noaa.gov/aboutgloss.shtml
+Neu,U.,Akperov,M.G.,Bellenbaum,N.,Benestad,R.,Blender,R.,Caballero,R.,etal.(2013).IMILAST:Acommunityefforttointercompare
+extratropicalcyclonedetectionandtrackingalgorithms.BulletinoftheAmericanMeteorologicalSociety,94(4),529–547.https://doi.org/10.
+1175/bams‐d‐11‐00154.1
+Noer,G.,Saetra,Ø.,Lien,T.,&Gusdal,Y.(2011).AclimatologicalstudyofpolarlowsintheNordicseas.QuarterlyJournaloftheRoyal
+MeteorologicalSociety,137(660),1762–1772.https://doi.org/10.1002/qj.846
+Nordeng,T.E.,&Rasmussen,E.A.(1992).Amostbeautifulpolarlow.Acasestudyofapolarlowdevelopmentinthebearislandregion.Tellus,
+44(2),81–99.https://doi.org/10.1034/j.1600‐0870.1992.00001.x
+Oliva,M.,Navarro,F.,Hrbáček,F.,Hernandéz,A.,Nỳvlt,D.,Pereira,P.,etal.(2017).RecentregionalclimatecoolingontheAntarcticPeninsula
+andassociatedimpactsonthecryosphere.ScienceoftheTotalEnvironment,580,210–223.https://doi.org/10.1016/j.scitotenv.2016.12.030
+Poveda,G.,Jaramillo,L.,&Vallejo,L.F.(2014).SeasonalprecipitationpatternsalongpathwaysofsouthAmericanlow‐leveljetsandaerial
+rivers.WaterResourcesResearch,50(1),98–118.https://doi.org/10.1002/2013wr014087
+Powell,M.D.,&Reinhold,T.A.(2007).Tropicalcyclonedestructivepotentialbyintegratedkineticenergy.BulletinoftheAmericanMeteo-
+rologicalSociety,88(4),513–526.https://doi.org/10.1175/bams‐88‐4‐513
+Prat,O.P.,&Nelson,B.R.(2013).Mappingtheworld'stropicalcyclonerainfallcontributionoverlandusingtheTRMMMulti‐satellitePre-
+cipitationAnalysis.WaterResourcesResearch,49(11),7236–7254.https://doi.org/10.1002/wrcr.20527
+Prein,A.F.,Mooney,P.A.,&Done,J.M.(2023).Themulti‐scaleinteractionsofatmosphericphenomenoninmeanandextremeprecipitation.
+Earth'sFuture,11(11),e2023EF003534.https://doi.org/10.1029/2023ef003534
+Pytharoulis,I.,Craig,G.C.,&Ballard,S.P.(2000).Thehurricane‐likemediterraneancycloneofJanuary1995.MeteorologicalApplications:A
+journalofforecasting,practicalapplications,trainingtechniquesandmodelling,7(3),261–279.https://doi.org/10.1017/s1350482700001511
+Qian,W.,&Lee,D.‐K.(2000).SeasonalmarchofAsiansummermonsoon.InternationalJournalofClimatology:AJournaloftheRoyal
+MeteorologicalSociety,20(11),1371–1386.https://doi.org/10.1002/1097‐0088(200009)20:11<1371::aid‐joc538>3.0.co;2‐v
+Rasmussen,E.A.,&Turner,J.(2003).Mesoscaleweathersystemsinthepolarregions.CambridgeUniversityPress.
+Reed,R.J.,Norquist,D.C.,&Recker,E.E.(1977).ThestructureandpropertiesofAfricanwavedisturbancesasobservedduringphaseIIIof
+gate.MonthlyWeatherReview,105(3),317–333.https://doi.org/10.1175/1520‐0493(1977)105<0317:tsapoa>2.0.co;2
+Reeder,M.J.,Smith,R.K.,Deslandes,R.,Tapper,N.J.,&Mills,G.A.(2000).Subtropicalfrontsobservedduringthe1996centralAustralian
+frontsexperiment.AustralianMeteorologicalMagazine,49(3),181–200.
+Roberts,M.J.,Camp,J.,Seddon,J.,Vidale,P.L.,Hodges,K.,Vanniere,B.,etal.(2020).Impactofmodelresolutionontropicalcyclone
+simulationusingthehighresmip–primaveramultimodelensemble.JournalofClimate,33(7),2557–2583.https://doi.org/10.1175/jcli‐d‐19‐
+0639.1
+Roberts,M.J.,Camp,J.,Seddon,J.,Vidale,P.L.,Hodges,K.,Vannière,B.,etal.(2020).Projectedfuturechangesintropicalcyclonesusingthe
+CMIP6highresmipmultimodelensemble.GeophysicalResearchLetters,47(14),e2020GL088662.https://doi.org/10.1029/2020gl088662
+Romero,R.,&Emanuel,K.(2017).Climatechangeandhurricane‐likeextratropicalcyclones:ProjectionsfornorthAtlanticpolarlowsand
+medicanesbasedonCMIP5models.JournalofClimate,30(1),279–299.https://doi.org/10.1175/jcli‐d‐16‐0255.1
+Schreck,C.J.,Knapp,K.R.,&Kossin,J.P.(2014).Theimpactofbesttrackdiscrepanciesonglobaltropicalcycloneclimatologiesusingibtracs.
+MonthlyWeatherReview,142(10),3881–3899.https://doi.org/10.1175/mwr‐d‐14‐00021.1
+Schultz,D.M.,&Keyser,D.(2021).AntecedentsfortheShapiro–KeysercyclonemodelintheBergenschoolliterature.BulletinoftheAmerican
+MeteorologicalSociety,102(2),E383–E398.https://doi.org/10.1175/bams‐d‐20‐0078.1
+Sherwood,S.C.,Ingram,W.,Tsushima,Y.,Satoh,M.,Roberts,M.,Vidale,P.L.,&O’Gorman,P.A.(2010).Relativehumiditychangesina
+warmerclimate.JournalofGeophysicalResearch,115(D9).https://doi.org/10.1029/2009jd012585
+Shimada,U.,Wada,A.,Yamazaki,K.,&Kitabatake,N.(2014).Rolesofanupper‐levelcoldvortexandlow‐levelbaroclinicityinthedevel-
+opmentofpolarlowsovertheseaofJapan.TellusA:DynamicMeteorologyandOceanography,66(1),24694.https://doi.org/10.3402/tellusa.
+v66.24694
+Sikka,D.R.(2006).AstudyonthemonsoonlowpressuresystemsovertheIndianregionandtheirrelationshipwithdroughtandexcessmonsoon
+seasonalrainfall(No.217).CenterforOcean‐Land‐AtmosphereStudies.
+Smith,E.A.(1986).ThestructureoftheArabianheatlow.PartI:Surfaceenergybudget.MonthlyWeatherReview,114(6),1067–1083.https://
+doi.org/10.1175/1520‐0493(1986)114<1067:tsotah>2.0.co;2
+Spengler,T.,Reeder,M.J.,&Smith,R.K.(2005).Thedynamicsofheatlowsinsimplebackgroundflows.QuarterlyJournaloftheRoyal
+MeteorologicalSociety,131(612),3147–3165.https://doi.org/10.1256/qj.04.177
+Stansfield,A.M.,&Reed,K.A.(2021).Tropicalcycloneprecipitationresponsetosurfacewarminginaquaplanetsimulationswithuniform
+thermalforcing.JournalofGeophysicalResearch:Atmospheres,126(24),e2021JD035197.https://doi.org/10.1029/2021jd035197
+Stansfield,A.M.,Reed,K.A.,Zarzycki,C.M.,Ullrich,P.A.,&Chavas,D.R.(2020).Assessingtropicalcyclones'contributiontoprecipitation
+overtheeasternUnitedStatesandsensitivitytothevariable‐resolutiondomainextent.JournalofHydrometeorology,21(7),1425–1445.https://
+doi.org/10.1175/jhm‐d‐19‐0240.1
+Stoll,P.J.(2022).Aglobalclimatologyofpolarlowsinvestigatedforlocaldifferencesandwind‐shearenvironments.WeatherandClimate
+Dynamics,3(2),483–504.https://doi.org/10.5194/wcd‐3‐483‐2022
+Stoll,P.J.,Graversen,R.G.,Noer,G.,&Hodges,K.(2018).Anobjectiveglobalclimatologyofpolarlowsbasedonreanalysisdata.Quarterly
+JournaloftheRoyalMeteorologicalSociety,144(716),2099–2117.https://doi.org/10.1002/qj.3309
+Terpstra,A.,Michel,C.,&Spengler,T.(2016).ForwardandreverseshearenvironmentsduringpolarlowgenesisoverthenortheastAtlantic.
+MonthlyWeatherReview,144(4),1341–1354.https://doi.org/10.1175/mwr‐d‐15‐0314.1
+Toomey,T.,Amores,A.,Marcos,M.,Orfila,A.,&Romero,R.(2022).Coastalhazardsoftropical‐likecyclonesoverthemediterraneansea.
+JournalofGeophysicalResearch:Oceans,127(2),e2021JC017964.https://doi.org/10.1029/2021jc017964
+Tucker,D.F.(1999).ThesummerplateaulowpressuresystemofMexico.JournalofClimate,12(4),1002–1015.https://doi.org/10.1175/1520‐
+0442(1999)012<1002:tsplps>2.0.co;2
+Ullrich,P.A.(2024).Tempestextremesv2.2.3repository[Software].GitHub.https://doi.org/10.5281/zenodo.13830377
+Ullrich,P.A.,&Zarzycki,C.M.(2017).Tempestextremes:Aframeworkforscale‐insensitivepointwisefeaturetrackingonunstructuredgrids.
+GeoscientificModelDevelopment,10(3),1069–1090.https://doi.org/10.5194/gmd‐10‐1069‐2017
+HANANDULLRICH 30of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License
+
+Journal of Geophysical Research: Atmospheres 10.1029/2024JD041287
+Ullrich,P.A.,Zarzycki,C.M.,McClenny,E.E.,Pinheiro,M.C.,Stansfield,A.M.,&Reed,K.A.(2021).Tempestextremesv2.1:Acommunity
+frameworkforfeaturedetection,trackingandanalysisinlargedatasets.GeoscientificModelDevelopmentDiscussions,2021(8),1–37.https://
+doi.org/10.5194/gmd‐14‐5023‐2021
+U.S.Navy.(1994).Localareaforecaster'shandbookfornavalairstationBermuda.NavalAtlanticMeteorologyFacility.
+Vishnu,S.,Boos,W.,Ullrich,P.,&O’brien,T.(2020).AssessinghistoricalvariabilityofsouthAsianmonsoonlowsanddepressionswithan
+optimizedtrackingalgorithm.JournalofGeophysicalResearch:Atmospheres,125(15),e2020JD032977.https://doi.org/10.1029/
+2020jd032977
+Winckler,P.,Contreras‐López,M.,Campos‐Caba,R.,Beyá,J.F.,&Molina,M.(2017).Eltemporaldel8deagostode2015enlasregionesde
+valparaísoycoquimbo,chilecentral.LatinAmericanJournalofAquaticResearch,45(4),622–648.https://doi.org/10.3856/vol45‐issue4‐
+fulltext‐1
+Yamamoto,M.(2012).RapidmergerandrecyclogenesisoftwinextratropicalcyclonesleadingtoheavyprecipitationaroundJapanon9–10
+October2001.MeteorologicalApplications,19(1),36–53.https://doi.org/10.1002/met.255
+Yokoyama,Y.,&Yamamoto,M.(2019).Influencesofsurfaceheatfluxontwincyclonestructureduringtheirexplosivedevelopmentoverthe
+eastAsianmarginalseason23January2008.WeatherandClimateExtremes,23,100198.https://doi.org/10.1016/j.wace.2019.100198
+Zappa,G.,Shaffrey,L.,&Hodges,K.(2014).Canpolarlowsbeobjectivelyidentifiedandtrackedintheecmwfoperationalanalysisandtheera‐
+interimreanalysis?MonthlyWeatherReview,142(8),2596–2608.https://doi.org/10.1175/mwr‐d‐14‐00064.1
+Zarzycki,C.M.,Thatcher,D.R.,&Jablonowski,C.(2017).Objectivetropicalcycloneextratropicaltransitiondetectioninhigh‐resolution
+reanalysisandclimatemodeldata.JournalofAdvancesinModelingEarthSystems,9(1),130–148.https://doi.org/10.1002/2016ms000775
+Zarzycki,C.M.,&Ullrich,P.A.(2017).Assessingsensitivitiesinalgorithmicdetectionoftropicalcyclonesinclimatedata.Geophysical
+ResearchLetters,44(2),1141–1149.https://doi.org/10.1002/2016gl071606
+Zhang,W.,Villarini,G.,Scoccimarro,E.,&Napolitano,F.(2021).Examiningtheprecipitationassociatedwithmedicanesinthehigh‐resolution
+era‐5reanalysisdata.InternationalJournalofClimatology,41(S1),E126–E132.https://doi.org/10.1002/joc.6669
+HANANDULLRICH 31of31
+21698996,
+2025,
+1,
+Downloaded
+from
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041287
+by
+University
+Of
+Sao
+Paulo
+- Brazil,
+Wiley
+Online
+Library
+on
+[28/01/2026].
+See
+the
+Terms
+and
+Conditions
+(https://onlinelibrary.wiley.com/terms-and-conditions)
+on
+Wiley
+Online
+Library
+for
+rules
+of
+use;
+OA
+articles
+are
+governed
+by
+the
+applicable
+Creative
+Commons
+License

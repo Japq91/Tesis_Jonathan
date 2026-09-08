@@ -1,0 +1,133 @@
+============================================================
+CARTILLA DE ESTUDIO — Inatsu y Hoskins 2004 — asimetría zonal del storm track del HS
+============================================================
+
+REFERENCIA COMPLETA
+Inatsu, Masaru; Hoskins, Brian J. (2004). The Zonal Asymmetry of the Southern
+Hemisphere Winter Storm Track. Journal of Climate, 17(24), 4882-4892. American
+Meteorological Society. DOI: 10.1175/JCLI-3232.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en tres capítulos (Fundamentación, Viento y Precipitación) como respaldo
+del mecanismo orográfico-térmico que fija zonas preferenciales de ciclogénesis en
+el Hemisferio Sur; no se usa como fuente de datos propios, sino como marco
+explicativo de la asimetría regional observada en la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (experimento de sensibilidad con AGCM; no rastrea ciclones individuales)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio investiga por qué el storm track invernal del Hemisferio Sur (HS),
+a diferencia del Hemisferio Norte, presenta una marcada asimetría zonal (forma
+de espiral) pese a la relativa homogeneidad zonal de la distribución océano-
+continente en latitudes medias australes. Mediante experimentos de sensibilidad
+con un modelo de circulación general atmosférica (AGCM), los autores aíslan la
+contribución relativa de la TSM tropical, la TSM de latitudes medias, la Meseta
+de Sudáfrica y los Andes a la estructura del storm track. Es un estudio de
+diagnóstico dinámico basado en modelización numérica idealizada, relevante para
+entender por qué el Atlántico Sudoccidental constituye una región preferencial
+de ciclogénesis.
+
+2. METODOLOGÍA
+- Modelo: Hadley Centre Atmospheric Model versión 3 (HadAM3), AGCM con grilla de
+  2.5° de latitud por 3.75° de longitud y 19 niveles verticales.
+- Datos de verificación: reanálisis ECMWF ERA-15, datos diarios JJA 1979-1993.
+- Diseño experimental: una corrida control (CTR, con TSM climatológica y
+  orografía completa) y cinco experimentos de sensibilidad que remueven, uno a la
+  vez, la asimetría zonal de la TSM tropical (ZTS), la asimetría zonal de la TSM
+  de latitudes medias (ZMS), toda la orografía del HS excepto la Antártida (NMT),
+  solo la Meseta de Sudáfrica (NSA) y solo los Andes (NAD).
+- Variable diagnóstica principal: energía cinética de eddies de escala sinóptica
+  (EKE) en 300 hPa (troposfera superior) y transporte de calor meridional en
+  850 hPa (troposfera inferior, VT850); además, flujo de actividad de onda
+  (Takaya y Nakamura 2001) y fuente de onda de Rossby (Hoskins y Sardeshmukh 1988).
+- Todas las corridas se integran 9 años tras el spin-up, enfocadas en invierno
+  austral (JJA).
+
+3. HALLAZGOS CLAVE
+- La asimetría zonal del storm track de la troposfera superior está controlada
+  principalmente por ondas estacionarias generadas por la asimetría zonal de la
+  TSM tropical (forzamiento Rossby desde el Océano Índico asociado al monzón);
+  al remover esta asimetría (ZTS) desaparece la estructura espiral del EKE.
+- La asimetría de la TSM de latitudes medias tiene un efecto modesto sobre las
+  ondas estacionarias, pero es muy importante para la distribución del storm
+  track de la troposfera inferior (medida por el transporte de calor meridional).
+- Remover los Andes (experimento NAD) debilita notablemente el inicio del storm
+  track mayor en el Atlántico, aunque el sistema aún alcanza un pico claro en el
+  Índico central, consistente con menor ciclogénesis en el sotavento andino.
+- Remover la Meseta de Sudáfrica (NSA) produce un efecto análogo: el storm track
+  se debilita en el Índico, consistente con menor ciclogénesis en su sotavento
+  (efecto combinado Andes + Sudáfrica visible al remover toda la orografía, NMT).
+- En síntesis: la asimetría zonal del storm track del HS invernal se establece
+  principalmente por ondas estacionarias excitadas por la asimetría de TSM
+  tropical (troposfera superior) y por gradientes locales de TSM (troposfera
+  inferior), y es modificada mediante ciclogénesis asociada a la topografía de
+  Sudáfrica y Sudamérica.
+
+4. RELACIÓN CON TU TESIS
+Este paper aporta el marco conceptual general que explica por qué el Atlántico
+Sudoccidental —descendiente del sotavento andino— constituye una región
+preferencial de ciclogénesis y por qué existe asimetría zonal (y no homogeneidad)
+en las trayectorias de latitudes medias del HS. En el Capítulo 2 (Fundamentación,
+L10) se afirma: "De manera específica, \citet{inatsu2004zonal} demostraron que la
+asimetría zonal del \textit{storm track} en el Hemisferio Sur está forzada por la
+topografía de los Andes, la cual modula la propagación de ondas baroclínicas
+sobre el subcontinente sudamericano \citep{vera2002cold}, definiendo regiones
+preferenciales de desarrollo en latitudes extratropicales." En el Capítulo 5
+(Precipitación, L149) se usa para explicar por qué ARG presenta mayor varianza
+explicada por el EOF1 que SBR en las fases iniciales. En el Capítulo 4 (Viento,
+L178) se cita para señalar que "las trayectorias invernales del Hemisferio Sur
+presentan una asimetría zonal organizada por el flujo estacionario de latitudes
+medias, modulando la disipación de los sistemas sinópticos."
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Brian Hoskins es una figura fundacional de la dinámica de storm tracks (Hoskins
+y Valdes 1990; Hoskins y Sardeshmukh 1988; Hoskins y Hodges 2005, esta última
+también citada en la tesis). Masaru Inatsu continuó esta línea con estudios
+previos sobre efectos de TSM tropical y de latitudes medias en el storm track
+(Inatsu et al. 2002, 2003). El presente trabajo se conecta con la línea de
+climatologías lagrangianas de ciclones del HS (Hoskins y Hodges 2005, también
+citado en la tesis) y con estudios regionales sobre el efecto de los Andes en
+perturbaciones transitorias (Gan y Rao 1994, Vera et al. 2002, ambos también
+citados en la tesis), formando parte del cuerpo de evidencia sobre el control
+orográfico-térmico de la ciclogénesis en Sudamérica.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El AGCM usado (HadAM3, 2.5°x3.75°) tiene resolución relativamente gruesa para
+  resolver estructuras frontales de mesoescala; el análisis se centra en
+  diagnósticos de escala sinóptica agregada (EKE, VT850), no en ciclones
+  individuales.
+- Los experimentos de remoción de orografía son idealizados (remoción completa
+  de montañas), una manipulación que no tiene equivalente en el mundo real y
+  puede inducir respuestas no lineales no representativas de escenarios de
+  cambio climático gradual.
+- El estudio se limita al invierno austral (JJA); los propios autores señalan
+  que el verano del HS tiene menor asimetría zonal y no fue investigado en
+  detalle.
+- Es un estudio de sensibilidad de modelo, no una climatología observacional
+  directa; su validación se apoya en comparación con un único reanálisis de
+  bajo resolución (ERA-15).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Este estudio usa datos de ciclones individuales del Atlántico Sudoccidental?
+  R: No; es un estudio de sensibilidad con AGCM sobre variables agregadas de
+  storm track (EKE, transporte de calor); se usa en la tesis como marco
+  explicativo del rol orográfico-térmico, no como fuente de datos de ciclones.
+- P: ¿Cómo distingue el paper el efecto de los Andes del efecto de la Meseta de
+  Sudáfrica? R: Mediante experimentos de sensibilidad separados (NSA vs. NAD)
+  que remueven cada orografía de forma independiente, mostrando que ambas
+  contribuyen de forma comparable al debilitamiento del storm track corriente
+  abajo.
+- P: ¿Por qué la troposfera inferior responde más a la TSM de latitudes medias
+  que a la TSM tropical? R: Porque el gradiente meridional de TSM en latitudes
+  medias controla directamente la baroclinicidad local (Hoskins y Valdes 1990),
+  mientras que la TSM tropical actúa a distancia vía ondas de Rossby que afectan
+  principalmente la troposfera superior.
+- P: ¿Es aplicable este mecanismo a escenarios de cambio climático? R: El
+  estudio no evalúa cambio climático; es un diagnóstico del clima presente. Su
+  aporte a la tesis es explicar la asimetría estructural de fondo sobre la cual
+  actúan los cambios proyectados descritos por otras fuentes (p. ej. IPCC 2021).
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/inatsu2004zonal.md

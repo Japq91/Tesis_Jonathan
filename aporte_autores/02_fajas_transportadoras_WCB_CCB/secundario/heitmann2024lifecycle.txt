@@ -1,0 +1,128 @@
+============================================================
+CARTILLA DE ESTUDIO — Heitmann, Sprenger, Binder, Wernli & Joos 2024 — características e impactos del WCB a lo largo del ciclo de vida del ciclón
+============================================================
+
+REFERENCIA COMPLETA
+Heitmann, K., Sprenger, M., Binder, H., Wernli, H., & Joos, H. (2024). Warm
+conveyor belt characteristics and impacts along the life cycle of
+extratropical cyclones: case studies and climatological analysis based on
+ERA5. Weather and Climate Dynamics, 5(2), 537-557. DOI: 10.5194/wcd-5-537-2024
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 05 (Resultados de Precipitación), Sección
+sec:pdf_tp, junto a \citet{dacre2023climatology}, para reforzar que el
+desfase temporal entre el pico de precipitación asociado al WCB y el pico de
+intensidad del propio ciclón es una propiedad general de la relación
+WCB-ciclón, no una particularidad del Atlántico Sur.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: El rastreo del ciclón no es el foco (usa trayectorias lagrangianas del WCB); el catálogo de ciclones subyacente típicamente identifica el sistema por mínimos de MSLP, no por vorticidad
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio construye una nueva climatología (1980-2022) del cinturón
+transportador cálido (WCB) en el Atlántico Norte a partir de trayectorias
+lagrangianas calculadas sobre ERA5, definiendo máscaras eulerianas
+bidimensionales que representan las regiones de entrada (inflow), ascenso
+(ascent) y salida (outflow) del WCB. Con estas máscaras cuantifican de forma
+objetiva tanto "características" del WCB (intensidad, tasa de ascenso,
+curvatura de las trayectorias) como sus "impactos" meteorológicos
+(precipitación y anomalías de vorticidad potencial, PV) en cada fase del
+ciclo de vida del ciclón asociado. El análisis incluye tres estudios de caso
+detallados (tormentas de 1989, 1992 y 2009) y se extiende a una climatología
+de ~5000 ciclones invernales del Atlántico Norte.
+
+2. METODOLOGÍA
+- Datos: trayectorias lagrangianas del WCB calculadas sobre ERA5 (1980-2022,
+  inviernos del Atlántico Norte), usando los criterios estándar de
+  identificación del WCB (ascenso de al menos 600 hPa en 48 h).
+- Máscaras 2D: se definen regiones eulerianas de entrada, ascenso y salida
+  del WCB en cada paso de tiempo, distinguiendo la rama anticiclónica (W1) de
+  la ciclónica (W2).
+- Métricas de "características": número de trayectorias (intensidad/masa de
+  aire transportada), tasa máxima de ascenso, curvatura de las trayectorias.
+- Métricas de "impacto": tasa de precipitación dentro de la máscara de
+  ascenso (percentil 90 espacial, denotado PQ90) y volumen total de
+  precipitación asociado (PVOL); anomalías de PV en niveles bajos (LLPV) y
+  altos (ULPVA) asociadas al outflow.
+- Se relacionan estas métricas con el tiempo relativo al momento de máxima
+  intensificación del ciclón (definida por el mayor cambio de MSLP en 24 h) y
+  con el propio ciclo de vida del sistema.
+
+3. HALLAZGOS CLAVE
+- El WCB es típicamente más intenso —en términos de masa de aire
+  transportada, tasa de ascenso, tasa de precipitación y volumen— durante el
+  periodo de INTENSIFICACIÓN del ciclón asociado, no durante su madurez.
+- La tasa de precipitación del percentil 90 dentro de la máscara de ascenso
+  (PQ90), en la climatología de ~5000 ciclones, alcanza valores de
+  ~2.6-2.7 mm/h durante la intensificación, antes de decrecer gradualmente.
+- Existe una secuencia temporal escalonada de picos: el volumen de
+  precipitación (PVOL) alcanza su máximo entre 10 y 18 h después del pico de
+  PQ90, y aproximadamente un día antes de que el propio WCB alcance su
+  intensidad máxima; a su vez, la intensidad máxima del WCB precede al
+  mínimo de presión del ciclón (su pico de intensidad dinámica).
+- El desplazamiento hacia el norte a lo largo de la trayectoria de tormenta y
+  la producción diabática de PV conducen a un incremento de la PV en niveles
+  bajos en la región de ascenso del WCB durante el ciclo de vida del ciclón.
+- La anomalía negativa de PV en niveles altos (asociada al outflow del WCB)
+  se mantiene relativamente constante durante el ciclo de vida, mientras que
+  la rama ciclónica (W2) del WCB se intensifica progresivamente con el
+  tiempo, ligada al fortalecimiento del campo de viento ciclónico en torno
+  al centro del sistema.
+
+4. RELACIÓN CON TU TESIS
+- Cap05-Precipitación (Sección sec:pdf_tp): "Esta secuencia de fases ha sido
+  cuantificada de forma independiente para casi 5000 ciclones invernales del
+  Atlántico Norte por \citet{heitmann2024lifecycle}: el volumen de
+  precipitación asociado al WCB alcanza su pico sistemáticamente antes de
+  que el propio WCB alcance su intensidad máxima, la cual a su vez precede
+  al mínimo de presión del ciclón, lo que sugiere que este desfase escalonado
+  no es una particularidad del Atlántico Sur sino una propiedad más general
+  de la relación entre el WCB y el ciclón que lo alberga."
+Se usa como confirmación independiente, en otra cuenca oceánica y con otra
+metodología (trayectorias lagrangianas del WCB, no PDF/PDFe de máximos por
+ciclón), del mismo tipo de desacople temporal entre precipitación e
+intensidad dinámica que la tesis documenta para el Atlántico Sur mediante
+\citet{dacre2023climatology} y \citet{mcerlich2023extremes}.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Katharina Heitmann, Michael Sprenger, Hanin Binder, Heini Wernli y Hanna Joos
+(ETH Zúrich) pertenecen al grupo que desarrolló y consolidó el enfoque
+lagrangiano de identificación del WCB (Wernli & Davies 1997; Madonna et al.
+2014), ampliamente usado en climatología de ciclones extratropicales. Este
+trabajo de 2024 es la primera climatología sistemática y sobre el ciclo de
+vida completo (no solo instantes puntuales) de las características e
+impactos del WCB usando ERA5, y complementa a otros estudios ya citados en
+la tesis sobre el rol del WCB en la precipitación extrema (Pfahl et al. 2014;
+Oertel et al. 2021; Catto et al. 2015).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Se limita al Atlántico Norte en inviernos (DJF); no hay validación para el
+  Hemisferio Sur ni para el Atlántico Sudoccidental.
+- La métrica PQ90 es un percentil espacial dentro de la máscara de ascenso
+  del WCB (una propiedad de área/climatología), no el máximo puntual de
+  precipitación por ciclón que usa esta tesis; por ello sus magnitudes en
+  mm/h (~2.6-2.7 mm/h) NO son directamente comparables con los máximos
+  puntuales de tp documentados en el Capítulo 05 (10-60 mm/h), y no deben
+  citarse como si lo fueran.
+- El estudio no distingue explícitamente region de génesis del ciclón (no
+  hay estratificación equivalente a SBR/LPB/ARG).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Los valores de PQ90 (~2.6-2.7 mm/h) de Heitmann et al. son comparables
+  con tus máximos de precipitación (10-60 mm/h)? R: No directamente; PQ90 es
+  un percentil de área dentro de la máscara de ascenso del WCB a lo largo de
+  toda una climatología, mientras que mis valores son el máximo puntual
+  extraído por ciclón y fase. Se cita únicamente por la secuencia temporal de
+  picos que documenta, no por su magnitud absoluta.
+- P: ¿Qué aporta este estudio que no aporte ya dacre2023climatology?
+  R: dacre2023climatology documenta el desfase precipitación-intensidad para
+  el Océano Austral con una métrica de eficiencia de precipitación; Heitmann
+  et al. lo cuantifican de forma independiente en el Atlántico Norte
+  mediante trayectorias explícitas del WCB, mostrando además la cascada
+  completa de picos (PQ90 → PVOL → intensidad del WCB → mínimo de MSLP), lo
+  que refuerza que se trata de un rasgo general de la dinámica WCB-ciclón y
+  no de una particularidad de una única cuenca.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/heitmann2024lifecycle.md

@@ -1,0 +1,120 @@
+============================================================
+CARTILLA DE ESTUDIO — Simmonds & Keay 2000 — Climatología media de ciclones del HS
+============================================================
+
+REFERENCIA COMPLETA
+Simmonds, I., & Keay, K. (2000). Mean Southern Hemisphere extratropical cyclone
+behavior in the 40-year NCEP–NCAR Reanalysis. Journal of Climate, 13(5), 873–885.
+American Meteorological Society.
+DOI: 10.1175/1520-0442(2000)013<0873:MSHECB>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita dos veces (Cap. 04-Viento y Cap. 05-Precipitación) como respaldo climatológico
+de fondo: no sustenta un mecanismo físico central, sino que valida la representatividad
+estadística de la muestra y el carácter estructural (no metodológico) de la dispersión
+observada en la población de ciclones.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (Laplaciano ∇²p, esquema de Melbourne) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Presenta la climatología media de ciclones extratropicales del Hemisferio Sur (HS)
+más completa hasta la fecha (año 2000), construida aplicando el esquema automático
+de identificación y seguimiento de la Universidad de Melbourne a las reanálisis
+NCEP–NCAR de 40 años (1958–97). Describe densidad de sistemas, ciclogénesis,
+ciclolisis, intensidad (Laplaciano de presión), profundidad y radio, y duración de
+las trayectorias. Es el artículo "compañero" (mean-state) de Simmonds & Keay (2000b,
+variabilidad) y antecede a Simmonds (2000, tamaño).
+
+2. METODOLOGÍA
+- Datos: reanálisis NCEP–NCAR, 6-horario, 1958–97 (40 años).
+- Técnica: esquema automático de seguimiento de ciclones de Melbourne University
+  (Murray & Simmonds 1991, refinado por Simmonds & Murray 1999), basado en el
+  Laplaciano de la presión (∇²p) para localizar mínimos/máximos y calcular
+  intensidad, profundidad (D) y radio (R) de cada sistema.
+- Dominio: todo el HS, por estaciones (DJF, MAM, JJA, SON) y por bandas de latitud
+  (10°–30°S, 30°–50°S, 50°–70°S, 70°–90°S).
+- Umbral de vida mínima: 24 h para ser contabilizado como ciclón.
+
+3. HALLAZGOS CLAVE
+- En promedio 35–38 sistemas ciclónicos por análisis (según la estación), con
+  densidad máxima superior a 6×10⁻³ ciclones (deg lat)⁻² al sur de 60°S.
+- Para la mayor parte del dominio, la ciclogénesis excede la ciclolisis al norte de
+  ~50°S, y ocurre lo contrario al sur de esa latitud; sin embargo, la ciclogénesis
+  más activa se da al sur de 45°S, con el eje máximo en o al sur de 60°S.
+- La mayor profundidad climatológica (D) se ubica en torno a 60°S, al norte de la
+  vaguada circumpolar y de la región de mayor densidad de ciclones.
+- Vida media de los ciclones (duración ≥1 día): poco más de 3 días; los sistemas
+  ubicados entre 50° y 70°S en la mitad de su vida duran, en promedio, casi 1 día
+  más que el resto.
+- Longitud media de trayectoria: 2315 km en invierno, reduciéndose a 1946 km en
+  verano.
+- 43% y 29% (72% del total) de los sistemas del HS se encuentran en las bandas
+  30°–50°S y 50°–70°S, respectivamente.
+
+4. RELACIÓN CON TU TESIS
+- Cap. 05-Precipitación (L87): se cita junto con mendes2010climatology para
+  sustentar la alta frecuencia de ciclogénesis cerca del norte de Argentina,
+  Uruguay y sur de Brasil (~18 eventos/invierno) y el desplazamiento preferencial
+  hacia el sudeste sobre el océano, lo que garantiza que el WCB interactúe
+  sistemáticamente con la configuración regional descrita —sin implicar que el
+  contexto climatológico actúe como forzante físico directo evento a evento.
+- Cap. 04-Viento (L75): "Esta dispersión es la firma esperada de una población
+  heterogénea que abarca desde sistemas débiles hasta configuraciones atípicas,
+  comportamiento documentado para el Hemisferio Sur por \citet{simmonds2000mean}
+  y coherente con los métodos basados en vorticidad de \citet{sinclair1994objective}",
+  usado para argumentar que la dispersión en la PDF de viento es un rasgo
+  estructural de la climatología ciclónica y no un artefacto metodológico.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Este es uno de tres papers de Ian Simmonds (con K. Keay) del año 2000 presentes en
+este lote (simmonds2000mean, simmonds2000size —de autoría única de Simmonds— y
+simmonds2000variability), todos derivados del mismo esquema de tracking de
+Melbourne University aplicado a la reanálisis NCEP–NCAR 1958–97. Forman una
+trilogía metodológicamente coherente: (i) este paper establece el estado medio
+(mean state), (ii) simmonds2000variability examina tendencias y variabilidad
+interanual sobre la misma base de datos, y (iii) simmonds2000size profundiza en
+la evolución del tamaño (radio) de los sistemas, fenómeno mencionado aquí de forma
+introductoria. Los tres se apoyan explícitamente entre sí (p. ej., este artículo
+anuncia el estudio de variabilidad como "companion paper"). Se dialoga también
+con la línea de Mark Sinclair (Sinclair 1994, 1995, 1997), con quien Simmonds y
+Keay comparan y contrastan resultados (p. ej., discrepancias en densidad de
+trayectorias en el sector Atlántico/Índico, atribuidas a diferencias entre el
+uso de vorticidad —Sinclair— vs. presión —Simmonds/Keay— como variable de
+detección).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los propios autores reconocen la menor cobertura de datos (en particular
+  satelitales) sobre los océanos australes en las primeras décadas de la
+  reanálisis, lo que puede introducir variabilidad espuria previa a la era
+  satelital.
+- El esquema de detección está basado en mínimos de presión en superficie
+  (Laplaciano de p), lo que —según reconoce el propio texto al compararse con
+  Sinclair— produce una distribución de densidad distinta (más sesgada a
+  sistemas profundos/lentos) que los esquemas basados en vorticidad.
+- La resolución de la reanálisis (T62) no captura ciclones polares de mesoescala,
+  lo cual los autores consideran aceptable dado que su foco son sistemas
+  "sinópticos".
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué se cita un trabajo de climatología media (no de mecanismos) para
+  justificar la robustez de un patrón WCB?
+  R: Porque establece que la alta frecuencia de ciclogénesis y el desplazamiento
+  preferencial hacia el sudeste en la región de estudio son un rasgo climatológico
+  documentado, es decir, un condicionante estadístico de la muestra, no evidencia
+  causal evento a evento.
+- P: ¿Qué diferencia metodológica explica que Simmonds & Keay y Sinclair reporten
+  climatologías distintas para el HS?
+  R: Simmonds/Keay usan el Laplaciano de la presión en superficie (sesgado a
+  sistemas profundos/lentos, especialmente cerca de la vaguada circumpolar),
+  mientras Sinclair usa vorticidad geostrófica a 1000 hPa, que detecta sistemas
+  móviles más débiles en latitudes medias.
+- P: ¿Qué tan generalizable es la cifra de "35-38 ciclones por análisis" a su
+  región de estudio (Atlántico Sudoccidental)?
+  R: Es una cifra hemisférica agregada; el propio artículo desagrega por bandas
+  de latitud y muestra fuerte variación regional, por lo que no debe extrapolarse
+  directamente sin la estratificación regional que ofrece el paper.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/simmonds2000mean.md

@@ -1,0 +1,183 @@
+============================================================
+CARTILLA DE ESTUDIO — Gramcianinov et al. 2024 — mecanismos tempranos y cambio climático
+============================================================
+
+REFERENCIA COMPLETA
+Gramcianinov, C. B., Cardoso, A. A., da Rocha, R. P., da Silva, N. P.,
+Luna-Niño, R., Castillo, N. y Cavazos, T. (2024). Early-Stage Extratropical
+Cyclones' Mechanisms Over South America: RCM Added Value and Future Changes
+in a Warmer Planet. Journal of Geophysical Research: Atmospheres/International
+Journal of Climatology, 2024, e2023JD039863. DOI: 10.1002/joc.8683
+
+NOTA SOBRE LA FICHA: la entrada .bib de la tesis atribuye la autoría solo a
+"Gramcianinov, Carolina B; da Rocha, Rosmeri P; Dodd, Justin A" y la revista
+"Journal of Geophysical Research: Atmospheres", mientras que la portada real
+del artículo (verificada en el .md) lista siete autores —Gramcianinov,
+Cardoso, da Rocha, da Silva, Luna-Niño, Castillo y Cavazos— y la cabecera
+indica "International Journal of Climatology" (Royal Meteorological Society),
+no JGR-Atmospheres. El DOI (10.1002/joc.8683) sí corresponde al formato de
+International Journal of Climatology (prefijo "joc"), lo que confirma que la
+revista correcta es esta última. Se recomienda corregir autores y nombre de
+revista en la bibliografía antes de la defensa.
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central (para el mecanismo físico regional)
+Se cita en al menos seis pasajes en cuatro capítulos (Fundamentación,
+Introducción, Precipitación, Viento, Prototipos). Es la fuente principal del
+mecanismo termodinámico que explica por qué SBR y LPB generan vientos y
+precipitación más intensos que ARG, y aporta el contraste entre tendencias
+futuras robustas (SBR/LPB) y débiles (ARG) que la tesis reproduce como
+argumento de fondo.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (línea Gramcianinov/Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio evalúa proyecciones de modelos climáticos regionales (RCM) del
+programa CORDEX para Sudamérica, enfocándose en la frecuencia de ciclones
+extratropicales, sus rasgos sinópticos en etapa temprana (early-stage) y el
+"valor agregado" (added value) de los RCM frente a los modelos climáticos
+globales (GCM) que los fuerzan. Es un estudio de modelado climático regional
+(downscaling dinámico) que combina evaluación del clima presente contra ERA5
+y proyecciones futuras bajo el escenario RCP8.5. Es central para la tesis
+porque identifica y compara mecanismos físicos de génesis en las mismas tres
+regiones (SBR, LPB, ARG) que estructuran el trabajo del usuario, y evalúa
+cómo cambiarán en un planeta más cálido.
+
+2. METODOLOGÍA
+
+- Modelos: RCM del CORDEX-CORE/CORDEX-SAM y sus GCM forzantes (CMIP5).
+- Períodos: clima presente (PC, 1985-2005) y futuro lejano (FF, 2080-2099)
+  bajo el escenario de emisiones RCP8.5.
+- Referencia de evaluación en el clima presente: reanálisis ERA5.
+- Identificación y tracking de ciclones: algoritmo común aplicado de forma
+  consistente a ERA5, GCMs y RCMs.
+- Regiones evaluadas: las tres regiones principales de ciclogénesis de
+  Sudamérica — Argentina (ARG), Cuenca del Río de la Plata (LPB) y la costa
+  sur-sureste de Brasil (SBR).
+- Variables de composites: campos de niveles bajos (advección cálida/fría,
+  convergencia/divergencia de flujo de humedad) y de niveles medios-altos
+  (vaguada en 500 hPa, divergencia de masa en 200 hPa), en composites
+  centrados en el ciclón durante la etapa temprana de desarrollo.
+
+3. HALLAZGOS CLAVE
+
+- Tanto los GCM como los RCM identifican correctamente los tres focos
+  principales de ciclogénesis en Sudamérica (ARG, LPB, SBR).
+- Los RCM mejoran la representación de la frecuencia de ciclogénesis de los
+  GCM, reduciendo los sesgos (predominantemente negativos) a aproximadamente
+  ~10% en cada núcleo de ciclogénesis — con la excepción de LPB, donde los RCM
+  subestiman la ciclogénesis en mayor medida que los GCM.
+- En la estructura sinóptica temprana, los RCM representan con mayor similitud
+  a ERA5 las estructuras de mesoescala de advección cálida/fría y convergencia/
+  divergencia de flujo de humedad en niveles bajos, excepto en la divergencia
+  de flujo de humedad para los ciclones de LPB.
+- Hacia fin de siglo (FF, RCP8.5), tanto RCM como GCM proyectan una
+  disminución general del número de ciclones en el dominio de Sudamérica, con
+  acuerdo entre modelos sobre la señal de la tendencia en SBR, LPB y ARG
+  durante el invierno austral, pero DESACUERDO en la tendencia de ARG durante
+  el verano austral.
+- Para SBR y LPB, los RCM y GCM proyectan un AUMENTO futuro de la convergencia
+  de flujo de humedad y de la advección cálida en niveles bajos, junto con una
+  disminución de la divergencia de masa en niveles altos — esto sugiere un
+  reforzamiento de la ciclogénesis (tendencia negativa de presión a nivel del
+  mar) impulsado por procesos diabáticos de niveles bajos, incluso en un
+  contexto de menor frecuencia total de ciclones.
+- Para ARG, las tendencias futuras proyectadas en los mecanismos impulsores
+  (flujo de humedad y advección térmica en niveles bajos, vientos y vaguadas
+  en niveles medios-altos) son relativamente DÉBILES en comparación con los
+  valores medios del clima presente, lo que complica la evaluación de la
+  discrepancia de signo entre RCM (positivo) y GCM (negativo) en la frecuencia
+  de verano.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap01-Introduccion (L37): se cita junto con gramcianinov2019properties para
+  sustentar que, mientras SBR y LPB muestran sensibilidad proyectada hacia la
+  intensificación de flujos de humedad y advección cálida, "las tendencias en
+  la estructura media de los controladores físicos para la región ARG
+  resultan relativamente débiles" — esto es una paráfrasis fiel del hallazgo
+  del artículo sobre la debilidad de las tendencias en los mecanismos de ARG.
+- Cap02-Fundamentacion (L94, L102): se usa para sustentar que, durante la
+  ciclogénesis temprana en SBR, "los modelos de alta resolución" documentan
+  mecanismos particulares, y que "la convergencia de humedad en capas bajas
+  constituye el mecanismo dominante de intensificación en LPB" — coherente con
+  los hallazgos de composites del artículo, aunque conviene precisar que el
+  artículo trata de la etapa temprana (early-stage) de la génesis, no de la
+  intensificación en sentido amplio del ciclo de vida completo que analiza la
+  tesis (fase "intensificación" en la nomenclatura CycloPhaser).
+- Cap05-Precipitacion (L41): sustenta que "la energía convectiva... se
+  organiza mediante fuerte advección cálida y convergencia de humedad,
+  impulsada por la Alta Subtropical en SBR y por su interacción con el Chorro
+  de Capas Bajas en LPB" — consistente con el mecanismo de convergencia de
+  humedad/advección cálida documentado para SBR/LPB.
+- Cap04-Viento (L41): "los sistemas en las regiones SBR y LPB alcanzan
+  intensidades de viento más extremas debido a la influencia de procesos
+  termodinámicos en niveles bajos, como la advección cálida y la convergencia
+  de humedad" — fiel al mecanismo reportado, aplicado aquí a intensidad de
+  viento (el artículo original se centra en presión/ciclogénesis, no
+  directamente en viento a 10 m; es una extrapolación razonable pero vale la
+  pena señalar la diferencia de variable).
+- Cap07-Prototipos (L50): sustenta que "la disponibilidad de humedad tropical
+  canalizada por el chorro de capas bajas... sostiene la banda enroscada de
+  precipitación con mayor intensidad" en SBR/LPB frente a la modulación
+  orográfica en ARG.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Este es el trabajo más reciente de Gramcianinov en la línea citada por la
+tesis, y representa un giro desde la climatología descriptiva (2019, 2020)
+hacia la evaluación de modelos climáticos y proyecciones de cambio climático,
+en colaboración con especialistas en modelado regional CORDEX de México
+(CICESE) e Italia. Dialoga directamente con la literatura de proyecciones de
+cambio climático sobre Sudamérica (Reboita et al. 2018, 2021; de Jesus et al.
+2021) y con la discusión global sobre el desplazamiento hacia el polo del
+storm track (Geng y Sugi 2003; Bengtsson et al. 2006, 2009). Es, junto con
+gramcianinov2019properties, la referencia que ancla la regionalización física
+(mecanismos de SBR/LPB/ARG) usada por la tesis, pero con un enfoque prospectivo
+(cambio climático) que la tesis no explora directamente (la tesis es un
+estudio de clima presente basado en ERA5 1979-2020, no de proyecciones
+futuras).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Se basa en el escenario RCP8.5 (el más extremo de forzamiento radiativo);
+  los resultados no son necesariamente representativos de escenarios de
+  mitigación más moderados (RCP4.5, SSP2-4.5, etc.).
+- El sesgo de subestimación de ciclogénesis en LPB por parte de los RCM (peor
+  que los GCM en esta región específica) es una limitación reconocida
+  explícitamente por los propios autores.
+- Los períodos de clima presente (1985-2005) y futuro (2080-2099) son
+  relativamente cortos (21 años cada uno) para climatologías de eventos
+  extremos, lo que limita la robustez estadística de las tendencias,
+  especialmente en ARG donde las señales de cambio son débiles.
+- El estudio se concentra en la etapa temprana (early-stage) de la
+  ciclogénesis; no analiza estructura completa del ciclo de vida (madurez,
+  decaimiento), que es precisamente el énfasis de la tesis del usuario.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Por qué las tendencias de cambio climático son más débiles en ARG que en
+  SBR/LPB según Gramcianinov et al. (2024)?" Respuesta: porque los mecanismos
+  impulsores de ARG (baroclinicidad de latitudes medias, ondas de Rossby) son
+  menos sensibles al calentamiento superficial que los mecanismos diabáticos
+  de niveles bajos (convergencia de humedad, advección cálida) dominantes en
+  SBR/LPB, cuya intensificación está más directamente ligada al aumento de
+  humedad atmosférica en un clima más cálido.
+- "¿Su tesis usa proyecciones futuras o solo clima presente?" Respuesta: la
+  tesis es un estudio de clima presente (ERA5, 1979-2020); Gramcianinov et al.
+  (2024) se cita únicamente para contextualizar los mecanismos físicos
+  regionales y su posible evolución futura, no como base metodológica directa
+  de la tesis.
+- "¿El mecanismo de convergencia de humedad en LPB que usted cita aplica a la
+  fase de intensificación de su clasificación CycloPhaser, o solo a la
+  génesis?" Respuesta: el artículo original se refiere específicamente a la
+  etapa temprana (early-stage) de la ciclogénesis; la tesis extiende este
+  mecanismo, de forma razonable pero no verificada en el artículo original, a
+  su fase de "intensificación" definida por CycloPhaser.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gramcianinov2024early.md (abstract,
+Sección 1 Introducción, resultados de sesgos de ciclogénesis y composites
+sinópticos, Sección 5 Conclusions).

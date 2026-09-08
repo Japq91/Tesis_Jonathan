@@ -1,0 +1,154 @@
+============================================================
+CARTILLA DE ESTUDIO — Neu et al. 2013 — intercomparación de algoritmos IMILAST
+============================================================
+
+REFERENCIA COMPLETA
+Neu, U., Akperov, M. G., Bellenbaum, N., Benestad, R., Blender, R., Caballero, R.,
+Cocozza, A., Dacre, H. F., Feng, Y., Fraedrich, K., Grieger, J., Gulev, S., Hanley,
+J., Hewson, T., Inatsu, M., Keay, K., Kew, S. F., Kindem, I., Leckebusch, G. C.,
+Liberato, M. L. R., Lionello, P., Mokhov, I. I., Pinto, J. G., Raible, C. C., Reale,
+M., Rudeva, I., Schuster, M., Simmonds, I., Sinclair, M., Sprenger, M., Tilinina, N.
+D., Trigo, I. F., Ulbrich, S., Ulbrich, U., Wang, X. L. y Wernli, H. (2013). IMILAST:
+A Community Effort to Intercompare Extratropical Cyclone Detection and Tracking
+Algorithms. Bulletin of the American Meteorological Society, 94(4), 529-547.
+DOI: 10.1175/BAMS-D-11-00154.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en el Capítulo 1 (Introducción), para señalar la
+incertidumbre metodológica en la determinación de la forma/tamaño de los ciclones
+y su intensidad en superficie.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (invierno; intercomparación IMILAST)
+VARIABLE DE RASTREO DE CICLONES: Múltiples variables entre los 15 algoritmos comparados: MSLP, vorticidad a 850 hPa y Laplaciano de MSLP — el propio estudio compara explícitamente ambos enfoques
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio (proyecto IMILAST) compara 15 algoritmos de detección y seguimiento de
+ciclones extratropicales, comúnmente usados por la comunidad científica,
+aplicados a un mismo conjunto de datos de entrada (reanálisis ERA-Interim,
+resolución 1.5°, 6-horaria, 1989-2009). La pregunta central es cuáles
+características de los ciclones son robustas frente a la elección de método y
+cuáles difieren marcadamente entre esquemas. Es un ejercicio de intercomparación
+metodológica (no un estudio de proceso físico), relevante para la tesis porque
+documenta cuantitativamente la incertidumbre estructural (forma, tamaño, momento
+de génesis/lisis) inherente a cualquier algoritmo de detección de ciclones.
+
+2. METODOLOGÍA
+
+- Datos de entrada común: reanálisis ERA-Interim (ECMWF), resolución 1.5°
+  espacial y 6-horaria temporal (excepto un método con datos de 12 h), período
+  1 enero 1989 - 31 marzo 2009 (20 años).
+- 15 algoritmos participantes, codificados M02-M22, que difieren en: variable de
+  identificación (MSLP, vorticidad a 850 hPa, Laplaciano de MSLP), criterios de
+  umbral (gradiente de presión, distancia mínima entre centros), filtrado de
+  terreno (exclusión sobre montañas >1000-1500 m) y procedimientos de
+  preprocesamiento de datos.
+- Estandarización única impuesta: tiempo de vida mínimo de 24 h (5 pasos de 6 h,
+  o 3 pasos de 12 h para el único método con esa resolución temporal); ningún
+  otro aspecto fue estandarizado, para preservar el comportamiento "estándar" de
+  cada esquema.
+- Comparación track-a-track (método de Blender y Schubert, 2000) para calcular
+  tasas de coincidencia entre pares de métodos.
+- Dos estudios de caso detallados (tormenta "Klaus", Atlántico Norte, enero 2009;
+  tormenta no nombrada, Australia, mayo 1994) para examinar diferencias en
+  posición, presión central y tiempo de vida capturado por cada algoritmo.
+- Análisis de variabilidad interanual y tendencias de 20 años en densidad de
+  pistas (track density) y conteos de centros ciclónicos.
+
+3. HALLAZGOS CLAVE
+
+- El número total de ciclones detectados en el Hemisferio Norte en invierno
+  (DJF) varía entre ~6,000 (M03) y ~21,000 (M18) según el método — una diferencia
+  de más de 3 veces entre esquemas usando exactamente los mismos datos de entrada.
+- Las tasas de coincidencia (matching) entre pares de métodos en la comparación
+  track-a-track se ubican generalmente entre 50% y 70%.
+- La consistencia entre métodos es notablemente mayor para ciclones profundos
+  (intensos) que para ciclones someros o de corta vida; el mayor desacuerdo entre
+  esquemas ocurre en las fases de génesis y lisis (disolución) del ciclón, no en
+  la fase de madurez/desarrollo explosivo.
+- En los dos estudios de caso, todos los métodos coinciden bien durante la fase
+  de desarrollo explosivo e intensificación, pero difieren sustancialmente en la
+  posición y presión central durante la génesis y la disolución (por ejemplo, la
+  presión mínima varió en un rango de 9 hPa entre métodos para la tormenta Klaus).
+- Las tendencias de 20 años en el número total de ciclones muestran acuerdo
+  cualitativo en el signo (mayoría detecta incremento en el HN), pero con
+  diferencias cuantitativas considerables entre métodos; el número de ciclones
+  profundos muestra una tendencia más consistente (decrecimiento, aunque
+  mayormente no significativo).
+- No se encontró evidencia de agrupamiento sistemático de resultados según la
+  variable base del algoritmo (esquemas de vorticidad vs. esquemas de MSLP),
+  sugiriendo que las diferencias entre métodos surgen de una interacción compleja
+  de múltiples elecciones de diseño, no de un solo factor identificable.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 1 (Introducción), línea 66, junto con priestley2022improved:
+"Esta caracterización estructural ha sido limitada por la resolución espacial de
+los datos disponibles. \citet{priestley2022improved} demuestran que los modelos
+subestiman los vientos extremos asociados a ciclones al no resolver explícitamente
+sus estructuras de mesoescala. Asimismo, \citet{neu2013intercomparison} señalan
+que la variabilidad en la forma y tamaño de los ciclones extratropicales genera
+incertidumbres en la determinación de su intensidad en superficie, especialmente
+en regiones con topografía compleja." El paper aporta el respaldo metodológico de
+que la elección del algoritmo de detección introduce incertidumbre estructural
+(forma, tamaño) que se traduce en incertidumbre sobre la intensidad — una
+justificación temprana en la tesis de por qué la metodología de detección y
+compositing debe documentarse y justificarse cuidadosamente.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Este es el artículo fundacional del proyecto IMILAST (Intercomparison of Mid
+Latitude Storm Diagnostics), un esfuerzo colectivo de más de 30 autores
+representando prácticamente todos los grupos de seguimiento de ciclones activos
+en la comunidad (Wernli/Sprenger-ETH Zürich, Simmonds/Sinclair, Hodges, Hewson-
+ECMWF, Ulbrich-Berlín, Trigo-Lisboa, Gulev-Moscú, entre otros). Es la referencia
+estándar citada por prácticamente todo estudio posterior que usa un algoritmo de
+seguimiento de ciclones para justificar la elección metodológica (por ejemplo,
+Naud et al. 2023/2025 citan a Neu et al. 2013 para justificar la resolución de
+ERA-Interim como "adecuada para identificación de ciclones"). En la tesis, esta
+cita se ubica junto a priestley2022improved en el bloque introductorio que motiva
+la necesidad de alta resolución espacial y metodología cuidadosa para caracterizar
+estructuralmente los ciclones del Atlántico Sudoccidental.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El estudio usa un único conjunto de datos de entrada (ERA-Interim, 1.5°,
+  6-horaria); no evalúa cómo cambiarían los resultados con reanálisis de mayor
+  resolución (p. ej. ERA5), aunque los autores citan evidencia de que ERA-Interim
+  es comparable a MERRA y NCEP-CFSR.
+- No se estandarizaron todos los parámetros de los algoritmos (solo el tiempo de
+  vida mínimo), por decisión deliberada de los autores para preservar el
+  comportamiento "estándar" de cada esquema; esto significa que las diferencias
+  reportadas mezclan efectos de definición conceptual de ciclón con efectos de
+  parámetros específicos, sin plena capacidad de separarlos.
+- El estudio no dispone de un "track" de verdad (ground truth) contra el cual
+  evaluar la "calidad" de cada método individual; los propios autores señalan que
+  "the study cannot assess any kind of quality of individual methods".
+- El período de análisis (20 años) es demasiado corto para diagnosticar
+  robustamente tendencias climáticas de largo plazo versus variabilidad natural,
+  lo cual los autores reconocen explícitamente.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Qué algoritmo de detección usa tu tesis y cómo se posiciona frente a la
+  variabilidad documentada por IMILAST? Respuesta: [el candidato debe especificar
+  el algoritmo propio de la tesis y justificar su elección en términos de las
+  categorías de variable de identificación (MSLP vs. vorticidad) y umbrales
+  usados, en diálogo con la variabilidad de 50-70% de coincidencia reportada aquí].
+- ¿Qué aspecto del ciclo de vida del ciclón es más robusto frente a la elección
+  de algoritmo, según Neu et al.? Respuesta: la fase de mayor intensidad/desarrollo
+  explosivo es la más consistente entre métodos; la génesis y la lisis (disolución)
+  son las fases con mayor divergencia entre algoritmos.
+- ¿Cómo afecta esta incertidumbre metodológica a la interpretación de tus
+  resultados de intensidad en superficie? Respuesta: la tesis reconoce esta
+  limitación estructural explícitamente en la Introducción, motivando el uso
+  de una metodología de detección y compositing bien documentada y consistente
+  con la literatura, sin pretender eliminar la incertidumbre inherente al método
+  elegido.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/neu2013intercomparison.md (leído: resumen,
+introducción, estrategia y métodos, climatología de características de ciclones,
+características del ciclo de vida, estudios de caso, variabilidad interanual y
+tendencias, discusión y conclusiones).

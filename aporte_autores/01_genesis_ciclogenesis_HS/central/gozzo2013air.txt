@@ -1,0 +1,158 @@
+============================================================
+CARTILLA DE ESTUDIO — Gozzo & da Rocha 2013 — Flujos aire-mar y ciclón Shapiro-Keyser
+============================================================
+
+REFERENCIA COMPLETA
+Gozzo, L. F., & da Rocha, R. P. (2013). Air-sea interaction processes
+influencing the development of a Shapiro-Keyser type cyclone over the
+subtropical South Atlantic Ocean. Pure and Applied Geophysics, 170, 917-934.
+DOI: 10.1007/s00024-012-0584-3
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 7 veces en 5 capítulos (Introducción, Fundamentación, Viento,
+Precipitación, Prototipos). Es la referencia mecanística clave que sustenta la
+explicación física de las diferencias regionales SBR/LPB vs. ARG en la
+separación de cuadrantes viento-precipitación de los prototipos p90, y el
+vínculo causal entre flujos turbulentos oceánicos y la intensificación del
+frente retrocedido/seclusión cálida.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (estudio de caso único con WRF; sin algoritmo de rastreo)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Analiza, mediante experimentos numéricos de sensibilidad con el modelo WRF, el
+impacto de los flujos turbulentos de calor sensible y latente océano-atmósfera
+(SLHF) en el desarrollo de un ciclón no explosivo tipo Shapiro-Keyser que se
+formó y evolucionó sobre el suroeste del Atlántico Sur subtropical entre el 28
+de mayo y el 7 de junio de 1997. El ciclón, de larga vida, generó vientos
+superficiales fuertes, oleaje intenso y naufragios en su fase inicial. Es
+central para la tesis porque establece experimentalmente que los flujos de
+calor oceánico son decisivos para la trayectoria, intensificación, formación de
+la seclusión cálida y el frente retrocedido —el mecanismo que la tesis invoca
+para explicar por qué SBR y LPB (con mayor acceso a calor latente oceánico)
+muestran mayor separación de cuadrantes viento-precipitación que ARG.
+
+2. METODOLOGÍA
+- Modelo: WRF-ARW versión 3.3, resolución horizontal de 30 km, dominio sobre el
+  Atlántico Sur subtropical (proyección Lambert conformal); simulación del
+  0000 UTC 27 mayo al 0000 UTC 3 junio de 1997.
+- Condiciones iniciales/de frontera: análisis FNL-NCEP (2.5°x2.5°, 16 niveles,
+  cada 12h); validación con ERA-Interim (1.5°x1.5°) y flujos diarios de SLHF de
+  WHOI (Woods Hole Oceanographic Institution, 1°x1°).
+- Dos experimentos: FLX (física completa, incluye flujos superficiales de calor
+  sensible y latente) y NOFLX (idénticos pero sin flujos superficiales de calor
+  y humedad).
+- Diagnóstico: ecuación de desarrollo de Sutcliffe (tendencia de vorticidad en
+  superficie descompuesta en advección de vorticidad en 500 hPa y procesos de
+  espesor 1000-500 hPa: advección térmica, calentamiento diabático,
+  estabilidad); tendencias lagrangianas de temperatura potencial equivalente por
+  flujos de calor sensible/latente (ecuaciones de Neiman y Shapiro 1993).
+
+3. HALLAZGOS CLAVE
+- En FLX el ciclón alcanza mayor intensificación, trayectoria y vida más larga,
+  con desplazamiento típico hacia el sureste, similar a ERA-Interim; en NOFLX el
+  ciclón es mucho más débil y se vuelve irreconocible en el campo de presión a
+  nivel del mar después de 5 días de simulación.
+- Presión mínima en la fase madura: 996 hPa en FLX (similar a los ~999 hPa de
+  ERA-Interim) frente a 1020 hPa en NOFLX —una diferencia de ~24 hPa atribuible
+  a la ausencia de flujos.
+- La ausencia de SLHF provoca un desacople de las ondas de niveles bajo y alto:
+  en FLX el ciclón de superficie permanece bajo una región de advección
+  ciclónica de vorticidad en altura (favoreciendo divergencia en niveles altos y
+  mayor intensificación); en NOFLX el ciclón queda bajo el eje de la vaguada,
+  donde ya no hay advección ciclónica de vorticidad efectiva, inhibiendo su
+  intensificación.
+- El calentamiento diabático integrado (900-500 hPa) alcanza hasta 30 K/día en
+  FLX (cerca del frente cálido) frente a solo 10 K/día en NOFLX; la
+  precipitación acumulada en 24h supera 100 mm en FLX junto al frente cálido,
+  frente a un máximo de 60 mm en un área pequeña al sureste del ciclón en NOFLX.
+- La seclusión cálida se forma en ambos experimentos, pero en FLX alcanza 302 K
+  (posición y magnitud similares a ERA-Interim) mientras que en NOFLX es más
+  fría (295 K) y el frente retrocedido (bent-back front) está casi ausente.
+- El cálculo lagrangiano muestra que el flujo de calor sensible solo (+6.1
+  K/día) no compensa la advección de aire frío (-12 K/día) cerca del frente
+  retrocedido; es el flujo de calor latente el que resulta decisivo: el efecto
+  combinado de ambos flujos en la tendencia de temperatura potencial equivalente
+  es de +29.4 K/día, más del doble de la tasa de enfriamiento por advección fría,
+  confirmando que el calor latente es esencial para desarrollar la seclusión
+  cálida.
+- El desarrollo de este ciclón Shapiro-Keyser resulta más sensible a la
+  supresión de SLHF que a los cambios de parametrización de cúmulos evaluados
+  previamente por Da Rocha y Caetano (2010).
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L31, L61): se usa junto con Hart (2003) y Evans &
+  Guishard (2012) para mostrar que en el Atlántico Sur coexisten ciclones
+  subtropicales híbridos (evans2012climatology) y sistemas de tipo
+  Shapiro-Keyser con fractura del frente frío y seclusión cálida en la madurez,
+  evidenciando que la región "se aparta frecuentemente de la conceptualización
+  de ciclones convencionales".
+- Cap02-Fundamentación (L14, L92): se cita para mostrar que la supresión de
+  flujos de calor latente altera la intensidad del vórtice (efecto también
+  reportado por reboita2022from), y que la intensificación (a diferencia de la
+  iniciación baroclínica) está fuertemente modulada por los flujos turbulentos
+  de calor sensible y latente en la capa límite.
+- Cap04-Viento (L42): se cita para respaldar que "los flujos turbulentos de
+  calor sensible y latente océano-atmósfera, acoplados a una profunda inyección
+  de humedad, son mecanismos decisivos para desestabilizar el entorno y
+  retroalimentar el sistema en desarrollo".
+- Cap05-Precipitación (L70): explica por qué SBR y LPB muestran mayor densidad
+  de precipitación (SBR/LPB) que ARG durante la intensificación: "los intensos
+  flujos de calor latente y sensible desde el océano... sostienen la convección
+  cerca del frente retrocedido"; ARG, sin este forzante oceánico, muestra las
+  densidades más bajas.
+- Cap07-Prototipos (L50, L63): es la pieza mecanística central de esta sección:
+  el acceso a flujos de calor latente oceánico y la fuerte baroclinicidad en
+  SBR/LPB favorecen una oclusión más rápida con intrusiones secas que generan la
+  separación más drástica entre cuadrantes viento-precipitación; en ARG, la
+  menor disponibilidad de humedad oceánica genera una separación moderada y una
+  banda de precipitación más difusa. La tesis concluye explícitamente: "la
+  convergencia entre las conclusiones de los experimentos de sensibilidad de
+  \citep{gozzo2013air} y la geometría estadística capturada por los prototipos
+  valida que la separación de cuadrantes observada no es un artefacto del
+  proceso de promediado, sino la huella sistemática de un mecanismo dinámico
+  bien caracterizado".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Gozzo y da Rocha (USP) encabezan la línea brasileña de estudio de los flujos
+aire-mar en la ciclogénesis del Atlántico Sur, continuando los hallazgos de Kuo
+et al. (1991), Piva et al. (2008) y Reboita et al. (2011) sobre el rol de los
+flujos superficiales en la intensificación de ciclones, y precede directamente
+a gozzo2014subtropical (climatología de ciclones subtropicales) y
+gozzo2017climatology (fuentes de humedad remotas), ambos también citados en tu
+tesis, formando una línea de investigación coherente sobre los mecanismos
+termodinámicos de la ciclogénesis en el Atlántico Sur subtropical.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un estudio de caso único (un solo ciclón, mayo-junio 1997); los propios
+  autores señalan que "el trabajo futuro está planeado para abordar la
+  contribución individual de los flujos latentes y sensibles" (no separados en
+  este estudio) y "un estudio más profundo de los procesos frontogenéticos".
+- El experimento FLX sobreestima la magnitud del flujo de calor latente respecto
+  al análisis WHOI, aunque el flujo de calor sensible se simula de forma similar.
+- Los resultados no necesariamente generalizan a ciclones explosivos o a otras
+  regiones del Atlántico Sur (SBR/LPB vs. ARG), ya que el caso estudiado es
+  específicamente subtropical y no explosivo.
+- Los autores mismos notan que sus resultados sobre el rol del calor sensible
+  difieren de los de Cordeira y Bosart (2011) para un caso de ciclogénesis
+  oceánica del Atlántico Norte, sugiriendo sensibilidad al caso/región.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cómo extrapolas los hallazgos de un único caso de 1997 a la climatología
+  general de SBR/LPB/ARG en tu tesis? Respuesta: se usa como mecanismo físico
+  representativo (validado por múltiples estudios posteriores del mismo grupo,
+  p. ej. gozzo2014subtropical, gozzo2017climatology), no como generalización
+  estadística directa; la validación climatológica de la separación de
+  cuadrantes proviene de tus propios compuestos p90.
+- ¿Qué parte de la intensificación se debe al calor sensible y cuál al calor
+  latente? Respuesta: el estudio no los separa explícitamente (los evalúa en
+  conjunto como SLHF), aunque el análisis lagrangiano puntual sugiere que el
+  calor latente es el término dominante en la formación de la seclusión cálida.
+- ¿Por qué ARG muestra menor separación de cuadrantes si también está expuesta
+  al océano? Respuesta: ARG tiene menor disponibilidad de humedad oceánica y
+  mayor modulación orográfica (interacción con los Andes), lo que retarda la
+  oclusión y difumina la banda de precipitación frente a SBR/LPB.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gozzo2013air.md

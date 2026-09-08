@@ -1,0 +1,1 @@
+C. W. Newton et al. (eds.), Extratropical Cyclones© American Meteorological Society 1990

@@ -1,0 +1,134 @@
+============================================================
+CARTILLA DE ESTUDIO — Portal, Raveh-Rubin, Catto, Givon & Martius 2024 — extremos compuestos de lluvia-viento-ola y ciclones mediterráneos
+============================================================
+
+REFERENCIA COMPLETA
+Portal, A., Raveh-Rubin, S., Catto, J. L., Givon, Y., & Martius, O. (2024).
+Linking compound weather extremes to Mediterranean cyclones, fronts, and
+airstreams. Weather and Climate Dynamics, 5(3), 1043-1060.
+DOI: 10.5194/wcd-5-1043-2024
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 06 (MEOF), en la discusión, como paralelismo
+independiente —obtenido en otra cuenca y con otro enfoque metodológico— de
+que los extremos de lluvia y de viento asociados a un ciclón responden a
+corrientes en chorro (WCB vs. intrusión seca) físicamente distintas.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (contornos cerrados de SLP, catálogo compuesto MedCyclones) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio cuantifica la relación estadística entre ciclones del Mediterráneo
+y dos tipos de extremos meteorológicos compuestos: la coocurrencia de lluvia
+y viento extremos (R∧W) y la coocurrencia de oleaje y viento extremos (W∧W).
+Para ello define un "área de impacto" de cada ciclón mediterráneo (radio fijo
+de 1000 km, extendido por las máscaras de sus corrientes en chorro asociadas)
+y evalúa qué corriente en chorro específica del ciclón —el cinturón
+transportador cálido (WCB), la intrusión seca (DI) o el frente frío (CF)— se
+asocia con mayor frecuencia a cada tipo de extremo compuesto. Es, en esencia,
+un estudio de "compound events" (eventos compuestos) más que un análisis de
+estructura espacial vía EOF/MEOF, pero aborda la misma pregunta física de
+fondo que el Capítulo 06 de esta tesis: si los extremos de lluvia y de viento
+en torno a un ciclón comparten o no el mismo mecanismo dinámico de origen.
+
+2. METODOLOGÍA
+- Datos: ERA5 (1980-2019), extremos univariados de precipitación acumulada
+  en 6 h, ráfaga máxima de viento a 10 m, y altura significativa de ola,
+  identificados sobre el percentil 98 anual (con umbrales mínimos absolutos
+  de 2 mm, 10 m/s y 2 m, respectivamente).
+- Ciclones mediterráneos: catálogo compuesto de MedCyclones COST Action
+  (Flaounas et al. 2023), que combina 10 métodos distintos de detección y
+  seguimiento de ciclones aplicados a ERA5, exigiendo un nivel de confianza
+  de al menos 5 de 10 métodos.
+- Área de impacto (IA01): círculo de 1000 km de radio centrado en el ciclón,
+  extendido por máscaras de frente frío (500 km), entrada/ascenso del WCB
+  (círculo de 500 km) y salida de la intrusión seca (círculo de 1000 km).
+- Corrientes en chorro: máscaras booleanas de entrada y ascenso del WCB,
+  salida de la intrusión seca (DI) y líneas de frente frío (CF),
+  identificadas mediante métodos lagrangianos y de detección frontal
+  estándar de la literatura.
+- Clasificación adicional por 9 tipos de ciclón mediterráneo (clusters de
+  Givon et al. 2024a, basados en características de vorticidad potencial en
+  niveles altos).
+
+3. HALLAZGOS CLAVE
+- La mayoría de los extremos compuestos de lluvia-viento (R∧W) y oleaje-
+  viento (W∧W) ocurren en las inmediaciones de un ciclón mediterráneo, con
+  picos locales de coocurrencia que superan el 80%.
+- Los eventos R∧W se maximizan en las regiones de ascenso del cinturón
+  transportador cálido (WCB), alcanzando allí la mayor probabilidad
+  condicional (~7% de los casos).
+- Los eventos W∧W, en cambio, se maximizan bajo la salida de la intrusión
+  seca (DI) y bajo el WCB, con probabilidades condicionales que superan el
+  10% de los casos.
+- Los ciclones invernales, coincidiendo con el pico de ocurrencia de
+  ciclones baroclínicos grandes y bien definidos, están asociados a la mayor
+  frecuencia de eventos compuestos.
+- Los ciclones de los clústeres 1 y 4 (típicamente baroclínicos, similares
+  al modelo Noruego/Shapiro-Keyser de latitudes medias) muestran la conexión
+  más fuerte con ambos tipos de compuestos a través de todas las estaciones.
+- La presencia cercana de un ciclón incrementa la frecuencia de compuestos
+  R∧W hasta en un factor de 10 en las estaciones de transición, en el
+  Mediterráneo central y oriental.
+
+4. RELACIÓN CON TU TESIS
+- Cap06-MEOF (Sección sec:discusion_meof): "Un paralelismo independiente de
+  esta disociación, aunque obtenido con un enfoque de coocurrencia de
+  extremos compuestos en lugar de MEOF, lo aporta \citet{portal2024linking}
+  para el Mediterráneo: los eventos compuestos de lluvia y viento se
+  maximizan bajo el ascenso del WCB, mientras que los de viento (y oleaje)
+  se maximizan bajo la salida de la intrusión seca, evidenciando en una
+  cuenca de dimensiones y dinámica muy distintas que ambos peligros
+  responden a corrientes en chorro físicamente diferenciadas dentro del
+  mismo ciclón."
+Se usa como respaldo conceptual —no numérico ni geométrico directo— de que
+la disociación entre el forzante de la lluvia (WCB) y el forzante del viento
+(intrusión seca/CCB) que el MEOF1 de esta tesis captura como anticovarianza
+espacial en p90 tiene un análogo independiente en otra cuenca y con otra
+técnica estadística (coocurrencia de extremos compuestos, no EOF).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Alice Portal (Universidad de Berna), Shira Raveh-Rubin (Instituto Weizmann),
+Jennifer Catto (Universidad de Exeter, también autora de catto2010climate y
+catto2015fronts, ambos citados en esta tesis), Yonatan Givon y Olivia Martius
+trabajan en la caracterización de ciclones mediterráneos y sus impactos de
+superficie, dentro del marco de la iniciativa MedCyclones COST Action. Este
+trabajo extiende estudios previos sobre extremos individuales (Pfahl 2014;
+Nissen et al. 2010; Owen et al. 2021) al análisis conjunto de compuestos
+lluvia-viento y oleaje-viento, y sobre la clasificación de ciclones
+mediterráneos de Givon et al. (2024a).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los ciclones mediterráneos son, en promedio, más pequeños, más débiles y
+  de menor duración que sus equivalentes del Atlántico (y, por extensión,
+  que los del Atlántico Sudoccidental estudiados en esta tesis), lo que
+  limita la comparabilidad directa de escalas.
+- El enfoque es de coocurrencia binaria de extremos definidos por umbrales
+  (percentil 98), no una descomposición espacial continua como el EOF/MEOF
+  de esta tesis; no hay, por tanto, una comparación geométrica o de
+  cuadrantes directamente equiparable a los prototipos estructurales del
+  Capítulo 07.
+- El estudio no estratifica por fase del ciclo de vida del ciclón, a
+  diferencia del enfoque de esta tesis (incipiente, intensificación,
+  madurez, decaimiento).
+- Es un estudio del Hemisferio Norte; no hay extrapolación directa a la
+  geometría de cuadrantes del Hemisferio Sur.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué citar un estudio de "compound extremes" del Mediterráneo en el
+  capítulo de MEOF? R: No se usa como evidencia numérica ni geométrica
+  directa, sino como paralelismo conceptual independiente: en una cuenca de
+  dimensiones y dinámica muy distintas, con una metodología distinta
+  (coocurrencia de extremos, no EOF), se llega a la misma conclusión
+  cualitativa de que el forzante de la lluvia (WCB) y el del viento
+  (intrusión seca) son físicamente distintos dentro del mismo ciclón.
+- P: ¿Es la técnica de "compound extremes" de Portal et al. comparable con
+  el MEOF que usas? R: No son la misma técnica: ellos miden la probabilidad
+  condicional de coocurrencia de umbrales extremos binarios bajo cada
+  corriente en chorro, mientras que el MEOF de esta tesis descompone la
+  covarianza espacial continua de los campos de viento y precipitación en
+  modos ortogonales. La comparación es conceptual, no metodológica.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/portal2024linking.md

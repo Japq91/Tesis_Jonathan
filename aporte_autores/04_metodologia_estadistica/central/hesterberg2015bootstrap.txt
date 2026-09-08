@@ -1,0 +1,164 @@
+============================================================
+CARTILLA DE ESTUDIO — Hesterberg 2015 — bootstrap-t para intervalos de confianza
+============================================================
+
+REFERENCIA COMPLETA
+Hesterberg, T. C. (2015). What Teachers Should Know About the Bootstrap:
+Resampling in the Undergraduate Statistics Curriculum. The American
+Statistician, 69(4), 371-386. Taylor & Francis. DOI: 10.1080/00031305.2015.1089789
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central (metodológicamente)
+Se cita en 2 ubicaciones (Fundamentación y Resultados de Viento): sustenta
+directamente la técnica estadística (Bootstrap-t / Bootstrap-tt) usada para
+evaluar la significancia estadística de los autovectores espaciales (EOF) y
+discriminar señales físicas del ruido de muestreo, un paso metodológico
+crítico para toda la interpretación de los patrones espaciales del Cap04.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo pedagógico-metodológico (no un estudio de caso empírico
+sobre un fenómeno físico) dirigido a profesores y estudiantes de
+estadística, que examina en profundidad los métodos de remuestreo
+(bootstrap y permutación) y su enseñanza en cursos universitarios de
+Estadística 101 y Estadística Matemática. A partir del ejemplo de los datos
+de reparaciones telefónicas de Verizon (ILEC vs. CLEC), compara distintos
+tipos de intervalos de confianza bootstrap —percentil, percentil inverso, t
+con error estándar bootstrap, y bootstrap-t (estudentizado)— evaluando su
+exactitud de cobertura mediante simulación. Es relevante para la tesis
+porque proporciona la justificación técnica precisa de por qué el método
+Bootstrap-t es preferible al bootstrap percentil estándar para construir
+intervalos de confianza fiables en muestras finitas y posiblemente
+asimétricas, como es el caso de los autovectores EOF derivados de una
+muestra limitada de eventos ciclónicos.
+
+2. METODOLOGÍA
+- Ejemplo guía: datos de tiempos de reparación telefónica de Verizon (ILEC
+  y CLEC), usados para ilustrar sesgo, asimetría (skewness) y variabilidad.
+- Comparación de cinco tipos de intervalos de confianza al 95%: (t)
+  intervalo t ordinario; (B) intervalo t con error estándar bootstrap;
+  (p) intervalo percentil bootstrap; (r) intervalo percentil inverso
+  (reverse/"basic" bootstrap); (T) intervalo bootstrap-t (estudentizado).
+- El intervalo bootstrap-t se construye estimando, para cada réplica
+  bootstrap, un estadístico cuasi-pivotal (θ*-θ̂)/SE*, análogo al
+  estadístico t de Student pero con el error estándar también recalculado
+  en cada remuestreo, en lugar de usar tablas de una distribución t teórica
+  fija.
+- Evaluación de exactitud (accuracy) de cobertura mediante simulaciones
+  extensas de Monte Carlo sobre poblaciones normales y exponenciales
+  (esta última fuertemente asimétrica), comparando la probabilidad real de
+  no cobertura (miss probability) en cada cola contra el valor nominal
+  esperado (2.5% en cada lado, para un intervalo del 95%).
+- Software: ejemplos y figuras generados en R, usando el paquete `resample`
+  (Hesterberg 2015), que implementa el intervalo percentil expandido con
+  factores de corrección motivados por los intervalos t estándar.
+
+3. HALLAZGOS CLAVE
+- El intervalo percentil bootstrap estándar es asimétrico "en la dirección
+  correcta" pero se queda corto (demasiado estrecho); el intervalo
+  percentil inverso ("reverse"/basic bootstrap) es asimétrico en la
+  dirección equivocada y tiene el mismo problema de estrechez —Hall (1992)
+  lo describe como "el pivote equivocado, al revés".
+- Para datos con fuerte asimetría a la derecha (p. ej., exponenciales), los
+  intervalos con buena cobertura deben ser hasta 3 veces más asimétricos
+  que el intervalo percentil bootstrap; el intervalo t con error estándar
+  bootstrap mejora algo pero sigue subcubriendo.
+- El intervalo bootstrap-t (T) y el intervalo t ordinario (t, cuando la
+  población es normal) muestran el mejor desempeño en las simulaciones,
+  incluso para muestras muy pequeñas; para poblaciones asimétricas, el
+  bootstrap-t es explícitamente el método recomendado por tener mejor
+  cobertura sin depender de la simetría poblacional.
+- En el ejemplo Verizon ILEC, los cuantiles estandarizados del intervalo
+  bootstrap-t (2.5%: -0.646; 97.5%: 0.762) muestran una asimetría marcada
+  respecto al intervalo t ordinario (-0.701/0.701), reflejando
+  correctamente la asimetría muestral de los datos, en contraste con el
+  intervalo percentil (-0.683/0.718) y el reverso (-0.718/0.683), menos
+  precisos en la corrección de la asimetría real.
+- Para pruebas/intervalos con tamaños de muestra reducidos, el bootstrap
+  percentil combinado con bootstrapping no paramétrico simple es menos
+  exacto que los intervalos t clásicos; el bootstrap-t corrige esta
+  deficiencia al estandarizar cada réplica por su propio error estándar,
+  generando un estadístico cuasi-pivotal.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L257): "Como establece \citet{hesterberg2015bootstrap},
+  la variante Bootstrap-t corrige dinámicamente esta asimetría al
+  estandarizar cada muestra de remuestreo por su propio error estándar,
+  generando estadísticos cuasi-pivotales que producen intervalos de
+  confianza con cobertura más precisa que el Bootstrap percentílico
+  estándar." Esta es la justificación teórica directa de por qué la tesis
+  elige el bootstrap-t sobre el percentílico simple.
+- Cap04-Viento (L217): "Para discriminar entre señales físicas y
+  fluctuaciones estocásticas propias del remuestreo, se evaluó la
+  significancia estadística de los autovectores espaciales mediante el
+  método Bootstrap-tt, cuyos fundamentos se describen en la Sección
+  [bootstrap_significancia] siguiendo a \citet{hesterberg2015bootstrap}."
+  Aquí la referencia sustenta operativamente el criterio de significancia
+  usado para decidir qué patrones EOF de viento son estadísticamente
+  robustos frente al ruido de muestreo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Tim Hesterberg (estadístico, entonces en Google/anteriormente Insightful
+Corp. e investigador asociado a los desarrollos del paquete `resample` en
+R) se especializa en metodología y pedagogía del bootstrap y pruebas de
+remuestreo, construyendo sobre los fundamentos sentados por Efron (1979) y
+sistematizados en Efron y Tibshirani (1993) —también presente en la
+bibliografía de la tesis como efron1993introduction—, así como en trabajos
+previos del propio autor (Hesterberg 1999, 2014). Este artículo de 2015 es
+una síntesis pedagógica y práctica orientada a clarificar cuál método
+bootstrap es más preciso y por qué, complementando el tratado más general
+y canónico de Efron y Tibshirani con recomendaciones prácticas concretas
+(incluyendo advertencias explícitas contra el uso ingenuo del bootstrap
+percentil/reverso). En la tesis, ambas referencias (efron1993introduction y
+hesterberg2015bootstrap) conforman en conjunto el respaldo metodológico
+completo del procedimiento de significancia estadística aplicado a los
+patrones EOF/MEOF.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un artículo pedagógico centrado en ejemplos univariados simples
+  (medias, diferencias de medias) con datos i.i.d.; no aborda directamente
+  la aplicación del bootstrap-t a estructuras espaciales multivariadas como
+  los autovectores EOF, por lo que su adaptación a ese contexto (como en la
+  tesis) requiere extensión metodológica no cubierta explícitamente en el
+  artículo.
+- El artículo no discute en profundidad el caso de datos con dependencia
+  temporal o espacial (series climáticas autocorrelacionadas); su enfoque
+  es el remuestreo i.i.d. clásico.
+- Las comparaciones de cobertura se basan en simulaciones sobre
+  poblaciones teóricas conocidas (normal, exponencial), no en datos
+  climáticos reales, por lo que la magnitud exacta de la mejora de
+  cobertura reportada no es directamente extrapolable a la muestra de
+  ciclones de la tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué el bootstrap-t es preferible al bootstrap percentil estándar
+  para evaluar la significancia de los EOF en su tesis?
+  R: Porque el bootstrap-t estandariza cada réplica de remuestreo por su
+  propio error estándar, generando un estadístico cuasi-pivotal que, según
+  Hesterberg (2015), produce una cobertura de intervalos de confianza
+  sustancialmente más precisa que el percentílico estándar, especialmente
+  cuando la distribución del estadístico es asimétrica —una condición
+  plausible para coeficientes EOF derivados de una muestra finita de
+  eventos.
+- P: ¿Qué es un estadístico "cuasi-pivotal" y por qué importa?
+  R: Es un estadístico cuya distribución es aproximadamente independiente
+  del parámetro desconocido (a diferencia del estadístico bruto); esto
+  permite que los cuantiles estimados por remuestreo se transfieran de
+  forma más fiable a la construcción del intervalo de confianza real.
+- P: ¿Este artículo prueba directamente la validez del bootstrap-t para
+  autovectores EOF espaciales?
+  R: No de forma directa; el artículo se centra en ejemplos univariados
+  simples (medias). Su aporte a la tesis es el fundamento estadístico
+  general de por qué el bootstrap-t supera al percentílico en cobertura,
+  fundamento que la tesis extiende metodológicamente al contexto EOF en la
+  sección de significancia estadística del Capítulo 3.
+- P: ¿Qué alternativas al bootstrap-t se descartaron y por qué?
+  R: El bootstrap percentil estándar y el percentil inverso ("reverse"),
+  ambos documentados por Hesterberg (2015) como sistemáticamente menos
+  precisos (demasiado estrechos o asimétricos en la dirección incorrecta)
+  frente al bootstrap-t.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/hesterberg2015bootstrap.md

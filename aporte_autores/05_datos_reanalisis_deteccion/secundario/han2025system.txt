@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Han & Ullrich 2025 — Clasificación objetiva de sistemas de baja presión (SyCLoPS)
+============================================================
+
+REFERENCIA COMPLETA
+Han, Y., & Ullrich, P. A. (2025). The System for Classification of Low-Pressure Systems (SyCLoPS): An All-In-One Objective Framework for Large-Scale Data Sets. Journal of Geophysical Research: Atmospheres, 130, e2024JD041287. DOI: 10.1029/2024JD041287
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central en el Capítulo 7 (Prototipos), Secundario en Cap. 1 y Cap. 2
+Se cita en cuatro pasajes (Introducción L63, L82; Fundamentación L197; Prototipos L73); en el Cap. 7 funciona como el principal referente internacional de comparación metodológica para validar la propuesta de prototipos estructurales del Atlántico Sur.
+
+HEMISFERIO DE ESTUDIO: Global (no restringido a un hemisferio) (catálogo mundial, ambos hemisferios)
+VARIABLE DE RASTREO DE CICLONES: Múltiples parámetros dinámicos (TempestExtremes: viento, geopotencial, humedad, cizalladura) — no un único criterio de MSLP o vorticidad como la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El artículo propone SyCLoPS (System for Classification of Low-Pressure Systems), el primer marco objetivo "todo en uno" para detectar, rastrear y clasificar TODOS los tipos de sistemas de baja presión (LPS) del planeta en un único conjunto de datos, sin restricciones espaciales, latitudinales o estacionales. Hasta ese momento, cada tipo de ciclón (tropical, extratropical, subtropical, monzónico, polar low) requería un algoritmo especializado distinto, lo que fragmentaba y acortaba artificialmente el ciclo de vida registrado de cada sistema. Es un estudio metodológico/de infraestructura de datos, de alcance global, publicado en JGR: Atmospheres (AGU), altamente relevante porque establece un estándar reciente (2025) para vincular la evolución de un sistema con sus manifestaciones de viento y precipitación extremos — exactamente el tipo de vínculo que la tesis busca cuantificar para el Atlántico Sur.
+
+2. METODOLOGÍA
+- Software base: TempestExtremes (TE), herramienta Lagrangiana automatizada de detección/rastreo de nodos o áreas, aplicada al reanálisis ERA5 (Hersbach et al., 2020).
+- Se calculan 16 parámetros por nodo de LPS a partir de variables atmosféricas comunes en reanálisis (viento, geopotencial, humedad relativa en 100 hPa, cizalladura vertical profunda, etc.).
+- Un clasificador en Python asigna 16 etiquetas/clases posibles (TC, EX, SC, ML, MD, PL, THL, HAL, DS, etc.) y 4 tipos de "tracks" de alto impacto (TC, sistemas monzónicos, tormentas subtropicales y polar lows).
+- Los umbrales de clasificación se calibran con árboles de decisión y optimización matemática básica, contrastando contra catálogos subjetivos (IBTrACS) para el período 1979–2022 (44 años de datos, ~7.78 millones de nodos y 379,301 tracks distintos).
+- Validación: comparación de etiquetas contra IBTrACS y contra catálogos de sistemas monzónicos y ciclones tipo-tropical (TLC).
+- Producto final: catálogo global etiquetado nodo a nodo, que permite compuestos de sección vertical, evolución temporal, frecuencia anual, energía cinética integrada (IKE) y contribución fraccional de precipitación por clase de LPS.
+
+3. HALLAZGOS CLAVE
+- La comparación de las etiquetas de SyCLoPS con IBTrACS reveló una exactitud global del 95% al distinguir entre sistemas tropicales, ciclones extratropicales y perturbaciones.
+- SyCLoPS mejora la habilidad de detección de ciclones tropicales (TC) respecto al algoritmo TE previo, con una reducción aproximada del 6% en la tasa de falsas alarmas (FAR); en cifras concretas: HR = 78.2%, FAR = 14.6%, HRMFAR = 63.6% (frente al HRMFAR = 56.1% del método de Zarzycki & Ullrich, es decir, una mejora de 7.5 puntos porcentuales).
+- La menor FAR se explica principalmente por la identificación exitosa de tormentas subtropicales en latitudes subtropicales, que antes se confundían con TC.
+- Los compuestos de sección vertical (a partir de 1,000 nodos aleatorios por clase) muestran estructuras térmicas y de humedad claramente distintas para TC, THL (thermal low), sistemas monzónicos y tormentas subtropicales.
+- El marco permite estudiar la evolución del ciclo de vida completo de cada LPS (no solo tramos parciales), la frecuencia anual por tipo, y la contribución fraccional de precipitación de cada clase (Figura 12) para el período 1979–2022.
+- La eliminación de restricciones topográficas, latitudinales y temporales permite capturar tracks mucho más largos y completos que las metodologías especializadas anteriores.
+
+4. RELACIÓN CON TU TESIS
+Se usa en tres frentes complementarios:
+(a) Introducción (L63): para justificar la necesidad de "marcos de clasificación que vinculen la evolución del sistema con sus manifestaciones extremas de viento y precipitación" — precisamente el vacío que la tesis busca llenar en el Atlántico Sur.
+(b) Introducción (L82) y Fundamentación (L197): SyCLoPS se presenta como ejemplo de "propuestas globales recientes" alineadas con el enfoque de compositing por fases evolutivas, reforzando la validez metodológica del compositing centrado usado en la tesis.
+(c) Capítulo 7 (Prototipos, L73): es la comparación metodológica más explícita. La tesis reconoce que "\citet{han2025system} proponen un marco de clasificación denominado SyCLoPS [...] para el Hemisferio Norte, diseñado específicamente para estudiar la frecuencia, estructura y contribución de precipitación y viento de cada tipo de sistema a lo largo de su ciclo de vida", y aclara la diferencia fundamental: mientras SyCLoPS clasifica taxonómicamente (16 clases cualitativas), los prototipos de la tesis "cuantifican [la arquitectura del sistema] en un dominio lagrangiano estandarizado mediante la superposición de densidades de probabilidad espacial y modos dominantes de variabilidad (EOF)", generando "representaciones con un contenido probabilístico explícito" — un paso cuantitativo que SyCLoPS no ofrece.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Se inscribe en la tradición de "feature tracking" objetivo (TempestExtremes, Ullrich & Zarzycki 2017; Zarzycki et al. 2017; Bourdin et al. 2022) y dialoga directamente con el espacio de fases de Hart (2003), que SyCLoPS reconoce como insuficiente por sí solo para clasificación amplia (sistemas de núcleo cálido/frío se solapan entre clases). Es un desarrollo de 2025, por lo que representa el estado del arte más reciente en clasificación automática de ciclones a escala global, y se menciona junto a \citet{corner2025classification} como parte de una ola reciente de esfuerzos por caracterizar objetivamente los sistemas de alta vorticidad — línea en la que la tesis busca insertar al Atlántico Sur, región "donde estudios equivalentes han permanecido hasta ahora muy limitados".
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Enfocado exclusivamente en sistemas de nivel de superficie (excluye perturbaciones de niveles altos).
+- Ámbito geográfico centrado en el Hemisferio Norte para las aplicaciones ilustrativas de alto impacto (aunque el detector corre globalmente).
+- Depende de la resolución de ERA5 (~31 km); los propios autores señalan que una resolución más gruesa puede ser incapaz de "ver" TLC pequeños o multi-centro.
+- La clasificación es taxonómica/discreta (16 etiquetas), no ofrece una cuantificación probabilística continua de la estructura espacial del sistema — justamente la brecha que la tesis busca cubrir con EOF/MEOF.
+- No se aplica ni valida específicamente para el Atlántico Sur.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué no simplemente aplicar SyCLoPS al Atlántico Sur en vez de desarrollar prototipos propios? R: SyCLoPS clasifica taxonómicamente el tipo de sistema, pero no cuantifica la geometría espacial ni genera densidades de probabilidad comparables entre regiones; el aporte de la tesis es precisamente esa cuantificación modal (EOF) sobre un dominio lagrangiano estandarizado.
+- P: ¿SyCLoPS usa el mismo reanálisis que la tesis? R: Sí, ambos usan ERA5, lo que permite una comparación metodológica coherente en resolución y variables base.
+- P: ¿Qué tan generalizable es la exactitud del 95% reportada? R: Se calculó contra IBTrACS, un catálogo predominantemente de ciclones tropicales; su aplicabilidad a la discriminación fina de subtipos extratropicales del Atlántico Sur no está demostrada directamente.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/han2025system.md

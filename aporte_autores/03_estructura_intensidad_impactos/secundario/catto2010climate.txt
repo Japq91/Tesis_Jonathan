@@ -1,0 +1,136 @@
+============================================================
+CARTILLA DE ESTUDIO — Catto, Shaffrey & Hodges 2010 — composite estructural de los ciclones más intensos (ERA-40 vs. HiGEM)
+============================================================
+
+REFERENCIA COMPLETA
+Catto, J. L., Shaffrey, L. C., & Hodges, K. I. (2010). Can Climate Models
+Capture the Structure of Extratropical Cyclones? Journal of Climate, 23(7),
+1621-1635. American Meteorological Society. DOI: 10.1175/2009JCLI3318.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 04 (Resultados de Viento), Sección
+sec:kde_espacial_p90, como ancla numérica y metodológica adicional —junto a
+Shapiro & Keyser (1990) y Gray et al. (2020, 2024)— para respaldar la magnitud
+y la localización cuadrantal del núcleo de viento hiperconcentrado en p90.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (Hodges) — misma variable que la tesis (aplicada sobre ERA-40, no ERA5)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio evalúa si el modelo climático acoplado de alta resolución HiGEM
+(High Resolution Global Environmental Model) es capaz de reproducir la
+estructura tridimensional de los ciclones extratropicales más intensos del
+Hemisferio Norte en invierno, comparándolo contra el reanálisis ERA-40 como
+referencia observacional. Para ello construyen compuestos (composites) de
+viento, temperatura potencial equivalente, presión a nivel del mar, velocidad
+vertical y humedad relativa para los 100 ciclones más intensos de cada
+conjunto de datos, e identifican en esos campos promediados las firmas de los
+tres "airstreams" conceptuales clásicos: el cinturón transportador cálido
+(WCB), el cinturón transportador frío (CCB) y la intrusión seca (DI). Es, en
+esencia, un antecedente metodológico directo de los estudios de compositing
+lagrangiano posteriores (Priestley & Catto 2022, Cardoso 2022) que la tesis
+también cita, y del propio marco de compositing centrado en el ciclón que la
+tesis adopta.
+
+2. METODOLOGÍA
+- Datos: ERA-40 (reanálisis, ~40 años) y HiGEM (modelo climático acoplado de
+  alta resolución, atmósfera ~1.25°x0.83°).
+- Seguimiento de ciclones: esquema de Hodges (vorticidad relativa a 850 hPa,
+  truncamiento espectral T42), sobre los inviernos del Hemisferio Norte.
+- Selección: los 100 ciclones más intensos de cada conjunto de datos, en el
+  momento de madurez (pico de intensidad).
+- Compositing: se extrae un casquete esférico de 15° de radio centrado en el
+  punto de vorticidad máxima a 850 hPa (sin corregir por la inclinación
+  vertical del sistema); los ciclones se rotan para que la dirección de
+  propagación apunte siempre hacia el este, definiendo un eje x (a lo largo de
+  la propagación) y un eje y (transversal).
+- Se calculan tanto vientos "earth-relative" (a 925 hPa) como "system-relative"
+  (restando la velocidad de traslación del ciclón) a 925, 700 y 400 hPa, además
+  de secciones verticales perpendiculares a la dirección de propagación.
+
+3. HALLAZGOS CLAVE
+- Presión mínima compuesta: 955.9 ± 10.8 hPa (ERA-40) y 954.5 ± 10.6 hPa
+  (HiGEM); la estructura de la MSLP es elongada en el cuadrante superior
+  derecho en ambos conjuntos de datos.
+- Viento máximo compuesto a 925 hPa (earth-relative): 39.1 ± 3.5 m/s a un
+  radio de 5.1° ± 2.7° del centro en ERA-40, y 41.5 ± 3.7 m/s a 4.9° ± 2.2°
+  en HiGEM, ubicado sistemáticamente en el cuadrante trasero-derecho del
+  sistema respecto a la dirección de propagación —la región donde se
+  encuentra el CCB.
+- El WCB se identifica en los campos de viento y temperatura como una masa de
+  aire cálido con ascenso isentrópico húmedo, muy similar entre ERA-40 y
+  HiGEM, aunque con una tasa de ascenso menor en HiGEM (43.7 hPa/h en ERA-40
+  frente a 33.1 hPa/h en HiGEM), asociada a una pendiente isentrópica más
+  somera en el sector cálido de HiGEM.
+- El CCB se identifica como un flujo de retorno ("rearward flowing air") que
+  socava al WCB y produce un chorro de bajo nivel, muy similar en ambos
+  conjuntos de datos.
+- La intrusión seca se identifica en la velocidad vertical a 500 hPa y la
+  humedad relativa, con descenso más débil en HiGEM debido a un flujo
+  a lo largo de las isentropas más débil detrás del ciclón compuesto.
+- En conjunto, HiGEM reproduce remarcablemente bien la posición y magnitud de
+  los máximos de viento, la estructura frontal (modelo Shapiro-Keyser, sin
+  seclusión cálida explícita en el compuesto) y los tres airstreams
+  conceptuales, dando confianza en las predicciones futuras de este modelo.
+
+4. RELACIÓN CON TU TESIS
+- Cap04-Viento (Sección sec:kde_espacial_p90): "En esta misma línea de
+  trabajo, ya el compuesto de \citet{catto2010climate} sobre los 100 ciclones
+  más intensos del Hemisferio Norte en invierno había situado el viento
+  máximo a 925~hPa en ${39.1 \pm 3.5}$~m\,s$^{-1}$, a un radio de
+  ${5.1^{\circ} \pm 2.7^{\circ}}$ del centro y sistemáticamente en el
+  cuadrante trasero-derecho del sistema --la región del CCB--, con una
+  metodología de compositing afín a la aquí empleada."
+Se usa para reforzar, con un ancla de magnitud y radio de un nivel casi
+superficial (925 hPa) obtenida mediante compositing sistemático (no un caso
+aislado), que la concentración cuadrantal del viento máximo en ciclones
+intensos es un rasgo recurrente y no una particularidad de los sistemas del
+Atlántico Sur.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Jennifer Catto, Len Shaffrey y Kevin Hodges (Universidad de Reading) son
+referentes en la evaluación de la representación de ciclones extratropicales
+en modelos climáticos y reanálisis. Este trabajo de 2010 antecede
+metodológicamente a Hodges et al. (2011, también citado en la tesis, que usa
+"the same methodology as Bengtsson et al. 2009 and Catto et al. 2010" para
+sus propios composites) y a Priestley & Catto (2022, citado extensamente en
+la tesis), que hereda el mismo enfoque de compositing sobre el percentil 90
+de vorticidad. Forma parte, por tanto, del linaje metodológico directo del
+marco de compositing lagrangiano adoptado en esta tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Cubre exclusivamente el Hemisferio Norte en invierno; no hay análisis del
+  Hemisferio Sur ni de otras estaciones.
+- El compositing se realiza en un único instante (el de madurez/pico de
+  intensidad), sin estratificación por fases del ciclo de vida como en esta
+  tesis.
+- Usa ERA-40, un reanálisis anterior y de menor resolución que ERA5
+  (~125 km frente a ~31 km), lo que probablemente subestima aún más los
+  máximos de viento que el propio ERA5.
+- El nivel de 925 hPa, aunque cercano a superficie, no es viento a 10 m; la
+  comparación con el wind10 de esta tesis es de orden de magnitud, no
+  directa.
+- No analiza precipitación.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué comparar un valor de viento a 925 hPa con tu wind10 (10 m)?
+  R: Porque la fricción superficial reduce sistemáticamente el viento entre
+  925 hPa y 10 m, de modo que el valor de Catto et al. (39.1 m/s) funciona
+  como una cota superior de referencia, no como un valor directamente
+  equiparable; es coherente con que mis colas de wind10 p90 (hasta 30 m/s)
+  se ubiquen en el extremo conservador de ese rango.
+- P: ¿Qué tan comparable es la metodología de compositing de Catto et al.
+  (2010) con la tuya?
+  R: Es metodológicamente afín: dominio esférico centrado en el vórtice,
+  rotación para alinear la dirección de propagación, identificación de
+  cuadrantes preferenciales de viento máximo; la diferencia principal es que
+  yo estratifico por fase del ciclo de vida y ellos analizan un único
+  instante de madurez.
+- P: ¿HiGEM logró reproducir bien la estructura de los ciclones respecto a
+  ERA-40? R: Sí, de forma notable en posición y magnitud de los máximos de
+  viento y en la identificación de los tres airstreams, aunque con un ascenso
+  del WCB y un descenso de la intrusión seca algo más débiles.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/catto2010climate.md

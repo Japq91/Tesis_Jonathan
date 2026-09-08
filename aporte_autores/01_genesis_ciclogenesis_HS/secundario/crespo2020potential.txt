@@ -1,0 +1,55 @@
+============================================================
+CARTILLA DE ESTUDIO — Crespo et al. 2020/2021 — Vorticidad potencial y ciclogénesis en Sudamérica
+============================================================
+
+REFERENCIA COMPLETA
+Crespo, Natália Machado; da Rocha, Rosmeri Porfírio; Sprenger, Michael; Wernli, Heini. (2021, publicado online en 2020). A potential vorticity perspective on cyclogenesis over centre-eastern South America. International Journal of Climatology, 41(1), 663-678. DOI: 10.1002/joc.6644
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 4 veces (Cap01-Introducción, Cap02-Fundamentación, Cap04-Viento), casi siempre en listas junto a otros autores (reboita2010south, gramcianinov2019properties) para sustentar la regionalización de las zonas de ciclogénesis (ARG/LPB/SBR) y el rol de la vorticidad potencial (VP) de niveles altos en la ciclogénesis del este de Sudamérica; no sustenta un hallazgo numérico propio único, sino un marco conceptual dinámico compartido con la literatura.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (Sugahara/Reboita — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio investiga cómo estructuras de vorticidad potencial (VP) de niveles altos —concretamente "PV streamers" (filamentos estrechos de VP) y "PV cutoffs" (vórtices aislados de VP)— influyen en la ciclogénesis superficial en el centro-este de Sudamérica. Usa reanálisis ERA-Interim (1979-2017) y cuantifica en qué frecuencia estas estructuras de VP coinciden con eventos de ciclogénesis en tres regiones: Argentina, Uruguay y sureste de Brasil (SEBrazil). Es relevante porque ofrece, por primera vez de forma sistemática, una climatología de estas estructuras dinámicas de alto nivel asociadas a la ciclogénesis en Sudamérica, diferenciando estacional y regionalmente los mecanismos.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA-Interim, 1979-2017, malla de 1.5°x1.5° para el seguimiento de ciclones y de 1°x1° para el análisis compuesto.
+- Identificación y seguimiento de ciclones: algoritmo basado en vorticidad relativa (RV) a 925 hPa (Sugahara 2000, adaptado por Reboita et al. 2010a), con umbral de RV < -1.5x10^-5 s^-1 y vida mínima de 24 h.
+- Identificación de estructuras de VP: método de Wernli y Sprenger (2007) para PV streamers y PV cutoffs en niveles isentrópicos de 320, 340 y 360 K, con |PV| > 2 PVU.
+- Parámetros dinámicos adicionales: Tasa de Crecimiento de Eady (EGR, capa 850-500 hPa) y forzamiento cuasi-geostrófico (QG-omega, en 500 hPa mediante formulación de vector Q).
+- Regiones de estudio: Argentina (15°x15°, centrada en 45.5°S;62.5°W), Uruguay (19°x10°, centrada en 32°S;56.5°W) y SEBrazil (10°x10°, centrada en 25°S;43°W).
+- Análisis separado por estación (verano austral DJF y invierno austral JJA) y compuestos centrados en el evento de ciclogénesis.
+
+3. HALLAZGOS CLAVE
+- Argentina concentra el mayor número de ciclones, con frecuencia ligeramente mayor en verano austral; los PV streamers en Argentina son más frecuentes en verano y ocurren mayoritariamente en el nivel isentrópico de 320 K.
+- En Uruguay y SEBrazil, la ciclogénesis es más frecuente en invierno (Uruguay) o en verano seguido de primavera (SEBrazil); los PV streamers asociados a la ciclogénesis ocurren con mayor frecuencia a 320 K, salvo en verano en SEBrazil, donde predominan a 340 K.
+- Los PV cutoffs ocurren con menor frecuencia que los PV streamers durante la ciclogénesis, y son más frecuentes en verano que en invierno en las tres regiones.
+- En Argentina, en verano la ciclogénesis ocurre bajo la entrada equatorial de una racha de chorro (jet streak), con anomalías de VP más fuertes y espacialmente restringidas cerca de la región de génesis; en invierno ocurre bajo la salida polar del jet streak, con un streamer de VP más débil aguas arriba.
+- En SEBrazil durante verano, el jet stream está desplazado lejos de la región de génesis y la ciclogénesis ocurre en un entorno más barotrópico, mientras que en Uruguay la posición del jet stream juega un papel más importante que en Argentina.
+- El estudio concluye que las anomalías de VP de niveles altos, en particular los PV streamers, constituyen un mecanismo relevante para forzar el ascenso y la ciclogénesis superficial, siendo su contribución relativamente mayor en verano.
+
+4. RELACIÓN CON TU TESIS
+Se cita principalmente como parte del marco conceptual regional (ARG/LPB/SBR) y para sustentar el rol de la incursión de anomalías de vorticidad potencial en niveles altos durante la ciclogénesis:
+- "el aporte de aire cálido y húmedo asociado al Chorro de Capas Bajas de Sudamérica (SALLJ) resulta determinante para la intensidad de la precipitación \citep{crespo2020potential}" (Cap02-Fundamentación). Nota: este punto específico sobre el SALLJ no es el foco central del paper de Crespo et al. (que se centra en VP de niveles altos), por lo que en tu tesis funciona como cita de apoyo dentro de un argumento más amplio sobre regionalización, no como reproducción literal de un hallazgo del paper.
+- "Estas regiones de ciclogenesis han sido ampliamente documentas por diversos autores como \citet{reboita2010south, crespo2020potential, gramcianinov2019properties, reboita2026meteorology}" y, específicamente para LPB: "influenciada por el transporte de humedad del SALLJ, resultando determinante para la inestabilización de la atmósfera \citep{crespo2020potential}" (Cap01-Introducción).
+- "proceso intrínsecamente ligado a la incursión de anomalías de vorticidad potencial en niveles altos durante la ciclogénesis en el este continental \citep{crespo2020potential, gramcianinov2019properties}" (Cap04-Viento) — esta es la cita que más fielmente refleja el contenido central del paper (VP de niveles altos y ciclogénesis).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Natália Machado Crespo (IAG-USP, con Rosmeri da Rocha) y Michael Sprenger/Heini Wernli (ETH Zürich, especialistas mundiales en el marco de vorticidad potencial de Wernli y Sprenger 2007) representan la línea metodológica de "PV thinking" aplicada por primera vez de forma sistemática a Sudamérica. El paper dialoga directamente con la escuela brasileña de climatología de ciclones (Reboita, Gramcianinov, da Rocha) y es citado en tu tesis junto a esos mismos autores como parte del consenso sobre las tres regiones de ciclogénesis del Atlántico Sudoccidental.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se basa en ERA-Interim (ya descontinuado en favor de ERA5), con menor resolución (1.5°) que reanálisis más recientes.
+- El análisis es climatológico/compuesto (promedios estacionales), por lo que no captura la variabilidad caso a caso ni eventos extremos individuales.
+- Los autores mismos señalan que la selección del nivel isentrópico adecuado (320/340/360K) es sensible a la región y estación, lo que dificulta comparaciones directas entre regiones sin ese cuidado metodológico.
+- El estudio no analiza directamente la intensidad de precipitación ni el SALLJ como tal; estos vínculos son inferencias hechas en la literatura posterior (incluida esta tesis), no resultados directos del paper.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué es un "PV streamer" y un "PV cutoff"? R: Un PV streamer es un filamento estrecho de vorticidad potencial en un nivel isentrópico, indicador de ruptura de ondas de Rossby de escala sinóptica; si ese filamento se rompe, forma un PV cutoff (vórtice aislado de VP desprendido del reservorio estratosférico).
+- P: ¿El paper de Crespo et al. estudia directamente el SALLJ? R: No de forma central; el paper se enfoca en estructuras de VP de niveles altos (300-360 hPa/K). La relación con el SALLJ que aparece en tu tesis es una síntesis del marco regional más amplio, no un resultado directo de este estudio.
+- P: ¿Por qué Argentina, Uruguay y SEBrazil muestran diferencias estacionales distintas? R: Por la posición relativa del jet stream y de las anomalías de VP respecto a cada región; en Argentina el mecanismo dominante es similar en ambas estaciones, mientras que en Uruguay y SEBrazil el jet stream juega un papel decisivo y variable estacionalmente.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/crespo2020potential.md

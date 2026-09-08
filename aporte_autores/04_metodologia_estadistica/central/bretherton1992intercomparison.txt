@@ -1,0 +1,170 @@
+============================================================
+CARTILLA DE ESTUDIO — Bretherton, Smith y Wallace 1992 — Intercomparación de métodos para patrones acoplados (base del MEOF)
+============================================================
+
+REFERENCIA COMPLETA
+Bretherton, C. S., Smith, C. y Wallace, J. M. (1992). An intercomparison of methods for finding
+coupled patterns in climate data. Journal of Climate, 5(6), 541-560.
+DOI: 10.1175/1520-0442(1992)005<0541:AIOMFF>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita una sola vez de forma literal (repetida idénticamente en dos versiones de borrador del mismo
+capítulo, tex_es/02.vr3_fundamentacao.tex L220 y tex_es/02.vf6_fundamentacao.tex L247, por lo que
+cuenta como una única cita real), pero es la referencia metodológica que sustenta directamente el
+esquema MEOF (EOF multivariado) que la tesis emplea para acoplar viento y precipitación. Sin esta
+referencia, el paso central del Capítulo 6 (concatenar los campos normalizados en un vector de estado
+combinado y aplicar la descomposición espectral a su matriz de covarianza) carecería de respaldo
+metodológico formal.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/estadístico con un sistema modelo sintético de
+dos "rastrillos" de estaciones, no un dominio geográfico real)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un estudio de ciclones; es un artículo de estadística
+climática sobre técnicas de análisis multivariado)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El artículo introduce un marco conceptual unificado para comparar cuatro (en la práctica cinco,
+contando una variante) métodos estadísticos usados para aislar patrones de variabilidad ACOPLADOS
+entre dos campos climáticos distintos observados simultáneamente: PCA combinado (CPCA, "combined
+PCA"), análisis de correlación canónica "clásico" (CCA), una variante de CCA con prefiltrado por EOF
+propuesta por Barnett y Preisendorfer (BP), PCA de un solo campo seguido de correlación de sus
+componentes con el segundo campo (SFPCA/LPCA/RPCA), y descomposición en valores singulares (SVD) de
+la matriz de covarianza cruzada entre los dos campos. Los autores construyen un sistema modelo
+sintético (dos "rastrillos" de estaciones separadas, cada una con ruido rojo espacialmente
+correlacionado más una señal periódica compartida y antifase entre los rastrillos) para comparar
+cuantitativamente qué tan bien cada método recupera la señal acoplada verdadera, variando la relación
+señal-ruido, el número de puntos por campo, y el número de observaciones temporales.
+
+El método CPCA ("combined PCA", también llamado PCA sobre campos combinados) es exactamente el
+esquema que da origen al MEOF que emplea la tesis: consiste en concatenar los dos campos de interés
+en un único vector combinado y aplicar PCA/EOF a la matriz de covarianza (Ns+Nz)×(Ns+Nz) de ese vector
+combinado (Ecuación 3d del artículo, C_{s+z} = ⟨(s(t)|z(t))(s(t)|z(t))ᵀ⟩), en lugar de a la covarianza
+de cada campo por separado. Bretherton et al. atribuyen el origen de esta idea a Kutzbach (1967).
+
+2. METODOLOGÍA
+
+- Marco conceptual: se define una nomenclatura común (Sección 2) para todos los métodos: campos
+  "izquierdo" s(t) y "derecho" z(t), patrones p_k y q_k, coeficientes de expansión a_k(t) y b_k(t),
+  vectores de peso u_k y v_k, y una medida de bondad de ajuste llamada "fracción de covarianza
+  cuadrática acumulada" (CSCF, Ecuación 4), que indica qué porcentaje de la covarianza cruzada real
+  entre los campos es reconstruido por los primeros N modos de cada método.
+- CPCA: se concatena el vector combinado (s(t)|z(t)) y se calcula la matriz de covarianza combinada
+  C_{s+z}; sus autovectores dan los patrones acoplados. Es matemáticamente el mismo procedimiento que
+  la tesis describe para el MEOF: concatenar precipitación y viento normalizados en un vector Y(τ) y
+  aplicar la descomposición espectral a la covarianza de Y.
+- SVD: descompone directamente la matriz de covarianza cruzada C_sz = ⟨s(t)z(t)ᵀ⟩ en valores/vectores
+  singulares; maximiza la covarianza (no la correlación) entre las combinaciones lineales de los dos
+  campos.
+- CCA "clásica": maximiza la correlación (no la covarianza) entre combinaciones lineales de ambos
+  campos, resolviendo un problema de autovalores generalizado sobre las matrices de covarianza C_ss,
+  C_zz y C_sz.
+- BP (Barnett y Preisendorfer 1987): variante de CCA en la que ambos campos se prefiltran reteniendo
+  solo un número mínimo de EOF que expliquen ≥70% de la varianza de cada campo (criterio "BP70") antes
+  de aplicar CCA, para mitigar la inestabilidad de muestra pequeña de la CCA clásica.
+- Sistema modelo sintético (Sección 4): dos rastrillos de N=36 estaciones cada uno, con series
+  temporales de ruido rojo espacialmente correlacionado (proceso de Markov, longitud de correlación L)
+  más una señal periódica de razón señal-ruido η, con tres formas de señal espacial (campana, media
+  onda, "spike" puntual). Se generan realizaciones con T finito (50 a 800) para simular fluctuaciones
+  de muestreo, y se calcula el error cuadrático medio (ε) entre el patrón estimado por cada método y
+  la señal verdadera, descompuesto en componente aleatoria y componente sistemática (sesgo).
+
+3. HALLAZGOS CLAVE
+
+- Con registros temporales infinitos, SVD y CCA recuperan exactamente la señal verdadera en ambos
+  campos; los demás métodos (BP70, CPCA, LPCA, RPCA) presentan sesgos sistemáticos porque incorporan
+  características del ruido de cada campo dentro de los patrones estimados.
+- Para registros de longitud finita y relaciones señal-ruido moderadas a bajas (situación típica en
+  datasets geofísicos, donde el número de tiempos de muestreo T no suele ser mucho mayor que el número
+  de puntos de grilla N por campo), CPCA suele extraer el patrón acoplado con mayor precisión que SVD,
+  BP y SFPCA, porque tiene el menor error aleatorio de muestreo (hasta la mitad del de otros métodos)
+  al combinar toda la información de ambos campos en una sola matriz de covarianza.
+- Sin embargo, CPCA (y SFPCA) exhiben un sesgo sistemático hacia los EOF dominantes de cada campo
+  individual: para relaciones señal-ruido pequeñas, estos métodos pueden identificar como "modo
+  acoplado" un patrón que en realidad es el EOF dominante de uno de los campos, prácticamente
+  ortogonal a la verdadera señal acoplada — es decir, CPCA puede ser "engañado" por el ruido dominante
+  de cada campo si la señal real no se parece a los EOF individuales dominantes.
+- Para registros más largos, o en situaciones donde la señal acoplada no se parece a los EOF de los
+  campos individuales, SVD y BP son sustancialmente superiores a CPCA.
+- CCA clásica es la más propensa a errores aleatorios de muestra pequeña quando T/N es del orden de 10
+  o menos (en el ejemplo del artículo, con T/N≈3 la CCA clásica prácticamente no tiene capacidad de
+  detectar la señal acoplada); solo es competitiva para señales tipo "spike" (que excitan por igual
+  todos los EOF de cada campo).
+- Conclusión general de los autores: "de los métodos discutidos, SVD y BP son quizás los más
+  preferibles para uso general" por carecer de sesgo sistemático significativo, aunque CPCA puede ser
+  superior cuando la señal acoplada efectivamente se parece a los EOF dominantes de cada campo.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 2 (Fundamentación), en la descripción formal del análisis multivariado (MEOF):
+"En el caso multivariado (MEOF), los campos normalizados de precipitación y viento se concatenan en
+un vector de estado combinado Y(τ) = [Z₁(τ), Z₂(τ), ..., Zₙ(τ)] de longitud Np, siguiendo el esquema
+de \citet{bretherton1992intercomparison}. La misma descomposición espectral se aplica a la matriz de
+covarianza de Y, obteniendo modos acoplados que describen la covariabilidad conjunta de las
+variables." Esta es una descripción textual y exacta del método que Bretherton et al. denominan CPCA
+("combined PCA"): la tesis adopta explícitamente esta variante (concatenación + PCA sobre la
+covarianza combinada) como su técnica MEOF, en lugar de SVD o CCA/BP, que son las otras opciones
+comparadas en el mismo artículo.
+
+NOTA METODOLÓGICA RELEVANTE PARA LA DEFENSA: el propio artículo que sustenta la elección de la técnica
+MEOF de la tesis advierte explícitamente que el método CPCA puede tener sesgo sistemático si la señal
+acoplada real no se parece a los EOF dominantes de cada campo por separado, y recomienda SVD o BP como
+opciones más seguras "para uso general" quando ese supuesto no puede verificarse a priori. Esto no
+invalida el uso de MEOF/CPCA en la tesis (que sí tiene ventajas de menor error aleatorio en muestras
+pequeñas, como los N~decenas de eventos de ciclones), pero es un punto que conviene tener presente y
+poder discutir ante el jurado.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Christopher S. Bretherton, Catherine Smith y John M. Wallace (Universidad de Washington) publicaron
+este artículo como parte de un par de trabajos complementarios: el "companion paper" de Wallace, Smith
+y Bretherton (1992) aplica específicamente SVD a un problema geofísico real (acoplamiento SST-altura
+geopotencial de 500 hPa en el Pacífico). El artículo aquí reseñado es, en cambio, el marco teórico y
+de validación sintética que compara los métodos entre sí. Es una referencia clásica y ampliamente
+citada en climatología estadística para justificar la elección entre SVD, CCA y PCA combinada al
+estudiar la covariabilidad entre dos (o más) campos climáticos; en tu tesis dialoga con
+hannachi2007empirical y hannachi2023eof (EOF univariado) y con liang2018multivariate, que la propia
+tesis cita como referencia adicional sobre EOF multivariado.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El análisis de desempeño se basa enteramente en un sistema sintético simplificado (dos rastrillos de
+  estaciones con ruido rojo + una señal periódica simple), no en datos climáticos reales; su
+  generalización a campos geofísicos con estructuras de covarianza más complejas (como viento y
+  precipitación alrededor de un ciclón) es una extrapolación razonable pero no demostrada directamente
+  en el propio artículo.
+- El estudio no aborda específicamente el caso de campos con dominio espacial y dinámica compartida
+  (como viento y precipitación del mismo sistema sinóptico, con relaciones físicas directas entre
+  ambos), sino dos campos genéricos con una señal impuesta artificialmente.
+- No se discuten pruebas de significancia estadística (tipo bootstrap) para decidir cuántos modos
+  acoplados retener; ese aspecto lo cubre en la tesis una referencia distinta (Efron y Tibshirani
+  1993, hesterberg2015bootstrap).
+- Los propios autores señalan que sus conclusiones dependen de la relación entre el número de
+  observaciones temporales T y el número de puntos espaciales N; con T mucho mayor a N (registros muy
+  largos), SVD y CCA/BP tienden a ser preferibles a CPCA, lo que exige justificar en la tesis por qué
+  el tamaño de muestra de ciclones favorece a CPCA/MEOF en el caso concreto de estudio.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Por qué eligió el esquema de PCA combinado (MEOF/CPCA) y no SVD o CCA, si el propio Bretherton et
+  al. recomienda SVD/BP para uso general?" — Respuesta: CPCA tiene menor error aleatorio de muestreo
+  cuando T no es mucho mayor que N, situación consistente con el tamaño limitado de la muestra de
+  ciclones de la tesis; el riesgo de sesgo sistemático de CPCA es menor si las señales de viento y
+  precipitación efectivamente proyectan sobre sus EOF dominantes individuales, algo que puede
+  verificarse comparando los patrones EOF univariados con los patrones MEOF obtenidos.
+- "¿Qué significa 'PCA combinado' en el marco de Bretherton et al., y cómo se relaciona exactamente
+  con el vector de estado Y(τ) de su tesis?" — Respuesta: es la concatenación de los campos
+  normalizados en un único vector, seguida de PCA/EOF sobre la matriz de covarianza de ese vector
+  combinado; es exactamente el procedimiento descrito en la tesis para el MEOF.
+- "¿Este artículo trabaja con datos de ciclones o de la región de estudio de su tesis?" — Respuesta:
+  no; es un estudio puramente metodológico con un sistema sintético de validación, sin dominio
+  geográfico ni fenómeno atmosférico específico; su aporte a la tesis es exclusivamente la
+  formalización matemática del método MEOF/CPCA.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_PDF/bretherton1992intercomparison.pdf, leído directamente en su
+totalidad (el archivo papers/files_MD/bretherton1992intercomparison.md está roto: solo contiene 40
+líneas de texto de encabezado repetido "Unauthenticated | Downloaded...", sin el cuerpo del artículo).
+Se revisaron resumen, introducción, Sección 2 "Nomenclature", Sección 3 "Salient features" (incluyendo
+la Tabla 1 comparativa de métodos y la definición formal de CPCA en 3c), Sección 4 "A comparative
+example" (resultados del sistema modelo sintético, Figuras 5-13) y la Sección 5 "Concluding remarks".

@@ -36,17 +36,33 @@ Bretherton C.~S.,  Smith C.,    Wallace J.~M.,  An intercomparison of methods
 Browning K.~A.,  Conceptual Models of Precipitation Systems, Weather and
   Forecasting, 1986, vol. 1, p. 23
 
+\bibitem[\protect\citeauthoryear{Cardoso}{Cardoso}{2019}]{cardoso2020wind}
+Cardoso A.~A.,  Ciclones subtropicais e ventos em superfície no sudoeste do
+  Oceano Atlântico Sul: climatologia e extremos, Instituto de Astronomia,
+  Geofísica e Ciências Atmosféricas, Universidade de São Paulo, 2019, Tesis
+  de Maestría
+
 \bibitem[\protect\citeauthoryear{Cardoso, da Rocha y Crespo}{Cardoso et
   al.}{2022}]{cardoso2022synoptic}
 Cardoso A.~A.,  da Rocha R.~P.,    Crespo N.~M.,  Synoptic climatology of
   subtropical cyclone impacts on near-surface winds over the South Atlantic
   basin, Earth and Space Science, 2022, vol. 9, p. e2022EA002482
 
+\bibitem[\protect\citeauthoryear{Catto}{Catto}{2016}]{catto2016extratropical}
+Catto J.~L.,  Extratropical cyclone classification and its use in climate
+  studies, Reviews of Geophysics, 2016, vol. 54, p. 486
+
 \bibitem[\protect\citeauthoryear{Catto, Madonna, Joos, Rudeva y Simmonds}{Catto
   et al.}{2015}]{catto2015fronts}
 Catto J.~L.,  Madonna E.,  Joos H.,  Rudeva I.,    Simmonds I.,  Global
   Relationship between Fronts and Warm Conveyor Belts and the Impact on Extreme
   Precipitation, Journal of Climate, 2015, vol. 28, p. 8411
+
+\bibitem[\protect\citeauthoryear{Catto, Shaffrey y Hodges}{Catto et
+  al.}{2010}]{catto2010climate}
+Catto J.~L.,  Shaffrey L.~C.,    Hodges K.~I.,  Can Climate Models Capture the
+  Structure of Extratropical Cyclones?, Journal of Climate, 2010, vol. 23, p.
+  1621
 
 \bibitem[\protect\citeauthoryear{Chen, Collet y Di~Luca}{Chen et
   al.}{2024}]{chen2024evaluation}
@@ -68,6 +84,11 @@ Clark P.~A.,  Browning K.~A.,    Wang C.,  The sting at the end of the tail:
   head, Quarterly Journal of the Royal Meteorological Society, 2005, vol. 131,
   p. 2263
 
+\bibitem[\protect\citeauthoryear{Clark y Gray}{Clark y
+  Gray}{2018}]{clark2018sting}
+Clark P.~A.,  Gray S.~L.,  Sting jets in extratropical cyclones: a review,
+  Quarterly Journal of the Royal Meteorological Society, 2018, vol. 144, p. 943
+
 \bibitem[\protect\citeauthoryear{Corn{\'e}r, Bouvier, Doiteau, Pantillon y
   Sinclair}{Corn{\'e}r et al.}{2025}]{corner2025classification}
 Corn{\'e}r J.,  Bouvier C.,  Doiteau B.,  Pantillon F.,    Sinclair V.~A.,
@@ -80,6 +101,13 @@ Corn{\'e}r J.,  Bouvier C.,  Doiteau B.,  Pantillon F.,    Sinclair V.~A.,
 Crespo N.~M.,  da Rocha R.~P.,  Sprenger M.,    Wernli H.,  A potential
   vorticity perspective on cyclogenesis over centre-eastern South America,
   International Journal of Climatology, 2021, vol. 41, p. 663
+
+\bibitem[\protect\citeauthoryear{Dacre, Martinez-Alvarado y Hodges}{Dacre et
+  al.}{2023}]{dacre2023climatology}
+Dacre H.~F.,  Martinez-Alvarado O.,    Hodges K.~I.,  Precipitation
+  Efficiencies in a Climatology of Southern Ocean Extratropical Cyclones,
+  Journal of Geophysical Research: Atmospheres, 2023, vol. 128, p.
+  e2023JD039239
 
 \bibitem[\protect\citeauthoryear{Dalanhese, Stuivenvolt-Allen, LaPlante, Wang,
   Costa, da Silva y Belem}{Dalanhese et al.}{2023}]{dalanhese2023new}
@@ -129,9 +157,19 @@ Eisenstein L.,  Sinclair V.~A.,    Gregow H.,  Objective identification of
 Evans J.~L.,  Braun A.,  A climatology of subtropical cyclones in the South
   Atlantic, Journal of Climate, 2012, vol. 25, p. 7328
 
+\bibitem[\protect\citeauthoryear{Gan y Rao}{Gan y Rao}{1991}]{gan1991surface}
+Gan M.~A.,  Rao V.~B.,  Surface cyclogenesis over South America, Monthly
+  Weather Review, 1991, vol. 119, p. 1293
+
 \bibitem[\protect\citeauthoryear{Gan y Rao}{Gan y Rao}{1994}]{gan1994influence}
 Gan M.~A.,  Rao V.~B.,  The influence of the Andes Cordillera on transient
   disturbances, Monthly Weather Review, 1994, vol. 122, p. 1141
+
+\bibitem[\protect\citeauthoryear{Gentile y Gray}{Gentile y
+  Gray}{2023}]{gentile2023observed}
+Gentile E.~S.,  Gray S.~L.,  Attribution of observed extreme marine wind speeds
+  and associated hazards to midlatitude cyclone conveyor belt jets near the
+  British Isles, International Journal of Climatology, 2023, vol. 43, p. 2735
 
 \bibitem[\protect\citeauthoryear{Gentile, Harris, Zhao, Hodges, Tan, Cheng y
   Zhou}{Gentile et al.}{2025}]{gentile2025response}
@@ -180,12 +218,24 @@ Gramcianinov C.~B.,  da Rocha R.~P.,    Dodd J.~A.,  Early-Stage Extratropical
   a Warmer Planet, Journal of Geophysical Research: Atmospheres, 2024, vol.
   129, p. e2023JD039863
 
+\bibitem[\protect\citeauthoryear{Gray, Martínez-Alvarado, Ackerley y
+  Suri}{Gray et al.}{2020}]{gray2020prototype}
+Gray S.,  Martínez-Alvarado O.,  Ackerley D.,    Suri D.,  Development of a
+  prototype real‐time sting‐jet precursor tool for forecasters, Weather,
+  2020, vol. 76
+
 \bibitem[\protect\citeauthoryear{Han y Ullrich}{Han y
   Ullrich}{2025}]{han2025system}
 Han Y.,  Ullrich P.~A.,  The System for Classification of Low-Pressure Systems
   (SyCLoPS): An All-In-One Objective Framework for Large-Scale Data Sets,
   Journal of Geophysical Research: Atmospheres, 2025, vol. 130, p.
   e2024JD041287
+
+\bibitem[\protect\citeauthoryear{Hannachi, Finke y Trendafilov}{Hannachi et
+  al.}{2023}]{hannachi2023eof}
+Hannachi A.,  Finke K.,    Trendafilov N.,  Common {EOFs}: a tool for
+  multi-model comparison and evaluation, Climate Dynamics, 2023, vol. 60, p.
+  1689
 
 \bibitem[\protect\citeauthoryear{Hannachi, Jolliffe y Stephenson}{Hannachi et
   al.}{2007}]{hannachi2007empirical}
@@ -228,6 +278,12 @@ Hesterberg T.~C.,  What Teachers Should Know About the Bootstrap: Resampling in
   the Undergraduate Statistics Curriculum, The American Statistician, 2015,
   vol. 69, p. 371
 
+\bibitem[\protect\citeauthoryear{Hodges, Lee y Bengtsson}{Hodges et
+  al.}{2011}]{hodges2011comparison}
+Hodges K.~I.,  Lee R.~W.,    Bengtsson L.,  A comparison of extratropical
+  cyclones in recent reanalyses ERA-Interim, NASA MERRA, NCEP CFSR, and JRA-25,
+  Journal of Climate, 2011, vol. 24, p. 4888
+
 \bibitem[\protect\citeauthoryear{Hoskins y Hodges}{Hoskins y
   Hodges}{2005}]{hoskins2005new}
 Hoskins B.~J.,  Hodges K.~I.,  A new perspective on Southern Hemisphere storm
@@ -243,6 +299,23 @@ Hoyer S.,  Joseph H.,  {xarray: N-D labeled Arrays and Datasets in Python},
 Inatsu M.,  Hoskins B.~J.,  The zonal asymmetry of the Southern Hemisphere
   winter storm track, Journal of Climate, 2004, vol. 17, p. 4882
 
+\bibitem[\protect\citeauthoryear{Jones y Simmonds}{Jones y
+  Simmonds}{1993}]{jones1993climatology}
+Jones D.~A.,  Simmonds I.,  A climatology of Southern Hemisphere extratropical
+  cyclones, Climate Dynamics, 1993, vol. 9, p. 131
+
+\bibitem[\protect\citeauthoryear{Kodama, Stevens, Mauritsen, Seiki y
+  Satoh}{Kodama et al.}{2019}]{kodama2019perspective}
+Kodama C.,  Stevens B.,  Mauritsen T.,  Seiki T.,    Satoh M.,  A New
+  Perspective for Future Precipitation Change from Intense Extratropical
+  Cyclones, Geophysical Research Letters, 2019, vol. 46, p. 12435
+
+\bibitem[\protect\citeauthoryear{Laurila, Gregow, Corn{\'e}r y
+  Sinclair}{Laurila et al.}{2021}]{laurila2021characteristics}
+Laurila T.~K.,  Gregow H.,  Corn{\'e}r J.,    Sinclair V.~A.,  Characteristics
+  of extratropical cyclones and precursors to windstorms in northern Europe,
+  Weather and Climate Dynamics, 2021, vol. 2, p. 1111
+
 \bibitem[\protect\citeauthoryear{Liang, Mazloff, Rosso, Fang y Yu}{Liang et
   al.}{2018}]{liang2018multivariate}
 Liang Y.-C.,  Mazloff M.~R.,  Rosso I.,  Fang S.-W.,    Yu J.-Y.,  A
@@ -250,17 +323,36 @@ Liang Y.-C.,  Mazloff M.~R.,  Rosso I.,  Fang S.-W.,    Yu J.-Y.,  A
   in the Southern Ocean, Journal of Atmospheric and Oceanic Technology, 2018,
   vol. 35, p. 1505
 
-\bibitem[\protect\citeauthoryear{Marrafon, Reboita, Rocha y de Jesus}{Marrafon
-  et al.}{2022}]{marrafon2022classificacao}
-Marrafon V.~H.,  Reboita M.,  Rocha R.,    de Jesus E.,  Classificação dos
-  tipos de ciclones sobre o Oceano Atlântico Sul em projeções com o RegCM4 E
-  MCGs, Revista Brasileira de Climatologia, 2022, vol. 30, p. 1
+\bibitem[\protect\citeauthoryear{Lundstrom, Rauber, McLinden, Finlon,
+  Heymsfield y McMurdie}{Lundstrom et al.}{2025}]{kaylee2025convection}
+Lundstrom K.~H.,  Rauber R.~M.,  McLinden M.~W.,  Finlon J.~A.,  Heymsfield
+  G.~M.,    McMurdie L.,  Manifestation of Elevated Convection within
+  Wintertime Extratropical Cyclones during IMPACTS. Part II: Hydrometeor
+  Vertical Motions within and Outside of Elevated Potentially Unstable Layers,
+  Journal of the Atmospheric Sciences, 2025, vol. 82, p. 979
+
+\bibitem[\protect\citeauthoryear{McErlich, McDonald, Renwick y
+  Schuddeboom}{McErlich et al.}{2023}]{mcerlich2023extremes}
+McErlich C.,  McDonald A.,  Renwick J.,    Schuddeboom A.,  An Assessment of
+  Extra-Tropical Cyclone Precipitation Extremes Over the Southern Hemisphere
+  Using ERA5, Geophysical Research Letters, 2023, vol. 50, p. e2023GL104130
+
+\bibitem[\protect\citeauthoryear{Martin}{Martin}{1999}]{martin1999forcing}
+Martin J.~E.,  Quasigeostrophic Forcing of Ascent in the Occluded Sector of
+  Cyclones and the Trowal Airstream, Monthly Weather Review, 1999, vol. 127, p.
+  70
 
 \bibitem[\protect\citeauthoryear{Martínez-Alvarado, Baker, Gray, Methven y
   Plant}{Martínez-Alvarado et al.}{2014}]{martinez2014cold}
 Martínez-Alvarado O.,  Baker L.~H.,  Gray S.~L.,  Methven J.,    Plant R.~S.,
   Distinguishing the Cold Conveyor Belt and Sting Jet Airstreams in an Intense
   Extratropical Cyclone, Monthly Weather Review, 2014, vol. 142, p. 2571
+
+\bibitem[\protect\citeauthoryear{Mendes, Souza, Marengo y Mendes}{Mendes et
+  al.}{2010}]{mendes2010climatology}
+Mendes D.,  Souza E.~P.,  Marengo J.~A.,    Mendes M.~C.,  Climatology of
+  extratropical cyclones over the South American--southern oceans sector,
+  Theoretical and Applied Climatology, 2010, vol. 100, p. 239
 
 \bibitem[\protect\citeauthoryear{Miranda, Machado, Saraiva, de Barros, Goulart
   y Andrade}{Miranda et al.}{2026}]{miranda2026patterns}
@@ -273,6 +365,13 @@ Miranda L. d.~P.,  Machado J.~P.,  Saraiva J.~B.,  de Barros D.~G.,  Goulart
 Naud C.~M.,  Jeyaratnam J.,  Booth J.~F.,  Zhao M.,    Gettelman A.,
   Evaluation of Modeled Precipitation in Oceanic Extratropical Cyclones Using
   IMERG, Journal of Climate, 2020, vol. 33, p. 95
+
+\bibitem[\protect\citeauthoryear{Naud, Martin, Ghosh, Elsaesser, Booth y
+  Posselt}{Naud et al.}{2025}]{naud2025lifecycle}
+Naud C.~M.,  Martin J.~E.,  Ghosh P.,  Elsaesser G.~S.,  Booth J.~F.,
+  Posselt D.~J.,  Lifecycle-Type Matters for Extratropical Cyclone
+  Precipitation Production, Geophysical Research Letters, 2025, vol. 52, p.
+  e2025GL115153
 
 \bibitem[\protect\citeauthoryear{Neu, Akperov, Bellenbaum, Benestad, Blender,
   Caballero, Cocozza, Dacre, Feng, Fraedrich, Grieger, Gulev, Hanley, Hewson,
@@ -313,6 +412,17 @@ Oertel A.,  Sprenger M.,  Joos H.,  Boettcher M.,  Konow H.,  Hagen M.,
   Tracking of Extratropical Cyclones in the Southern Hemisphere, Atmosphere,
   2024, vol. 15, p. 230
 
+\bibitem[\protect\citeauthoryear{Pepler y Dowdy}{Pepler y
+  Dowdy}{2020}]{pepler2020dimensional}
+Pepler A.,  Dowdy A.,  A Three-Dimensional Perspective on Extratropical Cyclone
+  Impacts, Journal of Climate, 2020, vol. 33, p. 5635
+
+\bibitem[\protect\citeauthoryear{Portal, Raveh-Rubin, Catto, Givon y
+  Martius}{Portal et al.}{2024}]{portal2024linking}
+Portal A.,  Raveh-Rubin S.,  Catto J.~L.,  Givon Y.,    Martius O.,  Linking
+  compound weather extremes to Mediterranean cyclones, fronts, and airstreams,
+  Weather and Climate Dynamics, 2024, vol. 5, p. 1043
+
 \bibitem[\protect\citeauthoryear{Priestley y Catto}{Priestley y
   Catto}{2022}]{priestley2022improved}
 Priestley M.~D.,  Catto J.~L.,  Improved representation of extratropical
@@ -341,10 +451,23 @@ Reboita M.~S.,  Gozzo L.~F.,  Crespo N.~M.,  Custodio M. d.~S.,  Lucyrio V.,
   situation over the South Atlantic Ocean, Quarterly Journal of the Royal
   Meteorological Society, 2022, vol. 148, p. 3170
 
+\bibitem[\protect\citeauthoryear{Ribeiro, Reboita, Crespo y Moore}{Ribeiro et
+  al.}{2025}]{ribeiro2025impacts}
+Ribeiro J. G.~M.,  Reboita M.~S.,  Crespo N.~M.,    Moore J.~C.,  Impacts of
+  stratospheric aerosol injection on precipitation and winds associated with
+  extratropical cyclones in the Southern Hemisphere, Environmental Research:
+  Climate, 2025
+
 \bibitem[\protect\citeauthoryear{Rieger y Levang}{Rieger y
   Levang}{2024}]{rieger2024xeofs}
 Rieger N.,  Levang S.~J.,  xeofs: Comprehensive EOF analysis in Python with
   xarray, Journal of Open Source Software, 2024, vol. 9, p. 6060
+
+\bibitem[\protect\citeauthoryear{Russo, Gramcianinov y de Oliveira}{Russo et
+  al.}{2025}]{russo2025impacts}
+Russo C.~F.,  Gramcianinov C.~B.,    de Oliveira F. S.~C.,  Impacts of Ocean
+  Heat and Moisture Fluxes on Extratropical Cyclone Development in the South
+  Atlantic, International Journal of Climatology, 2025, vol. 45, p. e70080
 
 \bibitem[\protect\citeauthoryear{Sasaki, Gramcianinov, Castro y Dottori}{Sasaki
   et al.}{2021}]{sasaki2021intraseasonal}
@@ -353,8 +476,14 @@ Sasaki D.~K.,  Gramcianinov C.~B.,  Castro B.,    Dottori M.,  Intraseasonal
   role of cyclones and the Pacific South American pattern, Weather and Climate
   Dynamics, 2021, vol. 2, p. 1149
 
+\bibitem[\protect\citeauthoryear{Sawada y Ueno}{Sawada y
+  Ueno}{2021}]{sawada2021heavy}
+Sawada M.,  Ueno K.,  Heavy Winter Precipitation Events with Extratropical
+  Cyclone Diagnosed by GPM Products and Trajectory Analysis, Journal of the
+  Meteorological Society of Japan. Ser. II, 2021, vol. 99, p. 473
+
 \bibitem[\protect\citeauthoryear{Schemm y Wernli}{Schemm y
-  Wernli}{2014}]{schemm2014ccb}
+  Wernli}{2014}]{schemm2014linkage}
 Schemm S.,  Wernli H.,  The Linkage between the Warm and the Cold Conveyor
   Belts in an Idealized Extratropical Cyclone, Journal of the Atmospheric
   Sciences, 2014, vol. 71, p. 1443
@@ -376,10 +505,11 @@ American Meteorological Society Boston, MA pp. 167--191
 Simmonds I.,  Size changes over the life of sea level cyclones in the NCEP
   reanalysis, Monthly Weather Review, 2000, vol. 128, p. 4118
 
-\bibitem[\protect\citeauthoryear{Simmonds y Keay}{Simmonds y
-  Keay}{2000}]{simmonds2000variability}
-Simmonds I.,  Keay K.,  Variability of Southern Hemisphere extratropical
-  cyclone behavior, 1958--97, Journal of Climate, 2000, vol. 13, p. 550
+\bibitem[\protect\citeauthoryear{Simmonds y Murray}{Simmonds y
+  Murray}{1999}]{simmonds1999southern}
+Simmonds I.,  Murray R.~J.,  Southern extratropical cyclone behavior in ECMWF
+  analyses during the FROST Special Observing Periods, Weather and Forecasting,
+  1999, vol. 14, p. 878
 
 \bibitem[\protect\citeauthoryear{Sinclair}{Sinclair}{1994}]{sinclair1994objective}
 Sinclair M.~R.,  An objective cyclone climatology for the Southern Hemisphere,
@@ -399,11 +529,11 @@ Sinclair V.~A.,  Catto J.~L.,  The relationship between extra-tropical cyclone
   intensity and precipitation in idealised current and future climates, Weather
   and Climate Dynamics, 2023, vol. 4, p. 567
 
-\bibitem[\protect\citeauthoryear{Son, Franzke y Son}{Son et
-  al.}{2024}]{hyeok2024extrem}
-Son J.-H.,  Franzke C.,    Son S.-W.,  Dynamics of Extreme Surface Winds Inside
-  North Atlantic Midlatitude Cyclones, Geophysical Research Letters, 2024, vol.
-  51
+\bibitem[\protect\citeauthoryear{Sun, Kim, Lei y Wang}{Sun et
+  al.}{2022}]{sun2022evaluation}
+Sun M.,  Kim G.,  Lei K.,    Wang Y.,  Evaluation of Technology for the
+  Analysis and Forecasting of Precipitation Using Cyclostationary EOF and
+  Regression Method, Atmosphere, 2022, vol. 13, p. 500
 
 \bibitem[\protect\citeauthoryear{Vera, Vigliarolo y Berbery}{Vera et
   al.}{2002}]{vera2002cold}
@@ -414,5 +544,16 @@ Vera C.~S.,  Vigliarolo P.~K.,    Berbery E.~H.,  Cold season synoptic-scale
 \bibitem[\protect\citeauthoryear{W{\k{e}}glarczyk}{W{\k{e}}glarczyk}{2018}]{weglarczyk2018kernel}
 W{\k{e}}glarczyk S.,  Kernel density estimation and its application, ITM Web of
   Conferences, 2018, vol. 23, p. 00037
+
+\bibitem[\protect\citeauthoryear{Wilks}{Wilks}{2019}]{wilks2019statistical_ch13}
+Wilks D.~S., , 2019 en Wilks D.~S.,  ed., , Statistical Methods in the
+  Atmospheric Sciences (Fourth Edition) fourth edition ed., Elsevier pp.
+  617--668
+
+\bibitem[\protect\citeauthoryear{Zscheischler, Westra, van~den Hurk et
+  al.,}{Zscheischler et al.}{2018}]{zscheischler2018future}
+Zscheischler J.,  Westra S.,  van~den Hurk B. J. J.~M.,    et al., Future
+  climate risk from compound events, Nature Climate Change, 2018, vol. 8, p.
+  469
 
 \end{thebibliography}

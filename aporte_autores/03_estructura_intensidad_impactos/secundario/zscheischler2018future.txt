@@ -1,0 +1,141 @@
+============================================================
+CARTILLA DE ESTUDIO — Zscheischler et al. 2018 — marco conceptual de eventos compuestos
+============================================================
+
+REFERENCIA COMPLETA
+Zscheischler, J., Westra, S., van den Hurk, B. J. J. M., et al. (2018). Future climate risk
+from compound events. Nature Climate Change, 8(6), 469-477. Nature Publishing Group. DOI:
+10.1038/s41558-018-0156-3
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario / conceptual
+Se cita 2 veces, en los Capítulos 1 (Introducción) y 2 (Fundamentación), siempre para
+respaldar la decisión metodológica de analizar viento y precipitación de forma conjunta,
+enmarcándola dentro de la literatura sobre eventos compuestos/co-ocurrencia de extremos.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo de tipo "Perspective" (no un estudio empírico con datos propios) publicado en
+Nature Climate Change que propone un marco conceptual unificado para entender y proyectar el
+riesgo climático derivado de "eventos compuestos": la combinación de múltiples factores
+climáticos (drivers) y/o peligros (hazards) que interactúan y cuya combinación genera un
+impacto desproporcionadamente mayor al que produciría cada uno por separado. Los autores
+ilustran el concepto con casos reales (la ola de calor/sequía/incendios de Rusia 2010, el
+huracán Sandy 2012, el huracán Harvey 2017) y proponen una definición formal de evento
+compuesto, junto con cinco recomendaciones para reorientar la investigación climática hacia
+enfoques multivariados. Es relevante para la tesis porque legitima, desde una publicación de
+alto perfil, el enfoque de analizar conjuntamente viento y precipitación en vez de tratarlos
+como variables independientes.
+
+2. METODOLOGÍA
+No aplica en sentido de datos/muestra: es un artículo de perspectiva/revisión conceptual, sin
+análisis de datos originales. Su "método" consiste en: (1) revisar y sintetizar casos de
+estudio documentados en la literatura sobre eventos climáticos con múltiples factores
+interactuantes; (2) proponer una definición formal de "evento compuesto climático/
+meteorológico" (combinación de múltiples drivers y/o hazards que contribuye al riesgo
+societal o ambiental, generalizando definiciones previas del IPCC-SREX y de Leonard et al.);
+(3) construir una tabla no exhaustiva (Tabla 1) de combinaciones de peligros climáticos
+documentados con dependencia entre sus factores (sequía, estrés térmico fisiológico, riesgo
+de incendio, riesgo de tormenta, inundación costera, inundación en confluencias de ríos,
+sequía y calor concurrentes, viento y precipitación concurrentes, calor y contaminación del
+aire concurrentes); y (4) formular cinco recomendaciones programáticas para la comunidad
+científica.
+
+3. HALLAZGOS CLAVE
+(Al ser un artículo conceptual, los "hallazgos" son proposiciones y síntesis, no resultados
+estadísticos originales.)
+- Define formalmente "evento compuesto climático/meteorológico" como la combinación de
+  múltiples drivers y/o hazards que contribuye al riesgo societal o ambiental, con
+  riesgo = probabilidad × consecuencias (más generalmente, una convolución de ambas
+  distribuciones).
+- La Tabla 1 del paper lista explícitamente "viento y precipitación extremos concurrentes"
+  (concurrent wind and precipitation extremes) como un tipo de combinación de peligros
+  documentada, con drivers climáticos: velocidad del viento, precipitación, orografía y
+  circulación atmosférica de gran escala —relevante directamente para el enfoque de la
+  tesis de analizar viento y precipitación conjuntamente.
+- La subestimación del riesgo es un problema central: los métodos tradicionales de
+  evaluación de riesgo que consideran un solo driver/peligro a la vez pueden subestimar
+  sistemáticamente el riesgo real, dado que los procesos que causan extremos suelen estar
+  correlacionados espacial y/o temporalmente.
+- Se ilustra con el ejemplo de que la correlación negativa entre temperatura y precipitación
+  en verano en el oeste de Rusia incrementa la probabilidad de veranos extremadamente
+  calurosos y secos hasta en un factor de cinco comparado con el supuesto de independencia
+  entre ambas variables.
+- Se proponen 5 recomendaciones: (i) reconocer que la mayoría de catástrofes climáticas
+  mayores son causadas por efectos compuestos de múltiples drivers; (ii) desarrollar marcos
+  teóricos y herramientas de evaluación de riesgo/atribución que contemplen explícitamente
+  eventos compuestos; (iii) usar metodologías "bottom-up" para identificar combinaciones de
+  drivers/hazards que generan cambios de riesgo; (iv) enfocar la resolución de eventos
+  compuestos en proyecciones climáticas hacia los impactos, no solo hacia los drivers; y (v)
+  entender y modelar la interacción de actividades humanas cambiantes con eventos compuestos.
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 2 (Fundamentación, L183) se cita para justificar metodológicamente el enfoque
+de la tesis: "Viento y precipitación son, además, las dos variables de superficie más
+empleadas para caracterizar los impactos de un ciclón, por lo que su análisis conjunto es el
+punto de partida natural para caracterizar la morfología del sistema, en línea con otros
+enfoques que analizan la co-ocurrencia de extremos de superficie \citep{zscheischler2018future}."
+En el Capítulo 1 (Introducción, L15) se repite el mismo argumento tras describir los
+impactos costeros de los ciclones extratropicales en el litoral sur de Brasil (Bartolomei et
+al. 2024; Miranda et al. 2026) y su influencia en el oleaje (Sasaki et al. 2021): "El viento
+en superficie y la precipitación son, en conjunto, las dos variables más empleadas para
+caracterizar los impactos de estos sistemas en la costa, por lo que abordarlas de manera
+conjunta resulta natural para este trabajo, en línea con otros enfoques que analizan más de
+una variable de superficie simultáneamente \citep{zscheischler2018future}." En ambos casos el
+paper no aporta cifras ni mecanismos específicos de ciclones extratropicales, sino el marco
+conceptual de "eventos compuestos" que legitima y enmarca la decisión metodológica de
+analizar viento y precipitación de forma conjunta (en vez de por separado) a lo largo de toda
+la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Jakob Zscheischler (ETH Zúrich al momento de publicación, luego Universidad de Berna) lidera,
+junto con un grupo interdisciplinario de coautores (Seth Westra, Bart van den Hurk, Amir
+AghaKouchak, Sonia Seneviratne, Philip Ward, entre otros), la línea de investigación que
+fundó el campo de "compound events" en ciencias climáticas, formalizando y generalizando
+definiciones previas del IPCC (SREX) y de Leonard et al. Este paper es la referencia
+fundacional/programática más citada del campo, y antecede a trabajos posteriores más técnicos
+del mismo grupo sobre metodologías estadísticas para eventos compuestos (p.ej. cópulas
+multivariadas, análisis de dependencia extrema). Es un artículo "Perspective" de alto
+perfil (Nature Climate Change), pensado para tender puentes entre climatólogos, ingenieros,
+científicos sociales y modeladores de impacto, más que para aportar un análisis técnico
+propio de un fenómeno específico.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Al ser un artículo de "Perspective" y no un estudio de investigación original, no reporta
+  metodología de datos propia ni resultados estadísticos replicables: su contribución es
+  puramente conceptual/programática.
+- La lista de combinaciones de peligros (Tabla 1) es explícitamente "no exhaustiva" y
+  general, sin un tratamiento profundo específico de ciclones extratropicales ni de la
+  combinación viento-precipitación en el contexto particular de sistemas ciclónicos (el ítem
+  correspondiente en la tabla remite a un único estudio, Martius et al., no discutido en
+  profundidad en el propio texto).
+- No aporta evidencia cuantitativa aplicable al Atlántico Sudoccidental ni a ciclones
+  extratropicales en particular: su rol en la tesis es exclusivamente de encuadre conceptual.
+- Las recomendaciones del paper son en su mayoría programáticas y de largo plazo (llamados a
+  la comunidad científica), no procedimientos técnicos aplicables directamente al diseño
+  metodológico de un estudio específico.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Este paper aporta un método estadístico específico que uses en tu tesis?
+  R: No; es una referencia conceptual que enmarca la decisión de estudiar viento y
+  precipitación conjuntamente dentro de la literatura más amplia sobre "eventos compuestos",
+  no una fuente de técnicas estadísticas aplicadas directamente (esas provienen de otras
+  referencias metodológicas, como Wilks 2019 para el EOF).
+- P: ¿Qué es exactamente un "evento compuesto" según esta definición, y tu tesis estudia
+  eventos compuestos en ese sentido estricto?
+  R: Un evento compuesto es la combinación de múltiples drivers y/o hazards climáticos que
+  contribuye conjuntamente al riesgo; la tesis se apoya en esta lógica al analizar viento y
+  precipitación de forma conjunta como covariables del impacto de un ciclón, aunque no
+  necesariamente cuantifica el riesgo combinado con el aparato estadístico completo (cópulas,
+  probabilidad conjunta) que desarrollan trabajos posteriores del mismo campo.
+- P: ¿Por qué citar un artículo de "Perspective" sin datos propios como respaldo
+  metodológico?
+  R: Porque su función en la tesis no es aportar evidencia empírica sino legitimar y encuadrar
+  conceptualmente el enfoque multivariado (viento + precipitación) dentro de una corriente de
+  investigación climática reconocida y ampliamente citada, coherente con el resto del marco
+  conceptual del Capítulo 2.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/zscheischler2018future.md

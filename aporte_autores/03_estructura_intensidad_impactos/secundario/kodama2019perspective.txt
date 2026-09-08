@@ -1,0 +1,130 @@
+============================================================
+CARTILLA DE ESTUDIO — Kodama et al. 2019 — precipitación de ciclones NH vs SH
+============================================================
+
+REFERENCIA COMPLETA
+Kodama, C.; Stevens, B.; Mauritsen, T.; Seiki, T.; Satoh, M. (2019). A New
+Perspective for Future Precipitation Change from Intense Extratropical
+Cyclones. Geophysical Research Letters, 46(21), 12435-12444. DOI:
+10.1029/2019GL084001
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez, en el Capítulo 2 (Fundamentación), para sustentar con
+cifras concretas la diferencia de intensidad de precipitación entre ciclones
+extratropicales oceánicos del Hemisferio Norte y del Hemisferio Sur.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación explícita NH vs. HS)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar sinóptico-filtrada (MSLP, método de Hoskins & Hodges 2002) — distinta a la ζ850 de la tesis [confirmado directamente en el PDF fuente, Sección 2.2 "Detection, Tracking, and Compositing Algorithms"; los autores señalan que usar el viento a 850 hPa en vez de MSLP no altera las conclusiones para los ciclones más intensos]
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio analiza las primeras simulaciones climáticas globales capaces de
+resolver explícitamente la dinámica de mesoescala de ciclones extratropicales
+(ECs), usando un modelo global de resolución de sistemas nubosos (14 km). Su
+pregunta central es si el cambio futuro en la precipitación de ciclones intensos
+puede inferirse a partir del contraste de precipitación presente entre el
+Hemisferio Norte (HN) y el Hemisferio Sur (HS), bajo el supuesto de que el
+control termodinámico (disponibilidad de humedad/temperatura) domina sobre el
+control dinámico. Es un estudio de modelización climática de altísima
+resolución combinado con observación satelital, relevante para calibrar
+expectativas de cambio climático en precipitación ciclónica.
+
+2. METODOLOGÍA
+- Modelo: NICAM (Nonhydrostatic Icosahedral Atmospheric Model), malla global de
+  14 km, sin parametrización de convección, 38 niveles verticales hasta 40 km.
+- Simulación de clima presente (tipo AMIP): junio 1979-diciembre 2008, forzada
+  con TSM observada (modelo de océano de capa mixta de 15 m, relajación de 7
+  días); periodo de análisis 1979-2003.
+- Simulación de clima futuro: junio 2074-diciembre 2099 bajo escenario A1B
+  (Nakićenović y Swart 2000), con TSM y hielo marino de CMIP3; periodo de
+  análisis 2075-2099.
+- Datos de verificación: reanálisis JRA-55 (6-horario, 1.25°); precipitación
+  satelital GSMaP-GPM (nivel 3, 0.1°, horaria, 60°S-60°N) y GPM-DPR (0.25°).
+- Análisis centrado en ciclones extratropicales oceánicos intensos, con
+  promedio espacial de precipitación en un círculo de radio de 550 km alrededor
+  del centro del ciclón.
+
+3. HALLAZGOS CLAVE
+- Los ciclones extratropicales oceánicos intensos del HN precipitan
+  sistemáticamente más que sus contrapartes del HS: 10.7 mm/día frente a
+  7.7 mm/día en promedio espacial (GSMaP-GPM, 2 años de datos); patrón
+  consistente aunque con distinta magnitud en otros productos (GPM-DPR: 7.4 vs.
+  3.6 mm/día; IMERG: 9.4 vs. 8.7 mm/día; NICAM, 25 años: 8.8 vs. 7.2 mm/día).
+- La precipitación simulada alrededor de ciclones oceánicos intensos aumenta a
+  una tasa de aproximadamente 7%/K con el calentamiento, siguiendo la relación
+  de Clausius-Clapeyron para la presión de vapor saturado.
+- La misma tasa de escalamiento (~7%/K) es evidente en el contraste
+  interhemisférico presente, sugiriendo que dicho contraste puede servir como
+  predictor del cambio futuro en precipitación de ciclones intensos.
+- La estructura, frecuencia y precipitación presente de los ciclones
+  extratropicales oceánicos simulados por NICAM se comparan favorablemente con
+  reanálisis y con los nuevos conjuntos de datos satelitales de alta resolución.
+- Las diferencias de intensidad de precipitación entre HN y HS se explican por
+  diferencias en la temperatura del aire superficial y, por tanto, en la
+  disponibilidad de humedad para la tormenta, no por una dinámica distinta entre
+  hemisferios.
+
+4. RELACIÓN CON TU TESIS
+Esta cita aporta el dato cuantitativo clave que permite a la tesis justificar
+metodológicamente por qué los modelos conceptuales de ciclones (desarrollados
+originalmente para el HN) son aplicables en magnitud, aunque no en orientación
+geográfica, al Atlántico Sur. En el Capítulo 2 (Fundamentación, L164) se
+afirma: "Esta inversión, sin embargo, aplica a la orientación y geometría del
+WCB, no a la magnitud: \citet{kodama2019perspective} muestran que los ciclones
+extratropicales oceánicos del Hemisferio Sur precipitan sistemáticamente menos
+que sus contrapartes del Hemisferio Norte (7.7 frente a 10.7 mm/día en promedio
+espacial), diferencia atribuible a la menor disponibilidad de humedad, y no a
+una dinámica distinta." Este argumento es importante porque legitima el uso de
+marcos conceptuales del HN (p. ej. Shapiro-Keyser, trowal airstream de Martin
+1999) para interpretar ciclones del Atlántico Sudoccidental en la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Chihiro Kodama y Masaki Satoh son desarrolladores centrales del modelo NICAM
+(Satoh et al. 2008, 2014), pioneros en modelización climática global de
+resolución de sistemas nubosos sin parametrización convectiva. Bjorn Stevens y
+Thorsten Mauritsen (Max Planck Institute for Meteorology) aportan la perspectiva
+de sensibilidad climática y balance energético. Este artículo se conecta
+directamente con el IPCC AR6 Capítulo 11 (también citado en la tesis), que
+sintetiza sus hallazgos como evidencia de alta confianza sobre el aumento de
+precipitación en ciclones extratropicales intensos con el calentamiento global.
+Forma parte de una línea de investigación sobre modelización de alta resolución
+de extremos ligados a ciclones (Bengtsson et al. 2009; Champion et al. 2011;
+Willison et al. 2013).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Existe variabilidad sustancial entre productos de precipitación observacional
+  (GSMaP-GPM, GPM-DPR, IMERG) en la magnitud exacta del contraste HN-HS, en
+  parte debido a diferencias en cobertura de datos, reconocida explícitamente
+  por los autores.
+- El análisis del clima futuro usa el escenario A1B (más antiguo, no un
+  escenario SSP de CMIP6) y solo dos ventanas temporales de 25 años cada una,
+  sin ensamble multimodelo.
+- El estudio se enfoca en ciclones oceánicos intensos; no aborda ciclones
+  continentales ni de intensidad moderada, lo que limita la generalización a
+  todo el espectro de sistemas extratropicales.
+- El propio artículo reconoce que las diferencias cuantitativas entre productos
+  de observación no son completamente atribuibles a procesos físicos, sino en
+  parte a limitaciones de cobertura observacional.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué los ciclones del HS precipitan menos que los del HN si comparten
+  la misma dinámica? R: Kodama et al. (2019) atribuyen la diferencia a la menor
+  temperatura del aire superficial y, por tanto, menor disponibilidad de humedad
+  en el HS, no a un mecanismo dinámico distinto (principio de control
+  termodinámico dominante).
+- P: ¿Esta cifra (7.7 vs. 10.7 mm/día) es representativa específicamente del
+  Atlántico Sudoccidental? R: No; es un promedio de todos los ciclones oceánicos
+  intensos del HS en el estudio global, usado en la tesis como referencia general
+  de magnitud, no como dato regional específico.
+- P: ¿Qué implica la tasa de escalamiento de 7%/K para tu tesis? R: Sugiere que
+  el contraste interhemisférico presente en precipitación puede anticipar el
+  aumento futuro con el calentamiento, reforzando la relevancia de estudiar la
+  estructura de precipitación actual de los ciclones del Atlántico Sudoccidental.
+- P: ¿Cómo valida el estudio que NICAM resuelve razonablemente estas
+  estructuras? R: Comparando frecuencia, estructura y precipitación simulada
+  contra JRA-55 y contra productos satelitales GSMaP-GPM, GPM-DPR e IMERG,
+  encontrando similitud cualitativa aunque con diferencias cuantitativas
+  atribuidas mayormente a cobertura observacional limitada.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/kodama2019perspective.md

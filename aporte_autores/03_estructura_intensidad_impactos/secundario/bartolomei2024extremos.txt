@@ -1,0 +1,127 @@
+============================================================
+CARTILLA DE ESTUDIO — Bartolomei et al. 2024 — Ciclones extremos, invierno 2023, sur de Brasil
+============================================================
+
+REFERENCIA COMPLETA
+Bartolomei, F. da R., Reboita, M. S., & Rocha, R. P. da. (2024). Ciclones extratropicais causadores de eventos
+extremos no sul do Brasil no inverno de 2023. Terræ Didatica, 20(Publ. Contínua), e024003.
+DOI: 10.20396/td.v20i00.8675229
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 4 veces en 3 capítulos (Introducción, Viento, MEOF) como evidencia empírica reciente y de alto impacto
+social sobre la severidad de ciclones extratropicales en el sur de Brasil, y como respaldo del patrón de génesis
+con circulaciones asimétricas; no sustenta un mecanismo dinámico propio de la tesis, sino que aporta contexto
+motivacional y un dato observacional puntual sobre el comportamiento de génesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (identificación visual de isóbaras) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El artículo, de carácter didáctico-divulgativo (revista Terræ Didatica, orientada a la enseñanza de las
+geociencias) pero con rigor de estudio de caso sinóptico, describe y compara dos ciclones extratropicales de
+escala sinóptica que afectaron el sur de Brasil en el invierno de 2023 (junio y julio), responsables de
+aproximadamente 17 muertes y daños socioeconómicos severos. Es un estudio observacional de caso doble
+(case study), que combina reanálisis, estaciones meteorológicas y estimaciones satelitales para caracterizar la
+génesis, trayectoria y los impactos (viento y precipitación) de ambos sistemas, contrastándolos con la
+climatología regional. Es relevante porque documenta, con datos verificables de daños y víctimas, la severidad
+física real de estos sistemas en la región de estudio de la tesis.
+
+2. METODOLOGÍA
+
+- Datos: estaciones meteorológicas automáticas del INMET (viento a 10 m horario, precipitación diaria, 11
+  estaciones en la región sur/sudeste de Brasil); reanálisis ERA5 (0.25°, niveles estándar 00/06/12/18 UTC,
+  dominio 0°–60°S, 90°W–0°); estimaciones de precipitación satelital PERSIANN (0.25°, cada 6 h).
+- Período de estudio: caso 1, 12–18 de junio de 2023; caso 2, 11–25 de julio de 2023.
+- Método de rastreo: identificación visual de isóbaras cerradas en PNMM (intervalo de 4 hPa); trayectoria,
+  tiempo de vida, distancia recorrida y velocidad media calculadas mediante fórmula de distancia esférica
+  (Van Brummelen, 2012).
+- Diagnóstico termodinámico: Cyclone Phase Space (CPS, Hart 2003) con tres parámetros (simetría térmica B,
+  viento térmico en niveles bajos y altos) para clasificar el sistema como extratropical, subtropical o tropical.
+- Campos sinópticos analizados: PNMM, espesor de capa 500/1000 hPa, viento >30 m/s en 250 hPa, cizalladura
+  vertical del viento, divergencia de masa en 250 hPa, humedad relativa media 850–500 hPa, velocidad
+  vertical en 500 hPa, advección de temperatura en 850 hPa, divergencia del flujo de humedad integrado.
+- Análisis de impactos en dos perspectivas: lagrangiana (siguiendo la trayectoria del ciclón) y euleriana (en
+  puntos fijos de estaciones meteorológicas).
+
+3. HALLAZGOS CLAVE
+
+- El ciclón de junio de 2023 (caso 1) se originó en la costa de Río de Janeiro con presión inicial de 1019 hPa,
+  inició con características subtropicales que evolucionaron a extratropicales tras 24 h, y presentó una
+  trayectoria anómala hacia el suroeste (en lugar del patrón climatológico hacia el sureste), afectando Santa
+  Catarina y Rio Grande do Sul; causó 16 muertes y ~16.100 personas desalojadas/damnificadas.
+- El ciclón de julio de 2023 (caso 2) se formó sobre el continente, entre Paraguay, Argentina y el oeste de Rio
+  Grande do Sul —una región de baja frecuencia climatológica de ciclogénesis según Gramcianinov et al. (2019)
+  y Crespo et al. (2021)—, se mantuvo extratropical durante todo su ciclo de vida, y afectó a al menos 51
+  municipios, dejando 790 mil personas sin electricidad, 1 muerte, 23 heridos y 592 personas desalojadas o sin
+  hogar.
+- En Porto Alegre, la precipitación de junio de 2023 fue la más voluminosa desde 1916 (141.7 mm), en parte
+  atribuible al ciclón caso 1; en la estación se registraron 80 mm en un solo día (63% del total mensual
+  climatológico).
+- Ambos ciclones desarrollaron génesis a través de un mecanismo dinámico similar: un cavado en niveles medios
+  y altos que migra del Pacífico al Atlántico, generando divergencia de masa en altura, combinado con procesos
+  termodinámicos (humedad, convergencia de flujo de humedad, advección cálida en 850 hPa alimentada por
+  jets de bajo nivel al este de los Andes).
+- En las fases de génesis, ambos sistemas exhiben circulaciones asimétricas antes de consolidar un centro de
+  baja presión cerrado y bien definido — comportamiento consistente con la génesis "no organizada" descrita
+  también por otros autores de la región.
+- El estudio concluye que incluso sistemas con presión "no muy baja" (1019 hPa) pueden causar condiciones de
+  tiempo severo si se forman cerca de zonas costeras densamente pobladas, subrayando que la magnitud de la
+  presión central no es un indicador suficiente de severidad.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap. 1 (Introducción, L15): se cita para fundamentar la amenaza costera regional: "\citet{bartolomei2024extremos}
+  reportan la letalidad causada por ciclones extratropicales invernales en esa región", como parte del argumento
+  de que estos sistemas representan "el fenómeno de severidad geofísica dominante para la zona costera regional".
+- Cap. 4 (Viento, L4): se usa para introducir la severidad cinemática de estos sistemas: "la severidad física de
+  estos sistemas ha sido documentada por \citet{bartolomei2024extremos}, quienes caracterizan la extrema
+  actividad cinemática generada por ciclones invernales en el sur de Brasil".
+- Cap. 4 (Viento, L78): se cita junto con reboita2010south para explicar el comportamiento de génesis: "los
+  sistemas suelen presentar circulaciones asimétricas antes de organizar un centro de baja presión cerrado y
+  bien definido", en el contexto de la fase incipiente del análisis de PDFe.
+- Cap. 6 (MEOF, L35): se reutiliza la misma idea de circulaciones asimétricas en la fase incipiente para
+  argumentar la baja interpretabilidad física de un modo acoplado dominante durante esa fase.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Michelle Simões Reboita y Rosmeri Porfírio da Rocha son investigadoras seniors de referencia en climatología
+de ciclones extratropicales y subtropicales del Atlántico Sur (ambas ampliamente citadas en otras partes de tu
+tesis, p. ej. reboita2010south, cardoso2022synoptic —coautoría de da Rocha—). Este artículo, de autoría
+principal de una estudiante de grado (Bartolomei) bajo la supervisión de ambas, funciona como un estudio de
+caso de rápida respuesta ante eventos de alto impacto social, publicado en una revista de perfil
+didáctico/divulgativo pero con metodología sinóptica estándar del grupo (uso de CPS, cavados transitorios,
+jets de bajo nivel al este de los Andes), estableciendo continuidad con trabajos previos de Reboita et al.
+(2009, 2010, 2012, 2017a,b, 2018, 2021).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un estudio de caso (n=2), por lo que sus hallazgos no pueden generalizarse como un patrón climatológico
+  robusto; los propios autores lo reconocen al comparar contra "estudios climatológicos" previos en vez de
+  aportar climatología propia.
+- La identificación de ciclones es visual/manual, con la subjetividad inherente a ese método.
+- Los datos de precipitación satelital PERSIANN pueden tener sesgos conocidos en la estimación de acumulados
+  extremos, no discutidos en profundidad en el artículo.
+- La cobertura de estaciones INMET es limitada (11 estaciones concentradas en las regiones sur y sudeste),
+  con vacíos espaciales sobre el océano y sobre Argentina/Uruguay.
+- El estudio no realiza un análisis cuantitativo formal de significancia estadística de las anomalías respecto a
+  la climatología (se basa en comparaciones descriptivas de porcentajes respecto a promedios mensuales).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Puede un estudio de dos casos servir de base para caracterizar la 'severidad geofísica dominante' de los
+  ciclones extratropicales en la introducción de su tesis?" — Respuesta: el estudio se usa como evidencia
+  motivacional de impacto real y reciente, no como fuente climatológica; la caracterización climatológica se
+  apoya en otras referencias (p. ej. Reboita et al. 2010, Gramcianinov et al.).
+- "¿Los mecanismos de génesis descritos por Bartolomei et al. (cavado transitorio + jet de bajo nivel) son
+  consistentes con los que usted encuentra en su propio análisis de fase incipiente?" — Respuesta: sí, ambos
+  casos muestran circulaciones asimétricas previas a la consolidación del centro cerrado, coherente con la baja
+  varianza explicada por el EOF1 en la fase incipiente reportada en la tesis.
+- "¿Por qué cita una revista de divulgación didáctica (Terræ Didatica) como fuente académica en una tesis de
+  rigor doctoral?" — Respuesta: el artículo mantiene metodología sinóptica estándar (CPS, ERA5, INMET) y
+  aporta datos verificables de impacto social recientes (2023), relevantes para justificar la motivación del
+  estudio, independientemente del perfil editorial de la revista.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/bartolomei2024extremos.md

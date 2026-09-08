@@ -1,0 +1,52 @@
+============================================================
+CARTILLA DE ESTUDIO — Reboita et al. 2018 — Proyecciones de ciclones (HadGEM2-ES y RegCM4)
+============================================================
+
+REFERENCIA COMPLETA
+Reboita, Michelle S.; da Rocha, Rosmeri P.; de Souza, Marcelo R.; Llopart, Marta. (2018). Extratropical cyclones over the southwestern South Atlantic Ocean: HadGEM2-ES and RegCM4 projections. International Journal of Climatology, 38(6), 2866-2879. DOI: 10.1002/joc.5468
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una sola vez (Cap04-Viento), como respaldo del marco dinámico de interacciones diabáticas y flujos de calor latente océano-atmósfera que sostienen la inestabilidad baroclínica de baja tropósfera en SBR y LPB; no se usan sus cifras de proyección futura, solo su argumento de mecanismo.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Evalúa el "valor agregado" del downscaling dinámico regional (RegCM4 anidado en el modelo global HadGEM2-ES, bajo el escenario RCP8.5) para simular la climatología de ciclones extratropicales del Atlántico Sudoccidental, validando el clima presente (1979-2005) contra un ensamble de cinco reanálisis (ERA-40, ERA-Interim, NCEP-NCAR, NCEP-DOE y CFSR) y proyectando cambios para un futuro cercano (2020-2050) y lejano (2070-2098). También cuantifica la contribución de los ciclones a la precipitación anual de la región. Es relevante porque continúa y actualiza, con un modelo de nueva generación, el linaje metodológico iniciado en Reboita et al. (2010).
+
+2. METODOLOGÍA
+- Modelos: RegCM4 (50 km, 18 niveles sigma-presión, esquema BATS, convección mixta Grell/Emanuel), anidado en HadGEM2-ES (1.25°×1.875°, CMIP5, RCP8.5), corrida continua 1970-2098.
+- Reanálisis de validación: ERA-40, ERA-Interim, NCEP-NCAR, NCEP-DOE, CFSR, regrillados a 1.5°×1.5°.
+- Seguimiento de ciclones: mínimos de vorticidad relativa a 925 hPa por búsqueda de vecino más cercano (24 puntos), umbral ζ ≤ -1.5×10⁻⁵ s⁻¹, vida entre 1 y 10 días; dominio de análisis 15.5°-57.5°S, 20°-81°W (excluye génesis sobre el Pacífico y el continente).
+- Atribución de precipitación a los ciclones: metodología de Hawcroft et al. (2012), radio de 8° alrededor del centro del ciclón a las 1200 UTC, usando datos GPCP (1997-2005) y precipitación simulada.
+- Análisis de tendencias con test de Mann-Kendall (p<0.05) y detección de puntos de quiebre con el método de Rodionov (2004).
+
+3. HALLAZGOS CLAVE
+- La vorticidad relativa inicial media va de -2.6×10⁻⁵ (NCEP-I/II) a -3.0×10⁻⁵ s⁻¹ (RegCM4); la vorticidad media de todo el ciclo de vida es similar entre CFSR/ERA-Interim (-3.8×10⁻⁵ s⁻¹) y RegCM4 (-3.7×10⁻⁵ s⁻¹).
+- Para el clima presente, RegCM4 reproduce con mayor realismo el patrón espacial de los tres núcleos ciclogenéticos (RG1/RG2/RG3) que HadGEM2-ES, aportando "valor agregado" del downscaling; el exceso de densidad de ciclones en el océano abierto (ya visto en RegCM3, Reboita et al. 2010) se vincula a flujos de calor latente excesivos simulados por el modelo regional.
+- Los ciclones contribuyen ~80% de la precipitación anual total en el sector ~40°S/40°W según CFSR/GPCP; RegCM4 sobreestima esta contribución (>90%) y desplaza el máximo hacia el este.
+- Proyecciones futuras: disminución de la frecuencia anual de ciclones de -6.5% (RegCM4) y -3.6% (HadGEM2-ES) en el futuro cercano, y de -11.4% y -10.4% respectivamente en el futuro lejano (ambas estadísticamente significativas, Mann-Kendall p<0.05).
+- No hay cambios significativos proyectados en la intensidad media de los ciclones, su vida (2.3-2.5 días), distancia recorrida o velocidad media.
+- La precipitación asociada a los ciclones se proyecta con una disminución de ~15% en el futuro lejano, siguiendo la caída de frecuencia; el mayor descenso de densidad de ciclogénesis se ubica entre 40°-57°S, vinculado al debilitamiento del gradiente térmico polo-ecuador de bajos niveles y al desplazamiento/intensificación de los chorros de niveles altos.
+
+4. RELACIÓN CON TU TESIS
+Se cita en Cap04-Viento (L121): "las interacciones diabáticas y los flujos de calor latente océano-atmósfera \citep{reboita2018extratropical} sostienen la inestabilidad baroclínica de baja troposfera que capitalizan los ciclones de SBR y LPB \citep{andrade2024composite, coutodesouza2024thesis}, mientras que en ARG la dinámica baroclínica clásica y la perturbación orográfica andina producen estructuras más elongadas con máximos de viento menos concentrados." La cita se apoya en la discusión del paper sobre cómo el exceso de densidad de ciclones simulada sobre el océano abierto se relaciona con flujos de calor latente intensos, y en la elevada contribución de los ciclones (~80-90%) a la precipitación anual en la zona de confluencia Brasil-Malvinas — evidencia del acoplamiento diabático océano-atmósfera que sustenta dinámicamente a los ciclones de SBR/LPB. No se usa ninguna cifra de proyección futura de este paper en la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Reboita y da Rocha (USP), junto con de Souza y Llopart, continúan la línea de downscaling regional iniciada con RegCM3 en Reboita et al. (2010) y Krüger et al. (2012), ahora con RegCM4 dentro del marco CORDEX-CREMA y forzado por HadGEM2-ES/RCP8.5. Este trabajo es retomado y actualizado en reboita2026meteorology (Sección 8.5, proyecciones futuras) y complementa, a escala climatológica/de proyección, el mismo mecanismo de flujos turbulentos de calor que reboita2022from confirma a nivel de proceso (experimentos de sensibilidad WRF) para un caso individual.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Tanto RegCM4 como HadGEM2-ES sobreestiman la frecuencia de ciclones del clima presente frente al reanálisis (aunque en menor medida frente a los reanálisis de mayor resolución, CFSR y ERA-Interim).
+- RegCM4 sobreestima sustancialmente la contribución de los ciclones a la precipitación y desplaza su máximo hacia el este.
+- La ventana de validación de precipitación es corta (1997-2005), limitada por el inicio de los datos GPCP.
+- No se aplicó test de significancia estadística a los mapas espaciales de tendencia de densidad, porque —según los propios autores— la alta variabilidad asociada a los ciclones hace que ese tipo de test sea "muy parchado" (poco confiable espacialmente).
+- Se usa una sola realización por modelo (sin ensamble), una limitación que los propios autores reconocen explícitamente al compararse con estudios que sí usan ensambles (Catto et al. 2010; Hawcroft et al. 2017).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué evidencia aporta este paper sobre los flujos de calor latente citados en tu tesis? R: Muestra que la mayor densidad de ciclones simulada por RegCM sobre el océano abierto se relaciona con flujos de calor latente excesivos, y que los ciclones explican entre el 80% y el 90% de la precipitación anual en la zona de confluencia Brasil-Malvinas, evidenciando el acoplamiento diabático océano-atmósfera.
+- P: ¿Este paper proyecta cambios de intensidad de los ciclones a futuro? R: No; proyecta una disminución de frecuencia (-6.5%/-11.4% en el futuro cercano/lejano con RegCM4) pero sin cambios significativos en intensidad media, duración o velocidad.
+- P: ¿Por qué citar un estudio de proyecciones climáticas en un capítulo sobre viento observado/histórico? R: Se usa únicamente por su discusión de mecanismo físico (flujos diabáticos que sostienen la inestabilidad baroclínica de baja tropósfera en SBR/LPB), no por sus resultados de proyección futura.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/reboita2018extratropical.md

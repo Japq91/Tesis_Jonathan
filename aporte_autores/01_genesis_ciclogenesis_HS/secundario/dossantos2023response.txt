@@ -1,0 +1,54 @@
+============================================================
+CARTILLA DE ESTUDIO — Dos Santos et al. 2023 — respuesta del storm track del Atlantico Sudoeste al cambio climatico
+============================================================
+
+REFERENCIA COMPLETA
+Dos Santos, Juliana Damasceno; Machado, Jeferson Prietsch; Saraiva, Jaci Maria Bilhalva. (2023). The Response of Southwest Atlantic Storm Tracks to Climate Change in the Brazilian Earth System Model. Atmosphere, 14(7), 1055. DOI: 10.3390/atmos14071055
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita dos veces en el Capítulo 4 (Viento), como respaldo del vínculo mecanístico entre zonas baroclínicas, gradientes térmicos y estructura/expansión del campo de viento ciclónico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (tasa de crecimiento de Eady y energética; no es rastreo de ciclones)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio caracteriza los storm tracks (regiones preferenciales de ocurrencia de ciclones extratropicales) del Atlántico Sudoeste usando tres métricas eulerianas clásicas —inestabilidad baroclínica (BI), flujo de calor meridional (MHF) y energía cinética (KE)— y evalúa el desempeño del modelo climático brasileño BESM (Brazilian Earth System Model) frente al reanálisis ERA5, tanto en el clima histórico como en escenarios futuros RCP4.5 y RCP8.5. Es un estudio de evaluación de modelo y proyección climática (no de identificación individual de ciclones), cuya relevancia radica en cuantificar sesgos sistemáticos del BESM y las tendencias de desplazamiento del storm track bajo calentamiento global.
+
+2. METODOLOGÍA
+
+Se usa el reanálisis ERA5 (Hersbach et al. 2020, resolución ~31 km, 137 niveles) y simulaciones del BESM–OA 2.5 (componente atmosférico BAM, T62, ~1.875° de resolución, 28 niveles verticales) para tres escenarios: histórico (1850–2005), RCP4.5 y RCP8.5 (proyecciones a 100 años). La climatología de BI se calcula con la tasa de crecimiento de Eady (método de Lindzen y Farrell 1980) usando altura geopotencial y viento zonal/meridional a 850 y 500 hPa, y temperatura a 1000 y 500 hPa, para el período 1955–2005 (histórico) y 2055–2105 (futuro). La KE y el MHF se calculan a 500 hPa usando datos diarios filtrados con wavelets de Morlet (banda de 2 a 8 días) para el período 1975–2005 (histórico) y 2075–2105 (futuro). Todo se analiza estacionalmente (DJF, MAM, JJA, SON) y se prueba significancia estadística con test t de Student al 95%.
+
+3. HALLAZGOS CLAVE
+
+- El BESM sobreestima la BI en latitudes bajas y altas, y la subestima en latitudes medias; en KE y MHF el BESM muestra un desplazamiento sistemático hacia el sur respecto al ERA5.
+- En general, KE y MHF están subestimados por el BESM y desplazados hacia el sur en todas las estaciones analizadas.
+- Bajo RCP8.5, la reducción de BI en las zonas de storm track es mayor y abarca un área más extensa que bajo RCP4.5 (p. ej. en verano, la reducción se extiende de 32°S-50°S/10°W-65°W en RCP8.5 frente a 34°S-50°S/10°W-45°W en RCP4.5).
+- Existe una tendencia general hacia el desplazamiento poleward (hacia el sur) de los storm tracks en las tres variables analizadas, consistente con estudios previos (Freitas et al. 2019; Yin 2005).
+- El enfoque euleriano usado (BI/KE/MHF) muestra alta correlación con los métodos lagrangianos de tracking individual de ciclones usados por Reboita et al. (2015) y Gramcianinov et al. (2019/2020), validando la coherencia entre ambos enfoques para describir la posición estacional del storm track del Atlántico Sur.
+- El vínculo conceptual central (usado por la tesis): la inestabilidad baroclínica ocurre en las zonas donde los máximos gradientes térmicos horizontales se ubican a gran escala y donde consecuentemente se observan los jets en la troposfera alta, siendo la BI la principal fuente de energía para los sistemas sinópticos de latitudes medias.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita dos veces en el Capítulo 4 (Viento):
+(1) L85: "Como sugieren \citet{dossantos2023response} y \citet{yanase2014parameter}, esta evolución espacial asimétrica está ligada a las zonas baroclínicas donde los máximos gradientes térmicos horizontales interactúan con los chorros en la alta troposfera." Aquí el paper respalda la idea de que la asimetría espacial de los vientos ciclónicos observada en las tres subregiones (ARG, SBR, LPB) tiene su origen en la localización de las zonas baroclínicas.
+(2) L173: "De acuerdo con \citet{hoskins2005new} y \citet{dossantos2023response}, la evolución estructural de los ciclones depende del acoplamiento baroclínico, de modo que las anomalías capturadas por EOF1 reflejan cómo el sistema expande o contrae su campo de viento en respuesta a la posición del chorro". Esta cita sustenta la interpretación física del primer modo EOF del campo de viento en la tesis, vinculando la expansión/contracción del ciclón con el acoplamiento baroclínico documentado por Dos Santos et al.
+En ambos casos, el paper aporta el fundamento mecanístico general (BI, gradientes térmicos, chorros) más que datos numéricos directamente replicados en la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El estudio pertenece a la tradición euleriana de análisis de storm tracks en el Hemisferio Sur (Berbery y Vera 1996; Trenberth 1991), que complementa —más que reemplaza— la tradición lagrangiana de tracking individual de ciclones (Reboita et al. 2015; Gramcianinov et al. 2019, 2020) en la que se apoya el resto de la tesis. El paper se inserta en una línea de evaluación de modelos climáticos brasileños (BESM), dando continuidad a trabajos previos de Machado et al. (2012, 2015, 2020) sobre BI y storm tracks del Hemisferio Sur en escenarios de cambio climático, y a Freitas et al. (2019), cuyo método de cálculo de KE y MHF es replicado directamente en este estudio.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Reconocidas por los propios autores: (a) el BESM tiene resolución relativamente baja (T62, ~1.875°) y subestima sistemáticamente las áreas de storm track, especialmente en estaciones cálidas; (b) el enfoque euleriano no captura directamente las trayectorias individuales de ciclones (a diferencia del enfoque lagrangiano que usa la tesis); (c) los autores mismos notan que la incertidumbre sobre si el desplazamiento hacia el sur observado en el modelo es un sesgo real del modelo o un artefacto de la persistente readaptación dinámica del sistema climático a un forzante de GEI en aumento continuo aún no resuelto (el sistema no ha alcanzado equilibrio hacia 2100); (d) recomiendan explícitamente complementar este análisis con otros modelos globales y regionales para confirmar o refutar el sesgo del BESM encontrado.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué usar un estudio de proyección futura (BESM/RCP) para respaldar un argumento sobre la estructura presente del viento ciclónico? Respuesta: la cita no se usa por su componente de proyección futura, sino por el fundamento físico general que aporta sobre el vínculo entre gradientes baroclínicos, chorros en altura y la estructura/expansión del campo de viento de los ciclones, válido independientemente del escenario climático.
+- ¿Qué diferencia hay entre el enfoque euleriano de Dos Santos et al. y el enfoque lagrangiano (tracking de ciclones) de tu tesis? Respuesta: el enfoque euleriano mide variables de estabilidad/energía en puntos de grilla fijos (BI, KE, MHF) para inferir la posición del storm track, mientras que el enfoque lagrangiano (usado en la tesis, siguiendo Reboita et al. y Couto de Souza et al.) sigue explícitamente cada sistema individual a lo largo de su trayectoria y ciclo de vida; el propio paper de Dos Santos et al. valida que ambos enfoques son consistentes entre sí.
+- ¿Qué tan robusto es el vínculo entre BI y viento superficial que citas? Respuesta: es un vínculo teórico bien establecido en la literatura de inestabilidad baroclínica (Hoskins y Valdes 1990; Lindzen y Farrell 1980), y el paper de Dos Santos et al. lo cuantifica específicamente para el Atlántico Sudoeste, mostrando cómo los sesgos y desplazamientos en BI se corresponden con sesgos y desplazamientos en KE y MHF.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/dossantos2023response.md

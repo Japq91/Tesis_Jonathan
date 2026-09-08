@@ -1,0 +1,135 @@
+============================================================
+CARTILLA DE ESTUDIO — Węglarczyk 2018 — estimación de densidad por kernel (KDE)
+============================================================
+
+REFERENCIA COMPLETA
+Węglarczyk, Stanisław. (2018). Kernel density estimation and its application. ITM Web
+of Conferences, 23, 00037. XLVIII Seminar of Applied Mathematics.
+DOI: 10.1051/itmconf/20182300037
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita dos veces, ambas en el Capítulo 2 (Fundamentación), como respaldo
+metodológico puntual para justificar el uso de estimación de densidad por kernel
+(KDE) frente al histograma clásico, y para justificar la regla de selección del
+ancho de banda (bandwidth) aplicada a las distribuciones de viento y precipitación.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo metodológico/tutorial (no un estudio de caso original) que expone
+los fundamentos de la estimación de densidad por kernel (Kernel Density Estimation,
+KDE) como alternativa al histograma para representar la función de densidad de
+probabilidad (pdf) de una muestra. Discute la construcción del estimador, las
+formas de kernel disponibles (simétricos y asimétricos), los métodos para elegir
+el parámetro de suavizado (bandwidth) óptimo, y extiende el tratamiento al caso
+bivariado. Su relevancia para la tesis es puramente metodológica: sustenta la
+técnica estadística usada para construir las funciones de densidad de probabilidad
+de viento y precipitación por región y fase del ciclón.
+
+2. METODOLOGÍA
+No es un estudio de datos originales sino una exposición pedagógica con ejemplos
+reales de hidrología polaca: series de 45 años (1961-1995) de caudales máximos
+anuales estandarizados, series de 32 años (1983-2015) de caudales mínimos anuales,
+y series de 30 años (1984-2013) de precipitación máxima anual estandarizada en
+Polonia, además de un ejemplo bivariado (temperatura máxima mensual y duración de
+insolación en Oxford, 1853-2017). El paper deriva el estimador KDE univariado
+fˆ(t) = (1/n)·Σ K(x_i,t), presenta kernels simétricos (Epanechnikov, Biweight,
+Triangular, Gaussiano, Rectangular) y asimétricos (Gamma, Gaussiano inverso,
+Lognormal), define medidas de error (MSE, MISE, AMISE, ISE) y dos métodos para
+el parámetro de suavizado h: la regla del pulgar de Silverman y la validación
+cruzada por mínimos cuadrados (LSCV).
+
+3. HALLAZGOS CLAVE
+- El estimador KDE, a diferencia del histograma, no requiere discretizar los datos
+  en intervalos (bins), preservando la ubicación exacta de cada observación de la
+  muestra.
+- La regla de Silverman ("rule of thumb") para el ancho de banda óptimo bajo
+  distribución aproximadamente normal es h = 1.06·σ̂·n^(-1/5) (ecuación 13); una
+  versión robusta a outliers usa el rango intercuartil: h = 0.79·IQR·n^(-1/5)
+  (ecuación 14).
+- Silverman propone una versión combinada y reducida para evitar sobre-suavizado
+  en distribuciones no unimodales: h = 0.9·min(σ̂, IQR/1.34)·n^(-1/5) (ecuación 15),
+  ampliamente usada en la práctica ("Silverman's bandwidth" o "rule of thumb").
+- El sesgo (bias) del estimador kernel es "un orden de magnitud mejor" que el del
+  estimador por histograma (citando a Sheather 2004).
+- El KDE sugiere multimodalidad de forma más convincente que el histograma, aunque
+  los autores advierten (citando a Silverman) que "puede ser fútil esperar alta
+  potencia estadística de procedimientos dirigidos a hipótesis tan amplias como
+  unimodalidad y multimodalidad" — la forma multimodal de un KDE no prueba
+  multimodalidad real, solo sugiere posible heterogeneidad a investigar.
+- En el caso bivariado, la aplicación de KDE es aún más ventajosa que en 1D, porque
+  el histograma 2D requiere además definir la orientación de los bins, una fuente
+  adicional de subjetividad.
+- La validación cruzada por mínimos cuadrados (LSCV) tiene inconvenientes prácticos:
+  alta varianza entre muestras de la misma distribución, mínimos múltiples y a veces
+  ausencia de mínimo.
+
+4. RELACIÓN CON TU TESIS
+Este paper se usa exclusivamente como respaldo metodológico en el Capítulo 2
+(Fundamentación) para justificar el uso de KDE en la construcción de las
+distribuciones de probabilidad de viento y precipitación por región y fase. En
+L203 se afirma: "Como señala \citet{weglarczyk2018kernel}, este enfoque evita el
+sesgo inherente al agrupamiento en clases de un histograma, preservando la
+ubicación exacta de cada observación." En L211 se usa para justificar la elección
+del ancho de banda: "Esta regla ofrece un compromiso asintóticamente óptimo entre
+sesgo y varianza para distribuciones aproximadamente unimodales
+\citep{weglarczyk2018kernel}, condición razonablemente satisfecha por las
+distribuciones de viento y precipitación dentro de cada combinación
+región-fase." Esto corresponde directamente a la regla de Silverman (ecuaciones
+13-15 del paper) aplicada como criterio de suavizado en el análisis de PDFs de la
+tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Węglarczyk (Cracow University of Technology, Instituto de Gestión del Agua) trabaja
+en hidrología estadística y aplica KDE a series hidrológicas (caudales, precipitación
+máxima). El artículo es un compendio didáctico que se apoya fuertemente en el texto
+clásico de Silverman (1986, "Density Estimation for Statistics and Data Analysis"),
+la referencia fundacional de KDE citada repetidamente. No forma parte de la línea
+de ciclones extratropicales de la tesis, sino que aporta una herramienta estadística
+transversal (KDE/PDF) que se combina en el marco metodológico con Wilks (2019) para
+el tratamiento estadístico general de variables atmosféricas.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- No es un estudio empírico atmosférico; los ejemplos aplicados son de hidrología
+  (caudales fluviales) y climatología puntual polaca, no de ciclones ni de
+  variables sinópticas — la extrapolación a distribuciones de viento/precipitación
+  ciclónica es responsabilidad de la tesis, no un resultado propio del paper.
+  extrapolación a distribuciones de viento/precipitación ciclónica es implícita.
+- El propio autor reconoce que la elección del coeficiente de suavizado conserva
+  un componente subjetivo ("the value of smoothing coefficient is to some extent
+  a subjective estimate").
+- La regla de Silverman asume una distribución subyacente aproximadamente normal;
+  su desempeño se degrada para distribuciones marcadamente multimodales o de colas
+  muy pesadas (el propio texto reconoce el problema de "probability leakage" bajo
+  cero para variables no negativas).
+- El método LSCV, alternativa a la regla de Silverman, no se usa en la tesis pero
+  el paper documenta sus limitaciones (alta varianza, mínimos espurios).
+- Es un artículo de conferencia corto (7 páginas), de carácter divulgativo/tutorial,
+  no una investigación original con revisión exhaustiva de nuevos métodos.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar KDE y no simplemente histogramas para comparar las
+  distribuciones de viento/precipitación entre regiones? R: El histograma introduce
+  subjetividad en el ancho y posición de los bins y discretiza la información,
+  mientras que el KDE preserva la ubicación exacta de cada dato y permite una
+  comparación más suave y menos sesgada entre regiones/fases (Węglarczyk 2018).
+- P: ¿Qué ancho de banda (bandwidth) se usó y por qué? R: Se aplicó la regla de
+  Silverman (rule of thumb), h=1.06·σ·n^(-1/5) o su variante robusta con IQR,
+  que ofrece un compromiso asintóticamente óptimo sesgo-varianza para
+  distribuciones razonablemente unimodales, como es el caso de las variables
+  analizadas por región-fase en la tesis.
+- P: ¿Qué ocurre si la distribución de una región-fase no es unimodal? R: El
+  propio Węglarczyk advierte que la regla de Silverman puede sobre-suavizar
+  distribuciones no unimodales; en ese caso el pico secundario podría diluirse,
+  una limitación a considerar al interpretar colas o multimodalidad en los
+  resultados de la tesis.
+- P: ¿Es aplicable KDE 2D (bivariado) a viento y precipitación conjuntos? R: El
+  paper muestra que la ventaja de KDE sobre histograma es aún mayor en 2D
+  (evita la subjetividad de orientar los bins), aunque advierte del problema de
+  "curse of dimensionality" en dimensiones mayores, relevante si se extendiera
+  el análisis conjunto a más de dos variables.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/weglarczyk2018kernel.md

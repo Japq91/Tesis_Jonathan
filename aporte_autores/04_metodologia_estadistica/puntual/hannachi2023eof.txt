@@ -1,0 +1,150 @@
+============================================================
+CARTILLA DE ESTUDIO — Hannachi et al. 2023 — Common EOFs multi-modelo
+============================================================
+
+REFERENCIA COMPLETA
+Hannachi, A., Finke, K. y Trendafilov, N. (2023). Common EOFs: a tool for
+multi-model comparison and evaluation. Climate Dynamics, 60(5), 1689-1703.
+DOI: 10.1007/s00382-022-06409-8
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita en solo dos pasajes (Precipitación y Viento), ambos para respaldar un
+principio general de reducción dimensional del EOF (que el primer modo
+concentra la mayor fracción posible de varianza, y que los modos secundarios
+significativos dejan de ser "ruido estadístico"), no para su aporte
+metodológico específico (comparación multi-modelo).
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El artículo presenta el método de "Common EOFs" (EOF comunes), una técnica
+para comparar y evaluar simulaciones de múltiples modelos climáticos o
+reanálisis de forma simultánea, mediante diagonalización simultánea de varias
+matrices de covarianza (una por modelo/reanálisis) con un algoritmo paso a
+paso (step-wise) que garantiza una disminución monótona de los autovalores en
+todos los grupos a la vez. Es un artículo metodológico (no un estudio de
+ciclones ni de campos de superficie de viento/precipitación), motivado por la
+necesidad de comparar de forma robusta el creciente volumen de simulaciones
+climáticas (CMIP6) y productos de reanálisis. Su relevancia para la tesis es
+tangencial: se cita únicamente por un principio general de reducción
+dimensional EOF, no por su método central de comparación multi-modelo.
+
+2. METODOLOGÍA
+
+- Método: diagonalización simultánea de múltiples matrices de covarianza
+  mediante un algoritmo de iteración de potencia rápido/económico (a
+  diferencia de la diagonalización de Jacobi del método original de Flury y
+  Gautschi 1986), que permite encontrar un número limitado de elementos
+  propios favoreciendo la reducción dimensional.
+- Datos: cuatro productos de reanálisis principales (incluye ERA5, ERA-Interim,
+  JRA55 y NCEP) y varias simulaciones históricas de modelos climáticos de
+  CMIP6 (Coupled Model Intercomparison Project Fase 6).
+- Variables analizadas: campos troposféricos y estratosféricos, medias
+  mensuales y datos diarios de invierno (DJF) sobre el Hemisferio Norte
+  (p. ej., anomalías de SLP, geopotencial en 500 hPa, temperatura a 2 m,
+  geopotencial en 10 hPa).
+- Aplicación en modo-T (T-mode): los "grupos" representan distintos períodos
+  temporales dentro de una misma muestra, permitiendo investigar la
+  importancia relativa de la fuente de variación a través del tiempo.
+
+3. HALLAZGOS CLAVE
+
+- El método muestra consistencia entre los campos de masa (SLP, geopotencial
+  en niveles medios) de los distintos productos de reanálisis, pero revela
+  diferencias significativas en la temperatura del aire en superficie a 2 m en
+  términos de varianza explicada.
+- Las simulaciones de CMIP6 muestran diferencias en el porcentaje de varianza
+  explicada de los EOF comunes líderes, con una variación entre grupos de
+  aproximadamente 5-10% en la troposfera y de hasta ~25% en la estratosfera.
+- El modo común líder (T-mode, DJF, temperatura a 2 m diaria) revela un
+  vínculo entre una estructura dipolar (polaridad opuesta entre
+  Groenlandia/Archipiélago Ártico Canadiense y el norte de Eurasia/Siberia), la
+  Oscilación del Atlántico Norte (NAO) y el vórtice polar.
+- El método de EOF comunes permite combinar información de todos los grupos
+  simultáneamente, en vez de analizar cada grupo por separado o usar solo el
+  EOF de la media del conjunto (ensemble mean), superando la limitación de que
+  las series temporales resultantes de EOF de la media no están cerca de ser
+  no-correlacionadas.
+- El algoritmo propuesto por los autores supera a métodos previos de EOF
+  comunes (Flury y Gautschi 1986; usados por apenas dos estudios anteriores en
+  climatología, Frankignoul et al. 1995 y Sengupta y Boyle 1998) al permitir
+  reducción dimensional, algo que los algoritmos anteriores de diagonalización
+  simultánea no garantizaban.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap05-Precipitacion (L147): "La consolidación de esta banda periférica
+  genera así una reducción dimensional efectiva \citep{hannachi2023eof}, donde
+  el primer modo retiene la mayor fracción posible de la varianza total del
+  campo." Este es un uso GENÉRICO del principio de reducción dimensional
+  propio de cualquier EOF (incluido el EOF común), no un hallazgo específico
+  sobre precipitación de ciclones citado del artículo — el artículo no analiza
+  precipitación de ciclones extratropicales del Atlántico Sur en ningún
+  momento.
+- Cap04-Viento (L262): "Los modos secundarios de p90 han dejado de ser ruido
+  estadístico \citep{hannachi2023eof}, consistente con el aplanamiento del
+  espectro de autovalores..." De nuevo, un principio general de significancia
+  estadística de modos EOF, no un resultado replicado del artículo (que
+  evalúa significancia de modos en el contexto de comparación de modelos
+  climáticos globales, no de campos de viento ciclónico regional).
+- EVALUACIÓN DE FIDELIDAD: ambas citas son metodológicamente razonables (el
+  principio de que el primer EOF maximiza la varianza explicada es válido y
+  general en la familia de métodos de Hannachi), pero serían más precisas si
+  se citara en su lugar a hannachi2007empirical (la revisión general de EOF) o
+  a la teoría clásica de EOF (Lorenz 1956; Jolliffe 2002), dado que
+  hannachi2023eof está específicamente dedicado al caso de comparación
+  multi-modelo/multi-reanálisis, un contexto distinto al de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Es la publicación más reciente de Abdel Hannachi entre las citadas en la
+tesis, coescrita con Kathrin Finke (Universidad de Estocolmo) y Nickolay
+Trendafilov (especialista en análisis multivariado estadístico, Universidad de
+Nápoles). Extiende directamente el marco conceptual de "PCA de tres modos/
+grupos múltiples" que Hannachi había descrito en hannachi2007empirical, ahora
+aplicado específicamente al problema de comparación robusta de múltiples
+modelos climáticos (CMIP6) y reanálisis, un problema de creciente relevancia
+dado el volumen de simulaciones climáticas disponibles.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Está diseñado y validado para comparación multi-modelo/multi-reanálisis del
+  Hemisferio Norte en campos de gran escala (SLP, geopotencial, temperatura);
+  no se ha aplicado ni validado en el contexto de campos de superficie
+  (viento a 10 m, precipitación) centrados en ciclones extratropicales del
+  Atlántico Sur, que es el contexto de aplicación en la tesis.
+- El método de EOF comunes requiere múltiples grupos de covarianza
+  (típicamente distintos modelos o reanálisis); su uso en la tesis es
+  puramente conceptual (principio de reducción dimensional), no una aplicación
+  directa del algoritmo de diagonalización simultánea descrito en el
+  artículo.
+- Los propios autores señalan que la comparación con métodos similares (common
+  basis function approach; distinct EOF analysis) queda fuera del alcance del
+  artículo y se deja para trabajo futuro.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Aplicó usted el método de 'Common EOFs' de Hannachi et al. (2023) en su
+  tesis?" Respuesta: no directamente; el método de diagonalización simultánea
+  multi-modelo no se aplica en la tesis. La cita se usa únicamente para
+  respaldar un principio general de reducción dimensional (el primer modo EOF
+  concentra la mayor fracción de varianza), que es aplicable a cualquier
+  análisis EOF, incluido el univariado y el MEOF de la tesis.
+- "¿Por qué citar un artículo sobre comparación multi-modelo para justificar
+  un punto sobre el espectro de autovalores de sus propios ciclones?"
+  Respuesta: es una cita de respaldo del principio estadístico general, común
+  a toda la familia de métodos EOF de Hannachi; se reconoce que
+  hannachi2007empirical sería una referencia más directa y específica para
+  este punto que hannachi2023eof.
+- "¿Qué relación tiene el vórtice polar y la NAO discutidos en este artículo
+  con su tesis sobre ciclones del Atlántico Sur?" Respuesta: ninguna directa;
+  esos hallazgos corresponden al Hemisferio Norte y son ejemplos aplicados del
+  método de EOF comunes, no resultados usados por la tesis.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/hannachi2023eof.md (abstract, Sección 1
+Introducción y motivación del método Common EOF, Sección 6 Summary and
+conclusion).

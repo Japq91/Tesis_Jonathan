@@ -1,0 +1,12 @@
+# Jupyter / Python artifacts
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Versiones descartadas de la tesis, solo para referencia local
+antes/
+tex_es/antes/
+tex_es/antes_new/
+
+# PDFs de papers de referencia (pesados, material de consulta, no la tesis)
+papers/files_PDF/

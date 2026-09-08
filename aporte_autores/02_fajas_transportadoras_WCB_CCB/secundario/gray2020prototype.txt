@@ -1,0 +1,131 @@
+============================================================
+CARTILLA DE ESTUDIO — Gray, Martínez-Alvarado, Ackerley & Suri 2020 — herramienta operativa de precursor de sting jet y caso Storm Brendan
+============================================================
+
+REFERENCIA COMPLETA
+Gray, S., Martínez-Alvarado, O., Ackerley, D., & Suri, D. (2020). Development
+of a prototype real-time sting-jet precursor tool for forecasters. Weather,
+76. DOI: 10.1002/wea.3889
+(Nota: el artículo se publicó en acceso anticipado en 2020 —confirmado por el
+pie de página del propio PDF, "© 2020 The Authors"— aunque apareció en el
+número impreso de Weather de noviembre de 2021, volumen 76.)
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 04 (Resultados de Viento), Sección
+sec:kde_espacial_p90, inmediatamente después de la referencia a Shapiro &
+Keyser (1990), como una tercera línea de evidencia —esta vez observacional y
+casi en superficie— de la magnitud del viento en la región de fractura
+frontal/CCB de ciclones intensos, y como ejemplo de la relevancia práctica
+(no solo académica) de caracterizar estas estructuras.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (diagnóstico de precursor CSI/DSCAPE; no es un algoritmo de rastreo de MSLP/vorticidad)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo breve de la revista "Weather" (Royal Meteorological Society)
+que describe el desarrollo de una herramienta operativa en tiempo real para
+que los pronosticadores del Met Office británico identifiquen condiciones
+favorables a la ocurrencia de sting jets en ciclones que se aproximan al
+Reino Unido. Adapta el diagnóstico de precursor de sting jet (SJP, basado en
+inestabilidad simétrica condicional, CSI/DSCAPE), previamente desarrollado
+para climatologías de investigación sobre reanálisis (Martínez-Alvarado et
+al. 2013; Hart et al. 2017), para que funcione sobre la salida de modelos
+operativos de predicción numérica del tiempo. El artículo ilustra el
+funcionamiento de la herramienta con el caso de la tormenta Brendan (enero de
+2020).
+
+2. METODOLOGÍA
+- Adaptación del diagnóstico SJP (energía convectiva disponible de flujo
+  descendente por inestabilidad simétrica, DSCAPE; Gray et al. 2011) para
+  ejecutarse sobre la salida operativa de modelos de predicción numérica del
+  Met Office, en lugar de sobre reanálisis.
+- Evaluación cualitativa mediante casos de estudio reales, incluyendo la
+  comparación con observaciones satelitales de viento en superficie
+  (escaterómetro ASCAT, a bordo del satélite EUMETSAT METOP) y con las rachas
+  registradas en estaciones de superficie del Reino Unido.
+- El caso ilustrativo detallado es la tormenta Brendan, que afectó el Reino
+  Unido el 13 de enero de 2020.
+
+3. HALLAZGOS CLAVE
+- La tormenta Brendan se profundizó explosivamente al cruzar el Atlántico
+  Norte: caída de presión central media a nivel del mar de 49 hPa en 24 h
+  (de 997 hPa a las 06:00 UTC del 12 de enero a 948 hPa el 13 de enero).
+- Las rachas de viento en superficie más fuertes en el noroeste de Escocia
+  superaron los 60 nudos, con un máximo de 76 nudos registrado en South Uist.
+- El pronóstico del modelo mostró un núcleo de sting jet superando los
+  40 m/s a ~800 hPa, con vientos intensos extendiéndose hacia la superficie y
+  generando rachas superficiales que superaron a las asociadas al WCB.
+- Las observaciones del escaterómetro ASCAT (viento equivalente a 10 m)
+  fueron consistentes con el pronóstico del modelo, registrando vientos
+  superiores a 55 nudos (~28 m/s) directamente al sur del centro del ciclón,
+  aunque el CCB y el sting jet no pudieron distinguirse en esta observación.
+- El sting jet ya no existía cuando la tormenta llegó al Reino Unido —es
+  decir, el daño observado en el Reino Unido NO fue causado por un sting
+  jet—, pero el diagnóstico de precursor alertó a los pronosticadores sobre
+  la posibilidad de un sting jet con 5 días de anticipación, sirviendo como
+  prueba de concepto de la herramienta.
+
+4. RELACIÓN CON TU TESIS
+- Cap04-Viento (Sección sec:kde_espacial_p90): "Una observación adicional,
+  esta vez casi en superficie y obtenida por sensores remotos durante un
+  caso operativo reciente, la aporta \citet{gray2020prototype} en el
+  desarrollo de una herramienta de pronóstico en tiempo real para el Met
+  Office británico: durante la tormenta Brendan (Reino Unido, enero de
+  2020), que se profundizó 49~hPa en 24~h, el producto de escaterómetro
+  ASCAT --viento equivalente a 10~m-- registró velocidades superiores a
+  55~nudos (${\sim}28$~m\,s$^{-1}$) directamente al sur del centro del
+  sistema, en el sector donde el diagnóstico de precursor de \textit{sting
+  jet} señalaba actividad. Más allá del valor numérico, este trabajo ilustra
+  que la identificación de estas estructuras de mesoescala ya alimenta la
+  emisión de alertas meteorológicas operativas, lo que subraya la relevancia
+  práctica --más allá de la puramente académica-- de caracterizar con
+  precisión la localización de los máximos de viento en ciclones intensos,
+  motivación que anima la caracterización estructural desarrollada en este
+  capítulo."
+Se usa deliberadamente no solo como dato numérico (el valor de ~28 m/s en
+viento equivalente a 10 m es la única referencia realmente "de superficie"
+entre las tres citadas en ese párrafo), sino como argumento de motivación:
+la caracterización estructural de estos máximos tiene aplicación práctica
+directa en la emisión de alertas meteorológicas.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Suzanne Gray y Oscar Martínez-Alvarado (Universidad de Reading), junto con
+Duncan Ackerley y Dan Suri (Met Office), representan la transición de la
+investigación de sting jets desde el diagnóstico climatológico retrospectivo
+(Martínez-Alvarado et al. 2012; Hart et al. 2017) hacia la aplicación
+operativa en pronóstico. Este trabajo antecede a la climatología global de
+\citet{gray2024global} (también citada en esta tesis), que usa una versión
+refinada del mismo diagnóstico SJP sobre ERA5 en ambos hemisferios.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un artículo breve, de naturaleza principalmente descriptiva/operativa,
+  no un estudio de validación estadística exhaustiva; el caso de Brendan se
+  presenta como ilustración de la herramienta, no como evidencia climatológica.
+- El diagnóstico de precursor (CSI/DSCAPE) identifica condiciones favorables,
+  no la existencia confirmada de un sting jet; en el caso de Brendan, el
+  propio artículo aclara que el sting jet se había disipado antes de que la
+  tormenta afectara al Reino Unido.
+- La resolución de los modelos operativos, aunque mayor que la de ERA5, aún
+  puede ser insuficiente para resolver explícitamente el sting jet en sí.
+- Es un estudio centrado en el Atlántico Norte/Reino Unido, sin ninguna
+  extensión al Hemisferio Sur.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué citar una herramienta operativa del Reino Unido en una tesis
+  sobre el Atlántico Sur? R: No se cita por su aplicabilidad geográfica
+  directa, sino porque aporta un valor de viento observado (no modelado)
+  casi en superficie (ASCAT, ~10 m) en la región de fractura frontal de un
+  ciclón intenso, y porque ilustra la relevancia práctica de este tipo de
+  caracterización estructural, más allá de su valor puramente numérico.
+- P: ¿El daño en el Reino Unido durante la tormenta Brendan fue causado por
+  un sting jet? R: No, según el propio artículo; el sting jet ya se había
+  disipado cuando la tormenta llegó al Reino Unido, pero la herramienta
+  precursora había señalado correctamente su posible existencia con
+  antelación.
+- P: ¿Qué instrumento proporcionó el dato de viento casi-superficial citado
+  en tu tesis? R: El escaterómetro ASCAT, a bordo del satélite EUMETSAT
+  METOP, que mide viento equivalente a 10 m sobre el océano.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gray2020prototype.md

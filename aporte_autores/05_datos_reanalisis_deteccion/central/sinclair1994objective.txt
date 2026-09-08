@@ -1,0 +1,149 @@
+============================================================
+CARTILLA DE ESTUDIO — Sinclair 1994 — Climatología objetiva por vorticidad (HS)
+============================================================
+
+REFERENCIA COMPLETA
+Sinclair, M. R. (1994). An Objective Cyclone Climatology for the Southern
+Hemisphere. Monthly Weather Review, 122(10), 2239-2256. American
+Meteorological Society.
+DOI: 10.1175/1520-0493(1994)122<2239:AOCCFT>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en al menos 4 pasajes (Cap01-Introducción x2, Cap02-Fundamentación,
+Cap04-Viento) como el trabajo que estableció el precedente metodológico
+fundamental (uso de vorticidad relativa en lugar de presión mínima) sobre el
+cual se apoya la base de datos de trayectorias (coutodesouza2024new) usada en
+toda la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad geostrófica a 1000 hPa (ζg — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Artículo seminal de Mark Sinclair que desarrolla un método objetivo para
+derivar una climatología de centros de vorticidad ciclónica en el Hemisferio
+Sur, usando análisis ECMWF de 1000 hPa dos veces al día durante 1980-86. Es la
+primera climatología objetiva del HS basada en vorticidad geostrófica relativa
+en lugar de mínimos de presión, resolviendo sesgos de detección documentados
+en climatologías previas basadas en presión (que subrepresentan sistemas
+móviles débiles en la banda 45°-55°S).
+
+2. METODOLOGÍA
+- Datos: geopotencial de 1000 hPa de análisis ECMWF dos veces al día (0000 y
+  1200 UTC), 1980-1986 (7 años), malla 2.5°x2.5° interpolada a una malla
+  polar estereográfica de 63x63 puntos, con filtro de 25 puntos (Bleck 1965)
+  para eliminar ruido de interpolación.
+- Detección de ciclones como mínimos (centros) de vorticidad relativa
+  geostrófica ζg calculada a partir del geopotencial de 1000 hPa mediante
+  splines bicúbicos; umbral de inclusión ζg < -2x10^-5 s^-1, más restrictivo
+  sobre tierra para filtrar heat lows y efectos orográficos.
+- Algoritmo de seguimiento basado en Murray & Simmonds (1991a, "MS"), que
+  predice la siguiente posición, presión y vorticidad de cada centro y
+  empareja centros entre análisis sucesivos minimizando desviaciones respecto
+  a lo predicho.
+- Se calculan también centros de presión mínima en paralelo, para comparar
+  directamente el sesgo entre ambos métodos (vorticidad vs. presión).
+- Filtro de movilidad: se excluyen sistemas con desplazamiento neto <10° de
+  latitud, para eliminar heat lows, vaguadas de sotavento y rasgos anclados a
+  la topografía.
+- Dos métricas de ocurrencia: "densidad de ciclones" (conteo dentro de un
+  radio de 5° de cada punto de grilla) y "densidad de trayectoria" (conteo
+  una sola vez por trayectoria y punto de grilla).
+
+3. HALLAZGOS CLAVE
+- Se identificaron 210,005 centros de vorticidad ciclónica en los 7 años
+  (~41 centros por análisis en promedio); tras eliminar centros no móviles
+  (orográficos/efímeros, ~50% del total), quedaron 42,452 centros en verano y
+  50,772 en invierno (~17 y ~20 centros por análisis, respectivamente).
+- El uso de ζg en lugar de presión mínima incrementó ~50% el número de
+  centros detectados respecto al criterio de "concavidad" de Murray &
+  Simmonds, por la inclusión de sistemas móviles adicionales en 45°-55°S sin
+  mínimo de presión cerrado.
+- Solo 68,170 de los 210,005 centros (~32%) resultaron "cerrados" (asociados
+  a un mínimo de presión); el uso de vorticidad triplicó aproximadamente el
+  número de ciclones incluidos respecto a un criterio basado exclusivamente
+  en presión.
+- Al eliminar los máximos orográficos/estacionarios, la densidad de
+  "trayectoria" (track density) maximiza en un cinturón cerca de 50°S todo el
+  año, en buen acuerdo con los storm tracks baroclínicos de estadísticas de
+  remolinos (Trenberth 1991), en contraste con estudios previos que ubicaban
+  el máximo dentro del "cementerio" ciclónico circumpolar antártico.
+- Se identificó un segundo máximo asociado al chorro subtropical durante
+  invierno y primavera cerca de 40°S en el sector Nueva Zelanda-Pacífico. Los
+  ciclones más intensos ocurrieron con mayor frecuencia en invierno, cerca de
+  Nueva Zelanda, este de Sudamérica y en el Índico sur.
+- Un aumento aparente en el número de ciclones a comienzos de 1983 coincidió
+  con la introducción de la orografía de envolvente (envelope orography) en
+  el modelo del ECMWF, un cambio metodológico/de modelo, no climático —
+  advertencia crítica sobre atribuir tendencias en climatologías de ciclones
+  derivadas de reanálisis a cambios reales.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L12): se cita como el estudio que "estableció el
+  precedente fundamental al utilizar la vorticidad relativa para identificar
+  y rastrear sistemas independientemente del flujo de fondo".
+- Cap01-Introducción (L78): citado junto con sinclair1997objective para
+  justificar que el seguimiento por ζ850 "permite aislar la circulación del
+  sistema del flujo de fondo y capturar sistemas en etapas tempranas que los
+  algoritmos basados en presión mínima tienden a omitir".
+- Cap02-Fundamentación (L38): sustenta que "en sus etapas iniciales, la caída
+  de presión queda frecuentemente enmascarada, presentándose los sistemas
+  como vaguadas abiertas en lugar de centros cerrados".
+- Cap04-Viento (L75): citado junto con simmonds2000mean para argumentar que
+  la dispersión observada en la PDF de viento es "coherente con los métodos
+  basados en vorticidad de Sinclair (1994)".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Primero de una serie de tres artículos metodológicos de Mark Sinclair sobre
+climatología objetiva del HS presentes en este lote (sinclair1994objective,
+sinclair1995climatology y sinclair1997objective), que constituyen una línea
+de investigación coherente: este trabajo establece el método de detección
+por vorticidad; sinclair1995climatology ("SI", en la notación del propio
+autor) extiende el análisis a las etapas del ciclo de vida sobre la misma
+base de datos ECMWF 1980-86; y sinclair1997objective ("SI94"/"SI95" en su
+propia notación) refina la metodología (suavizado Cressman, medida de
+circulación) y actualiza la climatología a 1980-94. Dialoga y contrasta con
+los esquemas basados en presión de Murray & Simmonds (1991) y con la
+climatología posterior de Simmonds & Keay (2000), quienes reconocen un sesgo
+hacia sistemas más profundos/lentos en sus propios métodos basados en
+presión.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El uso de vorticidad es sensible a la resolución de la malla (los umbrales
+  de detección no son directamente comparables entre mallas de distinta
+  resolución), reconocido por el propio autor.
+- Las anomalías costeras/antárticas pueden ser artefactos de reducción de
+  presión a nivel del mar sobre terreno elevado, no vorticidad genuina.
+- El período de datos (1980-86, 7 años) es corto en comparación con
+  reanálisis de 40 años usados en estudios posteriores (p. ej., Simmonds &
+  Keay 2000).
+- El cambio de modelo del ECMWF (abril 1983, orografía de envolvente)
+  introdujo un salto artificial en el conteo de ciclones cerca de tierra que
+  el autor identifica pero no corrige completamente.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué el uso de vorticidad relativa en lugar de presión mínima es
+  metodológicamente preferible para tu base de datos de trayectorias?
+  R: Porque la vorticidad detecta la rotación del sistema independientemente
+  de un gradiente de presión de fondo, permitiendo identificar ciclones en
+  etapas incipientes (vaguadas abiertas) que los esquemas basados en presión
+  mínima omiten sistemáticamente hasta que el sistema profundiza lo
+  suficiente para formar un centro cerrado — el fundamento citado en Cap01 y
+  Cap02 de la tesis.
+- P: ¿Qué consecuencia tiene el cambio de modelo del ECMWF en 1983 para la
+  interpretación de tendencias en climatologías de ciclones?
+  R: Sinclair (1994) documenta que el salto en el número de ciclones
+  detectados cerca de tierra en 1983 coincide con un cambio de modelo
+  (orografía de envolvente), no con una señal climática real — advertencia
+  metodológica relevante para estudios de tendencias basados en reanálisis
+  de largo plazo.
+- P: ¿En qué proporción cambia la muestra de ciclones al pasar de un
+  criterio de presión a uno de vorticidad?
+  R: Solo ~32% de los 210,005 centros de vorticidad detectados resultaron
+  "cerrados" en presión; usar vorticidad casi triplica el número de sistemas
+  incluidos respecto a un criterio basado exclusivamente en mínimos de
+  presión.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_PDF/sinclair1994objective.pdf (el .md estaba
+corrupto/OCR fallido; se usó el PDF directamente con la herramienta Read)

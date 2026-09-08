@@ -1,0 +1,148 @@
+============================================================
+CARTILLA DE ESTUDIO — Naud et al. 2025 — precipitación según tipo de ciclo de vida
+============================================================
+
+REFERENCIA COMPLETA
+Naud, C. M., Martin, J. E., Ghosh, P., Elsaesser, G. S., Booth, J. F. y Posselt, D.
+J. (2025). Lifecycle-Type Matters for Extratropical Cyclone Precipitation
+Production. Geophysical Research Letters, 52(8), e2025GL115153.
+DOI: 10.1029/2025GL115153
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez, en el Capítulo 5 (Precipitación), pero aporta un mecanismo
+mecanístico específico (eficiencia adicional de precipitación en ciclones
+ocluidos) que la tesis conecta con la intrusión seca (dry slot) observada en la
+madurez de los p90.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (algoritmo de Bauer y Del Genio 2006) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio investiga si el tipo de ciclo de vida de un ciclón extratropical —si
+alcanza la oclusión o no— influye en su producción de precipitación,
+independientemente de su intensidad y de la humedad ambiental disponible. Usa
+compuestos ciclón-centrados de precipitación satelital (IMERG) comparando
+ciclones ocluidos y no ocluidos del Hemisferio Norte en invierno. Es un estudio
+observacional de compositing con control estadístico de covariables (submuestreo
+para igualar distribuciones de intensidad y humedad), relevante para la tesis
+porque documenta que la oclusión añade un forzante de ascenso propio (ligado al
+TROWAL / cresta térmica ocluida) que hace a estos ciclones más eficientes
+produciendo precipitación, más allá de su intensidad.
+
+2. METODOLOGÍA
+
+- Datos: IMERG versión 7 "Final Run" (0.1°×0.1°, cada 30 min, agregado en
+  ventanas de 6 h), y reanálisis MERRA-2 para variables de diagnóstico (velocidad
+  vertical a 500 hPa, agua precipitable, viento superficial, temperatura potencial
+  equivalente a 700 hPa).
+- Base de datos de ciclones: Naud et al. (2023), algoritmo de Bauer y Del Genio
+  (2006) sobre SLP de ERA-Interim; Hemisferio Norte, invierno (DJF), 2014-2018.
+- Identificación de oclusión: algoritmo basado en la divergencia del vector
+  unitario del gradiente de espesor 1000-500 hPa cerca del centro del ciclón
+  (convergencia indica estado ocluido).
+- Muestra: 1341 ciclones en intensidad máxima, de los cuales 162 (~12%) se
+  clasificaron como ocluidos.
+- Compuestos ciclón-centrados en malla rectangular de ±1500 km, resolución
+  400 km, centrados en el momento de intensidad máxima (mínimo de SLP).
+- Control estadístico: submuestreo aleatorio de los ciclones no ocluidos (más
+  numerosos) para igualar sus distribuciones de fuerza de ascenso y agua
+  precipitable con las de los ciclones ocluidos, obteniendo un subconjunto de 114
+  no ocluidos comparables.
+
+3. HALLAZGOS CLAVE
+
+- Los ciclones ocluidos producen más precipitación media que los no ocluidos en
+  la mayor parte de las regiones de tormentas del Hemisferio Norte, principalmente
+  porque son colectivamente más intensos (mayor velocidad de ascenso y viento
+  superficial).
+- Al forzar que los no ocluidos tengan distribuciones similares de agua
+  precipitable y fuerza de ascenso a las de los ocluidos, la precipitación sigue
+  siendo mayor en los ocluidos: 8.9, 7.5 y 4.9 mm/h en radios de 500, 1000 y
+  2000 km respectivamente para ocluidos, frente a 7.1, 5.3 y 4.1 mm/h para no
+  ocluidos — una diferencia de hasta 42% en el radio de 1000 km (el que incluye
+  el pico del sector cálido).
+- El máximo de precipitación coincide con la estructura de la temperatura
+  potencial equivalente a 700 hPa: a lo largo de la cresta térmica ocluida
+  (TROWAL) en los ocluidos, y a lo largo del frente cálido en los no ocluidos.
+- La región de ascenso es más compacta e intensa en los ciclones ocluidos (hasta
+  2-4 hPa/h más de diferencia en la fuerza de ascenso máxima), consistente con el
+  mecanismo de ascenso forzado por deformación geostrófica no frontogenética
+  descrito por J. Martin (1999b), exclusivo de la estructura térmica ocluida.
+- Los autores concluyen que los ciclones ocluidos son más eficientes produciendo
+  precipitación para una misma cantidad de humedad e intensidad que los no
+  ocluidos, por lo que el "tipo de ciclo de vida" debe considerarse un factor
+  independiente de la intensidad y la humedad ambiental en la predicción de
+  cambios futuros de precipitación.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 5 (Precipitación), línea 108: "Según \citet{naud2025lifecycle},
+los ciclones ocluidos no solo producen más precipitación acumulada y en área que
+los no ocluidos, sino que poseen un forzante de ascenso propio que los hace más
+eficientes generando precipitación en su periferia. Al alcanzar su máxima
+intensidad, los p90 profundizan la intrusión seca descrita en la
+Sección~\ref{sec:pdf_tp} \citep{shapiro1999bridge}, que aquí erradica la nubosidad
+profunda del núcleo y abre el dry slot característico." El paper aporta el
+mecanismo de "forzante de ascenso propio" ligado a la oclusión, que la tesis usa
+como contraste/complemento a la intrusión seca (dry slot) que documenta en la
+madurez de los sistemas p90 del Atlántico Sur —la tesis conecta la eficiencia
+pluviométrica periférica de la oclusión con el vaciamiento simultáneo del núcleo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Catherine Naud (Columbia/NASA-GISS), junto con Jonathan Martin (Wisconsin-Madison,
+autor de la teoría del TROWAL y la deformación geostrófica no frontogenética en
+1998-1999) y James Booth (CCNY), constituye el grupo que más ha desarrollado la
+cuantificación observacional de la precipitación ligada a la oclusión. Este
+artículo es la continuación directa de Naud et al. (2023, algoritmo de detección
+de oclusión) y Naud et al. (2024, vista CloudSat-CALIPSO de nubes en cuadrantes
+ocluidos), y depende metodológicamente de naud2020evaluation (mismo esquema de
+proyección ciclón-centrada de IMERG, "fully described in Naud et al. 2018"). En la
+tesis, este paper se relaciona con naud2020evaluation (mismo grupo, misma base
+metodológica IMERG) y con shapiro1999bridge (concepto de dry slot / bridging
+front), formando parte del bloque de literatura sobre estructura fina del ciclo de
+vida en la fase de madurez/oclusión.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El estudio se limita al Hemisferio Norte en invierno (DJF), 2014-2018; no
+  incluye el Hemisferio Sur ni el Atlántico Sudoccidental, por lo que la tesis
+  extrapola el mecanismo de eficiencia por oclusión a un contexto geográfico
+  distinto.
+- La muestra de ciclones ocluidos es relativamente pequeña (162 de 1341, ~12%) y
+  el método de detección de oclusión es conservador por diseño, lo que implica
+  que algunos ciclones clasificados como "no ocluidos" podrían en realidad
+  ocluirse brevemente o con señal débil (reconocido explícitamente por los
+  autores).
+- El submuestreo aleatorio para igualar distribuciones de PW y ascenso reduce la
+  muestra de no ocluidos a 114 casos, lo cual, aunque necesario
+  metodológicamente, limita la robustez estadística de la comparación final.
+- El estudio no examina otros factores potencialmente relevantes (forzamiento de
+  niveles altos, presencia/intensidad del WCB, estructura frontal específica),
+  lo cual los propios autores señalan como limitación y dirección de trabajo
+  futuro.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Cómo conecta la tesis un hallazgo del Hemisferio Norte (eficiencia
+  pluviométrica de la oclusión) con el "dry slot" que describes en el Atlántico
+  Sur? Respuesta: se usa como contraste conceptual: mientras Naud et al. (2025)
+  muestra que la oclusión sostiene precipitación eficiente en la periferia (cresta
+  térmica ocluida/TROWAL), la tesis documenta que en los p90 del Atlántico Sur el
+  núcleo se seca (dry slot) simultáneamente durante la madurez — ambos procesos
+  son compatibles porque ocurren en regiones distintas del ciclón (periferia vs.
+  núcleo).
+- ¿Qué porcentaje de exceso de precipitación atribuyen los autores
+  específicamente al tipo de ciclo de vida (oclusión), controlando por intensidad
+  y humedad? Respuesta: hasta 42% de exceso en el radio de 1000 km, tras igualar
+  estadísticamente las distribuciones de fuerza de ascenso y agua precipitable
+  entre ocluidos y no ocluidos.
+- ¿Qué proporción de los ciclones de la muestra global se clasificó como
+  ocluida? Respuesta: aproximadamente 12% (162 de 1341 ciclones en su intensidad
+  máxima), en el Hemisferio Norte durante el invierno boreal 2014-2018.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/naud2025lifecycle.md (leído completo: resumen,
+introducción, datos y métodos, resultados de las secciones 3 y 4, y conclusiones).

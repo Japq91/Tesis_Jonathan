@@ -1,0 +1,167 @@
+============================================================
+CARTILLA DE ESTUDIO — Hoskins & Hodges 2005 — storm tracks del Hemisferio Sur
+============================================================
+
+REFERENCIA COMPLETA
+Hoskins, B. J., & Hodges, K. I. (2005). A New Perspective on Southern Hemisphere
+Storm Tracks. Journal of Climate, 18(20), 4108-4129. American Meteorological
+Society. DOI: 10.1175/JCLI3570.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita cinco veces a lo largo de los capítulos 01 (Introducción), 02
+(Fundamentación) y 04 (Resultados de viento); es la referencia climatológica
+fundacional sobre storm tracks del Hemisferio Sur y sobre el acoplamiento
+baroclínico troposférico de los ciclones extratropicales.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (técnica euleriana de varianza filtrada de storm track; no rastrea ciclones individuales)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El artículo ofrece una visión detallada y renovada ("a new perspective") de los
+storm tracks del Hemisferio Sur (HS), combinando el enfoque euleriano clásico
+(varianza filtrada en banda sinóptica 2-6 días) con técnicas modernas de
+seguimiento objetivo de sistemas (feature-tracking) aplicadas a 45 años de
+datos del reanálisis ERA-40 del ECMWF. Es el estudio equivalente para el HS al
+trabajo previo de los mismos autores sobre el Hemisferio Norte (Hoskins &
+Hodges 2002), y se enfoca en la estación de invierno (JJA), la de mayor
+asimetría zonal. Es un estudio observacional/climatológico de referencia,
+altamente citado, que estableció el marco conceptual moderno para entender
+la estructura espiral de los storm tracks del HS y su acoplamiento con la
+topografía (Andes, meseta sudafricana) y el chorro subtropical.
+
+2. METODOLOGÍA
+
+- Datos: ERA-40 (ECMWF Re-Analysis), 45 años (1958-2002), resolución espectral
+  T159 (~125 km) con 60 niveles verticales.
+- Técnica euleriana: varianza filtrada en banda sinóptica (2-6 días) mediante
+  descomposición de Fourier, truncada en número de onda total 42, expresada
+  como desviación estándar, para múltiples variables (vorticidad a 250 hPa,
+  viento meridional a 250 y 850 hPa, geopotencial en superficies de PV, MSLP).
+- Técnica de seguimiento (system-centered): esquema objetivo de Hodges
+  (1995, 1996, 1999) aplicado sobre la esfera, tras remover el fondo de gran
+  escala (armónicos esféricos ≤5) y reducir a resolución T42 (Gaussiana) para
+  excluir estructuras de muy pequeña escala; sistemas filtrados a duración ≥2
+  días y desplazamiento ≥10° (geodésico).
+- Se calculan densidades de trayectoria y de génesis/lisis, intensidad media,
+  velocidad media y tasa de crecimiento/decaimiento, tanto para sistemas
+  ciclónicos como anticiclónicos, a 850, 500 y 250 hPa.
+- Se valida con datos exclusivamente de la era satelital para confirmar que las
+  conclusiones no dependen del periodo pre-satelital.
+
+3. HALLAZGOS CLAVE
+
+- El storm track de invierno del HS tiene forma de espiral, no de banda
+  zonalmente simétrica: comienza al norte de Nueva Zelanda, cruza el Pacífico
+  Sur, se rompe sobre Chile, se reinicia sobre la meseta patagónica, alcanza su
+  pico en el Océano Índico y decae hacia la costa antártica, terminando en el
+  Mar de Ross.
+- La máxima actividad de tormentas en el storm track de alta latitud ocurre,
+  en todas las estaciones del año, en las regiones del Atlántico e Índico.
+- En la región de los Andes hay ciclogénesis asociada al chorro subtropical y,
+  más al polo, ciclogénesis ligada al decaimiento de sistemas en la ladera de
+  barlovento y regeneración en la de sotavento (evidencia de acoplamiento
+  troposférico profundo entre niveles).
+- Para el 75% de los eventos de ciclogénesis a 850 hPa en la región de
+  Sudamérica se identificó una característica ciclónica preexistente y
+  contemporánea a 500 hPa (y en el 61% de los casos, ubicada al oeste del
+  sistema de bajo nivel), evidencia cuantitativa del acoplamiento baroclínico
+  vertical en el desarrollo de los ciclones.
+- La vida media de los sistemas es notablemente uniforme, de 5-6 días, aunque
+  menor cerca de la Antártida (~4 días) y mayor en el Pacífico subtropical
+  occidental (~7 días); las velocidades medias alcanzan ~18 m/s en el Índico
+  occidental y ~14 m/s en otras regiones.
+- Se describe el patrón de "plates" superpuestas (regiones de génesis que
+  alimentan el storm track corriente abajo mediante desarrollo downstream en
+  la espiral troposférica superior), consistente con la propagación de
+  paquetes de ondas baroclínicas a lo largo del storm track.
+
+4. RELACIÓN CON TU TESIS
+
+Capítulo 01 (Introducción), línea 12: se cita para establecer que "el análisis
+de los storm tracks... muestra a los ciclones extratropicales como el
+mecanismo dominante para el transporte latitudinal de energía en el Hemisferio
+Sur, equilibrando el gradiente térmico planetario", vinculándolo con el
+precedente de Sinclair (1994) sobre seguimiento objetivo mediante vorticidad
+relativa.
+
+Capítulo 02 (Fundamentación), línea 9: se usa para consolidar "la teoría
+clásica" de ciclones como vórtices de núcleo frío dominados por inestabilidad
+baroclínica de latitudes medias, como punto de partida antes de introducir
+matices regionales (Sinclair 1995) para el Atlántico Sur.
+
+Capítulo 02, línea 48: se cita para justificar el uso de la vorticidad relativa
+(ζ) a 850 hPa como campo de identificación, ya que "permite filtrar el flujo
+zonal de traslación y capturar la rotación ciclónica intrínseca... antes de que
+ésta se manifieste en el campo de presión" — coherente con la metodología del
+paper de remover el fondo de gran escala antes del seguimiento.
+
+Capítulo 02, línea 107: cita directa de que "el desarrollo en estas latitudes
+está estrictamente acoplado en toda la columna troposférica, siendo gobernado
+por la inestabilidad baroclínica asociada al chorro polar y la propagación de
+ondas de Rossby a lo largo del storm track" — respaldado por el hallazgo del
+75% de acoplamiento vertical 850-500 hPa reportado en el paper.
+
+Capítulo 04 (Viento), línea 173: se cita junto con dos santos et al. (2023)
+para sustentar que "la evolución estructural de los ciclones depende del
+acoplamiento baroclínico", vinculado con el crecimiento sistemático del radio
+ciclónico documentado por Simmonds & Keay (2000).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Brian Hoskins es una figura central en dinámica de latitudes medias
+(teoría de PV invertibilidad, ciclogénesis tipo B, teoría cuasi-geostrófica) y
+Kevin Hodges es el desarrollador del algoritmo de seguimiento objetivo de
+ciclones usado en toda esta línea de investigación. Este artículo es la
+contraparte para el HS del estudio de Hoskins & Hodges (2002) sobre el
+Hemisferio Norte, y antecede/dialoga directamente con Inatsu & Hoskins (2004,
+también citado en esta tesis), que investiga experimentalmente (con un GCM) las
+causas de la asimetría zonal descrita aquí observacionalmente. Es, junto con
+Sinclair (1994, 1995), una de las referencias fundacionales de la climatología
+moderna de ciclones del HS basada en tracking objetivo, y sigue siendo
+ampliamente citado como estándar de comparación en estudios posteriores
+(incluyendo Hodges et al. 2011, también citado en esta tesis).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Usa un único reanálisis (ERA-40), que para el HS tiene menor densidad
+  observacional en el periodo pre-satelital (antes de fines de los 1970); los
+  propios autores reconocen que esto exige cautela en tendencias de largo
+  plazo, aunque afirman que las conclusiones estructurales no cambian entre
+  periodos.
+- El análisis principal se concentra en la estación de invierno (JJA); las
+  complejidades estacionales del HS (oscilación semianual, desfase térmico
+  mayor que en el HN) se dejan explícitamente para trabajo futuro.
+- La resolución T159 (~125 km) es baja comparada con reanálisis posteriores
+  (p. ej. ERA5, ~31 km), lo que limita la representación de estructuras de
+  mesoescala dentro de los ciclones.
+- El criterio de asociación vertical (850-500 hPa) usado para establecer el
+  acoplamiento troposférico es descrito por los propios autores como "quite
+  strict" (bastante estricto), por lo que el 75% reportado podría ser un límite
+  inferior del acoplamiento real.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- P: ¿Cómo se traduce la estructura en espiral del storm track del HS descrita
+  por Hoskins & Hodges a la región específica del Atlántico Sudoccidental que
+  usted estudia?
+  R: El Atlántico Sudoccidental corresponde al tramo inicial de la espiral,
+  justo aguas abajo de la ciclogénesis en el lee de los Andes, una de las tres
+  regiones de génesis identificadas por los autores que alimentan el tramo
+  Atlántico-Índico del storm track.
+- P: ¿Por qué usar vorticidad relativa a 850 hPa en vez de MSLP para identificar
+  ciclones, según este marco teórico?
+  R: Porque la vorticidad filtra el flujo zonal de traslación de fondo y
+  responde más directamente a la rotación ciclónica de mesoescala antes de que
+  se manifieste en la presión superficial, siguiendo la justificación
+  metodológica de Hoskins y Hodges (y de Hodges 1995/1999).
+- P: ¿Qué evidencia cuantitativa del acoplamiento baroclínico vertical aporta
+  este estudio?
+  R: El hallazgo de que el 75% de los eventos de ciclogénesis en superficie en
+  la región del subtrópico sudamericano tuvieron una característica ciclónica
+  preexistente y contemporánea a 500 hPa, con un 61% de esos casos ubicados al
+  oeste del sistema de bajo nivel.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/hoskins2005new.md

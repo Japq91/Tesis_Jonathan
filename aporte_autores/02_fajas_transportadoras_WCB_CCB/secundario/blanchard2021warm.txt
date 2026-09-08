@@ -1,0 +1,154 @@
+============================================================
+CARTILLA DE ESTUDIO — Blanchard et al. 2021 — convección de mesoescala en el WCB
+============================================================
+
+REFERENCIA COMPLETA
+Blanchard, N., Pantillon, F., Chaboureau, J.-P. y Delanoë, J. (2021). Mid-level
+convection in a warm conveyor belt accelerates the jet stream. Weather and Climate
+Dynamics, 2(1), 37-53. DOI: 10.5194/wcd-2-37-2021
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en cuatro capítulos distintos (Introducción, Fundamentación, Precipitación,
+Viento) para sustentar dos ideas recurrentes: (1) la orientación característica del
+ascenso del WCB hacia el noreste en el Hemisferio Norte (base del razonamiento por
+"efecto espejo" hacia el sureste en el HS), y (2) el mecanismo de liberación de
+calor latente en el WCB como motor de intensificación del ciclón y de la
+precipitación. No es un pilar metodológico pero sí conceptual-mecanístico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio investiga cómo la convección de mesoescala embebida en el flujo de
+salida (outflow) de un Cinturón Transportador Cálido (WCB) afecta la estructura de
+vorticidad potencial (PV) cerca de la tropopausa y, en consecuencia, acelera
+localmente la corriente en chorro (jet stream) e influye en la circulación de gran
+escala aguas abajo. El caso de estudio es el ciclón "Stalactite" del Atlántico
+Norte, observado durante la campaña NAWDEX (North Atlantic Waveguide and Downstream
+Impact Experiment) el 2 de octubre de 2016. Es un estudio de caso combinando
+observaciones aerotransportadas de alta resolución con simulaciones numéricas de
+alta resolución (convection-permitting), relevante para la tesis porque documenta
+en detalle el mecanismo diabático por el cual el WCB modula tanto la dinámica de
+niveles altos como la intensificación del sistema en niveles bajos.
+
+2. METODOLOGÍA
+
+- Observaciones aerotransportadas: radar Doppler de nubes RASTA (RAdar Airborne
+  System) y cuatro dropsondes Vaisala RD94 lanzadas desde el avión Falcon 20
+  (SAFIRE) el 2 de octubre de 2016 entre las 10:25 y 11:27 UTC, sobre la región de
+  salida del WCB del ciclón Stalactite, cerca de Islandia/Groenlandia.
+- Simulaciones numéricas: modelo mesoescalar no hidrostático Meso-NH (versión 5.3),
+  con resolución horizontal de 2.5 km y niveles verticales desde 60 m (superficie)
+  hasta 600 m (niveles altos), inicializado con análisis operacionales del ECMWF.
+  Se corren dos experimentos: REF (simulación de referencia con física completa) y
+  NODIA (experimento de sensibilidad con los intercambios de calor diabático de los
+  procesos de nube anulados), ambos desde 00:00 UTC del 2 de octubre hasta 12:00 UTC
+  del 3 de octubre de 2016.
+- Trayectorias lagrangianas online (esquema piecewise parabolic method) para
+  identificar ascensos WCB (criterio: elevación ≥150 hPa en 12 h), distinguiendo
+  ramas anticiclónica y ciclónica según su curvatura.
+- Herramienta de clustering (Dauhut et al., 2016) para identificar estructuras
+  coherentes de ascenso convectivo (velocidad vertical > 0.3 m/s) y estructuras
+  coherentes de PV negativa (< -1 PVU).
+
+3. HALLAZGOS CLAVE
+
+- La simulación REF reproduce correctamente la trayectoria del ciclón Stalactite,
+  incluyendo un desplazamiento abrupto hacia el este y una profundización de 968 a
+  ~955 hPa; en NODIA (sin calor diabático de nubes) el mínimo de presión es ~5 hPa
+  más alto y el desplazamiento abrupto hacia el este no se reproduce.
+- El chorro en niveles altos (jet stream) alcanza un máximo de 42 m/s en REF, frente
+  a solo 38 m/s en NODIA — es decir, el calor diabático de la convección intensifica
+  el jet en aproximadamente 4 m/s en este caso.
+- Aproximadamente la mitad de los ascensos WCB analizados tienen curvatura
+  anticiclónica (53%) y la otra mitad ciclónica (47%); los ascensos anticiclónicos
+  alcanzan mayor altitud (de ~4 km a ~7 km entre las 00 y 12 UTC) que los ciclónicos
+  (que permanecen por debajo de ~5 km).
+- Los ascensos rápidos (>100 hPa en 2 h) de tipo anticiclónico son más numerosos al
+  inicio de la simulación y ocurren a menor altitud (~4 km), sugiriendo actividad
+  convectiva de niveles medios intensa en las primeras horas; los de tipo ciclónico
+  ocurren más tarde y a menor altitud aún (~2 km), sugiriendo convección somera.
+- Las bandas de PV negativa en la tropopausa se originan en la misma región que los
+  ascensos anticiclónicos cerca del frente "bent-back" (retorcido) del ciclón,
+  vinculando directamente la convección de mesoescala embebida en el WCB con la
+  modificación del gradiente de PV que gobierna el jet stream.
+- El sesgo de la simulación REF frente a las observaciones de viento horizontal es
+  pequeño: 0.5 m/s de bias y 3.3 m/s de RMSE en la sección transversal del jet.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en cuatro pasajes:
+- Cap01-Introduccion (L41) y Cap02-Fundamentacion (L167): para establecer que "en el
+  Hemisferio Norte (HN), el flujo ascendente del Cinturón Transportador Cálido (WCB)
+  se describe típicamente hacia el noreste \citep{blanchard2021warm}", como premisa
+  del argumento de "efecto espejo" que reorienta el WCB hacia el sureste en el
+  Hemisferio Sur — razonamiento estructural que fundamenta toda la interpretación de
+  las asimetrías EOF1 de precipitación en la tesis.
+- Cap05-Precipitacion (L27, L112): para sustentar que la convección organizada
+  dentro del WCB "libera calor latente que intensifica el sistema" y genera
+  precipitaciones de alta intensidad, y que la convección embebida en el frente
+  frío/ocluido "desencadena corrientes verticales veloces que incrementan el
+  contenido local de hidrometeoros mediante liberación intensa de calor latente" —
+  mecanismo directamente respaldado por los hallazgos de REF vs. NODIA del paper.
+- Cap04-Viento (L117): para relacionar la intensificación del chorro de bajo nivel
+  de la Cold Conveyor Belt (CCB) con "el aumento de vorticidad potencial inducido
+  diabáticamente bajo el ascenso de la cinta cálida \citep{schemm2014linkage,
+  blanchard2021warm}".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de Toulouse (Laboratoire d'Aérologie: Blanchard, Pantillon, Chaboureau)
+trabaja en la línea de estudios diabáticos del WCB iniciada por Blanchard et al.
+(2020) (el mismo caso Stalactite, estudiado durante NAWDEX) y en diálogo directo con
+Harvey et al. (2020), Oertel et al. (2020) y Maddison et al. (2019, 2020), quienes
+documentaron estructuras de PV negativa de mesoescala en WCBs y su relación con el
+bloqueo atmosférico aguas abajo. Este artículo específicamente aísla el rol de la
+convección de niveles medios (mid-level convection) como fuente de las bandas de PV
+negativa, diferenciándose de estudios previos centrados en la escala sinóptica
+completa del WCB. En la tesis, esta línea se conecta con oertel2021warm y
+sinclair2023relationship, citados en el mismo párrafo del Cap05, formando un bloque
+coherente de literatura sobre la microfísica/dinámica diabática del WCB.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un estudio de caso único (el ciclón Stalactite, Atlántico Norte, octubre 2016);
+  no es una climatología, por lo que su generalización a otros ciclones o cuencas
+  requiere cautela (reconocido implícitamente por los propios autores al enmarcarlo
+  como "in this case").
+- La ventana de trayectorias lagrangianas es corta (12 h) para asegurar que las
+  parcelas permanezcan en el dominio de simulación, lo que significa que los
+  "ascensos" seleccionados no necesariamente representan el ascenso WCB completo
+  desde la capa límite hasta la alta troposfera (los autores lo señalan
+  explícitamente: "may not all belong to actual WCB trajectories").
+- El estudio es exclusivamente del Hemisferio Norte (Atlántico Norte); no hay
+  evidencia directa de que el mecanismo opere idénticamente en el Atlántico
+  Sudoccidental, de ahí la necesidad del razonamiento de "efecto espejo" que la
+  tesis debe justificar por separado.
+- La resolución de 2.5 km, aunque "convection-permitting", puede aún subestimar
+  procesos convectivos de escala más fina.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Cómo justifica trasladar un hallazgo del Atlántico Norte (orientación
+  noreste del WCB) al Atlántico Sudoccidental? Respuesta: mediante el argumento de
+  "efecto espejo" geométrico de la circulación baroclínica bajo rotación terrestre
+  opuesta, documentado también por browning1986conceptual, que reorienta la
+  asimetría estructural (no el mecanismo físico) hacia el sureste en el HS.
+- ¿Qué evidencia cuantitativa aporta este paper sobre la magnitud del efecto de la
+  convección del WCB en la intensificación del jet? Respuesta: la comparación REF
+  vs. NODIA muestra una diferencia de máximo del jet de 42 vs. 38 m/s y una
+  diferencia de ~5 hPa en la profundización del ciclón, atribuible al calor
+  diabático de los procesos de nube.
+- ¿Este mecanismo de calor latente en el WCB es el mismo que opera en la
+  intensificación de los ciclones subtropicales del Atlántico Sur estudiados en la
+  tesis? Respuesta: es análogo en su fundamento termodinámico (liberación de calor
+  latente por ascenso húmedo), pero la tesis no verifica directamente la señal de PV
+  en niveles altos; se apoya en el mecanismo general, no en una réplica exacta del
+  experimento de sensibilidad diabática.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/blanchard2021warm.md (leído completo: resumen,
+introducción, datos y métodos, resultados de la sección 3 y 4, hasta el análisis de
+propiedades de los ascensos seleccionados).

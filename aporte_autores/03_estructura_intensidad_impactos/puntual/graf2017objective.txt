@@ -1,0 +1,138 @@
+============================================================
+CARTILLA DE ESTUDIO — Graf et al. 2017 — Clasificación objetiva de la ciclogénesis
+============================================================
+
+REFERENCIA COMPLETA
+Graf, M. A., Wernli, H., & Sprenger, M. (2017). Objective classification of
+extratropical cyclogenesis. Quarterly Journal of the Royal Meteorological
+Society, 143, 1047-1061. DOI: 10.1002/qj.2989
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap05-Precipitación) para sustentar la idea de que la
+ciclogénesis extratropical ocurre en un continuo físico y no en categorías
+discretas, argumento que la tesis usa para interpretar la dispersión de
+varianza entre modos EOF durante las fases iniciales del ciclo de vida.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (>30°N)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (mínimos de SLP) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Propone un método novedoso y objetivo para clasificar eventos de ciclogénesis
+extratropical en el Hemisferio Norte, calculando 30 variables diagnósticas
+("precursores") que describen el entorno sinóptico en el punto y momento de
+formación de 16,029 ciclones (2000-2011, ERA-Interim). El objetivo es superar
+las clasificaciones clásicas (tipo A/B de Petterssen-Smebye, tipo C de Deveson
+et al.) mostrando, mediante un análisis de componentes principales (PCA), si
+existen categorías discretas de ciclogénesis o si los eventos se distribuyen en
+un espectro continuo. Es relevante para la tesis porque respalda la idea de que
+los procesos de ciclogénesis (forzamiento de niveles altos vs. procesos húmedos
+de niveles bajos) son dimensiones cuasi-independientes y continuas, no clases
+discretas.
+
+2. METODOLOGÍA
+- Identificación de ciclogénesis: mínimos de presión a nivel del mar (SLP) del
+  ERA-Interim (1° de resolución), 2000-2011, Hemisferio Norte extratropical
+  (>30°N), con al menos un isobara cerrada y duración de pista ≥24h; se excluyen
+  puntos sobre topografía >1500 m y sistemas con área de ciclón >2x10⁵ km²
+  (para evitar capturar erróneamente ciclones ya maduros como "nuevos").
+  Resultan 16,934 eventos, de los cuales 905 se descartan por datos faltantes,
+  dejando 16,029 eventos para la clasificación final.
+- 30 precursores diagnósticos calculados en un círculo de 500 km alrededor del
+  punto de ciclogénesis, incluyendo: PV en niveles altos y bajos, geopotencial y
+  su anomalía en 500 hPa, forzamiento cuasigeostrófico de movimiento vertical,
+  velocidad del jet, estabilidad estática troposférica, tasa de crecimiento de
+  Eady, gradiente de temperatura/temperatura potencial equivalente en 850 hPa,
+  deformación ambiental, función de frontogénesis de Petterssen, CAPE de capa
+  mixta, vapor de agua integrado, precipitación en las 6h previas, flujos de
+  calor sensible/latente en superficie, entre otros.
+- Normalización: anomalías respecto a una climatología móvil de 30 días,
+  normalizadas por la desviación estándar local; para campos con estructura
+  dipolar (p. ej. PV en niveles altos) se promedian solo los valores por encima
+  o por debajo de la mediana (med+ o med-), según cuál domine la señal física
+  relevante.
+- Análisis de componentes principales (PCA) sobre el espacio de 30 dimensiones,
+  proyectando los eventos sobre los dos primeros componentes principales (PC1,
+  PC2) para reducir la dimensionalidad y definir 5 clases: una clase "media" (M,
+  el 20% de eventos más cercanos al centro de la nube) y cuatro clases
+  correspondientes a los cuadrantes definidos por PC1 y PC2.
+
+3. HALLAZGOS CLAVE
+- No se observan agrupamientos (clusters) obvios en la distribución de eventos
+  de ciclogénesis en el espacio de componentes principales, lo que indica que
+  los procesos de ciclogénesis forman un continuo físico más que categorías
+  discretas separadas.
+- PC1 explica el 22.3% de la varianza total y PC2 el 18.9% (PC3 y PC4 son
+  claramente menos importantes, con 10.2% y 8.5%); esta brecha justifica
+  limitar el análisis a los dos primeros componentes.
+- PC1 está asociado principalmente a precursores de liberación de calor latente
+  y baroclinicidad de niveles bajos (precipitación en 6h previas, PV de niveles
+  bajos, gradiente térmico y de temperatura potencial equivalente en 850 hPa,
+  deformación ambiental, tasa de crecimiento de Eady), mientras que PC2 está
+  asociado a precursores de forzamiento dinámico de niveles altos (PV en altura,
+  geopotencial y su anomalía en 500 hPa) —una distinción clara entre procesos de
+  niveles bajos y altos que, según los autores, "no es algo que pudiera
+  esperarse a priori".
+- Se definen 5 clases de ciclogénesis: una clase central M (20% de eventos,
+  n=3206, condiciones promedio) y cuatro clases en los cuadrantes extremos,
+  caracterizadas por regímenes de flujo marcadamente distintos (fuerza del
+  forzamiento de niveles altos, estructura del jet, amplitud de procesos húmedos
+  de niveles bajos) y con distribuciones geográficas claramente diferenciadas.
+- Muchos eventos de ciclogénesis bien documentados en la literatura caen en
+  clases caracterizadas por fuertes procesos húmedos de niveles bajos, con o sin
+  forzamiento fuerte de niveles altos, evidenciando que ambos "tipos" clásicos
+  (A y B de Petterssen-Smebye) coexisten como extremos de un mismo continuo.
+
+4. RELACIÓN CON TU TESIS
+- Cap05-Precipitación (L139): se cita para argumentar, en el contexto de la
+  interpretación de los modos EOF de precipitación (siguiendo los criterios de
+  hannachi2007empirical), que "la ciclogénesis no opera en categorías discretas
+  sino en un continuo físico donde los procesos húmedos y la vorticidad
+  potencial constituyen dimensiones cuasi-independientes, lo que explica la
+  dispersión de la energía entre EOFs durante las fases iniciales en todas las
+  regiones".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Graf, Wernli y Sprenger (ETH Zúrich) pertenecen a la escuela europea de
+dinámica de vorticidad potencial aplicada a ciclogénesis (Hoskins et al. 1985;
+Wernli y Schwierz 2006, cuyo algoritmo de rastreo de ciclones usan aquí). El
+trabajo dialoga directamente con las clasificaciones clásicas de Petterssen &
+Smebye (1971, tipos A/B) y Deveson et al. (2002, tipo C), y con estudios de
+caso regionales (Evans & Guishard 2009 para ciclogénesis subtropical; Mendes et
+al. 2007 para Sudamérica), situando su contribución como una superación
+estadística objetiva de esas tipologías cualitativas previas mediante PCA.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se limita al Hemisferio Norte (2000-2011); no incluye el
+  Hemisferio Sur ni el Atlántico Sudoccidental, la región de la tesis.
+- Los propios autores reconocen que el algoritmo de identificación de
+  ciclogénesis basado en SLP tiende a identificar los ciclones más tarde que
+  otros esquemas basados en vorticidad en 850 hPa (Hodges 1999), por el
+  requisito de isobaras cerradas ya existentes en el momento de la génesis.
+- La elección de promediar solo los valores por encima o debajo de la mediana
+  (med+/med-) para campos dipolares introduce un sesgo reconocido explícitamente
+  por los autores en la interpretación de la señal de cada precursor.
+- Las clases definidas no tienen fronteras bien delimitadas (los propios
+  autores lo destacan), reflejando justamente la naturaleza continua del
+  fenómeno, lo que limita su uso como una "clasificación" en sentido estricto.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cómo conecta un estudio de clasificación de ciclogénesis del Hemisferio
+  Norte con tu análisis de EOFs de precipitación en el Atlántico Sudoccidental?
+  Respuesta: se usa como respaldo conceptual general (la ciclogénesis es un
+  continuo físico multidimensional, no categorías discretas), no como evidencia
+  regional directa; explica por qué la varianza de precipitación se reparte
+  entre varios modos EOF en lugar de concentrarse en uno solo.
+- ¿Qué significa concretamente que PC1 y PC2 sean "cuasi-independientes"?
+  Respuesta: en el biplot de Graf et al., los vectores de precursores de niveles
+  bajos (PC1) y de niveles altos (PC2) son aproximadamente ortogonales, lo cual
+  indica baja correlación lineal entre la intensidad del forzamiento húmedo de
+  niveles bajos y la del forzamiento dinámico de niveles altos en el momento de
+  la ciclogénesis.
+- ¿El método de Graf et al. se aplicó en tu tesis? Respuesta: no; tu tesis no
+  reproduce la clasificación PCA de 30 precursores, solo invoca su conclusión
+  central (el continuo físico de la ciclogénesis) como marco interpretativo para
+  la dispersión de varianza en tus propios EOFs de precipitación.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/graf2017objective.md

@@ -1,0 +1,190 @@
+============================================================
+CARTILLA DE ESTUDIO — Oertel et al. 2021 — convección embebida en el WCB y cizalladura
+============================================================
+
+REFERENCIA COMPLETA
+Oertel, A., Sprenger, M., Joos, H., Boettcher, M., Konow, H., Hagen, M. y Wernli, H.
+(2021). Observations and simulation of intense convection embedded in a warm
+conveyor belt - how ambient vertical wind shear determines the dynamical impact.
+Weather and Climate Dynamics, 2(1), 89-110. DOI: 10.5194/wcd-2-89-2021
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en al menos siete pasajes distintos, distribuidos en los Capítulos 1
+(Introducción), 2 (Fundamentación), 5 (Precipitación) y 6 (MEOF). Sustenta el
+mecanismo recurrente de convección embebida en el WCB como fuente de
+precipitación extrema y de heterogeneidad espacial en los patrones EOF.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio analiza las características de la convección intensa embebida dentro
+del Cinturón Transportador Cálido (WCB) de un ciclón extratropical del Atlántico
+Norte (ciclón "Sanchez", campaña NAWDEX, octubre de 2016), combinando
+observaciones aerotransportadas de radar Doppler (HALO/HAMP) con simulaciones de
+alta resolución permite-convección (COSMO, 2.2 km) y trayectorias lagrangianas
+online. La pregunta central es cómo la cizalladura vertical del viento ambiente
+determina el impacto dinámico (modificación de vorticidad potencial en niveles
+altos) de esta convección embebida, comparando categorías de convección moderada
+e intensa. Es un estudio de caso combinando observación y modelación de alta
+resolución, relevante para la tesis porque documenta que el WCB —lejos de ser
+puramente estratiforme— alberga frecuentemente núcleos convectivos que generan
+precipitación localmente extrema y estructuras espacialmente discontinuas.
+
+2. METODOLOGÍA
+
+- Observaciones aerotransportadas: radar de nube Doppler MIRA-36 (35.5 GHz) a
+  bordo del avión de investigación HALO, durante los vuelos de investigación de
+  la campaña NAWDEX (North Atlantic Waveguide and Downstream Impact Experiment)
+  los días 9 y 10 de octubre de 2016 (IOPs 10 y 11).
+- Trayectorias offline del WCB: calculadas con LAGRANTO a partir de análisis
+  operacionales del IFS-ECMWF (resolución ~9 km, 137 niveles verticales),
+  iniciadas globalmente cada hora y cada 80 km en 14 niveles verticales;
+  seleccionadas como trayectorias WCB si ascienden ≥600 hPa en 48 h.
+- Simulación de alta resolución: modelo no hidrostático COSMO, dominio del
+  Atlántico Norte oriental, resolución horizontal 0.02° (~2.2 km, modo
+  "convection-permitting"), 60 niveles verticales, esquema de microfísica de nube
+  de una fase con seis categorías (incluyendo graupel).
+- Trayectorias online del WCB dentro de COSMO, iniciadas cada 2 h en siete
+  niveles verticales (250-2500 m), usadas para cuantificar la tasa local de
+  ascenso mediante el cambio de presión neto centrado en 2 h (Δp_2h).
+- Clasificación de fases convectivas: ascenso "moderado" (Δp_2h entre -320 y
+  -400 hPa) versus ascenso "intenso" (Δp_2h < -600 hPa), en contraste con el
+  ascenso "slantwise"/estratiforme típico (-50 a -300 hPa).
+- Análisis compuesto lagrangiano 3D de dos subcategorías de convección WCB
+  embebida (moderada e intensa) para examinar estructura de PV, precipitación
+  superficial y contenido de graupel.
+- Comparación con un caso de estudio previo (ciclón "Vladiana", Oertel et al.
+  2020) para contextualizar la variabilidad caso a caso.
+
+3. HALLAZGOS CLAVE
+
+- La convección intensa embebida en el WCB produce precipitación superficial
+  local con valores pico que superan 6 mm en 15 minutos y contenidos de graupel
+  de hasta 2.8 g/kg en la troposfera media, frente a 3.9 mm y 1.0 g/kg para la
+  subcategoría de convección moderada (más del doble en ambos casos).
+- La observación por radar confirma la estructura de nube heterogénea del WCB:
+  reflectividades de radar de 20-30 dBZ en plumas convectivas estrechas
+  (comparadas con 40-50 dBZ típicas de tormentas convectivas profundas
+  aisladas), con ausencia de banda brillante bien definida en las zonas
+  convectivas frente a una banda brillante clara en las zonas estratiformes.
+- Las tasas de ascenso convectivo más intensas (Δp_2h < -600 hPa) ocurren
+  frecuentemente en la fase temprana del ciclo de vida del ciclón, antes de la
+  formación del "PV cutoff", y cerca del centro del ciclón y del frente frío.
+- Ambas subcategorías de convección WCB forman un dipolo de vorticidad potencial
+  (PV) cuasi-horizontal de pequeña escala en la troposfera alta, con un polo
+  débilmente negativo; sin embargo, a diferencia de estudios de caso previos, el
+  polo negativo se ubica al este de la región de ascenso convectivo (lejos del
+  jet de niveles altos), no cerca del waveguide de PV como en casos anteriores.
+- La fuerza de la convección embebida por sí sola no es un indicador confiable
+  del impacto en la modificación de PV de niveles altos; el perfil de
+  cizalladura vertical del viento y la alineación de la convección con un jet de
+  niveles altos fuerte son los factores clave para la formación de anomalías de
+  PV negativas coherentes cerca del jet.
+- La cizalladura vertical del viento ambiente en el caso Sanchez es débil
+  (~1 m/s/km) en comparación con el caso Vladiana (cizalladura fuerte, hasta
+  3 m/s/km en una capa profunda), lo cual explica por qué la modificación
+  diabática de PV en niveles altos es más débil pese al ascenso convectivo
+  más rápido en Sanchez.
+
+4. RELACIÓN CON TU TESIS
+
+Este es uno de los papers más citados en la tesis, con presencia en cuatro
+capítulos:
+- Cap01-Introduccion (L43): "El WCB no solo produce precipitación a gran escala,
+  sino que frecuentemente alberga núcleos de convección intensa embebida,
+  generando tasas de precipitación extrema \citep{oertel2021warm}."
+- Cap02-Fundamentacion (L169): "Además, \citet{oertel2021warm} demuestran que el
+  WCB frecuentemente alberga núcleos de convección intensa embebida" — establece
+  el mecanismo conceptual base.
+- Cap05-Precipitacion (L27): junto con sinclair2023relationship y
+  blanchard2021warm, para sustentar que "dicha convección, organizada dentro del
+  WCB, libera calor latente que intensifica el sistema... y genera
+  precipitaciones de alta intensidad".
+- Cap05-Precipitacion (L112): junto con blanchard2021warm, para explicar que "la
+  intensidad máxima de las precipitaciones está condicionada por la fuerza del
+  WCB residual y la presencia de convección profunda embebida a lo largo del
+  frente frío o del frente ocluido".
+- Cap05-Precipitacion (L139): para justificar que la precipitación "está
+  gobernada por la actividad frontal, los núcleos de convección embebida y las
+  tasas asimétricas de liberación de calor latente" — argumento central para
+  explicar por qué el campo de precipitación requiere múltiples modos EOF
+  ortogonales (a diferencia de variables de masa continuas).
+- Cap05-Precipitacion (L224): para explicar por qué las zonas significativas del
+  EOF1 de precipitación aparecen "fragmentadas, sin un patrón geométrico
+  continuo" en la madurez — atribuido a que "la convección embebida y los
+  frentes estrechos generan señales localizadas pero no necesariamente
+  coherentes a escala sinóptica".
+- Cap06-MEOF (L154): para sustentar que "la convección embebida en el remanente
+  del WCB retrocedido... sostiene además la intensidad pluviométrica localizada"
+  en el patrón enroscado (trowal airstream) del MEOF1.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Annika Oertel, junto con Michael Sprenger y Heini Wernli (ETH Zürich), lidera la
+línea de investigación sobre convección embebida en el WCB desde una perspectiva
+de vorticidad potencial, continuando el trabajo de Rasp et al. (2016) y del propio
+grupo (Oertel et al. 2019, 2020 —el caso "Vladiana" usado aquí como comparación).
+El marco teórico de PV usado (ecuación de Ertel, dipolos de PV por deformación en
+condiciones de cizalladura) se apoya en Harvey et al. (2020) y en la teoría clásica
+de Hoskins et al. (1985). Este artículo dialoga directamente con
+blanchard2021warm (mismo campo de estudio: convección de mesoescala/embebida en
+el WCB y su efecto en PV de niveles altos, mismo período NAWDEX), formando en la
+tesis un bloque coherente de literatura sobre la microfísica y dinámica diabática
+del WCB, citado reiteradamente junto a blanchard2021warm y sinclair2023relationship.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un estudio de caso único (ciclón Sanchez, Atlántico Norte, octubre 2016);
+  los propios autores destacan "la gran variabilidad caso a caso de la convección
+  embebida" al compararlo con el caso Vladiana, por lo que la generalización de
+  cifras específicas (6 mm/15 min, 2.8 g/kg) a otras cuencas oceánicas requiere
+  cautela.
+- El estudio es exclusivamente del Hemisferio Norte (Atlántico Norte); no hay
+  evidencia directa de que las cifras y el mecanismo detallado (dipolo de PV,
+  dependencia de la cizalladura) se repliquen idénticamente en el Atlántico
+  Sudoccidental.
+- La resolución de 2.2 km, aunque "convection-permitting", puede aún no resolver
+  completamente la escala más fina de los núcleos convectivos individuales.
+- El estudio se centra en la modificación de PV de niveles altos como variable
+  de interés principal; los efectos sobre la precipitación en superficie se
+  reportan pero no son el foco central del análisis dinámico del artículo.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Cómo trasladas un mecanismo documentado en un único caso del Atlántico Norte
+  a una climatología del Atlántico Sudoccidental? Respuesta: la tesis usa el
+  mecanismo físico general (convección embebida en el WCB como fuente de
+  heterogeneidad y extremos de precipitación) como fundamento conceptual, no como
+  réplica cuantitativa exacta; el argumento se sostiene en la universalidad del
+  proceso termodinámico (liberación de calor latente en ascensos convectivos
+  rápidos embebidos en flujo baroclínico), documentado también por trabajos
+  posteriores en otras cuencas (p. ej. blanchard2021warm, sinclair2023relationship).
+- ¿Qué cifras concretas aporta este paper sobre la magnitud de la precipitación
+  por convección embebida? Respuesta: picos de 6 mm en 15 minutos y graupel de
+  hasta 2.8 g/kg para convección intensa, frente a 3.9 mm y 1.0 g/kg para
+  convección moderada — más del doble en ambas variables.
+- ¿Por qué la tesis usa este paper para justificar que la precipitación necesita
+  múltiples modos EOF (a diferencia del viento)? Respuesta: porque el mecanismo
+  de convección embebida y actividad frontal genera una señal espacialmente
+  discontinua y heterogénea (plumas convectivas localizadas, ausencia de patrón
+  geométrico continuo), en contraste con los campos de masa que responden a
+  gradientes continuos de gran escala — esto explica por qué la varianza de
+  precipitación se dispersa entre varios EOFs en vez de concentrarse en el
+  primero.
+- ¿Qué papel juega la cizalladura vertical del viento en los hallazgos del paper,
+  y es relevante para tu tesis? Respuesta: el paper muestra que la cizalladura
+  determina si la convección embebida genera anomalías de PV coherentes cerca del
+  jet o no; la tesis no analiza directamente PV de niveles altos, por lo que este
+  hallazgo específico no se traslada, y solo se retiene el mecanismo de
+  convección embebida como fuente de precipitación intensa y heterogeneidad
+  espacial.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/oertel2021warm.md (leído: resumen, introducción,
+datos y metodología, evolución del WCB y su convección embebida —secciones 3 y 4—,
+y hallazgos cuantitativos de precipitación/graupel del análisis compuesto de la
+sección 5, incluyendo la comparación moderada vs. intensa y el rol de la
+cizalladura vertical del viento).

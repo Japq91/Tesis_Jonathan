@@ -1,0 +1,128 @@
+============================================================
+CARTILLA DE ESTUDIO — Gentile et al. 2025 — Ciclones extremos en clima cálido (X-SHiELD)
+============================================================
+
+REFERENCIA COMPLETA
+Gentile, E. S., Harris, L., Zhao, M., Hodges, K., Tan, Z., Cheng, K.-Y., & Zhou,
+L. (2025). Response of extreme North Atlantic midlatitude cyclones to a warmer
+climate in the GFDL X-SHiELD kilometer-scale global storm-resolving model.
+Geophysical Research Letters, 52(2), e2024GL112570. DOI: 10.1029/2024GL112570
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 2 veces (Introducción y Cap04-Viento) para anclar la proyección de
+intensificación futura del sector cálido de los ciclones extratropicales más
+intensos, articulada con la proyección específica de dejesus2021multimodel para
+el Atlántico Sudoccidental.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) — Atlántico Norte [confirmado directamente en el PDF fuente: título "Response of Extreme North Atlantic Midlatitude Cyclones..."; el resumen especifica explícitamente "Northern Hemisphere midlatitude cyclones" y el compuesto de los 100 ciclones más intensos se realiza "in the North Atlantic"]
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Investiga cómo responden los ciclones extratropicales más intensos del
+Atlántico Norte a un calentamiento de +4K en la temperatura superficial del
+mar (SST), usando el modelo global de resolución kilométrica X-SHiELD (GFDL),
+capaz de resolver explícitamente la convección profunda y, con ello, la
+estructura mesoescalar de los sectores cálido y frío del ciclón —algo que los
+modelos CMIP de resolución gruesa (~100 km) no logran representar
+adecuadamente (el sector frío, de ~300 km, queda resuelto por solo ~3 puntos de
+grilla en un CMIP típico). Es relevante para la tesis porque ofrece evidencia
+de vanguardia (modelos "storm-resolving") sobre la respuesta diferencial de los
+sectores cálido/frío al cambio climático, un tema directamente vinculado a la
+separación estructural que la tesis documenta en los prototipos p90.
+
+2. METODOLOGÍA
+- Modelo: X-SHiELD (GFDL), resolución ~3.25 km, 79 niveles verticales,
+  parametrización simplificada de convección somera y esquema TKE-EDMF para la
+  capa límite planetaria.
+- Dos simulaciones de 2 años (enero 2020 - enero 2022, con 3 meses de spin-up):
+  control (SST de ERA5, océano de capa mixta) y clima cálido (+4K uniforme sobre
+  las SST de ERA5).
+- Seguimiento de ciclones: algoritmo de Hodges (1995) sobre vorticidad relativa
+  en 850 hPa cada 3 h, suavizada a 25 km y truncada a T42; se retienen sistemas
+  que persisten >48h, recorren >1000 km y alcanzan vorticidad máxima de
+  1x10⁻⁵ s⁻¹.
+- Composición de los 100 ciclones más intensos (por vorticidad máxima) del
+  Atlántico Norte (25-90°N, 60°W-30°E) en cada escenario, en grilla polar de
+  radio 12° centrada en el vórtice, en 4 tiempos relativos a la intensidad
+  máxima (-48h, -24h, 0h, +24h). Significancia estadística vía prueba t de
+  Welch (p<0.05).
+
+3. HALLAZGOS CLAVE
+- El número total de ciclones extratropicales del HN disminuye ~3.5% en el
+  clima cálido, consistente con proyecciones CMIP previas; las pistas migran
+  hacia el polo (aumento de densidad de trayectorias e intensidad en el flanco
+  poblar, disminución en el ecuatorial).
+- El vapor de agua columnar total (TCWV) en el sector cálido aumenta hasta
+  ~15% por grado de calentamiento de SST durante las etapas tempranas de
+  desarrollo (-48 a -24h), reduciéndose a 7-9% en la intensidad máxima y etapas
+  posteriores; el sector frío muestra incrementos mucho menores (4-6%).
+- El viento a 10 m en el sector cálido aumenta hasta 1.5 m/s por grado de
+  calentamiento (~15% de incremento relativo), mientras que el pico de viento
+  en el sector frío (el máximo absoluto del compuesto, ~25 m/s en el control)
+  aumenta solo ~0.5 m/s (<2%).
+- La precipitación total pico en el frente cálido se intensifica en 1-1.5 mm
+  por 6h por grado de SST (~15% y 10% de incremento a -48h y -24h,
+  respectivamente), y el máximo de precipitación se desplaza hacia el este.
+- La respuesta es asimétrica: el sector cálido concentra la intensificación de
+  viento y precipitación futura, mientras que el sector frío (donde ocurre el
+  pico absoluto de viento del ciclón maduro) cambia poco; los autores señalan
+  que forzamiento diabático más intenso o gradientes térmicos meridionales
+  reforzados podrían explicar esta asimetría, aunque el mecanismo exacto queda
+  fuera del alcance del estudio.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L43): se cita para anticipar, mediante "modelaciones de
+  alta resolución", que "el sector cálido de los ciclones extratropicales más
+  intensos se intensificará, incrementando significativamente los vientos y la
+  precipitación extrema durante sus etapas de desarrollo".
+- Cap04-Viento (L5): se retoma la misma idea y se articula con la proyección
+  regional específica de dejesus2021multimodel para las tres zonas de
+  ciclogénesis del Atlántico Sudoccidental: "esta intensificación se proyecta en
+  hasta 1.5-2 m/s en los vientos de niveles bajos hacia fines de siglo, pese a
+  una disminución proyectada en la frecuencia de ciclogénesis"; se añade el
+  matiz de confianza IPCC (alta confianza en precipitación, confianza media en
+  intensidad dinámica del viento, IPCC2021_WG1_Chapter11_Extremes).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Gentile continúa aquí, ya en Princeton/GFDL, la línea iniciada en
+gentile2023observed (Universidad de Reading) sobre el rol diferencial de los
+sectores cálido/frío del ciclón en los vientos extremos, ahora aplicada a
+proyecciones de cambio climático con modelos "storm-resolving" de última
+generación (X-SHiELD), en diálogo con la literatura previa de proyecciones CMIP
+más gruesas (Priestley & Catto 2022; Zappa et al. 2013; Sinclair et al. 2020) y
+con estudios idealizados de ciclo de vida baroclínico (Tierney et al. 2018).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Solo 2 años de simulación por escenario; los propios autores señalan que esto
+  limita el valor de las pruebas de significancia para las pistas totales
+  (aunque no para los compuestos de los 100 ciclones más intensos).
+- No se representa el declive esperado del hielo marino en el siglo XXI (mismas
+  concentraciones en ambos escenarios), lo que podría sobrestimar artificialmente
+  la actividad ciclónica cerca de los polos.
+- El calentamiento uniforme de +4K no captura patrones regionales realistas de
+  SST futura, aunque los autores argumentan que sigue siendo el enfoque más
+  robusto dada la incertidumbre en los patrones proyectados de SST.
+- Es un estudio del Atlántico Norte (Hemisferio Norte); no hay evaluación directa
+  para el Atlántico Sudoccidental, de ahí que la tesis complemente esta
+  referencia con dejesus2021multimodel (proyección específica regional).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cómo extrapolas una proyección del Atlántico Norte a tu región de estudio
+  (Atlántico Sudoccidental)? Respuesta: no se extrapola directamente; se usa
+  como respaldo del mecanismo genérico (intensificación asimétrica del sector
+  cálido) y se complementa con la proyección numérica específica del
+  Atlántico Sudoccidental de dejesus2021multimodel.
+- ¿Por qué la intensificación es mayor en el sector cálido y no en el frío,
+  según Gentile et al. 2025? Respuesta: proponen mayor forzamiento diabático
+  (liberación de calor latente) y/o gradientes térmicos meridionales reforzados
+  en el sector cálido, aunque el mecanismo detallado queda como pregunta abierta
+  del propio estudio.
+- ¿Este hallazgo es consistente con la separación de cuadrantes que documentas
+  en tus prototipos p90 (Cap07)? Respuesta: sí en espíritu —ambos estudios
+  encuentran un comportamiento asimétrico y diferenciado entre sectores/cuadrantes
+  del ciclón— aunque Gentile et al. analizan la respuesta al calentamiento futuro
+  y tu tesis analiza la estructura estadística presente del ciclón maduro.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gentile2025response.md

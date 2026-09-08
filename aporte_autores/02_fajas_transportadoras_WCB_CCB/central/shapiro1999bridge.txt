@@ -1,0 +1,138 @@
+============================================================
+CARTILLA DE ESTUDIO — Shapiro et al. 1999 — Fractura frontal y seclusión cálida
+============================================================
+
+REFERENCIA COMPLETA
+Shapiro, M., Wernli, H., Bao, J.-W., Methven, J., Zou, X., Doyle, J., Holt, T.,
+Donall-Grell, E., & Neiman, P. (1999). A Planetary-Scale to Mesoscale Perspective
+of the Life Cycles of Extratropical Cyclones: The Bridge between Theory and
+Observations. En M. A. Shapiro & S. Grønås (Eds.), The Life Cycles of
+Extratropical Cyclones (pp. 139–185). American Meteorological Society, Boston, MA.
+DOI: 10.1007/978-1-935704-09-6_14
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en al menos 6 pasajes distribuidos en los capítulos 01, 02, 04, 05 y 06:
+sustenta el mecanismo físico central de fractura frontal / seclusión cálida /
+intrusión seca usado para interpretar la madurez y oclusión de los ciclones p90.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (simulaciones idealizadas + 3 casos reales del Atlántico Norte; sin rastreo sistemático)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un capítulo del volumen "The Life Cycles of Extratropical Cyclones" que
+construye un "puente conceptual" entre los ciclos de vida idealizados
+(teóricos, LC1/LC2/LC3) de ciclones extratropicales y los observados en la
+naturaleza, con énfasis en la influencia del flujo ambiental de escala
+planetaria (alineación de las corrientes en chorro polar y subtropical) sobre
+el desarrollo frontal y estructural de los sistemas. Combina teoría (dinámica
+casi-geostrófica, PV thinking), simulaciones numéricas idealizadas y estudios
+de caso observacionales del Atlántico Norte (ERICA IOP-4, Pre-IOP-4, FASTEX)
+para relacionar los tres ciclos de vida baroclínicos idealizados (LC1 sin
+cizalla, LC2 cizalla ciclónica, LC3 cizalla anticiclónica) con casos reales.
+
+2. METODOLOGÍA
+- Revisión teórica de simulaciones semigeostróficas idealizadas de Wernli
+  (1995) y simulaciones de ecuaciones primitivas de Methven (1996) sobre la
+  esfera, que reproducen los tres ciclos de vida en función de la cizalladura
+  barotrópica ambiental (~10 m/s en 2000 km) superpuesta al flujo zonal medio.
+- Diagnóstico de vorticidad potencial (PV) en la vecindad de la tropopausa,
+  con mapas de PV media (MPV) integrados en capas isentrópicas (280-340 K).
+- Simulaciones numéricas de alta resolución (modelo MM5) inicializadas con
+  análisis operativos para tres ciclones reales del Atlántico Norte durante
+  la campaña ERICA (Experiment on Rapidly Intensifying Cyclones over the
+  Atlantic) y FASTEX, verificadas con dropwindsondes de aeronaves NOAA P-3 e
+  imágenes satelitales GOES/DMSP.
+
+3. HALLAZGOS CLAVE
+- Una cizalla barotrópica ambiental de apenas ~10 m/s en 2000 km basta para
+  producir tres ciclos de vida cualitativamente distintos: LC1 (sin cizalla)
+  desarrolla estructura "T-bone" con frente frío fracturado y frente cálido
+  replegado (bent-back); LC2 (cizalla ciclónica) madura como ciclón noruego
+  clásico con oclusión de Bergeron y seclusión cálida (warm seclusion) en el
+  centro; LC3 (cizalla anticiclónica) permanece como onda frontal abierta.
+- El ciclón ERICA IOP-4 (4-5 enero 1989, análogo LC1) alcanzó una presión
+  central mínima de 948 hPa en su madurez (18 h de simulación), con
+  vorticidad relativa >2x10^-4 s^-1 concentrada en el frente cálido replegado
+  que envuelve el centro.
+- El ciclón Pre-IOP-4 (31 dic 1988 - 2 ene 1989, análogo LC2) tardó ~48 h de
+  simulación para alcanzar su punto medio de desarrollo (presión central 978
+  hPa a las 24 h), frente a las ~21 h que tardó IOP-4 en llegar de la
+  formación a la madurez — tasas de desarrollo muy distintas según el signo
+  de la cizalla ambiental.
+- La alineación vertical de las corrientes en chorro polar y subtropical (y
+  de sus anomalías de PV asociadas) resulta determinante: cuando ambos
+  chorros están verticalmente alineados sobre el ciclón (caso IOP-4), se
+  favorece el ciclo LC1 con fractura frontal severa; cuando el ciclón se
+  ubica al norte del chorro subtropical, dentro de cizalla ciclónica, se
+  favorece LC2 con seclusión cálida.
+- El caso FASTEX (LC3) muestra una onda frontal que permanece abierta, con
+  filamento de vorticidad ciclónica confinado al frente frío, sin
+  desarrollar oclusión, consistente con la simulación idealizada de cizalla
+  anticiclónica.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L83): se cita junto con shapiro1990life como "marco de
+  referencia para interpretar la distribución espacial de los máximos de
+  viento y precipitación" mediante el modelo de Fractura Frontal.
+- Cap02-Fundamentación (L121, L149): sustenta la descripción de la
+  "deformación del flujo" que "genera la fractura del frente frío y envuelve
+  una masa de aire que queda aislada en el núcleo del vórtice (warm
+  seclusion)" durante la madurez de ciclones intensos del Atlántico Sur.
+- Cap04-Viento (L208): citado junto con schultz2021antecedents y
+  reboita2022from para sustentar que "la formación de esta seclusión en el
+  núcleo rodeada por un anillo de vientos es el rasgo evolutivo del modelo
+  conceptual de Shapiro-Keyser".
+- Cap05-Precipitación (L45, L108) y Cap06-MEOF (L126): fundamenta el
+  mecanismo de intrusión seca (dry intrusion) inducida por la fractura
+  frontal, mediante la cual "aire frío, subsidente y de baja humedad de la
+  alta troposfera o estratosfera se enrosca hacia el centro del sistema",
+  erradicando la nubosidad profunda del núcleo y abriendo el dry slot.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Capítulo editado por Shapiro & Grønås que compila y extiende el trabajo
+seminal de Shapiro & Keyser (1990) sobre el modelo de oclusión
+"Shapiro-Keyser", contrastándolo con el modelo noruego clásico de Bjerknes &
+Solberg (1922). Se apoya directamente en las simulaciones idealizadas de
+Wernli (1995) y Methven (1996), y en los estudios observacionales de la
+campaña ERICA (Neiman & Shapiro 1993; Rotunno & Bao 1996) y FASTEX. En la
+tesis dialoga con schultz2021antecedents y reboita2022from, que aplican el
+modelo de Shapiro-Keyser a ciclones del Atlántico Sur/Sudoccidental, y se
+cita conjuntamente con shapiro1990life como par teórico fundacional.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Las simulaciones idealizadas usan cizallas barotrópicas invariantes en el
+  tiempo y la longitud, una simplificación de los ambientes reales dentro de
+  los storm tracks climatológicos (reconocido explícitamente por los autores).
+- Los tres casos observacionales analizados corresponden todos al Atlántico
+  Norte (ERICA, FASTEX); su aplicabilidad al Atlántico Sudoccidental es por
+  analogía conceptual, no por evidencia regional directa.
+- Los autores señalan como "cuestiones pendientes" la sensibilidad del
+  desarrollo a la escala/amplitud de la perturbación inicial y la separación
+  meridional entre los chorros, así como la dificultad de documentar en la
+  naturaleza el desarrollo baroclínico "upstream" debido a la fricción
+  superficial (más marcada sobre continentes que sobre océanos).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar un capítulo centrado en casos del Atlántico Norte para
+  interpretar ciclones del Atlántico Sudoccidental?
+  R: El mecanismo dinámico (fractura frontal por cizalla barotrópica
+  ambiental, seclusión cálida, intrusión seca) es un resultado de dinámica
+  de fluidos geofísicos generalizable a cualquier hemisferio; se usa como
+  marco conceptual, complementado con estudios que aplican el modelo
+  Shapiro-Keyser al HS (schultz2021antecedents, reboita2022from).
+- P: ¿Cuál es la diferencia física entre el modelo LC1 (Shapiro-Keyser) y el
+  LC2 (noruego clásico) en la estructura del núcleo del ciclón?
+  R: LC1 desarrolla estructura "T-bone" con fractura del frente frío y frente
+  cálido replegado sin oclusión de Bergeron; LC2 desarrolla una oclusión
+  clásica con el frente cálido encerrando completamente el aire cálido
+  secluido en el centro, favorecida por cizalla ciclónica ambiental.
+- P: ¿Qué evidencia cuantitativa aporta el paper sobre la velocidad de
+  desarrollo bajo distinta cizalla ambiental?
+  R: El caso LC1 (IOP-4) maduró en ~21 h (de génesis a 948 hPa), mientras el
+  caso LC2 (Pre-IOP-4) requirió ~48 h de simulación para alcanzar apenas su
+  punto medio de desarrollo, mostrando que el tipo de cizalla ambiental
+  modula fuertemente la tasa de intensificación.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/shapiro1999bridge.md

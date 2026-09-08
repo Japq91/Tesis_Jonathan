@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — de Souza et al. 2025 — CycloPhaser: deteccion objetiva de fases del ciclo de vida
+============================================================
+
+REFERENCIA COMPLETA
+de Souza, Danilo Couto; Silva Dias, Pedro Leite; Gramcianinov, Carolina Barnez; de Camargo, Ricardo. (2025). CycloPhaser: A Python Package for Detecting Extratropical Cyclone Life Cycles. Journal of Open Source Software, 10(108), 7363. DOI: 10.21105/joss.07363
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en 4 capítulos (Introducción, Fundamentación, Métodos y Resultados de Prototipos), y aunque el candidato no ejecutó directamente el paquete, toda la estratificación por fases del ciclo de vida usada en la tesis (incipiente, intensificación, madurez, decaimiento) depende metodológicamente de este algoritmo, aplicado previamente por Couto de Souza et al. (2024) sobre la base de datos que la tesis reutiliza.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (ζ850) — misma variable que la tesis (paquete CycloPhaser)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es un artículo de software (Journal of Open Source Software) que documenta CycloPhaser, un paquete de Python diseñado para detectar automáticamente las fases del ciclo de vida de ciclones extratropicales (incipiente, intensificación, madurez y decaimiento) a partir de series temporales de vorticidad relativa central. Su motivación es resolver una limitación histórica de la literatura: los esquemas clásicos (Bjerknes & Solberg 1922; Shapiro & Keyser 1990) se basaban en análisis manual de imágenes satelitales y cartas sinópticas, mientras que enfoques más recientes de detección objetiva (p. ej. Azad & Sorteberg 2014; Dacre & Gray 2009) solo bisectaban el ciclo en "intensificación" y "decaimiento", ignorando la fase incipiente y tratando la madurez como un único instante. CycloPhaser resuelve ambas limitaciones, permitiendo procesar grandes catálogos de ciclones con bajo costo computacional.
+
+2. METODOLOGÍA
+
+El insumo primario es una serie temporal unidimensional de vorticidad relativa mínima central del ciclón (típicamente a 850 hPa, aunque el método es aplicable en principio a otras variables como SLP o viento). El algoritmo aplica pre-procesamiento opcional (filtro de Lanczos para ruido, filtro de Savitzky-Golay para suavizado) y luego detecta picos y valles en la serie de vorticidad usando funciones de Scipy: la fase de intensificación va de un pico de vorticidad al valle siguiente; la fase de decaimiento cubre lo opuesto; la fase de madurez se define entre un valle de vorticidad y los picos vecinos de la derivada. Incluye una fase residual para anomalías de tracking (p. ej. reintensificación post-decaimiento sin retorno a la madurez) y un paso de post-procesamiento que corrige vacíos y aísla fases de un único paso temporal. La fase incipiente se detecta por etiquetas faltantes en la serie o seleccionando los instantes iniciales. Los umbrales de detección fueron calibrados rigurosamente en Couto de Souza et al. (2024) usando un conjunto representativo de trayectorias de ciclones. El paquete incluye una opción de hemisferio que ajusta automáticamente el signo de la serie para el Hemisferio Norte.
+
+3. HALLAZGOS CLAVE
+
+- El método fue aplicado por primera vez de forma integral en Couto de Souza et al. (2024), constituyendo (según los propios autores) el primer análisis exhaustivo de ciclos de vida de ciclones extratropicales que diseca los sistemas en fases discretas y detecta múltiples configuraciones de fases entre distintos sistemas.
+- El paquete permite clasificación automatizada de fases del ciclo de vida con costo computacional mínimo, habilitando el procesamiento de grandes bases de datos (a diferencia de la clasificación manual tradicional).
+- Aunque diseñado originalmente para vorticidad relativa, el hemisphere="northern" es adecuado también para detectar fases en datos de viento, mientras que hemisphere="southern" es más apropiado para SLP.
+- El artículo no reporta métricas de validación cuantitativas propias (tasas de acierto, matrices de confusión) más allá de remitir a la calibración de umbrales realizada en Couto de Souza et al. (2024); es, ante todo, un paper de documentación de software.
+- Abre explícitamente líneas de aplicación futura: análisis de comportamiento del ciclo de vida en proyecciones de cambio climático y comparaciones espaciales de fases entre modelos y reanálisis para validación.
+
+4. RELACIÓN CON TU TESIS
+
+Este es uno de los pilares metodológicos de la tesis, aunque el candidato no ejecutó el algoritmo directamente: se apoyó en la base de datos ya clasificada por fases mediante CycloPhaser por Couto de Souza et al. (2024). Se cita en cuatro puntos:
+(1) Cap01-Introducción, L81: "Para caracterizar la evolución física de la estructura interna, se adopta la segmentación objetiva desarrollada por \citet{coutodesouza2024new} mediante el algoritmo \textit{CycloPhaser}, que define cuatro fases dinámicas discretas, incipiente, intensificación, madurez y decaimiento \citep{deSouza2025CycloPhaser}."
+(2) Cap02-Fundamentación, L139: se explica que el algoritmo "utiliza la tasa de cambio de la vorticidad relativa $\zeta_{850}$ ... para definir los siguientes regímenes estructurales", conectando con la Sección de fundamento de detección basada en $\zeta_{850}$, y se aclara una limitación conceptual importante que la tesis discute explícitamente: "cada fase no es homogénea internamente: los instantes próximos a sus transiciones comparten rasgos de la etapa adyacente, por lo que la condición estructural más representativa de cada régimen corresponde al núcleo temporal de la fase".
+(3) Cap03-Métodos, L46: describe cómo Couto de Souza et al. procesaron el catálogo "incorporando una clasificación objetiva de las fases evolutivas mediante el algoritmo CycloPhaser ... el cual evalúa la tasa de cambio de la vorticidad relativa en 850 hPa ($\zeta_{850}$) para segmentar matemáticamente los momentos de desarrollo y decaimiento de cada sistema."
+(4) Cap07-Prototipos, L77: se invoca como mitigador de una limitación metodológica de los prototipos compuestos: "la estratificación por fases mediante el algoritmo CycloPhaser ... mitiga en gran medida este efecto al garantizar que cada instante analizado pertenece a la fase correcta del ciclón individual."
+En síntesis, CycloPhaser es la pieza metodológica que permite a la tesis analizar el viento y la precipitación de forma diferenciada por etapa del ciclo de vida (en vez de tratar cada ciclón como un bloque homogéneo), lo cual es central para los Capítulos 4 (viento), 5 (precipitación) y 7 (prototipos).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de Danilo Couto de Souza, Pedro Leite da Silva Dias, Carolina Gramcianinov y Ricardo de Camargo (IAG-USP / Helmholtz-Zentrum Hereon) trabaja en la caracterización del storm track del Atlántico Sur usando trayectorias automatizadas de ciclones. El artículo de software CycloPhaser (2025) es la herramienta computacional derivada directamente de Couto de Souza et al. (2024, "New perspectives on South Atlantic storm track through an automatic method for detecting extratropical cyclones' lifecycle", International Journal of Climatology), que es el estudio que efectivamente generó y clasificó por fases la base de datos de ciclones del Atlántico Sur que la tesis reutiliza (ver coutodesouza2024new.txt y coutodesouza2024thesis.txt en este mismo directorio de cartillas). Este linaje metodológico se inserta en la tradición más amplia de detección objetiva del ciclo de vida (Rudeva & Gulev 2007; Schemm et al. 2018; Azad & Sorteberg 2014; Booth et al. 2018), que la propia introducción de CycloPhaser critica por bisectar el ciclo en solo dos fases. También dialoga con los trabajos de Cardoso et al. (2022) y Gramcianinov et al. (2023), citados como antecedentes de impactos de ciclones subtropicales en el Atlántico Sur.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Reconocidas explícitamente por los autores: (a) el paquete "no ha sido probado explícitamente" para variables distintas de vorticidad relativa (SLP, viento), aunque se sugiere que podría aplicarse; (b) la calibración de umbrales fue realizada sobre un conjunto "representativo" de trayectorias en Couto de Souza et al. (2024), no sobre la totalidad de configuraciones posibles de ciclones; (c) el propio texto de la tesis (Cap02, L139) señala una limitación conceptual inferida y reconocida: la falta de homogeneidad interna de cada fase cerca de sus fronteras de transición, lo que exige usar el núcleo temporal de cada fase como representativo; (d) el artículo no reporta una validación estadística exhaustiva (matrices de confusión, tasas de falsos positivos) frente a clasificaciones manuales de expertos, más allá de la calibración remitida a Couto de Souza et al. (2024).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Aplicaste tú mismo CycloPhaser, o usaste una base ya clasificada? Respuesta: se usó la base de datos de ciclones del Atlántico Sur ya clasificada por fases mediante CycloPhaser por Couto de Souza et al. (2024); el candidato no ejecutó el algoritmo, pero construyó sobre esa clasificación objetiva para estratificar el análisis de viento y precipitación por fase del ciclo de vida.
+- ¿Por qué es preferible esta clasificación objetiva a una manual o a un esquema de solo dos fases (intensificación/decaimiento)? Respuesta: porque captura explícitamente la fase incipiente (crítica quando los isobaras superficiales aún no están cerradas) y permite que la madurez abarque múltiples pasos temporales homogéneos, en vez de reducirla a un único instante de vorticidad mínima, lo que habilita un análisis más fino de la evolución estructural.
+- ¿Qué variable usa el algoritmo para segmentar las fases y por qué es relevante para tu tesis? Respuesta: usa la tasa de cambio (derivada) de la vorticidad relativa central, típicamente a 850 hPa; esto conecta directamente con el fundamento de detección de la tesis basado en $\zeta_{850}$ (Sección de fundamentación), dando coherencia física entre la variable de tracking y la de segmentación de fases.
+- ¿Qué limitación reconoces tú mismo al usar fases discretas si internamente no son homogéneas? Respuesta: los instantes cercanos a las transiciones entre fases comparten rasgos de la fase adyacente; por ello la tesis usa el núcleo temporal de cada fase (alejado de los bordes) como la condición más representativa de cada régimen estructural.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/deSouza2025CycloPhaser.md

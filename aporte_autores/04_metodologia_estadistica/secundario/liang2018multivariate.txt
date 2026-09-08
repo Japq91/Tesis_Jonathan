@@ -1,0 +1,98 @@
+============================================================
+CARTILLA DE ESTUDIO — Liang et al. 2018 — método MEOF para mapas de nitrato oceánico
+============================================================
+
+REFERENCIA COMPLETA
+Liang, Y.-C., Mazloff, M. R., Rosso, I., Fang, S.-W., & Yu, J.-Y. (2018). A Multivariate
+Empirical Orthogonal Function Method to Construct Nitrate Maps in the Southern Ocean.
+Journal of Atmospheric and Oceanic Technology, 35(7), 1505-1519. American Meteorological
+Society. DOI: 10.1175/JTECH-D-18-0020.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una sola vez (Cap. 1, Introducción), pero cumple un rol de respaldo
+metodológico directo: es la referencia técnica que justifica el uso de Funciones
+Ortogonales Empíricas Multivariadas (MEOF) para capturar variabilidad acoplada entre
+campos físicamente distintos.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio) (aplicación ilustrativa a mapas de nitrato oceánico, no a ciclones)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio, de oceanografía biogeoquímica (no de meteorología de ciclones), busca
+reconstruir mapas de nitrato en el Océano Austral a partir de observaciones dispersas
+(por ejemplo, flotadores Argo biogeoquímicos), usando un método de Funciones Ortogonales
+Empíricas Multivariadas (MEOF) que combina simultáneamente nitrato, salinidad y
+temperatura potencial (campos N-S-T). El objetivo central es evaluar qué estrategia de
+muestreo espacial minimiza el error de los mapas reconstruidos, comparando muestreo
+aleatorio, muestreo por umbral de varianza de nitrato y agrupamiento por k-means.
+
+2. METODOLOGÍA
+Se usa un modelo de circulación general biogeoquímico (MITgcm acoplado a BLING, con
+componente de hielo marino) para generar campos de referencia N-S-T a 100 m de
+profundidad, dominio 78.8°S-30.4°S en resolución 1/3° con proyección Mercator, 130 años
+de simulación (se analizan los últimos 60 años, 720 pasos mensuales). Se aplica MEOF
+mediante descomposición en valores singulares (SVD) sobre la matriz combinada N-S-T
+normalizada por sus desviaciones estándar espacio-temporales, obteniendo 720 modos MEOF.
+Se generan datos sintéticos según tres estrategias de muestreo (aleatoria, por varianza
+de nitrato N-var, y k-means con 5 clusters) y se proyectan 500 modos MEOF sobre ellos
+para reconstruir mapas de nitrato, evaluados con el error cuadrático medio normalizado
+(NRMSE).
+
+3. HALLAZGOS CLAVE
+- Los primeros 5 modos MEOF explican en conjunto el 36% de la varianza combinada N-S-T;
+  usando 500 modos se explica más del 99% de la varianza y el NRMSE cae a ~0.092.
+- La estrategia de muestreo k-means produce el menor NRMSE global (0.77), superando a la
+  estrategia por varianza de nitrato N-var (0.79) y ampliamente al muestreo aleatorio
+  (0.92).
+- Las mayores varianzas de nitrato, salinidad y temperatura coinciden espacialmente en la
+  confluencia de las corrientes de Brasil y Malvinas y sus regiones río abajo, así como
+  en el mar de Davis-Dumont d'Urville y el sudeste del océano Índico.
+- El primer modo MEOF captura patrones espacialmente coherentes entre nitrato, salinidad
+  y temperatura en bajas latitudes (particularmente en la confluencia Brasil-Malvinas),
+  pero los patrones dejan de asemejarse entre sí en altas latitudes (p.ej., mar de
+  Bellingshausen-Amundsen).
+- El agrupamiento k-means (5 clusters) confirma mediante test de Kruskal-Wallis (p«0.0001)
+  que las subregiones difieren significativamente en sus varianzas N-S-T medias.
+
+4. RELACIÓN CON TU TESIS
+En el Cap. 1 (Introducción, L101) se cita para fundamentar por qué se recurre a MEOF en
+lugar de EOF univariado: "la técnica MEOF permite extraer modos de variabilidad
+inherentemente acoplados entre variables físicamente distintas \citep{liang2018multivariate},
+capturando así la organización espacial conjunta de ambos campos [viento y precipitación]."
+El paper no trata de ciclones ni de meteorología atmosférica, pero se usa exclusivamente
+como referencia técnica que valida la arquitectura estadística MEOF que tu tesis aplica
+en el Cap. 6 a los campos de viento y precipitación conjuntos.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El primer autor (Yu-Chiao Liang, UC Irvine) y coautores (Mazloff y Rosso, Scripps
+Institution of Oceanography) pertenecen a la comunidad de estimación de estado del
+Océano Austral (Verdy y Mazloff 2017; Rosso et al. 2017). El método MEOF en sí proviene
+de una tradición más amplia usada en climatología atmosférica y oceánica (p.ej., Wheeler
+y Hendon 2004 para el MJO); tu tesis se apoya en la referencia técnica de Hannachi et al.
+(2007) para el fundamento estadístico y en Liang et al. (2018) como ejemplo aplicado de
+MEOF con múltiples campos acoplados.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+El propio estudio reconoce que el análisis asume que los datos sintéticos se muestrean
+"perfectamente" en cada punto de rejilla durante 60 años (sin huecos temporales),
+condición idealizada respecto a flotadores Argo reales. Además, el dominio se limita al
+Océano Austral y los patrones de acoplamiento N-S-T no son uniformes en todas las
+latitudes (las similitudes se degradan en regiones de alta latitud), lo que limita la
+generalización directa del método a otros contextos sin validación adicional.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué citar un paper de oceanografía biogeoquímica en una tesis sobre ciclones
+  atmosféricos? Respuesta: se usa únicamente como referencia metodológica que ilustra la
+  aplicación de MEOF a campos físicamente distintos y acoplados, no como antecedente
+  temático.
+- ¿En qué se diferencia el MEOF de Liang et al. del que aplicaste tú? Respuesta: Liang
+  et al. aplican MEOF a tres campos oceánicos (N-S-T) para reconstrucción espacial de
+  mapas; tu tesis aplica MEOF a viento y precipitación ciclónica para extraer patrones
+  acoplados de estructura y evolución.
+- ¿Qué garantiza que el MEOF captura covariación real y no ruido? Respuesta: en tu tesis,
+  al igual que en Liang et al., se usa remuestreo (bootstrap) para distinguir señal física
+  de ruido de muestreo.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/liang2018multivariate.md

@@ -1,0 +1,116 @@
+============================================================
+CARTILLA DE ESTUDIO — Gozzo et al. 2014 — Climatología de ciclones subtropicales SAO
+============================================================
+
+REFERENCIA COMPLETA
+Gozzo, L. F., da Rocha, R. P., Reboita, M. S., & Sugahara, S. (2014). Subtropical
+Cyclones over the Southwestern South Atlantic: Climatological Aspects and Case
+Study. Journal of Climate, 27(21), 8543-8562. DOI: 10.1175/JCLI-D-14-00149.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 5 veces en 4 capítulos distintos (Introducción, Fundamentación, Viento,
+Prototipos); no define la regionalización SBR/LPB/ARG, pero aporta evidencia
+estructural (morfología híbrida) y un dato numérico puntual (radio de viento
+máximo) reutilizado en el Cap04.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (Sugahara 2000 — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Presenta la primera climatología dedicada de ciclones subtropicales (SC, por sus
+siglas en inglés) sobre el sector suroccidental del Atlántico Sur, motivada por
+casos icónicos como el Huracán Catarina (2004) y la tormenta subtropical Anita
+(2010). Los SC son sistemas de baja presión no frontales con núcleo cálido en
+niveles bajos y núcleo frío en niveles altos (estructura térmica híbrida). El
+estudio construye una climatología de 33 años y complementa el análisis con un
+caso de estudio de un SC somero cerca de la costa de São Paulo. Es relevante para
+la tesis porque documenta que el Atlántico Sur alberga sistemas que se apartan del
+ciclón extratropical "clásico".
+
+2. METODOLOGÍA
+- Datos: ERA-Interim (1.5°x1.5°, 10 niveles de presión, cada 6h) y NCEP-NCAR
+  (NCEP1, 2.5°x2.5°) para comparación de reanálisis, periodo 1979-2011 (33 años).
+- Identificación/seguimiento: algoritmo de Sugahara (2000) sobre vorticidad
+  relativa en 925 hPa; clasificación subtropical mediante el Cyclone Phase Space
+  (CPS) de Hart (2003), con criterios propios (B<25, |VTL|<10, VTU<250) y duración
+  mínima de 36h de estructura híbrida.
+- Región de estudio: dominio SAO (suroccidental del Atlántico Sur) y la subregión
+  RG1 (30.5°-21°S, 49.5°-35.5°W), foco de los compuestos centrados en el ciclón.
+- Caso de estudio: SC somero del 11-13 enero 2008, usando ERA-Interim, TRMM-3B42
+  (precipitación) y datos WHOI (SST y flujos turbulentos).
+
+3. HALLAZGOS CLAVE
+- Se detectaron 238 (ERA-Interim) y 233 (NCEP1) ciclogénesis subtropicales en 33
+  años, equivalentes al 3.7% (4.2%) del total de ciclogénesis del dominio SAO.
+- Número medio anual: 7.2±2.8 (ERA-Interim) y 7.1±2.8 (NCEP1); correlación
+  interanual entre reanálisis baja (r=0.26).
+- Estacionalidad: verano (DJF) es la temporada más activa; el otoño (MAM) es la
+  segunda más activa y presenta el ambiente "más tropical" (flujos superficiales
+  más fuertes y menor cizalladura vertical), generando los episodios más intensos.
+- Ciclo de vida medio: 4.1 (4.2) días de duración, 1397.0 (1172.4) km recorridos,
+  velocidad de 4.10 (3.17) m/s en ERA-Interim (NCEP1).
+- El radio de viento máximo durante la etapa subtropical se ubica, para la mayoría
+  de los SC del Atlántico Sur, entre 300 y 450 km del centro del ciclón.
+- Mecanismo de ciclogénesis: patrón de bloqueo tipo dipolo en niveles altos; el
+  ascenso se intensifica por el gradiente térmico vertical entre una vaguada/cutoff
+  frío en niveles medios y la fuerte advección cálida de niveles bajos por el flujo
+  de la Alta Subtropical del Atlántico Sur (SASH); los flujos turbulentos en la
+  zona del ciclón no son anormalmente altos, pero el flujo de la SASH advecta
+  grandes cantidades de humedad desde regiones distantes.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L31): se usa junto con Hart (2003) y Evans & Guishard (2012)
+  para argumentar que "el Atlántico Sur se aparta frecuentemente de la
+  conceptualización de ciclones convencionales", respaldado por climatologías
+  regionales de largo plazo.
+- Cap02-Fundamentación (L92): se cita como evidencia de que la inestabilidad
+  baroclínica y la vaguada en niveles medios-altos inician la ciclogénesis, en
+  contraste con los flujos turbulentos que modulan la intensificación (Gozzo 2013).
+- Cap04-Viento (L54, L88): se usa dos veces — (a) para contextualizar el
+  corrimiento de eventos severos en SBR, coincidiendo con climatologías previas;
+  (b) para comparar el radio de viento máximo (300-450 km) con el valor propio de
+  la tesis y con Cardoso et al. 2020 (400-500 km): "los vientos máximos se ubican
+  a una distancia del centro —entre 300-450 km y 400-500 km, respectivamente".
+- Cap07-Prototipos (L69): se invoca junto con Evans & Guishard (2012) para
+  explicar la mayor difusión de contornos y asimetría meridional en SBR por la
+  estructura híbrida típica de los sistemas subtropicales.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Gozzo y da Rocha (USP) forman parte de la línea de investigación brasileña sobre
+ciclones subtropicales del Atlántico Sur, iniciada por Evans & Guishard (2009) y
+Evans & Braun (2012) para el Atlántico Norte y Sur respectivamente. Este trabajo de
+2014 es la base climatológica sobre la que se construye gozzo2017climatology
+(fuentes de humedad de estos mismos sistemas) y se relaciona con gozzo2013air
+(flujos turbulentos), ambos también citados en la tesis. Es antecesor conceptual,
+pero no metodológico, de la regionalización de Gramcianinov et al. (2019), que
+usa vorticidad en 850 hPa en vez del CPS.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los autores reconocen que la correlación interanual entre reanálisis es baja
+  (r=0.26), aunque el ciclo estacional medio es consistente.
+- Reconocen explícitamente que el CPS puede arrojar valores de VTL muy bajos o
+  negativos incluso en ciclones tropicales puros, lo que motivó relajar el umbral.
+- La resolución de NCEP1 (2.5°) subestima sistemáticamente los núcleos cálidos más
+  extremos e intensos frente a ERA-Interim (1.5°), un problema de resolución
+  también relevante para la elección de ERA5 en la tesis.
+- El estudio se limita a un dominio regional (SAO/RG1) y a 33 años; no evalúa
+  tendencias de cambio climático ni la sensibilidad a otros esquemas de tracking.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué el radio de viento máximo de Gozzo (300-450 km) difiere del de Cardoso
+  et al. 2020 (400-500 km)? Respuesta breve: diferencias metodológicas (CPS vs.
+  vorticidad, dominio, muestra de sistemas subtropicales vs. mixtos) y de fase del
+  ciclo de vida analizada.
+- ¿El criterio CPS de Gozzo es compatible con el criterio de vorticidad en 850 hPa
+  que usas en tu tesis? Respuesta: no directamente; el CPS clasifica estructura
+  térmica, mientras tu tesis (siguiendo a Gramcianinov) usa vorticidad como
+  criterio de detección, por lo que la comparación es cualitativa, no un método
+  compartido.
+- ¿Qué tan generalizable es la climatología de Gozzo (33 años, RG1) a las tres
+  regiones SBR/LPB/ARG de tu tesis? Respuesta: Gozzo se enfoca únicamente en RG1
+  (~SBR); no cubre LPB ni ARG, de ahí la necesidad de la regionalización más
+  amplia de Gramcianinov (2019) que sí adoptas.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gozzo2014subtropical.md

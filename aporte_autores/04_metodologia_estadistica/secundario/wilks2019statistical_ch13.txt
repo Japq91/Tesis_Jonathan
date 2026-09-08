@@ -1,0 +1,131 @@
+============================================================
+CARTILLA DE ESTUDIO — Wilks 2019 (Cap. 13) — fundamento metodológico del análisis de componentes principales (EOF)
+============================================================
+
+REFERENCIA COMPLETA
+Wilks, D. S. (2019). Chapter 13 - Principal Component (EOF) Analysis. En Statistical Methods
+in the Atmospheric Sciences (4ª edición), pp. 617-668. Elsevier. ISBN 978-0-12-815823-4.
+DOI: 10.1016/B978-0-12-815823-4.00013-4
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario (referencia metodológica)
+Se cita una única vez, en el Capítulo 3 (Métodos), como sustento teórico-metodológico de la
+decisión de estandarizar los campos antes de aplicar un EOF conjunto (multivariado); es un
+capítulo de libro de texto, no un estudio original, por lo que su función es de respaldo
+conceptual y no de evidencia empírica específica de la tesis.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es el capítulo 13 del texto de referencia "Statistical Methods in the Atmospheric Sciences"
+de Daniel S. Wilks, dedicado íntegramente al Análisis de Componentes Principales (PCA), en
+meteorología conocido comúnmente como análisis de Funciones Ortogonales Empíricas (EOF). El
+capítulo desarrolla la formulación matemática del PCA (definición de autovalores,
+autovectores, componentes principales, fórmulas de síntesis y reconstrucción), y dedica una
+sección específica y muy citada en la literatura climática a la diferencia entre calcular el
+PCA sobre la matriz de covarianza versus la matriz de correlación (es decir, sobre variables
+sin estandarizar versus estandarizadas). Es relevante para la tesis porque provee el
+fundamento estadístico formal de por qué, al construir un EOF conjunto sobre dos variables
+de distinta naturaleza física y unidades (viento y precipitación, en el caso de la tesis), es
+necesario un paso de estandarización previo.
+
+2. METODOLOGÍA
+No aplica en el sentido de "datos y muestra" propio de un artículo empírico: es un capítulo
+didáctico que combina derivación matemática con ejemplos ilustrativos usando un conjunto de
+datos reducido (Tabla A.1 del propio libro): seis variables meteorológicas de enero de 1987
+en dos estaciones (Ithaca y Canandaigua, Nueva York): precipitación, temperatura máxima y
+temperatura mínima en cada estación. El "Ejemplo 13.2" del capítulo compara explícitamente
+un PCA calculado sobre la matriz de covarianza (variables en sus unidades originales, °F y
+pulgadas) contra un PCA calculado sobre la matriz de correlación (variables estandarizadas a
+media 0 y varianza 1), usando ese mismo conjunto de seis variables.
+
+3. HALLAZGOS CLAVE
+(Como capítulo de texto, los "hallazgos" son resultados demostrativos/didácticos, no
+empíricos de investigación original; se listan aquí las conclusiones metodológicas clave.)
+- Un PCA sobre la matriz de covarianza [S] produce componentes que enfatizan las variables
+  de mayor varianza; un PCA sobre la matriz de correlación [R] pondera todas las variables
+  estandarizadas por igual, ya que todas tienen varianza unitaria.
+- En el Ejemplo 13.2, las varianzas de las variables de precipitación (en pulgadas, del
+  orden de 0.03-0.06 in²) son órdenes de magnitud menores que las de temperatura (del orden
+  de 62-892 °F²), un artefacto puramente de las unidades de medida.
+- Como consecuencia, en el PCA basado en la matriz de covarianza, los elementos de los
+  autovectores correspondientes a las dos variables de precipitación son "insignificantemente
+  pequeños" en los primeros cuatro componentes principales, los cuales en conjunto explican
+  el 99.9% de la varianza conjunta del conjunto de datos —es decir, la precipitación queda
+  prácticamente excluida del análisis pese a ser una variable de interés.
+- En contraste, al calcular el PCA sobre la matriz de correlación (variables estandarizadas),
+  las variaciones de temperatura y precipitación quedan "ponderadas por igual", y los dos
+  primeros componentes principales explican 58.9% y 92.0% (acumulado) de la varianza,
+  respectivamente, una estructura de varianza explicada muy distinta a la del caso no
+  estandarizado.
+- Regla general del capítulo: si el análisis involucra "variables no medidas en las mismas
+  unidades" (unlike variables), casi siempre será preferible calcular el PCA usando la matriz
+  de correlación (estandarizada) en lugar de la matriz de covarianza.
+- El capítulo también cita un antecedente atmosférico directo: Overland y Preisendorfer
+  (1982), analizando número de ciclones extratropicales en rejilla, encontraron que el PCA
+  sobre la matriz de covarianza identificaba mejor regiones de alta variabilidad en el número
+  de ciclones, mientras que el PCA sobre la matriz de correlación ubicaba mejor las
+  trayectorias de tormenta ("storm tracks") principales —evidencia de que la elección entre
+  covarianza/correlación no es trivial y depende del objetivo del análisis.
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 3 (Métodos, L221) se cita para justificar la introducción de un factor de
+escala antes de construir el EOF conjunto de las variables de viento y precipitación (o
+variables afines): "Este factor escalar preserva la estructura espacial de los gradientes
+mientras equilibra el peso de ambas variables en la matriz de covarianza, evitando que el
+campo de mayor varianza domine artificialmente la descomposición conjunta
+\citep{wilks2019statistical_ch13}." Esta afirmación es exactamente el resultado formal
+demostrado en el Ejemplo 13.2 del capítulo: sin estandarización, la variable de mayor
+varianza numérica (que puede no ser la físicamente más relevante) domina artificialmente los
+primeros modos del EOF, mientras que la otra variable queda subrepresentada. El uso que hace
+la tesis es metodológicamente fiel a la recomendación explícita del capítulo para "unlike
+variables" (variables en unidades distintas).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Daniel S. Wilks (Universidad de Cornell) es autor del texto de referencia estándar en
+estadística aplicada a las ciencias atmosféricas, ahora en su cuarta edición (2019),
+utilizado extensamente en programas de posgrado en meteorología y climatología a nivel
+mundial. El capítulo 13 sintetiza y formaliza décadas de uso del PCA/EOF en climatología
+—incluyendo el trabajo pionero de Lorenz (1956) que introdujo el EOF en meteorología— y sirve
+como referencia metodológica estándar (más que como fuente de resultados originales) en
+prácticamente cualquier tesis o artículo que aplique EOF a campos atmosféricos u
+oceanográficos, incluyendo estudios de ciclones extratropicales como los que conforman el
+resto del marco teórico de la tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Al ser un capítulo de texto, no es investigación original ni reporta hallazgos nuevos:
+  su función es exclusivamente pedagógica/metodológica, por lo que no debe citarse como
+  "evidencia empírica" sino como fundamento estadístico.
+- El ejemplo ilustrativo (Ejemplo 13.2) usa un conjunto de datos muy pequeño y de juguete
+  (seis variables, un mes de datos de dos estaciones), no un campo espacial extenso como el
+  que se analiza en la tesis; la generalización del resultado (dominancia artificial de la
+  variable de mayor varianza) es conceptualmente robusta pero la magnitud del efecto puede
+  diferir en aplicaciones con campos de grilla completos.
+- El capítulo no prescribe un único método de escalamiento "correcto" para EOF conjuntos
+  multivariados de campos espaciales (más allá de la estandarización a varianza unitaria
+  variable por variable); la elección de un "factor escalar" específico en la tesis requiere
+  justificación adicional propia, más allá de lo que aporta este capítulo.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué no usar directamente el PCA sobre la matriz de covarianza si esa es la forma
+  "clásica" de EOF?
+  R: Porque las variables analizadas (viento y precipitación) están en unidades físicas
+  distintas y con varianzas numéricamente muy dispares; sin estandarización, el EOF conjunto
+  quedaría dominado artificialmente por la variable de mayor varianza numérica, no
+  necesariamente la más relevante físicamente (Wilks, Ejemplo 13.2).
+- P: ¿Qué diferencia hay entre EOF y PCA? ¿Es lo mismo que citas de Wilks?
+  R: Son esencialmente el mismo método visto desde dos comunidades distintas: PCA es el
+  término estadístico general: EOF es el nombre que recibe tradicionalmente en meteorología
+  y oceanografía cuando se aplica a campos espacio-temporales. El capítulo de Wilks trata el
+  método bajo el nombre "PCA (EOF) Analysis", reconociendo explícitamente esta equivalencia.
+- P: ¿La estandarización elimina información física relevante (p.ej. la magnitud real de
+  las anomalías)?
+  R: La estandarización reescala la varianza de cada variable a 1, preservando la estructura
+  espacial relativa de los gradientes (correlaciones), pero la magnitud absoluta original se
+  recupera en la etapa de síntesis/reconstrucción revirtiendo la transformación de
+  estandarización (Ecuación 13.9 del capítulo), por lo que no se pierde información, solo se
+  cambia el peso relativo de cada variable durante la descomposición.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/wilks2019statistical_ch13.md

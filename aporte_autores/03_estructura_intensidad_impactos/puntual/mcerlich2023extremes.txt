@@ -1,0 +1,142 @@
+============================================================
+CARTILLA DE ESTUDIO — McErlich et al. 2023 — precipitación extrema en el ciclo de vida
+============================================================
+
+REFERENCIA COMPLETA
+McErlich, C., McDonald, A., Renwick, J. y Schuddeboom, A. (2023). An Assessment of
+Extra-Tropical Cyclone Precipitation Extremes Over the Southern Hemisphere Using
+ERA5. Geophysical Research Letters, 50(17), e2023GL104130.
+DOI: 10.1029/2023GL104130
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en el Capítulo 5 (Precipitación), pero para respaldar un
+hallazgo central de la tesis: que la precipitación extrema (p90) del Atlántico
+Sudoccidental se concentra en génesis/intensificación y no en la madurez.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (algoritmo de Crawford y Serreze 2016) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio evalúa dónde y cuándo, dentro del ciclo de vida de un ciclón
+extratropical, ocurre la precipitación extrema en el Hemisferio Sur, usando
+reanálisis ERA5 (1980-2019). La pregunta de investigación es si la precipitación
+extrema (definida con un umbral espacialmente dependiente, no fijo) se comporta
+igual que la precipitación no extrema en términos de extensión espacial y momento
+del ciclo de vida. Es un estudio observacional/reanálisis basado en compuestos
+("cyclone compositing"), relevante para la tesis porque aporta el antecedente
+hemisférico que la tesis luego contrasta y matiza con evidencia regional del
+Atlántico Sur.
+
+2. METODOLOGÍA
+
+- Datos: reanálisis ERA5 (0.25° de resolución, muestreado cada 3 h), Hemisferio Sur,
+  1980-2019 (más de 35,000 ciclones tras aplicar los criterios de calidad).
+- Detección y seguimiento: algoritmo basado en mínimos de presión a nivel del mar
+  (MSLP) de Crawford y Serreze (2016); se retienen sistemas con diferencia de MSLP
+  centro-borde >7.5 hPa en un radio de 1000 km, velocidad de propagación <150 km/h,
+  vida >24 h, longitud de pista >100 km y parte de su vida al sur de 30°S.
+- Compuestos ciclón-centrados en un radio de 2000 km, rotados para alinear la
+  dirección de propagación hacia el este.
+- Ciclo de vida dividido en tres fases relativas al momento de intensidad máxima
+  (definida como la mayor diferencia entre presión de borde y presión central):
+  intensificación (6-18 h antes), madurez (±6 h) y decaimiento (6-18 h después).
+- Umbral de extremos "espacialmente dependiente": se agrupan celdas con igual
+  frecuencia de días húmedos (wet-day frequency, umbral de 1 mm/día) y se calculan
+  distribuciones acumuladas de intensidad dentro de cada grupo; se enmascara la
+  precipitación por debajo del percentil 90 y del percentil 98 de esa distribución
+  regional (más un umbral de 1 mm/día y el percentil 50 como referencia no extrema).
+
+3. HALLAZGOS CLAVE
+
+- La ocurrencia de precipitación en p90 y p98 decae, respectivamente, al 46% y al
+  30% del valor de la fase de intensificación (deepening) hacia la fase de
+  decaimiento, promediado sobre el compuesto.
+- La fracción de precipitación (proporción del total acumulado) en p90 y p98
+  decrece al 80% y 65% del valor de intensificación hacia el decaimiento.
+- Hasta un 80% de la precipitación total del compuesto proviene del 10% superior
+  de la distribución de intensidad (p90), subrayando la relevancia de los ciclones
+  para la precipitación extrema en general.
+- La extensión espacial de la precipitación extrema se reduce (se concentra más
+  cerca del centro del ciclón, en la región de "coma" asociada al WCB) a medida
+  que se incrementa el umbral de percentil, y esta reducción es más marcada que la
+  de la precipitación no extrema.
+- La correlación espacial de Pearson entre p90 y p98 es fuerte en todas las fases
+  del ciclo de vida, pero la correlación entre precipitación de día húmedo/p50 y
+  p90/p98 se debilita en la fase de decaimiento, sugiriendo que la relación entre
+  precipitación moderada y extrema cambia con la madurez del sistema.
+- Es el primer estudio que evalúa extremos de precipitación dentro de un marco de
+  compuestos ciclón-centrados para todo el Hemisferio Sur en función del ciclo de
+  vida (estudios previos evaluaban extremos de forma espacial, no ligada al ciclo
+  de vida del ciclón).
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 5 (Precipitación), línea 47, en un pasaje donde la tesis
+argumenta en contra de que "la magnitud del forzamiento dinámico se traduce en
+mayor lluvia extrema a lo largo de todo el ciclo de vida" para el Atlántico Sur:
+"Esto coincide con \citet{mcerlich2023extremes}, quienes muestran para el
+Hemisferio Sur que la precipitación más intensa ocurre en la fase de
+profundización previa al pico de intensidad, y que su extensión espacial se
+contrae más rápido que la de la precipitación moderada al evolucionar el sistema."
+El paper aporta el respaldo hemisférico de que el máximo de p90/p98 ocurre antes
+del pico de intensidad y que la coma de extremos se contrae más rápido que la de
+moderados — exactamente el patrón que la tesis documenta para SBR y LPB, matizado
+con el mecanismo termodinámico (aislamiento del núcleo, colas pesadas >60 mm/h)
+propuesto por corner2025classification en el mismo párrafo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de Canterbury (McDonald, Schuddeboom, Renwick) trabaja en climatología de
+ciclones del Hemisferio Sur usando ERA5 y métodos de compositing heredados de
+Crawford y Serreze (2016) y Catto et al. (2010). Este artículo específico depende
+metodológicamente de un trabajo previo de los mismos autores (McErlich et al. 2023,
+Nature Geoscience) que estableció la relación entre frecuencia de día húmedo e
+intensidad de precipitación como "drivers universales". El estudio se inscribe en
+una línea de trabajos de compuestos ciclón-centrados (Field & Wood 2007; Booth et
+al. 2018; Naud et al. 2020) que la tesis también cita para el mecanismo WCB; a
+diferencia de esos estudios, este paper es el primero en aplicar percentiles
+regionales dinámicos específicamente a la cuestión de los extremos por fase del
+ciclo de vida.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un estudio agregado (compuestos): los propios autores señalan que "it is
+  unlikely that results shown are representative of a single cyclone" — el
+  compuesto promedia sistemas heterogéneos y no permite inferencias sobre un
+  evento individual.
+- No se examinan los procesos físicos subyacentes (los autores lo reconocen
+  explícitamente: "the underlying processes that determine precipitation have not
+  been assessed to provide a physical justification").
+- Es un estudio de todo el Hemisferio Sur, no específico del Atlántico
+  Sudoccidental; la tesis debe asumir que el patrón general aplica regionalmente,
+  aunque matiza esto con mecanismos termodinámicos locales (aislamiento del
+  núcleo en SBR/LPB).
+- El umbral de extremos depende de la frecuencia de día húmedo regional, lo cual
+  reduce la variabilidad de los umbrales sobre el océano Austral (donde se
+  concentran más ciclones), limitando la resolución de diferencias regionales
+  finas dentro del dominio hemisférico.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué la tesis matiza (en vez de simplemente adoptar) el hallazgo de
+  McErlich et al.? Respuesta: porque el paper es un compuesto hemisférico agregado
+  sin mecanismo físico explícito; la tesis añade el mecanismo termodinámico
+  (aislamiento del núcleo, eficiencia convectiva) de corner2025classification para
+  explicar por qué ese patrón se cumple específicamente en SBR y LPB.
+- ¿Qué umbral de extremos usa McErlich et al. y en qué se diferencia de un umbral
+  fijo (p. ej. 60 mm/h usado en tu tesis)? Respuesta: usan percentiles (90 y 98)
+  calculados dentro de regiones de igual frecuencia de día húmedo, un umbral
+  relativo y espacialmente dependiente, distinto del umbral absoluto (60 mm/h) que
+  la tesis usa para el p90 de SBR/LPB.
+- ¿La reducción de ocurrencia (46%/30%) y de fracción (80%/65%) hacia el
+  decaimiento es consistente entre percentiles? Respuesta: sí, pero la magnitud de
+  la caída aumenta con el percentil (más estricto el umbral, más rápida la caída),
+  lo que McErlich et al. interpretan como evidencia de mayor calentamiento
+  diabático asociado a los eventos más extremos durante la intensificación.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/mcerlich2023extremes.md (leído completo: resumen,
+introducción, datos y métodos, resultados de las Figuras 1-3, discusión y
+conclusión).

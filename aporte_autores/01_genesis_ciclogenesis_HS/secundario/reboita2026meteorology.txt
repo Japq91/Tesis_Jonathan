@@ -1,0 +1,47 @@
+============================================================
+CARTILLA DE ESTUDIO — Reboita et al. 2026 — Meteorología y clima de Sudamérica (capítulo de libro)
+============================================================
+
+REFERENCIA COMPLETA
+Reboita, Michelle Simões; Drumond, Anita; Ferreira, Glauber; Zilli, Márcia T.; Crespo, Natália Machado; Rodrigues, Regina R.; da Rocha, Rosmeri Porfírio; Ambrizzi, Tercio. (2026). Meteorology and Climate of South America and Surrounding Oceans. En: Meteorology and Climate of South America and Surrounding Oceans (Cap. 8, pp. 284-340). Cambridge University Press. DOI: 10.1017/9781009352680.010
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 2 veces (ambas en Cap01-Introducción), como síntesis de literatura de referencia que respalda el mecanismo orográfico-baroclínico de ciclogénesis y el marco regional de tres focos usado en la tesis; es una cita de contextualización/consenso, no una fuente de datos originales.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (capítulo de síntesis/revisión; sin rastreo propio)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un capítulo de libro de síntesis (2026, Cambridge University Press) que revisa integralmente la meteorología y el clima de Sudamérica y los océanos circundantes: circulación atmosférica, transporte de humedad (Sistema Monzónico Sudamericano, chorro de bajos niveles SALLJ, ríos atmosféricos), regímenes de precipitación y temperatura, teleconexiones, desempeño de modelos climáticos y sus proyecciones, y vacíos de conocimiento futuros. La Sección 8.3.3 revisa específicamente frentes, ciclones (extratropicales, subtropicales y tropicales) y bajas segregadas (cut-off lows) sobre Sudamérica y los océanos adyacentes. Es relevante como la síntesis más reciente y autorizada (a 2026) del consenso sobre la ciclogénesis en la costa este de Sudamérica.
+
+2. METODOLOGÍA
+No es un estudio primario de datos originales, sino una revisión/síntesis de literatura: usa climatologías/climogramas propios con datos de precipitación del Climate Prediction Center (CPC) y reanálisis ERA5 (1980-2022), y sintetiza décadas de literatura, principalmente del propio grupo de Reboita (reboita2010south, reboita2018extratropical, reboita2022from, Gramcianinov, Crespo, Gozzo, de Jesus) además de Sinclair, Hoskins & Hodges, Cardoso, Pérez-Alarcón, entre otros.
+
+3. HALLAZGOS CLAVE (síntesis del capítulo)
+- Confirma tres regiones ciclogenéticas principales en la costa este de Sudamérica/Atlántico Sur occidental: RG1 (sur/sureste de Brasil), RG2 (Uruguay y extremo sur de Brasil) y RG3 (sur de Argentina).
+- Enumera los factores que favorecen el potencial ciclogenético a lo largo de la costa este sudamericana: ondas baroclínicas de niveles medios-altos que se propagan desde el Pacífico Sur, incursiones de vórtices subtropicales, efecto de sotavento de la topografía andina, advección de aire cálido y húmedo por el SALLJ y por el flujo hacia el norte del Anticiclón Subtropical del Atlántico Sur (SASA), flujos turbulentos de calor mar-aire, y la inestabilidad baroclínica originada por el gradiente de temperatura superficial del mar en la confluencia de las corrientes de Malvinas y Brasil.
+- Reporta ~200 ciclones extratropicales/año sobre el Atlántico Sur occidental, ~8 ciclones subtropicales/año, y solo 3 ciclones tropicales documentados desde el inicio de la era satelital (Catarina 2004, Iba 2019, Akara 2024).
+- Los ciclones que alcanzan estatus explosivo representan ~16% del total de sistemas extratropicales durante el invierno austral.
+- Proyecciones futuras (basadas en RegCM, escenario RCP8.5): se proyecta una disminución de la frecuencia de ciclones extratropicales, pero un aumento de la frecuencia de los más intensos/explosivos; los ciclones subtropicales también disminuirían en frecuencia con un fortalecimiento de los más intensos.
+- La región más frontogenética de Sudamérica es el sur de Argentina (40°-60°S) en verano y el noreste de Argentina y alrededores en invierno; la frecuencia anual de frentes fríos disminuye de ~100/año (~51°S) a 17/año (~22°S, sureste de Brasil).
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L34): se cita junto con gan1994influence para el argumento mecanístico de que la compresión/estiramiento de la columna de vorticidad forzado por los Andes, combinado con la baroclinicidad costera y los gradientes de temperatura superficial del mar, "consolida focos de actividad ciclogenética en la costa este de Sudamérica" — coincide directamente con los factores enumerados en el propio capítulo (efecto de sotavento de los Andes, gradiente térmico en la confluencia Malvinas-Brasil).
+- Cap01-Introducción (L37): se incluye en la misma lista que reboita2010south, crespo2020potential y gramcianinov2019properties como una de las fuentes que documentan el marco regional SBR/LPB/ARG usado para estructurar el análisis de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Este capítulo es la síntesis más reciente y autorizada (2026) del núcleo del grupo liderado por Reboita (con Drumond, Ferreira, Zilli, Crespo, Rodrigues, da Rocha, Ambrizzi) de toda la literatura sobre clima y ciclones de Sudamérica, incluyendo prácticamente todos los demás artículos del mismo linaje citados en esta tesis (reboita2010south, reboita2018extratropical, reboita2022from, gramcianinov2019properties, crespo2020potential y trabajos afines de Gozzo y de Jesus). Funciona como el anclaje de "estado del arte" de la tesis: la validación más actual de que el marco RG1/RG2/RG3 y los mecanismos ligados a los Andes siguen siendo la visión consensuada en 2026.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Al ser un capítulo de revisión/síntesis, no genera datos primarios nuevos sobre ciclogénesis; sus afirmaciones son tan confiables como la literatura primaria subyacente, gran parte de ella producida por el mismo grupo (riesgo de consenso "intra-escuela").
+- Algunas cifras cuantitativas (p. ej., "~200 ciclones extratropicales/año", "~16% explosivos en invierno") se presentan sin el detalle explícito de método/período en esta forma sintetizada, por lo que deben rastrearse a las fuentes primarias citadas dentro del capítulo (p. ej., reboita2018extratropical) antes de usarse como si fueran derivadas independientemente en este propio texto.
+- No se puede evaluar la metodología estadística de las afirmaciones climatológicas resumidas, ya que el capítulo no las reproduce en detalle (remite al lector a los estudios originales).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué citar un libro/capítulo de síntesis en lugar de solo artículos primarios? R: Porque sintetiza y actualiza (a 2026) el consenso más reciente sobre el mecanismo orográfico-baroclínico de ciclogénesis en la costa este de Sudamérica, respaldando que el marco regional (RG1/RG2/RG3) usado en la tesis sigue vigente y ampliamente aceptado por el grupo de investigación más activo en el tema.
+- P: ¿Qué mecanismos añade este capítulo, más allá de reboita2010south, para explicar la ciclogénesis costera? R: Enumera explícitamente el efecto de sotavento de los Andes, la advección cálida/húmeda por el SALLJ y el SASA, los flujos turbulentos de calor océano-atmósfera y el gradiente térmico superficial en la confluencia de las corrientes de Malvinas y Brasil.
+- P: ¿Este capítulo aporta proyecciones futuras? R: Sí; resume (Sección 8.5) que la frecuencia de ciclones extratropicales se proyecta en descenso pero con mayor frecuencia de eventos explosivos/intensos, y un patrón análogo (descenso de frecuencia con intensificación de los extremos) para los ciclones subtropicales.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/reboita2026meteorology.md

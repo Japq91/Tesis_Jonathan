@@ -1,0 +1,198 @@
+============================================================
+CARTILLA DE ESTUDIO — Shapiro & Keyser 1990 — modelo conceptual del ciclón ocluido (Shapiro-Keyser)
+============================================================
+
+REFERENCIA COMPLETA
+Shapiro, M. A., y Keyser, D. (1990). Fronts, Jet Streams and the Tropopause.
+Capítulo 10 en: C. W. Newton y E. O. Holopainen (Eds.), Extratropical Cyclones:
+The Erik Palmén Memorial Volume (pp. 167-191). American Meteorological Society,
+Boston, MA. ISBN 978-1-944970-33-8. DOI: 10.1007/978-1-944970-33-8_10
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en 3 capítulos (Cap01-Introducción, Cap02-Fundamentación, Cap04-Viento)
+y es, junto con schultz2021antecedents, el origen del marco conceptual
+(modelo Shapiro-Keyser / modelo de Fractura Frontal) usado transversalmente en
+la tesis para interpretar la evolución estructural de viento y precipitación en
+los ciclones ocluidos del Atlántico Sur.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (campaña observacional ERICA + simulaciones idealizadas; sin algoritmo de rastreo sistemático)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un capítulo del volumen conmemorativo a Erik Palmén (AMS, 1990) que revisa,
+en su primera parte (Secciones 10.2-10.3, verificadas directamente en el PDF
+disponible), la estructura y dinámica de los frentes de altura, los chorros
+(jet streams) y su relación con la tropopausa, incluyendo una revisión histórica
+de los modelos conceptuales de frentes cerca de la tropopausa (J. Bjerknes 1932;
+Palmén 1933/1948; Bjerknes y Palmén 1937; Nyberg y Palmén 1942/Berggren 1952;
+Newton 1954/Reed y Danielsen 1959), y del rol de aeronaves de alta altitud
+instrumentadas en la resolución de controversias sobre la naturaleza de estas
+discontinuidades. En su Sección 10.4 ("The Life Cycle of the Marine Extratropical
+Cyclone and its Fronts", pp. 177-186 —no incluida en el PDF disponible
+localmente; ver nota de limitación de fuente al final de esta cartilla— los
+autores proponen un modelo conceptual alternativo al modelo Noruego clásico
+(Bjerknes y Solberg) para el ciclo de vida frontal de ciclones marinos
+extratropicales intensos, basado en simulaciones numéricas de alta resolución y
+en observaciones de campañas aéreas (Alaskan Storm Program 1987; ERICA 1988-89).
+Este modelo, conocido posteriormente como "modelo Shapiro-Keyser", introduce
+cuatro fases evolutivas caracterizadas por la fractura frontal, el frente en "T"
+(T-bone), el frente retrocedido (bent-back front) y la seclusión de núcleo
+cálido (warm-core seclusion). Es, junto al modelo Noruego, uno de los dos
+paradigmas dominantes para interpretar la evolución estructural de ciclones
+extratropicales intensos, y la referencia fundacional de todo el marco
+interpretativo estructural de tu tesis.
+
+2. METODOLOGÍA
+Síntesis conceptual apoyada en dos fuentes de evidencia, según se describe en el
+propio capítulo y se documenta con detalle en Schultz y Keyser (2021, BAMS, otro
+paper citado en tu tesis que reproduce y discute extensamente esta sección):
+(a) simulaciones numéricas idealizadas y de mesoescala con resoluciones
+horizontales de hasta 30 km, que revelaron "configuraciones frontales inusuales
+que los autores dudaban en equiparar con las de la atmósfera real, dado que
+estructuras frontales similares aún no habían sido documentadas por
+meteorólogos sinópticos" (Shapiro y Keyser 1990, p. 178, según se cita en
+Schultz y Keyser 2021); y (b) observaciones aéreas de alta resolución obtenidas
+en campañas de campo sobre el océano —el Alaskan Storm Program (1987) y el
+Experiment on Rapidly Intensifying Cyclones over the Atlantic (ERICA, 1988-89)—
+en las que Melvyn Shapiro dirigió instrumentación aérea hacia ubicaciones
+específicas dentro de los ciclones para verificar las estructuras sugeridas por
+las simulaciones. El primer ciclón extratropical interpretado explícitamente
+bajo este modelo fue el IOP4 de ERICA, analizado en detalle por Wakimoto et al.
+(1992) y Neiman y Shapiro (1993).
+
+3. HALLAZGOS CLAVE
+(Se trata de un modelo conceptual, no de resultados estadísticos; las
+descripciones siguientes están respaldadas por las citas textuales y figuras de
+Shapiro y Keyser 1990 reproducidas y discutidas en Schultz y Keyser 2021.)
+- Fase I: ciclón frontal incipiente, estructuralmente similar a la fase inicial
+  del modelo Noruego.
+- Fase II: aparece la "fractura frontal" (frontal fracture), definida
+  textualmente por los propios autores como la "loss of cold frontal
+  baroclinicity (frontolysis) near the cyclone center during the early stages of
+  cyclogenesis" y como "cold-front contraction south of, but not in the
+  vicinity of, the cyclone center" (Shapiro y Keyser 1990, p. 178, según cita
+  textual reproducida en Schultz y Keyser 2021, p. E386).
+- Fase III: se consolida el "frente en T" (frontal T-bone, ángulo recto entre el
+  frente frío y el cálido, que impide el proceso clásico de oclusión por
+  alcance del frente frío al cálido) y el frente retrocedido (bent-back front),
+  que se forma cuando la zona frontal cálida se extiende ciclónicamente
+  alrededor del centro de baja presión por acción de los vientos intensos de la
+  cinta transportadora fría (cold conveyor belt).
+- Fase IV: el frente retrocedido se enrolla completamente alrededor del ciclón,
+  encerrando una "seclusión de núcleo cálido" (warm-core seclusion) — una bolsa
+  de aire post-frontal-frío cerca del centro de baja presión, en contraste con
+  el angosto anillo de aire cálido a lo largo del frente ocluido del modelo
+  Noruego.
+- Escala característica del ciclón en la fase IV (distancia del mínimo de
+  geopotencial al contorno de geopotencial más externo): ~1000 km; separación
+  temporal aproximada entre fases sucesivas: 6-24 horas (ambos datos, según
+  Schultz y Keyser 2021, quienes los toman directamente de la Fig. 10.27 de
+  Shapiro y Keyser 1990).
+- Los propios autores, y explícitamente Neiman et al. (1993, p. 2177), enfatizan
+  que el modelo no reclama universalidad: "the frontal-cyclone life cycle
+  described here is not characteristic of all marine cyclogenetic events and
+  has not been described for continental cyclones... [it] should be considered
+  a companion to, rather than a replacement of, the classical Norwegian
+  frontal-cyclone occlusion life cycle" — es decir, el propio Shapiro y Keyser
+  NO reclamaron universalidad, sino aplicabilidad a una vía de desarrollo
+  particular de ciclones marinos con alta organización baroclínica.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación, L119, cita textual: "Los ciclones extratropicales
+  intensos del Atlántico Sur suelen seguir el modelo de Fractura Frontal
+  propuesto por \citet{shapiro1990life}."
+- Cap01-Introducción, L83, cita textual: "La caracterización de esta evolución
+  estructural se apoya además en el modelo de Fractura Frontal
+  \citep{shapiro1990life,shapiro1999bridge} como marco de referencia para
+  interpretar la distribución espacial de los máximos de viento y precipitación;
+  su desarrollo se presenta en la Sección~\ref{subsec:tb_modelos}."
+- Cap04-Viento, L208, cita textual: "Como detallan \citet{schultz2021antecedents},
+  \citet{reboita2022from} y \citet{shapiro1999bridge}, la formación de esta
+  seclusión en el núcleo rodeada por un anillo de vientos es el rasgo evolutivo
+  del modelo conceptual de \citet{shapiro1990life}, una vía de desarrollo
+  característica de ciclones con alta organización baroclínica."
+Es la piedra angular teórica de la tesis: todo el marco interpretativo de la
+evolución estructural (viento, precipitación, MEOF, prototipos) remite en
+última instancia a este modelo conceptual de 1990.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Melvyn A. Shapiro (entonces en NOAA/ERL Wave Propagation Laboratory) y Daniel
+Keyser (Universidad de Albany, SUNY) son referentes centrales en la dinámica de
+frentes y chorros de niveles superiores; este capítulo sintetiza además trabajo
+previo del propio Shapiro sobre estructura de frentes de altura con aeronaves
+instrumentadas (Shapiro 1974, 1976, 1978, 1980), documentado en la Sección 10.2
+del propio capítulo. El modelo fue posteriormente historizado por Schultz y
+Keyser (2021) —el propio Daniel Keyser como coautor de ambos trabajos, con 31
+años de diferencia—, quienes documentaron sus antecedentes en la Escuela de
+Bergen, y fue verificado observacionalmente en el caso ERICA IOP4 por Neiman y
+Shapiro (1993) y Wakimoto et al. (1992). Es también la base conceptual explotada
+dinámicamente por Schemm y Wernli (2014, otro paper central de tu tesis), que
+explícitamente siguen "el ciclón downstream" cuya evolución reproduce el ciclo
+de vida descrito por Shapiro y Keyser (1990).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los propios autores señalan (y lo reitera Neiman et al. 1993) que el modelo no
+  es universal ni reemplaza al modelo Noruego, sino que aplica a una vía de
+  desarrollo particular de ciclones marinos con alta organización baroclínica
+  (frecuentemente ciclones explosivos).
+- Es un modelo conceptual derivado de un número limitado de casos de campañas de
+  campo (ERICA, Alaskan Storm Program) y de simulaciones idealizadas de
+  mesoescala, no de una climatología extensa de cientos o miles de casos.
+- Su aplicabilidad a otras cuencas oceánicas distintas del Atlántico Norte (como
+  el Atlántico Sur, objeto de tu tesis) es, por diseño, una extrapolación del
+  marco conceptual, validada indirectamente por estudios posteriores en otras
+  regiones (p. ej. sawada2021heavy, en el Pacífico noroccidental).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cuál es la diferencia esencial entre el modelo Noruego y el Shapiro-Keyser?
+  El ángulo entre frentes (agudo con cierre progresivo del sector cálido vs.
+  recto/T-bone) y el destino del aire cálido (angosto anillo a lo largo del
+  frente ocluido vs. seclusión de núcleo cálido de aire post-frontal-frío).
+- ¿El modelo Shapiro-Keyser aplica a todos los ciclones extratropicales? No —
+  los propios autores y Neiman et al. (1993) enfatizan que es un complemento, no
+  un reemplazo, del modelo Noruego, aplicable a una vía de desarrollo particular
+  de ciclones marinos con alta organización baroclínica/explosiva.
+- ¿En qué evidencia observacional se basó el modelo? Principalmente en la
+  campaña ERICA (1988-89) y el Alaskan Storm Program (1987), con instrumentación
+  aérea dirigida a ubicaciones específicas dentro de los ciclones, y en
+  simulaciones numéricas idealizadas/mesoescala de alta resolución.
+- ¿Por qué la tesis usa como marco interpretativo central un modelo de 1990
+  basado en pocos casos observados? Porque, pese a su origen acotado, el modelo
+  ha sido extensamente validado, refinado e historizado en más de 30 años de
+  literatura posterior (Neiman y Shapiro 1993; Schultz y Vaughan 2011; Schultz y
+  Keyser 2021; Schemm y Wernli 2014, entre otros), consolidándose como paradigma
+  estándar para interpretar ciclones ocluidos de alta organización baroclínica.
+
+------------------------------------------------------------
+NOTA IMPORTANTE SOBRE LA FUENTE (limitación verificada):
+El archivo PDF disponible localmente (papers/files_PDF/shapiro1990life.pdf,
+483 KB) contiene ÚNICAMENTE las 2 primeras páginas del capítulo (pp. 167-168:
+Sección 10.1 "Introduction" y el inicio de la Sección 10.2.1 "Structure"), lo
+cual se confirmó de forma independiente extrayendo el documento con la librería
+pypdf en Python (num_pages = 2). No es una limitación de la herramienta de
+lectura: el PDF descargado está objetivamente incompleto y NO incluye la
+Sección 10.4 ("The Life Cycle of the Marine Extratropical Cyclone and its
+Fronts", pp. 177-186), que es donde Shapiro y Keyser presentan formalmente el
+modelo de 4 fases con sus figuras 10.16 a 10.27.
+
+La descripción detallada del modelo de 4 fases en esta cartilla (punto 3) se
+reconstruyó con fidelidad, sin inventar cifras, combinando:
+(a) el contenido verificado de las 2 páginas realmente disponibles del propio
+    capítulo (Sección 10.1-10.2.1, Fig. 10.1 con los modelos conceptuales
+    históricos de frentes cerca de la tropopausa); y
+(b) las citas textuales extensas, la descripción de las figuras 10.16-10.27 y el
+    resumen directo de la Sección 10.4 de Shapiro y Keyser (1990) contenidos en
+    papers/files_MD/schultz2021antecedents.md (Schultz y Keyser 2021, BAMS), que
+    reproduce literalmente pasajes del propio Shapiro y Keyser (1990) y discute
+    su Fig. 1(b) (reproducción de la Fig. 10.27 original).
+
+Se recomienda, de ser posible antes de la defensa, conseguir una copia completa
+del capítulo (páginas 167-191) para verificación directa de las figuras 10.16 a
+10.27 y de las cifras exactas del ciclo de vida, aunque el contenido conceptual
+aquí presentado es consistente con el consenso disciplinario establecido y con
+la fuente secundaria verificada (Schultz y Keyser 2021).
+
+Fuente verificada: papers/files_PDF/shapiro1990life.pdf (solo pp. 167-168 de
+167-191 disponibles) + papers/files_MD/schultz2021antecedents.md (como fuente
+secundaria que reproduce el contenido faltante de la Sección 10.4).

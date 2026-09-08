@@ -1,0 +1,51 @@
+============================================================
+CARTILLA DE ESTUDIO — Flaounas et al. 2018 — convección profunda y WCB en la lluvia intensa de ciclones mediterraneos
+============================================================
+
+REFERENCIA COMPLETA
+Flaounas, Emmanouil; Kotroni, Vassiliki; Lagouvardos, Konstantinos; Gray, Suzanne L.; Rysman, Jean-François; Claud, Chantal. (2018). Heavy rainfall in Mediterranean cyclones. Part I: contribution of deep convection and warm conveyor belt. Climate Dynamics, 50(7), 2935–2949. DOI: 10.1007/s00382-017-3783-x
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap05-Precipitación, L26), como analogía de otra cuenca oceánica (el Mediterráneo) para cuantificar la contribución relativa de la convección profunda y el warm conveyor belt (WCB) a la precipitación intensa en ciclones.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (Mediterráneo)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (método de Flaounas et al. 2014) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio (Parte I de una serie de dos) analiza el rol de la convección profunda (deep convection, DC) y el warm conveyor belt (WCB) como procesos generadores de lluvia intensa en ciclones del Mediterráneo. Es un estudio climatológico (2005–2015) que combina datos de reanálisis, observaciones satelitales y de rayos para cuantificar la contribución relativa de cada proceso a la precipitación del ciclón, así como su variabilidad espacial y temporal respecto al centro del ciclón y a su ciclo de vida. Su relevancia radica en ofrecer, por primera vez en un marco climatológico (no solo estudios de caso), una cuantificación objetiva de cuánta lluvia intensa se debe a cada mecanismo.
+
+2. METODOLOGÍA
+
+Se usa el reanálisis ERA-Interim (ECMWF, grilla 0.25°×0.25°, cada 6 h) para el tracking de ciclones mediterráneos durante 2005–2015, aplicando el método de Flaounas et al. (2014) sobre campos de vorticidad relativa a 850 hPa (suavizada, umbral ≥3×10⁻⁵ s⁻¹), reteniendo solo sistemas con al menos 24 h de vida y madurez dentro de 5°W–40°E, 30°N–46°N (excluyendo el Atlántico y el Mar Negro), lo que da un catálogo de 7091 ciclones. La precipitación se obtiene de estimaciones satelitales TRMM 3B42 (grilla 0.25°, pasos de 3 h). La convección profunda se diagnostica mediante datos de rayos (red ZEUS) y un diagnóstico basado en radiómetros de microondas pasivas AMSU-B/MHS (sensible al hielo en niveles medios-altos, indicador de convección). El WCB se identifica con el modelo de trayectorias de masas de aire LAGRANTO, reteniendo trayectorias que ascienden más de 500 hPa en 48 h. La métrica de "lluvia intensa" de cada ciclón se define como el percentil 95 de la precipitación acumulada durante toda su vida, y el análisis se enfoca en los 500 ciclones más intensos (correspondientes a ~40-50% de la precipitación total mediterránea en 11 años), divididos en 250 que producen alta lluvia y 250 que producen baja lluvia.
+
+3. HALLAZGOS CLAVE
+
+- Aunque no hay una relación matemática obvia entre la intensidad máxima de un ciclón y su métrica de lluvia (nube de puntos dispersa), al agrupar por bins de intensidad la mediana de lluvia sí muestra una relación lineal clara con la intensidad (coeficiente de correlación de 0.99).
+- Para los ciclones que producen alta lluvia, la DC y el WCB explican en conjunto hasta un 70% de la precipitación (contribuyendo cada uno hasta ~20% y ~50% respectivamente en la ventana de -6h a 0h respecto a la madurez), mientras que para los ciclones de baja lluvia estos procesos explican solo hasta un 50%.
+- La convección profunda tiende a ocurrir cerca del centro del ciclón y hacia su lado este (asociada a los frentes del sistema), mientras que el WCB tiende a producir lluvia hacia el noreste del centro del ciclón.
+- Solo un 8% de los puntos de grilla con lluvia asociada al WCB se solapan con puntos de DC, pero un 30% de los puntos con DC se solapan con el WCB, sugiriendo que una parte considerable de la DC corresponde a convección embebida dentro del WCB.
+- La DC puede producir tasas de lluvia más altas que el WCB: más de 50 mm en 3 h acumuladas, frente a un máximo del orden de 40 mm para el WCB.
+- Los 250 ciclones de alta lluvia contribuyen con cerca de un tercio de la precipitación total mediterránea del período 2005-2015 en ciertas áreas, mientras que los 250 de baja lluvia contribuyen solo ~10%; el total de los 500 ciclones más intensos aporta ~40% de la precipitación total de la región.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita una única vez, en el Capítulo 5 (Precipitación), L26: "En ciclones del mediterráneo, \citet{flaounas2018heavy} cuantifican esta asimetría: la convección profunda genera las mayores tazas de precipitación y una parte de estas ocurren embebidas en el WCB." Esta cita funciona como analogía comparativa de otra cuenca oceánica (el Mediterráneo, una cuenca semi-cerrada muy distinta del Atlántico Sur abierto) para reforzar, con una cifra concreta de otro contexto, la idea de que la convección profunda produce tasas de lluvia puntuales más altas que el WCB, aunque este último domine en términos de contribución total/areal. Es una cita de contraste/analogía más que de fundamento directo del mecanismo del Atlántico Sur, útil para mostrar al jurado que el patrón (DC más intenso puntualmente, WCB más extenso arealmente, con solapamiento parcial) no es exclusivo de la región de estudio sino un rasgo compartido con otras cuencas ciclogenéticas.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Emmanouil Flaounas (National Observatory of Athens) lidera una línea de investigación sobre ciclones mediterráneos y su relación con lluvia extrema, dialogando en este paper con estudios de warm conveyor belts en otras cuencas (Madonna et al. 2014, que aplicó un umbral de ascenso de 600 hPa en 48h en un marco climatológico global, frente al umbral de 500 hPa/48h más laxo usado aquí, ajustado específicamente para las características más débiles de los WCB mediterráneos) y con estudios de convección profunda embebida en WCB en el Atlántico Norte (Martínez-Alvarado et al. 2014; Rasp et al. 2016). Su tracking de ciclones (Flaounas et al. 2014) fue evaluado comparativamente junto a otros cinco métodos en Flaounas et al. (2017), un ejercicio de intercomparación de algoritmos similar en espíritu al realizado por Neu et al. (2013) para el Atlántico Norte y a las comparaciones de métodos de tracking mencionadas en otras partes de la tesis (hodges2011comparison). En el contexto de la tesis, esta cita se relaciona conceptualmente con el marco de flujo de calor/humedad usado para explicar la precipitación en SBR y LPB (russo2025impacts, gramcianinov2024early), aunque proviene de una cuenca climatológicamente distinta.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Reconocidas por los propios autores: (a) el estudio se limita a la cuenca mediterránea, una región semi-cerrada, rodeada de montañas, con ciclones de tamaño y vida más cortos que los oceánicos, por lo que la generalización directa a cuencas oceánicas abiertas (como el Atlántico Sur) requiere cautela; (b) los diagnósticos de DC mediante AMSU tienen cobertura temporal y espacial discontinua (depende del paso de satélites); (c) las observaciones de rayos (ZEUS) subdetectan el número real de descargas, aunque no omiten la detección de tormentas; (d) el producto TRMM 3B42 puede subestimar la lluvia acumulada hasta en un 80% cuando esta excede 40 mm/12h, lo que introduce incertidumbre en la cuantificación de eventos extremos; (e) un residual considerable de la lluvia en ciclones de alta precipitación no es explicado por DC ni WCB, atribuible a procesos no diagnosticados (p. ej. convección somera e interacción con orografía, según Raveh-Rubin y Wernli 2016) y a inconsistencias entre las distintas fuentes de datos utilizadas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué comparar tu región de estudio (Atlántico Sur) con el Mediterráneo, si son cuencas tan distintas? Respuesta: la cita se usa como analogía de un patrón físico general (la disociación parcial entre DC, que produce tasas de lluvia puntuales más altas, y el WCB, que domina en extensión areal) documentado de forma rigurosa y cuantitativa en otra cuenca bien estudiada, no como evidencia de que los ciclones del Atlántico Sur se comporten idénticamente a los mediterráneos.
+- ¿Qué porcentaje de la lluvia intensa citas textualmente de este paper para tu tesis? Respuesta: la tesis no reproduce las cifras porcentuales exactas del paper (70% DC+WCB, 8%/30% de solapamiento) en el cuerpo del capítulo; solo se cita la conclusión cualitativa de que la DC genera las mayores tasas y que una parte ocurre embebida en el WCB, evitando trasladar cifras específicas de una cuenca a otra sin verificación propia.
+- ¿Qué método usan Flaounas et al. para distinguir la lluvia por DC de la lluvia por WCB, y es comparable al de tu tesis? Respuesta: ellos usan observaciones directas (rayos, radiómetros de microondas) y trayectorias lagrangianas de masas de aire (LAGRANTO) para atribuir espacialmente la lluvia a cada proceso, un enfoque observacional/lagrangiano distinto del enfoque de la tesis, que se apoya en la estratificación por fases del ciclo de vida (CycloPhaser) y compuestos PDFe de precipitación, sin una atribución explícita de mecanismo físico (DC vs. WCB) mediante trayectorias.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/flaounas2018heavy.md

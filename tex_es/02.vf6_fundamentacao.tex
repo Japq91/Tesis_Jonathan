@@ -1,0 +1,343 @@
+\chapter{Fundamentos teóricos}\label{ch:theoretical_background}
+
+% ============================================================
+%  BLOQUE A — CONTEXTO DINÁMICO
+% ============================================================
+
+\section{Ciclones extratropicales en el Atlántico Sur}\label{sec:tb_fundamentos}
+
+La teoría clásica define a los ciclones extratropicales como vórtices de núcleo frío cuya génesis está dominada por la inestabilidad baroclínica de latitudes medias, perspectiva consolidada por las climatologías de \citet{hoskins2005new}. Sin embargo, la caracterización de estos sistemas en el Atlántico Sur requiere matices dinámicos adicionales.\citet{sinclair1995climatology} describió las características del ciclo de vida de los ciclones en el Hemisferio Sur, resaltando que la ciclogénesis está influenciada por los gradientes térmicos oceánicos y la orografía. 
+De manera específica, \citet{inatsu2004zonal} demostraron que la asimetría zonal del \textit{storm track} en el Hemisferio Sur está forzada por la topografía de los Andes, la cual modula la propagación de ondas baroclínicas sobre el subcontinente sudamericano \citep{vera2002cold}, definiendo regiones preferenciales de desarrollo en latitudes extratropicales.
+
+% Esta variabilidad estructural implica que la definición adiabática estándar es insuficiente para la región. 
+Si bien la inestabilidad baroclínica proporciona el entorno favorable para la génesis, la evolución y la intensidad del sistema puede ser modulada por procesos diabáticos asociados a la liberación de calor latente, como concluye \citet{coutodesouza2024thesis}. 
+Este comportamiento es también observado en los experimentos de sensibilidad numérica presentados por \citet{reboita2022from}, donde la supresión de los flujos de calor latente altera la estructura térmica y la intensidad del vórtice estudiado, este ultimo efecto tambien reportado por \citet{gozzo2013air}.
+
+% ============================================================
+%  BLOQUE B — DETECCIÓN Y SEGUIMIENTO
+% ============================================================
+\section{Detección lagrangiana de ciclones}\label{sec:tb_vorticidad}
+Los ciclones del Atlántico Sur, que presentan variabilidad estructural tanto entre sistemas como a lo largo del ciclo de vida,
+exigen un análisis que preserve la organización interna del vórtice en lugar de diluirla en promedios geográficos. 
+Dicha comparación entre ciclones de distintos momentos y posiciones requiere, además, un marco de referencia común. 
+Las subsecciones siguientes describen las decisiones metodológicas que hacen posible este análisis: el marco de referencia lagrangiano, la variable de seguimiento y los criterios de estratificación de la muestra.
+
+\subsection{Marco de referencia lagrangiano}\label{subsec:tb_lagrangiano}
+El análisis euleriano superpone los campos de viento y precipitación de distintos sistemas en coordenadas geográficas absolutas, diluyendo las asimetrías estructurales propias de cada ciclón e incorporando ruido de sistemas adyacentes.
+El enfoque lagrangiano evita esta dilución al centrar cada sistema en su núcleo de vorticidad y operar en coordenadas relativas $(\Delta x, \Delta y)$. 
+Esto preserva la organización espacial interna del ciclón e aísla su señal de los procesos locales, independientemente de la posición geográfica instantánea, lo que permite adoptar un dominio lagrangiano que se desplaza con la trayectoria del sistema.
+La amplitud de $20^{\circ} \times 20^{\circ}$ se justifica por la extensión típica de los ciclones en el Atlántico Sudoccidental, que pueden alcanzar diámetros de circulación de hasta ${\sim}2000$ km en su madurez \citep{gramcianinov2020analysis}, y es coherente con \citet{cardoso2022synoptic}, que emplea el mismo dominio móvil en la región.
+Este enfoque es usado en la literatura de estos sistemas, \citet{laurila2021characteristics} demostraron que el marco lagrangiano permite transformar trayectorias individuales a una rejilla esférica, construir composites y analizar estadísticamente la evolución de los sistemas en el Hemisferio Norte.
+\citet{priestley2022improved} extendieron esta aproximación a ambos hemisferios para cuantificar las características estructurales y la intensidad de los vientos. 
+El presente trabajo adopta la misma lógica composicional y la aplica específicamente al Atlántico Sudoccidental.
+
+\subsection{Seguimiento: vorticidad relativa en 850 hPa}\label{subsec:tb_zeta}
+
+En los esquemas de seguimiento lagrangiano, la vorticidad relativa en 850 hPa ($\zeta_{850}$) ha sido establecida como la variable  para la identificación y rastreo de ciclones extratropicales. 
+En el Hemisferio Sur, los ciclones extratropicales se desarrollan inmersos en un flujo zonal de los oestes que los traslada con gran rapidez. 
+En sus etapas iniciales, la caída de presión queda frecuentemente enmascarada, presentándose los sistemas como vaguadas abiertas en lugar de centros cerrados \citep{sinclair1994objective}. 
+Por esta razón, la presión al nivel del mar (MSLP) resulta una métrica inadecuada para la detección temprana.
+Para resolver este problema, \citet{sinclair1997objective} recomiendan utilizar la vorticidad relativa en 850 hPa ($\zeta_{850}$) como variable de seguimiento. 
+Conceptualmente, la vorticidad relativa mide la rotación local del fluido atmosférico:
+
+\begin{equation}\label{eq:vorticidad_relativa}
+\zeta = \mathbf{k} \cdot (\nabla \times \mathbf{V}) = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y},
+\end{equation}
+
+\noindent donde $u$ y $v$ son las componentes zonal y meridional del viento horizontal, respectivamente. 
+A 850 hPa, el uso de $\zeta$ permite filtrar el flujo zonal de traslación y capturar la rotación ciclónica intrínseca inducida por forzantes de mesoescala antes de que ésta se manifieste en el campo de presión \citep{hoskins2005new}. 
+Este criterio ha sido adoptado como base de detección en los principales algoritmos de rastreo y en las bases de datos objetivas de ciclones extratropicales, automatizando la identificación sin intervención subjetiva.
+La superioridad de $\zeta_{850}$ sobre MSLP ha sido validada tanto en estudios regionales del Atlántico Sur \citep{gramcianinov2019properties,padilhareinke2024objective} como en clasificaciones globales recientes \citep{corner2025classification}. Asimismo, su utilidad para la segmentación objetiva del ciclo de vida ha sido demostrada por \citet{coutodesouza2024new}, quienes identifican la evolución temporal de esta variable como el predictor más confiable para definir sus fases.
+
+\subsection{Estratificación por intensidad dinámica y homogeneidad evolutiva}\label{subsec:tb_poblaciones}
+
+Una vez que los sistemas son rastreados mediante $\zeta_{850}$, es necesario estratificar la muestra para aislar estructuras representativas y garantizar la homogeneidad evolutiva de los casos analizados. La intensidad dinámica se cuantifica mediante el mínimo de vorticidad relativa alcanzado durante la trayectoria completa, $\zeta_{850}^{\min}$.
+
+\textit{Criterio percentílico ($p90$ ).} Siguiendo la práctica establecida por \citet{priestley2022improved}, quienes seleccionan el 10\% de ciclones con mayor vorticidad ciclónica en su pico de intensidad para construir compositos representativos, el umbral del percentil 90 permite aislar los sistemas más intensos desde el punto de vista dinámico. 
+Este subconjunto, denominado $p90$ , por ser el 10\,\% de ciclones más intensos, según el percentil 90 de la distribución de los valores absolutos de $\zeta_{850}^{\min}$, constituye una muestra de vórtices intensos. 
+La aplicación de este criterio sobre la distribución de los valores absolutos de $\zeta_{850}^{\min}$ permite que el subconjunto p90 no esté contaminado por vórtices transitorios o de desarrollo difuso. 
+De forma complementaria, \citet{andrade2024composite} documentan para el Atlántico Sudoccidental que los ciclones intensos (seleccionados usando criterios presion) exhiben patrones sinópticos diferenciados y mayor coherencia entre los extremos de viento en superficie y la intensidad del sistema.
+
+\textit{Criterio percentílico ($p90$).} 
+Se adoptó el umbral del percentil 90 para aislar los sistemas de mayor severidad dinámica, siguiendo la práctica de \citet{priestley2022improved}, quienes emplean el 10\% de ciclones con mayor vorticidad ciclónica en su pico de intensidad para construir compositos representativos. 
+Operativamente, el subconjunto $p90$ se define sobre la distribución de $\zeta_{850}^{\min}$ tomando los valores absolutos. Dado que la vorticidad ciclónica relativa es negativa en el Hemisferio Sur, ordenar por mayor valor absoluto equivale a seleccionar los vórtices con $\zeta_{850}^{\min}$ más negativo —es decir, los más intensos—. 
+Este corte percentílico tiene la ventaja de filtrar los vórtices cuyos valores se concentran en la cola inferior de la distribución. 
+La pertinencia de aislar los ciclones intensos se sustenta también en la literatura regional: \citet{andrade2024composite} documentan para el Atlántico Sudoccidental que estos sistemas (seleccionados usando criterios presion) exhiben patrones sinópticos diferenciados y mayor coherencia entre los extremos de viento en superficie y la intensidad del sistema.
+
+\textit{Homogeneidad evolutiva: ciclo de vida completo.} No obstante, la intensidad por sí sola no garantiza comparabilidad estructural. 
+Para que el análisis por fases sea consistente, los ciclones seleccionados deben presentar un ciclo de vida completo, la secuencia de las cuatro fases evolutivas (Sección~\ref{subsec:tb_fases}), sin fases secundarias ni re-intensificaciones que introduzcan ruido en los promedios. 
+Los criterios de filtrado específicos aplicados a la base de datos se detallan en la Sección~\ref{sec:poblaciones_estudio}.
+
+\textit{Definición de las poblaciones.} De lo anterior emergen dos estratos de análisis complementarios:
+
+\begin{itemize}
+    \item Población Global (\textit{Full-Life-Cycle Set}): conjunto de referencia, integrado por ciclones de ciclo de vida completo que representan el comportamiento medio de la región.
+    \item Subconjunto p90 (\textit{High-Intensity Set}): estrato de alta intensidad dinámica, extraído del percentil superior del valor absoluto de $\zeta_{850}^{\min}$ dentro de la Población Global.
+\end{itemize}
+
+Esta estratificación dual responde a la pregunta de si una mayor intensidad del vórtice se asocia con cambios sistemáticos en la organización espacial en superficie. 
+La validación de que los sistemas $p90$ mantienen una evolución temporal coherente, es decir, alcanzan su máxima intensidad predominantemente durante la fase de madurez, es coherente con lo observado en la población global (Tabla~\ref{tab:fase_max_intensidad}).
+
+% ============================================================
+%  BLOQUE C — REGIONES DE CICLOGÉNESIS
+% ============================================================
+
+\section{Regiones de ciclogénesis}\label{sec:tb_regiones}
+En el Atlántico Sudoccidental, \citet{gramcianinov2019properties} encuentran que la interacción entre el flujo de los oestes, la topografía de los Andes \citep{gan1994influence} y la Temperatura Superficial del Mar define tres regiones de génesis con características físicas diferenciadas. Esfuerzos previos delimitan en la misma region de ciclogenesis, la investigación \citet{reboita2010south} emplearon la vorticidad relativa en niveles bajos para delimitar estos focos en Sudamerica.
+
+\subsection{Sur-sureste de Brasil (SBR)}\label{subsec:tb_sbr}
+
+La región SBR (referida como RG1 en \citet{reboita2022from}) constituye uno de los centros de acción preferenciales para la ciclogénesis extratropical en el litoral brasileño. 
+
+En esta zona, los ciclones pueden iniciarse por inestabilidad baroclínica asociada a la advección de aire cálido en niveles bajos y la presencia de una vaguada en niveles medios-altos \citep{gozzo2014subtropical}, pero su intensificación está fuertemente modulada por los flujos turbulentos de calor sensible y latente en la capa límite \citep{gozzo2013air}, los cuales organizan la convergencia de humedad y la liberación de calor latente en la columna atmosférica, profundizando el sistema en su sector cálido. %\citep{reboita2022from}.
+
+El análisis energético de \citet{coutodesouza2024thesis} muestra que la contribución diabática a la energía del sistema en SBR se eleva durante el invierno, a diferencia de ARG, donde esta contribución resulta la menor de las tres regiones en ambas estaciones.\citet{gramcianinov2024early} demuestran además que, durante la ciclogénesis temprana en SBR, los modelos de alta resolución 
+logran representar las estructuras de mesoescala de advección cálida y convergencia de humedad en capas bajas, validando que la dinámica de SBR no es un artefacto estadístico sino una señal física.
+
+\subsection{Cuenca del Río de la Plata (LPB)}\label{subsec:tb_lpb}
+
+La región comprendida entre $30^\circ$S y $40^\circ$S constituye uno de los principales \textit{hotspots} de ciclogénesis en el Atlántico Sudoccidental. 
+Su mecanismo dominante es la ciclogénesis de sotavento: \citet{gramcianinov2024early} señalan que la ciclogénesis está directamente afectada por el efecto de sotavento de la Cordillera de los Andes, que canaliza aire cálido y húmedo desde los trópicos mediante el chorro de bajo nivel, y confirman mediante modelos regionales que la convergencia de humedad en capas bajas constituye el mecanismo dominante de intensificación.
+\citet{coutodesouza2024thesis} sintetiza que este desarrollo depende del transporte de humedad del Chorro de Capas Bajas de Sudamérica sobre el flanco oriental de los Andes y del Anticiclón Subtropical del Atlántico Sur hacia la costa sureste, lo que se traduce en la mayor contribución diabática a la energía del sistema entre las tres regiones, de forma consistente en ambas estaciones. En línea con este forzante de humedad, \citet{reboita2010south} muestran que la región se caracteriza por una alta frecuencia de sistemas ciclónicos y por su interacción con el transporte de humedad desde latitudes tropicales.
+
+\subsection{Argentina (ARG)}\label{subsec:tb_arg}
+
+% ============================================================
+% VERSIÓN ANTERIOR (comentada para revisión futura — corregida el
+% 2026-08-25: vera2002cold no aplica a esta banda de latitud, ver
+% conversación; simmonds2000variability contradecía el inventario
+% propio de ARG y se reemplazó)
+% ============================================================
+% El sector austral ($>40^\circ$S) responde a un régimen dinámico clásico dominado por la baroclinicidad de gran escala, a diferencia del forzamiento termodinámico de superficie que caracteriza a SBR y LPB.
+% \citet{hoskins2005new} muestran que el \textit{storm track} de esta latitud está acoplado en profundidad a través de toda la columna troposférica, un régimen distinto al de los sistemas someros asociados al chorro subtropical más al norte.
+% Cerca de los Andes, \citet{vera2002cold} muestran que las perturbaciones permanecen inicialmente desacopladas entre niveles, adquiriendo su estructura baroclínica típica solo al desplazarse hacia el este, a diferencia de la intensificación temprana por humedad que domina en SBR y LPB.
+% \citet{simmonds2000variability} muestran que esta región concentra sistemas menos frecuentes pero más extensos e intensos, cuya posición e intensidad responden además a la Oscilación Antártica \citep{mendes2010climatology}, un control de escala hemisférica ausente en SBR y LPB.
+% \citet{gramcianinov2024early} muestran además que los controladores físicos de ARG se mantienen relativamente estables hacia el futuro, a diferencia de la intensificación de humedad proyectada para esas regiones.
+% ============================================================
+% VERSIÓN NUEVA
+% ============================================================
+
+El sector austral ($>40^\circ$S) responde a un régimen dinámico clásico dominado por la baroclinicidad de gran escala, a diferencia del forzamiento termodinámico de superficie que caracteriza a SBR y LPB.
+\citet{hoskins2005new} muestran que, a sotavento de los Andes, la ciclogénesis en esta banda está gobernada por el decaimiento y regeneración del sistema al cruzar la cordillera, patrón que \citet{coutodesouza2024thesis} corrobora empíricamente en su propio análisis energético de la región.
+\citet{sinclair1995climatology} muestra que la ciclogénesis frente a la costa de Argentina ocurre todo el año, a diferencia de otras zonas de génesis a sotavento cuya actividad depende de gradientes térmicos oceánicos estacionales.
+\citet{mendes2010climatology} identifican en esta región un clúster de trayectorias (\textit{storm-track}) propio dentro del sector sudamericano.
+\citet{gramcianinov2024early} muestran además que los controladores físicos de ARG se mantienen relativamente estables hacia el futuro, a diferencia de la intensificación de humedad proyectada para esas regiones.
+
+% ============================================================
+%  BLOQUE D — ESTRUCTURA INTERNA
+% ============================================================
+
+\section{Ciclo de vida y modelos conceptuales}\label{sec:tb_evolucion}
+
+\subsection{Modelo conceptual de estructura interna}\label{subsec:tb_modelos}
+
+% ============================================================
+% VERSIÓN ANTERIOR (comentada para comparación — integrados hallazgos
+% verbatim de papers/citas_verbatim_cuadrantes.md el 2026-08-21)
+% ============================================================
+% La distribución espacial de las variables en superficie (viento y precipitación) está condicionada por el modelo conceptual que describe la evolución del ciclón.
+% Los ciclones extratropicales intensos del Atlántico Sur suelen seguir el modelo de Fractura Frontal propuesto por \citet{shapiro1990life}.
+% Este modelo se distingue por cuatro rasgos diagnósticos: la fractura del frente frío (\textit{frontal fracture}), el frente curvado (\textit{bent-back front}), la estructura en T (\textit{T-bone}) y el aislamiento de una masa de aire cálido en el núcleo (\textit{warm seclusion}).
+% La observación de este modelo en casos intensos del Atlántico Sur fue documentada por \citet{shapiro1999bridge}.
+%
+% Para comprender la dinámica interna asimetrica de las variables en superficie, se propone complementar este paradigma con el modelo de cinturones de transporte \citep{browning1986conceptual}.
+% El WCB y su respectiva corriente en chorro de bajo nivel se organizan en torno al vórtice, y el ascenso y giro anticiclónico de este flujo cálido modula las estructuras de mesoescala, concentrando las bandas de precipitación y el cizallamiento del viento por delante del frente frío.
+% Desde una perspectiva global, \citet{catto2015fronts} demuestran que hasta el 69\% de los WCBs están asociados con frentes, y que los asociados a WCBs son entre 2 y 10 veces más propensos a producir precipitación extrema que los frentes sin WCB.
+% Esta vinculación directa entre la dinámica frontal y la precipitación extrema —y no meramente la intensidad del vórtice central— justifica el enfoque espacial abordado.
+%
+% El acoplamiento entre WCB y CCB explica la asimetría de viento y precipitación.
+% Según \citet{schemm2014linkage} en el HN, el CCB se desplaza a baja altura a lo largo del lado frío del frente curvado, experimentando un aumento de vorticidad potencial al pasar por debajo de la región de máxima liberación de calor latente generada por el WCB ascendente, localizando así el jet de bajo nivel más intenso en el extremo del frente curvado.
+% Este acoplamiento indirecto establece que la precipitación se concentra primordialmente en la zona de ascenso del WCB, mientras que los viento en superficie son modulados por la evolución del sector frío y el descenso del CCB, explicando por qué ambas variables presentan firmas espaciales asimétricas pero dinámicamente relacionadas.
+%
+% Dentro del paradigma de Shapiro-Keyser, una estructura de mesoescala de especial relevancia para los vientos intensos en superficie es el \textit{Sting Jet} (SJ).
+% \citet{clark2005sting} lo caracterizan como un flujo que desciende desde niveles medios y produce la región de vientos superficiales de mayor intensidad en la zona de fractura frontal del ciclón, distinta del WCB y del CCB.
+% La distinción observacional entre el CCB y el SJ fue establecida por \citet{martinez2014cold} en el HN, quienes mediante trazadores químicos demostraron que ambas corrientes constituyen masas de aire físicamente distintas.
+% Adicionalmente, en el HN, \citet{hyeok2024extrem} demuestran que los vientos horizontales de niveles altos, al impactar la superficie frontal fría, generan corrientes descendentes \textit{downdrafts} que transportan momento horizontal hacia la superficie e intensifican los vientos. Su climatología muestra que este fenómeno ocurre predominantemente en los sectores sur y oeste —especialmente el suroeste— del centro del ciclón.
+% ============================================================
+% VERSIÓN NUEVA
+% ============================================================
+
+La distribución espacial de las variables en superficie (viento y precipitación) está condicionada por el modelo conceptual que describe la evolución del ciclón.
+Los ciclones extratropicales intensos del Atlántico Sur suelen seguir el modelo de Fractura Frontal propuesto por \citet{shapiro1990life}.
+Este modelo se distingue por cuatro rasgos diagnósticos: la fractura del frente frío (\textit{frontal fracture}), el frente curvado (\textit{bent-back front}), la estructura en T (\textit{T-bone}) y el aislamiento de una masa de aire cálido en el núcleo (\textit{warm seclusion}).
+La observación de este modelo en casos intensos del Atlántico Sur fue documentada por \citet{shapiro1999bridge}, quien localiza además el ascenso y la precipitación más intensos a lo largo del frente cálido curvado hacia atrás, al oeste del centro, mientras la convección húmeda se concentra sobre el frente frío.
+
+Este modelo captura la forma que adopta el sistema, pero es el modelo de cinturones de transporte \citep{browning1986conceptual} el que explica cómo esa forma se traduce en la distribución de viento y precipitación en superficie.
+
+El WCB se origina en el lado equatorward del centro y asciende sobre el frente cálido, mientras que el CCB —frío y denso— ocupa el lado poleward, envolviendo ciclónicamente la cabeza nubosa \citep{dacre2023climatology}. Esta organización frontal del WCB es la que vincula su posición con los máximos de precipitación, y no la intensidad del vórtice central \citep{catto2015fronts}. \citet{eisenstein2023identification} muestran que, en el HN, el chorro del WCB domina el cuadrante sureste del ciclón y el del CCB el sur-suroeste, patrón consistente con los vientos más intensos del compuesto de \citet{catto2010climate}, también ubicados en el cuadrante del WCB; \citet{hodges2011comparison} confirman que el flujo del sector cálido asociado al WCB es sistemáticamente más débil en el Hemisferio Sur que en el Hemisferio Norte, una asimetría interhemisférica relevante para este trabajo.
+
+El acoplamiento entre WCB y CCB explica la asimetría de viento y precipitación. En el HN, \citet{schemm2014linkage} muestran que el CCB se desplaza a baja altura por el lado frío del frente curvado, ganando vorticidad potencial al pasar bajo la región de máxima liberación de calor latente del WCB ascendente, lo que localiza el chorro de bajo nivel más intenso en el extremo del frente curvado. \citet{priestley2022improved} confirman este patrón en ambos hemisferios: el CCB envuelve el flanco occidental del ciclón formando dicho chorro, mientras que, en el HN, la salida del WCB en altura genera movimiento anticiclónico al sureste del centro. Así, la precipitación se concentra en la zona de ascenso del WCB, mientras que el viento en superficie es modulado por la evolución del sector frío y el descenso del CCB: ambas variables presentan firmas espaciales asimétricas pero dinámicamente relacionadas. \citet{sawada2021heavy} documentan esta estructura en un caso real en Japón (HN): la banda de precipitación estratiforme se extendió hacia el este del centro, sostenida por el WCB ascendiendo sobre el CCB.
+
+Una intrusión seca (DI) descendiendo sobre el WCB puede generar un tercer máximo de precipitación, de carácter convectivo y localizado cerca del centro del ciclón, distinto de la banda estratiforme oriental ya descrita \citep{sawada2021heavy}.
+
+Durante la oclusión, una corriente conocida como \textit{trowal} (\textit{trough of warm air aloft}) —que asciende ciclónicamente dentro del cuadrante ocluido— reorganiza la precipitación en una banda periférica arqueada que ya no coincide con el núcleo de viento, patrón documentado en el HN \citep{martin1999forcing, naud2025lifecycle}.
+
+El \textit{Sting Jet} (SJ), estructura de mesoescala del modelo Shapiro-Keyser, desciende desde niveles medios dentro de esa misma intrusión seca, por encima del CCB, hasta la punta de la cabeza nubosa, produciendo los vientos más intensos en la zona de fractura frontal —distinta del WCB y del CCB—, según casos documentados en el HN \citep{clark2005sting, clark2018sting, martinez2014cold}; \citet{gray2020prototype} ilustran esta ubicación en un caso real ocurrido en el Reino Unido (tormenta Brendan, HN).
+
+Adicionalmente, en el HN, \citet{hyeok2024extrem} demuestran que los vientos horizontales de niveles altos, al impactar la superficie frontal fría, generan corrientes descendentes \textit{downdrafts} que transportan momento horizontal hacia la superficie e intensifican los vientos. Su climatología muestra que este fenómeno ocurre predominantemente en los sectores sur y oeste —especialmente el suroeste— del centro del ciclón.
+
+\subsection{Fases del ciclo de vida}\label{subsec:tb_fases}
+
+Para caracterizar la evolución temporal del viento y la precipitación, este estudio adopta la segmentación del ciclo de vida en cuatro fases discretas mediante la metodología objetiva del paquete computacional \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}, aplicado por \citet{coutodesouza2024new}. Este algoritmo utiliza la tasa de cambio de la vorticidad relativa $\zeta_{850}$ —conectando así directamente con el fundamento de detección establecido en la Sección~\ref{subsec:tb_zeta}— para definir los siguientes regímenes estructurales. Cabe notar que cada fase no es homogénea internamente: los instantes próximos a sus transiciones comparten rasgos de la etapa adyacente, por lo que la condición estructural más representativa de cada régimen corresponde al núcleo temporal de la fase, alejado de ambos bordes de transición.
+
+\begin{enumerate}
+    \item \textit{Incipiente:} Corresponde a la aparición inicial del núcleo de vorticidad organizada. 
+    En el contexto regional, esta fase está frecuentemente asociada a la interacción entre una vaguada en altura y forzantes de superficie, como la orografía de los Andes o gradientes térmicos costeros.
+
+    \item \textit{Intensificación:} Período caracterizado por el rápido crecimiento de la vorticidad ciclónica. 
+    Según el análisis energético de \citet{coutodesouza2024thesis}, esta etapa es impulsada por una retroalimentación entre la inestabilidad dinámica y los flujos de calor latente y sensible.
+
+    \textit{Madurez:} Etapa donde el sistema alcanza su intensidad máxima (pico de vorticidad) y su mayor extensión horizontal. Como demostró \citet{simmonds2000size}, el radio de los ciclones en superficie tiende a incrementarse sistemáticamente a medida que evolucionan hacia la madurez en ambos hemisferios, lo que implica que el dominio de análisis lagrangiano debe ser suficientemente amplio para capturar la circulación completa del sistema. 
+    Es precisamente durante esta fase donde los ciclones oceánicos intensos consolidan la evolución estructural documentada por \citet{shapiro1999bridge}, la deformación del flujo genera la fractura del frente frío y envuelve una masa de aire que queda aislada en el núcleo del vórtice (\textit{warm seclusion}). 
+    Al completarse este proceso, las huellas de precipitación y viento quedan espacialmente desacopladas.
+
+    \item \textit{Decaimiento:} Fase final marcada por el debilitamiento progresivo del vórtice, debido a la fricción superficial y al cese de la conversión de energía baroclínica una vez que el sistema se ha ocluido completamente o ha entrado en una zona barotrópica.
+\end{enumerate}
+
+% ============================================================
+%  BLOQUE E — DISTRIBUCIÓN DE EXTREMOS Y HERRAMIENTAS
+% ============================================================
+
+\section{Estructura superficial y máximos}\label{sec:tb_compuestos}
+
+\subsection{Asimetría espacial de los máximos}\label{subsec:tb_kde_asimetria}
+
+% ============================================================
+% VERSIÓN ANTERIOR (comentada para comparación — integrados hallazgos
+% verbatim de papers/citas_verbatim_cuadrantes.md el 2026-08-21)
+% ============================================================
+% Los ciclones extratropicales son sistemas altamente asimétricos.
+% Es importante notar que gran parte de los modelos conceptuales clásicos fueron desarrollados para el Hemisferio Norte; por lo tanto, al analizar el Atlántico Sur, la distribución espacial debe entenderse como una imagen invertida latitudinalmente tomando al ecuador como eje. Esta inversión, sin embargo, aplica a la orientación y geometría del WCB, no a la magnitud: \citet{kodama2019perspective} muestran que los ciclones extratropicales oceánicos del Hemisferio Sur precipitan sistemáticamente menos que sus contrapartes del Hemisferio Norte (7.7 frente a 10.7~mm/día en promedio espacial), diferencia atribuible a la menor disponibilidad de humedad, y no a una dinámica distinta.
+%
+% La precipitación está fundamentalmente controlada por el WCB.
+% En la literatura clásica del Hemisferio Norte, este flujo se describe ascendiendo típicamente hacia el noreste \citep{blanchard2021warm}; al trasladar este concepto al Hemisferio Sur, el efecto del espejo hace que el WCB concentre la humedad en el sector sureste del sistema durante su etapa de desarrollo.
+% El ascenso inclinado de este flujo cálido organiza la precipitación en estructuras de mesoescala bien definidas, generando bandas anchas de lluvia estratiforme por delante del sistema y bandas estrechas de convección vigorosa en la interfaz del frente frío.
+% Además, \citet{oertel2021warm} demuestran que el WCB frecuentemente alberga núcleos de convección intensa embebida.
+% La marcada asimetría de este campo es corroborada empíricamente por \citet{naud2020evaluation}, quienes muestran que la precipitación en los ciclones oceánicos se concentra abrumadoramente en el sector oriental (ascendente y húmedo), mientras que el flanco occidental permanece subsidente y seco.
+%
+% El campo de viento en superficie presenta una asimetría que evoluciona a lo largo del ciclo de vida del sistema.
+% Como se describió en la Sección~\ref{subsec:tb_modelos}, el CCB experimenta un aumento de vorticidad potencial al atravesar la región de máxima liberación de calor latente del WCB ascendente \citep{schemm2014linkage}, concentrando los vientos más intensos en el extremo del frente curvado.
+% En el Atlántico Sur, \citet{cardoso2022synoptic} documenta que los vientos máximos tienden a concentrarse en sectores específicos, como el cuadrante noreste, y que las ráfagas más destructivas suelen estar vinculadas a características de mesoescala cuya posición relativa al centro de vorticidad varía a medida que el ciclón madura \citep{eisenstein2023identification}. Esta heterogeneidad explica por qué la intensidad de los máximos del viento no puede capturarse mediante una única métrica central \citep{corner2025classification}.
+%
+% Esta disociación entre la métrica dinámica central y el impacto en superficie tiene consecuencias directas para el diseño analítico.
+% \citet{andrade2024composite} documentan que, en el Atlántico Sudoccidental, los ciclones más intensos según MSLP presentan trayectorias sistemáticamente desplazadas hacia el sur respecto a los más intensos según viento máximo a 10 m.
+% Adicionalmente, \citet{gramcianinov2023impact} demuestran que los impactos más severos tienden a confinarse en sectores preferenciales del dominio centrado en el ciclón —como el oeste y noroeste en el Atlántico Sur— y que esta configuración espacial asimétrica varía con la fase del ciclo de vida del sistema.
+% % Ambos resultados evidencian que el análisis de estos eventos requiere un marco de referencia centrado en el sistema, y no un enfoque euleriano fijo.
+% ============================================================
+% VERSIÓN NUEVA
+% ============================================================
+
+Los ciclones extratropicales son sistemas altamente asimétricos.
+Es importante notar que gran parte de los modelos conceptuales clásicos fueron desarrollados para el Hemisferio Norte; por lo tanto, al analizar el Atlántico Sur, la distribución espacial debe entenderse como una imagen invertida latitudinalmente tomando al ecuador como eje. Esta inversión, sin embargo, aplica a la orientación y geometría del WCB, no a la magnitud: \citet{kodama2019perspective} muestran que los ciclones extratropicales oceánicos del Hemisferio Sur precipitan sistemáticamente menos que sus contrapartes del Hemisferio Norte (7.7 frente a 10.7~mm/día en promedio espacial), diferencia atribuible a la menor disponibilidad de humedad, y no a una dinámica distinta. La simetría especular se confirma también en la forma, no solo en la magnitud: \citet{mcerlich2023extremes} muestran que la estructura de coma de la ocurrencia de precipitación rota en sentido horario a lo largo del ciclo de vida de los ciclones del Hemisferio Sur —una rotación ciclónica en ese hemisferio, análoga a la rotación antihoraria descrita para el Hemisferio Norte.
+
+La precipitación está fundamentalmente controlada por el WCB.
+En la literatura clásica del Hemisferio Norte, este flujo se describe ascendiendo típicamente hacia el noreste \citep{blanchard2021warm}; al trasladar este concepto al Hemisferio Sur, el efecto del espejo hace que el WCB concentre la humedad en el sector sureste del sistema durante su etapa de desarrollo.
+El ascenso inclinado de este flujo cálido organiza la precipitación en estructuras de mesoescala bien definidas, generando bandas anchas de lluvia estratiforme por delante del sistema y bandas estrechas de convección vigorosa en la interfaz del frente frío.
+Además, \citet{oertel2021warm} demuestran que el WCB frecuentemente alberga núcleos de convección intensa embebida.
+La marcada asimetría de este campo es corroborada empíricamente por \citet{naud2020evaluation}, quienes muestran que la precipitación en los ciclones oceánicos se concentra abrumadoramente en el sector oriental (ascendente y húmedo), mientras que el flanco occidental permanece subsidente y seco.
+Esta configuración se reproduce en el Atlántico Sur: \citet{gozzo2013air} documentan que la precipitación de ciclones frente al sureste de Brasil se concentra en el sector sureste, a lo largo del frente cálido, sostenida por advección cálida hacia el este-noreste del centro; y \citet{vera2002cold} muestran que el transporte de humedad de latitudes tropicales por el sector este del ciclón de bajo nivel favorece la ocurrencia de precipitación sobre el sudeste de Sudamérica. La convección embebida en este sector también se manifiesta en la actividad eléctrica: \citet{pepler2020dimensional} encuentran que los relámpagos se concentran en el sector cálido, aunque la lluvia más intensa se ubica al sur del centro en ciclones dinámicamente profundos y más hacia el este en ciclones superficiales, evidenciando que la posición exacta del máximo depende también de la estructura vertical del sistema.
+
+El campo de viento en superficie presenta una asimetría que evoluciona a lo largo del ciclo de vida del sistema.
+Como se describió en la Sección~\ref{subsec:tb_modelos}, el CCB experimenta un aumento de vorticidad potencial al atravesar la región de máxima liberación de calor latente del WCB ascendente \citep{schemm2014linkage}, concentrando los vientos más intensos en el extremo del frente curvado.
+\citet{catto2016extratropical} formalizan esta heterogeneidad en tres núcleos de viento espacialmente distintos —el chorro del WCB en el sector cálido, el chorro del CCB en el lado frío del frente cálido, y el \textit{sting jet} en el extremo del frente curvado—, cada uno dominante en una fase distinta del ciclo de vida.
+En el Atlántico Sur, \citet{cardoso2022synoptic} documenta que los vientos máximos tienden a concentrarse en sectores específicos, como el cuadrante noreste, y que las ráfagas más destructivas suelen estar vinculadas a características de mesoescala cuya posición relativa al centro de vorticidad varía a medida que el ciclón madura \citep{eisenstein2023identification}.
+Esta concentración en cuadrantes N/NE ha sido documentada repetidamente en la costa sudeste de Brasil: \citet{cardoso2020wind} la asocian a la posición del Anticiclón Subtropical del Atlántico Sur (ASAS), \citet{dejesus2021multimodel} confirman que el sector cálido —noreste en el Hemisferio Sur— concentra los vientos más intensos de los ciclones incipientes, y \citet{gramcianinov2024early} atribuyen el reforzamiento de este cuadrante a la convergencia del Chorro de Capas Bajas de Sudamérica (SALLJ) con el flujo anticiclónico del ASAS.
+Sin embargo, esta dominancia del sector cálido no es permanente: \citet{gentile2023observed} muestran que, integrados sobre el ciclo de vida completo, los eventos de viento dañino del sector frío (CCB) son de tres a cuatro veces más frecuentes que los del sector cálido (WCB), consistente con el desplazamiento del máximo de viento hacia el sector frío durante la madurez y oclusión ya descrito en la Sección~\ref{subsec:tb_modelos}. Esta heterogeneidad explica por qué la intensidad de los máximos del viento no puede capturarse mediante una única métrica central \citep{corner2025classification}.
+
+La separación espacial entre los máximos de viento y precipitación —lluvia en el sector cálido bajo el ascenso del WCB, viento en el sector frío bajo el CCB o la intrusión seca— no es exclusiva del Atlántico Sur ni de este trabajo.
+\citet{sinclair2023relationship} muestran, para el conjunto global de ciclones con frente cálido dominante, que el ascenso y la precipitación más intensos se ubican sobre el frente cálido curvado, mientras que los máximos de viento responden a mecanismos distintos ligados al CCB y al sting jet.
+En el Mediterráneo, \citet{portal2024linking} cuantifican esta separación: los extremos compuestos de lluvia-viento se maximizan en las zonas de ascenso del WCB (sector cálido), mientras que los extremos de oleaje-viento se maximizan bajo la salida de la intrusión seca (sector frío).
+\citet{gentile2025response} confirman, en compuestos de los ciclones más intensos del Atlántico Norte, que el sector cálido concentra los mayores incrementos de viento y precipitación asociados al calentamiento del océano, mientras que el sector frío responde con menor intensidad.
+En el propio Atlántico Sur, \citet{russo2025impacts} documentan un caso donde, pese a que el sector cálido sostiene la humedad que alimenta al ciclón, el viento en superficie se intensifica explícitamente en el sector frío durante la fase de mayor profundización, evidencia adicional de que ambos campos no covarían espacialmente dentro del mismo sistema.
+
+Esta disociación entre la métrica dinámica central y el impacto en superficie tiene consecuencias directas para el diseño analítico.
+\citet{andrade2024composite} documentan que, en el Atlántico Sudoccidental, los ciclones más intensos según MSLP presentan trayectorias sistemáticamente desplazadas hacia el sur respecto a los más intensos según viento máximo a 10 m.
+Adicionalmente, \citet{gramcianinov2023impact} demuestran que los impactos más severos tienden a confinarse en sectores preferenciales del dominio centrado en el ciclón, con una marcada estacionalidad en el Atlántico Sur: el sector este domina en verano —ligado al WCB—, mientras que el sector oeste-noroeste domina en invierno —ligado al CCB—, y esta configuración espacial asimétrica varía además con la fase del ciclo de vida del sistema.
+% Ambos resultados evidencian que el análisis de estos eventos requiere un marco de referencia centrado en el sistema, y no un enfoque euleriano fijo.
+
+\subsection{Acoplamiento estructural de viento y precipitación en superficie}\label{subsec:tb_compound_def}
+Los campos de viento y precipitación en superficie no son independientes: están físicamente acoplados a través de la estructura tridimensional del ciclón, de modo que sus máximos pueden ocurrir en sectores próximos o solapados durante determinadas fases del ciclo de vida.
+Viento y precipitación son, además, las dos variables de superficie más empleadas para caracterizar los impactos de un ciclón, por lo que su análisis conjunto es el punto de partida natural para caracterizar la morfología del sistema, en línea con otros enfoques que analizan la co-ocurrencia de extremos de superficie \citep{zscheischler2018future}.
+Esta co-ocurrencia no es estadísticamente aleatoria, sino una consecuencia del acoplamiento dinámico entre el WCB y el CCB descrito en la Sección~\ref{subsec:tb_modelos}.
+\citet{chen2025characteristics} establecen que esta configuración conjunta responde a mecanismos físicos acoplados que varían según desarrollo del sistema, lo que justifica el análisis integrado de ambas variables —mediante MEOF— como medio para caracterizar la morfología ciclónica.
+No obstante, ERA5 presenta sesgos documentados en la representación de los extremos más intensos \citep{chen2024evaluation}, cuya magnitud y consecuencias para el subconjunto $p90$ se discuten en detalle en la Sección~\ref{sec:datos_era5}.
+
+\subsection{Herramientas estadísticas para la caracterización estructural}\label{subsec:tb_herramientas}
+
+Entender la estructura del viento y preciptiación de los ciclones requiere sintetizar información de múltiples eventos en una representación coherente. 
+La elección de las técnicas descritas a continuación responde a las propiedades de asimetría, no normalidad y covariabilidad física que caracterizan los campos de viento y precipitación en estos sistemas.
+
+\subsubsection{Compositing centrado en el sistema}\label{subsubsec:tb_compositing}
+
+La técnica de compositing centrado en el sistema consiste en superponer los campos de distintos eventos en coordenadas relativas al centro de cada ciclón, preservando así las asimetrías estructurales. 
+Este enfoque opera bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estructural estadísticamente representativo, y que el promedio de sus campos lagrangianos revela dicho patrón. 
+Su validez metodológica ha sido demostrada por estudios como el de \citet{priestley2022improved}, quienes aplican compositing centrado al 10\% de ciclones más intensos para aislar estructuras representativas, y por \citet{han2025system}, quienes muestran que esta estrategia es capaz de revelar cómo los campos extremos cambian de ubicación o extensión a lo largo del ciclo de vida del sistema.
+
+\subsubsection{Estimación de densidad por kernel (KDE): PDF de magnitudes y de posición}\label{subsubsec:tb_kde}
+
+Para caracterizar la distribución estadística de las magnitudes máximas sin imponer supuestos distribucionales a priori, se adopta la Estimación de Densidad por Kernel (KDE) unidimensional. 
+Esta técnica transforma las observaciones discretas de magnitud $\{x_i\}$ en una función de densidad de probabilidad continua $\hat{f}(x)$, permitiendo contrastar cuantitativamente las distribuciones de precipitación y viento. 
+Como señala \citet{weglarczyk2018kernel}, este enfoque evita el sesgo inherente al agrupamiento en clases de un histograma, preservando la ubicación exacta de cada observación. 
+
+La selección del ancho de banda $h$ constituye el parámetro crítico del estimador. Se adopta la regla 
+de Scott,
+\begin{equation}\label{eq:scott_rule}
+h = \hat{\sigma} \cdot m^{-1/5},
+\end{equation}
+donde $\hat{\sigma}$ es la desviación estándar muestral de las magnitudes. 
+Esta regla ofrece un compromiso asintóticamente óptimo entre sesgo y varianza para distribuciones aproximadamente unimodales \citep{weglarczyk2018kernel}, condición razonablemente satisfecha por las distribuciones de viento y precipitación dentro de cada combinación región--fase. 
+Formalmente, el estimador unidimensional se define como:
+\begin{equation}\label{eq:tb_kde_pdf}
+\hat{f}(x) = \frac{1}{m h} \sum_{i=1}^{m} K\!\left(\frac{x - x_i}{h}\right),
+\end{equation}
+donde $K(\cdot)$ es un núcleo gaussiano estándar:
+\begin{equation}\label{eq:tb_gaussian_kernel}
+K(u) = \frac{1}{\sqrt{2\pi}} \exp\!\left(-\frac{u^2}{2}\right).
+\end{equation}
+
+De forma complementaria, la extensión bidimensional del estimador —denominada aquí PDFe— opera sobre las posiciones relativas $\mathbf{s}_i = (\Delta x_i, \Delta y_i)$ y produce un campo continuo de densidad de probabilidad espacial:
+\begin{equation}\label{eq:tb_kde_simple}
+\hat{f}(\mathbf{s}) = \frac{1}{m} \sum_{i=1}^{m} K_h(\mathbf{s} - \mathbf{s}_i),
+\end{equation}
+con núcleo gaussiano espacial:
+\begin{equation}\label{eq:tb_gauss_kernel_2d_simple}
+K_h(\mathbf{u}) = \frac{1}{2\pi h^2} \exp\!\left(-\frac{\|\mathbf{u}\|^2}{2h^2}\right).
+\end{equation}
+
+La moda del campo $\hat{f}(\mathbf{s})$ indica la posición relativa al centro del ciclón donde 
+estadísticamente es más frecuente encontrar el máximo de la variable. 
+Los niveles de contorno adoptados para la visualización y la implementación computacional de ambos estimadores se detallan en las Secciones~\ref{subsec:extraccion_pdf} y~\ref{subsec:kde_localizacion}.
+
+\subsubsection{Descomposición modal EOF y MEOF}\label{subsubsec:tb_eof}
+Para aislar los patrones espaciales coherentes de variabilidad dentro del acoplamiento físico entre viento y precipitación, el análisis EOF aplicado a una combinación de campos —referido también como PCA de grupos múltiples \citep{hannachi2007empirical}— se ha establecido como el estándar metodológico que llamaremos MEOF. 
+Según el autor, esta técnica permite descomponer la variabilidad de un campo en modos ortogonales de varianza máxima, separando la señal física del ruido o variabilidad de menor escala.
+
+Dado un conjunto de $m$ campos anomalía $X'(\tau, \mathbf{s})$ distribuidos en una grilla espacial de $p$ puntos, se organizan en una matriz $\mathbf{X}$ de dimensiones $m \times p$. La matriz de covarianza espacial $\mathbf{S} = \frac{1}{m-1}\mathbf{X}^T\mathbf{X}$ se descompone espectralmente:
+\begin{equation}\label{eq:eof_decomp}
+\mathbf{S}\,\mathbf{e}_k = \lambda_k \mathbf{e}_k,
+\end{equation}
+donde $\mathbf{e}_k$ es el $k$-ésimo autovector (el patrón espacial $\text{EOF}_k$) y $\lambda_k$ su autovalor asociado (fracción de varianza explicada). 
+Las amplitudes de proyección de cada evento sobre el modo dominante —las componentes principales PC$_k(\tau) = \mathbf{X}(\tau)\,\mathbf{e}_k$— constituyen un indicador sintético del grado de ajuste de cada evento al patrón estructural arquetípico. 
+Una distribución de PC$_1$ con asimetría positiva o leptocurtosis sugiere la existencia de una subpoblación de sistemas que se proyecta con especial intensidad sobre el modo dominante; una correlación negativa entre PC$_1$ y el mínimo de vorticidad $\zeta_{850}^{\min}$ indicaría que los ciclones más intensos son también los más estructuralmente organizados en ese patrón. 
+Estas propiedades se evalúan empíricamente en la Sección~\ref{subsec:analisis_pc}.
+
+En el caso multivariado (MEOF), los campos normalizados de precipitación y viento se concatenan en un vector de estado combinado $\mathbf{Y}(\tau) = [Z_1(\tau), Z_2(\tau), \dots, Z_N(\tau)]$ de longitud $Np$, siguiendo el esquema de \citet{bretherton1992intercomparison}. 
+La misma descomposición espectral se aplica a la matriz de covarianza de $\mathbf{Y}$, obteniendo modos acoplados que describen la covariabilidad conjunta de las variables. 
+El primer modo multivariado (MEOF$_1$) produce simultáneamente un patrón espacial para precipitación ($\text{EOF}_{1,P}$) y otro para viento ($\text{EOF}_{1,W}$), ambos extraídos del mismo modo dominante de covariabilidad conjunta.
+La especificación formal de la descomposición, el procedimiento de normalización y los criterios de umbralización de contornos se detallan en las Secciones~\ref{subsec:eof_univariado} y~\ref{subsec:eof_multivariado}.
+
+\subsubsection{Significancia estadística mediante Bootstrap-t}\label{subsubsec:tb_bootstrap}
+
+Para evaluar la robustez estadística de los patrones espaciales derivados del análisis EOF y aislar las señales físicas del ruido estocástico, se adopta el método de remuestreo no paramétrico Bootstrap-t \citep{efron1993introduction}. 
+A diferencia de las pruebas paramétricas estándar —que asumen distribuciones normales en las variables—, el Bootstrap-t no impone supuestos distribucionales, lo que lo hace especialmente apropiado para las distribuciones de precipitación y viento ciclónico, que son intrínsecamente asimétricas y de cola pesada.
+
+Como establece \citet{hesterberg2015bootstrap}, la variante Bootstrap-t corrige dinámicamente esta asimetría al estandarizar cada muestra de remuestreo por su propio error estándar, generando estadísticos cuasi-pivotales que producen intervalos de confianza con cobertura más precisa que el Bootstrap percentílico estándar. 
+Si $\hat{\theta}$ es el estimador original (carga del EOF en un punto de grilla) y $\hat{\theta}^*_b$ su réplica en la $b$-ésima muestra bootstrap, el estadístico pivotal se define como
+\begin{equation}\label{eq:bootstrap_t}
+t^*_b = \frac{\hat{\theta}^*_b - \hat{\theta}}{\widehat{SE}^*_b},
+\end{equation}
+donde $\widehat{SE}^*_b$ es el error estándar de la submuestra. El intervalo de confianza con nivel $1-\alpha$ se obtiene a partir de los cuantiles empíricos $q_{\alpha/2}$ y $q_{1-\alpha/2}$ de la distribución de $t^*$:
+\begin{equation}\label{eq:bootstrap_ci}
+\left(\hat{\theta} - q_{1-\alpha/2}\,\widehat{SE},\; \hat{\theta} - q_{\alpha/2}\,\widehat{SE}\right).
+\end{equation}
+Los puntos de grilla se consideran estadísticamente significativos si su intervalo de confianza excluye el cero. La especificación del número de iteraciones y la implementación se detallan en la Sección~\ref{subsec:bootstrap_significancia}.

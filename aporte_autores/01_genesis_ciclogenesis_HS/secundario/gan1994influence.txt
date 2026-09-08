@@ -1,0 +1,148 @@
+============================================================
+CARTILLA DE ESTUDIO — Gan & Rao 1994 — Andes y ciclogénesis de sotavento
+============================================================
+
+REFERENCIA COMPLETA
+Gan, M. A., & Rao, V. B. (1994). The influence of the Andes Cordillera on
+transient disturbances. Monthly Weather Review, 122(6), 1141-1157.
+DOI: 10.1175/1520-0493(1994)122<1141:TIOTAC>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 3 veces en 3 capítulos (Introducción, Fundamentación, Viento) como la
+referencia clásica que sustenta el mecanismo físico de ciclogénesis de sotavento
+por interacción del flujo de los oestes con los Andes; no aporta datos propios
+de las regiones SBR/LPB/ARG, pero fundamenta el forzante orográfico de fondo.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (correlación cruzada de altura geopotencial; no es un algoritmo de rastreo de ciclones)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un estudio observacional (basado en análisis estadístico de reanálisis, no en
+un modelo numérico de mecanismos) que investiga cómo la Cordillera de los Andes
+modula el comportamiento de las perturbaciones transitorias (ondas baroclínicas)
+que se desplazan hacia el este en el Hemisferio Sur. Usando análisis de
+correlación con rezago (lag-correlation) sobre datos de altura geopotencial en
+tres niveles (1000, 700 y 300 hPa), los autores caracterizan la estructura
+horizontal y vertical de las ondas antes, durante y después de cruzar los Andes,
+y contrastan sus resultados con teorías previas de ciclogénesis de sotavento
+(Buzzi et al., Hayes et al., Egger). Es relevante para la tesis porque
+proporciona la evidencia empírica clásica del rol de los Andes como forzante
+orográfico de la ciclogénesis en el este de Sudamérica.
+
+2. METODOLOGÍA
+- Datos: altura geopotencial en 1000, 700 y 300 hPa, análisis dos veces al día
+  del National Meteorological Center (NMC), periodo 1 enero 1977 - 31 diciembre
+  1979 (3 años), en grilla de 2.5°x2.5° submuestreada a 5°x5° por limitaciones
+  computacionales de la época.
+- Técnica: correlación cruzada con rezago (lags de 12 h) entre un punto base
+  cercano a los Andes (45°S, 70°W) y todos los demás puntos de grilla, aplicada
+  tanto a los datos sin filtrar (que representan el sistema de baja frecuencia)
+  como a datos filtrados con pasa-altos (filtro gaussiano de 9 puntos que remueve
+  periodos menores a 5 días, para aislar las perturbaciones transitorias de alta
+  frecuencia).
+- Complementariamente, se construyen mapas compuestos de sistemas ciclónicos y
+  anticiclónicos (definidos por anomalías de geopotencial en 1000 hPa que superan
+  ±2 desviaciones estándar en el punto base) para verificar si el patrón de
+  correlación reproduce el comportamiento real de los sistemas individuales.
+- Los resultados se comparan con un modelo cuasigeostrófico lineal de dos capas
+  en un plano beta con una cordillera orientada norte-sur (experimento de
+  Buzzi et al. 1987), que reproduce el modo normal baroclínico de crecimiento
+  más rápido en presencia de montaña.
+
+3. HALLAZGOS CLAVE
+- En los datos sin filtrar (sistema de baja frecuencia), el patrón de onda en
+  1000 hPa se propaga hacia el este con velocidad de fase de ~10° de longitud
+  por día, longitud de onda de ~95° y escala meridional de ~50° de latitud.
+- Al cruzar los Andes se observan efectos orográficos claros: giro anticiclónico
+  de la trayectoria de la perturbación en niveles bajos, trayectoria zonal en
+  niveles altos, distorsión de las isolíneas de correlación y elongación del
+  centro de máxima correlación en el lado de sotavento.
+- Ese giro anticiclónico en niveles bajos y la trayectoria zonal en altura
+  implican una disminución de la inclinación vertical del sistema en el lado de
+  barlovento y un aumento de la inclinación en el lado de sotavento; este
+  incremento de la inclinación vertical se traduce en mayor baroclinicidad y,
+  según la teoría de modos normales lineales con montaña, en desarrollo
+  baroclínico (ciclogénesis) en el lado de sotavento.
+- En los datos filtrados en pasa-altos (perturbaciones transitorias de alta
+  frecuencia) se observa propagación de fase hacia el este junto con una
+  inclinación vertical hacia el oeste con la altura del orden de un cuarto de
+  longitud de onda entre 1000 y 300 hPa, y en 700 hPa la velocidad de fase
+  aumenta a 17° de longitud por día con una longitud de onda de 60°.
+- Los mapas compuestos de sistemas ciclónicos y anticiclónicos muestran la misma
+  estructura y trayectorias de propagación de fase para las anomalías positivas
+  y negativas, con intensificación sobre el Pacífico oriental y cerca del
+  continente sudamericano.
+- La estructura horizontal y la propagación de fase observadas son similares a
+  las del modo normal baroclínico de crecimiento más rápido en el modelo
+  cuasigeostrófico de dos capas con montaña (Buzzi et al. 1987), lo que confirma
+  estadísticamente la existencia de ciclogénesis de sotavento en los Andes.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L100): se cita para describir el mecanismo dominante de
+  ciclogénesis de sotavento: "el flujo de los oestes experimenta una compresión y
+  posterior estiramiento vertical de la columna de atmósfera al atravesar los
+  Andes y, por conservación de la vorticidad potencial, este estiramiento en el
+  flanco oriental induce una caída de presión en superficie que favorece la
+  iniciación de la rotación ciclónica".
+- Cap01-Introducción (L34): se usa para argumentar el rol del continente
+  sudamericano como perturbación orográfica que fuerza la compresión/estiramiento
+  de la columna de vorticidad, consolidando focos de ciclogénesis en la costa
+  este de Sudamérica junto con la baroclinicidad costera y los gradientes de SST
+  (citado junto con reboita2026meteorology).
+- Cap04-Viento (L47): se cita para indicar que la interacción con la orografía
+  "induce distorsiones espaciales en el flujo de niveles bajos y modifica la
+  estructura de las ondas", enlazándolo con la baroclinicidad ambiental
+  (yanase2014parameter) y la incursión de anomalías de PV en niveles altos
+  durante la ciclogénesis en el este continental (crespo2020potential,
+  gramcianinov2019properties).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Gan y Rao (INPE/CPTEC, Brasil) representan la línea pionera brasileña de estudio
+de la influencia orográfica de los Andes sobre la circulación transitoria y la
+ciclogénesis en Sudamérica, en la tradición de estudios de sotavento alpino
+(Egger 1972; Buzzi y Tibaldi 1978; Hayes et al. 1987; Buzzi et al. 1987, 1990)
+trasladados al contexto andino. El trabajo se basa en la tesis doctoral de Gan
+(1992) y precede a la literatura moderna de rastreo de ciclones (p. ej.
+Gramcianinov et al. 2019) que caracteriza estadísticamente los focos de
+ciclogénesis en el este de Sudamérica que este mecanismo orográfico ayuda a
+explicar.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio es fundamentalmente estadístico/observacional (correlación con
+  rezago), no un experimento numérico de sensibilidad; por tanto no aísla
+  directamente el mecanismo de compresión-estiramiento-PV, sino que muestra que
+  el patrón observado es consistente con teorías previas de ciclogénesis de
+  sotavento (Buzzi et al., Hayes et al.) — la formulación en términos de
+  conservación de vorticidad potencial que la tesis atribuye al paper proviene
+  más bien del marco teórico que Gan & Rao usan para interpretar sus resultados,
+  no de una derivación original del artículo.
+- Periodo de análisis corto (solo 3 años, 1977-1979) y grilla gruesa (submuestreo
+  a 5°x5°) por las limitaciones computacionales de la época.
+- Los propios autores reconocen que los mapas de correlación no distinguen entre
+  anomalías positivas y negativas y que los efectos observados podrían deberse en
+  parte al contraste térmico océano-continente en la costa oeste, no solo a la
+  orografía (aunque descartan esto porque las distorsiones no aparecen en la
+  costa este).
+- No se discuten explícitamente en el paper las tres regiones de ciclogénesis
+  del Atlántico Sudoccidental (SBR/LPB/ARG) que organiza tu tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿El mecanismo de "compresión-estiramiento-conservación de PV" que citas es una
+  conclusión original de Gan & Rao (1994)? Respuesta: no exactamente; el paper
+  demuestra estadísticamente (vía correlación con rezago) que el comportamiento
+  observado de las ondas transitorias es consistente con ese mecanismo descrito
+  en la teoría de ciclogénesis de sotavento previa (Buzzi et al. 1987, Hayes et
+  al. 1987), más que derivarlo de novo.
+- ¿Por qué usar un estudio de 1994 con solo 3 años de datos para sustentar un
+  mecanismo físico en una tesis moderna? Respuesta: porque establece la evidencia
+  empírica original y sigue siendo la referencia estándar del mecanismo orográfico
+  andino, complementada en la tesis con estudios más recientes de rastreo de
+  ciclones (gramcianinov2019properties, crespo2020potential).
+- ¿Cómo se conecta este mecanismo de sotavento con las tres zonas de ciclogénesis
+  de tu tesis (SBR/LPB/ARG)? Respuesta: el forzante orográfico andino es más
+  relevante para ARG (ciclogénesis próxima a la cordillera), mientras que SBR/LPB
+  están dominadas por baroclinicidad costera y flujos oceánicos.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_PDF/gan1994influence.pdf

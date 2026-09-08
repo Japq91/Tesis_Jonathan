@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Introducción — inventario de ideas y opciones de agrupamiento</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1f2422;
+    --muted: #5b6460;
+    --card: #ffffff;
+    --border: #e2ded4;
+    --accent: #7a3b2e;
+    --accent-soft: #f3e6df;
+    --g1: #4c6b52; --g1-soft:#e7efe8;
+    --g2: #7a3b2e; --g2-soft:#f3e6df;
+    --g3: #3c5a7a; --g3-soft:#e6edf3;
+    --g4: #8a6d1f; --g4-soft:#f5efdd;
+    mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17191a;
+      --fg: #e7e5e1;
+      --muted: #a8a39b;
+      --card: #1f2224;
+      --border: #33383a;
+      --accent: #d99a86;
+      --accent-soft: #33251f;
+      --g1: #8fbf9a; --g1-soft:#1e2b21;
+      --g2: #d99a86; --g2-soft:#33251f;
+      --g3: #93b6d9; --g3-soft:#1c2732;
+      --g4: #d9c184; --g4-soft:#2e2915;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Iowan Old Style", "Georgia", "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.5rem 6rem; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 3rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 { font-size: 1rem; margin-top: 1.8rem; }
+  p { max-width: 72ch; }
+  .note {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 0.8rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    margin: 1rem 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0 2rem; font-size: 0.88rem; }
+  caption { text-align: left; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.4rem; }
+  th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 0.85em; background: var(--accent-soft); padding: 0.1em 0.35em; border-radius: 4px; }
+  .idea-group {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .idea-group h4 {
+    margin: 0 0 0.6rem;
+    font-size: 0.95rem;
+  }
+  .idea-group ol { margin: 0; padding-left: 1.3rem; }
+  .idea-group li { margin-bottom: 0.55rem; font-size: 0.94rem; }
+  .cite { color: var(--muted); font-size: 0.85em; }
+  .loc { color: var(--muted); font-size: 0.78em; font-family: ui-monospace, monospace; }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  .tag-fam-a { background: var(--g3-soft); color: var(--g3); }
+  .tag-fam-b { background: var(--g2-soft); color: var(--g2); }
+  .option-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.2rem 0;
+  }
+  .option-card h3 { margin-top: 0; }
+  .option-card .why { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  .flow-step {
+    flex: 1 1 150px;
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .flow-step b { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--accent); margin-bottom: 0.2rem; }
+  .flow-arrow { align-self: center; color: var(--muted); font-size: 1.1rem; }
+  ol.toc { font-size: 0.9rem; }
+  .badge-count {
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  footer { margin-top: 4rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1rem; }
+  .verdict {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  .v-ok { background: var(--g1-soft); color: var(--g1); }
+  .v-partial { background: var(--g4-soft); color: var(--g4); }
+  .v-none { background: var(--border); color: var(--muted); }
+  .v-contra { background: #f6dede; color: #a3342b; }
+  @media (prefers-color-scheme: dark) { .v-contra { background: #3a1f1c; color: #e79a8f; } }
+  .check-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 0.7rem 0;
+  }
+  .check-card summary { cursor: default; font-size: 0.92rem; margin-bottom: 0.4rem; }
+  .check-card .cite-keys { font-size: 0.78rem; color: var(--muted); font-family: ui-monospace, monospace; }
+  blockquote.src {
+    font-size: 0.85rem;
+    font-style: italic;
+    border-left: 2px solid var(--accent);
+    padding: 0.2rem 0 0.2rem 0.8rem;
+    margin: 0.5rem 0;
+    color: var(--fg);
+  }
+  .agent-nota { font-size: 0.82rem; color: var(--muted); margin: 0.3rem 0 0; }
+  .alert-critical {
+    background: #f6dede;
+    border-left: 3px solid #a3342b;
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    margin: 1rem 0 2rem;
+  }
+  @media (prefers-color-scheme: dark) { .alert-critical { background: #2a1815; border-left-color: #e79a8f; } }
+  .stat-row { display:flex; gap:1rem; flex-wrap:wrap; margin: 1rem 0 2rem; }
+  .stat-box { flex:1 1 120px; background:var(--card); border:1px solid var(--border); border-radius:8px; padding:0.8rem; text-align:center; }
+  .stat-box .n { font-size:1.6rem; font-weight:700; display:block; }
+  .stat-box .l { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Introducción — inventario de ideas y opciones de agrupamiento</h1>
+<p class="subtitle">Basado en <code>tex_es/01.vr3_introducao.tex</code> (estado al 2026-08-05). 60 ideas extraídas, una por oración.</p>
+
+<div class="note">
+<strong>Metodología.</strong> Cada oración de prosa del capítulo (sin contar objetivos, que ya son ítems discretos) se trató como una unidad de idea. Se excluyeron los encabezados <code>%BLOQUE</code> existentes como criterio de agrupamiento — la lista de abajo se reagrupa desde cero según lo que cada oración comunica, no según la estructura A–F ya presente en el archivo. Las dos opciones finales de agrupamiento no son arbitrarias: se derivan de cómo están estructurados los papers más citados a lo largo de <em>toda</em> la tesis (conteo de <code>\citet</code>/<code>\citep</code> en los capítulos 01–09 actualmente usados por <code>tese_es.tex</code>), no solo dentro de la Introducción.
+</div>
+
+<h2 id="citas">Papers más citados en la tesis y su estilo estructural</h2>
+<p>Los 14 papers con más citas en el documento completo se agrupan, por cómo organizan su propio argumento, en dos familias:</p>
+
+<table>
+<caption>Frecuencia total de citación en los capítulos 01–09 (<code>tese_es.tex</code>, versión actual)</caption>
+<thead>
+<tr><th>Cita</th><th>N</th><th>Título</th><th>Cómo organiza su argumento</th><th>Familia</th></tr>
+</thead>
+<tbody>
+<tr><td><code>gramcianinov2019properties</code></td><td>12</td><td>The properties and genesis environments of South Atlantic cyclones</td><td>por región/entorno de génesis</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>gozzo2013air</code></td><td>9</td><td>Air-sea interaction processes influencing... a Shapiro-Keyser cyclone</td><td>por mecanismo físico (estudio de caso)</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>corner2025classification</code></td><td>9</td><td>Classification of ... cyclones using multiple measures of intensity</td><td>por esquema de clasificación/métrica</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>priestley2022improved</code></td><td>8</td><td>Improved representation of extratropical cyclone structure in HighResMIP models</td><td>por comparación de modelos/resolución</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>gramcianinov2020analysis</code></td><td>7</td><td>Analysis of Atlantic storm tracks... in ERA5 and CFSR/CFSv2</td><td>por comparación de bases de datos</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>coutodesouza2024new</code></td><td>7</td><td>New perspectives... automatic method for detecting... lifecycle</td><td>por fase del ciclo de vida</td><td><span class="tag tag-fam-b">ciclo de vida</span></td></tr>
+<tr><td><code>cardoso2022synoptic</code></td><td>7</td><td>Synoptic climatology of subtropical cyclone impacts on near-surface winds</td><td>por variable de impacto (viento)</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>shapiro1999bridge</code></td><td>6</td><td>modelo conceptual Shapiro–Keyser</td><td>por etapa del modelo (fractura, bent-back, T-bone, warm seclusion)</td><td><span class="tag tag-fam-b">ciclo de vida</span></td></tr>
+<tr><td><code>reboita2022from</code></td><td>6</td><td>From a Shapiro-Keyser cyclone to the subtropical cyclone Raoni</td><td>narrativa evolutiva de un caso</td><td><span class="tag tag-fam-b">ciclo de vida</span></td></tr>
+<tr><td><code>oertel2021warm</code></td><td>6</td><td>Observations and simulation of intense convection embedded in a WCB</td><td>por mecanismo físico</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>hannachi2007empirical</code></td><td>6</td><td>EOF and related techniques in atmospheric science: a review</td><td>por técnica/método</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>gramcianinov2023impact</code></td><td>6</td><td>Impact of cyclone intensity and speed on extreme wave trends</td><td>relación forzante → impacto</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>eisenstein2023identification</code></td><td>6</td><td>Objective identification of sting jets in ERA5... climatology</td><td>algoritmo de detección + climatología</td><td><span class="tag tag-fam-a">temática</span></td></tr>
+<tr><td><code>coutodesouza2024thesis</code></td><td>6</td><td>Cyclones in the Southwestern Atlantic: Life Cycle and Energetics</td><td>por ciclo de vida + energética</td><td><span class="tag tag-fam-b">ciclo de vida</span></td></tr>
+</tbody>
+</table>
+
+<p>10 de los 14 papers más citados organizan su argumento por <strong>tema/mecanismo/método</strong> (familia A), sin narrativa cronológica. Los 4 restantes —que además son los que sostienen literalmente el andamiaje metodológico de esta tesis (<code>CycloPhaser</code>, el modelo de Fractura Frontal, la propia base de trayectorias)— organizan su argumento por <strong>fase o evolución temporal</strong> del sistema (familia B). De ahí nacen las dos opciones de la sección final.</p>
+
+<h2 id="lista">Lista completa de ideas, agrupadas por lo que comunican</h2>
+<p>Agrupamiento base: 15 grupos, cada uno reúne oraciones que comunican la misma idea principal, independientemente del bloque A–F en que estén ubicadas hoy en el archivo.</p>
+
+<div class="idea-group">
+<h4>G1 — Definición y rol físico-climático del fenómeno <span class="badge-count">(3 ideas · líneas 8–10)</span></h4>
+<ol>
+<li>Los ciclones extratropicales son sistemas sinópticos recurrentes en latitudes medias y altas. <span class="loc">L8</span></li>
+<li>Son el mecanismo dominante del transporte latitudinal de energía en el HS. <span class="cite">hoskins2005new</span> <span class="loc">L9</span></li>
+<li>Su cuantificación es posible gracias a algoritmos objetivos de seguimiento por vorticidad. <span class="cite">sinclair1994objective, simmonds1999southern</span> <span class="loc">L10</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G2 — Relevancia societal y riesgo costero <span class="badge-count">(4 ideas · líneas 13–16)</span></h4>
+<ol>
+<li>En el HS son el fenómeno de severidad geofísica dominante en la zona costera. <span class="cite">gramcianinov2023impact</span> <span class="loc">L13</span></li>
+<li>En el litoral sur de Brasil causan riesgos meteoceanográficos, letalidad y son motores de tormentas costeras. <span class="cite">bartolomei2024extremos, miranda2026patterns</span> <span class="loc">L14</span></li>
+<li>El viento costero asociado se vincula directamente a pérdidas socioeconómicas. <span class="cite">bitencourt2010relating</span> <span class="loc">L15</span></li>
+<li>Modulan la variabilidad intraestacional del oleaje, amplificando el riesgo más allá del evento sinóptico. <span class="cite">sasaki2021intraseasonal</span> <span class="loc">L16</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G3 — Climatología regional: cuándo y dónde se forman <span class="badge-count">(4 ideas · líneas 23–26)</span></h4>
+<ol>
+<li>Existen tres centros preferenciales de ciclogénesis en el Atlántico Sur. <span class="cite">reboita2010south</span> <span class="loc">L23</span></li>
+<li>La ciclogénesis es más frecuente en invierno y su variabilidad interanual afecta la precipitación del sur de Brasil. <span class="cite">gan1991surface</span> <span class="loc">L24</span></li>
+<li>Sudamérica es una de las regiones del HS con mayor densidad ciclónica. <span class="cite">jones1993climatology</span> <span class="loc">L25</span></li>
+<li>Trabajos posteriores han seguido caracterizando la distribución espacio-temporal de estos sistemas. <span class="cite">gramcianinov2020analysis, padilhareinke2026characterization</span> <span class="loc">L26</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G4 — Diversidad y heterogeneidad estructural <span class="badge-count">(4 ideas · líneas 29–32)</span></h4>
+<ol>
+<li>La naturaleza de estas perturbaciones en la región es heterogénea. <span class="loc">L29</span></li>
+<li>Los sistemas transitan por un continuo estructural, no por categorías estáticas. <span class="cite">hart2003cyclone</span> <span class="loc">L30</span></li>
+<li>En el Atlántico Sur esto se manifiesta en ciclones híbridos y en sistemas tipo Shapiro-Keyser. <span class="cite">evans2012climatology, gozzo2013air</span> <span class="loc">L31</span></li>
+<li>Estas variaciones muestran que el Atlántico Sur se aparta de la conceptualización clásica de ciclón. <span class="cite">gozzo2014subtropical</span> <span class="loc">L32</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G5 — Forzante orográfico y delimitación regional del estudio <span class="badge-count">(2 ideas · líneas 34, 46)</span></h4>
+<ol>
+<li>Los Andes, la baroclinicidad costera y la TSM consolidan focos ciclogenéticos diferenciados en la costa este de Sudamérica. <span class="cite">gan1994influence, reboita2026meteorology</span> <span class="loc">L34</span></li>
+<li>Dada esa heterogeneidad, el estudio se centra en tres regiones: SBR, LPB y ARG. <span class="cite">crespo2020potential, gramcianinov2019properties, reboita2026meteorology</span> <span class="loc">L46</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G6 — Mecanismos dinámicos internos: chorro, SALLJ, WCB/CCB <span class="badge-count">(7 ideas · líneas 37–43)</span></h4>
+<ol>
+<li>La actividad ciclónica es modulada por la corriente en chorro y su interacción con niveles bajos. <span class="loc">L37</span></li>
+<li>Al este de los Andes, la convergencia de bajo nivel es el principal factor de intensificación. <span class="cite">vera2002cold</span> <span class="loc">L38</span></li>
+<li>El SALLJ media el transporte meridional de humedad desde los trópicos. <span class="loc">L39</span></li>
+<li>La advección cálida y húmeda actúa como fuente diabática que refuerza la intensidad del sistema. <span class="cite">reboita2022from</span> <span class="loc">L40</span></li>
+<li>Esa advección se organiza en cinturones transportadores (WCB/CCB) — mención breve, desarrollo remitido a Fundamentos. <span class="loc">L41</span></li>
+<li>El sector cálido de los ciclones más intensos se intensificará a futuro (vientos y precipitación extrema). <span class="cite">gentile2025response</span> <span class="loc">L42</span></li>
+<li>Por eso viento y precipitación son las variables elegidas para caracterizar estos impactos. <span class="loc">L43</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G7 — Insuficiencia de las métricas escalares de intensidad <span class="badge-count">(5 ideas · líneas 53–57)</span></h4>
+<ol>
+<li>La intensidad de un ciclón no puede capturarse con una única métrica (relación no lineal con el viento). <span class="cite">corner2025classification</span> <span class="loc">L53</span></li>
+<li>Un ciclón puede ser dinámicamente intenso y llover poco; los máximos no coinciden con el mínimo de presión. <span class="cite">sinclair2023relationship</span> <span class="loc">L54</span></li>
+<li>Los máximos de viento no se distribuyen uniformemente, se concentran en cuadrantes específicos. <span class="cite">cardoso2022synoptic</span> <span class="loc">L55</span></li>
+<li>En el HN, los mayores impactos se asocian a estructuras de mesoescala cuya posición varía con el ciclo de vida. <span class="cite">eisenstein2023identification</span> <span class="loc">L56</span></li>
+<li>Esto se confirma en el HS: los ciclones con desarrollo vertical sustentado tienen vientos y lluvia sistemáticamente mayores. <span class="cite">pepler2020dimensional</span> <span class="loc">L57</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G8 — Vacío de caracterización estructural por fase evolutiva <span class="badge-count">(6 ideas · líneas 60–65)</span></h4>
+<ol>
+<li>Existe un vacío en cómo se estructura espacialmente viento/precipitación durante la evolución del ciclón. <span class="loc">L60</span></li>
+<li>En Sudamérica los ciclones exhiben evoluciones que se apartan de los modelos tradicionales. <span class="cite">gozzo2013air, reboita2022from</span> <span class="loc">L61</span></li>
+<li>La coocurrencia de máximos de viento y precipitación es consecuencia del acoplamiento dinámico entre ambos campos. <span class="cite">chen2025characteristics</span> <span class="loc">L62</span></li>
+<li>Aun así, hace falta describir la organización espacial independiente de cada campo y su covariabilidad. <span class="loc">L63</span></li>
+<li>Se requieren marcos de clasificación que vinculen la evolución del sistema con sus manifestaciones de superficie. <span class="cite">han2025system</span> <span class="loc">L64</span></li>
+<li>Campañas de observación aerotransportada confirman convección interna invisible para productos de resolución convencional. <span class="cite">kaylee2025convection</span> <span class="loc">L65</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G9 — Limitaciones de resolución de los datos disponibles <span class="badge-count">(3 ideas · líneas 67–69)</span></h4>
+<ol>
+<li>La caracterización estructural también está limitada por la resolución espacial de los datos. <span class="loc">L67</span></li>
+<li>Los modelos subestiman los vientos extremos al no resolver explícitamente la mesoescala. <span class="cite">priestley2022improved</span> <span class="loc">L68</span></li>
+<li>La variabilidad de forma/tamaño genera incertidumbre en la intensidad de superficie, sobre todo en topografía compleja. <span class="cite">neu2013intercomparison</span> <span class="loc">L69</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G10 — Base de datos y criterio de detección/segmentación <span class="badge-count">(4 ideas · líneas 75–79)</span></h4>
+<ol>
+<li>Se usa la base de trayectorias basada en ζ850 en lugar de presión al nivel del mar. <span class="cite">coutodesouza2024new</span> <span class="loc">L75</span></li>
+<li>Se adopta la segmentación objetiva en 4 fases del algoritmo CycloPhaser. <span class="cite">coutodesouza2024new, deSouza2025CycloPhaser</span> <span class="loc">L77</span></li>
+<li>Este marco supera las clasificaciones clásicas, en línea con propuestas globales como SyCLoPS. <span class="cite">han2025system</span> <span class="loc">L78</span></li>
+<li>La caracterización se apoya también en el modelo de Fractura Frontal como marco interpretativo. <span class="cite">shapiro1990life, shapiro1999bridge</span> <span class="loc">L79</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G11 — Justificación (y límites) de ERA5 <span class="badge-count">(5 ideas · líneas 81–85)</span></h4>
+<ol>
+<li>ERA5 resuelve gradientes de presión y flujos de humedad que generaciones anteriores suavizaban. <span class="cite">hersbach2020era5</span> <span class="loc">L81</span></li>
+<li>Mayor resolución espacial permite capturar estructuras de mesoescala del viento. <span class="cite">priestley2022improved</span> <span class="loc">L82</span></li>
+<li>Validaciones regionales confirman representación superior de ERA5 frente a productos previos. <span class="cite">gramcianinov2020analysis</span> <span class="loc">L83</span></li>
+<li>Comparaciones recientes respaldan igualmente la elección de ERA5. <span class="cite">dalanhese2023new</span> <span class="loc">L84</span></li>
+<li>No obstante, ERA5 presenta sesgos conocidos en los extremos más intensos. <span class="loc">L85</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G12 — Pregunta de investigación e hipótesis <span class="badge-count">(1 idea · línea 92)</span></h4>
+<ol>
+<li>Pregunta: ¿cómo evoluciona la distribución espacial de viento/precipitación por fase? Hipótesis: hay asimetría sistemática que varía por fase, región e intensidad, no capturable con métricas escalares. <span class="loc">L92</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G13 — Estrategia analítica: reducción dimensional, MEOF, bootstrap <span class="badge-count">(5 ideas · líneas 95–99)</span></h4>
+<ol>
+<li>Testear la hipótesis requiere técnicas univariadas y multivariadas que capturen covariabilidad. <span class="loc">L95</span></li>
+<li>La variabilidad espacial continua exige herramientas de reducción dimensional interpretables físicamente. <span class="loc">L96</span></li>
+<li>El MEOF es el marco apropiado: extrae modos acoplados entre variables físicamente distintas. <span class="cite">hannachi2007empirical, liang2018multivariate</span> <span class="loc">L97</span></li>
+<li>Los patrones EOF tienen aplicación práctica más allá de lo descriptivo, incluso en pronóstico operativo. <span class="cite">sun2022evaluation</span> <span class="loc">L98</span></li>
+<li>La robustez de los patrones se evalúa con bootstrap para distinguir señal de ruido muestral. <span class="loc">L99</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G14 — Síntesis del marco metodológico y su producto final <span class="badge-count">(2 ideas · líneas 101–102)</span></h4>
+<ol>
+<li>Datos + detección dinámica + fases + MEOF constituyen la base técnica para cuantificar la evolución estructural. <span class="cite">coutodesouza2024new</span> <span class="loc">L101</span></li>
+<li>Aplicar ese marco sobre las fases permitirá construir prototipos estructurales por región y fase. <span class="loc">L102</span></li>
+</ol>
+</div>
+
+<div class="idea-group">
+<h4>G15 — Objetivos <span class="badge-count">(5 ideas · líneas 111–121)</span></h4>
+<ol>
+<li>Objetivo general: caracterizar la evolución de la estructura espacial de viento/precipitación por fase, con estratificación por región. <span class="loc">L111</span></li>
+<li>OE1 — Consolidar la base de datos lagrangiana (ERA5 + trayectorias + fases), estratificada por región e intensidad. <span class="loc">L115</span></li>
+<li>OE2 — Cuantificar la distribución estadística y asimetría espacial de los máximos (PDF + PDF espacial). <span class="loc">L117</span></li>
+<li>OE3 — Identificar modos dominantes de variabilidad espacial (EOF/MEOF). <span class="loc">L119</span></li>
+<li>OE4 — Construir prototipos estructurales sintéticos por fase y región. <span class="loc">L121</span></li>
+</ol>
+</div>
+
+<h2 id="verificacion">Verificación contra las fuentes citadas</h2>
+<p>Cada idea parafraseada de <code>01.vr4_introducao.tex</code> se contrastó contra el paper original: primero <code>papers/files_MD/&lt;citekey&gt;.md</code>, y solo si ese archivo no existía o no cubría el tema, el PDF en <code>papers/files_PDF/&lt;citekey&gt;.pdf</code>. La cita en inglés de cada tarjeta es copiada literalmente de la fuente, no traducida ni reconstruida.</p>
+
+<div class="stat-row">
+<div class="stat-box"><span class="n">32</span><span class="l">Soportada</span></div>
+<div class="stat-box"><span class="n">14</span><span class="l">Parcial</span></div>
+<div class="stat-box"><span class="n">0</span><span class="l">No encontrada</span></div>
+<div class="stat-box"><span class="n">1</span><span class="l">Contradice</span></div>
+</div>
+
+<div class="alert-critical">
+<strong>Hallazgo que requiere corrección: Idea 51 (línea 97) — <code>hannachi2007empirical</code> — CONTRADICE.</strong> El texto dice que este paper "establece el análisis de Funciones Ortogonales Empíricas Multivariadas (MEOF) como el marco apropiado". El paper es una revisión de EOF/REOF/EEOF que <em>excluye explícitamente</em> los métodos multivariados/acoplados entre campos de su alcance ("methods involving covariability between two or more fields... are not presented here"); ni "MEOF" ni "multivariate EOF" aparecen en el texto (verificado por grep). La cita correcta para esa frase es <code>liang2018multivariate</code>, que sí sostiene la afirmación de "modos acoplados entre variables físicamente distintas" y ya está citada a continuación en la misma oración — probablemente <code>hannachi2007empirical</code> debería moverse a sostener solo el fundamento general de EOF (no MEOF), o eliminarse de ese punto específico.
+</div>
+
+<h3>Bloque A — Relevancia del fenómeno</h3>
+
+<div class="check-card">
+<div class="cite-keys">Idea 2 · hoskins2005new</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"The storm tracks of the Southern Hemisphere (SH) are important for the weather there and also for climate processes through their latitudinal transports and their driving of the Southern Ocean."</blockquote>
+<p class="agent-nota">El paper dice "important", no "mecanismo dominante"; no se halló la palabra "dominant" aplicada a los storm tracks en todo el artículo.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 3 · sinclair1994objective, simmonds1999southern</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"An objective method is developed and used to derive a climatology of centers of cyclonic vorticity for the Southern Hemisphere... computed as local minima of geostrophic relative vorticity ζg... There is, however, a more compelling reason to use vorticity instead of pressure to locate cyclones... for an even stronger westerly component (or a weaker vorticity center), the pressure minimum vanishes altogether." (sinclair1994objective)</blockquote>
+<blockquote class="src">"The study has been undertaken with an objective cyclone tracking algorithm applied to the digital analyses." — parte del proyecto FROST, campaña de observación intensiva antártica (simmonds1999southern)</blockquote>
+<p class="agent-nota">El algoritmo de simmonds1999southern usa el Laplaciano de presión (no vorticidad directamente) para el rastreo, con vorticidad solo para el "steering" — misma familia conceptual, no idéntico método.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 4 · gramcianinov2023impact</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"In mid to high latitudes, the main drivers of wave climate are the extratropical cyclones, which are known by their strong winds and large fetch."</blockquote>
+<p class="agent-nota">El paper respalda "principal impulsor del clima de olas", más acotado que "fenómeno de severidad geofísica dominante para la zona costera regional".</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 5 · bartolomei2024extremos, miranda2026patterns</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"In the winter of 2023, two synoptic-scale cyclones were responsible for approximately 17 fatalities and various damages in southern Brazil." (bartolomei2024extremos)</blockquote>
+<blockquote class="src">"Extratropical cyclones are the main drivers of high-energy wave events along the southern coast of Brazil, frequently producing hazardous coastal conditions." (miranda2026patterns — soportada)</blockquote>
+<p class="agent-nota">bartolomei2024extremos confirma la letalidad, pero no menciona "riesgos meteoceanográficos" ni oleaje explícitamente.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 6 · bitencourt2010relating</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"Intense wind events at the southern Brazilian coast cause severe socio-economic losses. Generally, such events have been associated with extratropical cyclones over the Southwest Atlantic Ocean... Generally, the winds are well associated with the extratropical cyclones only south of 28°S."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 7 · sasaki2021intraseasonal</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"extratropical cyclones... are responsible for driving most of the wave pattern at middle and high latitudes, generating extreme conditions in the western subtropical South Atlantic (wSA)... This work aims to investigate the importance of intraseasonal timescales (30–180 d) in the regional climatology of waves and its atmospheric forcing."</blockquote>
+</div>
+
+<h3>Bloque B — Estado del arte regional</h3>
+
+<div class="check-card">
+<div class="cite-keys">Idea 8 · reboita2010south</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"This work confirms the existence of three cyclogenetic regions in the west sector of the SAO, near the South America east coast... Basically two cyclogenetic processes are involved, namely, local baroclinic instability of westerlies and lee cyclogenesis due to the Andes mountains."</blockquote>
+<p class="agent-nota">Confirma las tres regiones y el efecto orográfico de los Andes; no se encontró discusión de "gradientes térmicos oceánicos" como mecanismo — el SST aparece solo como condición de frontera del modelo.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 9 · gan1991surface</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The frequency of cyclogenesis is more in winter than in any other season... The years of higher (lower) cyclogenesis are found to be associated with higher (lower) rainfall."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 10 · jones1993climatology</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The region centered on the CPT is one the most active genesis regions in the hemisphere, with only the subtropical continents displaying a greater incidence of cyclogenesis."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 11 · gramcianinov2020analysis, padilhareinke2026characterization</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The climatology produced for both datasets shows the main characteristics of the NA and SA storm tracks, such as seasonal variability and genesis regions." (gramcianinov2020analysis)</blockquote>
+<blockquote class="src">"We also analyze the interannual variability in the frequency of cyclone occurrences across each season." (padilhareinke2026characterization)</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 13 · hart2003cyclone</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"the cyclone phase space is not a mutually exclusive set of cyclone types, but rather a broad continuum. At one end of this continuum lies the conventional extratropical cyclone; at the other end lies the conventional tropical cyclone."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 14 · evans2012climatology, gozzo2013air</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"A subtropical cyclone is a hybrid structure (upper-level cold core and lower-level warm core)..." (evans2012climatology)</blockquote>
+<blockquote class="src">"The synoptic evolution shows a relatively strong warm front and a cold frontal fracture during the system's development and a warm seclusion in its mature stage, characterizing a Shapiro–Keyser type cyclone." (gozzo2013air)</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 15 · gozzo2014subtropical</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"Besides strong and organized storms, a large number of weaker, shallower cyclones with both extratropical and tropical characteristics form in the region... proposing a broader definition of these systems."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 16 · gan1994influence, reboita2026meteorology</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"The increase of baroclinicity on the lee side results in baroclinic development... the interaction of these anomalies with the Andes Cordillera is responsible for lee cyclogenesis." (gan1994influence)</blockquote>
+<blockquote class="src">"...lee effect of the Andes topography, advection of warm and moist air by the SALLJ... baroclinic instability originating from the SST gradient at the confluence of the Malvinas and Brazil currents." (reboita2026meteorology — soportada)</blockquote>
+<p class="agent-nota">gan1994influence (1994) solo cubre Andes + baroclinicidad, sin SST; reboita2026meteorology sí integra los tres elementos que la oración combina.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 24 · crespo2020potential, gramcianinov2019properties, reboita2026meteorology</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"There are four main cyclogenesis regions in the South Atlantic Ocean: the Southern Brazilian coast (SE-BR), over the continent near the La Plata river discharge region (LA PLATA), the southeastern coast of Argentina (ARG) and the Southeastern Atlantic (SE-SAO)." (gramcianinov2019properties)</blockquote>
+<p class="agent-nota">gramcianinov2019properties define en realidad 4 regiones; las 3 primeras corresponden a SBR/LPB/ARG de la tesis (la 4ª, oceánica, se omite correctamente).</p>
+</div>
+
+<h3>Bloque C — Mecanismos dinámicos internos</h3>
+
+<div class="check-card">
+<div class="cite-keys">Idea 18 · vera2002cold</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"the divergence term [VD] is the main factor in low-level cyclonic-vorticity development over southeastern South America... enhanced moisture transports from tropical latitudes along the eastern portion of the low-level cyclone favor precipitation occurrence over southeastern South America."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 20 · reboita2022from</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"Intense warm advection (by the northerly winds over continental South America) towards the warm front also helps to increase frontogenesis... Cloudiness in its turn is evidence of diabatic heating (latent heat release from condensation), which is a feedback mechanism since this heating can be used to strengthen the convection itself... contributing to decreasing the surface pressure."</blockquote>
+<p class="agent-nota">El vínculo es correcto pero reconstruido de dos pasajes; el paper no usa el término "flanco oriental".</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 22 · gentile2025response</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The warm sector of extreme cyclones intensifies with wind speeds and precipitation increasing by up to 15% per degree of warming."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 25 · corner2025classification</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The question of how to quantify the intensity of extratropical cyclones (ETCs) does not have a simple answer." / "SSI... has a more non-linear relationship with them [las otras medidas de intensidad]."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 26 · sinclair2023relationship</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"ETCs located at high latitudes with weak precipitation show little dependency due to the lack of moisture" / "maximum vorticity of an ETC occurred after the precipitation maximum in most ETCs (&gt;70%)."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 27 · cardoso2022synoptic</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"the six SCs analyzed by Reboita, da Rocha, et al. (2019) also presented more intense winds occupying their east and southeast quadrant."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 28 · eisenstein2023identification</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"These high winds are mostly associated with five mesoscale features: the warm (conveyor belt) jet (WJ); the cold (conveyor belt) jet (CJ)... the CJ appears closer to the cyclone centre, sometimes stretching into the south-eastern quadrant."</blockquote>
+<p class="agent-nota">El paper usa "cold conveyor belt jet (CJ)"; la sigla "CCB" que usa la tesis proviene de otra referencia citada dentro del propio paper, no es su término principal.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 29 · pepler2020dimensional</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"Surface wind speeds are strongest for deep cyclones... deep and mid-level cyclones have higher maximum rain rates than shallow surface cyclones."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 31 · gozzo2013air, reboita2022from</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"an explosive Shapiro–Keyser cyclone that undergoes subtropical transition and moves northeastward is, indeed, unusual." (reboita2022from)</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 32 · chen2025characteristics</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"Strong winds near the surface are also favored in unstable conditions... Extreme precipitation arises from strong uplift of warm moist air... ETC-induced wind extremes last longer (~6 hr) than precipitation extremes (2–3 hr)... such a compound probability is relatively low (only 19% annually)."</blockquote>
+<p class="agent-nota">El paper documenta mecanismos y escalas temporales <em>distintos</em> para viento y precipitación, con coocurrencia relativamente baja (19–45%) — no el "acoplamiento dinámico estructural" que sugiere la frase actual. Es la sobre-generalización más notable de todo el chequeo.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 34 · han2025system</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The framework is useful to study the frequency, structure, development, wind impact, and precipitation contribution of each type of LPS."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 35 · kaylee2025convection</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"Elevated potential instability (EPI) often occurs in the comma head of wintertime extratropical cyclones as air within the storm's dry slot moves above a warm or occluded frontal zone. Lifting of EPI layers may result in elevated convection, enhanced snowfall, and thundersnow... EPI was found in 53% of HRRR 1-km-wide vertical columns along ER-2 flight legs."</blockquote>
+<p class="agent-nota">El paper es más específico (EPI en la "comma head", 14 ciclones IMPACTS); "invisible para productos de resolución convencional" se infiere de la metodología (radar aerotransportado de 1 km) pero no es frase textual.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 37 / 44 · priestley2022improved</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The strength of cyclone wind speeds are underestimated by CMIP6 models... The CMIP6 models robustly underestimate wind speeds immediately southeast and east of the cyclone center... coupled with the models underestimating lower-level convergence."</blockquote>
+<p class="agent-nota">Nota: el objeto de estudio son modelos climáticos (CMIP6 vs. HighResMIP), no "productos" de datos en general — la tesis generaliza levemente el término, pero el mecanismo es exactamente el del paper.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 38 · neu2013intercomparison</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"can range greatly in shape and structure (are often asymmetric), differ rather more in size... method-associated uncertainties in some cases are quite large" / "the minimum central pressure differs by 10 hPa (between 961.9 hPa in M08 and 971.6 hPa in M06...)."</blockquote>
+</div>
+
+<h3>Bloque D — Vacío de conocimiento</h3>
+<p style="font-size:0.85rem;color:var(--muted)">(Ideas del Bloque D ya cubiertas arriba junto con Mecanismos dinámicos, según el reparto de verificación entre agentes.)</p>
+
+<h3>Bloque E — Datos y métodos</h3>
+
+<div class="check-card">
+<div class="cite-keys">Idea 39 · coutodesouza2024new</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"Cyclone tracks are obtained through the analysis of relative vorticity ... at 850hPa, using the ERA5 dataset."</blockquote>
+<p class="agent-nota">Confirma el rastreo por ζ850; el contraste explícito con "presión al nivel del mar" no aparece textualmente en este paper (es conocimiento general del campo, desarrollado en Fundamentos).</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 40 · coutodesouza2024new, deSouza2025CycloPhaser</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The predominant cyclone type... exhibited a four-phase configuration: incipient, intensification, mature and decay." (coutodesouza2024new)</blockquote>
+<blockquote class="src">"Key cyclone phases — intensification, decay, and mature — are identified through peaks and valleys in the vorticity time series... the incipient stage is detected by missing labels in the series or by selecting the initial time." (deSouza2025CycloPhaser)</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 41 · han2025system (SyCLoPS)</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"we propose a new objective framework, called the System for Classification of Low‐Pressure Systems (SyCLoPS), to detect, track, and classify all detectable LPSs worldwide at once."</blockquote>
+<p class="agent-nota">SyCLoPS clasifica <em>tipos</em> de sistemas de baja presión (16 etiquetas), no segmenta el ciclo de vida en 4 fases como CycloPhaser — son marcos afines pero no equivalentes; "en línea con" es razonable, "propuestas globales recientes" no debería sugerir que hacen lo mismo.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 42 · shapiro1990life, shapiro1999bridge</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The four phases of frontal evolution are: (1) the continuous and broad... frontal zone... (2) the frontal fracture in the vicinity of the cyclone center... (3) the frontal T-bone and bent-back warm front... (4) the warm-core seclusion within the post-cold frontal polar air stream." (shapiro1990life)</blockquote>
+<blockquote class="src">"the warm-core seclusion... possessed subsidence to the west of the cyclone center, and forward (eastward) sloping clouds and precipitation ahead of its surface cold front." (shapiro1999bridge)</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 43 · hersbach2020era5</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"a significantly enhanced horizontal resolution of 31 km, compared to 80 km for ERA-Interim, ERA5 has hourly output throughout."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 45 · gramcianinov2020analysis</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"Belmonte Rivas and Stoffelen (2019) found that ERA5 surface winds present a 20% improvement relative to ERA-Interim, using ASCAT observations." / "Large differences remain in the intensity distributions, in which the CFSR/CFSv2 presents stronger cyclones than ERA5."</blockquote>
+<p class="agent-nota">ERA5 mejora sobre ERA-Interim (confirmado), pero frente a CFSR/CFSv2 el paper NO concluye que ERA5 tenga vientos más intensos/superiores — de hecho CFSR/CFSv2 da ciclones más intensos, sin que el paper determine cuál es más preciso.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 46 · dalanhese2023new</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"The three climatologies are broadly aligned in the event origins... the three datasets agree on the spatial distribution of cyclone intensity" / "the longer record of tracking in ERA5 and JRA55 provides a better climatological perspective."</blockquote>
+<p class="agent-nota">El paper trata ERA5 y JRA55 como comparables/igualmente válidos, no señala a ERA5 como superior — matiza "respaldan la elección" de ERA5 por sobre otras fuentes.</p>
+</div>
+
+<h3>Bloque E (cont.) — Estrategia analítica</h3>
+
+<div class="check-card">
+<div class="cite-keys">Idea 51a · hannachi2007empirical</div>
+<span class="verdict v-contra">Contradice</span>
+<blockquote class="src">"Also, methods involving covariability between two or more fields such as in coupled patterns, e.g. canonical correlation analysis (Bretherton et al., 1992), are not presented here."</blockquote>
+<p class="agent-nota">Ver alerta arriba — el paper excluye explícitamente los métodos multivariados/acoplados de su alcance; "MEOF" no aparece en el texto.</p>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 51b · liang2018multivariate</div>
+<span class="verdict v-ok">Soportada</span>
+<blockquote class="src">"The multivariate EOF (MEOF) method, a variant of the archetypal EOF method, has been widely used for investigating large-scale atmospheric and oceanic coupled variability structures because of its salient ability to incorporate different variables with their combined variances."</blockquote>
+</div>
+
+<div class="check-card">
+<div class="cite-keys">Idea 52 · sun2022evaluation</div>
+<span class="verdict v-partial">Parcial</span>
+<blockquote class="src">"the EOF–ARIMA composite model and CSEOF–ARIMA composite model are used to obtain quantitative precipitation forecasts."</blockquote>
+<p class="agent-nota">Es un estudio metodológico que propone y evalúa una técnica de pronóstico, no un sistema de "pronóstico operativo" desplegado en un servicio meteorológico; "operational" no aparece en el cuerpo del artículo.</p>
+</div>
+
+<h2 id="opciones">Dos opciones de agrupamiento macro</h2>
+<p>Ambas parten de los mismos 15 grupos de arriba — lo que cambia es en qué "cajones" mayores se combinan, siguiendo el estilo de una u otra familia de papers citados.</p>
+
+<div class="option-card">
+<h3>Opción 1 — Agrupamiento temático <span class="tag tag-fam-a">familia A</span></h3>
+<p class="why"><strong>Por qué esta opción:</strong> es el estilo de 10 de los 14 papers más citados (<code>gramcianinov2019properties</code>, <code>corner2025classification</code>, <code>priestley2022improved</code>, <code>gramcianinov2020analysis</code>, <code>cardoso2022synoptic</code>, <code>oertel2021warm</code>, <code>hannachi2007empirical</code>, <code>gramcianinov2023impact</code>, <code>eisenstein2023identification</code>, <code>gozzo2013air</code>): organizan su argumento por eje conceptual (región, mecanismo, métrica, técnica), no por cronología del fenómeno. Es, además, muy cercana a la estructura A–F que el archivo ya tiene hoy — funciona como una validación/afinamiento de lo existente, no como un cambio radical.</p>
+<div class="flow">
+<div class="flow-step"><b>I</b>G1+G2 — Fenómeno y su relevancia</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>II</b>G3+G4+G5 — Estado del arte regional</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>III</b>G6 — Mecanismos dinámicos internos</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>IV</b>G7+G8+G9 — Vacíos de conocimiento</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>V</b>G10+G11+G13+G14 — Datos y métodos</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>VI</b>G12+G15 — Pregunta, hipótesis, objetivos</div>
+</div>
+</div>
+
+<div class="option-card">
+<h3>Opción 2 — Agrupamiento por ciclo de vida del argumento <span class="tag tag-fam-b">familia B</span></h3>
+<p class="why"><strong>Por qué esta opción:</strong> imita el estilo de los 4 papers de la familia B — que no son los más numerosos, pero sí los que sostienen el andamiaje metodológico completo de la tesis (<code>coutodesouza2024new</code>, <code>coutodesouza2024thesis</code>, <code>shapiro1999bridge</code>, <code>reboita2022from</code>). Estos organizan su argumento como una evolución en el tiempo (incipiente → intensificación → madurez → decaimiento, o fractura frontal → bent-back → T-bone → warm seclusion). Aplicado a la Introducción, el argumento mismo "vive" ese ciclo: nace el problema, crece la evidencia, alcanza su tensión máxima (lo que no se puede medir), y se resuelve con el marco metodológico — el mismo lenguaje de fases que Fundamentos y Metodología usan para los ciclones. Es la opción más "orgánica" en el sentido que comentaste al inicio: la forma del capítulo refleja la forma del objeto de estudio.</p>
+<div class="flow">
+<div class="flow-step"><b>Incipiente</b>G1+G2 — Aparece el fenómeno y su relevancia</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>Intensificación</b>G3+G4+G5+G6 — Crece el conocimiento regional y los mecanismos</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>Madurez</b>G7+G8+G9 — Máxima tensión: lo que no se puede medir ni resolver</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>Decaimiento / reorganización</b>G10+G11+G13+G14 — Se resuelve con datos y método</div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><b>Resultado</b>G12+G15 — Pregunta, hipótesis, objetivos</div>
+</div>
+</div>
+
+<div class="note">
+Ambas opciones usan exactamente los mismos 15 grupos y las mismas 60 ideas — solo cambia el criterio de fusión en macro-secciones. La Opción 1 es más segura (ya es casi lo que existe). La Opción 2 es más arriesgada de escribir (exige transiciones explícitas entre "fases" del argumento) pero es coherente con el marco conceptual que tú mismo usas en el resto de la tesis. Ninguna se aplicó todavía al <code>.tex</code> — esto es solo el mapa para que compares.
+</div>
+
+<footer>
+Generado a partir de <code>tex_es/01.vr3_introducao.tex</code> · conteo de citas sobre <code>tex_es/*.tex</code> (capítulos 01–09 usados por <code>tese_es.tex</code>) · bibliografía: <code>tex_es/bibliografia.bib</code>.
+</footer>
+
+</div>
+</body>
+</html>

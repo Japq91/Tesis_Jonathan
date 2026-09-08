@@ -1,0 +1,110 @@
+============================================================
+CARTILLA DE ESTUDIO — Miranda et al. 2026 — patrones meteoceanográficos de tormentas costeras
+============================================================
+
+REFERENCIA COMPLETA
+Miranda, Larissa de Paula; Machado, Jeferson Prietsch; Saraiva, Jaci Bilhalva; de Barros,
+Débora Gadelha; Goulart, Elaine Siqueira; Andrade, Hugo Nunes. (2026). Meteoceanographic
+Patterns Associated with Severe Coastal Storms Along the Southern Coast of Brazil.
+Meteorology, 5(1), Article 1. DOI: 10.3390/meteorology5010001
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en la Introducción (Cap01, L15), como respaldo empírico de que los
+ciclones extratropicales son los principales motores de las tormentas costeras severas en
+el Atlántico Sur; no se retoma en los capítulos de resultados.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (identificación por avisos de mal tiempo/oleaje; no es un algoritmo de rastreo)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio busca determinar los patrones atmosféricos y oceánicos asociados a tormentas
+costeras de alto impacto a lo largo de la costa de Rio Grande do Sul (Brasil), en la "Zona
+Alfa" (de Arroio Chuí a Cabo de Santa Marta). Es un estudio observacional/climatológico
+(no numérico) que combina avisos oficiales de mal tiempo de la Marina brasileña con
+reanalisis ERA5 para: (i) cuantificar la frecuencia de tormentas de alto impacto en 20 años
+(2001-2020), (ii) identificar los patrones sinópticos y de oleaje asociados, y (iii) evaluar
+el impacto de estos eventos en la operatividad del Puerto de Rio Grande. Es relevante para
+la tesis porque documenta, con datos duros, que los ciclones extratropicales del Atlántico
+Sur son la causa dominante de estados de mar extremos y cierres portuarios en la región de
+estudio.
+
+2. METODOLOGÍA
+- Datos: Avisos de Mau Tempo del Centro de Hidrografia da Marinha (CHM) de Brasil (2001-2020);
+  reanálisis ERA5/ECMWF (resolución 31 km, 137 niveles); registros de practicaje del Puerto de
+  Rio Grande (2007-2016).
+- Selección de eventos: percentil 95 de altura de ola reportada en los avisos (umbral de 4 m),
+  agrupando avisos separados por ≤2 días como un único evento. Resultado: 51 tormentas costeras
+  de alto impacto identificadas entre 2002 y 2016 (de un universo de 433 tormentas costeras
+  totales reportadas en el mismo período según un estudio previo del mismo grupo).
+- Variables ERA5 usadas: viento zonal/meridional a 10 m, presión media a nivel del mar (MSLP),
+  altura significativa de ola y dirección del oleaje (resolución temporal de 6 h: 00, 06, 12,
+  18 UTC).
+- Técnicas: composites estacionales y anuales (simples promedios); anomalías respecto a la
+  climatología ERA5 1981-2020; Análisis de Funciones Ortogonales Empíricas (EOF) aplicado a
+  los campos de anomalía de MSLP y de altura significativa de ola.
+
+3. HALLAZGOS CLAVE
+- De los 51 eventos de alto impacto: 19 en invierno (JJA), 15 en otoño (MAM), 12 en primavera
+  (SON) y 5 en verano (DJF); los años más energéticos fueron 2008 (La Niña) y 2015 (El Niño
+  fuerte).
+- El EOF1 de MSLP (sistema de baja presión centrado entre 40-45°S sobre el Atlántico Sudoeste)
+  explica ~56% de la varianza en otoño, ~61% en invierno y hasta ~74% en verano (con menor
+  amplitud); el EOF2 representa un dipolo continente-océano (alta presión continental / baja
+  presión oceánica) que intensifica el fetch de viento, más marcado en MAM y JJA.
+- Las alturas significativas de ola durante estos eventos superaron típicamente 4 m en toda la
+  costa, con máximos al sur de 35°S; la dirección de propagación dominante es del sureste.
+- Entre 2007 y 2016 se registraron 355 horas de inoperatividad de la barra de Rio Grande
+  asociadas a estos eventos (25 de los 51 eventos afectaron la navegabilidad), de las cuales
+  ~90% correspondió a mar agitado/condiciones de tormenta.
+- Los estudios de caso (mayo de 2008 y julio de 2015) muestran que la interacción entre un
+  sistema de baja presión en superficie y un anticiclón subsecuente genera "corredores de
+  viento" (wind fetch) que intensifican el oleaje hacia la costa.
+
+4. RELACIÓN CON TU TESIS
+Se cita en el Cap01-Introducción (L15) como respaldo de la afirmación: "\citet{miranda2026patterns}
+confirman que estos sistemas son los principales motores de tormentas costeras en el Atlántico
+Sur". Cumple una función de contextualización del problema (relevancia socioeconómica y
+geofísica de los ciclones extratropicales en el litoral sur brasileño), reforzando junto con
+\citet{bartolomei2024extremos} (letalidad) y \citet{sasaki2021intraseasonal} (modulación del
+oleaje) el marco de motivación de la tesis, antes de introducir el viento en superficie y la
+precipitación como las dos variables centrales del trabajo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El paper proviene del mismo grupo de investigación de la Universidade Federal do Rio Grande
+(FURG, Instituto de Oceanografia) que produce \citet{padilhareinke2024objective} y
+\citet{padilhareinke2026characterization}: Jeferson Prietsch Machado y Jaci Bilhalva/Maria
+Saraiva son coautores comunes a los tres trabajos. Esto configura una línea de investigación
+institucional coherente sobre ciclones extratropicales del Atlántico Sudoccidental que va desde
+el desarrollo de algoritmos de detección/seguimiento (padilhareinke2024) y la climatología de
+su variabilidad (padilhareinke2026), hasta la cuantificación de sus impactos meteoceanográficos
+concretos en la costa y el puerto de Rio Grande (miranda2026). El estudio también se apoya
+explícitamente en un trabajo previo del mismo grupo (Marinho, Machado & Saraiva 2024, sobre
+patrones atmosféricos de tormentas costeras en general), del cual este artículo es una
+extensión centrada exclusivamente en eventos extremos.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores: (i) el análisis se basa enteramente en ERA5, que
+puede subestimar valores extremos cerca de la costa por su resolución espacial y limitaciones
+para representar procesos costeros complejos; (ii) la disponibilidad de datos in situ de larga
+duración en la zona de estudio es limitada, lo que restringe la validación directa de los
+campos atmosféricos y de oleaje, particularmente en eventos extremos; (iii) el estudio no
+incluye simulaciones numéricas ni modelos acoplados océano-atmósfera, solo procesamiento de
+reanálisis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué esta referencia se cita solo una vez y no se retoma en los capítulos de resultados?
+  Porque cumple una función de encuadre/motivación (magnitud del problema en la costa sur de
+  Brasil), no aporta un mecanismo dinámico o dato cuantitativo que se use en el análisis EOF
+  de tu tesis.
+- ¿Qué diferencia hay entre este estudio y tu enfoque metodológico? Miranda et al. usan
+  composites simples y EOF sobre MSLP/oleaje en eventos discretos filtrados por avisos
+  navales; tu tesis trabaja con composites centrados en el ciclón y EOF sobre variables de
+  superficie (viento, precipitación) a lo largo de todo el ciclo de vida de una base de datos
+  de ciclones rastreados.
+- ¿Este paper usa un algoritmo de detección de ciclones? No; identifica eventos a partir de
+  avisos meteorológicos oficiales (criterio de altura de ola), no mediante seguimiento
+  objetivo de la trayectoria del ciclón como en padilhareinke2024/2026.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/miranda2026patterns.md

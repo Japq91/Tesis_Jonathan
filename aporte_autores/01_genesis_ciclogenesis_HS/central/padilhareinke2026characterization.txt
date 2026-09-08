@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Padilha Reinke et al. 2026 — Caracterización de ciclones del Atlántico SO
+============================================================
+
+REFERENCIA COMPLETA
+Padilha Reinke, Carina Klug; Machado, Jeferson Prietsch; Brum, André Lopes; de Azevedo, José Luiz Lima; Mata, Mauricio Magalhães; Saraiva, Jaci Maria Bilhalva. (2026). Characterization and Variability of Extratropical Cyclones in the Southwest Atlantic Ocean. Advances in Meteorology, 2026, Article ID 9965323, 21 pp. DOI: 10.1155/adme/9965323
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 3 veces (Cap01-Introducción y dos citas seguidas en Cap04-Viento); en Cap04 aporta las cifras de referencia externas (velocidad media, percentil 90 y valor extremo del viento a 10 m) que la tesis usa explícitamente para contextualizar sus propias estadísticas de intensidad.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (ζ850) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Caracteriza integralmente los ciclones extratropicales que se forman dentro del Atlántico Sudoccidental (20°-50°S, 65°-30°W), usando el mismo algoritmo de detección/seguimiento (CCL sobre ζ850) desarrollado por las mismas autoras en Padilha Reinke et al. (2024), aplicado a 41 años de ERA5 (1982-2022). Analiza la variabilidad interanual y estacional de la frecuencia de ciclones, identifica periodicidades mediante análisis de Fourier, define y mapea eventos intensos (por MSLP y por viento a 10 m) y construye compuestos atmosféricos multinivel de los eventos costeros más intensos. Es relevante porque entrega la climatología más reciente y de mayor resolución temporal (horaria) específicamente enfocada en la región de estudio de la tesis.
+
+2. METODOLOGÍA
+- Datos: ERA5/ECMWF horario, 1982-2022 (41 años); dominio de estudio 20°-50°S, 295°-330°E (65°-30°W), dividido en parte norte y sur por la latitud 35°S.
+- Detección/seguimiento: mismo algoritmo de Padilha Reinke et al. (2024): CCL sobre ζ850 con umbral -1×10⁻⁴ s⁻¹, desplazamiento máximo 150 km/h, vida mínima 12 h, área efectiva de radio 3.6° para caracterizar intensidad (MSLP mínima y viento máximo a 10 m).
+- Definición de eventos intensos: MSLP < percentil 10 (~966 hPa) o viento a 10 m > percentil 90 (~84 km/h).
+- Zona costera de interés ("purple box"): 30°-40°S, 45°-60°W, usada para seleccionar los 20 eventos más intensos de invierno y de verano.
+- Análisis de tendencias: regresión lineal y cúbica, test de Mann-Kendall, para el área total y sus partes norte/sur.
+- Análisis espectral: transformada de Fourier con prueba de significancia mediante ruido rojo (20 realizaciones) y test F (95%/99%).
+- Compuestos atmosféricos: streamlines y viento a 300 hPa, geopotencial y temperatura a 500 hPa, viento/geopotencial/humedad relativa a 700 y 850 hPa, desde 24 h antes hasta 12 h después de la ciclogénesis, para los 20 eventos costeros más intensos de invierno y de verano.
+
+3. HALLAZGOS CLAVE
+- Tabla 1: conteo medio anual = 97.1 (DE 9.9, p90=111.0); velocidad media = 60.1 km/h (p90=78.3 km/h); MSLP mínima media = 984.0 hPa (p10=965.9 hPa); viento máximo a 10 m medio = 70.0 km/h (p90=84.4 km/h).
+- El 49% de los ciclones persistió 1 día y el 40% persistió 2 días; el evento más rápido (11-14 dic 2022) alcanzó 82.0 km/h de viento máximo con MSLP mínima de 977.5 hPa.
+- Se identificaron 407 eventos intensos por criterio de MSLP, 425 por criterio de viento y 417 eventos "rápidos"; 166 eventos cumplieron simultáneamente los criterios de MSLP y viento, y 56 cumplieron los tres criterios (MSLP, viento y velocidad).
+- Tabla 3 (20 eventos más intensos de invierno): el evento del 5 de junio de 1992 registró el viento máximo más alto del conjunto, 113.21 km/h, con MSLP mínima de 953.5 hPa.
+- Tendencia interanual positiva mas no significativa a nivel de área total (pendiente 0.19/año), norte (0.04/año) y sur (0.15/año) según Mann-Kendall al 95%; sin embargo, en la parte sur durante el verano sí hubo una tendencia positiva significativa de 1.7 eventos/década (Mann-Kendall, 95%).
+- El análisis de Fourier reveló energía significativa en el período de 2-3 años (asociable a ENSO) en varias combinaciones de estación/región, además de picos en 5, 6 y 8-10 años (posiblemente decadales).
+- Los compuestos muestran que los eventos costeros intensos se asocian a la entrada ecuatorial del jet de niveles altos, una vaguada de niveles medios en desplazamiento hacia el este, y transporte de humedad por el jet de bajo nivel del noroeste desde los trópicos.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L28): se cita junto con gramcianinov2020analysis como caracterización robusta y reciente de la distribución espacio-temporal de los sistemas ciclónicos, consolidando la base climatológica iniciada por reboita2010south.
+- Cap04-Viento (L54): se cita junto a cardoso2022synoptic y gramcianinov2020analysis para corroborar registros de eventos severos documentados en el Atlántico Sur.
+- Cap04-Viento (L55, cita numérica de anclaje): "\citet{padilhareinke2026characterization} reportan una intensidad media de viento a 10 metros de 70.0 km/h (≈19.4 m/s), con un umbral para eventos intensos p90 de 84.4 km/h (≈23.4 m/s) y magnitudes extremas que alcanzan hasta 113.21 km/h (≈31.4 m/s) en las colas de la distribución." Estas tres cifras corresponden exactamente a la Tabla 1 (media=70.0 km/h, p90=84.4 km/h) y a la Tabla 3 (evento extremo real del 5 de junio de 1992, 113.21 km/h) del paper — es una cita de validación cuantitativa externa directa para las propias estadísticas de intensidad de viento de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Mismo grupo de la FURG (Padilha Reinke, Machado, Brum, de Azevedo, Mata, Saraiva) que publicó el algoritmo metodológico en 2024; este trabajo es su aplicación específica al Atlántico Sudoccidental, actualizando y extendiendo la climatología pionera de Reboita et al. (2010, RegCM3) con 41 años de ERA5 horario y técnicas modernas de análisis espectral y compuestos. Dialoga con Gramcianinov et al. (2020) en la caracterización de storm-tracks del SW Atlántico, retoma el marco de vórtices de vorticidad potencial de Crespo et al., y cita directamente a Reboita et al. (2018) para contextualizar la proyección de disminución futura de la frecuencia de ciclones.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El umbral estricto de vorticidad (-1×10⁻⁴ s⁻¹ a 850 hPa) y la vida mínima de 12 h son intencionalmente restrictivos, lo que según los propios autores explica una mayor prevalencia de eventos de vida corta respecto a otros estudios (p. ej. Gramcianinov), y probablemente subestima parte del proceso de ciclolisis.
+- Pese a una tendencia visualmente creciente en el conteo anual de ciclones, el test de Mann-Kendall NO encontró tendencia monótona estadísticamente significativa al 95% para el área total ni para la parte norte; solo el verano austral en la parte sur resultó significativo — los autores advierten explícitamente contra sobre-interpretar la tendencia visual.
+- La técnica de compuestos, según reconocen los propios autores, "suprime la variabilidad caso a caso" y puede suavizar características individuales relevantes.
+- El estudio no atribuye causalmente los picos espectrales de 2-3, 5, 6 y 8-10 años a mecanismos específicos (ENSO, SAM, AMO); los autores señalan explícitamente que esto "amerita mayor investigación futura".
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Cómo validan las cifras de 70.0/84.4/113.21 km/h que citas en tu tesis? R: Son estadísticas directas de la Tabla 1 (media y percentil 90 del viento máximo a 10 m) y la Tabla 3 (evento extremo real, 5 de junio de 1992) del propio paper, no una reinterpretación ni un promedio propio.
+- P: ¿Existe una tendencia significativa hacia más ciclones en la región? R: Solo en la parte sur durante el verano (1.7 eventos/década, Mann-Kendall al 95%); a nivel de toda el área o de la parte norte la tendencia positiva visual NO es estadísticamente significativa.
+- P: ¿Qué explica los picos espectrales de 2-3 años? R: Los autores los asocian tentativamente a El Niño-Oscilación del Sur (ENSO) por coincidencia temporal, pero señalan explícitamente que el mecanismo causal requiere mayor investigación, no lo demuestran de forma concluyente.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/padilhareinke2026characterization.md

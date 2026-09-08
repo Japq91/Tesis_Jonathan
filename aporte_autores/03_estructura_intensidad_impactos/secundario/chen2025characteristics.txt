@@ -1,0 +1,122 @@
+============================================================
+CARTILLA DE ESTUDIO — Chen & Di Luca 2025 — extremos compuestos viento-precipitación en ETCs
+============================================================
+
+REFERENCIA COMPLETA
+Chen, Ting-Chen, & Di Luca, Alejandro. (2025). Characteristics of Precipitation and Wind
+Extremes Induced by Extratropical Cyclones in Northeastern North America. Journal of
+Geophysical Research: Atmospheres, 130(6), e2024JD042079.
+DOI: 10.1029/2024JD042079
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 2 veces (Cap01-Introduccion y Cap02-Fundamentacion) para sustentar la premisa
+conceptual de que viento y precipitación extremos responden a mecanismos físicos acoplados
+que justifican el análisis conjunto (MEOF) en lugar de tratarlos como variables independientes.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (20°N-80°N, Norteamérica/Atlántico Norte)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (mínimos locales, con vorticidad a 850 hPa como criterio secundario) — variable primaria distinta a la de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio investiga las características de eventos horarios extremos (percentil 99 local)
+de viento a 10 m y precipitación asociados a ciclones extratropicales (ETC) sobre el noreste
+de Norteamérica (NNA), usando 20 años de reanálisis ERA5 y datos satelitales IMERG. Las
+preguntas centrales son: (1) con qué frecuencia y estacionalidad ocurren estos extremos y
+cuánto se asocian a ETCs; (2) con qué probabilidad ocurren de forma compuesta (viento y
+precipitación simultáneos o próximos en el tiempo); y (3) cuál es la intensidad y duración
+característica de los extremos inducidos por ETCs. Es un estudio observacional/estadístico
+de clima de extremos, no de dinámica de un caso individual, aunque incluye un estudio de
+caso (la "2019 Halloween Storm").
+
+2. METODOLOGÍA
+- Datos: ERA5 (0.25°x0.25°, horario, 2001–2020) para MSLP, vorticidad relativa a 850 hPa,
+  viento a 10 m (WS) y precipitación acumulada horaria (PR); IMERG Final Run V06
+  (0.1°x0.1°, 30 min) como producto satelital complementario de precipitación; Integrated
+  Surface Database (ISD, 276 estaciones) para validación observacional.
+- Detección y seguimiento de ETCs: algoritmo desarrollado en UQAM basado en mínimos locales
+  de MSLP (radio 200 km) con vorticidad a 850 hPa > 10^-5 s^-1, suavizado con filtro de
+  Cressman (radio de influencia 400 km); se retienen sistemas con duración >= 24 h y
+  desplazamiento > 1000 km (11,742 trayectorias ETC en 2001–2020 sobre 20°N–80°N,
+  180°W–0°W).
+- Extremos locales: percentiles 98, 99 y 99.9 de la climatología de cada punto de grilla;
+  un extremo se asocia a un ETC si ocurre dentro de un radio fijo de 1000 km del centro
+  ciclónico en el mismo instante.
+- Extremos compuestos: viento y precipitación extremos en el mismo punto de grilla dentro
+  de una ventana de +/-6 h (definición amplia) o de la misma hora (definición estricta).
+  Métricas de intensidad: "extreme exceedance" acumulado (EE_cum) y promedio (EE) por
+  evento ETC, y duración del extremo (T_ETC).
+- Región de estudio: Norteamérica y océanos circundantes (25°N–75°N, 150°W–20°E), con foco
+  en NNA (105°W–60°W, 40°N–60°N).
+
+3. HALLAZGOS CLAVE
+- Más del 60% de los extremos de viento y precipitación en NNA están asociados a ETCs
+  durante todo el año; en algunas regiones/estaciones la asociación supera el 80–86%.
+- La probabilidad de un extremo compuesto viento-precipitación en NNA es de ~18.7% anual
+  (6.2% si se exige coincidencia en la misma hora); en zonas costeras/oceánicas puede
+  superar el 35%.
+- Del total de extremos compuestos en NNA, ~90% están asociados a ETCs (y >93% para el
+  percentil 99.9).
+- Los extremos de viento inducidos por ETC duran típicamente más (pico de exceedance a
+  las ~6 h en ERA5) que los de precipitación (pico a las ~3 h en ERA5, ~2 h en IMERG).
+- La correlación de Pearson entre la exceedance extrema y métricas clásicas de intensidad
+  ciclónica (MSLP central, vorticidad promedio en 800 km) es débil: hasta 0.37 para viento,
+  0.24 para el compuesto, y menor a 0.20 para precipitación — reflejando que ambos campos
+  dependen de estructuras de mesoescala internas (p. ej. warm/cold conveyor belt, sting
+  jet) y no solo de la intensidad sinóptica.
+- Caso de estudio (Halloween Storm 2019): rachas >28 m/s y USD 250 millones en daños
+  asegurados; la duración del extremo de viento y de precipitación en el punto cercano a
+  Montreal fue de 12 h cada una, pero desfasadas temporalmente (la precipitación extrema
+  cesó antes de que el viento se intensificara).
+
+4. RELACIÓN CON TU TESIS
+Se usa como respaldo conceptual, no como fuente de datos, en dos pasajes:
+- Cap01-Introduccion (L62): "La coocurrencia de los máximos de viento y precipitación es
+  una consecuencia estructural del acoplamiento dinámico entre los mecanismos que gobiernan
+  cada campo \citep{chen2025characteristics}, por lo que caracterizar la morfología
+  superficial del sistema exige analizar ambos máximos de forma conjunta."
+- Cap02-Fundamentacion (L185): se afirma que Chen & Di Luca "establecen que esta
+  configuración conjunta responde a mecanismos físicos acoplados que varían según
+  desarrollo del sistema", lo que justifica el análisis MEOF integrado de viento y
+  precipitación.
+El respaldo textual más cercano en el paper es la evidencia de que los extremos compuestos
+existen con probabilidad no trivial (~19% en NNA) y que estos dependen de estructuras
+mesoescalares internas del ciclón —no de un único parámetro de intensidad—, lo cual es
+coherente con, aunque no idéntico a, la afirmación de "mecanismos físicos acoplados que
+varían según desarrollo del sistema" citada en la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Chen y Di Luca pertenecen al grupo ESCER/UQAM (Montreal) especializado en climatología de
+ETCs sobre Norteamérica mediante algoritmos de seguimiento propios (Chen, Di Luca, Winger,
+Laprise & Thériault, 2022; catálogo NAEC). Este paper se apoya en trabajos previos del
+mismo grupo sobre sesgos de ERA5 en extremos de viento y precipitación, y dialoga con la
+literatura sobre "storm severity index" (Klawa & Ulbrich 2003; Corner et al., 2024) y sobre
+compuestos viento-precipitación en Europa (Owen et al., 2021).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los propios autores (Sección 5, Discusión):
+- El radio fijo de 1000 km para asociar extremos a ETCs no captura la variación real del
+  área de influencia ciclónica según estación y ciclo de vida (subestimación en invierno,
+  sobreestimación en verano).
+- Los extremos pueden ocurrir en clústeres temporales (sistemas de larga vida), lo que
+  podría inflar la asociación con ETCs; el de-clustering reduce el efecto en <5%.
+- ERA5 subestima sistemáticamente la magnitud de extremos de viento (~17% de sesgo negativo
+  frente a ISD) y, más severamente, de precipitación, especialmente en zonas montañosas.
+- El estudio es específico para Norteamérica/NNA (Hemisferio Norte); no hay evidencia
+  directa aplicable al Atlántico Sudoccidental.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿Este paper prueba que viento y precipitación están dinámicamente acoplados en tu
+  región de estudio (Atlántico Sur)?" R: No; el paper documenta la co-ocurrencia estadística
+  en Norteamérica y su asociación mayoritaria con ETCs, pero no es evidencia directa para el
+  Atlántico Sudoccidental — se usa como respaldo conceptual/analógico, no como dato regional.
+- P: "¿Qué tan fuerte es la relación entre intensidad ciclónica clásica (MSLP, vorticidad) y
+  la magnitud de los extremos según Chen & Di Luca?" R: Es débil (r <= 0.37), lo que refuerza
+  la necesidad de métricas estructurales/multivariadas en vez de un único índice escalar.
+- P: "¿Por qué mencionas un 'sting jet' aquí si es un mecanismo del Hemisferio Norte?" R: El
+  paper señala que la exceedance local de viento depende de estructuras de mesoescala como el
+  warm/cold conveyor belt y el sting jet; se usa para justificar que la intensidad de los
+  extremos superficiales depende de configuraciones internas del ciclón, no solo de su
+  intensidad sinóptica.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/chen2025characteristics.md

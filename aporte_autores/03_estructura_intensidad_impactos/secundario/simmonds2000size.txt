@@ -1,0 +1,119 @@
+============================================================
+CARTILLA DE ESTUDIO — Simmonds 2000 — Aumento del radio ciclónico hacia la madurez
+============================================================
+
+REFERENCIA COMPLETA
+Simmonds, I. (2000). Size Changes over the Life of Sea Level Cyclones in the
+NCEP Reanalysis. Monthly Weather Review, 128(12), 4118–4125. American
+Meteorological Society.
+DOI: 10.1175/1520-0493(2000)128<4118:SCOTLO>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 2 veces (Cap02-Fundamentación y Cap04-Viento) para sustentar que el
+radio de los ciclones aumenta sistemáticamente hacia la madurez: un dato
+climatológico de respaldo metodológico, no un mecanismo físico central.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (estratificación explícita por hemisferio)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (Laplaciano ∇²p, esquema de Melbourne) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Estudio de autoría única de Ian Simmonds que examina en qué medida los
+ciclones de nivel del mar cambian de tamaño (radio) a lo largo de su ciclo de
+vida. Aplica el esquema de seguimiento de ciclones de última generación
+(Melbourne University) a las reanálisis NCEP para el período de 40 años
+1958-97, cubriendo Hemisferio Norte y Sur, verano e invierno, en las bandas
+de latitud 30-50° y 50-70°. Motivado por hallazgos previos (Grotjahn et al.
+1999; Grotjahn & Castello 2000) de ensanchamiento de ciclones en el Pacífico
+Norte, en dominios y muestras limitadas.
+
+2. METODOLOGÍA
+- Datos: reanálisis NCEP 6-horaria, 40 años (1958-97), T62, malla 2.5°x2.5°.
+- Esquema de seguimiento de Melbourne University (Murray & Simmonds 1991),
+  basado en el Laplaciano de la presión (∇²p) para localizar centros y
+  derivar el radio R como la distancia del centro al collado (saddle point)
+  más cercano en la presión de nivel del mar (definición de Grotjahn et al.).
+- Restricción de vida mínima: desplazamiento neto ≥10° de latitud (similar
+  al criterio de Sinclair 1994, 1995) y vida ≥24 h.
+- Estratificación por hemisferio, estación (DJF/JJA), banda de latitud
+  (30-50°, 50-70°) y por duración total de la trayectoria (1 día, 1-2 días,
+  ..., >14-15 días) para exponer sesgos de muestreo.
+
+3. HALLAZGOS CLAVE
+- El radio medio de los ciclones aumenta sistemáticamente a medida que
+  evolucionan hacia la madurez, en ambos hemisferios, ambas bandas
+  baroclínicas y ambas estaciones — el resultado central del paper.
+- En el HN invierno (30-50°N y 50-70°N), el incremento medio de tamaño de
+  sistemas que duran más de 3 días es de ~33% en 4 días; en 50-70°N el
+  máximo se alcanza a los ~3 días (crecimiento de ~17%).
+- El radio inicial de los ciclones de HN invierno (30-50°N) es 4.8° de
+  latitud, creciendo a un máximo plano de 6.1° hacia el día 5.
+- En el HS el crecimiento es algo más modesto que en el HN invernal, pero
+  mayor que en el HN durante el verano austral, particularmente en la banda
+  50-70°S; los máximos de radio se alcanzan más tarde que en el HN (~día 6
+  en invierno, ~día 8 en verano).
+- Los sistemas del HS son sistemáticamente mayores que los del HN, atribuido
+  en parte a la mayor simetría zonal de la distribución de ciclones en el HS
+  (más "libertad" para crecer) frente al HN, donde ondas estacionarias largas
+  producen aglomeración de sistemas.
+- El aumento de tamaño es cuasi-lineal en el tiempo, consistente con
+  Grotjahn et al. (1999) y Grotjahn & Castello (2000) en el Pacífico Norte.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L148): dentro de la definición de la etapa de
+  "Madurez" del ciclo de vida, se cita textualmente: "el radio de los
+  ciclones en superficie tiende a incrementarse sistemáticamente a medida
+  que evolucionan hacia la madurez en ambos hemisferios, lo que implica que
+  el dominio de análisis lagrangiano debe ser suficientemente amplio para
+  capturar la circulación completa del sistema" — justificación
+  metodológica del tamaño de la ventana espacial de análisis.
+- Cap04-Viento (L173): citado junto con hoskins2005new y dossantos2023response
+  para argumentar que "las anomalías capturadas por EOF1 reflejan cómo el
+  sistema expande o contrae su campo de viento en respuesta a la posición
+  del chorro, expansión que Simmonds (2000) documenta como un aumento
+  sistemático del radio ciclónico durante el desarrollo".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Forma parte del trío de trabajos de Simmonds (con y sin Keay) del año 2000
+basados en el mismo esquema de Melbourne University sobre la reanálisis NCEP
+1958-97 presentes en este lote (simmonds2000mean, simmonds2000variability y
+este, simmonds2000size). A diferencia de los otros dos —coautoría con Kevin
+Keay, centrados en el estado medio/variabilidad— este es de autoría única y
+se enfoca específicamente en el radio, tema que simmonds2000mean solo
+introduce de forma preliminar. Dialoga con Grotjahn et al. (1999) y Grotjahn
+& Castello (2000), cuyos hallazgos en el Pacífico Norte motivaron el estudio,
+y reconoce diferencias metodológicas con Sinclair (1994, 1997), cuyo estudio
+de asignación de dominios a ciclones en el HS no llegó a producir
+climatologías de tamaño.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El propio autor advierte que no existe una definición única y "mejor" de
+  radio o tamaño de un sistema (distintos estudios usan collado de presión,
+  energía cinética geostrófica, ancho de ondaleta), por lo que comparaciones
+  directas entre estudios deben tomarse con cautela.
+- La reducción de radio observada después de ~5 días podría no reflejar un
+  debilitamiento medio de los sistemas, sino un sesgo de muestreo (solo una
+  fracción decreciente de ciclones sobrevive a tiempos más largos).
+- La cobertura de datos sobre los océanos australes —especialmente antes de
+  la era satelital— es reconocida como más pobre, lo que podría inflar
+  artificialmente el tamaño medio de los sistemas del HS.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿El crecimiento del radio documentado por Simmonds (2000) es válido
+  para el Atlántico Sudoccidental específicamente, o es una cifra agregada?
+  R: Es un resultado hemisférico agregado por bandas de latitud y estación,
+  no desagregado por cuenca oceánica; se usa como justificación general del
+  comportamiento esperado (expansión del radio hacia la madurez), no como
+  cifra puntual para la región de estudio.
+- P: ¿Qué definición de "radio" usa el estudio y es comparable a tu métrica?
+  R: Distancia desde el centro ciclónico hasta el collado (saddle point) más
+  cercano en el campo de presión de nivel del mar (Grotjahn et al. 1999);
+  definición geométrica distinta de un radio basado en viento o vorticidad,
+  por lo que la comparación es cualitativa.
+- P: ¿Por qué el crecimiento del radio es menor en verano que en invierno?
+  R: El autor lo atribuye a menor baroclinia estacional, que limita tanto la
+  tasa de crecimiento como el radio máximo alcanzado, consistentemente entre
+  hemisferios.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/simmonds2000size.md

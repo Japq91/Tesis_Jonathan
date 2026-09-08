@@ -1,0 +1,166 @@
+============================================================
+CARTILLA DE ESTUDIO — Corner et al. 2025 — clasificación multivariada de intensidad de ETCs
+============================================================
+
+REFERENCIA COMPLETA
+Corner, Joona, Bouvier, Clément, Doiteau, Benjamin, Pantillon, Florian, & Sinclair,
+Victoria A. (2025). Classification of North Atlantic and European extratropical cyclones
+using multiple measures of intensity. Natural Hazards and Earth System Sciences, 25,
+207-229.
+DOI: 10.5194/nhess-25-207-2025
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita al menos 8 veces a lo largo de casi todos los capítulos (Introducción,
+Fundamentación, Viento, Precipitación, MEOF, Prototipos). Es la referencia principal que
+sustenta la tesis conceptual de que la intensidad de un ciclón no puede capturarse con una
+única métrica escalar, justificando metodológicamente el enfoque multivariado (MEOF) y la
+estratificación por intensidad de todo el trabajo.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (Atlántico Norte)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (TRACK, Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio aborda la pregunta de cómo cuantificar objetivamente la intensidad de los
+ciclones extratropicales (ETCs), un problema sin respuesta simple porque las métricas
+tradicionales (MSLP mínima, vorticidad máxima) no correlacionan bien con los impactos reales
+(viento, precipitación, daños). Los autores analizan 11 medidas de intensidad —dinámicas
+(vorticidad, viento en varios niveles) e "impact-relevant" (footprint de viento,
+precipitación, storm severity index, SSI)— para 7361 trayectorias de ETCs del Atlántico
+Norte y Europa (43 inviernos extendidos, 1979-2022) usando ERA5. Mediante análisis de
+correlación, PCA disperso (sPCA) y un modelo de mezcla gaussiana (GMM), identifican un
+subconjunto óptimo de cinco medidas no redundantes y clasifican objetivamente los ciclones
+en cuatro clústeres de intensidad. Es un estudio climatológico-estadístico, no de dinámica
+de casos individuales.
+
+2. METODOLOGÍA
+- Datos: ERA5 (resolución espectral TL639, ~0.28°/31 km), niveles de presión y campos de
+  superficie con resolución temporal de 3 horas, 1979-2022.
+- Seguimiento de ETCs: software objetivo TRACK (Hodges), enfoque lagrangiano sobre el campo
+  de vorticidad relativa a 850 hPa (VO), truncado a resolución espectral T42 (~310 km) para
+  excluir características de mesoescala; se filtran sistemas estacionarios o de corta vida
+  (>=1000 km de recorrido, >=2 días de duración), sistemas débiles (umbral mínimo de
+  1x10^-5 s^-1), con VO máxima ocurriendo >=24 h después de la génesis, dentro del dominio
+  80°W-40°E, 30°N-75°N. Total: 7361 trayectorias en 43 inviernos extendidos (octubre-marzo).
+- Medidas de intensidad (11 en total, divididas en dos grupos): dinámicas (VO a 850 hPa,
+  anomalía de MSLP, velocidad del viento a 850 hPa/925 hPa/10 m, ráfaga a 10 m — FG10) e
+  "impact-relevant" (footprint de viento — WFP, precipitación instantánea y acumulada,
+  storm severity index — SSI y SSI acumulado).
+- Reducción de dimensionalidad: correlaciones de Pearson (r) e información mutua (MI, rho,
+  para relaciones no lineales) entre las 11 medidas; PCA y sPCA (sparse PCA) para
+  seleccionar el subconjunto óptimo de 5 medidas no redundantes.
+- Clasificación: Gaussian Mixture Model (GMM, scikit-learn) con 4 clústeres definidos a
+  priori, usando las 5 medidas seleccionadas como entrada; los clústeres se nombran según
+  las magnitudes promedio y la ubicación geográfica típica.
+
+3. HALLAZGOS CLAVE
+- Las cinco medidas de intensidad no redundantes identificadas para describir de forma
+  completa a los ETCs son: vorticidad relativa a 850 hPa, velocidad del viento a 850 hPa,
+  footprint de viento (WFP), precipitación, y el storm severity index (SSI).
+- Las medidas dinámicas correlacionan fuertemente entre sí (Pearson r >= 0.7 para todas las
+  combinaciones dentro del grupo dinámico; r = 0.97 entre WS10 y FG10), mientras que las
+  correlaciones entre medidas de impacto son mucho más débiles (la correlación más fuerte
+  entre grupos es r = 0.47 entre PRECIP y VO).
+- Explicación mecanística propuesta para la relación PRECIP-VO: el calentamiento diabático
+  asociado a la precipitación genera una anomalía de vorticidad potencial en niveles bajos
+  que retroalimenta la vorticidad relativa a 850 hPa (siguiendo Davis & Emanuel, 1991).
+- Se identifican cuatro clústeres, ordenados de mayor a menor intensidad promedio: HighSSI
+  (8.57% de los ETCs, el más intenso), Intense (21.46%), AvgMST — "average main storm
+  track" (44.42%, casi la mitad de todos los ETCs), y Weak (25.54%, una cuarta parte).
+- Los clústeres se diferencian también geográficamente: Weak ocurre principalmente sobre
+  Europa y el Mediterráneo; AvgMST se concentra en el tramo principal de la trayectoria de
+  tormentas del Atlántico Norte (máximo entre Groenlandia e Islandia); Intense y HighSSI
+  ocurren cerca del inicio de la trayectoria de tormentas (oeste del Atlántico Norte).
+- En un análisis de 21 ciclones de alto impacto documentados en la literatura, 17
+  pertenecen al clúster HighSSI, pese a que este representa menos del 10% de todos los
+  ETCs — evidencia de que el SSI es útil para identificar tormentas potencialmente
+  dañinas, aunque los autores advierten explícitamente que no todos los ETCs de HighSSI
+  son necesariamente impactantes.
+- La relación entre intensidad dinámica e intensidad de impacto es no lineal y débilmente
+  correlacionada (comparable a la correlación de 0.36 hallada previamente por Pfahl &
+  Sprenger, 2016, entre viento y precipitación), lo que exige usar más de una o dos medidas
+  para describir adecuadamente la intensidad de un ETC.
+
+NOTA SOBRE CIFRAS ESPECÍFICAS CITADAS EN TU TESIS: la afirmación en Cap04-Viento (L57) de
+que el clúster más débil presenta una moda de velocidad del viento a 10 m de 12.5 m/s y el
+más intenso de 22.5 m/s corresponde a valores leídos de las distribuciones de probabilidad
+de WS10 en la Figura 6h del paper; el texto extraído no contiene estos valores numéricos de
+forma explícita (solo describe cualitativamente las distribuciones), por lo que se recomienda
+verificar visualmente esos dos valores contra la Figura 6h del PDF original antes de la
+defensa, dado que provienen de una lectura gráfica y no de una cifra impresa en el texto.
+
+4. RELACIÓN CON TU TESIS
+Es la referencia más transversal de tu tesis para justificar el enfoque multivariado:
+- Cap01-Introduccion (L57): "\citet{corner2025classification} para el Atlántico Norte, la
+  intensidad de un ciclón no puede capturarse con una única métrica, porque la relación
+  entre la intensidad del sistema y los vientos en superficie no es lineal." — fiel al
+  hallazgo central del paper sobre la relación no lineal y débilmente correlacionada entre
+  medidas dinámicas e impact-relevant.
+- Cap02-Fundamentacion (L50, L174): se usa para validar la superioridad de la vorticidad a
+  850 hPa (zeta_850) sobre MSLP en clasificaciones globales, y para argumentar que la
+  intensidad de los máximos de viento no puede capturarse con una única métrica central.
+- Cap04-Viento (L57, L89, L213): se cita para contrastar la moda de WS10 entre clústeres
+  débiles e intensos, para justificar la estratificación por intensidad como práctica
+  metodológica necesaria, y para enfatizar que la intensidad del viento superficial depende
+  de estructuras mesoescalares internas y no solo de la sinóptica de gran escala.
+- Cap05-Precipitacion (L47): se usa el mecanismo de retroalimentación diabática (PV
+  anomaly reforzando la circulación de bajo nivel) para sustentar la no linealidad entre
+  forzamiento dinámico y precipitación extrema observada en el Atlántico Sur.
+- Cap06-MEOF (L150): se cita para respaldar que "las métricas dinámicas de los ciclones más
+  intensos del Atlántico Norte no escalan linealmente con los parámetros de profundización,
+  sino que exhiben una multidimensionalidad que requiere varias medidas independientes."
+- Cap07-Prototipos (L73): se menciona el análisis multivariado de Corner et al. como
+  antecedente metodológico afín al enfoque de prototipos estructurales desarrollado en la
+  tesis (aunque la tesis avanza hacia una cuantificación probabilística lagrangiana que
+  Corner et al. no realiza).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+El grupo liderado por Victoria A. Sinclair (Universidad de Helsinki) trabaja en climatología
+y dinámica de ciclones extratropicales del Atlántico Norte; este paper dialoga directamente
+con trabajos previos sobre índices de severidad de tormentas (Klawa & Ulbrich, 2003;
+Leckebusch et al., 2008a), con estudios de footprint de viento (Roberts et al., 2014), y
+con la relación viento-precipitación de Pfahl & Sprenger (2016). Se apoya en el algoritmo de
+seguimiento TRACK de Kevin Hodges, ampliamente usado en climatología de ciclones. El uso de
+GMM para clasificación de ETCs es relativamente novedoso en este contexto (los propios
+autores señalan que no había sido "ampliamente usado" previamente para ETCs).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores en la sección de discusión/conclusiones:
+- Se usa una única fuente de datos (ERA5) y un único algoritmo de seguimiento (TRACK); se
+  sabe que la representación de ETCs varía entre distintos reanálisis y algoritmos.
+- ERA5 subestima la precipitación y los vientos fuertes de bajo nivel en algunas áreas, lo
+  que podría estrechar artificialmente las distribuciones de precipitación/viento y afectar
+  el análisis de clústeres (mayor solapamiento del que existiría sin el sesgo).
+- Los criterios de seguimiento de ETCs están optimizados para el Atlántico Norte, por lo que
+  algunos ciclones mediterráneos (más estacionarios, de vida más corta) quedan excluidos.
+- Los clústeres no son discretos en el espacio de características: hay solapamiento
+  considerable, especialmente entre los clústeres Intense y HighSSI; el propio SSI, si bien
+  útil para identificar tormentas impactantes, no captura daños por precipitación (p. ej.
+  el caso del Medicane Apollo, clasificado como "Weak" pese a sus impactos).
+- Es un estudio exclusivo del Atlántico Norte y Europa (Hemisferio Norte); no hay evidencia
+  directa de aplicabilidad a la dinámica del Atlántico Sudoccidental, aunque el marco
+  metodológico (necesidad de medidas múltiples y no redundantes) es transferible
+  conceptualmente.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿Qué evidencia cuantitativa da Corner et al. de que una sola métrica es insuficiente
+  para caracterizar la intensidad de un ETC?" R: La correlación entre medidas dinámicas
+  (MSLP, vorticidad) e impact-relevant (viento, precipitación, SSI) es mucho más débil que
+  entre medidas del mismo grupo (p. ej. r=0.47 entre precipitación y vorticidad, frente a
+  r>=0.7 dentro del grupo dinámico), y la relación es no lineal.
+- P: "¿Cuáles son las cinco medidas óptimas que proponen los autores y por qué esas?" R:
+  Vorticidad a 850 hPa, viento a 850 hPa, footprint de viento, precipitación y SSI,
+  seleccionadas por sPCA como el subconjunto que explica la mayor varianza sin redundancia.
+- P: "¿El clúster de mayor severidad (HighSSI) captura todos los ciclones de alto impacto?"
+  R: No completamente: 17 de 21 tormentas de alto impacto documentadas caen en HighSSI, pero
+  los autores enfatizan que no todos los ETCs de ese clúster son dañinos, y que el SSI por
+  sí solo no detecta impactos dominados por precipitación (ej. Medicane Apollo).
+- P: "¿Es transferible esta clasificación de cuatro clústeres al Atlántico Sudoccidental?"
+  R: El marco metodológico (uso de múltiples medidas no redundantes vía PCA disperso y GMM)
+  es conceptualmente transferible, pero los clústeres específicos (HighSSI, Intense,
+  AvgMST, Weak) y sus proporciones fueron calibrados para el Atlántico Norte/Europa; no
+  existe evidencia directa de que las mismas proporciones o umbrales apliquen al Hemisferio
+  Sur.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/corner2025classification.md

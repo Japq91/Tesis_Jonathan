@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Evans y Braun 2012 — climatologia de ciclones subtropicales en el Atlantico Sur
+============================================================
+
+REFERENCIA COMPLETA
+Evans, Jenni L.; Braun, Aviva. (2012). A Climatology of Subtropical Cyclones in the South Atlantic. Journal of Climate, 25(20), 7328–7340. DOI: 10.1175/JCLI-D-11-00212.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita cuatro veces en tres capítulos distintos (Introducción, Precipitación x2, Prototipos), sustentando el argumento de que el Atlántico Sur presenta una alta prevalencia de ciclones subtropicales de estructura térmica híbrida, lo que explica la heterogeneidad estructural y la amplia dispersión de intensidades de precipitación observada en la región.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (MSLP, algoritmo de Hart 2003) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio presenta la primera climatología de 50 años (1957–2007) de ciclones subtropicales (STs) en el Atlántico Sur, motivada en parte por la formación de la Hurricane Catarina en 2004 (el único ciclón tropical documentado en el Atlántico Sur), que expuso la falta de un contexto climatológico para evaluar la probabilidad de eventos similares. Un ciclón subtropical es una estructura híbrida (núcleo frío en niveles altos, núcleo cálido en niveles bajos) con vientos de fuerza de galerna en superficie. El estudio identifica 63 STs en el período analizado y propone dos mecanismos de génesis: ruptura de ondas de Rossby (similar al Atlántico Norte) y ciclogénesis de sotavento (lee cyclogenesis) al este de los Andes en la región de la Corriente de Brasil, mecanismo sin equivalente directo en el Atlántico Norte.
+
+2. METODOLOGÍA
+
+Se usa el reanálisis ERA-40 del ECMWF (1957–2002, resolución 1.25°×1.25°, 14 niveles de presión) extendido con análisis operacionales GFS/NCEP (2000–2007, 26 niveles, alta resolución) para cubrir el período completo agosto 1957–diciembre 2007. Se aplica el algoritmo automatizado de tracking de Hart (2003), que detecta mínimos de presión a nivel del mar (SLP < 1020 hPa, persistencia ≥24 h) y emplea el Cyclone Phase Space (CPS) de Hart (2003) para caracterizar la estructura tridimensional evolutiva del sistema mediante tres parámetros: asimetría térmica de bajo nivel (B), viento térmico de bajo nivel (-VL_T) y viento térmico de alto nivel (-VU_T). Los criterios de clasificación como ST (adaptados de Guishard et al. 2009 para el Atlántico Norte, pero endurecidos para el Atlántico Sur) exigen: ubicación entre 20°S y 40°S, fase híbrida sostenida ≥36 h consecutivas sobre el océano, núcleo no verticalmente apilado (inclinado hacia el oeste con la altura), vientos superficiales de al menos fuerza de galerna (≥17 m/s), y ausencia de estructura puramente cálida o fría previa con vientos de galerna por más de 24 h antes de volverse subtropical.
+
+3. HALLAZGOS CLAVE
+
+- Se identificaron 63 ciclones subtropicales en el Atlántico Sur durante 1957–2007 (promedio de poco más de un evento por año), con actividad variable entre décadas: 7 STs en los últimos tres años de los 1950s, 13 por década en los 1960s y 1970s, una caída marcada a solo 3 STs en los 1980s, recuperación a 9 en los 1990s, y 18 STs en 2000–2007.
+- A diferencia del Atlántico Norte (donde los STs se concentran en verano-otoño boreal), los STs del Atlántico Sur ocurren de forma relativamente uniforme a lo largo del año, con géneris distribuida en distintas regiones y mecanismos según la estación.
+- Los STs del Atlántico Sur se forman en cizalladura vertical de viento mediana de ~28 m/s (rango de 4 a 63 m/s), sustancialmente mayor que la cizalladura típica del Atlántico Norte (~15 m/s según Guishard et al. 2009), y en aguas más frías (SST mediana de 18°C en el Atlántico Sur, interquartil 15-20°C, frente a 26°C en el Atlántico Norte).
+- Casi 75% de los eventos de génesis (45/63) ocurren en la región 20°S-40°S, 60°-30°W, y más del 60% de todos los STs se forman en la zona costera cercana a la Corriente de Brasil y a sotavento de los Andes.
+- Se identifican dos mecanismos de formación: (a) ruptura anticiclónica de onda de Rossby en el océano abierto (análogo al mecanismo documentado por Evans y Guishard 2009 para el Atlántico Norte); y (b) ciclogénesis de sotavento (lee cyclogenesis) por interacción del jet subtropical con los Andes —mecanismo sin equivalente en el Atlántico Norte—, análogo a la formación de "east coast lows" tipo-2 en el Mar de Tasmania (Australia).
+- La variabilidad decadal en la actividad de STs es consistente con cambios en la posición de la zona de confluencia Brasil-Malvinas (desplazamiento hacia el sur desde mediados de los 1980s), aunque los autores advierten que el período de menos de 30 años es insuficiente para establecer causalidad.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en cuatro puntos que en conjunto sustentan el argumento de la heterogeneidad estructural del Atlántico Sur y su relación con la amplia dispersión de intensidades de precipitación:
+(1) Cap01-Introducción, L31: "en el Atlántico Sur esto se expresa, por un lado, en la prevalencia de ciclones subtropicales con estructuras térmicas híbridas documentada por \citet{evans2012climatology}, y por otro, en sistemas de tipo extratropical que siguen el modelo estructural de Shapiro-Keyser..." — aquí el paper es la referencia central para establecer que el Atlántico Sur, a diferencia de otras cuencas, exhibe una prevalencia estructural híbrida (subtropical) documentada climatológicamente.
+(2) Cap05-Precipitación, L23: se cita para explicar por qué SBR y LPB muestran "un perfil plano y extendido con pico modal entre 10 y 20 mm/h, reflejo de la amplia dispersión de intensidades propia de estas regiones oceánicas".
+(3) Cap05-Precipitación, L41: "según \citet{evans2012climatology}, el vínculo con anomalías térmicas —que generan humedad y estabilidad en la troposfera media— favorece la formación recurrente de ciclones con diversas estructuras térmicas en el Atlántico Sur."
+(4) Cap07-Prototipos, L69: se usa para explicar "la mayor difusión de los contornos en el sector sur y la asimetría meridional más pronunciada en SBR", atribuida a "la estructura híbrida que caracteriza a muchos de los sistemas p90 del Atlántico Sur, como documentan \citet{evans2012climatology} y \citet{gozzo2014subtropical}."
+En conjunto, esta referencia es la base empírica que legitima tratar el Atlántico Sur como una región de alta diversidad térmica estructural, contraponiéndola implícitamente a climatologías de cuencas oceánicas del Hemisferio Norte donde predominan estructuras extratropicales "puras".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Jenni L. Evans (Penn State) es una autora de referencia en la caracterización de ciclones subtropicales/híbridos, habiendo desarrollado junto con Guishard el marco de criterios cuantitativos para el Atlántico Norte (Evans y Guishard 2009; Guishard et al. 2009), que este paper adapta y extiende al Atlántico Sur. El estudio usa el Cyclone Phase Space de Hart (2003) —el mismo marco conceptual de fases termales que sustenta gran parte de la literatura de clasificación estructural de ciclones citada en la tesis (hart2003cyclone)—. En el contexto de la tesis, este paper dialoga directamente con gozzo2013air y gozzo2014subtropical (que documentan climatologías regionales de ciclones subtropicales/extratropicales del Atlántico Sur con metodologías propias, complementarias a la de Hart/Evans), formando en conjunto la base empírica de la heterogeneidad estructural regional que la tesis usa para justificar por qué no puede asumirse un comportamiento uniforme del viento y la precipitación entre subregiones (ARG, SBR, LPB).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Reconocidas por los propios autores: (a) el uso de ERA-40 (hasta 2002) combinado con análisis operacionales GFS (2000-2007) introduce heterogeneidad de fuente de datos, mitigada mediante un período de solapamiento de 2 años para verificar consistencia; (b) el algoritmo automatizado puede no representar bien sistemas en regiones de escasez de datos (el Atlántico Sur es una región relativamente pobre en observaciones), lo que los autores mitigan con análisis satelital suplementario (ISCCP) para confirmar la estructura híbrida y presencia de convección; (c) los criterios de clasificación de ST fueron adaptados (no idénticos) de los desarrollados para el Atlántico Norte, lo que introduce cierta subjetividad en la definición regional; (d) el período de registro de 50 años es demasiado corto para separar variabilidad decadal/multidecadal real de tendencias antropogénicas, como los propios autores reconocen al discutir el vínculo con el ciclo multidecadal de la confluencia Brasil-Malvinas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Cómo se relaciona la clasificación de "ciclón subtropical" de Evans y Braun con la clasificación de fases del ciclo de vida (CycloPhaser) que usa tu tesis? Respuesta: son marcos distintos y complementarios — el Cyclone Phase Space de Hart/Evans clasifica la estructura térmica (fría/cálida, simétrica/asimétrica) del sistema en un instante dado, mientras que CycloPhaser segmenta temporalmente el ciclo de vida (incipiente-intensificación-madurez-decaimiento) de un mismo sistema con base en la vorticidad; ambos enfoques son coherentes con la idea general de que los ciclones del Atlántico Sur no son estructuralmente homogéneos.
+- ¿Qué evidencia concreta usa tu tesis del paper de Evans y Braun, más allá de la idea general de "hibridez estructural"? Respuesta: se usa como fundamento cualitativo/conceptual (prevalencia de estructuras híbridas, mecanismos de génesis de sotavento) para explicar la amplia dispersión de intensidades de precipitación observada empíricamente en SBR y LPB, no se replican cifras numéricas específicas del paper en el análisis cuantitativo propio.
+- ¿El mecanismo de ciclogénesis de sotavento identificado por Evans y Braun es relevante para tu área de estudio? Respuesta: sí, es directamente relevante porque una de las tres zonas de ciclogénesis del dominio de la tesis (ARG) está justamente influenciada por la perturbación topográfica de los Andes, mecanismo que Evans y Braun documentan explícitamente como generador de ciclones subtropicales de sotavento en la región de la Corriente de Brasil.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/evans2012climatology.md

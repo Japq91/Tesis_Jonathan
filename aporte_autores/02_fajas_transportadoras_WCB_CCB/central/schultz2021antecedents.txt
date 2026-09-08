@@ -1,0 +1,125 @@
+============================================================
+CARTILLA DE ESTUDIO — Schultz & Keyser 2021 — antecedentes históricos del modelo Shapiro-Keyser
+============================================================
+
+REFERENCIA COMPLETA
+Schultz, D. M., y Keyser, D. (2021). Antecedents for the Shapiro-Keyser Cyclone
+Model in the Bergen School Literature. Bulletin of the American Meteorological
+Society, 102(2), E383-E398. DOI: 10.1175/BAMS-D-20-0078.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 4 veces en 4 capítulos distintos (Cap04-Viento, Cap05-Precipitación,
+Cap06-MEOF, Cap07-Prototipos), siendo la referencia explicativa principal del
+modelo conceptual Shapiro-Keyser usado para interpretar los resultados de viento
+y precipitación en ciclones ocluidos.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo histórico-conceptual (no un estudio de datos observacionales o de
+modelización) que documenta los antecedentes, en la literatura de la Escuela de
+Bergen (Noruega, ca. 1920-1957), de las tres características distintivas del
+modelo de ciclón Shapiro-Keyser (1990): la fractura frontal (frontal fracture),
+el frente retrocedido (bent-back front) y la seclusión de núcleo cálido
+(warm-core seclusion). Argumenta que estos rasgos ya habían sido observados y
+descritos por los meteorólogos de Bergen (Bergeron, J. Bjerknes, Petterssen,
+Refsdal) décadas antes de 1990, pero fueron omitidos de las versiones
+posteriores del modelo Noruego de ciclones desde la década de 1950. Es, junto al
+propio Shapiro y Keyser (1990), la síntesis más reciente y detallada del propio
+modelo Shapiro-Keyser, describiendo con precisión sus cuatro fases evolutivas.
+
+2. METODOLOGÍA
+Revisión histórica de fuentes primarias de la Escuela de Bergen: publicaciones y
+esquemas conceptuales de Bergeron y Swoboda (1924), J. Bjerknes (1919, 1924,
+1930), Bjerknes y Solberg (1921, 1922), Petterssen (1933, 1940, 1956, 1958),
+Refsdal (1929), Godske et al. (1957) y Chromov (1940, basado en las clases de
+Bergeron en Rusia), además de correspondencia histórica (carta de V. Bjerknes a
+Napier Shaw, 1921) y una entrevista de 2006 a Melvyn Shapiro. No hay datos ni
+métricas cuantitativas nuevas: es un trabajo de historiografía de la ciencia que
+reconstruye una cronología (su Fig. 2) de la aparición de cada rasgo conceptual.
+
+3. HALLAZGOS CLAVE
+(Nota: son hallazgos histórico-documentales y descriptivos del modelo, no
+estadísticos.)
+- El modelo Shapiro-Keyser se distingue del modelo Noruego por 4 rasgos: la
+  fractura frontal, el frente en "T" (T-bone, ángulo recto entre frentes frío y
+  cálido), el frente retrocedido (bent-back front) y la seclusión de núcleo
+  cálido (warm-core seclusion); las 4 fases evolutivas (I-IV) están separadas
+  por aproximadamente 6-24 h, con una escala característica del ciclón (del
+  mínimo de geopotencial al contorno externo en la fase IV) de ~1000 km.
+- La fractura frontal ya fue documentada en Bergeron y Swoboda (1924) y descrita
+  explícitamente por Petterssen (1933): "cold fronts increase, and warm fronts
+  decrease in intensity with distance from the cyclonic center."
+- El frente retrocedido es "the best-documented feature" (el rasgo mejor
+  documentado) en la literatura de Bergen: aparece en esquemas de Refsdal (1929)
+  y Bjerknes (1930), con la referencia más temprana en Bergeron (1928), quien lo
+  notó al analizar la ciclogénesis del 22-24 de octubre de 1921.
+- La seclusión aparece publicada por primera vez en Bjerknes y Solberg (1922),
+  pero como seclusión de aire genuino del sector cálido (a menudo por efecto
+  orográfico); el modelo Shapiro-Keyser, en cambio, secluye aire post-frontal-
+  frío (no aire genuino del sector cálido), distinción reconocida por los
+  propios Shapiro y Keyser (1990, su sección 10.4).
+- El propio Shapiro, en una entrevista de 2006, reconoció: "we discovered, as
+  Bergeron had suggested before, ...the bent-back frontal structure and the
+  warm-core seclusion."
+- El modelo Shapiro-Keyser surgió de discrepancias entre simulaciones idealizadas
+  de alta resolución (grillas de hasta 30 km) y el modelo Noruego clásico,
+  confirmadas observacionalmente durante las campañas de campo ERICA (1988-89)
+  mediante instrumentación aérea dirigida específicamente por Melvyn Shapiro; el
+  primer caso interpretado explícitamente bajo este modelo fue el IOP4 de ERICA
+  (Wakimoto et al. 1992; Neiman y Shapiro 1993).
+
+4. RELACIÓN CON TU TESIS
+- Cap04-Viento, L208, cita textual: "Como detallan \citet{schultz2021antecedents},
+  \citet{reboita2022from} y \citet{shapiro1999bridge}, la formación de esta
+  seclusión en el núcleo rodeada por un anillo de vientos es el rasgo evolutivo
+  del modelo conceptual de \citet{shapiro1990life}, una vía de desarrollo
+  característica de ciclones con alta organización baroclínica."
+- Cap05-Precipitación, L110, y Cap06-MEOF, L126 y L157: se usa para interpretar
+  la separación de cuadrantes de viento y precipitación (intrusión seca en el
+  núcleo, banda enroscada periférica) como consistente con el modelo de ciclón
+  ocluido de Shapiro-Keyser.
+- Cap07-Prototipos, L46: describe explícitamente el mecanismo CCB-DI-WCB del
+  ciclo Shapiro-Keyser como explicación del patrón noroeste/sureste que
+  distingue el "prototipo p90" de máxima vorticidad.
+Es, junto con shapiro1990life, el marco teórico central que interpreta toda la
+fenomenología de viento y precipitación en ciclones ocluidos de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+David Schultz (Universidad de Manchester) y Daniel Keyser (SUNY Albany, coautor
+original del modelo Shapiro-Keyser de 1990) son referentes en la historia y
+estructura de frentes/ciclones (Schultz 2001, sobre la reexaminación de la CCB;
+Schultz y Vaughan 2011, sobre el proceso de oclusión). Este artículo de 2021
+cierra el círculo histórico iniciado por Shapiro y Keyser en 1990, vinculándolo
+a la Escuela de Bergen (J. Bjerknes, Solberg, Bergeron, Petterssen) de 1920-1957.
+Complementa a schemm2014linkage (mecanismo dinámico/PV) aportando el marco
+histórico-conceptual del modelo que ese estudio dinámico da por sentado.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un artículo de historia de la ciencia/revisión conceptual: no aporta datos
+  ni verificación cuantitativa nueva sobre ciclones actuales.
+- Se basa en la reinterpretación de fuentes históricas (algunas originalmente en
+  noruego o alemán, traducidas), lo que introduce un margen de subjetividad en
+  la atribución de "antecedentes".
+- Los propios autores reconocen que el frente en T (T-bone) no tiene un
+  antecedente identificado en la literatura de la Escuela de Bergen.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cuál es la diferencia exacta entre la seclusión de Bjerknes-Solberg (1922) y
+  la seclusión cálida de Shapiro-Keyser? La primera secluye aire genuino del
+  sector cálido (a menudo por efecto orográfico); la segunda secluye aire
+  post-frontal-frío, más frío que el sector cálido pero más cálido que el
+  sector frío profundo.
+- ¿Por qué es relevante la historia del modelo para una tesis aplicada? Porque
+  el marco conceptual (fases I-IV, frente en T, frente retrocedido, seclusión)
+  es la base interpretativa usada para explicar los patrones espaciales de
+  viento y precipitación observados en los ciclones del Atlántico Sur.
+- ¿En qué difieren el modelo Noruego y el Shapiro-Keyser respecto al ángulo
+  frontal? El modelo Noruego presenta un ángulo agudo con cierre progresivo del
+  sector cálido ("catch-up"); el Shapiro-Keyser presenta un ángulo recto
+  (T-bone) que impide el proceso clásico de oclusión por alcance.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/schultz2021antecedents.md

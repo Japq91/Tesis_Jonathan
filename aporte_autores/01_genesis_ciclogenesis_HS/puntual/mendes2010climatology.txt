@@ -1,0 +1,138 @@
+============================================================
+CARTILLA DE ESTUDIO — Mendes et al. 2010 — climatología de ciclogénesis en Sudamérica
+============================================================
+
+REFERENCIA COMPLETA
+Mendes, D., Souza, E. P., Marengo, J. A. y Mendes, M. C. D. (2010). Climatology of
+extratropical cyclones over the South American-southern oceans sector. Theoretical
+and Applied Climatology, 100, 239-250. DOI: 10.1007/s00704-009-0161-6
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en el Capítulo 5 (Precipitación), como respaldo climatológico
+de la alta frecuencia de ciclogénesis en la región SBR/LPB — un dato de contexto,
+no un mecanismo físico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (mínimo de SLP) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio presenta una climatología de 25 años (1979-2003) de ciclones
+extratropicales sobre el sector Sudamericano y los océanos australes circundantes,
+usando un esquema automático de seguimiento aplicado a reanálisis NCEP/NCAR II. Se
+caracterizan la distribución espacial de la ciclogénesis, el tiempo de vida, la
+distancia recorrida, la intensidad (tasa de profundización) y las trayectorias
+principales (mediante clustering de k-medias), y se explora la influencia de la
+Oscilación Antártica (AAO) sobre la variabilidad de estos ciclones. Es un estudio
+observacional/climatológico, relevante para la tesis porque establece la
+frecuencia y ubicación preferencial de la ciclogénesis en la región que la tesis
+denomina SBR/LPB.
+
+2. METODOLOGÍA
+
+- Datos: reanálisis NCEP/NCAR II, resolución 2.5°×2.5°, 6-horaria, período
+  1979-2003 (25 años), dominio 70°S-20°N y 120°W-0°.
+- Detección de ciclogénesis: mínimo de presión a nivel del mar (SLP) en una
+  malla de 3°×3° que cumpla: presión central ≤1010 hPa y gradiente de presión medio
+  ≥0.55 hPa/250 km en un área de 9° lat × 11° lon (~1000×1000 km).
+- Seguimiento: algoritmo de vecino más cercano (nearest-neighbor), con velocidad
+  máxima de propagación de 33 km/h hacia el oeste y 90 km/h en cualquier otra
+  dirección para asumir ciclogénesis.
+- Deepening rate ajustado geostróficamente a una "latitud de referencia" de 45°S
+  para comparar intensidades entre latitudes.
+- Clustering de k-medias sobre vectores estandarizados de posición
+  (latitud/longitud) 6-horaria de cada ciclón, para definir regiones de
+  trayectorias preferenciales (un desvío estándar delimita el área de influencia).
+- Análisis de la influencia de la Oscilación Antártica (AAO) comparando fases
+  positiva y negativa sobre densidad, profundidad y trayectoria de los ciclones.
+
+3. HALLAZGOS CLAVE
+
+- Dos centros principales de ciclogénesis: (1) la costa de Argentina, Uruguay y
+  sur de Brasil, con ~18 eventos por invierno en promedio; (2) la región cercana a
+  la Península Antártica (mar de Weddell).
+- El tiempo de vida de los ciclones formados en el sector Sudamericano es de
+  orden 3.0 días la mayor parte del año, ligeramente mayor (3.5 días) en verano
+  austral; es similar al de todo el Hemisferio Sur (SH), con solo pequeña
+  variabilidad estacional.
+- La distancia total recorrida por los ciclones del sector Sudamericano es en
+  general menor que la de la población completa del Hemisferio Sur, con menor
+  asimetría (skewness) en su distribución.
+- El clustering de k-medias identifica tres trayectorias principales: costa de
+  Argentina/Uruguay/sur de Brasil, cercanías de la Península Antártica, y Pacífico
+  centro-sur (esta última con contribución pequeña).
+- La AAO influye en la posición de los ciclones extratropicales cerca de 40°S y en
+  su intensidad cerca de 55°S; la profundidad (diferencia negativa-positiva de la
+  AAO) supera 7 hPa en gran parte del Pacífico, Atlántico e Índico, y excede 11 hPa
+  cerca de 30°E en la región subantártica.
+- Los resultados de frecuencia de ciclogénesis coinciden con estudios previos
+  (Satyamurty et al. 1990; Gan y Rao 1991; Simmonds y Keay 2000).
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 5 (Precipitación), línea 87, junto con simmonds2000mean,
+para justificar la representatividad de la muestra de ciclones analizada en la
+tesis: "La robustez de este patrón asimétrico en la PG responde en parte a la alta
+frecuencia de ciclogénesis en las inmediaciones del norte de Argentina, Uruguay y
+sur de Brasil (~18 eventos por invierno), junto con el desplazamiento preferencial
+de estos sistemas hacia el sudeste sobre el océano \citep{mendes2010climatology,
+simmonds2000mean}, lo que asegura una muestra donde el WCB interactúa
+sistemáticamente con la configuración regional descrita." El paper aporta la
+cifra puntual de ~18 eventos/invierno y confirma el desplazamiento preferencial
+hacia el sudeste, pero la tesis aclara explícitamente que esto es un
+"condicionante estadístico" (representatividad de la muestra), no un forzante
+físico directo por evento.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo brasileño (CPTEC/INPE: Mendes, Marengo) continúa la línea de climatología
+de ciclogénesis sudamericana iniciada por Gan y Rao (1991) y Satyamurty et al.
+(1990), aplicando el esquema automático de Blender et al. (1997)/Trigo et al.
+(1999) adaptado al Hemisferio Sur por Mendes et al. (2007) — trabajo previo de los
+mismos autores que precede directamente a este artículo. Se dialoga también con
+Simmonds y Keay (2000a,b), cuya climatología de 40 años para todo el Hemisferio Sur
+sirve de referencia comparativa constante a lo largo del artículo. En la tesis,
+este paper se cita junto a simmonds2000mean, formando el bloque de referencias
+climatológicas que sustentan la representatividad geográfica de SBR/LPB como
+región de estudio.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Usa reanálisis NCEP/NCAR II de resolución relativamente gruesa (2.5°×2.5°,
+  6-horaria), lo cual limita la detección de ciclones de menor escala o de
+  desarrollo rápido, comparado con productos más recientes como ERA5.
+- El período de estudio (1979-2003) es anterior a la era de asimilación de datos
+  satelitales más moderna, lo cual puede introducir sesgos en las primeras décadas
+  de la muestra (el propio artículo señala 1979 como "punto de inflexión" con el
+  inicio de la era satelital moderna).
+- Los umbrales de detección (gradiente de presión, velocidad máxima de
+  propagación) fueron determinados empíricamente por los autores, no derivados de
+  un criterio físico universal, lo cual introduce sensibilidad metodológica
+  reconocida en la literatura de intercomparación de algoritmos (cf.
+  neu2013intercomparison).
+- El estudio no analiza precipitación ni estructura del WCB directamente; solo
+  aporta el contexto climatológico de frecuencia y trayectoria de ciclogénesis,
+  por lo que no puede usarse para inferir mecanismos de precipitación.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué la cifra de "~18 eventos por invierno" es relevante para la robustez
+  estadística de tu análisis EOF/composicional? Respuesta: porque confirma que la
+  región SBR/LPB concentra una frecuencia alta y estable de ciclogénesis, lo cual
+  garantiza un tamaño de muestra suficiente para que los patrones EOF y compuestos
+  de la tesis no estén dominados por casos aislados o atípicos.
+- ¿Este dato climatológico implica causalidad entre la ubicación de ciclogénesis y
+  la intensidad de la precipitación en cada evento? Respuesta: no; la propia tesis
+  aclara que es un "condicionante estadístico que garantiza la representatividad
+  del patrón WCB", no un forzante físico directo evento por evento.
+- ¿Qué tan comparable es la resolución de este estudio (NCEP/NCAR II, 2.5°) con la
+  de los datos usados en tu tesis? Respuesta: es más gruesa; la tesis usa datos de
+  mayor resolución, por lo que el uso de Mendes et al. (2010) se limita a
+  contextualizar la frecuencia climatológica de ciclogénesis, no a validar
+  directamente la metodología de detección de la tesis.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/mendes2010climatology.md (leído completo:
+resumen, introducción, datos y métodos, secciones de cyclogénesis, tiempo de vida,
+intensidad, trayectorias e influencia de la AAO, y conclusiones).

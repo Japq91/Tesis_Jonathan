@@ -1,0 +1,132 @@
+============================================================
+CARTILLA DE ESTUDIO — Simmonds & Keay 2000 — Variabilidad de ciclones del HS 1958-97
+============================================================
+
+REFERENCIA COMPLETA
+Simmonds, I., & Keay, K. (2000). Variability of Southern Hemisphere
+Extratropical Cyclone Behavior, 1958-97. Journal of Climate, 13(3), 550-561.
+American Meteorological Society.
+DOI: 10.1175/1520-0442(2000)013<0550:VOSHEC>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario / Puntual
+Se cita 2 veces (Cap02-Fundamentación y Cap01-Introducción) para sustentar el
+rol dominante de la dinámica de altos niveles y la propagación de ondas de
+Rossby en la región ARG (costa sureste de Argentina), frente a otras regiones
+de ciclogénesis del dominio de estudio.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (esquema de Melbourne, Laplaciano de presión) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Segundo artículo del par "compañero" de Simmonds & Keay (2000a, climatología
+media, "SK" en la notación del propio texto), centrado en la variabilidad y
+tendencias de muchos aspectos de los ciclones extratropicales del HS durante
+1958-97, aplicando el mismo esquema automático de detección y seguimiento
+(Melbourne University) a la reanálisis NCEP-NCAR de 40 años. Según los
+propios autores, es "posiblemente el análisis más confiable de la
+variabilidad de ciclones del HS realizado hasta la fecha" (al momento de su
+publicación).
+
+2. METODOLOGÍA
+- Datos: reanálisis NCEP-NCAR 6-horaria, 1958-97 (40 años).
+- Mismo esquema de detección/seguimiento de Melbourne University (Laplaciano
+  de presión) usado en simmonds2000mean y simmonds2000size.
+- Análisis de tendencias lineales (mínimos cuadrados) de densidad de
+  ciclones, número de ciclones por análisis, radio, profundidad, y del
+  Laplaciano medio de presión, con test de significancia al 95% de confianza
+  y corrección por autocorrelación serial (test de Ebisuzaki 1997).
+- Análisis de correlación entre series de conteo de ciclones en las bandas
+  30-50°S y 50-70°S, y entre estas y la temperatura media superficial del HS.
+
+3. HALLAZGOS CLAVE
+- La densidad media anual y estacional de ciclones ha disminuido en la
+  mayoría de los lugares al sur de ~40°S (mayores reducciones cerca de 60°S)
+  y ha aumentado hacia el norte — patrón que se asemeja al "modo de alta
+  latitud" (high-latitude mode) de variabilidad de la MSLP en el HS.
+- El número medio anual de ciclones por análisis del HS aumentó hasta un
+  máximo de ~39 en 1972, y desde entonces declinó, con conteos de los años
+  90 particularmente bajos; pendientes significativas de -0.58, -0.26 y
+  -0.58 ciclones por análisis por década para el HS total, 30-50°S y
+  50-70°S, respectivamente.
+- El radio medio de los ciclones del HS muestra tendencia positiva
+  significativa casi en todas partes, de <5.5° de latitud en 1971 a ~5.8°
+  (aumento de ~5%) hacia fines de los 80/90; la profundidad media sigue un
+  comportamiento similar al del radio, indicando que las tendencias en
+  profundidad están gobernadas por el radio y no por la intensidad
+  (Laplaciano).
+- Los cambios año a año en el número de ciclones entre las bandas 30-50°S y
+  50-70°S están negativamente correlacionados (r=-0.32, significativo),
+  evidenciando compensación interanual de densidad ciclónica entre latitudes
+  medias y altas — otra manifestación del modo de alta latitud.
+- Desde mediados de los 1960, la temperatura media superficial del HS
+  aumentó ~0.5°C, en anticorrelación significativa (r=-0.79, p<0.01) con el
+  número de ciclones, sugiriendo un vínculo entre calentamiento hemisférico
+  y reducción en el número (no necesariamente en tamaño/profundidad) de
+  ciclones extratropicales del HS.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L108): se cita para sustentar que "los sistemas
+  ciclónicos en ARG dependen menos de forzantes locales de superficie y más
+  de la dinámica de la alta troposfera, lo que genera una evolución más
+  rápida y directamente acoplada al flujo de niveles altos, en contraste con
+  las regiones subtropicales del sudeste de Brasil".
+- Cap01-Introducción (L37): dentro de la caracterización de las tres
+  regiones de ciclogénesis (SBR, LPB, ARG) siguiendo a
+  gramcianinov2019properties, se cita para indicar que en la región ARG "la
+  dinámica del chorro polar y la propagación de ondas de Rossby constituyen
+  los principales mecanismos de desarrollo", en contraste con SBR y LPB
+  donde dominan el SALLJ y el transporte de humedad.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Segundo de la trilogía Simmonds/Keay/Simmonds del año 2000 (junto con
+simmonds2000mean, estado medio, y simmonds2000size, tamaño), todos derivados
+del mismo esquema de Melbourne University sobre la reanálisis NCEP-NCAR
+1958-97. Los autores hacen referencia explícita y constante a "SK" (su
+propio companion paper de climatología media) para las definiciones de
+radio (R), profundidad (D) e intensidad (Laplaciano ∇²p). Dialoga con
+Sinclair (1994, 1997) y Sinclair, Renwick & Kidson (1997) al discutir el
+"modo de alta latitud" documentado en estudios previos con registros más
+cortos o de base regional.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los autores reconocen la posibilidad de que parte de la variabilidad
+  identificada refleje mejoras en el sistema de análisis operativo (más que
+  variabilidad física real), aunque argumentan que el uso de una reanálisis
+  "congelada" (frozen analysis-forecast system) descarta en gran medida esta
+  fuente de sesgo.
+- Señalan que si el número de ciclones detectados hubiera aumentado con el
+  tiempo (en vez de disminuir), habría sospecha de que la mejora en
+  disponibilidad de datos permitiera detectar más ciclones — la tendencia
+  observada (decreciente) refuerza, sin demostrar concluyentemente, que el
+  cambio es real.
+- El período de registro (40 años) es reconocido como corto para
+  caracterizar plenamente el "reddening" del espectro de variabilidad en
+  escalas aún más largas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Cómo respalda este paper la idea de que la región ARG depende más de
+  la dinámica de altos niveles que del forzante superficial?
+  R: El estudio documenta que la variabilidad de densidad y número de
+  ciclones en latitudes medias/altas del HS está fuertemente asociada al
+  "modo de alta latitud" —patrón de oscilación en la MSLP y en la altura
+  geopotencial de 500 hPa vinculado a la dinámica de onda larga de la alta
+  troposfera— y no se relaciona directamente con forzantes de superficie
+  regionales, consistente con el dominio de la baroclinia del chorro polar
+  en ARG.
+- P: ¿Qué evidencia estadística concreta aporta el paper sobre tendencias de
+  radio y profundidad?
+  R: El radio medio del HS (30-70°S) mostró tendencia positiva significativa,
+  de <5.5° a ~5.8° de latitud entre 1971 y fines de los 90 (~5% de aumento),
+  y la profundidad siguió una evolución similar, atribuida al comportamiento
+  del radio más que al de la intensidad (Laplaciano de presión).
+- P: ¿Es aplicable la tendencia decreciente en número de ciclones documentada
+  aquí (1958-97) al período más reciente que estudias tú?
+  R: No necesariamente; el estudio es de tendencias hasta 1997 y los propios
+  autores advierten sobre la posible influencia de cambios en la Oscilación
+  Semianual y en la cobertura de hielo marino antártico; en la tesis se usa
+  únicamente como antecedente del comportamiento dinámico regional, no como
+  proyección de tendencias actuales.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/simmonds2000variability.md

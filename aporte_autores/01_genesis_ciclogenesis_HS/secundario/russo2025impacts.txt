@@ -1,0 +1,48 @@
+============================================================
+CARTILLA DE ESTUDIO — Russo, Gramcianinov & de Oliveira (2025) — Flujos oceánicos de calor y ciclogénesis en el Atlántico Sur
+============================================================
+
+REFERENCIA COMPLETA
+Russo, Camila Ferreira; Gramcianinov, Carolina Barnez; de Oliveira, Fabrício Sanguinetti Cruz. (2025). Impacts of Ocean Heat and Moisture Fluxes on Extratropical Cyclone Development in the South Atlantic. International Journal of Climatology, 45(13), e70080. DOI: 10.1002/joc.70080
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en 2 capítulos (Cap04-Viento y Cap05-Precipitacion) para sustentar el papel termodinámico (flujos de calor oceánico y humedad) que complementa el forzante dinámico en la intensificación de los ciclones del Atlántico Sudoccidental; no es un pilar metodológico de la tesis pero sí un respaldo conceptual clave para el argumento de que la dinámica no basta y se requiere el aporte termodinámico oceánico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (línea Gramcianinov/Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Estudio de caso (no climatológico) que investiga el papel de los flujos oceánicos de calor (latente y sensible) y humedad en la formación, intensificación y disipación de ciclones extratropicales sobre el Atlántico Sur, en la región de influencia de la Confluencia Brasil-Malvinas. Analiza seis casos de estudio (tres ciclones intensos no explosivos y tres ciclones "bomba"/explosivos) frente a la costa de Sudamérica, entre 1979 y 2019, usando datos de reanálisis CFSR/CFSv2 a intervalos de 6 h. Es relevante para la tesis porque aporta evidencia de caso sobre la interacción océano-atmósfera (temperatura superficial del mar, flujo de calor latente/sensible, humedad específica) en la misma región de estudio (Atlántico Sudoccidental), complementando el enfoque dinámico dominante en la tesis.
+
+2. METODOLOGÍA
+Datos: reanálisis CFSR/CFSv2 (NCEP), resolución atmosférica ~38 km (T382), 64 niveles verticales; componente oceánico acoplado (MOM4) con resolución de 0,25° en el ecuador a 0,5° en latitudes altas; salida horaria, aquí usada a intervalos de 6 h; variables: flujo de calor latente y sensible, humedad específica, componentes zonal y meridional del viento, temperatura superficial del mar (SST). Identificación y seguimiento de ciclones: dataset "Atlantic extratropical cyclone tracks... in ERA5 and CFSR/CFSv2" (Gramcianinov et al. 2020b), con el algoritmo TRACK (Hodges 1994/1995/1999; método de Hoskins y Hodges 2005), dominio 85°S-25°S, 75°W-20°E, duración mínima 24 h, desplazamiento mínimo 1000 km. Selección de 6 casos (3 intensos: I1 mayo 2018, I2 junio 2019, I3 julio 2019; 3 explosivos/"bomba": B1 septiembre 2016, B2 marzo 2018, B3 enero 2019), elegidos por reportes de prensa y relevancia científica/social. Clasificación de ciclón "bomba" mediante la Tasa de Profundización Normalizada (NDR, en unidades de Bergeron) de Sanders y Gyakum (1980): NDR ≥ 1 B.
+
+3. HALLAZGOS CLAVE
+- El flujo de calor latente asociado a la SST desempeña un papel fundamental en el desarrollo baroclínico de los ciclones, mientras que el flujo de calor sensible cumple un rol secundario, afectando principalmente la tasa de profundización (deepening rate).
+- La humedad específica en el sector cálido fue un factor crucial en la intensificación de todos los casos estudiados.
+- Contrario a lo esperado, en los casos "bomba" y en I2 los flujos de calor jugaron un rol menor en las etapas tempranas de la ciclogénesis; los flujos significativos aparecieron recién después de la ciclogénesis, cuando el ciclón pasa del continente al océano — sugiriendo que la génesis de estos sistemas está más ligada a procesos dinámicos de niveles altos (excepción: B3, con señal de flujos de calor continentales desde el inicio).
+- Durante la fase de intensificación, el flujo de calor latente alcanzó picos superiores a 600 W/m² en los casos I1, I2 e I3, confirmando la transferencia de humedad océano-atmósfera como motor de la intensificación y mantenimiento del ciclón.
+- Tabla 1 del paper documenta presión mínima central y viento máximo por caso: I1 978 hPa/25,1 m/s; I2 951 hPa/24,2 m/s; I3 988 hPa/18,7 m/s; B1 963 hPa/25,6 m/s; B2 944 hPa/25,3 m/s; B3 945 hPa/30,6 m/s.
+- Durante la disipación, se observó una disminución marcada de los flujos de calor latente y sensible (con valores negativos cerca de los frentes cálidos), consistente en los tres casos "bomba", asociada al debilitamiento del sistema.
+- Los ciclones intensos (no explosivos) se intensifican gradualmente en un período más extendido y con estructuras menos definidas, mientras que los explosivos muestran intensificación rápida con frentes fríos y cálidos más definidos y mayor gradiente horizontal de flujos de calor.
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 4 (Viento, L43) se cita para reforzar que "si bien la ciclogénesis inicial depende de procesos dinámicos de niveles altos, la inyección masiva de humedad y flujos de calor latente resulta fundamental durante las fases de intensificación y madurez" — esto es prácticamente una paráfrasis directa del hallazgo del paper de que los flujos de calor juegan un rol menor en la ciclogénesis temprana pero se vuelven cruciales en la intensificación. En el Capítulo 5 (Precipitación, L41) se usa para sustentar que "SBR y el límite con LPB presentan flujos de calor oceánico que sostienen la baroclinicidad y anclan la convección profunda", vinculando el hallazgo de Russo et al. sobre la Confluencia Brasil-Malvinas a la subregión de estudio de la tesis (SBR/LPB).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Se inscribe en la línea de investigación de Gramcianinov (coautora, también citada en la tesis vía gramcianinov2019, gramcianinov2020a/b, gramcianinov2021, gramcianinov2023impact, gramcianinov2024early) sobre climatología dinámica y trayectorias de ciclones extratropicales del Atlántico Sur usando el algoritmo TRACK. El estudio dialoga con la literatura sobre bombogénesis (Sanders y Gyakum 1980), el rol de los flujos oceánicos en ciclogénesis (Vera et al. 2002; Piva et al. 2008; Hirata et al. 2015, 2019) y la controversia sobre si los ciclones explosivos del Atlántico Sur dependen de forma crítica de los flujos oceánicos o pueden formarse independientemente de ellos. Reboita et al. (2010, 2021) aparecen como referencia de fondo sobre climatología e impactos proyectados de ciclones en Sudamérica.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Es un estudio de solo 6 casos (no climatológico), por lo que sus conclusiones sobre mecanismos termodinámicos no son estadísticamente generalizables a la población completa de ciclones del Atlántico Sur.
+- El propio estudio reconoce que no hay consenso en la comunidad científica sobre las características estructurales de los ciclones explosivos (p. ej. B2 y B3 mostraron estructuras más ocluidas mientras B1 tuvo frentes más amplios y expandidos), lo que limita la capacidad de generalizar un "patrón único" de ciclón bomba.
+- Usa CFSR/CFSv2 en lugar de ERA5, reconociendo explícitamente que ERA5 emplea solo un modelo atmosférico mientras CFSR/CFSv2 usa un modelo acoplado océano-atmósfera; esto introduce diferencias potenciales frente a estudios basados en ERA5 (como muchos otros citados en la tesis).
+- Los autores mismos señalan como trabajo futuro la necesidad de incorporar análisis de dinámica de niveles altos (chorro, advección de vorticidad, divergencia) para una visión más completa, reconociendo que su enfoque se centra solo en la interfase superficial océano-atmósfera.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Cómo concilia la tesis el hallazgo de que la ciclogénesis inicial en Russo et al. depende de procesos dinámicos (no de flujos oceánicos) con el énfasis de la tesis en los flujos de humedad? Respuesta: la tesis distingue explícitamente fases: ciclogénesis dinámica en niveles altos vs. intensificación/madurez termodinámica, siguiendo la misma distinción temporal que hace Russo et al. en sus 6 casos.
+- ¿Por qual los resultados de solo 6 casos de estudio se consideran suficientes para sustentar una afirmación general en la tesis? Respuesta: se usa como evidencia cualitativa complementaria/de caso, no como base estadística; la tesis la contrasta con estudios climatológicos de mayor N (p. ej. gozzo2017climatology, evans2012climatology).
+- ¿Qué papel específico juega la Confluencia Brasil-Malvinas en el mecanismo descrito? Respuesta: genera fuertes gradientes de SST que intensifican la inestabilidad baroclínica; las aguas cálidas de la Corriente de Brasil proveen calor y humedad, mientras la fría Corriente de Malvinas incrementa el contraste térmico, favoreciendo el crecimiento baroclínico.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/russo2025impacts.md

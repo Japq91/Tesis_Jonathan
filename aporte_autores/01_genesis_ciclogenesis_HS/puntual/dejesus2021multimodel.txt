@@ -1,0 +1,51 @@
+============================================================
+CARTILLA DE ESTUDIO — de Jesus et al. 2021 — proyecciones climaticas de ciclogenesis y vientos en Sudamerica
+============================================================
+
+REFERENCIA COMPLETA
+de Jesus, Eduardo Marcos; da Rocha, Rosmeri Porfírio; Crespo, Natália Machado; Reboita, Michelle Simões; Gozzo, Luiz Felippe. (2021). Multi-model climate projections of the main cyclogenesis hot-spots and associated winds over the eastern coast of South America. Climate Dynamics, 56, 537–557. DOI: 10.1007/s00382-020-05490-1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap04-Viento, L5), como dato cuantitativo de respaldo sobre la proyección futura de intensificación del viento asociada a las tres zonas de ciclogénesis del Atlántico Sudoccidental.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (algoritmo de Reboita et al. 2010 — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio aborda la pregunta de cómo cambiarán en el futuro (bajo RCP8.5, hasta 2100) la frecuencia de ciclogénesis y los vientos asociados a los ciclones intensos en las tres principales regiones de ciclogénesis de la costa este de Sudamérica: el sudeste de Brasil (RG1), el sur de Brasil-Uruguay (RG2) y el sur de Argentina (RG3). Es un estudio de proyección climática multi-modelo (downscaling dinámico), el primero, según los autores, en abordar este tema específicamente para Sudamérica. Su relevancia radica en que conecta la climatología presente de ciclones con escenarios de cambio climático regional, evaluando tanto la habilidad de los modelos para reproducir el clima actual como las tendencias proyectadas.
+
+2. METODOLOGÍA
+
+Se usan reanálisis (ERA-Interim, CFSR) y un ensamble de cuatro downscalings dinámicos RegCM4 (proyecto CREMA, ~50 km de resolución, 18 niveles sigma-presión) anidados en tres GCMs de CMIP5 (HadGEM2-ES, MPI-ESM-MR, GFDL-ESM2M) bajo el escenario RCP8.5, para el período 1979–2100 (histórico 1979–2005, futuro cercano 2020–2050, futuro lejano 2070–2099). Los ciclones se identifican con el algoritmo de vorticidad relativa ciclónica de Reboita et al. (2010) a 925 hPa (umbral ≤ -1.5×10⁻⁵ s⁻¹, duración mínima 24 h), sobre una grilla regular de 1.5°×1.5°. Para los ciclones intensos se usa el percentil 25 de vorticidad relativa inicial en cada región (Tabla 2 del paper). Los compuestos de viento se calculan a 1000 hPa (nivel bajo) y 300 hPa (nivel alto, jet).
+
+3. HALLAZGOS CLAVE
+
+- Los RegCM4 (ensamble regional) reproducen mejor que los GCMs la frecuencia de ciclogénesis observada en RG1 y RG2 (menor sesgo y RMSE), especialmente en regiones alejadas del borde del dominio de downscaling.
+- Para el clima presente (1979–2005), RG3 presenta el mayor número de génesis por año (62.3 ± 7.4 en reanálisis), seguido por RG2 (37.8 ± 5.7) y RG1 (33.0 ± 6.0).
+- Se proyecta una clara tendencia a la disminución en el número de ciclogénesis en las tres regiones hacia fin de siglo (tendencias estadísticamente significativas para 1979–2099, p<0.05 según test de Mann-Kendall).
+- Pese a esa disminución en frecuencia, los vientos de niveles bajos (1000 hPa) asociados a ciclogénesis intensa se proyectan más fuertes en el futuro lejano: en RG1 los vientos del noreste pueden intensificarse hasta ~1.5 m/s cerca de la costa sureste de Brasil, y en RG3 los vientos del noreste pueden aumentar hasta ~2 m/s.
+- Los cambios proyectados en niveles altos incluyen un desplazamiento hacia el sur del jet polar (debilitamiento entre 36°S–50°S y fortalecimiento al sur), consistente con el desplazamiento hacia el sur de la zona baroclínica climatológica, y un fortalecimiento del jet subtropical entre 18°S–36°S.
+- La conclusión central: cada ciclogénesis intensa individual estará asociada a vientos de bajo nivel más fuertes en la costa este de Sudamérica hacia fin de siglo, aunque habrá menos eventos en total.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 4 (Viento), línea 5, dentro de un párrafo que contextualiza la relevancia del calentamiento global sobre la intensificación del sector cálido de los ciclones. El texto de la tesis afirma literalmente: "para las tres zonas de ciclogénesis del Atlántico Sudoccidental, esta intensificación se proyecta en hasta 1.5–2 m s⁻¹ en los vientos de niveles bajos hacia fines de siglo, pese a una disminución proyectada en la frecuencia de ciclogénesis \citep{dejesus2021multimodel}." Esta cita respalda el argumento de que, aunque haya menos ciclones, cada uno individualmente será más intenso en términos de viento —una idea que refuerza la relevancia de estudiar la estructura interna del viento en los ciclones ya existentes (que es el foco central de la tesis), más que solo su frecuencia. Inmediatamente después, la tesis matiza la certeza de esta proyección citando al IPCC (confianza alta en precipitación, media en viento).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+El grupo de investigación (da Rocha, Reboita, Gozzo, Crespo) pertenece a la escuela brasileña de climatología dinámica de ciclones del Atlántico Sur (IAG-USP y UNIFEI), que ha definido las tres regiones de ciclogénesis hot-spot (RG1, RG2, RG3) usadas extensamente en la literatura citada por la tesis (Reboita et al. 2010, 2018; Crespo et al. 2020; Gozzo et al. 2014, 2017). Este paper de Jesus et al. (2021) extiende esa línea hacia proyecciones climáticas de alta resolución (downscaling RegCM4/CREMA), complementando estudios previos de Reboita et al. (2018) y Krüger et al. (2012) que usaban ensambles más limitados (un solo miembro). Su continuidad natural en la tesis es con dossantos2023response y gentile2025response, que también abordan la respuesta de los ciclones del Atlántico Sur/Sudoeste al cambio climático desde ángulos distintos (BESM y proyecciones de precipitación/viento respectivamente).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Los propios autores reconocen: (a) la resolución de ~50 km de RegCM4 aún puede subestimar procesos de mesoescala; (b) las tendencias de frecuencia en el clima presente (27 años) no son estadísticamente significativas al 95%, aunque sí lo son para todo el período 1979–2099; (c) en RG3, al estar más cerca del borde del dominio de downscaling, los RegCM4 están más influenciados por los GCMs forzantes y agregan menos valor; (d) el estudio no analiza tipos específicos de ciclones (explosivos, subtropicales) en clima futuro, lo cual los autores señalan explícitamente como línea de trabajo futuro.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué citar una proyección climática futura si tu tesis trabaja con el clima presente (ERA5 histórico)? Respuesta: se usa solo como contexto motivacional en la introducción del capítulo de viento, para justificar la relevancia de estudiar a fondo la estructura de vientos actual, dado que estos sistemas se intensificarán en el futuro.
+- ¿Qué tan comparable es el algoritmo de tracking de de Jesus et al. (925 hPa, vorticidad) con el que usa tu tesis? Respuesta: ambos usan vorticidad relativa como variable de tracking (siguiendo la tradición de Reboita et al. 2010), aunque a niveles de presión distintos (925 hPa vs. 850 hPa en la tesis), lo cual es consistente con la práctica regional.
+- ¿La disminución de frecuencia de ciclogénesis proyectada es consistente en todos los modelos? Respuesta: sí, en general GCMs y RegCM4s coinciden en la tendencia negativa hacia fin de siglo en las tres regiones, aunque con diferencias de magnitud entre ensambles.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/dejesus2021multimodel.md

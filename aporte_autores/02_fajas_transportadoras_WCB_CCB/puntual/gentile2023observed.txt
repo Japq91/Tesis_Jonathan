@@ -1,0 +1,126 @@
+============================================================
+CARTILLA DE ESTUDIO — Gentile & Gray 2023 — Jets del ciclón y vientos extremos
+============================================================
+
+REFERENCIA COMPLETA
+Gentile, E. S., & Gray, S. L. (2023). Attribution of observed extreme marine
+wind speeds and associated hazards to midlatitude cyclone conveyor belt jets
+near the British Isles. International Journal of Climatology, 43(6), 2735-2753.
+DOI: 10.1002/joc.7999
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap04-Viento), pero sustenta una afirmación mecanística
+específica sobre por qué el sector frío de ciclones maduros genera un
+empaquetamiento localizado de viento extremo en la PDF de viento a 10 m.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (estaciones del Reino Unido)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un estudio observacional que construye, por primera vez con datos de
+estaciones marinas de superficie (no solo reanálisis), una climatología
+2012-2020 de eventos de viento extremo en los mares que rodean las Islas
+Británicas (Mar Céltico, Canal de la Mancha, Mar del Norte sur/central/norte).
+Los autores desarrollan un algoritmo objetivo para atribuir cada evento de
+viento máximo diario (DMWS) a uno de los tres "jets" (corrientes) del modelo de
+cinta transportadora de un ciclón extratropical: warm conveyor belt (WCB), y
+cold conveyor belt temprano (CCBa) y de retorno (CCBb). El objetivo es
+cuantificar qué jet es más responsable de los vientos extremos, las ráfagas y
+el riesgo compuesto viento-oleaje, y evaluar el sesgo de ERA5 en cada uno.
+
+2. METODOLOGÍA
+- Datos: series horarias de viento a 10 m, dirección, altura de ola local
+  (wind-wave) y ráfaga máxima (horaria o cada 6h) de 26 estaciones marinas de
+  superficie (buques, boyas, plataformas fijas) alrededor de las Islas
+  Británicas, periodo 2012-2020 (9 años), reportadas vía código SHIP SYNOP y
+  archivadas por el Met Office (MetDB/CEDA).
+- Definición de evento extremo: viento máximo diario (DMWS) que excede 20 o
+  25 m/s (umbrales Beaufort 8 / corte operativo de turbinas eólicas).
+- Reanálisis ERA5 (ECMWF, 0.25°, ~31 km) usado para: (a) trayectorias de
+  ciclones vía algoritmo TRACK (Hodges 1995) sobre vorticidad relativa en
+  850 hPa, T63; (b) atribución de cada DMWS a un ciclón dentro de 1000 km de
+  radio y a la hora exacta; (c) clasificación del evento como sector frío o
+  cálido comparando la temperatura potencial equivalente en 850 hPa (θe850) del
+  punto más cercano con la media del ciclón; (d) sub-clasificación por
+  dirección del viento en CCBa (sureste, 90-210°), CCBb (noroeste, 240-360°) o
+  WCB (sursuroeste a suroeste, 130-250°).
+- Se compara el ERA5 con las observaciones de viento, ráfaga y altura de ola en
+  eventos extremos, y se examina la relación entre viento a 10 m y 100 m (altura
+  de buje de aerogeneradores) usando ERA5.
+
+3. HALLAZGOS CLAVE
+- El 85% y 90% de los eventos DMWS que exceden 20 y 25 m/s, respectivamente, se
+  clasifican como "asociados a ciclón".
+- El CCBb (jet de retorno, en el sector frío de ciclones maduros) es el más
+  frecuentemente asociado a vientos fuertes: 46% de los eventos que exceden
+  20 m/s y 59% de los que exceden 25 m/s; también genera el mayor número de
+  eventos compuestos de riesgo viento-oleaje (37 de 87).
+- El WCB explica el 25% (20 m/s) y 20% (25 m/s) de los eventos; el CCBa el 16%
+  y 15% respectivamente, aunque el CCBa es el segundo en generar eventos
+  compuestos extremos (24 de 87).
+- ERA5 subestima sistemáticamente los vientos y ráfagas extremas observadas en
+  todos los jets; la subestimación es mayor para el CCBb (mediana de 4.5 y
+  5.5 m/s en viento y ráfaga, respectivamente, error relativo de ~25%),
+  mientras que la altura de ola es más subestimada para el CCBa (mediana de
+  3.4 m).
+- El CCB (particularmente el CCBb) ocurre en una capa límite más profunda e
+  inestable que el WCB (que ocurre en el sector cálido, con capa límite somera y
+  estable), lo cual favorece la mezcla vertical descendente de aire de alta
+  velocidad hacia la superficie.
+- La relación entre viento a 10 m y 100 m en ERA5 es aproximadamente lineal
+  (y=1.23x, R²=0.97), pero se vuelve más pronunciada (~25% mayor) para vientos a
+  10 m que superan 20 m/s.
+
+4. RELACIÓN CON TU TESIS
+- Cap04-Viento (L119): se cita para sustentar que "el CCB en ciclones maduros
+  ocurre en capas límite más profundas e inestables en el sector frío, lo que
+  favorece la mezcla descendente de aire de alta velocidad hacia la superficie,
+  manifestándose en la PDFe como un empaquetamiento localizado del viento a
+  10 metros"; se contrasta con stankovic2025surface, que reporta extremos
+  absolutos mayores en el Hemisferio Norte por su mayor baroclinicidad, aunque
+  los valores en la cola p90 de la región del Atlántico Sudoccidental alcanzan
+  magnitudes similares.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Gentile y Gray (Universidad de Reading) forman parte de la línea de
+investigación sobre estructura mesoescalar de ciclones extratropicales del
+Atlántico Norte (jets de la cinta transportadora, sting jets), en la tradición
+de Browning & Roberts (1994), Hewson & Neu (2015) y Martínez-Alvarado et al.
+Este trabajo de 2023 es la base metodológica (algoritmo de atribución de jets)
+que Gentile reutiliza en gentile2025response (también citado en tu tesis) para
+analizar la respuesta del sector cálido/frío al calentamiento climático con el
+modelo X-SHiELD, cerrando una línea de investigación coherente sobre el rol
+diferencial de los sectores frío/cálido en los vientos extremos.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se limita geográficamente a los mares que rodean las Islas
+  Británicas (Hemisferio Norte, régimen de tormentas del Atlántico Norte), sin
+  cobertura del Atlántico Sudoccidental.
+- Reconoce que algunos eventos clasificados como "other" (~14% y ~6% del total
+  según el umbral) podrían corresponder a líneas convectivas o sting jets no
+  resueltos por la resolución de ERA5 (~31 km), y que algunos eventos atribuidos
+  al CCBb podrían en realidad ser sting jets (mismo sector del ciclón).
+- El periodo de 9 años (2012-2020) es relativamente corto para climatología
+  robusta de extremos.
+- ERA5 tiene sesgos negativos conocidos y crecientes con la magnitud del viento
+  observado, lo que limita la confiabilidad de reanálisis para estudiar la cola
+  extrema sin corrección.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué usar un estudio del Atlántico Norte para interpretar la PDF de viento
+  del Atlántico Sudoccidental? Respuesta: se usa solo como sustento del
+  mecanismo físico genérico (mezcla en capa límite inestable del sector frío en
+  ciclones maduros), no como comparación de magnitudes regionales; la
+  comparación cuantitativa se hace con stankovic2025surface.
+- ¿El algoritmo de atribución de jets de Gentile & Gray se aplicó en tu tesis?
+  Respuesta: no; tu tesis no reproduce el algoritmo de atribución CCBa/CCBb/WCB,
+  solo invoca el mecanismo físico documentado (capa límite profunda e inestable
+  en sector frío) para interpretar la forma de la PDF de viento a 10 m.
+- ¿Qué tan subestimado está el viento extremo en ERA5 según este estudio, y eso
+  afecta tu propio uso de ERA5? Respuesta: subestimación mediana de ~4.5-5.5 m/s
+  (~25%) en el Atlántico Norte para el jet más extremo (CCBb); es una limitación
+  reconocida de ERA5 que también aplica cualitativamente a tu región de estudio.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gentile2023observed.md

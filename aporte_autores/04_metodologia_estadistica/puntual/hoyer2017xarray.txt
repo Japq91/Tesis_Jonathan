@@ -1,0 +1,147 @@
+============================================================
+CARTILLA DE ESTUDIO — Hoyer & Hamman 2017 — la biblioteca xarray en Python
+============================================================
+
+REFERENCIA COMPLETA
+Hoyer, S., & Hamman, J. (2017). xarray: N-D labeled Arrays and Datasets in
+Python. Journal of Open Research Software, 5(1), art. 10. DOI: 10.5334/jors.148
+(Nota: el archivo .bib de la tesis registra al segundo autor como "Joseph,
+Hamman"; el nombre correcto y ampliamente reconocido en la literatura y en
+el propio proyecto de software es Joe Hamman.)
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual (pero infraestructuralmente
+necesario)
+Se cita una sola vez, en el Capítulo 3 (Métodos), como la biblioteca de
+estructuras de datos sobre la que se implementa el análisis EOF/MEOF de la
+tesis mediante `xeofs`.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+ADVERTENCIA METODOLÓGICA: no existe archivo .md/.pdf de esta referencia en
+el repositorio local de papers (papers/files_MD/), dado que es un "software
+paper" (artículo descriptor de una herramienta de software), no un estudio
+empírico con hallazgos científicos propios sobre un fenómeno físico. Esta
+cartilla se elaboró exclusivamente con (a) los metadatos bibliográficos
+verificados del archivo .bib de la tesis y (b) conocimiento general
+confiable y ampliamente documentado sobre esta biblioteca, de uso estándar
+y consolidado en la comunidad científica de Python para ciencias
+geofísicas/climáticas, complementado con el contexto de uso citado en la
+tesis. No se debe presentar ninguna cifra como "extraída del texto de un
+estudio empírico"; lo que sigue describe las capacidades técnicas de la
+herramienta, consensuadas en su documentación oficial y en la literatura
+del ecosistema científico de Python.
+
+1. ¿DE QUÉ TRATA ESTE ARTÍCULO?
+Es un "software paper" publicado en el Journal of Open Research Software
+que describe xarray, una biblioteca de código abierto en Python para
+manipular arreglos N-dimensionales "etiquetados" (labeled arrays) y
+conjuntos de datos (datasets) con dimensiones, coordenadas y metadatos
+explícitos —el equivalente en memoria de un archivo NetCDF/HDF, con una
+interfaz inspirada en pandas pero generalizada a N dimensiones—. No reporta
+un hallazgo científico sobre un fenómeno físico, sino que documenta el
+diseño, la motivación y las capacidades de una herramienta de software de
+uso general en ciencias de datos geofísicas (climatología, oceanografía,
+meteorología), ampliamente adoptada como pieza central del ecosistema
+científico de Python ("Pangeo stack", junto a numpy, dask, pandas, netCDF4).
+
+2. METODOLOGÍA (diseño de la herramienta, no un experimento)
+- Estructuras de datos centrales: `DataArray` (arreglo N-dimensional con
+  dimensiones nombradas, coordenadas y atributos) y `Dataset` (colección de
+  `DataArray`s que comparten dimensiones/coordenadas), directamente
+  inspiradas en el modelo de datos de NetCDF/Climate and Forecast (CF)
+  Conventions.
+- Indexado y operaciones etiquetadas por nombre de dimensión (p. ej.
+  seleccionar por "tiempo" o "nivel de presión" en lugar de por índice
+  entero), con alineación y "broadcasting" automáticos entre arreglos de
+  distintas formas/coordenadas.
+- Integración nativa con `dask` para cómputo paralelo y "out-of-core" sobre
+  datasets más grandes que la memoria RAM disponible, y con `pandas` para
+  operaciones de tipo tabular/series de tiempo.
+- Operaciones de tipo "split-apply-combine" (`groupby`) útiles para
+  climatologías, medias estacionales, y remoción de ciclos anuales, entre
+  otras operaciones estándar en el análisis de datos atmosféricos.
+
+3. HALLAZGOS CLAVE
+No aplica en el sentido de "hallazgos experimentales": al ser un artículo
+descriptor de software, sus contribuciones reportadas son de diseño e
+infraestructura, no resultados empíricos sobre un sistema físico:
+  - Provee una API unificada, basada en pandas, para trabajar con arreglos
+    N-dimensionales etiquetados, reduciendo errores comunes de indexado
+    posicional (por número de eje) en análisis de datos multidimensionales.
+  - Facilita la lectura/escritura directa de archivos NetCDF (y otros
+    formatos autodescriptivos), preservando metadatos, coordenadas y
+    convenciones CF.
+  - Sienta las bases para su adopción posterior como estándar de facto en
+    el ecosistema científico de Python para datos climáticos/geofísicos,
+    siendo la estructura de datos subyacente de bibliotecas de análisis
+    especializado como `xeofs` (usada en la tesis para el análisis EOF).
+
+4. RELACIÓN CON TU TESIS
+Se cita en el Capítulo 3-Métodos (L156), en el contexto de la
+implementación técnica del análisis EOF sin remoción de tendencia
+(detrend): "La implementación utiliza la biblioteca \texttt{xeofs}
+\citep{rieger2024xeofs} sobre estructuras \texttt{xarray}
+\citep{hoyer2017xarray}." Es decir, xarray no aporta un argumento científico
+o de contenido a la tesis, sino que documenta la infraestructura de
+software (estructuras de datos etiquetadas, alineación de coordenadas
+temporales/espaciales) sobre la cual se ejecuta el pipeline de análisis EOF
+implementado con `xeofs`.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Stephan Hoyer y Joe Hamman desarrollaron xarray originalmente en The
+Climate Corporation, liberándolo posteriormente como proyecto de código
+abierto bajo el paraguas de NumFOCUS; el proyecto es hoy mantenido por una
+comunidad amplia de desarrolladores y es un componente central del "Pangeo"
+stack para ciencia de datos geoespaciales/climáticos escalable (junto con
+dask, zarr y otras herramientas). En la tesis, xarray es la base
+computacional silenciosa que sustenta el manejo de los campos de ERA5
+(hersbach2020era5, hersbach_era5_2023b) y el propio análisis EOF/MEOF
+mediante `xeofs` (rieger2024xeofs), formando parte de la cadena de
+herramientas de software científico reproducible característica de la
+climatología computacional moderna en Python.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Al ser un artículo de software y no un estudio científico, no reporta
+  "limitaciones" en el sentido metodológico de un estudio empírico; las
+  limitaciones aplicables son las propias de cualquier herramienta de
+  software: dependencia de la versión de la biblioteca utilizada (no
+  especificada en la tesis), y la necesidad de que el usuario implemente
+  correctamente el manejo de dimensiones/coordenadas para evitar errores de
+  alineación silenciosos (p. ej., por desajustes de calendario o de
+  convención de coordenadas entre datasets).
+- El artículo original de 2017 describe una versión temprana del proyecto;
+  la biblioteca ha evolucionado sustancialmente desde entonces (nuevas
+  funciones, mejor integración con dask/zarr), por lo que la cartilla no
+  puede garantizar que todas las funcionalidades usadas en la tesis estén
+  descritas literalmente en el artículo de 2017.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué se cita xarray si no es un hallazgo científico?
+  R: Por rigor y reproducibilidad: es una convención estándar en
+  climatología computacional citar las herramientas de software
+  fundamentales usadas en el análisis (junto con los datos y los métodos
+  estadísticos), de modo que el pipeline completo sea trazable y
+  replicable por terceros.
+- P: ¿Qué papel cumple xarray frente a xeofs en su pipeline de análisis
+  EOF/MEOF?
+  R: xarray provee la estructura de datos etiquetada (dimensiones,
+  coordenadas de tiempo/espacio) sobre la que operan los campos de ERA5;
+  xeofs es la biblioteca especializada que implementa el álgebra del
+  análisis EOF propiamente dicho, construida para operar directamente
+  sobre objetos xarray.
+- P: ¿xarray impone alguna limitación estadística o física a su análisis?
+  R: No; es una herramienta de manejo de datos (estructuras, indexado,
+  alineación), no un método estadístico o físico en sí mismo. Las
+  decisiones metodológicas (detrend, percentiles, bootstrap) son
+  independientes de la biblioteca y se documentan aparte en la tesis.
+
+------------------------------------------------------------
+Fuente verificada: NO EXISTE archivo .md/.pdf local para esta referencia
+(es un software paper, no un estudio narrativo con hallazgos empíricos).
+Cartilla elaborada a partir de los metadatos bibliográficos del archivo
+.bib de la tesis y de conocimiento general confiable y ampliamente
+consensuado sobre esta biblioteca de código abierto, más el contexto
+textual de citación dentro de la propia tesis (bundle_5.txt, Cap03-Métodos
+L156).

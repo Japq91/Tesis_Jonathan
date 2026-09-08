@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Couto de Souza 2024 — Energética (LEC) de ciclones del Atlántico Sur
+============================================================
+
+REFERENCIA COMPLETA
+de Souza, Danilo Couto. (2024). Cyclones in the Southwestern Atlantic: Life Cycle and Energetics. Tesis Doctoral, Universidade de São Paulo. (IAG-USP)
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita al menos 5 veces en Cap02-Fundamentación y Cap04-Viento; sustenta un mecanismo físico clave (el rol de los procesos diabáticos y de la conversión barotrópica de energía en la evolución de los ciclones del Atlántico Sudoccidental), no solo un dato puntual.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica rastreo propio (usa las trayectorias ya generadas por la línea Gramcianinov/Couto de Souza, basadas en ζ850)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es la tesis doctoral de Danilo Couto de Souza (IAG-USP), que investiga cuáles son los mecanismos dinámicos dominantes (baroclínicos vs. barotrópicos vs. diabáticos) que impulsan el desarrollo de los ciclones extratropicales del Atlántico Sudoccidental a lo largo de sus distintas fases de vida. Usa el Ciclo Energético de Lorenz (LEC) como marco diagnóstico y desarrolla dos herramientas metodológicas propias: el algoritmo CycloPhaser (para segmentar objetivamente el ciclo de vida en fases) y los diagramas de Espacio de Fase de Lorenz (Lorenz Phase Space) como herramienta de visualización energética. Es relevante porque llena un vacío: estudios clásicos con el marco Eulerian/Fixed del LEC subestiman el rol de la conversión barotrópica, que esta tesis muestra que es más pronunciada en escalas espaciales pequeñas.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA5, trayectorias de 7531 sistemas ciclónicos identificados por vorticidad relativa mínima a 850 hPa mediante el algoritmo TRACK, periodo 1979-2020, dominio del Atlántico Sudoccidental y Sudamérica (con foco en las regiones SESA/SBR, LPB y ARG).
+- Segmentación del ciclo de vida: programa CycloPhaser, que categoriza la serie temporal de vorticidad relativa en fases discretas (incipiente, intensificación, madura, decaimiento, y una fase residual) usando picos, valles y derivadas, con filtros de Lanczos y Savitzky-Golay.
+- Energética: cálculo del Ciclo Energético de Lorenz (LEC) mediante un método semi-lagrangiano (marco móvil centrado en el ciclón), en contraste con el método Eulerian/Fixed clásico.
+- Clasificación: algoritmo K-means sobre los términos del LEC para identificar patrones energéticos (Energy Patterns, EPs) distintos.
+- Verificación dinámica adicional: criterio de Rayleigh-Kuo y Tasa Máxima de Crecimiento de Eady (Eady Growth Rate, EGR) para confirmar la ocurrencia de inestabilidades barotrópicas y baroclínicas.
+
+3. HALLAZGOS CLAVE
+- Los sistemas ciclónicos exhiben múltiples configuraciones de fases de vida, incluyendo casos con desarrollo de ciclos de vida secundarios.
+- Los sistemas frecuentemente se intensifican y maduran cerca de su región de génesis, pero decaen sobre un área mucho más amplia (nueva perspectiva sobre los "rastros de tormentas" o storm tracks del Atlántico Sur).
+- La cadena baroclínica húmeda (moist baroclinic chain) alcanza su pico durante la fase de intensificación, mientras que las conversiones barotrópicas alcanzan su pico durante la fase madura; ambos procesos continúan, en menor medida, durante el decaimiento.
+- Se identificaron tres patrones energéticos (Energy Patterns) distintos, con diferentes estados de energía y valores de vorticidad.
+- La inestabilidad barotrópica es más pronunciada en escalas espaciales pequeñas y, por ello, no fue capturada completamente por estudios clásicos que usan la metodología LEC de marco fijo (Fixed framework); este marco subestima las conversiones barotrópicas mientras captura efectos baroclínicos no necesariamente relacionados con el desarrollo del ciclón.
+- El análisis energético revela diferencias regionales: a diferencia de regiones australes de dominio puramente baroclínico, los ciclones que se desarrollan en escenarios de fuerte liberación de calor latente muestran una conversión de energía mixta, donde procesos diabáticos compiten en importancia con la baroclinicidad clásica.
+
+4. RELACIÓN CON TU TESIS
+Se usa en varios puntos del Cap02-Fundamentación y Cap04-Viento como sustento del argumento de que la evolución e intensidad de los ciclones del Atlántico Sudoccidental (particularmente en SBR y LPB) no dependen solo de la inestabilidad baroclínica clásica, sino también de procesos diabáticos y de la conversión barotrópica de energía:
+- "Si bien la inestabilidad baroclínica proporciona el entorno favorable para la génesis, la evolución y la intensidad del sistema puede ser modulada por procesos diabáticos asociados a la liberación de calor latente, como concluye \citet{coutodesouza2024thesis}."
+- "El análisis energético de \citet{coutodesouza2024thesis} revela que, a diferencia de las regiones australes, los ciclones en SBR presentan una conversión de energía mixta, donde los procesos diabáticos juegan un rol tan importante como la baroclinicidad."
+- "Según el análisis energético de \citet{coutodesouza2024thesis}, esta etapa [de intensificación] es impulsada por una retroalimentación entre la inestabilidad dinámica y los flujos de calor latente y sensible."
+- Se usa también para sustentar la sección de precipitación (Cap05), señalando que "en LPB y SBR dominan los procesos diabáticos convectivos", en contraste con la cadena baroclínica clásica de ARG.
+- En Cap04-Viento se cita para el mecanismo de "incremento de la conversión barotrópica de energía durante la madurez", entendiendo el patrón dominante de viento en la fase madura como "una característica física estable de los sistemas".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Danilo Couto de Souza es el autor principal de la línea metodológica CycloPhaser (junto con Silva Dias, Gramcianinov y de Camargo, ver ficha deSouza2025CycloPhaser) y de un artículo relacionado en International Journal of Climatology (2024, "New perspectives on South Atlantic storm track…", citado en la tesis de Jonathan como \citet{coutodesouza2024new}, clave distinta de esta). Esta tesis doctoral es el trabajo "madre" donde se desarrollaron y calibraron ambas herramientas (CycloPhaser y el análisis LEC semi-lagrangiano) que después se publican por separado. Se inscribe en la tradición de estudios energéticos de ciclones (Lorenz, Muench, Brennan, Michaelides) aplicada específicamente al Atlántico Sur, un dominio con menor cobertura de estudios que el Atlántico Norte.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- La propia tesis reconoce que la ocurrencia de inestabilidades barotrópica y baroclínica no fue evaluada de forma directa (solo indicada indirectamente por el ciclo energético y el criterio de Rayleigh-Kuo), por lo que las conclusiones sobre mecanismos físicos son inferencias, no verificación directa.
+- El propio autor deja preguntas abiertas para trabajo futuro: por qué existen configuraciones de ciclo de vida distintas, qué términos específicos del término de conversión barotrópica C_K dominan, y cuáles son los mecanismos físicos exactos detrás de las importaciones de energía potencial disponible (APE) de eddy.
+- Es una tesis (no un artículo arbitrado en journal), por lo que su revisión por pares es distinta a la de un paper publicado.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar el marco semi-lagrangiano del LEC en vez del marco Eulerian/Fixed clásico? R: Porque el marco fijo subestima la conversión barotrópica y captura efectos baroclínicos no necesariamente ligados al desarrollo del ciclón individual, según demuestra Couto de Souza (2024).
+- P: ¿Qué significa "conversión de energía mixta" en SBR? R: Que la conversión de energía disponible potencial a energía cinética eddy no depende únicamente de la baroclinicidad clásica (como en regiones australes), sino que los procesos diabáticos (liberación de calor latente) contribuyen de forma comparable.
+- P: ¿Es la misma persona/grupo que desarrolló CycloPhaser? R: Sí, esta tesis es el trabajo doctoral donde se calibraron los umbrales y la metodología del paquete CycloPhaser, publicado luego como software en JOSS (deSouza2025CycloPhaser) y aplicado en el artículo de 2024 en IJC.
+- P: ¿En qué fase del ciclo de vida domina cada proceso? R: La cadena baroclínica húmeda pica en la fase de intensificación; la conversión barotrópica pica en la fase madura y continúa (más débil) en el decaimiento.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/coutodesouza2024thesis.md

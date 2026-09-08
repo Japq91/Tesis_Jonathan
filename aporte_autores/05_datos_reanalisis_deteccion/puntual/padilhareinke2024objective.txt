@@ -1,0 +1,53 @@
+============================================================
+CARTILLA DE ESTUDIO — Padilha Reinke et al. 2024 — Algoritmo objetivo de detección de ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Padilha Reinke, Carina K.; Machado, Jeferson P.; Mata, Mauricio M.; de Azevedo, José Luiz L.; Saraiva, Jaci Maria B.; Rodrigues, Regina. (2024). Objective Algorithm for Detection and Tracking of Extratropical Cyclones in the Southern Hemisphere. Atmosphere, 15(2), 230. DOI: 10.3390/atmos15020230
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap02-Fundamentación), en una lista junto a gramcianinov2019properties, para respaldar la superioridad metodológica de la vorticidad relativa a 850 hPa frente a la MSLP; no aporta cifras propias a la tesis, sino aval metodológico.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (ζ850, técnica CCL) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Presenta y valida un nuevo algoritmo objetivo, de fácil implementación, para identificar y rastrear ciclones extratropicales en el Hemisferio Sur usando vorticidad relativa a 850 hPa, un filtro Gaussiano de suavizado y la técnica de etiquetado de componentes conectados (connected-component labeling, CCL), que reconoce al ciclón como un área bajo un umbral (no solo un mínimo puntual). Se aplica a 41 años de reanálisis ERA5 de alta resolución (1982-2022). El estudio realiza pruebas de sensibilidad de los parámetros del algoritmo, valida el método con dos estudios de caso, compara resoluciones temporales de 1 hora y 6 horas, y entrega una climatología de ciclones extratropicales para todo el Hemisferio Sur. Es relevante como antecedente metodológico directo del propio grupo de autoras (mismo algoritmo aplicado específicamente al Atlántico Sudoccidental en Padilha Reinke et al. 2026).
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA5/ECMWF, resolución horizontal de 31 km, 137 niveles verticales, salida horaria, período 1982-2022 (41 años).
+- Variable de detección: vorticidad relativa a 850 hPa (ζ850), con viento a 10 m y MSLP usados solo para caracterizar la intensidad de los eventos ya detectados.
+- Preprocesamiento: filtro Gaussiano multidimensional (scipy.ndimage), probando desviaciones estándar σ = 0.5, 1.0, 1.5 y 3.0; se seleccionó σ = 0.5 tras comprobar que valores mayores sobre-suavizan y pueden anular ciclones débiles.
+- Detección: técnica CCL (Inatsu, 2009) sobre el campo de vorticidad filtrado, probando umbrales de -1×10⁻⁵, -5×10⁻⁵, -1×10⁻⁴ y -2×10⁻⁴ s⁻¹; se seleccionó -1×10⁻⁴ s⁻¹. Área mínima probada: 9, 12, 15 y 18 puntos de grilla; se seleccionó 15.
+- Seguimiento: enlace temporal por desplazamiento máximo de 150 km/h (similar a Crawford et al. 2021), vida mínima de 12 h.
+- Caracterización de intensidad: "área efectiva" de 12 puntos de grilla (~3.6° lat/lon) alrededor del centro de masa de vorticidad, para buscar el mínimo de MSLP y el máximo de viento a 10 m.
+- Validación: dos estudios de caso (ciclón de Hermenegildo, 26-28 oct 2016; ciclón con fusión de sistemas, 15-17 ago 2020) y comparación 1-hora vs 6-horas para 1982-2022.
+
+3. HALLAZGOS CLAVE
+- El conteo medio de ciclones (2013-2022) es 2,430; 2,258 y 1,693 eventos/año usando σ = 0.5, 1.0 y 1.5, respectivamente, mostrando una supresión del 25% al pasar de σ=1.0 a 1.5 y de 7% al pasar de 0.5 a 1.0.
+- Las correlaciones del conteo mensual de ciclones entre pruebas de área mínima son 0.983 (9 vs 12), 0.987 (12 vs 15) y 0.985 (15 vs 18), sugiriendo convergencia de resultados alrededor de área mínima = 15.
+- Usando resolución de 1 hora se detectan en promedio 2,314 ciclones/año frente a 1,750 con 6 horas (1982-2022); la duración media es de 24 h (1 h) frente a 49 h (6 h), y la velocidad media 56 km/h (1 h) frente a 46 km/h (6 h).
+- El coeficiente de determinación (R²) de la tendencia creciente anual de conteo de ciclones es 0.56 (6 h) y 0.77 (1 h).
+- El algoritmo captura con buen desempeño la posición de ciclogénesis y la fase más intensa del ciclo de vida, pero es menos preciso durante la ciclolisis, sobre todo cuando hay fusión/división de sistemas (caso de agosto de 2020).
+- La climatología resultante reproduce la mayor frecuencia de ciclogénesis entre 70°S-50°S, la ausencia de ciclogénesis al oeste de los Andes y su intensificación en la costa sudeste de Sudamérica, consistente con el mecanismo orográfico de compresión/estiramiento de la columna de vorticidad al cruzar la cordillera.
+
+4. RELACIÓN CON TU TESIS
+Se cita en Cap02-Fundamentación (L50): "La superioridad de ζ850 sobre MSLP ha sido validada tanto en estudios regionales del Atlántico Sur \citep{gramcianinov2019properties,padilhareinke2024objective} como en clasificaciones globales recientes \citep{corner2025classification}." El paper sustenta esta afirmación al retomar explícitamente el argumento de Hodges et al. (que la vorticidad está más ligada al campo de viento y a la escala sinóptica de alta frecuencia, mientras que la MSLP representa mejor la escala de baja frecuencia) y el de Ulbrich et al. (que los esquemas basados en MSLP pueden producir resultados poco fiables sobre terreno elevado por efectos de extrapolación vertical y orografía real en los reanálisis) — argumentos que justifican metodológicamente el uso de ζ850 en la propia tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Carina K. Padilha Reinke (Universidad Federal de Rio Grande, FURG) lidera, junto con Machado, Mata, de Azevedo y Saraiva (FURG) y Regina Rodrigues (UFSC), una línea metodológica propia de detección/seguimiento de ciclones basada en CCL sobre ζ850 con ERA5 de alta resolución. Este artículo de 2024 es el trabajo metodológico "fundacional" del grupo; su aplicación directa al Atlántico Sudoccidental aparece en el trabajo compañero Padilha Reinke et al. (2026, Advances in Meteorology), citado también en esta tesis, que reutiliza el mismo algoritmo, los mismos umbrales de vorticidad y la misma área efectiva de caracterización. El trabajo dialoga con la tradición de Sinclair, Simmonds & Keay, Hoskins & Hodges y con el proyecto de intercomparación IMILAST, y cita explícitamente a Reboita et al. (2010) como antecedente de seguimiento por vorticidad de niveles bajos en Sudamérica.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los propios autores reconocen que la posición del centro del ciclón durante la ciclolisis puede ser inexacta, porque el aumento del área bajo el umbral desplaza el centro de masa, acortando artificialmente la fase de disipación.
+- Los umbrales de suavizado, vorticidad y área mínima se calibraron mediante inspección visual de un número limitado de eventos (un caso intenso y uno débil de 2020), lo que introduce un componente subjetivo en la selección de parámetros "óptimos".
+- La comparación de resoluciones temporales muestra que el propio conteo de ciclones y su duración media dependen fuertemente de la resolución temporal usada, lo que limita la comparabilidad directa entre climatologías construidas con distintas resoluciones.
+- El estudio no compara sus resultados con observaciones independientes de boyas o estaciones más allá de dos estudios de caso puntuales.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar vorticidad relativa a 850 hPa en lugar de MSLP para detectar ciclones? R: Porque la vorticidad está más ligada al campo de viento de alta frecuencia sinóptica y evita los artefactos de extrapolación vertical de la MSLP sobre terreno elevado (Andes), problema documentado por Ulbrich et al. y retomado por este paper.
+- P: ¿Qué implica la elección de σ=0.5 para el filtro Gaussiano? R: Preserva sistemas débiles pero deja el campo más ruidoso; valores mayores (σ=1.0, 1.5, 3.0) sobre-suavizan y pueden eliminar ciclones débiles, como lo muestran las pruebas de sensibilidad del propio estudio.
+- P: ¿Cómo afecta la resolución temporal (1 h vs 6 h) a la climatología resultante? R: La resolución de 1 hora detecta ~32% más eventos por año, de menor duración media, principalmente por capturar sistemas de vida corta que el paso de 6 horas descarta al no cumplir el criterio de vida mínima.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/padilhareinke2024objective.md

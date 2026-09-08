@@ -1,0 +1,146 @@
+============================================================
+CARTILLA DE ESTUDIO — Naud et al. 2020 — evaluación de precipitación modelada con IMERG
+============================================================
+
+REFERENCIA COMPLETA
+Naud, C. M., Jeyaratnam, J., Booth, J. F., Zhao, M. y Gettelman, A. (2020).
+Evaluation of Modeled Precipitation in Oceanic Extratropical Cyclones Using IMERG.
+Journal of Climate, 33(1), 95-113. DOI: 10.1175/JCLI-D-19-0369.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita en dos pasajes del Capítulo 2 (Fundamentación) y Capítulo 5
+(Precipitación) como evidencia observacional directa de la asimetría este-oeste de
+la precipitación en ciclones oceánicos — un pilar empírico del argumento del WCB.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (30-60° en ambos hemisferios)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (algoritmo MCMS) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio evalúa la representación de la precipitación en ciclones
+extratropicales oceánicos en dos reanálisis (MERRA-2, ERA-Interim) y dos modelos
+de circulación general (CAM6, GFDL devAM4), usando como referencia observacional
+el producto satelital de alta resolución IMERG (Integrated Multi-satellite
+Retrievals for GPM). La pregunta central es si los modelos representan
+correctamente no solo la precipitación media, sino su descomposición en
+frecuencia de ocurrencia e intensidad (tasa cuando precipita). Es un estudio de
+evaluación de modelos mediante compuestos ciclón-centrados, relevante para la
+tesis porque documenta empíricamente, con observaciones satelitales, la asimetría
+este-oeste característica de la precipitación en ciclones extratropicales
+oceánicos —el sustento observacional directo del mecanismo WCB.
+
+2. METODOLOGÍA
+
+- Observaciones: IMERG versión 5 "Final Run" (0.1°×0.1°, 30 min), latitudes
+  30°-60° en ambos hemisferios, marzo 2014 a diciembre 2017.
+- Modelos/reanálisis: MERRA-2 (0.625°×0.5°, media horaria, 2014-2016),
+  ERA-Interim (1°×1°, media de 6 h, 2014-2015), GFDL devAM4 (1.25°×1°, media de
+  6 h, 2008-2012) y CAM6 (1.25°×0.94°, instantáneo, 2010-2014).
+- Detección de ciclones: algoritmo MCMS (MAP Climatology of Midlatitude
+  Storminess) aplicado a presión a nivel del mar cada 6 h; para los modelos
+  libres (CAM6, devAM4) se aplica el mismo algoritmo a su propio campo de SLP.
+- Compuestos ciclón-centrados: malla de igual área centrada en el mínimo de SLP,
+  resolución de compuesto 100 km, dominio ±1500 km; sin rotación (se analiza la
+  distribución espacial general de todas las edades de ciclón).
+- Descomposición de la precipitación media en frecuencia de ocurrencia (fracción
+  de eventos con P>0) e intensidad (tasa media quando P>0), permitiendo separar
+  errores compensatorios.
+- Clasificación adicional de ciclones por agua precipitable (PW) cyclone-wide y
+  por fuerza de ascenso a 500 hPa, para analizar sensibilidad de los sesgos a las
+  propiedades ambientales del ciclón.
+
+3. HALLAZGOS CLAVE
+
+- Los cuatro modelos producen una distribución espacial de precipitación similar
+  a la observada: máximo ~250 km al este/hacia el polo del centro del ciclón (en
+  forma de coma) y mínimo al oeste (sector subsidente y seco).
+- Todos los modelos subestiman ligeramente la precipitación en el sector
+  ascendente (este) y sobreestiman en el sector subsidente (oeste) respecto a
+  IMERG; el signo del sesgo coincide con el signo de la velocidad vertical media
+  a 500 hPa.
+- Al descomponer en frecuencia e intensidad: los cuatro modelos sobreestiman la
+  frecuencia de precipitación (10% en la región de ascenso, más de 100% en la
+  región de subsidencia) y subestiman la intensidad (50% en la región de ascenso,
+  hasta 70% hacia el polo del centro del ciclón), comparado con IMERG.
+- El sesgo en intensidad está fuertemente modulado por la fuerza del ascenso
+  (aumenta con ciclones más intensos), mientras que el sesgo en frecuencia está
+  fuertemente modulado por el agua precipitable ambiental (mayor sesgo en
+  ciclones más secos).
+- La correlación entre agua precipitable ambiental y fuerza de ascenso del
+  ciclón es baja (r=-0.14 en MERRA-2), lo cual respalda usar ambas variables de
+  forma independiente para caracterizar los ciclones.
+- La marcada asimetría este-oeste de la precipitación (ascendente/húmeda en el
+  sector oriental, subsidente/seca en el occidental) se confirma consistentemente
+  en las cuatro fuentes de datos evaluadas, con el sector oriental concentrando
+  abrumadoramente la precipitación.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en dos pasajes:
+- Cap02-Fundamentacion (L170): "La marcada asimetría de este campo es corroborada
+  empíricamente por \citet{naud2020evaluation}, quienes muestran que la
+  precipitación en los ciclones oceánicos se concentra abrumadoramente en el
+  sector oriental (ascendente y húmedo), mientras que el flanco occidental
+  permanece subsidente y seco." Este pasaje usa el paper como evidencia
+  observacional directa de la asimetría este-oeste, base del argumento WCB.
+- Cap05-Precipitacion (L76): junto con browning1986conceptual, para explicar que
+  "el ascenso inclinado del WCB por delante del frente frío y por encima del
+  frente cálido organiza la precipitación en el flanco cálido del ciclón,
+  independientemente de la región de génesis", lo cual "explica la carga positiva
+  consistente del EOF1 en el cuadrante sureste" de la tesis (nota: en el
+  Hemisferio Sur el "sureste" corresponde al "este/ascendente" del Hemisferio
+  Norte descrito en el paper, por el efecto espejo de la rotación).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Catherine Naud (Columbia/NASA-GISS) lidera una línea sostenida de evaluación
+observacional de precipitación en ciclones extratropicales mediante compuestos
+ciclón-centrados, iniciada con Naud et al. (2012, 2018) y continuada en este
+artículo y en naud2025lifecycle (citado también en la tesis). Este paper en
+particular es la base metodológica directa de naud2025lifecycle, que reutiliza el
+mismo esquema de proyección ciclón-centrada de IMERG (descrito aquí y remitido
+explícitamente como "This regridding procedure is fully described in Naud et al.
+2018" / aplicado en el trabajo de 2025). En la tesis, se cita junto a
+browning1986conceptual como el par observación-teoría que sustenta el mecanismo
+WCB como "esqueleto dinámico universal" de la asimetría espacial.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- El estudio cubre solo el período 2014-2017 (IMERG) y ventanas más cortas para
+  cada modelo (2-5 años), lo cual limita la robustez climatológica de las
+  comparaciones, aunque los autores argumentan que el alto volumen de casos por
+  compuesto mitiga este problema.
+- Existen incertidumbres reconocidas explícitamente en las propias observaciones
+  IMERG: posible subestimación de precipitación congelada (frozen precipitation) y
+  posible sobreestimación de tasas en regiones de ascenso vigoroso (los autores lo
+  discuten extensamente en la sección de "Potential issues with IMERG").
+- El estudio se limita a ciclones oceánicos de latitudes medias (30°-60°N/S); no
+  incluye específicamente el Atlántico Sudoccidental como región de análisis
+  independiente, por lo que la tesis extrapola el patrón general a esa cuenca.
+- La comparación no distingue por fase del ciclo de vida del ciclón (a diferencia
+  de naud2025lifecycle o mcerlich2023extremes), por lo que no aporta información
+  directa sobre cómo evoluciona la asimetría este-oeste a lo largo del ciclo de
+  vida.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Este paper mide directamente la asimetría este-oeste en el Atlántico
+  Sudoccidental, o la extrapolas de otra cuenca? Respuesta: el estudio agrupa
+  ciclones oceánicos de ambos hemisferios entre 30° y 60° de latitud sin
+  distinguir cuenca; la tesis usa el patrón general (validado con observaciones
+  satelitales independientes del modelo) como sustento empírico del mecanismo WCB,
+  no como dato específico de la región de estudio.
+- ¿Qué tan grande es el sesgo de los modelos frente a IMERG, en términos
+  cuantitativos? Respuesta: sobreestimación de frecuencia (~10% en ascenso, >100%
+  en subsidencia) y subestimación de intensidad (~50% en ascenso, hasta 70% cerca
+  del centro), consistente en los cuatro modelos evaluados.
+- ¿Por qué la tesis no usa directamente los datos de IMERG de este estudio?
+  Respuesta: porque la tesis emplea sus propios datos/reanálisis para el análisis
+  EOF y compuestos regionales; este paper se usa como respaldo conceptual y
+  empírico de la asimetría este-oeste, no como fuente de datos primaria.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/naud2020evaluation.md (leído: resumen,
+introducción, datos y metodología completos, y resultados principales de las
+secciones 3 y 4 sobre evaluación de precipitación media, frecuencia e intensidad).

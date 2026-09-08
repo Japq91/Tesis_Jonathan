@@ -1,0 +1,121 @@
+============================================================
+CARTILLA DE ESTUDIO — Sawada & Ueno 2021 — precipitación GPM en ciclones ocluidos
+============================================================
+
+REFERENCIA COMPLETA
+Sawada, M., y Ueno, K. (2021). Heavy Winter Precipitation Events with
+Extratropical Cyclone Diagnosed by GPM Products and Trajectory Analysis.
+Journal of the Meteorological Society of Japan, Ser. II, 99(2), 473-496.
+DOI: 10.2151/jmsj.2021-024
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una única vez, en el Capítulo 5 (Precipitación), como corroboración
+observacional independiente (otra cuenca oceánica) del mecanismo de precipitación
+enroscada asociado a la oclusión en el marco del modelo Shapiro-Keyser.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (Japón / Pacífico noroccidental)
+VARIABLE DE RASTREO DE CICLONES: Presión superficial (clasificación de patrón de presión; no un algoritmo de vorticidad) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Identifica eventos de precipitación invernal intensa en Japón (2014-2019)
+asociados mayormente a ciclones extratropicales que recorren la costa sur
+("south-coast cyclones", SCC), y diagnostica —mediante el radar de precipitación
+de doble frecuencia (DPR) del satélite GPM y análisis de trayectorias
+Lagrangianas sobre ERA5— cómo la interacción entre la cinta transportadora
+cálida (WCB), la fría (CCB) y la intrusión seca (DI) organiza la precipitación
+en banda durante la etapa de oclusión del ciclón. Es un estudio de caso/
+observacional (satélite + reanálisis) que aporta evidencia independiente,
+en una cuenca distinta al Atlántico Sur, de los mecanismos conceptuales del
+modelo de conveyor belts y de la fase ocluida del modelo Shapiro-Keyser.
+
+2. METODOLOGÍA
+- Datos: precipitación horaria en 137 estaciones de la Agencia Meteorológica de
+  Japón (JMA), temporada fría (noviembre-abril) 2014-2019 (967 días), con
+  corrección de subestimación por captura de pluviómetro; productos GPM-DPR
+  nivel 2 (tipo/intensidad de precipitación, altura de eco, calentamiento
+  latente espectral); reanálisis ERA5 horario, malla de 0.25°, 18 niveles de
+  presión (superficie a 300 hPa).
+- Definición de eventos: precipitación acumulada en dos días (TAP) rankeada a
+  escala nacional; top 50 eventos clasificados por patrón de presión superficial
+  (SCC, ciclón desde el Mar de Japón, ciclones dobles DC, monzón invernal WM).
+- Trayectorias: cálculo forward 24h / backward 48h siguiendo el criterio de
+  Schemm y Wernli (2014) para WCB (ascenso >400-500 hPa) y CCB (trayectorias de
+  bajo nivel, <800 hPa, movimiento este-oeste relativo al centro), y el criterio
+  de Raveh-Rubin (2017) para DI (descenso >400 hPa desde >600 hPa, humedad
+  relativa promedio <50%).
+- Tres casos maduros (α, β, γ) analizados en detalle con secciones verticales
+  del eco DPR y trayectorias.
+
+3. HALLAZGOS CLAVE
+- La tasa de profundización (deepening rate, DR) de los ciclones con frente
+  ocluido fue de 15.8 hPa/día, frente a 5.0 hPa/día sin frente ocluido,
+  indicando que los ciclones tienden a intensificarse con la oclusión.
+- Solo 17 de los 50 casos calificaron como ciclones explosivos (criterio Sanders
+  y Gyakum 1980); 12 casos con DR menor a 5 hPa/día también produjeron
+  precipitación pesada nominada, la mitad originados en el Mar de Japón.
+- 24 de 50 casos (casi la mitad) presentaron frente ocluido dentro de las 24 h
+  posteriores en el área de análisis (120-150°E, 25-50°N); 14 casos adicionales
+  lo presentaron fuera de esa área tras la salida del ciclón de Japón.
+- Caso α (10-11 diciembre 2015, Sumoto): 243 mm en 12 h; el porcentaje de
+  trayectorias clasificadas como WCB pasó de menos de 40% a más de 70% al
+  inicio de la precipitación pesada (T2), y la DI comenzó a prevalecer con un
+  retraso de 3 horas respecto al pico de tasa extrema (T3, >50 mm/h).
+- Estructura tridimensional identificada por área: precipitación estratiforme
+  amplia por delante del centro (área A, WCB de bajo nivel sobre CCB más WCB
+  superior); precipitación convectiva cerca del centro (área B, DI sobre WCB);
+  banda de precipitación desde el noroeste al oeste del centro por la extensión
+  hacia atrás del frente ocluido (área C) — coincidente con el "bent-back front"
+  y la "wrap-around precipitation" del modelo Shapiro-Keyser.
+- En la zona de nubes en cola (cloud-head), el calentamiento latente presentó
+  dos máximos superiores a 2.4 K/h, consistente con el hallazgo de Schemm y
+  Wernli (2014) —citado explícitamente en el propio paper— de que el
+  calentamiento latente del WCB ascendente incrementa la estabilidad estática de
+  niveles bajo/medios y refuerza la circulación ciclónica vía intrusión de la CCB.
+
+4. RELACIÓN CON TU TESIS
+Capítulo 5 (Precipitación), línea 110. Cita textual de tu propio texto:
+"observaciones satelitales independientes en ciclones invernales de latitudes
+medias del Pacífico noroccidental confirman que esta interacción entre la
+intrusión seca y el WCB genera precipitación organizada en banda durante la
+oclusión \citep{sawada2021heavy}." El paper aporta la evidencia observacional
+(satélite GPM-DPR) de que la banda de precipitación enroscada, atribuida en tu
+tesis al modelo Shapiro-Keyser y a la geometría arqueada también mencionada por
+schultz2021antecedents, no es un artefacto exclusivo del Atlántico Sur.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Sawada (East Nippon Expressway Co.) y Ueno (Universidad de Tsukuba) continúan la
+línea de estudios japoneses sobre ciclones de la costa sur y precipitación
+invernal (Ando y Ueno 2015; Sawada et al. 2019, estudio preliminar con DPR de
+los propios autores). Se apoyan explícitamente en el marco Lagrangiano de
+conveyor belts de Schemm y Wernli (2014) —otro de los papers centrales de tu
+tesis— y en la terminología clásica de Browning (1986, 1990) y la revisión de
+Schultz y Vaughan (2011) sobre la etapa de oclusión.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los propios autores reconocen que ERA5 (0.25°) no puede resolver las células
+  nubosas de ~10 km observadas por el DPR.
+- El criterio de selección de la CCB tuvo que modificarse respecto al de Schemm
+  y Wernli (2014) porque los casos estudiados no siempre presentaban PV de bajo
+  nivel superior a 2 PVU.
+- Solo 33 de los 50 eventos candidatos pudieron emparejarse con observación DPR,
+  y de estos solo 3 casos (α, β, γ) se analizaron en detalle mediante trayectorias.
+- El estudio se circunscribe a Japón/Pacífico noroccidental; su transferencia a
+  otras cuencas (como el Atlántico Sur) es, por diseño, una extrapolación del
+  mecanismo físico, no una validación climatológica directa.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué citar un estudio de Japón/Pacífico noroccidental en una tesis sobre
+  el Atlántico Sudoccidental? Se usa como validación observacional independiente
+  del mecanismo físico (interacción WCB-DI-CCB en la oclusión), no como
+  comparación climatológica regional.
+- ¿Qué instrumento sustenta la evidencia observacional? El radar de precipitación
+  de doble frecuencia (DPR) del satélite GPM, complementado con trayectorias
+  Lagrangianas calculadas sobre ERA5.
+- ¿Qué tan generalizable es la cifra de 15.8 vs. 5.0 hPa/día? Proviene de una
+  muestra específica (50 eventos, Japón, 2014-2019) y no debe interpretarse como
+  una constante universal, sino como evidencia de que la oclusión favorece la
+  intensificación en ese contexto particular.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/sawada2021heavy.md

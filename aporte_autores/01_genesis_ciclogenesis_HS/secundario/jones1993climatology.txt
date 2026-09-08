@@ -1,0 +1,132 @@
+============================================================
+CARTILLA DE ESTUDIO — Jones & Simmonds 1993 — climatología pionera de ciclones extratropicales del Hemisferio Sur
+============================================================
+
+REFERENCIA COMPLETA
+Jones, D. A., & Simmonds, I. (1993). A climatology of Southern Hemisphere
+extratropical cyclones. Climate Dynamics, 9(3), 131-145.
+DOI: 10.1007/BF00209750
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 01 (Introducción), Bloque B (estado del arte),
+inmediatamente después de \citet{gan1991surface}, como antecedente
+observacional pionero a escala hemisférica sobre el cual se apoyarían las
+climatologías regionales posteriores del Atlántico Sur.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (Laplaciano de MSLP, ∇²P) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es una climatología de ciclones extratropicales de todo el Hemisferio Sur,
+obtenida mediante un esquema automático objetivo aplicado a 15 años
+(1975-1989) de análisis diarios del hemisferio completo del Servicio
+Meteorológico Australiano (Australian Bureau of Meteorology). Presenta mapas
+de contorno de las posiciones de ciclogénesis y ciclolisis, junto con
+estadísticas de presión central, densidad ciclónica y velocidad de
+desplazamiento de los sistemas. Es, junto a los trabajos de Taljaard (1967) y
+Streten & Troup (1973), uno de los primeros esfuerzos sistemáticos y de largo
+plazo por caracterizar objetivamente la climatología completa de ciclones del
+Hemisferio Sur, en una época en que la escasez de observaciones sobre los
+extensos océanos australes representaba una limitación severa para este tipo
+de estudios.
+
+2. METODOLOGÍA
+- Datos: análisis hemisféricos diarios (00:00 UTC) del Servicio Meteorológico
+  Australiano, 15 años (1975-1989).
+- Identificación de ciclones: rutina automática de búsqueda de vórtices sobre
+  una grilla polar estereográfica, que evalúa la curvatura de la presión
+  (criterio de laplaciano de la MSLP, ∇²P) para detectar mínimos cerrados y
+  abiertos.
+- Se documentan estadísticas de: densidad geográfica de ciclogénesis y
+  ciclolisis, presión media central (MCP) y presión central relativa
+  (respecto al campo medio de fondo), velocidad de desplazamiento, y series
+  temporales zonalmente promediadas por estación del año.
+
+3. HALLAZGOS CLAVE
+- La distribución hemisférica de ciclones está dominada por un núcleo
+  permanente de alta densidad en latitudes altas, coincidente con la
+  vaguada circumpolar (circumpolar trough, CPT).
+- Durante el invierno y las estaciones intermedias, se evidencian DOS ramas
+  o "brazos espirales" de latitudes medias en la densidad ciclónica: uno que
+  se origina en la región del Mar de Tasmania y se extiende a través del
+  Pacífico Sur, y otro que se origina en el sector sudamericano (región del
+  Gran Chaco) y se extiende a través del Atlántico Sur, ambos espiralando
+  hacia el polo y fusionándose con el núcleo circumpolar en los océanos
+  australes.
+- Los sistemas se desplazan predominantemente en dirección este-sureste,
+  alejándose de su región de formación, con velocidades de desplazamiento
+  máximas en latitudes medias.
+- Se observa poca estacionalidad en la distribución de densidad ciclónica a
+  través de los océanos australes, pero una estacionalidad considerable en
+  la presión central de los sistemas.
+- El sector del Atlántico Sur figura entre las regiones con la presión media
+  central más baja del hemisferio en invierno, con extensas áreas por debajo
+  de 970 hPa; las tasas de profundización más intensas (~2.5 hPa/día) se
+  ubican cerca de los 50°S.
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (Bloque B, tras la cita a \citet{gan1991surface}):
+  "Poco después, la climatología de \citet{jones1993climatology}, para el
+  Hemisferio Sur, confirmó esta señal a mayor escala al identificar a la
+  región sudamericana como una de las regiones con mayor densidad ciclónica
+  del hemisferio, un antecedente observacional referente para climatologías
+  regionales siguientes."
+Se cita como un antecedente histórico/hemisférico —no como fuente de valores
+numéricos de viento o precipitación comparables con los resultados de la
+tesis—, reconociendo el linaje de la investigación climatológica sobre la
+que se apoyan trabajos regionales posteriores como \citet{reboita2010south}
+y \citet{gramcianinov2019properties}.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+David A. Jones e Ian Simmonds (Universidad de Melbourne) forman parte de la
+escuela australiana de climatología de ciclones del Hemisferio Sur, que
+incluye trabajos posteriores de los propios autores (Jones & Simmonds 1994;
+Simmonds & Keay 2000, también relacionados con otras referencias de esta
+tesis como \citet{simmonds2000mean}, \citet{simmonds2000size} y
+\citet{simmonds2000variability}) sobre el tamaño, la intensidad media y la
+variabilidad interanual de los ciclones del Hemisferio Sur. Este trabajo de
+1993 antecede en más de 15 años a las climatologías específicas del
+Atlántico Sudoccidental usadas como base de datos de esta tesis
+(\citet{reboita2010south} 2010; \citet{gramcianinov2019properties} 2019),
+constituyendo el antecedente hemisférico sobre el cual éstas se apoyan.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Corresponde a la era pre-satelital/satelital temprana, con las
+  limitaciones observacionales propias de esa época sobre los extensos
+  océanos del Hemisferio Sur (escasez de observaciones de barcos, boyas e
+  islas antes de la disponibilidad de tecnología satelital sofisticada).
+- El algoritmo automático de detección de vórtices es considerablemente más
+  simple que los esquemas modernos de seguimiento (p. ej. el de Hodges,
+  usado en la base de datos de esta tesis), lo que limita la precisión
+  geométrica de sus estadísticas frente a estudios contemporáneos.
+- No analiza en ningún momento los campos de viento en superficie ni de
+  precipitación; es exclusivamente una climatología de trayectorias y
+  presión central, por lo que no aporta valores numéricos directamente
+  comparables con los resultados de wind10/tp de esta tesis.
+- Se basa en análisis hemisféricos diarios (no horarios), una resolución
+  temporal muy inferior a la de ERA5 usada en esta tesis.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué aporta Jones & Simmonds (1993) a tu tesis si no tiene datos de
+  viento ni precipitación? R: Se cita como antecedente histórico que
+  estableció, a escala hemisférica y con datos pre-satelitales, la
+  existencia de la región sudamericana como uno de los focos de mayor
+  densidad ciclónica del Hemisferio Sur —un hallazgo que climatologías
+  posteriores más específicas (Reboita et al. 2010; Gramcianinov et al.
+  2019) confirmarían y refinarían con datos de reanálisis modernos.
+- P: ¿Por qué la climatología de Jones & Simmonds es menos precisa que la
+  usada en tu tesis? R: Porque se basa en análisis hemisféricos diarios (no
+  horarios) de una época con observaciones oceánicas escasas sobre el
+  Hemisferio Sur, y en un algoritmo de detección de vórtices más simple que
+  los esquemas modernos como el de Hodges, usado en la base de trayectorias
+  de esta tesis.
+- P: ¿Se puede comparar la presión central que reportan (<970 hPa en el
+  Atlántico Sur en invierno) con la intensidad de tu subconjunto p90? R: Es
+  una comparación indicativa de orden de magnitud —confirma que el Atlántico
+  Sur alberga sistemas profundos en invierno—, pero no es directamente
+  equiparable porque mi tesis estratifica la intensidad mediante la
+  vorticidad relativa a 850 hPa (ζ850), no mediante la presión central.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/jones1993climatology.md

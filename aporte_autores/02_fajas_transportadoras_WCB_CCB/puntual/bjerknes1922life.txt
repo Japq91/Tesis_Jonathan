@@ -1,0 +1,131 @@
+============================================================
+CARTILLA DE ESTUDIO — Bjerknes y Solberg 1922 — modelo noruego del ciclón frontal
+============================================================
+
+REFERENCIA COMPLETA
+Bjerknes, J. y Solberg, H. (1922). Life cycle of cyclones and the polar front theory
+of atmospheric circulation. Geofysiske Publikasjoner, 3(1), 1-18.
+DOI: no consignado (publicación previa a la asignación sistemática de DOI).
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez (Cap06-MEOF, L145), como anclaje histórico-conceptual que
+enmarca el desarrollo baroclínico clásico antes de introducir el modelo del WCB de
+Browning (1986); no sustenta datos ni mecanismos cuantitativos de la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es el artículo fundacional (con Bjerknes 1919 como antecedente directo) de la
+"escuela noruega" de meteorología, que presenta el modelo conceptual del ciclón de
+latitudes medias como una perturbación ondulatoria sobre el frente polar. El
+artículo describe el ciclo de vida completo de un ciclón extratropical idealizado
+—desde la fase de onda incipiente hasta la oclusión y disipación final— y propone
+la "teoría del frente polar" como marco unificado de la circulación atmosférica
+general del Hemisferio Norte. Es, en esencia, el origen del vocabulario que hoy se
+usa universalmente en meteorología sinóptica (sector cálido, frente frío, frente
+cálido, oclusión).
+
+2. METODOLOGÍA
+
+El trabajo es enteramente conceptual y observacional-inductivo: no emplea datos
+numéricos de reanálisis (no existían), sino análisis manual de mapas de superficie
+y observaciones de estaciones europeas (principalmente noruegas) de las primeras
+décadas del siglo XX. Los autores sintetizan patrones recurrentes observados en
+series de ciclones que cruzan el Atlántico Norte y Europa, representándolos
+mediante diagramas esquemáticos (Fig. 1 a 12 del artículo) que muestran: (i) la
+estructura de un ciclón "ideal" con sector cálido, frentes frío y cálido, y nubosidad
+asociada (Ci, Ci-St, As, Cu); (ii) ocho estadios del ciclo de vida (Fig. 2, paneles
+a-h) desde la onda inicial hasta la oclusión completa y el vórtice frío simétrico
+final; (iii) secciones verticales de las superficies isotérmicas en cada estadio
+(Fig. 3); (iv) el concepto de "familias de ciclones" formadas secuencialmente sobre
+un mismo frente polar (Fig. 9-10); y (v) el esquema de la circulación general
+extratropical con corrientes polares y tropicales alternadas (Fig. 11-12).
+
+3. HALLAZGOS CLAVE
+
+- El ciclón nace como una onda sobre una superficie de discontinuidad térmica
+  (frente polar) entre una corriente fría del este y una cálida del oeste; la
+  amplitud de la onda crece en el tiempo (Fig. 2, a-d).
+- Regla práctica enunciada textualmente: "All cyclones which are not yet occluded,
+  have increasing kinetic energy" — es decir, todo ciclón no ocluido se profundiza.
+- Regla complementaria: "After the occlusion the cyclone soon begins to fill up" —
+  tras la oclusión, el sistema comienza a rellenarse (decaimiento).
+- La condición esencial para la formación de un ciclón se formula así: "The essential
+  condition for the formation of a cyclone is the co-existence of cold and warm air
+  adjacent to each other."
+- Los ciclones se agrupan en "familias" (cyclone families) que se forman
+  sucesivamente sobre un mismo frente polar, cada una con un periodo medio de
+  aproximadamente 5.5 días (dato de 1921 para Europa), coincidente con periodicidades
+  de precipitación reportadas independientemente por Defant (5.7 días en el
+  Hemisferio Norte, 7.2 días en el Hemisferio Sur, año 1909).
+- Existen dos tipos de oclusión según el signo del contraste térmico remanente
+  (Fig. 4a: tipo frente frío; Fig. 4b: tipo frente cálido), y frentes fríos
+  secundarios dentro de la masa de aire frío que pueden reforzar la energía cinética
+  del ciclón (Fig. 5).
+
+4. RELACIÓN CON TU TESIS
+
+En el Cap06-MEOF (L145) se usa como referencia histórica para anclar el "desarrollo
+baroclínico clásico del modelo noruego de frentes", antes de introducir el marco
+más moderno del Cinturón Transportador Cálido (WCB) de Browning (1986) como
+"estructura termodinámica única que organiza el ascenso húmedo (precipitación) y el
+flujo de bajo nivel (viento) en el sector cálido del ciclón". El rol de esta cita es
+puramente genealógico: establece que la estructura de sector cálido/frente
+frío-cálido que da lugar a los prototipos MEOF de esta tesis desciende directamente
+del paradigma bjerknesiano de 1922, aunque el análisis dinámico moderno reemplaza el
+enfoque de "masas de aire" por el de corrientes coherentes (conveyor belts).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Jacob Bjerknes (junto con su padre Vilhelm Bjerknes) y Halvor Solberg forman el
+núcleo de la Escuela de Bergen (Noruega), que entre 1919 y 1922 estableció el modelo
+frontal-ciclónico que dominó la meteorología sinóptica durante más de medio siglo.
+Este artículo de 1922 es la culminación de esa serie (con Bjerknes 1919 "On the
+Structure of Moving Cyclones" como antecedente inmediato, citado dentro del propio
+paper). En la línea argumental de la tesis, este trabajo es el punto de partida
+histórico que browning1986conceptual explícitamente busca superar/complementar:
+Browning señala que "os modelos frontais da escola norueguesa dominaram nossas
+ideias da estrutura frontal por mais de meio século" pero que "esses modelos são,
+na melhor das hipóteses, inadequados" para capturar la mesoescala, motivando el
+modelo de cinturones transportadores que la tesis adopta como marco dinámico
+central.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un modelo puramente conceptual, basado en observaciones de superficie de baja
+  densidad espacial y sin datos de niveles superiores de la atmósfera libre
+  (radiosondeos apenas incipientes en 1922).
+- Fue desarrollado casi exclusivamente a partir de ciclones del Atlántico Norte y
+  Europa; no hay pretensión ni evidencia de aplicabilidad directa al Hemisferio Sur
+  ni a cuencas oceánicas distintas (de hecho, la tesis debe "reflejar en espejo" el
+  modelo para adaptarlo al HS, como se hace explícitamente al citar a
+  blanchard2021warm y browning1986conceptual).
+- No captura procesos de mesoescala (bandas de precipitación, convección embebida)
+  ni el rol de la humedad/calor latente en la intensificación, aspectos que serán
+  el objeto central de modelos posteriores (WCB, CCB) y de la propia tesis.
+- Carece de cuantificación estadística o climatológica: es un modelo idealizado de
+  "un" ciclón representativo, no una climatología de una población de sistemas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué cita un artículo de 1922 en una tesis de rigor doctoral sobre datos
+  modernos de reanálisis? Respuesta: porque establece el marco conceptual
+  genealógico (sector cálido/frentes) sobre el cual se construyen los modelos
+  posteriores (WCB de Browning) que sí se usan cuantitativamente en la tesis; es una
+  cita de contextualización histórica, no de sustento empírico.
+- ¿Qué elementos del modelo de Bjerknes y Solberg persisten en el modelo WCB
+  moderno y cuáles fueron descartados? Respuesta: persiste la idea de sector cálido
+  ascendente delimitado por frentes y el ciclo de vida con oclusión; se descarta el
+  tratamiento de "masas de aire" homogéneas en favor de corrientes coherentes
+  (Lagrangianas) con transporte de calor, humedad y momento.
+- ¿El modelo del frente polar es directamente aplicable al Atlántico Sudoccidental?
+  Respuesta: no sin adaptación por "efecto espejo" hemisférico y por las
+  particularidades de la variabilidad tropical-extratropical de la región, que la
+  tesis discute en el Cap01/Cap02 al introducir el WCB en el HS.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_PDF/bjerknes1922life.pdf (leído íntegramente, 16
+páginas, con Figs. 1-12 y texto completo).

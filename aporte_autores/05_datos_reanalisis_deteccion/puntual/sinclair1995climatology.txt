@@ -1,0 +1,130 @@
+============================================================
+CARTILLA DE ESTUDIO — Sinclair 1995 — Climatología de ciclogénesis del HS
+============================================================
+
+REFERENCIA COMPLETA
+Sinclair, M. R. (1995). A Climatology of Cyclogenesis for the Southern
+Hemisphere. Monthly Weather Review, 123(6), 1601-1619. American
+Meteorological Society.
+DOI: 10.1175/1520-0493(1995)123<1601:ACOCFT>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap02-Fundamentación) para introducir el rol de los
+gradientes térmicos oceánicos y la orografía en la ciclogénesis del HS, dentro
+de la discusión sobre la caracterización dinámica de los ciclones del
+Atlántico Sur.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad geostrófica a 1000 hPa (ζg — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Segundo de dos artículos climatológicos de Sinclair sobre el HS ("SI", en
+referencia a Sinclair 1994). Estudia las características del ciclo de vida de
+los ciclones del HS (formación, intensificación, madurez, decaimiento) usando
+la misma base de datos de trayectorias de 7 años (ECMWF, 1980-86) que
+Sinclair (1994), pero enfocándose por primera vez en las distintas etapas de
+desarrollo en lugar de tratar a los ciclones colectivamente. Incluye también
+el primer estudio objetivo de ciclogénesis rápida para el HS.
+
+2. METODOLOGÍA
+- Misma base de datos que Sinclair (1994): 16,037 trayectorias formadas a
+  partir de 102,668 centros de vorticidad geostrófica ζg a 1000 hPa (ECMWF,
+  1980-86, dos veces al día), con desplazamiento neto ≥10° de latitud.
+- Definiciones objetivas y cuantitativas de etapas del ciclo de vida basadas
+  en la tendencia de ζg: genesis (primer punto de trayectoria con ζg más
+  débil que -5x10^-5 s^-1, para ciclones que alcanzan al menos esa
+  intensidad), cyclogenesis (ζg intensificándose más rápido que -2x10^-5 s^-1
+  por día), maturity (punto de máxima vorticidad ciclónica, mínimo ζg, para
+  ciclones con ζg < -5x10^-5 s^-1), y cyclolysis (ζg debilitándose más rápido
+  que 2x10^-5 s^-1 por día).
+- Comparación explícita, caso a caso, entre la distribución geográfica de
+  ciclogénesis inferida por tendencias de ζg y la inferida por cambios de
+  presión central, para exponer discrepancias entre ambos enfoques.
+- Uso de gradientes de temperatura superficial del mar (SST, Climate
+  Analysis Center/NMC) como campo auxiliar para interpretar zonas
+  preferentes de formación/intensificación.
+
+3. HALLAZGOS CLAVE
+- Del total de 16,037 trayectorias, ~31% (5,019 sistemas, tras filtros)
+  califican como nuevos sistemas que alcanzan un desarrollo al menos
+  moderado; su vida media fue de ~4 días, formándose en promedio cerca de
+  los 45°S con velocidad de traslación media de ~15 m/s.
+- La ciclogénesis (intensificación de un ciclón preexistente) ocurre, en
+  promedio, en unos dos puntos de trayectoria por ciclón; la población de
+  eventos de ciclogénesis resultante es ~3 veces mayor que la de genesis.
+- Las regiones de génesis y ciclogénesis preferidas incluyen las costas
+  orientales de Australia y Sudamérica en invierno, sotavento de los Andes,
+  y zonas cercanas a las corrientes en chorro de la alta troposfera todo el
+  año; sobre mar abierto, los ciclones de invierno tienden a formarse e
+  intensificarse cerca de las zonas de mayor gradiente de SST.
+- La ciclogénesis rápida es más frecuente al este de Sudamérica, sureste de
+  África, sur de Australia y cerca de Nueva Zelanda; las tasas de
+  intensificación más fuertes (~35°-40°S al este de Australia y Sudamérica)
+  corresponden aproximadamente a un ciclón circular de ~1000 km de diámetro
+  y 8 hPa más bajo que su entorno a 50°S.
+- Se hallaron diferencias notables entre la distribución de ciclogénesis
+  inferida de tendencias de ζg y la inferida de cambios de presión central:
+  para ciclones con fuerte componente de desplazamiento hacia el polo al sur
+  de 45°S, la tendencia media de ζg es cercana a cero pero la presión
+  central cae en promedio >5 hPa/día (hasta 9.3 hPa/día en sistemas que se
+  mueven a >20 m/s) — gran parte de la caída de presión observada es
+  artefacto de la migración hacia zonas de menor presión de fondo
+  climatológica, no de intensificación real de la circulación.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L9): se cita para sustentar que "Sinclair (1995)
+  describió las características del ciclo de vida de los ciclones en el
+  Hemisferio Sur, resaltando que la ciclogénesis está influenciada por los
+  gradientes térmicos oceánicos y la orografía", en el contexto de matizar
+  la teoría clásica de ciclones baroclínicos de núcleo frío (tras citar a
+  hoskins2005new para la perspectiva clásica) con las particularidades
+  dinámicas del Atlántico Sur.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Segundo artículo de la serie metodológica de Mark Sinclair sobre climatología
+objetiva del HS (junto con sinclair1994objective y sinclair1997objective,
+presentes en este mismo lote). Se apoya directamente en la base de datos y
+metodología de detección por vorticidad establecida en Sinclair (1994, "SI"),
+y es citado posteriormente por Sinclair (1997) como "SI95" para las
+definiciones de etapas del ciclo de vida. Dialoga con Jones & Simmonds (1993)
+y Le Treut & Kalnay (1990), de quienes discrepa en la ubicación de las zonas
+de máxima ciclogénesis, atribuyendo las discrepancias a diferencias
+metodológicas (vorticidad vs. presión) más que a variabilidad real.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El propio autor reconoce la dependencia de escala (resolución de malla)
+  inherente al uso de vorticidad como criterio de detección.
+- Advierte explícitamente sobre la falacia de inferir cyclogenesis a partir
+  de caídas de presión central en sistemas muy móviles, ya que gran parte de
+  esas caídas son artefactos de migración hacia regiones de menor presión
+  climatológica de fondo (hallazgo clave del propio paper).
+- El período de datos (1980-86, 7 años) es corto comparado con reanálisis de
+  40 años usados en estudios posteriores (p. ej., Simmonds & Keay 2000), lo
+  que limita la robustez estadística de los patrones estacionales más
+  sutiles reportados.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Qué evidencia aporta Sinclair (1995) sobre por qué no se debe usar la
+  caída de presión central como proxy de ciclogénesis?
+  R: Documenta que ciclones con fuerte componente de movimiento hacia el
+  polo experimentan caídas de presión central de hasta 9.3 hPa/día en
+  promedio sin cambio neto en su vorticidad central, porque migran hacia
+  zonas de menor presión de fondo climatológica; la caída de presión puede
+  ser artefacto de advección, no de intensificación real de la circulación.
+- P: ¿Cómo se relacionan los gradientes de SST con la ciclogénesis según este
+  estudio?
+  R: Las zonas de ciclogénesis invernal (este de Australia, Sudamérica y sur
+  de África) coinciden estrechamente con los máximos de gradiente de SST
+  asociados a corrientes cálidas, consistente con mecanismos de flujo de
+  calor/humedad hacia la atmósfera baja que favorecen la inestabilidad
+  baroclínica.
+- P: ¿Qué papel juega la orografía (Andes) en la ciclogénesis según Sinclair
+  (1995)?
+  R: El estudio documenta un máximo de formación de ciclones sobre la costa
+  argentina cerca de 45°S asociado a ciclogénesis de sotavento (lee
+  cyclogenesis) por flujo del oeste persistente sobre los Andes, mecanismo
+  análogo al descrito para las Rocosas en el Hemisferio Norte.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/sinclair1995climatology.md

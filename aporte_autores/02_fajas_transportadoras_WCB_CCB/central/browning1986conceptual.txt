@@ -1,0 +1,158 @@
+============================================================
+CARTILLA DE ESTUDIO — Browning 1986 — modelo de cinturones transportadores (WCB/CCB)
+============================================================
+
+REFERENCIA COMPLETA
+Browning, K. A. (1986). Conceptual Models of Precipitation Systems. Weather and
+Forecasting, 1(1), 23-41. American Meteorological Society, Boston MA, USA.
+DOI: 10.1175/1520-0434(1986)001<0023:CMOPS>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en tres capítulos clave (Fundamentación, Precipitación, MEOF) como el marco
+conceptual dinámico que explica la asimetría espacial universal (cuadrante
+sureste/oriental) de precipitación y viento en los ciclones estudiados; es la base
+teórica sobre la que se interpreta el EOF1 de precipitación y los prototipos
+compuestos de la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es un artículo de revisión (no un estudio original con datos propios) que sistematiza
+modelos conceptuales de sistemas de precipitación de mesoescala y su contexto
+sinóptico, pensado como guía para pronosticadores que interpretan imágenes de radar
+y satélite. Cubre sistemas frontales de latitudes medias (cinturones transportadores
+cálido y frío, bandas de precipitación estrechas y anchas) y sistemas convectivos de
+mesoescala en trópicos y latitudes medias (líneas de inestabilidad, complejos
+convectivos de mesoescala). Su relevancia para la tesis radica en el modelo de
+"cinturones transportadores" (conveyor belts), que reemplaza la visión clásica de
+"masas de aire" del modelo noruego (Bjerknes y Solberg, 1922) por un marco dinámico
+de corrientes coherentes relativas al sistema en movimiento, explicando la
+distribución asimétrica de nubosidad y precipitación alrededor del centro ciclónico.
+
+2. METODOLOGÍA
+
+Al ser un artículo de síntesis conceptual, no emplea datos propios de reanálisis ni
+estadística climatológica: se basa en la revisión e integración de observaciones de
+radar y satélite (principalmente del Reino Unido) y de estudios previos (Harrold
+1973; Carlson 1980; Browning y Harrold 1970; Browning y Monk 1982; Cahir et al. 1985;
+Kreitzberg y Brown 1970; Houze y Hobbs 1982; Leary y Houze 1979, entre otros),
+organizados en modelos esquemáticos (figuras 1 a 17 del artículo). El enfoque
+metodológico central es la construcción de diagramas de flujo relativo al sistema en
+movimiento (no relativos al suelo), que permiten identificar los cinturones
+transportadores (warm conveyor belt, cold conveyor belt) como los principales
+generadores de nubes y precipitación, distinguiendo configuraciones de "levantamiento
+inclinado hacia adelante" (forward-sloping, situación cata-frontal) y "hacia atrás"
+(backward-sloping, situación ana-frontal).
+
+3. HALLAZGOS CLAVE
+
+- El mecanismo dominante en sistemas frontales es "el levantamiento baroclínico
+  inclinado"; la esteira/cinturón transportador cálido (WCB) transporta grandes
+  cantidades de calor, humedad y momento de oeste hacia los polos y hacia arriba,
+  formando una banda alargada de nubes que culmina en cirros baroclínicos en la alta
+  troposfera.
+- Se identifican dos configuraciones contrastantes del WCB: (i) "levantamiento
+  inclinado para atrás" (situación ana-frontal fría clásica), con frente frío en
+  superficie más abrupto y dos patrones de precipitación (banda estrecha de lluvia
+  fuerte en el frente, y cinturón amplio de lluvia débil-moderada por detrás); y (ii)
+  "levantamiento inclinado para adelante" (situación cata-frontal), con el
+  levantamiento principal ocurriendo por delante del frente frío en superficie,
+  asociado al modelo de "frente separado" (Browning y Monk, 1982).
+- El Cinturón Transportador Frío (CCB) se origina en el flujo anticiclónico de bajo
+  nivel al sureste (H.S.: se aclara explícitamente para la adaptación al Hemisferio
+  Sur) del ciclón, viaja hacia el centro, asciende cerca del punto más alto del
+  sector cálido, y su emergencia da forma a la nube de "cabeza de coma" (comma head)
+  del sistema.
+- Las bandas de precipitación se clasifican en dos tipos principales: bandas
+  estreitas (fenómenos de capa límite, asociadas a convección alineada en el frente
+  frío brusco, con anchos que raramente superan 3 km) y bandas anchas tipo U
+  (asociadas al ascenso del WCB, con ancho típico de 50 km ±factor 2 y longitud de
+  algunos cientos de km, vinculadas a inestabilidad simétrica condicional).
+- La liberación de calor latente en presencia de fricción se identifica como factor
+  importante que contribuye a la intensidad tanto del jet de bajo nivel como del
+  cizallamiento ciclónico (citando Hsie et al., 1984).
+- Los sistemas convectivos de mesoescala (tropicales y de latitudes medias) siguen
+  un ciclo de vida de cuatro estadios (formación, intensificación, madurez,
+  disipación) con duración total aproximada de un día (modelo de Leary y Houze,
+  1979).
+
+4. RELACIÓN CON TU TESIS
+
+Este es el pilar conceptual dinámico de varios capítulos:
+- Cap02-Fundamentacion (L123): se propone "complementar este paradigma con el modelo
+  de cinturones de transporte \citep{browning1986conceptual}" para comprender la
+  dinámica interna asimétrica de las variables en superficie.
+- Cap05-Precipitacion (L76): el modelo conceptual de Browning, junto con
+  evaluaciones observacionales de naud2020evaluation, explica que "el ascenso
+  inclinado del WCB por delante del frente frío y por encima del frente cálido
+  organiza la precipitación en el flanco cálido del ciclón, independientemente de la
+  región de génesis" — este es el argumento central que sustenta "la carga positiva
+  consistente del EOF1 en el cuadrante sureste" de la tesis.
+- Cap06-MEOF (L77, L145): se usa para describir que "durante la intensificación
+  baroclínica activa, la precipitación se organiza en el ascenso frontal del WCB en
+  el flanco cálido-oriental del ciclón, mientras que la CCB emergente da forma a la
+  nubosidad de la cabeza de la coma", y para vincular el desarrollo baroclínico
+  clásico (bjerknes1922life) con la estructura termodinámica única del WCB que
+  organiza tanto precipitación como viento en el sector cálido — es decir, el marco
+  teórico unificador de los prototipos MEOF de viento y precipitación de la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Keith A. Browning (Met Office, Reino Unido) es una figura central en la
+investigación de mesoescala y radar meteorológico británico desde los años 1970,
+junto con Harrold (esteira transportadora quente, 1973) y en colaboración con Monk
+(modelo de frente separado, 1982). Este artículo de 1986 sintetiza y extiende el
+trabajo pionero de Harrold (1973) y de la escuela de Reading/Met Office sobre
+cinturones transportadores, marcando la transición desde el paradigma frontal
+noruego (Bjerknes y Solberg, 1922) —que Browning explícitamente critica como
+"inadequados" para la mesoescala tras "mais de meio século" de dominio— hacia un
+marco dinámico-observacional moderno. La versión utilizada en la tesis es la
+traducción y adaptación al Hemisferio Sur de Silva Dias y Hallak (2012, USP), que
+invierte explícitamente las referencias geográficas (izquierda/derecha,
+noreste/sureste) para el hemisferio austral — coherencia directa con el
+razonamiento de "efecto espejo" que la tesis aplica también a blanchard2021warm.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un artículo de revisión/síntesis, no un estudio con datos originales
+  propios ni climatología cuantitativa: las cifras (anchos de banda, criterios de
+  claificación) provienen de casos del Reino Unido y EE.UU., no de una muestra
+  estadística amplia ni de la región del Atlántico Sur.
+- El enfoque original es del Hemisferio Norte; su aplicación al Hemisferio Sur
+  requiere la adaptación explícita (geométrica/especular) realizada por Silva Dias y
+  Hallak (2012), que es la versión efectivamente citada en la tesis.
+- No incorpora vorticidad potencial (PV) ni el marco lagrangiano moderno de
+  trayectorias que sí usan blanchard2021warm o los propios prototipos MEOF de la
+  tesis; es un modelo pre-lagrangiano basado en interpretación de imágenes.
+- Los criterios y anchos de banda (p. ej., 50 km ±factor 2 para bandas tipo U) son
+  específicos del clima extratropical marítimo del Reino Unido y no necesariamente
+  transferibles sin ajuste a la escala de los ciclones del Atlántico Sudoccidental.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué el modelo de Browning (1986), desarrollado para el Reino Unido, es
+  aplicable a los ciclones del Atlántico Sudoccidental? Respuesta: porque describe un
+  mecanismo dinámico universal (ascenso baroclínico inclinado relativo al sistema en
+  movimiento) que depende de la geometría frontal, no de la región; la adaptación al
+  HS (Silva Dias y Hallak, 2012) invierte solo la orientación geográfica, no la
+  física.
+- ¿Qué evidencia empírica moderna respalda el modelo conceptual de Browning en el
+  Atlántico Sur? Respuesta: la tesis lo triangula con evaluaciones observacionales de
+  naud2020evaluation y con los propios resultados EOF/MEOF de la tesis, que muestran
+  la asimetría sureste consistente con el modelo.
+- ¿Cuál es la diferencia entre el WCB y la CCB en el modelo de Browning, y por qué
+  importa para la tesis? Respuesta: el WCB organiza el ascenso húmedo cálido
+  (precipitación) en el flanco oriental/sureste; la CCB da forma a la nubosidad de
+  cabeza de coma y se vincula al jet de bajo nivel que intensifica el viento en la
+  retaguardia — ambos estructuran las asimetrías espaciales que la tesis cuantifica
+  mediante EOF y prototipos.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/browning1986conceptual_rev.md (versión traducida
+y adaptada al Hemisferio Sur por M.A.F. Silva Dias y R. Hallak, 2012; leídas
+secciones 1 a 4, resumen, introducción, modelo de esteira transportadora quente y
+fría, clasificación de bandas de precipitación y sistemas convectivos de
+mesoescala).

@@ -1,0 +1,162 @@
+============================================================
+CARTILLA DE ESTUDIO — Efron & Tibshirani 1993 — Bootstrap no paramétrico
+============================================================
+
+REFERENCIA COMPLETA
+Efron, B., & Tibshirani, R. J. (1993). An Introduction to the Bootstrap.
+Chapman and Hall/CRC. DOI: 10.1201/9780429246593
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual (pero metodológicamente crítico)
+Se cita una sola vez, en el Capítulo 2 (Fundamentación), para sustentar la
+técnica estadística de remuestreo (Bootstrap-t) empleada en la evaluación
+de la robustez de los patrones espaciales del análisis EOF.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+ADVERTENCIA METODOLÓGICA: no se dispuso de un archivo .md con el texto
+completo de este libro en el repositorio local de papers (papers/files_MD/).
+Esta cartilla se elaboró exclusivamente con (a) los metadatos bibliográficos
+verificados (título, autores, editorial, año, DOI) y (b) conocimiento general
+confiable sobre esta obra, ampliamente reconocida y estandarizada en la
+literatura estadística, complementado con el contexto de uso citado en la
+tesis. No se debe presentar ninguna cifra de este libro como "extraída del
+texto"; lo que sigue es una descripción fiel de su contenido consensuado en
+la comunidad estadística y de sus métodos, no una cita textual de pasajes.
+
+"An Introduction to the Bootstrap" es el texto de referencia fundacional
+sobre el método bootstrap, desarrollado originalmente por Bradley Efron en
+1979 y sistematizado en profundidad en este libro junto con Robert
+Tibshirani. Es un tratado metodológico (no un estudio de caso empírico)
+dirigido a estadísticos aplicados y científicos de otras disciplinas que
+necesitan estimar la variabilidad (errores estándar, sesgos, intervalos de
+confianza) de un estadístico cuando la distribución muestral teórica es
+desconocida, matemáticamente intratable, o cuando el tamaño de muestra es
+demasiado pequeño para invocar aproximaciones asintóticas clásicas (p. ej.,
+el teorema central del límite). Su relevancia es transversal a las ciencias
+que trabajan con datos empíricos limitados, incluyendo la climatología y el
+análisis de patrones espaciales (EOF/PCA), donde la significancia de un
+patrón derivado de una muestra finita de eventos no siempre puede evaluarse
+con fórmulas analíticas cerradas.
+
+2. METODOLOGÍA
+
+El bootstrap es un método de remuestreo no paramétrico: a partir de una
+única muestra observada de tamaño n, se generan un gran número (B) de
+"muestras bootstrap" mediante remuestreo con reemplazo de esa misma muestra
+original (cada muestra bootstrap también de tamaño n). El estadístico de
+interés (media, correlación, coeficiente de un patrón EOF, etc.) se
+recalcula en cada una de las B réplicas, generando una distribución empírica
+de ese estadístico. Esta distribución empírica se usa como aproximación de
+la verdadera distribución muestral, permitiendo estimar el error estándar,
+el sesgo y construir intervalos de confianza sin asumir una forma
+paramétrica (p. ej., normalidad) para los datos subyacentes.
+
+El libro desarrolla, entre otras, la variante "bootstrap-t" (o bootstrap
+estudentizado): en lugar de remuestrear directamente el estadístico, se
+remuestrea una versión "pivotada" o estudentizada de este (análoga al
+estadístico t de Student, pero con el error estándar también estimado por
+remuestreo en cada réplica). Esta variante suele producir intervalos de
+confianza con mejores propiedades de cobertura (más precisos en muestras
+finitas) que el bootstrap percentil simple, particularmente cuando la
+distribución del estadístico es asimétrica o su varianza no es constante,
+razón por la cual es preferida en aplicaciones donde se requiere mayor
+rigor en la inferencia, como la significancia de patrones EOF.
+
+3. HALLAZGOS CLAVE
+
+Al ser un texto metodológico y no un estudio empírico con resultados
+propios sobre un fenómeno físico, no corresponde reportar "hallazgos"
+en el sentido de resultados experimentales. Sus contribuciones centrales,
+ampliamente aceptadas como referencia estándar en la literatura estadística,
+son:
+  - Formalización del algoritmo de remuestreo bootstrap y sus propiedades
+    asintóticas y de muestra finita.
+  - Desarrollo del bootstrap-t (estudentizado) como método de mayor
+    precisión para la construcción de intervalos de confianza no
+    paramétricos.
+  - Discusión de métodos alternativos (bootstrap percentil, BCa —
+    bias-corrected and accelerated) y de sus condiciones de aplicabilidad.
+  - Extensión del método a problemas de regresión, series temporales y
+    reducción de dimensionalidad, sentando las bases para su adopción
+    posterior en la validación estadística de técnicas como el Análisis de
+    Componentes Principales/EOF.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 2 (Fundamentación), línea 254:
+"Para evaluar la robustez estadística de los patrones espaciales derivados
+del análisis EOF y aislar las señales físicas del ruido estocástico, se
+adopta el método de remuestreo no paramétrico Bootstrap-t \citep{efron1993introduction}."
+
+Es decir, la referencia sustenta la elección metodológica de usar el
+bootstrap-t —no una prueba analítica clásica— para decidir cuáles
+componentes/patrones EOF extraídos de tu muestra de ciclones (viento,
+precipitación, MEOF conjunto) son estadísticamente robustos y distinguibles
+del ruido de muestreo, en contraposición a criterios más simples como la
+regla de North et al. (que depende de supuestos sobre el espaciamiento de
+autovalores). Es un pilar metodológico silencioso pero necesario: sin él,
+la afirmación de que un patrón EOF "es significativo" carecería de
+respaldo estadístico formal.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Bradley Efron es el creador del método bootstrap (Efron, 1979, "Bootstrap
+methods: another look at the jackknife", Annals of Statistics). Este libro
+de 1993 junto con Tibshirani es la sistematización canónica y el texto de
+referencia más citado sobre el tema en toda la literatura científica
+aplicada, incluyendo climatología, geofísica y análisis de series
+temporales. En el contexto de tu tesis, dialoga con literatura afín sobre
+métodos EOF (p. ej., hannachi2007empirical, hannachi2023eof) y con trabajos
+que aplican bootstrap específicamente a la validación de EOF/PCA en
+climatología (p. ej., hesterberg2015bootstrap, presente también en tu
+bibliografía), formando parte de la línea metodológica de validación
+estadística no paramétrica que respalda el análisis EOF/MEOF de tu tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+Al ser un texto metodológico general (no aplicado a ciclones ni a datos
+climáticos específicos), sus "limitaciones" son las del método bootstrap en
+general, ampliamente documentadas en la literatura estadística posterior:
+  - El bootstrap asume que la muestra original es representativa de la
+    población; si la muestra es sesgada o pequeña, el bootstrap puede
+    heredar y no corregir ese sesgo.
+  - En datos con dependencia temporal o espacial (como series climáticas),
+    el bootstrap "ingenuo" (con reemplazo, i.i.d.) puede subestimar la
+    verdadera incertidumbre si no se usan variantes especializadas (p. ej.,
+    block bootstrap), un aspecto que el libro de 1993 trata de forma
+    limitada respecto a desarrollos posteriores.
+  - No es un método diseñado específicamente para EOF; su aplicación a
+    este contexto requiere que el usuario (en este caso, la tesis) adapte
+    el procedimiento (bootstrap-t sobre los coeficientes o patrones EOF),
+    lo cual no está prescrito en detalle en el texto original.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+  - "¿Por qué eligió bootstrap-t y no el bootstrap percentil simple o la
+    regla de North et al. para la significancia de los EOF?"
+    Respuesta breve: el bootstrap-t ofrece mejor cobertura de los
+    intervalos de confianza en muestras finitas y no depende de supuestos
+    sobre el espaciamiento de autovalores, más apropiado dado el tamaño
+    muestral limitado de eventos de ciclones.
+  - "¿Cómo maneja la dependencia temporal/espacial de sus datos al aplicar
+    un método bootstrap que asume observaciones independientes?"
+    Respuesta breve: se debe explicitar si se usó remuestreo por evento
+    (ciclón completo) en lugar de por paso temporal, para preservar al
+    menos la independencia entre sistemas.
+  - "¿Cuántas réplicas bootstrap (B) utilizó y cómo garantizó la
+    estabilidad numérica de los intervalos de confianza resultantes?"
+  - "¿Este texto reporta algún resultado empírico específico sobre
+    ciclones?" Respuesta: no; es una referencia puramente metodológica
+    sobre el bootstrap, no un estudio de caso sobre sistemas atmosféricos.
+
+------------------------------------------------------------
+Fuente verificada: no se encontró archivo .md local (papers/files_MD/) para
+esta referencia. Cartilla elaborada a partir de los metadatos bibliográficos
+del archivo .bib del proyecto y de conocimiento general confiable y
+ampliamente consensuado sobre esta obra clásica de la literatura
+estadística, más el contexto textual de citación dentro de la propia tesis
+(bundle_3.txt, Cap02-Fundamentacion L254).

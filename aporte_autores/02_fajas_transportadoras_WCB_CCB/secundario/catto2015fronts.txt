@@ -1,0 +1,57 @@
+============================================================
+CARTILLA DE ESTUDIO — Catto et al. 2015 — Frentes, WCBs y precipitación extrema
+============================================================
+
+REFERENCIA COMPLETA
+Catto, Jennifer L.; Madonna, Erica; Joos, Hanna; Rudeva, Irina; Simmonds, Ian. (2015). Global Relationship between Fronts and Warm Conveyor Belts and the Impact on Extreme Precipitation. Journal of Climate, American Meteorological Society, Boston MA, USA, vol. 28, n.° 21, pp. 8411-8429. DOI: 10.1175/JCLI-D-15-0171.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 2 veces (Cap02-Fundamentación y Cap05-Precipitación) para sustentar, con evidencia climatológica global, el mecanismo físico que vincula los "warm conveyor belts" (WCB) y los frentes con la ocurrencia de precipitación extrema; no es una cita puntual de un solo dato, pero tampoco constituye el eje metodológico de la tesis.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (JJA en el HS, DJF en el HN; análisis global)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (contorno cerrado más externo, definición de Wernli & Schwierz) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio aborda una pregunta de climatología dinámica global: ¿con qué frecuencia los "warm conveyor belts" (WCB, corrientes ascendentes cálidas que forman parte de la estructura de los ciclones extratropicales) coinciden espacialmente con los frentes fríos, cálidos y de viento identificados objetivamente, y en qué medida esa coincidencia incrementa la probabilidad de precipitación extrema? Es un estudio observacional/diagnóstico basado en reanálisis (no es modelado prognóstico ni un experimento numérico), que combina climatologías Lagrangianas de trayectorias de WCB con climatologías Eulerianas de detección de frentes. Es relevante en el campo porque, hasta ese momento, la relación climatológica cuantitativa entre frentes y WCB no había sido establecida de forma global (solo existían estudios de caso o climatologías separadas de cada fenómeno), y porque conecta dos marcos conceptuales distintos (frentes clásicos del modelo noruego y conveyor belts de la escuela lagrangiana) con las estadísticas de extremos de precipitación en latitudes medias de ambos hemisferios.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA-Interim (Dee et al. 2011), periodo 1979-2010.
+- Identificación de WCB: análisis de trayectorias Lagrangianas con la herramienta LAGRANTO (Wernli y Davies 1997), siguiendo el método de Madonna et al. (2014): trayectorias que ascienden más de 600 hPa desde por debajo de 790 hPa en 2 días y que ocurren en la vecindad de un ciclón extratropical (definido por el contorno cerrado de presión a nivel del mar más externo, según Wernli y Schwierz 2006). Se generan "objetos WCB" bidimensionales de bajo nivel (<790 hPa) y de nivel medio (790-600 hPa), con un radio de suavizado de 250 km.
+- Identificación de frentes: dos métodos objetivos independientes —(1) gradiente de temperatura potencial de bulbo húmedo a 850 hPa (método de Berry et al. 2011) para frentes fríos y cálidos, y (2) método de cambio de dirección del viento a 10 m (Simmonds et al. 2012) para "frentes de viento"— ambos interpolados a una grilla de 2.5°.
+- Precipitación extrema: percentil 99 de la acumulación de precipitación de 6 horas en cada punto de grilla (ERA-Interim), calculado estacionalmente, siguiendo Pfahl y Wernli (2012) y Catto y Pfahl (2013).
+- Procedimiento de emparejamiento (matching): superposición espacial (overlay) entre objetos WCB y objetos frontales; si hay solape, todos los puntos de grilla del objeto se clasifican como "coincidentes".
+- Cobertura: análisis global, con foco estacional en invierno de cada hemisferio (JJA en el HS, DJF en el HN), y discusión adicional de verano.
+
+3. HALLAZGOS CLAVE
+- A escala global, hasta el 70% de los objetos WCB están asociados (matched) con algún tipo de frente, mientras que la proporción inversa (frentes asociados a WCB) es mucho menor: solo ~10% de los frentes fríos, ~8% de los cálidos y ~15% de los frentes de viento están vinculados a un WCB.
+- La asociación WCB-frente cambia poco entre los niveles bajo y medio de la tropósfera, lo que indica que los WCB ya están fuertemente asociados a frentes desde el inicio de su ascenso; en el Hemisferio Sur, sin embargo, los WCB se relacionan más frecuentemente con frentes cálidos durante su ascenso en niveles medios.
+- Existe una fuerte estacionalidad: la proporción de WCB asociados a frentes fríos (WCBc) alcanza valores de hasta ~69% tanto en el HS como en el HN durante el invierno respectivo, frente a valores bajos (32-47%) en verano.
+- En partes de latitudes medias, más del 60% de los eventos de precipitación extrema coinciden con frentes fríos o cálidos, y hasta el 90% de esos eventos frontales tienen además un WCB asociado.
+- Los frentes asociados a WCB son entre 2 y 10 veces más propensos a producir eventos de precipitación extrema que los frentes sin WCB asociado — este es el hallazgo central citado en la tesis.
+- En el Hemisferio Sur existen regiones (p. ej. al este de Australia) donde hasta el 60-70% de los WCB no están vinculados a ningún tipo de frente, lo que revela una heterogeneidad regional importante en el mecanismo.
+
+4. RELACIÓN CON TU TESIS
+Esta cita se usa en dos capítulos para fundamentar, con evidencia global, la vinculación física entre estructuras ascendentes (WCB), frentes activos y precipitación extrema en ciclones extratropicales:
+- En el Cap02-Fundamentación (L125): "Desde una perspectiva global, \citet{catto2015fronts} demuestran que hasta el 69\% de los WCBs están asociados con frentes, y que los asociados a WCBs son entre 2 y 10 veces más propensos a producir precipitación extrema que los frentes sin WCB." Esta cifra da soporte cuantitativo al marco conceptual de la sección sobre estructuras de precipitación en ciclones.
+- En el Cap05-Precipitación (L77): "A escala global, \citet{catto2015fronts} han demostrado que existe una vinculación inequívoca entre los WCB, los frentes activos y la ocurrencia de los eventos de precipitación más intensos en latitudes medias." Aquí la cita respalda, a nivel más general, la premisa de que el análisis de precipitación extrema en el estudio debe considerar la interacción de frentes y flujos ascendentes cálidos como mecanismo generador.
+En ambos casos, la cita no describe datos del Atlántico Sudoccidental (la región de la tesis), sino que aporta el fundamento climatológico global que justifica by analogy el mecanismo físico que se explora regionalmente en la tesis.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Jennifer L. Catto es una investigadora especializada en climatología de frentes y ciclones extratropicales (actualmente en la University of Exeter, antes Monash University); coautora de trabajos clave sobre identificación objetiva de frentes (Catto et al. 2012, Catto y Pfahl 2013) y sobre el vínculo entre extremos de precipitación y estructuras dinámicas de los ciclones. El artículo se inscribe en la línea de estudios lagrangianos de "conveyor belts" iniciada por Harrold (1973) y Browning (1986), y retomada cuantitativamente por Wernli (1997), Eckhardt et al. (2004) y Madonna et al. (2014), de quien se toma directamente la climatología de WCB usada en este trabajo. Es un puente metodológico entre la escuela de fronts objetivos (Berry, Simmonds) y la escuela de trayectorias lagrangianas (Wernli, Madonna), ambas influyentes en estudios posteriores de estructura de ciclones citados en la tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El propio estudio reconoce que la transformación de trayectorias WCB en "objetos" bidimensionales infla artificialmente la frecuencia de WCB respecto a la climatología original de Madonna et al. (2014).
+- Se usa ERA-Interim (resolución más gruesa que ERA5), con datos de frentes calculados a 1.5° e interpolados a 2.5°, lo que limita la resolución espacial de los resultados frente a estudios más recientes basados en ERA5.
+- El estudio se limita a frentes fríos y cálidos (excluye frentes cuasi-estacionarios) y no explora en detalle las diferencias entre configuraciones anabáticas y katabáticas del frente, lo cual los propios autores señalan como pregunta abierta que requeriría análisis adicional.
+- El análisis del vínculo con precipitación extrema usa precipitación pronosticada por ERA-Interim (variable de pronóstico, no asimilada), que los autores mismos citan como más precisa en el tiempo de ocurrencia que en la magnitud exacta comparada con estimaciones satelitales (CMORPH).
+- Es un estudio esencialmente estadístico/climatológico; no aborda mecanismos termodinámicos causales en detalle (esa tarea se deja a estudios de caso previos, p. ej. Browning 2004 y la serie de "sting jet").
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué se usa una cifra global (Hemisferio Norte/Sur genérico) de Catto et al. (2015) para sustentar un mecanismo en el Atlántico Sudoccidental específicamente? R: Porque el estudio de Catto et al. no cubre exhaustivamente el Atlántico Sur con el mismo detalle regional que la tesis; se usa como fundamento del mecanismo físico general (WCB-frente-precipitación extrema), que la tesis luego particulariza y cuantifica para la región de estudio con datos ERA5 propios.
+- P: ¿La cifra "69%" citada corresponde exactamente al hallazgo agregado del abstract o a un valor estacional específico? R: Corresponde al valor de invierno (~69% en ambos hemisferios) para la asociación de WCB con frentes fríos (WCBc); el abstract reporta un valor más general de "hasta 70%" de WCB asociados a frentes en general.
+- P: ¿En qué difiere la definición de "frente" en Catto et al. (2015) respecto a la vorticidad relativa ($\zeta_{850}$) usada como criterio de detección en tu tesis? R: Catto et al. identifican frentes mediante gradientes térmicos (método Berry) o cambios de dirección del viento (método Simmonds), variables distintas a la vorticidad relativa; ambas son proxies de la estructura ciclónica pero capturan aspectos físicos diferentes (gradiente térmico/cambio de viento vs. circulación rotacional).
+- P: ¿Este mecanismo (WCB-frente-precipitación extrema) fue verificado explícitamente para el Atlántico Sudoccidental en tu tesis, o queda como supuesto? R: [El candidato debe precisar según su Cap05 si se hizo una verificación directa o si la cita se usa solo como fundamento conceptual].
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/catto2015front.md

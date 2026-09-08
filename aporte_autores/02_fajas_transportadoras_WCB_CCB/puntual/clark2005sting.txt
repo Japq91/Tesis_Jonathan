@@ -1,0 +1,138 @@
+============================================================
+CARTILLA DE ESTUDIO — Clark, Browning & Wang 2005 — estructura 3D del sting jet (descenso)
+============================================================
+
+REFERENCIA COMPLETA
+Clark, Peter A., Browning, Keith A., & Wang, Chang. (2005). The sting at the end of the
+tail: Model diagnostics of fine-scale three-dimensional structure of the cloud head.
+Quarterly Journal of the Royal Meteorological Society, 131(610), 2263-2292.
+DOI: 10.1256/qj.04.36
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita 2 veces (Cap02-Fundamentacion y Cap04-Viento) para caracterizar el sting jet (SJ)
+como estructura mesoescalar distinta del WCB y del CCB que concentra los vientos superficiales
+más intensos en la zona de fractura frontal.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es el segundo artículo de una serie sobre el fenómeno "sting at the end of the tail"
+("aguijón al final de la cola"), una región mesoscalar de vientos superficiales
+potencialmente dañinos que ocurre cerca de la punta evaporante del "cloud head" (cabeza
+nubosa) enroscado alrededor del frente retrógrado (bent-back front) de un ciclón
+extratropical. Mientras el primer artículo de la serie (Browning 2004) estableció la
+existencia del fenómeno mediante un estudio puramente observacional de la gran tormenta de
+octubre de 1987 (Reino Unido), este segundo paper usa una simulación numérica de alta
+resolución (validada contra las observaciones) para revelar la estructura tridimensional
+completa y evolutiva del "sting jet" (SJ). Es un estudio de dinámica de mesoescala basado
+en un caso histórico (no una climatología).
+
+2. METODOLOGÍA
+- Modelo: Met Office Unified Model (UM) v5.2/5.3, dinámica no hidrostática, atmósfera
+  profunda, esquema semi-implícito semi-Lagrangiano. Incluye parametrizaciones de capa
+  límite, microfísica de nubes de fase mixta, convección, y parametrizaciones adicionales
+  de downdraft y transporte de momento.
+- Dominio "mesoscale" anidado (one-way nesting) dentro de una versión global (~60 km),
+  con resolución horizontal de 0.11° (~12.5 km) y 250x250 puntos horizontales.
+- Se corrieron versiones con 38 niveles verticales (operativa) y con 90 niveles (resolución
+  vertical mejorada, ~240 m en la media troposfera), esta última usada para el análisis
+  principal por representar mejor la dinámica (ciclón ~5 hPa más profundo en su punto
+  máximo).
+- Condiciones iniciales: análisis ECMWF ERA-15 interpolado a la grilla UM; simulación
+  iniciada a las 1200 UTC del 15 de octubre de 1987 (tormenta de octubre de 1987).
+- Análisis de trayectorias lagrangianas de parcelas de aire (siguiendo Wernli 1995) para
+  identificar conjuntos coherentes de trayectorias correspondientes al SJ.
+- Caso de estudio: la "Great Storm" del 15-16 de octubre de 1987 sobre el sudeste de
+  Inglaterra.
+
+3. HALLAZGOS CLAVE
+- El SJ es un flujo mesoescalar coherente que DESCIENDE desde niveles medios (~650 hPa,
+  dentro del cloud head) hasta el nivel de 900 hPa, en un periodo de aproximadamente 4
+  horas, acelerando de menos de 20 m/s a más de 45 m/s, con extremos superiores a 50 m/s.
+- Aunque la temperatura potencial de bulbo húmedo (theta_w) del aire en el SJ permanece
+  aproximadamente constante durante el descenso, la evaporación produce una reducción de
+  hasta 5 K o más en la temperatura potencial de bulbo seco (theta) en partes del jet —
+  evidencia de enfriamiento evaporativo asociado a la subsidencia, no a ascenso convectivo.
+- El aire dentro del SJ experimenta "strong subsidence warming" (calentamiento adiabático
+  por descenso) al mismo tiempo que enfriamiento evaporativo por la lluvia que cae desde
+  las partes superiores ascendentes del cloud head; ambos efectos compiten.
+- El SJ es distinto de la intrusión seca principal (dry intrusion, aire aún más seco traído
+  desde el pliegue de la tropopausa) y del chorro de la cinta transportadora fría (CCB),
+  que permanece por debajo y detrás del SJ mientras este rodea el frente retrógrado.
+- La tasa de descenso máxima modelada del SJ fue superior a 0.3 m/s; tras unas 6 horas el
+  SJ desaparece en superficie y es reemplazado por el CCB.
+- El SJ se forma dentro de la rama descendente de circulaciones mesoescalares inclinadas
+  múltiples (posiblemente relacionadas con inestabilidad simétrica condicional, CSI), no
+  confirmada de forma concluyente en este trabajo.
+
+VERIFICACIÓN DEL MECANISMO (punto crítico para la tesis): el paper describe explícita y
+repetidamente al sting jet como un flujo que DESCIENDE (descends, subsidence, "air within
+the SJ descends to the 900 hPa level") acompañado de enfriamiento evaporativo de la lluvia
+que cae en él desde la parte superior del cloud head (aún en ascenso). NO es una corriente
+ascendente convectiva. La afirmación de la tesis ("un flujo que desciende desde niveles
+medios... distinta del WCB y del CCB") es correcta y fiel al paper.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentacion (L133): "\citet{clark2005sting} lo caracterizan como un flujo que
+  desciende desde niveles medios y produce la región de vientos superficiales de mayor
+  intensidad en la zona de fractura frontal del ciclón, distinta del WCB y del CCB." Esta
+  cita es fiel al contenido del paper.
+- Cap04-Viento (L111): se cita junto con clark2018sting y eisenstein2023identification para
+  señalar que en el Hemisferio Norte los vientos extremos se concentran en la zona de
+  fractura frontal asociada a chorros de niveles bajos como el sting jet y el CCB, y que
+  por inversión de la circulación ciclónica entre hemisferios ese sector se traslada al
+  cuadrante noroeste en el caso austral.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Este es el segundo de una serie de al menos tres artículos: (1) Browning (2004, B2004)
+estableció observacionalmente el fenómeno; (2) este paper (Clark, Browning & Wang 2005)
+confirma la estructura 3D mediante simulación numérica; (3) un tercer artículo de la serie
+(no detallado aquí) debía demostrar el vínculo causal entre evaporación e intensificación
+del SJ. El marco conceptual se apoya en el modelo de fractura frontal de Shapiro y Keyser
+(1990) y en el esquema de cintas transportadoras de Carlson (1980). Esta línea de
+investigación fue posteriormente sintetizada y ampliada por Clark & Gray (2018) —también
+citado en tu tesis— en una revisión exhaustiva de sting jets.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores en las conclusiones:
+- Es un único caso de estudio (tormenta de octubre 1987); los autores señalan que se
+  requiere investigación futura para "confirmar que los SJ existen y juegan un papel
+  similar en otras ciclogénesis dañinas" y que el modelo conceptual es representativo de
+  la mayoría de tormentas que se profundizan explosivamente.
+- La existencia e importancia de la inestabilidad simétrica condicional (CSI) como
+  mecanismo disparador no queda confirmada, solo es "sospechada".
+- No se resuelve si la evaporación simplemente reduce la estabilidad estática y mejora el
+  transporte turbulento de momento, o si además incrementa significativamente la fuerza
+  global del SJ — se deja explícitamente para investigación posterior (tercer paper de la
+  serie).
+- El modelo con 38 niveles verticales difiere sustancialmente del de 90 niveles (5 hPa de
+  diferencia en la profundidad mínima), lo que sugiere sensibilidad importante a la
+  resolución vertical, cuestionando la robustez de resultados obtenidos con menor
+  resolución.
+- Estudio centrado en el Hemisferio Norte / Atlántico Norte europeo; no hay evidencia
+  directa de aplicabilidad al Atlántico Sudoccidental.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿El sting jet es un flujo ascendente o descendente? ¿Por qué se le asocia
+  enfriamiento?" R: Es un flujo DESCENDENTE desde niveles medios (~650 hPa) hasta ~900 hPa;
+  el enfriamiento (hasta 5 K en theta) proviene de la evaporación de precipitación que cae
+  en él desde las porciones ascendentes superiores del cloud head, mientras el descenso en
+  sí produce calentamiento adiabático por subsidencia — son dos efectos que compiten.
+- P: "¿En qué se diferencia el sting jet del WCB y del CCB?" R: El WCB es un flujo cálido de
+  bajo nivel que se mantiene mayormente en el sector cálido; el CCB es un flujo de aire de
+  theta_w baja que circula ciclónicamente alrededor del centro y permanece cerca de la
+  superficie por más tiempo; el SJ es un flujo transitorio, de theta_w intermedia, que
+  desciende rápidamente desde el cloud head y se sitúa por encima y delante del CCB durante
+  la fractura frontal, desapareciendo tras ~6 horas.
+- P: "¿Cómo trasladas este mecanismo del Hemisferio Norte al Atlántico Sudoccidental en tu
+  tesis?" R: Se usa por analogía estructural: la inversión de la circulación ciclónica entre
+  hemisferios traslada el sector de vientos extremos (asociado a SJ/CCB) al cuadrante
+  noroeste en el caso austral, en vez del sudeste/noreste típico del Hemisferio Norte.
+- P: "¿Este estudio demuestra causalidad entre evaporación e intensificación del sting jet?"
+  R: No; los propios autores señalan que ese vínculo causal se deja para un tercer artículo
+  de la serie; este paper solo establece la existencia y estructura 3D del SJ.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/clark2005sting.md

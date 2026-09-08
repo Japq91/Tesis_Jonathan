@@ -1,0 +1,165 @@
+============================================================
+CARTILLA DE ESTUDIO — Cardoso et al. 2022 — climatología sinóptica de impactos SC
+============================================================
+
+REFERENCIA COMPLETA
+Cardoso, A. A., da Rocha, R. P. y Crespo, N. M. (2022). Synoptic climatology of
+subtropical cyclone impacts on near-surface winds over the South Atlantic basin.
+Earth and Space Science, 9(12), e2022EA002482. DOI: 10.1029/2022EA002482
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Es una de las referencias más citadas de la tesis (siete pasajes en cinco
+capítulos: Introducción, Fundamentación, Viento, Precipitación, Prototipos). Aporta
+tanto el diseño metodológico (dominio lagrangiano 20°×20°) como los resultados de
+referencia (co-localización viento-precipitación en el cuadrante este/noreste) que
+la tesis extiende explícitamente mediante el marco de prototipos condicionales por
+fase evolutiva.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (algoritmo de Reboita/Sugahara, umbral ≤ -1.5×10⁻⁵ s⁻¹; los ciclones subtropicales se clasifican además con el Cyclone Phase Space de Hart 2003) — nivel distinto a los 850 hPa de la tesis [confirmado directamente en el PDF fuente, Sección 2.2 "Cyclone Tracking and Classification"]
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio investiga el impacto de los ciclones subtropicales (SC) sobre los
+extremos de viento cercano a la superficie (percentil 95) y sobre la precipitación
+en la cuenca del Atlántico Sur, para el periodo 1979-2015. Es una climatología
+sinóptica (no un estudio de caso) que combina dos reanálisis (ERA5 y CFSR) y
+precipitación estimada por satélite (TRMM), utilizando dos marcos de referencia
+complementarios —lagrangiano (centrado en la trayectoria del ciclón) y euleriano
+(ambiente promedio de la región de ciclogénesis, RG1)— para cuantificar dónde y
+cómo los ciclones subtropicales modifican el campo de viento y precipitación
+respecto a las condiciones climatológicas de fondo.
+
+2. METODOLOGÍA
+
+- Reanálisis: ERA5 (ECMWF-C3S, 0.25° de resolución) y CFSR/CFSRv2 (0.5°), variables:
+  viento a 10 m, altura geopotencial en 500 hPa, presión a nivel del mar, divergencia
+  de masa y viento en 200 hPa, advección de temperatura y divergencia de flujo de
+  humedad en 925 hPa, cada 6 horas (00, 06, 12, 18 UTC).
+- Precipitación: TRMM (Tropical Rainfall Measuring Mission), resolución 0.5°, cada 3
+  h, acumulada a pasos de 6 h; disponible solo 1998-2015.
+- Periodo de análisis: 1979-2015 para reanálisis; 1998-2015 para TRMM.
+- Identificación y clasificación de ciclones subtropicales (SC): metodología de
+  Gozzo et al. (2014, 2017), basada en trayectorias de vorticidad relativa.
+- Estaciones extendidas: cálida (septiembre-febrero) y fría (marzo-agosto). Muestra
+  total: 169 SC en estación cálida vs. 87 en estación fría.
+- Enfoque lagrangiano: dominio móvil de 20°×20° (radio ~10°) centrado en el centro
+  del ciclón en cada paso de 6 h — deliberadamente más amplio que estudios previos
+  (Gozzo et al., 2014; Reboita, da Rocha, et al., 2019), justificado porque esos
+  estudios encontraron vientos extremos hasta ~500 km del centro del ciclón sobre el
+  Atlántico Sur.
+- Enfoque euleriano: promedia las variables sobre toda la RG1 para todos los pasos
+  temporales con SC presente, sin seguir el centro individual del sistema.
+- Caso ilustrativo: ciclón subtropical Anita (marzo 2010), con velocidad acumulada
+  máxima de ~350 m/s (acumulada, no instantánea) y media superior a 17 m/s durante su
+  ciclo de vida.
+
+3. HALLAZGOS CLAVE
+
+- Tanto el enfoque euleriano como el lagrangiano indican que los extremos de
+  viento en superficie se concentran al este y noreste de la región de ciclogénesis
+  subtropical (RG1).
+- Los ciclones subtropicales contribuyen a un aumento de la precipitación al este y
+  dentro de la RG1, organizada en una banda de anomalía positiva orientada
+  noroeste-sureste desde el continente hacia el océano, favoreciendo condiciones más
+  secas al sur de la RG1.
+- Estas anomalías positivas de precipitación están asociadas simultáneamente con
+  baja presión anómala, convergencia de flujo de humedad en niveles bajos, advección
+  cálida, y un flujo divergente en niveles altos cerca de la RG1; todas estas
+  características se intensifican en la estación fría.
+- En todos los análisis, las velocidades de viento de CFSR son sistemáticamente
+  mayores que las de ERA5.
+- Los vientos máximos no se distribuyen uniformemente alrededor del centro del
+  ciclón, sino que se concentran en cuadrantes específicos (este/noreste),
+  evidenciando la insuficiencia de métricas escalares (p. ej., presión central) para
+  capturar la severidad real del sistema.
+- El dominio lagrangiano de 20°×20° se justifica explícitamente porque los SC
+  "usually have extreme winds approximately 500 km away from the cyclone center"
+  sobre el Atlántico Sur, cifra que motiva ampliar el dominio respecto a estudios
+  previos.
+
+4. RELACIÓN CON TU TESIS
+
+Este artículo aparece en al menos siete pasajes distintos:
+- Cap02-Fundamentacion (L29): justifica la amplitud de 20°×20° del dominio móvil de
+  la propia tesis como "coherente con \citet{cardoso2022synoptic}, que emplea el
+  mismo dominio móvil en la región" — es decir, es la base metodológica directa del
+  diseño del dominio lagrangiano de la tesis.
+- Cap02-Fundamentacion (L174) y Cap01-Introduccion (L57): documenta que "los vientos
+  máximos tienden a concentrarse en sectores específicos, como el cuadrante
+  noreste", sustentando el argumento de que "la intensidad de un ciclón no puede
+  capturarse con una única métrica".
+- Cap05-Precipitacion (L79): sustenta el mecanismo de "anomalías positivas de
+  convergencia de humedad acopladas con advección cálida en niveles bajos" en SBR y
+  LPB.
+- Cap04-Viento (L54): se agrupa junto con otros estudios brasileños para
+  contextualizar "los eventos severos del Atlántico Sur".
+- Cap07-Prototipos (L59, L77) — el uso más profundo: la tesis confronta
+  directamente sus prototipos con los resultados de Cardoso et al. (2022) para
+  ciclones subtropicales en RG1, señalando coincidencia en la co-localización
+  este/noreste de anomalías de viento y precipitación durante fases de desarrollo
+  activo, pero extiende el resultado al (1) incorporar explícitamente la fase
+  evolutiva como eje de estratificación (mostrando que la co-localización es propia
+  de fases tempranas, no una propiedad estática) y (2) mostrar que dicha
+  co-localización se rompe sistemáticamente en el subconjunto p90 de máxima
+  vorticidad. También se discute como limitación compartida: el truncamiento del
+  campo de precipitación en los bordes del dominio fijo, reconocido explícitamente
+  por Cardoso et al. al adoptar el dominio de 20°×20° "precisamente para capturar
+  los vientos extremos que pueden ocurrir hasta 500 km del centro del ciclón".
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Es la publicación en revista internacional (Earth and Space Science, AGU/Wiley) que
+extiende la tesis de maestría cardoso2020wind de la misma primera autora, ahora con
+Rosmeri P. da Rocha (orientadora) y Natália M. Crespo como coautoras, dentro del
+grupo de investigación de ciclones subtropicales del IAG-USP. Se inscribe en la
+línea consolidada por Evans y Braun (2012), Gozzo et al. (2014, 2017) y da Rocha et
+al. (2019) sobre climatología y mecanismos de ciclones subtropicales del Atlántico
+Sur (incluyendo el huracán Catarina de 2004 y el ciclón Anita de 2010 como casos
+seminales). En la tesis del usuario, es la referencia más directamente comparable en
+términos de diseño metodológico (dominio lagrangiano móvil) y constituye el punto de
+partida explícito que el capítulo de prototipos busca superar mediante
+estratificación por fase de ciclo de vida.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Se limita a ciclones subtropicales (no a la población general de ciclones
+  extratropicales), lo que restringe la generalización directa a todo el espectro de
+  sistemas estudiado en la tesis (Población Global y p90).
+- El dominio lagrangiano fijo de 20°×20° trunca el campo de precipitación/viento en
+  sistemas de mayor escala horizontal, subestimando la extensión real de las bandas
+  de precipitación enroscada — limitación explícitamente heredada y discutida en el
+  Cap07-Prototipos de la tesis.
+- El análisis compuesto no estratifica por fase evolutiva del ciclón (incipiente,
+  intensificación, madurez, decaimiento), promediando todo el ciclo de vida —
+  precisamente la limitación que los prototipos condicionales de la tesis buscan
+  resolver.
+- El uso de TRMM limita la ventana temporal de precipitación a 1998-2015, más corta
+  que la de viento/presión (1979-2015).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿En qué se diferencian tus prototipos de los resultados de Cardoso et al. (2022)
+  si ambos usan el mismo dominio de 20°×20°? Respuesta: Cardoso et al. promedian todo
+  el ciclo de vida del ciclón subtropical; esta tesis estratifica explícitamente por
+  fase evolutiva (vía CycloPhaser) y contrasta la Población Global con el
+  subconjunto p90, mostrando que la co-localización viento-precipitación es
+  transitoria (propia de fases tempranas) y se rompe en sistemas de máxima
+  profundización — algo que un análisis de ciclo de vida completo no puede revelar.
+- ¿Por qué 20°×20° y no un dominio más pequeño o más grande? Respuesta: porque
+  Cardoso et al. (2022), siguiendo a Gozzo et al. (2014) y Reboita et al. (2019),
+  documentaron empíricamente que los vientos extremos de ciclones subtropicales del
+  Atlántico Sur pueden ocurrir hasta ~500 km del centro, lo que motiva ese radio
+  como mínimo necesario para capturarlos.
+- ¿Los resultados de Cardoso et al. son extrapolables de ciclones subtropicales a
+  ciclones extratropicales en general? Respuesta: el mecanismo dinámico (WCB
+  organizando precipitación y viento en el sector cálido/este) es común a ambos
+  tipos según el marco de Browning (1986), pero la magnitud y frecuencia de la
+  co-localización puede diferir; la tesis lo verifica empíricamente para su propia
+  población de ciclones extratropicales.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/cardoso2022synoptic.md (resumen/abstract,
+introducción, sección de datos 2.1-2.2, y sección 3.2 "Impacts of Subtropical
+Cyclones" con la justificación del dominio 20°×20° y el caso Anita).

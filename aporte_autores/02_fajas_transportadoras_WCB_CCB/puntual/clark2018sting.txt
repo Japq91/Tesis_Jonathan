@@ -1,0 +1,126 @@
+============================================================
+CARTILLA DE ESTUDIO — Clark & Gray 2018 — revisión integral de sting jets
+============================================================
+
+REFERENCIA COMPLETA
+Clark, Peter A., & Gray, Suzanne L. (2018). Sting jets in extratropical cyclones: a review.
+Quarterly Journal of the Royal Meteorological Society, 144(713), 943-969.
+DOI: 10.1002/qj.3267
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita 1 vez (Cap04-Viento), junto con clark2005sting y eisenstein2023identification, para
+respaldar la existencia de chorros de niveles bajos (sting jets, CCB) en la zona de fractura
+frontal que concentran los vientos extremos en ciclones del Hemisferio Norte.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur) (revisión con casos predominantemente del Atlántico Norte/Europa)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es un artículo de revisión (review) que sintetiza todo el conocimiento acumulado sobre los
+"sting jets" (SJ) en ciclones extratropicales desde su identificación formal por Browning
+en 2004. Los autores proponen una definición consolidada del SJ, revisan la evidencia
+observacional y de modelado, sintetizan los mecanismos hipotéticos de formación y
+mantenimiento, examinan el papel de la capa límite atmosférica, evalúan la climatología
+disponible, y —de forma notable— dedican una sección completa a desmontar ocho "mitos y
+malentendidos" recurrentes en la literatura sobre el fenómeno. No es un estudio original de
+datos sino una síntesis crítica del estado del arte, escrita por dos autoridades centrales
+en el tema (Clark, coautor del paper original de modelado de 2005; Gray, especialista en
+dinámica de ciclones).
+
+2. METODOLOGÍA
+- Revisión narrativa/crítica de literatura (no meta-análisis cuantitativo ni estudio de
+  datos original).
+- Estructura: (2) antecedentes conceptuales del modelo de ciclón de Shapiro-Keyser (SK) y
+  las inestabilidades de mesoescala relevantes; (3)-(4) evidencia observacional y de
+  modelado para SJs; (5) síntesis de mecanismos de formación/mantenimiento; (6)-(7) papel
+  de la capa límite y climatología de SJs; (8) ocho mitos y malentendidos con su
+  refutación; (9) conclusiones y definición consolidada.
+- Se apoya en estudios de caso históricos (Great Storm de 1987, windstorm Ulli, Gudrun,
+  Friedhelm) y en climatologías previas basadas en diagnósticos precursores de SJ aplicados
+  a reanálisis (p. ej. Martínez-Alvarado et al. 2012; Hart et al. 2017, sobre ERA-Interim,
+  33 inviernos extendidos 1979-2012).
+
+3. HALLAZGOS CLAVE
+- Definición consolidada del SJ: "a coherent airflow that descends from mid-levels inside
+  the cloud head into the frontal-fracture region of a Shapiro-Keyser cyclone over a period
+  of a few hours leading to a distinct region of near-surface stronger winds." Se sitúa por
+  encima del cold conveyor belt (CCB) durante parte de su vida y, en algunos casos, desciende
+  hasta la cima de la capa límite por delante del CCB. La definición NO atribuye el SJ a un
+  mecanismo específico.
+- Existe probablemente un continuo de mecanismos de descenso y aceleración del SJ: desde
+  descenso balanceado asociado a frontólisis en la región de fractura frontal, pasando por
+  descenso frontolítico más pequeño en escala horizontal asociado a inestabilidad débil a
+  downdrafts convectivos oblicuos (slantwise), hasta inestabilidad franca a downdrafts
+  convectivos oblicuos ligada a la liberación de inestabilidad simétrica condicional (CSI) o
+  incluso inestabilidad simétrica (SI).
+- En un análisis de 5447 ciclones sobre ERA-Interim (33 inviernos extendidos), el 32% tenía
+  el precursor diagnosticado de SJ (42% en el 22% de ciclones que se desarrollaron
+  explosivamente).
+- Mito desmentido clave: "si existe un SJ, este es la causa de los vientos y ráfagas más
+  fuertes del ciclón" — Falso: frecuentemente el chorro de la cinta transportadora fría
+  (CCB) produce los vientos/ráfagas más fuertes (en la Great Storm de 1987, ráfagas de ~30
+  m/s en la región del CCB frente a ~45 m/s en la del SJ, pero en otros casos como Ulli o
+  Gudrun el CCB dominó).
+- Mito desmentido: "los SJ solo se detectan en el Atlántico Norte oriental y Europa
+  occidental" — no hay evidencia de que estén ausentes en otras regiones; la falta de
+  estudios fuera de esa zona (incluyendo el Pacífico y el Hemisferio Sur) refleja un vacío
+  de investigación, no ausencia del fenómeno.
+- Mito desmentido: "los SJ pueden representarse con datos de reanálisis o modelos climáticos
+  de baja resolución" — se requiere resolución horizontal de ~10-15 km o mejor y resolución
+  vertical de niveles de 200-300 m en la troposfera media para resolver directamente los
+  SJ; para datos de baja resolución existe en cambio un diagnóstico basado en DSCAPE.
+
+4. RELACIÓN CON TU TESIS
+Cap04-Viento (L111): se cita junto a clark2005sting y eisenstein2023identification: "Patrones
+análogos han sido documentados en sistemas extratropicales del Hemisferio Norte, donde los
+vientos extremos se empaquetan en la zona de fractura frontal asociada a corrientes en
+chorro de niveles bajos como los sting jets y el chorro de la cinta transportadora fría
+[...]; la inversión de la circulación ciclónica entre hemisferios traslada dicho sector al
+cuadrante noroeste en el caso austral." Esta afirmación es coherente con la revisión: Clark &
+Gray confirman que SJ y CCB son estructuras de mesoescala distintas que concentran vientos
+extremos en la región de fractura frontal, y que el CCB en particular es "an almost universal
+feature of strongly developing cyclone with a cloud head."
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Peter Clark es coautor directo del paper de modelado original (Clark, Browning & Wang 2005,
+también citado en tu tesis) que estableció la estructura 3D del SJ; esta revisión de 2018
+representa la consolidación madura de esa línea de investigación 13 años después, incorporando
+trabajos de Martínez-Alvarado, Baker, Schultz, Slater, Coronel y otros. Es, en efecto, la
+referencia estándar y más autorizada para definir con precisión qué es (y qué no es) un sting
+jet.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+Reconocidas explícitamente por los autores:
+- La climatología global de SJs es identificada como un área específica donde se necesita
+  más investigación; prácticamente todos los estudios publicados hasta 2018 se limitan al
+  Atlántico Norte oriental y Europa occidental.
+- La interacción entre la capa límite atmosférica y los SJ también se señala como
+  insuficientemente comprendida.
+- El propio artículo reconoce que persiste debate sobre cuál mecanismo (frontólisis vs.
+  liberación de CSI/SI) domina la formación del SJ, y que en la práctica es muy difícil
+  separar la contribución de la inestabilidad de mesoescala de la frontólisis de gran escala.
+- Al ser una revisión, no aporta datos nuevos ni evidencia propia sobre el Atlántico
+  Sudoccidental; su aplicabilidad a esa región es, como reconocen los propios autores
+  respecto de otras regiones, un vacío de investigación no resuelto.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: "¿Cuál es la definición precisa y consensuada de sting jet según esta revisión?" R: Un
+  flujo de aire coherente que desciende desde niveles medios dentro del cloud head hacia la
+  región de fractura frontal de un ciclón tipo Shapiro-Keyser en unas pocas horas, generando
+  una región distintiva de vientos superficiales más fuertes; no se le atribuye un único
+  mecanismo causal.
+- P: "¿El sting jet siempre produce los vientos más fuertes de un ciclón?" R: No, es uno de
+  los ocho mitos que el paper refuta explícitamente; frecuentemente el CCB produce vientos y
+  ráfagas más intensas.
+- P: "¿Hay evidencia de sting jets en el Hemisferio Sur o en el Atlántico Sudoccidental según
+  este paper?" R: No; los autores señalan explícitamente que, hasta la fecha de publicación,
+  todos los estudios de caso y climatologías de ciclones con SJ se limitan al Atlántico Norte
+  oriental y Europa occidental, y que la ausencia de estudios en otras regiones no implica
+  ausencia del fenómeno, sino un vacío de investigación.
+- P: "¿Qué resolución de modelo se necesita para resolver un sting jet?" R: Aproximadamente
+  10-15 km de resolución horizontal o mejor, con niveles verticales de 200-300 m en la
+  troposfera media, según la síntesis de evidencia de modelado presentada en la revisión.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/clark2018sting.md

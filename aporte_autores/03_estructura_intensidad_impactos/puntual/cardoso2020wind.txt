@@ -1,0 +1,140 @@
+============================================================
+CARTILLA DE ESTUDIO — Cardoso 2020 — ciclones subtropicales y vientos extremos SBR
+============================================================
+
+REFERENCIA COMPLETA
+Cardoso, A. A. (2019/2020). Ciclones subtropicais e ventos em superfície no
+sudoeste do Oceano Atlântico Sul: climatologia e extremos. Dissertação de Mestrado,
+Instituto de Astronomia, Geofísica e Ciências Atmosféricas, Universidade de São
+Paulo, São Paulo. DOI: 10.11606/D.14.2020.tde-31012020-154545
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez (Cap04-Viento, L88), aportando una cifra de distancia
+específica (400-500 km) para comparar con gozzo2014subtropical (300-450 km) sobre la
+ubicación de los vientos máximos respecto al centro del ciclón subtropical.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 925 hPa (criterio de Gozzo et al. 2014/2017 — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+Es una tesis de maestría (USP, orientada por Rosmeri P. da Rocha) que investiga la
+relación entre la intensidad y los extremos de viento cerca de la superficie y los
+ciclones subtropicales en el sudeste de Brasil, motivada por la creciente relevancia
+económica de la explotación petrolera del pre-sal en esa costa. Combina una
+climatología descriptiva de observaciones locales de viento (estaciones y boyas) con
+un análisis de la relación entre viento y ciclones subtropicales mediante enfoques
+lagrangiano y euleriano, evaluando además el desempeño de dos reanálisis (CFSR y
+ERA5) frente a las observaciones.
+
+2. METODOLOGÍA
+
+- Datos observacionales: velocidad de viento medio diario de nueve estaciones
+  meteorológicas automáticas y cinco boyas meteoceanográficas en la costa sudeste de
+  Brasil, periodo 2008-2017 (2014-2017 para São Sebastião).
+- Reanálisis: CFSR y ERA5, validados contra las observaciones locales mediante
+  correlación, diagramas de Taylor y comparación de ciclo anual/media anual.
+- Identificación y clasificación de ciclones subtropicales: criterio de Gozzo et al.
+  (2014, 2017), basado en vorticidad relativa y umbral en 925 hPa.
+- Región de estudio (RG1): región de mayor concentración de ciclones subtropicales
+  en el sudeste de Brasil.
+- Análisis lagrangiano: dominio móvil de 20°×20° centrado en el centro del ciclón,
+  siguiendo su trayectoria completa; análisis euleriano: considera solo los
+  instantes con presencia de ciclón subtropical sobre la RG1.
+- Extremos de viento definidos por el percentil 95 de la velocidad; distancia de
+  cada extremo al centro del ciclón calculada y presentada como histograma de
+  frecuencia (Fig. 34 del documento).
+- Caso de estudio ilustrativo: el ciclón subtropical Anita (marzo 2010).
+
+3. HALLAZGOS CLAVE
+
+- Las correlaciones diarias entre reanálisis y observaciones locales de viento
+  oscilan entre 0.5 y 0.9, siendo mayores en las localidades donde ambas reanálisis
+  también representan mejor el ciclo anual.
+- En la mayoría de las estaciones sobre el continente, las reanálisis sobreestiman
+  la velocidad del viento, mientras que sobre el océano la subestiman.
+- Los vientos intensos se sitúan principalmente al este de la región con mayor
+  densidad de ciclones subtropicales (RG1), tanto en verano como en otoño.
+- La mayor parte de los extremos de viento se encuentra en un radio de
+  aproximadamente 400-500 km del centro del ciclón subtropical (Fig. 34), resultado
+  que la propia autora compara con Gozzo (2014): 350-450 km, con vientos máximos de
+  18-20 m/s en los ciclones en fase de transición extratropical-subtropical.
+- La mayor intensidad de viento se observa en verano, seguida de otoño; sin embargo,
+  en otoño los ciclones subtropicales representan la principal influencia sobre los
+  extremos de viento, al ser sistemas más intensos y organizados en esa estación,
+  mientras que en verano los máximos de intensidad están más influenciados por el
+  gradiente zonal de presión climatológico además de los propios ciclones.
+- En las composiciones de verano, el núcleo de mayor intensidad de viento se
+  desplaza levemente hacia el este y alcanza su máximo en +12h desde la formación,
+  con un valor medio de 9 m/s, ubicado en el sector este-sudeste del centro de baja
+  presión.
+- La mediana de presión central de los ciclones subtropicales supera 1010 hPa en
+  todas las estaciones del año (sistemas relativamente débiles en promedio), aunque
+  algunos eventos alcanzan menos de 990 hPa, sobre todo en verano.
+
+4. RELACIÓN CON TU TESIS
+
+En el Cap04-Viento (L88) se usa como cifra comparativa directa: "En el Atlántico
+Sur, tanto \citet{gozzo2014subtropical} como \citet{cardoso2020wind} encuentran que
+los vientos máximos se ubican a una distancia del centro —entre 300-450 km y
+400-500 km, respectivamente". Esta comparación de distancias empíricas sustenta la
+elección del tamaño de dominio lagrangiano (o su discusión) en el análisis de
+prototipos de viento de la tesis, y confirma —con datos independientes de otra tesis
+de maestría de la USP sobre la misma región (SBR)— que los máximos de viento no
+coinciden con el centro del ciclón sino con una banda periférica a varios cientos de
+kilómetros, coherente con el mecanismo de la CCB/WCB discutido en browning1986conceptual.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Esta tesis de maestría de Andressa A. Cardoso, dirigida por Rosmeri P. da Rocha en
+el IAG-USP, es el antecedente directo del artículo posterior cardoso2022synoptic
+(Cardoso, da Rocha y Crespo, 2022), que expande y publica en revista internacional
+buena parte de estos hallazgos con una climatología más extensa (1979-2015) y
+metodología Eureliana/Lagrangiana más refinada. Se enmarca en la línea de
+investigación de ciclones subtropicales del Atlántico Sur iniciada por Evans y Braun
+(2012) y consolidada por Gozzo et al. (2014, 2017), de la cual da Rocha (orientadora)
+es una de las principales referentes. En la tesis del usuario, esta línea de
+Cardoso/da Rocha se conecta con gozzo2014subtropical, gramcianinov2020analysis y
+padilhareinke2026characterization como el bloque de literatura brasileña sobre
+ciclones subtropicales del SBR.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es una tesis de maestría, no un artículo revisado por pares en el momento de
+  redacción original (aunque partes fueron luego publicadas como
+  cardoso2022synoptic); el rigor de revisión externa es menor.
+- El periodo de observaciones locales es relativamente corto (2008-2017, y aún más
+  corto para São Sebastião: 2014-2017), limitando la robustez estadística de la
+  validación de reanálisis.
+- El foco geográfico está limitado a la costa sudeste de Brasil (RG1) y a ciclones
+  subtropicales específicamente, no a la población general de ciclones
+  extratropicales del Atlántico Sudoccidental que abarca la tesis del usuario.
+- La comparación de distancias (400-500 km) no incluye explícitamente un análisis de
+  significancia estadística ni error asociado a la estimación del histograma de
+  frecuencia.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- ¿Por qué difieren las distancias reportadas por Gozzo (2014) y Cardoso (2020)
+  para el radio de los vientos máximos? Respuesta: probablemente por diferencias
+  metodológicas en la definición de "ciclón subtropical" y en la fase del ciclo de
+  vida considerada (Gozzo se enfoca en ciclones en transición extratropical-
+  subtropical con umbral de vorticidad en 925 hPa); ambas cifras son del mismo orden
+  de magnitud (300-500 km) y consistentes con el mecanismo de banda periférica del
+  WCB/CCB.
+- ¿Esta tesis se refiere a ciclones subtropicales o extratropicales en general?
+  Respuesta: específicamente a ciclones subtropicales del sudeste de Brasil (RG1);
+  la generalización a la población completa de ciclones extratropicales del
+  Atlántico Sudoccidental que hace el presente trabajo requiere cautela, aunque el
+  mecanismo de asimetría espacial es consistente.
+- ¿Qué reanálisis usa Cardoso y cómo se compara con el ERA5 usado en tu tesis?
+  Respuesta: usa CFSR y ERA5; ambos muestran desempeño similar frente a
+  observaciones locales, con sobreestimación sobre tierra y subestimación sobre el
+  océano — relevante para contextualizar los sesgos de ERA5 discutidos también vía
+  chen2024evaluation en la tesis del usuario.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/cardoso2020wind.md (resumen/abstract completos,
+y secciones de resultados sobre distancia de extremos al centro del ciclón,
+composiciones estacionales y comparación con Gozzo et al., 2014).

@@ -1,0 +1,137 @@
+============================================================
+CARTILLA DE ESTUDIO — Gozzo et al. 2017 — Fuentes de humedad en ciclogénesis subtropical
+============================================================
+
+REFERENCIA COMPLETA
+Gozzo, L. F., da Rocha, R. P., Gimeno, L., & Drumond, A. (2017). Climatology
+and numerical case study of moisture sources associated with subtropical
+cyclogenesis over the southwestern Atlantic Ocean. Journal of Geophysical
+Research: Atmospheres, 122(11), 5636-5653. DOI: 10.1002/2016JD025764
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez (Cap05-Precipitación) para sustentar el origen de la
+humedad remota que alimenta al warm conveyor belt (WCB) en la ciclogénesis del
+Atlántico Sudoccidental, en contraste con el aporte amazónico vía convergencia
+en 850 hPa documentado por rocha2016estudio.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: No aplica (trayectorias lagrangianas de humedad, FLEXPART; no rastrea el ciclón en sí)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Investiga el origen de la humedad atmosférica que alimenta la ciclogénesis
+subtropical en el suroeste del Atlántico Sur (región RG1, costa sureste de
+Brasil), combinando análisis lagrangiano de trayectorias de partículas
+(FLEXPART) con un estudio de caso numérico (WRF). El objetivo es determinar si
+el transporte remoto de vapor de agua o la evaporación local son la fuente
+dominante de humedad antes y durante la ciclogénesis subtropical, dado que
+estos sistemas se desarrollan sobre SST relativamente frías. Es relevante para
+la tesis porque documenta el mecanismo de suministro de humedad remota (desde
+el Atlántico tropical) que sostiene la actividad convectiva y, por extensión,
+la intensidad de la precipitación en los ciclones de la región.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA-Interim (1°x1°, 61 niveles, cada 6h), 1980-2015 (36
+  años).
+- Análisis lagrangiano: modelo de dispersión de partículas FLEXPART, que
+  calcula cambios de humedad específica a lo largo de trayectorias de
+  partículas retrocedidas en el tiempo (hasta 10 días) desde la región RG1
+  (30.5°-21.8°S, 49.5°-35.5°W) en el momento de la ciclogénesis subtropical
+  (definida según el criterio y algoritmo de rastreo de Gozzo et al. 2014); se
+  usan 150 eventos de ciclogénesis subtropical identificados en RG1 en el
+  periodo de 36 años (83 en verano, 37 en otoño, 30 en primavera; ninguno en
+  invierno).
+- Análisis euleriano complementario: flujo de humedad integrado verticalmente
+  (climatología y anomalías de 7 días previos a la ciclogénesis).
+- Estudio de caso numérico: WRF-ARW v3.5.1, resolución 15 km, dominio
+  70°W-10°W/37°S-3°S, para el ciclón subtropical "puro" CIC99 (4-7 marzo 1999),
+  con tres experimentos: CTRL (control), NNF ("no nonlocal fluxes", sin flujo de
+  humedad remoto) y NLF ("no local fluxes", sin evaporación local).
+
+3. HALLAZGOS CLAVE
+- La principal fuente de humedad para la ciclogénesis subtropical en RG1 es el
+  flanco norte de la Alta Subtropical del Atlántico Sur (SASH, ~30°S-10°W),
+  transportada por el flujo persistente de noreste; el sector tropical del
+  Atlántico Sur (entre 15°S y 10°S, cerca de la costa africana) es la principal
+  región fuente.
+- La contribución del Atlántico ecuatorial (norte de Guyana) y del chorro de
+  capas bajas sudamericano (SALLJ, que transporta humedad amazónica) a la RG1
+  es prácticamente nula durante la ciclogénesis subtropical: la mayor parte del
+  vapor de origen amazónico precipita sobre el continente antes de alcanzar la
+  RG1.
+- En todas las estaciones se observa una anomalía negativa de (E-P) sobre la
+  propia RG1 en los días previos a la ciclogénesis, indicando que el flujo
+  turbulento local de calor latente está por debajo de lo normal antes de la
+  formación del ciclón subtropical (papel secundario de la evaporación local).
+- El otoño es la estación con fuentes de humedad más intensas y difundidas,
+  coincidiendo con la ocurrencia de los ciclones subtropicales más intensos y
+  organizados documentados (Catarina, marzo 2004; Anita, marzo 2010; Arani,
+  marzo 2011; Cari, marzo 2015).
+- En el experimento numérico CIC99-NNF (sin flujo de humedad remoto), el ciclón
+  no logra desarrollarse: no se forma la vaguada fría en cortada (cutoff low) en
+  500 hPa ni el núcleo cálido en niveles bajos, y el sistema se disipa
+  rápidamente tras un mínimo incipiente.
+- En CIC99-NLF (sin evaporación local), el ciclón sí se forma inicialmente
+  (el flujo remoto es suficiente para la génesis) pero se disipa más rápido y
+  con menor intensidad que en CTRL, indicando que el flujo local es importante
+  para la profundización y mayor duración del sistema, aunque no imprescindible
+  para su génesis inicial.
+
+4. RELACIÓN CON TU TESIS
+- Cap05-Precipitación (L175): se cita para explicar las diferencias regionales
+  de intensidad de precipitación: "según \citet{gozzo2017climatology}, la
+  ciclogénesis en el Atlántico Sudoccidental depende del transporte de vapor
+  desde el Atlántico tropical y de los flujos locales de calor latente por
+  evaporación", en contraste con rocha2016estudio, que documenta que la
+  convergencia en 850 hPa aporta humedad amazónica de forma constante hacia SBR.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Este trabajo extiende directamente gozzo2014subtropical (climatología base de
+ciclones subtropicales en RG1, también citada en tu tesis), incorporando a
+Gimeno y Drumond —especialistas en seguimiento lagrangiano de fuentes de
+humedad (Stohl y James 2004; Gimeno et al. 2010; Drumond et al. 2008, 2014)—
+para investigar específicamente el origen del vapor de agua. Se enmarca en la
+tradición de análisis lagrangiano de fuentes de humedad aplicada a la
+ciclogénesis extratropical (Bao et al. 2006; Durán-Quesada et al. 2010), y
+complementa mecánicamente a gozzo2013air (que documenta el rol de los flujos
+turbulentos locales en la intensificación, no en el origen remoto de la
+humedad).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se enfoca únicamente en RG1 (aproximadamente equivalente a SBR),
+  sin cobertura de LPB ni ARG, las otras dos regiones de ciclogénesis de tu
+  tesis.
+- El estudio de caso numérico (CIC99) es un único evento; sus conclusiones
+  sobre el rol relativo de flujos locales/remotos se generalizan mediante el
+  análisis lagrangiano climatológico de 150 eventos, pero este último no
+  incluye experimentos de sensibilidad, solo diagnóstico observacional/reanálisis.
+- Los propios autores notan que la afirmación de que la evaporación local juega
+  un papel "secundario" contrasta con la intuición de que estos ciclones,
+  formándose sobre SST relativamente frías, dependerían fuertemente de la
+  humedad local; el hallazgo de que la anomalía de (E-P) local es negativa antes
+  de la ciclogénesis es una conclusión que depende de la ventana temporal
+  analizada (solo antes de la ciclogénesis, no durante/después).
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿La cita en tu tesis dice que "los flujos locales de calor latente por
+  evaporación" contribuyen a la ciclogénesis, pero el paper concluye que el
+  papel de la evaporación local es "secundario"? Respuesta: es coherente si se
+  matiza: el transporte remoto desde el Atlántico tropical es la fuente
+  dominante y necesaria (sin ella no hay ciclogénesis, según el experimento
+  NNF), mientras que la evaporación local, aunque de magnitud comparable o
+  incluso por debajo de la climatología antes del evento, contribuye a la
+  profundización y duración del sistema una vez iniciado (experimento NLF).
+- ¿Por qué el SALLJ (chorro de capas bajas) no es relevante para la humedad de
+  RG1 según este estudio, si sí lo es para SBR en rocha2016estudio? Respuesta:
+  el SALLJ transporta humedad amazónica principalmente hacia Paraguay,
+  Argentina, Uruguay y sur de Brasil (posición climatológica), no directamente
+  hacia RG1/costa sureste brasileña; de ahí que ambas fuentes (SASH tropical vs.
+  SALLJ amazónico) puedan coexistir según la subregión específica dentro de
+  SBR.
+- ¿Se aplica este mecanismo a LPB y ARG? Respuesta: el estudio no lo evalúa
+  directamente; se limita a RG1 (aprox. SBR), por lo que la extrapolación a
+  LPB/ARG en tu tesis es una generalización razonable pero no verificada por
+  este paper específico.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gozzo2017climatology.md

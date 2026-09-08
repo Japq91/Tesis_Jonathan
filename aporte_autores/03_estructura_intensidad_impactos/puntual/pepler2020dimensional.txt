@@ -1,0 +1,119 @@
+============================================================
+CARTILLA DE ESTUDIO — Pepler & Dowdy 2020 — estructura vertical e impactos de ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Pepler, A., & Dowdy, A. (2020). A Three-Dimensional Perspective on Extratropical Cyclone
+Impacts. Journal of Climate, 33(13), 5635-5649. American Meteorological Society, Boston MA,
+USA. DOI: 10.1175/JCLI-D-19-0445.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez, en el Capítulo 1 (Introducción), como evidencia hemisférica-sur que
+respalda el argumento de que las métricas escalares de intensidad son insuficientes para
+capturar los impactos en superficie de los ciclones extratropicales.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (Australia)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar + geopotencial en múltiples niveles (esquema de Melbourne) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio examina cómo varía en el mundo la frecuencia de ciclones "verticalmente
+organizados" (o profundos), es decir, sistemas que muestran una estructura coherente desde
+la superficie hasta al menos 500 hPa, en contraste con los ciclones "superficiales" (que no
+se extienden en altura) y los ciclones de "nivel superior" (sin baja en superficie). Usa
+seguimiento (tracking) multinivel aplicado a reanálisis ERA-Interim (1979-2016), con foco
+particular en el sudeste de Australia (las "east coast lows", ECL). El objetivo es demostrar
+que la profundidad/estructura vertical del sistema —y no solo su intensidad en una única
+variable escalar— determina la severidad de los impactos en superficie (viento, lluvia,
+rayos). Es relevante para la tesis porque constituye evidencia del Hemisferio Sur, análoga a
+estudios del Hemisferio Norte, de que la intensidad escalar de un ciclón no equivale
+linealmente a sus impactos.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA-Interim, campos de presión a nivel medio del mar (MSLP, 0.75° de
+  resolución, 6-horaria) y geopotencial en 925, 850, 700, 600, 500, 300 y 200 hPa (1979-2016).
+- Complementado con datos satelitales de precipitación TRMM 3B42 V7 (0.25°, 1998-2015) y
+  conteos de descargas eléctricas de la red WWLN (2005-2015).
+- Técnica: esquema de seguimiento de la Universidad de Melbourne (Murray & Simmonds 1991;
+  Simmonds & Keay 2000), aplicado tanto a MSLP como a cada nivel de geopotencial, rastreando
+  cada ciclón hacia arriba desde la superficie y hacia abajo desde 500 hPa dentro de un radio
+  de búsqueda de 500 km entre niveles adyacentes.
+- Clasificación en subcategorías: ciclones "superficiales someros" (shallow surface, <850 hPa),
+  "superficiales profundos" (deep surface, hasta 500 hPa), "de nivel medio" (midlevel),
+  "superiores someros" (shallow upper, identificados solo en 500 hPa) y "superiores profundos".
+- Región de estudio detallada: este de Australia (ECL region, 25°-40°S, 148°-160°E); análisis
+  global complementario de la distribución de ciclones profundos vs. someros.
+
+3. HALLAZGOS CLAVE
+- Globalmente, el 50.4% de los ciclones identificados en MSLP se pueden rastrear hasta 500 hPa
+  (52% en el Hemisferio Norte, 49% en el Hemisferio Sur), consistente con el 52% reportado
+  previamente por Lim y Simmonds (2007) para el Hemisferio Sur.
+- En la región ECL de Australia, los ciclones superficiales profundos presentan una velocidad
+  media del viento de 11.7 m/s en el momento de máxima intensidad, frente a 9.6 m/s en los
+  ciclones superficiales someros.
+- La precipitación acumulada dentro de 500 km del centro del ciclón es más del doble en los
+  ciclones profundos comparados con los ciclones someros de magnitud escalar comparable.
+- Los ciclones superiores someros (sin baja en superficie) producen tasas de lluvia muy bajas,
+  con acumulaciones promedio de apenas 2.8 mm, y menos de 1 mm/h dentro de 1000 km del centro.
+- Los ciclones de nivel medio y profundos presentan tasas máximas de lluvia más altas y
+  duraciones más largas que los ciclones superficiales someros, independientemente de si se
+  calcula como lluvia puntual máxima o promediada en un radio de 500 km.
+- Los ciclones someros tienden a formarse más cerca de la costa y ser predominantemente de
+  núcleo frío, mientras que los profundos son mayoría entre los sistemas de núcleo híbrido.
+
+4. RELACIÓN CON TU TESIS
+En el Capítulo 1 (Introducción, L57) el paper se usa para cerrar una cadena argumentativa
+sobre la insuficiencia de las métricas escalares de intensidad ciclónica, aportando evidencia
+específica del Hemisferio Sur (sudeste de Australia) que complementa los hallazgos de
+corner2025classification, sinclair2023relationship, cardoso2022synoptic y
+eisenstein2023identification (todos referidos al Hemisferio Norte). El texto de la tesis dice:
+"Esta insuficiencia de las métricas escalares se confirma también en el Hemisferio Sur:
+\citet{pepler2020dimensional} muestran para el sudeste de Australia que los ciclones profundos
+presentan vientos e intensidad de lluvia sistemáticamente mayores que los ciclones superficiales
+de magnitud escalar comparable (11.7 frente a 9.6 m/s de viento medio, y más del doble de
+precipitación acumulada)." Esta cifra es textual del paper y debe mantenerse exacta en la
+defensa.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Acacia Pepler y Andrew Dowdy trabajan en la Oficina de Meteorología de Australia (Bureau of
+Meteorology) y tienen una línea de investigación consolidada sobre las "East Coast Lows"
+(ECL) del sudeste de Australia y su seguimiento multinivel/vertical, construyendo
+directamente sobre el trabajo pionero de Lim y Simmonds (2007) para el Hemisferio Sur. Este
+paper extiende esa perspectiva vertical (2D en niveles individuales) hacia un marco
+tridimensional explícito que vincula estructura vertical con impactos de superficie
+(viento, lluvia, rayos), un enfoque metodológicamente afín al interés de tu tesis por superar
+las métricas de intensidad puramente escalares (p.ej. vorticidad en un único nivel) mediante
+la caracterización estructural del sistema.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Usa ERA-Interim, un reanálisis de generación anterior a ERA5, con menor resolución espacial
+  (0.75°) y posibles sesgos en la representación de sistemas intensos o de pequeña escala.
+- El esquema de seguimiento no está optimizado para los trópicos y puede subestimar la
+  frecuencia de ciclones tropicales o de radio pequeño.
+- El análisis detallado de impactos se circunscribe a una única región (sudeste de
+  Australia), por lo que la generalización directa a otras cuencas oceánicas (como el
+  Atlántico Sudoccidental) requiere cautela.
+- Los datos de precipitación satelital (TRMM) y de rayos (WWLN) cubren periodos más cortos
+  (1998-2015 y 2005-2015 respectivamente) que el registro completo de ciclones (1979-2016),
+  limitando la robustez estadística de los compuestos de impacto.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar un estudio de Australia para argumentar sobre el Atlántico Sudoccidental?
+  R: Se usa como evidencia de que el problema de la insuficiencia de métricas escalares de
+  intensidad es un patrón general observado en distintas cuencas del Hemisferio Sur, no un
+  artefacto regional; refuerza la motivación conceptual, no aporta datos directos de la
+  región de estudio.
+- P: ¿Qué significa "ciclón profundo" en este paper y es comparable a los criterios de
+  intensidad usados en tu tesis?
+  R: Un ciclón profundo es aquel cuya circulación se puede rastrear verticalmente desde la
+  superficie hasta al menos 500 hPa; es un criterio estructural/vertical, distinto del
+  criterio percentílico de vorticidad en superficie (p90) usado en la tesis, aunque ambos
+  apuntan al mismo problema: la intensidad escalar en un solo nivel no captura toda la
+  información relevante sobre impactos.
+- P: ¿La cifra de "más del doble de precipitación" es relativa o absoluta?
+  R: Es una comparación relativa entre categorías (ciclones profundos vs. superficiales
+  someros) en la acumulación de lluvia dentro de un radio de 500 km del centro del ciclón,
+  tal como reportado en la Tabla 6 del paper original.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/pepler2020dimensional.md

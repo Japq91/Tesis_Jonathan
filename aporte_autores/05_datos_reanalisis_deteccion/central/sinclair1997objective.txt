@@ -1,0 +1,153 @@
+============================================================
+CARTILLA DE ESTUDIO — Sinclair 1997 — Circulación como medida de intensidad ciclónica
+============================================================
+
+REFERENCIA COMPLETA
+Sinclair, M. R. (1997). Objective Identification of Cyclones and Their
+Circulation Intensity, and Climatology. Weather and Forecasting, 12(3),
+595-612. American Meteorological Society.
+DOI: 10.1175/1520-0434(1997)012<0595:OIOCAT>2.0.CO;2
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita en 3 pasajes clave (Cap02-Fundamentación, Cap01-Introducción,
+Cap04-Viento): recomienda directamente la variable de seguimiento (ζ850) usada
+por la base de datos de la tesis, y aporta el argumento crítico sobre las
+limitaciones de la vorticidad puntual como medida de intensidad.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (HS 1980-94, HN 1980-87)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad del viento del gradiente a 1000 hPa (ζgr — nivel distinto a los 850 hPa de la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Tercer artículo metodológico de la serie de Sinclair sobre climatología
+objetiva de ciclones. Presenta un procedimiento actualizado de identificación
+y seguimiento de ciclones de superficie a partir de análisis en malla,
+introduciendo un suavizado espacial de radio constante (Cressman) para
+eliminar distorsiones asociadas a la configuración de la malla, e ilustra las
+limitaciones de usar presión central o vorticidad puntual para inferir la
+intensidad ciclónica, proponiendo en su lugar una medida areal de
+circulación. Aplica la metodología a una climatología comparativa de invierno
+para ambos hemisferios (ECMWF, 1980-94 HS / 1980-87 HN).
+
+2. METODOLOGÍA
+- Datos: geopotencial de 1000 hPa de ECMWF en malla 2.5°x2.5°, HS 1980-94,
+  HN 1980-87.
+- Suavizado espacial previo mediante filtro de Cressman de radio constante
+  (r0=500 km) antes de calcular la vorticidad, para admitir consistentemente
+  una escala fija de perturbación en todo el dominio, evitando sesgos de
+  detección por variación del espaciado de malla con la latitud.
+- Detección de ciclones como máximos de vorticidad ciclónica del viento del
+  gradiente (ζgr, no geostrófico) — mejora sobre la aproximación geostrófica
+  de Sinclair (1994) — obtenida mediante solución iterativa de la ecuación
+  del viento del gradiente.
+- Nueva medida de "circulación" (unidades de circulación, CU = 10^7 m2 s^-1),
+  calculada integrando el producto |vorticidad|xárea sobre el dominio
+  ciclónico delimitado por búsqueda radial hasta el punto donde la
+  vorticidad se anula o cambia de signo — integra tamaño y tasa de rotación,
+  en contraste con medidas puntuales (vorticidad o presión central).
+- Software de interfaz de base de datos (TRAX) para selección automatizada
+  de casos por combinación de presión, vorticidad, circulación, movimiento,
+  ubicación geográfica y características temporales, para estudios de casos
+  o composites.
+
+3. HALLAZGOS CLAVE
+- Se demuestra con casos reales que presión central y vorticidad puntual
+  pueden ser engañosas como medidas de intensidad: un ciclón al sur de
+  Australia mostró aumento de presión central de ~5 hPa en 12 h mientras su
+  circulación y área de vorticidad ciclónica se fortalecían y expandían
+  (falso "debilitamiento" según presión); inversamente, otro sistema mantuvo
+  circulación prácticamente constante (12.5-12.8 CU) pese a una caída de
+  presión central de 25 hPa en 24 h (>1 Bergeron), atribuible enteramente a
+  migración hacia menor presión de fondo climatológica.
+- Dos ciclones con vorticidad central casi idéntica (~11-12 CVU) mostraron
+  circulaciones muy distintas (5.7 CU vs. 13.7 CU en un ejemplo del HN; 3.7
+  CU vs. 14.3 CU en otro), demostrando que sistemas de tamaño y estructura
+  muy diferentes pueden tener la misma vorticidad puntual.
+- Sensibilidad moderada al radio de suavizado (r0): al duplicar r0 de 500 a
+  1000 km, la circulación de tres vórtices cercanos a Nueva Zelanda disminuyó
+  en promedio <20%, mientras sus vorticidades puntuales centrales cayeron en
+  promedio 40% — la circulación es más robusta frente a cambios de
+  resolución/suavizado que la vorticidad puntual.
+- En la climatología comparativa de invierno, los ciclones del HN se forman
+  e intensifican cerca de las costas orientales de Asia y Norteamérica sobre
+  aguas cálidas (Kuroshio, Corriente del Golfo), migran hacia el este/polo y
+  decaen en el Golfo de Alaska e Islandia; los del HS están más uniformemente
+  distribuidos, formándose e intensificándose en latitudes medias cerca de
+  gradientes de SST y de las costas orientales de Sudamérica y Australia,
+  decayendo en latitudes más altas.
+- Existe evidencia de que los ciclones recién formados e intensificándose
+  poseen una estructura interna más "compacta" (mayor razón vorticidad
+  central/circulación) que los sistemas maduros y en decaimiento, en ambos
+  hemisferios.
+
+4. RELACIÓN CON TU TESIS
+- Cap02-Fundamentación (L40): se cita directamente para justificar la
+  elección metodológica de la variable de seguimiento: "Para resolver este
+  problema, Sinclair (1997) recomiendan utilizar la vorticidad relativa en
+  850 hPa (ζ850) como variable de seguimiento" — fundamento metodológico
+  explícito de la base de datos de trayectorias usada en la tesis.
+- Cap01-Introducción (L78): citado junto con sinclair1994objective para
+  indicar que este seguimiento por ζ850 "permite aislar la circulación del
+  sistema del flujo de fondo y capturar sistemas en etapas tempranas que los
+  algoritmos basados en presión mínima tienden a omitir".
+- Cap04-Viento (L311): usado en una discusión crítica más amplia: "quien
+  demostró que la circulación, al integrar el tamaño y la rotación del
+  sistema, constituye una medida más representativa de la intensidad real de
+  un ciclón que la vorticidad local" — argumento retomado para matizar las
+  limitaciones de usar vorticidad puntual (o viento) como única medida de
+  intensidad.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Tercer y más maduro artículo metodológico de la serie de Sinclair sobre
+ciclones del HS (con sinclair1994objective="SI94" y sinclair1995climatology
+="SI95" citados explícitamente por el propio autor como antecedentes
+directos). Introduce dos mejoras técnicas clave respecto a SI94: (1) el
+suavizado Cressman de radio constante, que resuelve el sesgo de detección
+dependiente de la latitud/malla; y (2) el viento del gradiente en lugar del
+geostrófico, y la medida de circulación en lugar de vorticidad puntual. El
+propio autor señala que su climatología del HS de 1980-94 "confirma los
+hallazgos principales de SI94 y SI95, pese al sesgo hacia bajas latitudes" de
+esos estudios previos (que no usaban suavizado Cressman). También dialoga con
+Shapiro & Keyser (1990) al mencionar la necesidad de vincular la selección
+automatizada de casos con la clasificación de ciclones según modelos
+conceptuales (paradigmas de oclusión).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- La elección del radio de suavizado (r0) es subjetiva y depende del
+  contexto de cada estudio; radios menores retienen más detalle de
+  mesoescala pero mayor ruido, radios mayores producen fusión de vórtices
+  cercanos en un solo sistema.
+- La discriminación de dominios individuales dentro de sistemas complejos
+  con múltiples centros de rotación sigue siendo, según el propio autor,
+  ambigua cuando dos vórtices se fusionan a mayor r0.
+- El estudio se limita a un análisis "breve" de la climatología (los propios
+  autores remiten a SI95 para discusión más detallada) y reconoce que la
+  selección de casos automatizada "no reduce la necesidad de una evaluación
+  sinóptica cuidadosa de cada caso seleccionado".
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué la tesis privilegia ζ850 y no la circulación (CU) que el
+  propio Sinclair (1997) muestra ser una medida más robusta de intensidad?
+  R: La circulación requiere delimitar un dominio ciclónico completo por
+  búsqueda radial (computacionalmente más costoso y con ambigüedades en
+  sistemas complejos), mientras ζ850 es una medida puntual estandarizada y
+  ampliamente usada en climatologías comparables (p. ej., coutodesouza2024new);
+  la tesis reconoce explícitamente esta limitación en Cap04-Viento (L311),
+  retomando el argumento de Sinclair (1997) para matizar la interpretación
+  de la dispersión en la intensidad.
+- P: ¿Qué evidencia da el paper de que la presión central puede ser engañosa
+  como medida de intensidad?
+  R: Presenta el caso de un ciclón al sur de Australia cuya presión central
+  subió ~5 hPa en 12 h mientras su circulación y área de vorticidad ciclónica
+  se fortalecían y expandían — un ciclón que se intensificaba dinámicamente
+  mostraba una señal de "debilitamiento" en la presión, por estar migrando
+  hacia una región de mayor presión de fondo.
+- P: ¿Qué tan sensible es la detección de ciclones al radio de suavizado
+  Cressman elegido?
+  R: Duplicar r0 de 500 a 1000 km reduce la circulación calculada en <20% en
+  promedio, pero la vorticidad puntual cae ~40% — la circulación es la
+  medida más robusta, aunque el propio autor advierte que la elección de r0
+  sigue siendo subjetiva y dependiente del objetivo del estudio.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/sinclair1997objective.md

@@ -1,0 +1,52 @@
+============================================================
+CARTILLA DE ESTUDIO — Dacre et al. 2023 — Eficiencia de precipitación en ciclones del Hemisferio Sur
+============================================================
+
+REFERENCIA COMPLETA
+Dacre, H. F.; Martinez-Alvarado, O.; Hodges, K. I. (2023). Precipitation Efficiencies in a Climatology of Southern Ocean Extratropical Cyclones. Journal of Geophysical Research: Atmospheres, 128(24), e2023JD039239. DOI: 10.1029/2023JD039239
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita 1 vez, en Cap05-Precipitación, para respaldar un hallazgo específico y muy preciso: el desfase temporal entre el máximo de precipitación y el máximo de intensidad dinámica en climatologías del Hemisferio Sur.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur (Océano Austral, alrededor de Australia)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (Hodges, T63) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio investiga la "eficiencia de precipitación" (qué proporción del vapor de agua disponible se convierte en lluvia) en una climatología de 400 ciclones extratropicales intensos del Océano Austral (Hemisferio Sur), usando un marco de referencia que se mueve con cada ciclón individual. Aborda una pregunta central: ¿cuánto tarda un ciclón en agotar su humedad inicial vía precipitación, y cómo se repone esa humedad a medida que el sistema evoluciona? Es relevante para el campo porque cuantifica, con un presupuesto de humedad completo (precipitación, evaporación, convergencia de flujo de humedad), la dinámica temporal de la fase precipitante de los ciclones extratropicales, un aspecto menos estudiado que la intensidad dinámica.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA5 (ECMWF), resolución de 0.25°, variables de precipitación, evaporación, humedad específica y viento en niveles isobáricos, con resolución temporal de 6 horas.
+- Identificación y seguimiento: algoritmo de Hodges (1995) aplicado a vorticidad relativa a 850 hPa truncada espectralmente a T63 (~1.88° en el ecuador); se excluyen sistemas de vida corta (<48h) o estacionarios (<1000 km de desplazamiento).
+- Muestra: los 400 ciclones más intensos (según vorticidad máxima T63) que alcanzan su máxima intensidad en los océanos que rodean Australia (90°-180°E, 20°-60°S), periodo mayo-septiembre (invierno austral extendido) de 1979-2021 (42 años).
+- Compositación: campos centrados en el ciclón (radio de 20°), rotados según la dirección de desplazamiento de cada sistema, siguiendo la metodología de Catto et al. (2010).
+- Presupuesto de humedad: ecuación de balance columna de agua (precipitación + evaporación + convergencia de flujo de humedad = tasa de cambio del vapor de agua en columna); cálculo de eficiencias de precipitación (PE), evaporación (EE) y convergencia de flujo de humedad (MFCE) en ventanas de 6 horas, y de escalas de tiempo de agotamiento (PDT: tiempo de agotamiento por precipitación; GDT: tiempo de agotamiento general considerando reposición).
+
+3. HALLAZGOS CLAVE
+- La vida media de los ciclones es de 102 horas, y en promedio alcanzan su intensidad máxima 42 horas después de la ciclogénesis; el máximo de precipitación ocurre, en promedio, 24 horas antes de la máxima intensidad dinámica.
+- La eficiencia de precipitación (PE) máxima alcanza -60%/6h a lo largo del frente cálido "bent-back" en la fase de máxima intensidad (es decir, hasta un 60% del vapor de agua disponible se convierte en precipitación en 6 horas).
+- Sin reposición, toda la humedad inicial dentro de 500 km del centro del ciclón se agotaría por precipitación en 24-36 horas desde la ciclogénesis (tiempo de agotamiento por precipitación, PDT).
+- La evaporación local y la convergencia de flujo de humedad (MFC) reponen, en promedio, 33% y 24% de la humedad perdida por precipitación respectivamente durante las primeras 36 horas cerca del centro, extendiendo la fase precipitante de 24-36 h hasta 60-72 h después de la ciclogénesis (más que duplicando su duración).
+- La corriente alimentadora (feeder airstream, FA) es clave: su rama anticiclónica transporta humedad hacia el centro del ciclón (reponiéndolo), mientras su rama ciclónica exporta humedad lejos del centro en la cola del río atmosférico.
+
+4. RELACIÓN CON TU TESIS
+Se usa en Cap05-Precipitación para sustentar la interpretación de que el desacople entre el máximo de intensidad dinámica y el máximo de precipitación durante la madurez, observado en tu propio análisis, es consistente con climatologías previas del Hemisferio Sur:
+- "El desacople entre la máxima intensidad dinámica y la máxima precipitación durante la madurez confirma una relación no lineal entre la vorticidad y los forzantes de la precipitación, consistente con climatologías del Hemisferio Sur donde el máximo de precipitación ocurre en promedio antes que el de intensidad \citep{dacre2023climatology}."
+Esta cita respalda directamente un hallazgo numérico específico del paper (el máximo de precipitación ocurre ~24h antes del máximo de intensidad), usado como punto de comparación externo para validar el patrón temporal observado en los ciclones del Atlántico Sudoccidental de tu estudio.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Hilary Dacre (Universidad de Reading) es una autora consolidada en climatologías de ciclones extratropicales, corrientes transportadoras (conveyor belts) y ríos atmosféricos, junto con Kevin Hodges (desarrollador del algoritmo de seguimiento de características usado aquí y ampliamente citado en la literatura de tracking de ciclones, incluido en trabajos de Hoskins y Hodges). El estudio se inscribe en la línea de "cyclone compositing" iniciada por Catto et al. (2010) y en la tradición de estudios de presupuesto de humedad y corrientes transportadoras (warm conveyor belt, cold conveyor belt, feeder airstream) de Browning, Carlson y la propia Dacre en trabajos previos sobre ríos atmosféricos.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El estudio se enfoca únicamente en los 400 ciclones más intensos del Océano Austral en la temporada de invierno austral extendido (mayo-septiembre); no es una climatología de todos los ciclones ni de todas las estaciones, lo que puede sesgar los promedios hacia sistemas particularmente intensos.
+- El análisis asume que todos los ciclones se intensifican y decaen a tasas similares al promediar (compositing), lo cual simplifica la heterogeneidad real de comportamientos individuales.
+- Los propios autores señalan que incluir la contribución de la evaporación en la región detrás del frente frío probablemente sobrestima ligeramente el tiempo general de agotamiento (GDT), ya que esa evaporación no está necesariamente disponible para alimentar al ciclón.
+- El dominio de estudio es el Pacífico/Índico Sur cerca de Australia, geográficamente distinto del Atlántico Sudoccidental de tu tesis; su uso como referencia es por analogía climatológica de Hemisferio Sur, no por coincidencia de cuenca oceánica.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué citar un estudio del Pacífico/Índico Sur (cerca de Australia) para tu tesis del Atlántico Sudoccidental? R: Porque el hallazgo citado (desfase entre máximo de precipitación y máximo de intensidad) es un patrón climatológico general del Hemisferio Sur, útil como punto de comparación externo, no porque comparta cuenca oceánica.
+- P: ¿Qué es la "eficiencia de precipitación" y cómo se calcula? R: Es la razón entre el agua perdida por precipitación y el vapor de agua disponible en columna (TCWV) al inicio de una ventana de 6 horas; se calcula mediante el presupuesto de humedad (precipitación + evaporación + convergencia de flujo).
+- P: ¿Qué mecanismo explica que la precipitación máxima ocurra antes que la intensidad máxima? R: Según Dacre et al., la disponibilidad decreciente de humedad a medida que el ciclón viaja hacia latitudes más altas (y polos), sumado a que el calentamiento diabático de la fase de máxima precipitación puede aún seguir intensificando dinámicamente al sistema.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/dacre2023climatology.md

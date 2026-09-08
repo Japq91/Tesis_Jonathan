@@ -1,0 +1,112 @@
+============================================================
+CARTILLA DE ESTUDIO — Sasaki et al. 2021 — variabilidad intraestacional de olas y PSA
+============================================================
+
+REFERENCIA COMPLETA
+Sasaki, D. K., Gramcianinov, C. B., Castro, B., y Dottori, M. (2021).
+Intraseasonal variability of ocean surface wind waves in the western South
+Atlantic: the role of cyclones and the Pacific South American pattern.
+Weather and Climate Dynamics, 2(4), 1149-1166. DOI: 10.5194/wcd-2-1149-2021
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una única vez, en el Capítulo 1 (Introducción), para justificar por qué
+el viento en superficie y la precipitación —y no el oleaje— son las variables de
+impacto elegidas para el análisis conjunto de la tesis.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (base de datos de Gramcianinov et al. 2020, línea Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Examina si la variabilidad intraestacional (30-180 días) de las olas superficiales
+oceánicas (altura significativa de ola, swh) en el Atlántico Sur occidental (wSA)
+está relacionada con la modulación por ciclones extratropicales y con el patrón
+teleconectivo Pacífico-Sudamericano (PSA). El estudio combina análisis EOF del
+viento zonal a 10 m (u10) y del swh con estadística de trayectorias de ciclones,
+en un dominio regional acotado (para no diluir la señal local dentro de un
+dominio de EOF de gran escala). Es un estudio observacional/reanálisis, relevante
+porque conecta el forzamiento sinóptico de los ciclones extratropicales con
+impactos costeros vía oleaje extremo, más allá de la duración del evento.
+
+2. METODOLOGÍA
+- Datos: reanálisis ERA5 (ECMWF) 1979-2019, viento en malla de 0.25°, oleaje
+  (modelo WAM acoplado) en malla de 0.5°/0.36°, datos horarios.
+- Ciclones: base "Atlantic extratropical cyclone tracks in 41 years of ERA5 and
+  CFSR/CFSv2" (Gramcianinov et al. 2020b), trayectorias identificadas con el
+  algoritmo TRACK (Hodges), duración mínima 24 h, desplazamiento mínimo 1000 km,
+  dominio 85-25°S, 75°W-20°E.
+- Técnica: EOF sobre anomalías filtradas (filtro pasabanda Lanczos, 30-185 días)
+  de u10, v10 y swh en el dominio wSA; análisis wavelet (Torrence y Compo 1998)
+  para identificar periodicidades dominantes; test de Monte Carlo (1000 muestras)
+  para significancia de diferencias espaciales de densidad de trayectorias;
+  composites de swh en el percentil 75 con test bootstrap (1000 realizaciones,
+  95% de confianza); evaluación de ERA5 contra boyas del programa PNBOIA (São
+  Paulo, Santa Catarina, Rio Grande, 2011-2018).
+
+3. HALLAZGOS CLAVE
+- El EOF1 de u10 explica 34.7% de la varianza (monopolo, núcleo en ~45°W, 40°S);
+  el EOF1 de swh explica 45.7% (también monopolo, mismo centro espacial).
+- El EOF2 de u10 (dipolo con centros entre 30-40°S y al sur de 40°S) explica
+  23.1% de la varianza; el EOF2 de swh explica 19.1%.
+- Correlaciones de las componentes principales (PC) a rezago 0: EOF1(u10)-
+  EOF1(swh) = 0.50; EOF2(u10)-EOF2(swh) = 0.52; EOF1(u10)-EOF2(swh) = -0.40;
+  EOF2(u10)-EOF1(swh) = 0.21.
+- El período dominante de la variabilidad intraestacional es de aproximadamente
+  40 días, con significancia (p<0.05) en la banda de 1 a 6 meses.
+- En la fase A del EOF1(u10), el swh medio máximo (>3.5 m) se concentra en
+  ~30°S, 45°W (bahía de São Paulo/SBB), con 60% de esos eventos asociados a mar
+  de viento local (shws); en la fase B, valores de 3.5-4.5 m se distribuyen en
+  orientación NW-SE con 40-50% de shws.
+- La correlación entre las PC mensuales y el índice SAM (Marshall 2003) a rezago
+  0 es menor a 0.1, indicando que el SAM no es relevante regionalmente; en
+  cambio, los compuestos de geopotencial (Z200/Z850) muestran un tren de onda
+  que se extiende desde 150°W en el Pacífico Sur hasta 20°W en el Atlántico Sur
+  occidental, consistente con el patrón PSA.
+
+4. RELACIÓN CON TU TESIS
+Capítulo 1 (Introducción), línea 15. Cita textual de tu propio texto: "Su
+influencia se extiende además al estado del mar: \citet{sasaki2021intraseasonal}
+demuestran que estos ciclones modulan la variabilidad intraestacional de las
+olas en el Atlántico Sur occidental, donde la configuración del viento en
+superficie determina la transferencia de energía hacia el oleaje, amplificando
+el riesgo costero más allá de la duración del evento sinóptico." El paper se usa
+para justificar que el viento en superficie y la precipitación, tomados en
+conjunto, son las dos variables más adecuadas para caracterizar el impacto de
+los ciclones en la costa, en línea con enfoques multivariable (zscheischler2018future).
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Grupo de oceanografía física de la Universidad de São Paulo (Sasaki, Castro,
+Dottori) en colaboración con Carolina Gramcianinov (Instituto de Astronomia,
+Geofísica e Ciências Atmosféricas, USP), autora también de la base de datos de
+trayectorias de ciclones del Atlántico Sur (Gramcianinov et al. 2020a/b/c, 2021)
+citada en otras partes de tu tesis. El estudio se inserta en la línea de clima de
+oleaje del Atlántico Sur (Campos et al. 2018; Godoi et al. 2020; Godoi y Torres
+Júnior 2020) y en la de teleconexiones PSA en escalas sinóptico-intraestacionales
+(O'Kane et al. 2016, 2017; Irving y Simmonds 2016), aportando el vínculo
+específico entre EOF de viento/oleaje regional y el tren de onda PSA.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- El análisis EOF se restringe deliberadamente a un dominio regional (wSA) para
+  evitar el suavizado de la señal local que ocurriría en un dominio de EOF de
+  escala de cuenca; esto limita, según los propios autores, la representación
+  completa del tren de onda PSA (que requeriría múltiples modos EOF en un
+  dominio más amplio, como discuten citando a O'Kane et al. 2017).
+- Los compuestos de eventos ciclónicos transitorios son reconocidos como
+  "ruidosos" por los propios autores, dada la naturaleza móvil de los sistemas.
+- El acoplamiento viento-oleaje es solo parcial, porque el swh integra tanto la
+  señal local (mar de viento) como la remota (swell/oleaje de fondo propagado),
+  lo que explica correlaciones moderadas (≤0.52) en vez de muy altas.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué se cita este estudio de oleaje si tu tesis no analiza el oleaje?
+  Se usa únicamente como evidencia de que los ciclones extratropicales generan
+  impactos costeros que trascienden el viento y la precipitación (también el
+  oleaje), reforzando la elección de variables de impacto de la tesis.
+- ¿Se usa la misma base de trayectorias de ciclones que la tuya? Ambas remiten a
+  metodología Gramcianinov/Hoskins-Hodges (TRACK) sobre ERA5, aunque debe
+  verificarse si corresponden a la misma versión/período de la base.
+- ¿Qué tan fuerte es la relación viento-oleaje reportada? Moderada (r≈0.5),
+  coherente con un acoplamiento parcial entre mar de viento local y swell remoto.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/sasaki2021intraseasonal.md

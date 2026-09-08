@@ -1,0 +1,157 @@
+============================================================
+CARTILLA DE ESTUDIO — Gramcianinov et al. 2020 — comparación ERA5 vs CFSR/CFSv2
+============================================================
+
+REFERENCIA COMPLETA
+Gramcianinov, C. B., Campos, R. M., de Camargo, R., Hodges, K. I., Guedes
+Soares, C. y da Silva Dias, P. L. (2020). Analysis of Atlantic extratropical
+storm tracks characteristics in 41 years of ERA5 and CFSR/CFSv2 databases.
+Ocean Engineering, 216, 108111. DOI: 10.1016/j.oceaneng.2020.108111
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario (con un rol metodológico puntual
+importante)
+Se cita en al menos seis pasajes en cuatro capítulos (Fundamentación,
+Introducción, Métodos, Viento). Su función principal es justificar la
+elección de ERA5 como reanálisis de la tesis y aportar cifras de referencia
+sobre la intensidad del viento en ciclones del Atlántico Sur para contrastar
+con los resultados propios.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (TRACK, Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+
+El estudio analiza y compara las trayectorias de tormentas extratropicales del
+Atlántico Norte y Sur usando dos reanálisis modernos con datos horarios: ERA5
+(ECMWF) y CFSR/CFSv2 (NCEP), durante 41 años (1979-2019/2020). Es un estudio
+de intercomparación de reanálisis (no un estudio de mecanismos físicos), cuyo
+objetivo es doble: (1) evaluar cómo el tracking horario en ambos reanálisis
+reproduce las características conocidas de las tormentas atlánticas frente a
+la literatura previa, y (2) cuantificar las diferencias entre ambos productos
+en cuanto a densidad de trayectorias, genesis, e intensidad del viento. Un
+producto derivado relevante es una base de datos de trayectorias de ciclones
+de libre acceso para apoyar aplicaciones de ingeniería oceánica y evaluación
+de riesgos costeros.
+
+2. METODOLOGÍA
+
+- Reanálisis comparados: ERA5 (31 km / 0.28125°, salidas horarias 1979-2020,
+  IFS CY41R2, 4D-Var) y CFSR/CFSv2 (T382, ~38 km nativo, interpolado a
+  0.5°×0.5°, salidas horarias derivadas de análisis + pronósticos horarios
+  hasta el siguiente ciclo de asimilación).
+- Identificación y tracking: programa TRACK (Hodges 1994, 1995, 1999) sobre
+  vorticidad relativa a 850 hPa calculada con viento zonal y meridional en
+  coordenadas esféricas, con filtrado espectral T42 y remoción de números de
+  onda zonal ≤5 para aislar la escala sinóptica (siguiendo Hoskins & Hodges
+  2002).
+- Dominio: Atlántico Norte y Atlántico Sur a latitudes medias y altas.
+- Se evalúan: densidad de trayectorias, densidad de ciclogénesis,
+  correspondencia entre tormentas idénticas en ambos productos ("matched
+  cyclones"), y distribución de velocidad máxima del viento a 10 m (media,
+  mediana, percentiles 90 y 95) por estación (DJF para el Atlántico Norte,
+  JJA para el Atlántico Sur).
+
+3. HALLAZGOS CLAVE
+
+- El 92.7% de los ciclones de ERA5 en el Atlántico Norte y el 93.1% en el
+  Atlántico Sur tienen una tormenta idéntica correspondiente en CFSR/CFSv2.
+- ERA5 presenta 3.7% más ciclones que CFSR/CFSv2 (45.2 ciclones por año),
+  relacionado con su mayor resolución espacial.
+- Para el Atlántico Sur en invierno austral (JJA), la velocidad máxima media
+  del viento a 10 m de los ciclones es de 21.2±4.8 m/s en ERA5 (percentil 90:
+  27.3 m/s; percentil 95: 29.3 m/s), y de 23.4±4.8 m/s en CFSR/CFSv2
+  (percentil 90: 30.2 m/s; percentil 95: 32.1 m/s) — es decir, CFSR/CFSv2
+  reporta sistemáticamente ciclones más intensos que ERA5 en los percentiles
+  superiores.
+- El uso de datos horarios (en vez de cada 6 horas) mejora el tracking en
+  zonas de orografía compleja, como el sotavento de los Andes en Sudamérica y
+  el este de Groenlandia en el Atlántico Norte.
+- Las diferencias de densidad de ciclogénesis entre productos son mayores en
+  el Atlántico Sur que en el Atlántico Norte, y CFSR/CFSv2 favorece la génesis
+  mar afuera respecto a ERA5; esto se atribuye en parte a discontinuidades de
+  seguimiento cuando CFSR/CFSv2 cambia de paso de pronóstico a paso de
+  análisis, lo que puede fragmentar una trayectoria única en dos.
+- Las discrepancias entre reanálisis se reducen cuando se compara ERA5 solo
+  contra CFSv2 (la versión más reciente y operacional), particularmente en el
+  Atlántico Sur.
+
+4. RELACIÓN CON TU TESIS
+
+- Cap02-Fundamentacion (L29): sustenta que los ciclones del Atlántico
+  Sudoccidental pueden alcanzar diámetros de circulación de hasta ~2000 km en
+  su madurez. ADVERTENCIA DE FIDELIDAD: esta cifra de ~2000 km de diámetro NO
+  se encontró de forma literal en el texto del artículo (que reporta
+  estadísticas de velocidad de viento, densidad de trayectorias y
+  correspondencia entre productos, pero no un diámetro característico de
+  circulación); conviene verificar si esta cifra proviene de otra fuente o de
+  un cálculo propio de la tesis antes de presentarla como resultado directo de
+  Gramcianinov et al. (2020).
+- Cap01-Introduccion (L28, L85): se cita como uno de los estudios que
+  consolidan, junto con padilhareinke2026characterization, la caracterización
+  robusta de la distribución espacio-temporal de los ciclones del Atlántico
+  Sur, y como validación de que ERA5 ofrece una representación superior de la
+  intensidad de vientos superficiales y de la estructura ciclónica frente a
+  productos de generaciones previas — esto es fiel al hallazgo de que ERA5
+  captura más ciclones y estructuras de mesoescala, aunque conviene matizar
+  que en los percentiles superiores es CFSR/CFSv2, no ERA5, quien reporta
+  vientos más intensos (posible sesgo bajo de ERA5 en los extremos).
+- Cap03-Metodos (L23): reutiliza la misma justificación de elección de ERA5
+  presentada en la Introducción.
+- Cap04-Viento (L54, L56): usa directamente las cifras de velocidad máxima
+  media reportadas por el artículo (21.2±4.8 m/s en ERA5 JJA-Atlántico Sur,
+  23.4±4.8 m/s en CFSR/CFSv2) como punto de comparación externo para los
+  resultados propios de intensidad del viento en el subconjunto p90 —esta es
+  la cita más precisa y textualmente fiel de todas.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Este trabajo es la segunda publicación de la línea de Gramcianinov sobre
+climatología objetiva de tormentas, y funciona como puente metodológico: valida
+el reanálisis ERA5 —adoptado por la tesis del usuario— frente al reanálisis
+CFSR usado en gramcianinov2019properties. Forma parte también de la agenda de
+Ricardo M. Campos y Carlos Guedes Soares en ingeniería oceánica y clima de olas
+extremas, que se conecta directamente con gramcianinov2023impact (vínculo
+ciclón-oleaje). El estudio dialoga con comparaciones previas de reanálisis para
+tormentas (Hodges et al. 2011; Stopa y Cheung 2014) y extiende esa tradición al
+período más reciente y a datos horarios.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- Es un estudio de intercomparación de productos, no evalúa contra
+  observaciones independientes (p. ej., boyas o altímetros) dentro de este
+  artículo; la evaluación de sesgos absolutos frente a la realidad se apoya en
+  estudios previos citados (Stopa y Cheung 2014; Belmonte Rivas y Stoffelen
+  2019).
+- El uso de datos horarios en CFSR/CFSv2 combina análisis con pronósticos
+  horarios hasta el siguiente ciclo, lo que el propio artículo reconoce que
+  puede introducir cambios abruptos y discontinuidades de seguimiento
+  ("continuity issue in CFSR/CFSv2").
+- Los autores notan que el filtrado espectral T42 no elimina completamente el
+  efecto de la resolución sobre la representación de los ciclones en ERA5.
+- No se profundiza en mecanismos físicos regionales (eso corresponde a
+  gramcianinov2019properties y gramcianinov2024early); es un estudio
+  esencialmente estadístico-comparativo.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Por qué eligió ERA5 y no CFSR/CFSv2 si este último reporta vientos más
+  intensos en los percentiles superiores?" Respuesta: ERA5 ofrece mayor
+  resolución espacial y temporal, mejor consistencia en la asimilación de
+  datos (sin el salto pronóstico-análisis de CFSR/CFSv2) y cobertura temporal
+  más extensa (1979-2020 frente a 1979-2011 de CFSR); el posible sesgo bajo de
+  ERA5 en los extremos se reconoce explícitamente como limitación de la tesis
+  (Sección de datos ERA5, con apoyo adicional de chen2024evaluation).
+- "¿Qué tan similares son las trayectorias de ciclones entre ERA5 y CFSR/
+  CFSv2 en el Atlántico Sur?" Respuesta: 93.1% de correspondencia directa
+  entre tormentas idénticas, según Gramcianinov et al. (2020).
+- "¿De dónde proviene la cifra de ~2000 km de diámetro de circulación que cita
+  en la Fundamentación?" Respuesta pendiente de verificar: no se encontró
+  textualmente en este artículo; se recomienda confirmar la fuente exacta o
+  recalcularla a partir de los propios datos de la tesis antes de la defensa.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gramcianinov2020analysis.md (abstract,
+Sección 1 Introducción, Sección 2.1-2.2 Datasets y tracking, Sección 4
+resultados de correspondencia de trayectorias y Tabla 4 de velocidad de
+viento, Sección 5 Conclusiones).

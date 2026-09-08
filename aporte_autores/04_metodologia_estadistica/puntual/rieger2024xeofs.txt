@@ -1,0 +1,92 @@
+============================================================
+CARTILLA DE ESTUDIO — Rieger & Levang 2024 — librería xeofs (EOF/MEOF en Python)
+============================================================
+
+REFERENCIA COMPLETA
+Rieger, N., y Levang, S. J. (2024). xeofs: Comprehensive EOF analysis in Python
+with xarray. Journal of Open Source Software, 9(93), 6060. DOI: 10.21105/joss.06060
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual (herramienta metodológica)
+Se cita una única vez, en el Capítulo 3 (Métodos), como la implementación
+computacional concreta sobre la que corre todo el análisis EOF/MEOF de la tesis.
+
+HEMISFERIO DE ESTUDIO: No aplica (estudio metodológico/conceptual sin dominio geográfico propio)
+VARIABLE DE RASTREO DE CICLONES: No aplica (no es un algoritmo de rastreo de ciclones: caso único, revisión, síntesis conceptual o método estadístico)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+No es un artículo de hallazgos científicos sino una "software paper" publicada en
+el Journal of Open Source Software (JOSS), una revista que revisa por pares la
+calidad del código, su documentación, pruebas automatizadas y utilidad para la
+comunidad, no un experimento u observación. xeofs es una librería de Python de
+código abierto que implementa un conjunto amplio de métodos de descomposición en
+funciones ortogonales empíricas (EOF/PCA) —incluyendo variantes rotadas (Varimax/
+Promax), complejas (Hilbert EOF), extendidas y multivariadas (MEOF), así como
+Maximum Covariance Analysis (MCA)— diseñada para operar de forma nativa sobre
+estructuras de datos etiquetadas xarray (DataArray/Dataset), con soporte opcional
+de cómputo distribuido/"out-of-core" vía dask. Su relevancia para la tesis es
+puramente instrumental: es el motor de cálculo del MEOF.
+
+2. METODOLOGÍA
+No aplica en el sentido de datos científicos, muestra o período de estudio: se
+trata de una librería de software. Metodológicamente, xeofs formaliza el álgebra
+lineal estándar de EOF/SVD sobre arrays n-dimensionales etiquetados, preservando
+las coordenadas (tiempo, latitud, longitud, variable) a través de toda la
+descomposición, gestionando datos faltantes, ponderación por área/latitud y el
+apilamiento ("stacking") de múltiples variables o dominios para el caso
+multivariado (MEOF). Sigue una API modular al estilo scikit-learn (fit/transform).
+
+3. HALLAZGOS CLAVE
+- No hay "hallazgos" científicos que reportar; los criterios de una nota JOSS son
+  la corrección del software, la calidad de la documentación/ejemplos, la
+  cobertura de pruebas y la utilidad para la comunidad científica.
+- La librería cubre EOF estándar, EOF rotado, EOF complejo/Hilbert, MCA, CCA y
+  análisis multivariado (MEOF), integrados nativamente con xarray.
+- Soporta escalado a grandes volúmenes de datos mediante dask.
+
+4. RELACIÓN CON TU TESIS
+Capítulo 3 (Métodos), donde se justifica la decisión de no aplicar remoción de
+tendencia (detrend) al índice de eventos discretos e irregularmente espaciados
+(1979-2020) usado como eje muestral. Cita textual de tu propio texto:
+"La implementación utiliza la biblioteca \texttt{xeofs} \citep{rieger2024xeofs}
+sobre estructuras \texttt{xarray} \citep{hoyer2017xarray}." Es decir, xeofs es la
+herramienta computacional concreta con la que se ejecuta el MEOF sobre las
+características morfológicas de los sistemas ciclónicos por fase de desarrollo.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Rieger y Levang mantienen xeofs como proyecto activo de código abierto (con
+repositorio público en GitHub), en la tradición de librerías previas de EOF en
+Python, notablemente "eofs" de Dawson (2016) —la misma que usa explícitamente
+sasaki2021intraseasonal, otro de los papers de esta tesis, para su análisis EOF
+de viento y oleaje—. xeofs se diferencia por su integración nativa con xarray/
+dask y por ofrecer, además del EOF estándar, variantes rotadas, complejas y
+multivariadas (MEOF, MCA) en un único paquete modular.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+No corresponde evaluar "limitaciones científicas" de una nota de software. Sus
+limitaciones son de índole técnica: el rendimiento depende de la implementación
+subyacente de xarray/dask; la elección de método (EOF simple vs. rotado, con o
+sin ponderación de área, con o sin detrend) recae enteramente en el usuario, no
+en la librería; y, como todo software en desarrollo activo, su comportamiento
+puede cambiar entre versiones si no se fija la versión utilizada.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué usar xeofs y no la librería "eofs" de Dawson, empleada en otros
+  trabajos citados en tu tesis (p.ej. Sasaki et al. 2021)? Porque xeofs integra
+  de forma nativa el análisis multivariado (MEOF) requerido en el Capítulo 3,
+  además de trabajar directamente sobre xarray/dask.
+- ¿La elección de la librería puede alterar los resultados del EOF? El álgebra
+  lineal subyacente (SVD) es la misma independientemente del software; las
+  diferencias posibles provienen del manejo de datos faltantes o ponderación,
+  no del método en sí.
+- ¿Por qué no se aplicó detrend antes del MEOF? Porque el eje muestral es un
+  índice de eventos discretos con espaciado temporal irregular (no una serie
+  temporal continua), por lo que un ajuste lineal cronológico asumiría
+  erróneamente un espaciado constante; el objetivo es aislar la morfología
+  inter-sistémica por fase, no tendencias climáticas de baja frecuencia.
+
+------------------------------------------------------------
+Fuente verificada: NO EXISTE archivo .md/.pdf para esta referencia — cartilla
+elaborada a partir de los metadatos bibliográficos (BIB), conocimiento general
+confiable sobre la librería xeofs (nota de software JOSS, código abierto,
+xarray/dask) y el contexto de citación real en la tesis (Cap03-Metodos, L156).

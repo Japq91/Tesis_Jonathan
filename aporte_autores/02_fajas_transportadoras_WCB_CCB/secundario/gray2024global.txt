@@ -1,0 +1,138 @@
+============================================================
+CARTILLA DE ESTUDIO — Gray, Volonté, Martínez-Alvarado & Harvey 2024 — climatología global de ciclones con sting jet (incluye Hemisferio Sur)
+============================================================
+
+REFERENCIA COMPLETA
+Gray, S. L., Volonté, A., Martínez-Alvarado, O., & Harvey, B. J. (2024). A
+global climatology of sting-jet extratropical cyclones. Weather and Climate
+Dynamics, 5(4), 1523-1544. DOI: 10.5194/wcd-5-1523-2024
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita una vez en el Capítulo 04 (Resultados de Viento), Sección
+sec:kde_espacial_p90, para argumentar que el mecanismo de seclusión cálida y
+fractura frontal (CCB/sting jet) responsable de la hiperconcentración de
+viento en p90 no es exclusivo del Atlántico Norte, sino un fenómeno
+hemisféricamente global, aunque de menor frecuencia relativa en el Hemisferio
+Sur.
+
+HEMISFERIO DE ESTUDIO: Ambos hemisferios (comparación/estudio explícito de los dos) (incluye explícitamente el Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa a 850 hPa (TRACK, Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Es la primera climatología global (ambos hemisferios, tres cuencas oceánicas:
+Atlántico Norte, Pacífico Norte y Hemisferio Sur) de ciclones extratropicales
+que contienen precursores de "sting jet" —el flujo descendente de mesoescala
+que se forma en la región de fractura frontal de ciclones con seclusión
+cálida (modelo Shapiro-Keyser) y que puede producir algunos de los vientos
+superficiales más destructivos asociados a estos sistemas—. Hasta este
+trabajo, toda la investigación sobre sting jets se había concentrado casi
+exclusivamente en ciclones que cruzan el Atlántico Norte y afectan Europa
+noroccidental; los autores extienden el diagnóstico a 43 inviernos extendidos
+de ERA5 en ambos hemisferios, aplicándolo a más de 10.000 ciclones con
+seclusión cálida en el decil superior de intensidad.
+
+2. METODOLOGÍA
+- Datos: ERA5 (ciclo IFS Cy41r2, ~31 km, 137 niveles), seguimiento con el
+  algoritmo TRACK de Hodges sobre vorticidad relativa suavizada a 850 hPa.
+- Periodo: 43 inviernos extendidos —octubre-marzo en el HN (1979-1980 a
+  2021-2022) y abril-septiembre en el HS (1980-2022)—, extratrópicos definidos
+  como 40-80° de latitud.
+- Selección: solo ciclones en el decil superior (percentil 90) de intensidad
+  máxima (ξ850 suavizada), con umbrales calculados por separado para cada
+  hemisferio (12.72×10⁻⁵ s⁻¹ en el HN, 13.95×10⁻⁵ s⁻¹ en el HS).
+- Identificación de seclusión cálida: algoritmo novedoso de segmentación de
+  imágenes tipo "watershed" sobre la temperatura potencial de bulbo húmedo a
+  850 hPa (θw), refinado y validado con un conjunto de 33 tormentas notables.
+- Diagnóstico de precursor de sting jet (SJP): métrica de inestabilidad
+  simétrica condicional (CSI) vía DSCAPE (Martínez-Alvarado et al. 2013),
+  aplicada a un dominio de ±15° en torno a cada ciclón, desde 42 h antes hasta
+  42 h después del momento de máxima intensidad.
+- Se usan también datos observacionales de viento en superficie (CCMP3.0,
+  producto combinado de escaterómetros y ERA5 corregido por sesgo) para
+  verificación independiente.
+
+3. HALLAZGOS CLAVE
+- La fracción de ciclones con seclusión cálida aumenta de forma más que
+  lineal con la intensidad: de 0.42-0.45 en el decil más débil a 0.73-0.77 en
+  el decil más intenso, de forma similar en ambos hemisferios y en las tres
+  cuencas.
+- Del total de ciclones con seclusión cálida evaluados (>10.000), 29% tuvo
+  SJP, 55% no lo tuvo y 16% fue marginal; de forma equivalente, ~21% de todos
+  los ciclones del decil superior de intensidad global podría tener sting
+  jet.
+- Los ciclones con SJP son marcadamente menos frecuentes en el Hemisferio Sur
+  que en el Hemisferio Norte: 20% de los ciclones con seclusión cálida (15%
+  de todos los ciclones del decil superior) en el HS, frente a 37% (27%) en
+  el HN.
+- Los ciclones con SJP son globalmente más intensos que los que no lo tienen,
+  en términos de ξ850 máxima, viento máximo de bajo nivel, anomalía de MSLP y
+  tasa de profundización en 24 h.
+- Los compuestos de viento a 850 hPa de los ciclones con SJP —incluyendo el
+  compuesto del Hemisferio Sur— muestran una región de vientos superiores a
+  32 m/s en el núcleo del sistema.
+- El viento observado (CCMP3.0, casi-superficie) confirma la señal de ERA5:
+  la mediana del viento máximo observado en ciclones con SJP es más de 3 m/s
+  superior a la de los ciclones sin SJP.
+- Los ciclones con SJP tienden a generarse más cerca del ecuador y a
+  desplazarse más rápido que los que no lo tienen, en ambos hemisferios.
+
+4. RELACIÓN CON TU TESIS
+- Cap04-Viento (Sección sec:kde_espacial_p90): "Esta recurrencia no se limita
+  al Atlántico Norte: la climatología global más reciente de
+  \citet{gray2024global}, que rastrea precursores de \textit{sting jet} en
+  los tres océanos durante 43 inviernos, muestra que el mecanismo de
+  seclusión cálida y fractura frontal asociado a esta concentración de
+  viento también opera en el Hemisferio Sur, aunque con menor frecuencia
+  relativa (${\sim}$15\% del decil superior de intensidad, frente a
+  ${\sim}$27\% en el Hemisferio Norte)."
+Se usa para respaldar, con la única climatología global publicada hasta la
+fecha, que el mecanismo físico invocado para explicar la hiperconcentración
+noroeste del wind10 p90 (CCB/fractura frontal) tiene validez demostrada más
+allá del Atlántico Norte, incluyendo explícitamente el Hemisferio Sur.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Suzanne Gray, Ambrogio Volonté, Oscar Martínez-Alvarado y Ben Harvey
+(Universidad de Reading) son el grupo de referencia mundial en investigación
+de sting jets, desde su identificación inicial en 2004 (revisión de la Gran
+Tormenta de Octubre de 1987) hasta las climatologías del Atlántico Norte de
+Martínez-Alvarado et al. (2012) y Hart et al. (2017). Este trabajo de 2024
+es la culminación de esa línea, extendiendo por primera vez el diagnóstico a
+escala global; se relaciona directamente con \citet{gray2020prototype} (la
+herramienta operativa precursora, también citada en esta tesis) y con
+\citet{clark2018sting} (la revisión de sting jets ya citada en Fundamentos).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- ERA5 tiene resolución insuficiente (~31 km) para resolver explícitamente
+  el sting jet en sí; el estudio diagnostica solo "precursores" (condiciones
+  favorables vía CSI/DSCAPE), no la existencia confirmada del chorro.
+- El Hemisferio Sur carece de casos de estudio publicados que verifiquen
+  observacionalmente la presencia real de sting jets (a diferencia del
+  Atlántico Norte, con múltiples casos documentados); los propios autores
+  señalan esto como una pregunta abierta.
+- Las diferencias en densidad de trayectorias y de génesis entre ciclones
+  con y sin SJP podrían confundir parcialmente las comparaciones de
+  intensidad entre ambas categorías.
+- El diagnóstico depende de umbrales de CSI calibrados con un conjunto
+  reducido de 33 tormentas notables, mayoritariamente del Atlántico Norte.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: Si el sting jet es menos frecuente en el Hemisferio Sur, ¿sigue siendo
+  válido invocarlo para explicar tu núcleo de viento p90?
+  R: Sí; Gray et al. (2024) muestran que el mecanismo opera en el HS (15% del
+  decil superior), solo que con menor frecuencia relativa que en el HN, lo
+  cual es consistente con —y no contradice— que el subconjunto p90 de esta
+  tesis (los sistemas más intensos, por diseño) exhiba esta firma cuadrantal.
+- P: ¿Este estudio confirma directamente un sting jet en el Atlántico
+  Sudoccidental? R: No; es una climatología de precursores basada en ERA5,
+  sin casos de estudio verificados en esta cuenca específica; se usa como
+  evidencia de plausibilidad global del mecanismo, no como confirmación
+  directa para la región de estudio.
+- P: ¿Qué variable observacional usan para verificar independientemente los
+  resultados de ERA5? R: CCMP3.0, un producto combinado de escaterómetros
+  satelitales y ERA5 corregido por sesgo, que confirma que los ciclones con
+  precursor de sting jet tienen vientos observados sistemáticamente más
+  intensos.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/gray2024global.md

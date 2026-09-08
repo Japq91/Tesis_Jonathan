@@ -1,0 +1,56 @@
+============================================================
+CARTILLA DE ESTUDIO — Reboita et al. 2010 — Climatología de ciclogénesis del Atlántico Sur (RegCM3)
+============================================================
+
+REFERENCIA COMPLETA
+Reboita, Michelle Simões; da Rocha, Rosmeri Porfírio; Ambrizzi, Tércio; Sugahara, Shigetoshi. (2010). South Atlantic Ocean cyclogenesis climatology simulated by regional climate model (RegCM3). Climate Dynamics, 35(7-8), 1331-1347. DOI: 10.1007/s00382-009-0668-7
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 6 veces en 4 capítulos distintos (Cap01-Introducción x2, Cap02-Fundamentación x2, Cap04-Viento, Cap06-MEOF). Es la referencia fundacional que establece la regionalización en tres focos de ciclogénesis (RG1/RG2/RG3) que estructura buena parte del marco regional de la tesis, y además sustenta un argumento clave sobre la variabilidad de intensidad en la fase incipiente del ciclo de vida usado en el análisis MEOF propio.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Sur
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa del viento a 10 m (no ζ850; distinta de la usada en la tesis)
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+Evalúa la capacidad del modelo climático regional RegCM3 (anidado en el reanálisis NCEP/DOE) para simular la climatología de ciclogénesis del Atlántico Sur (SAO) durante 1990-1999, comparando los resultados simulados contra el reanálisis forzante. A partir de ahí, establece y caracteriza tres regiones cicloge­néticas preferenciales en la costa este de Sudamérica: RG1 (sur/sureste de Brasil), RG2 (desembocadura del Río de la Plata/Uruguay) y RG3 (sureste de Argentina). Es uno de los estudios pioneros en cuantificar sistemáticamente estas tres regiones con un modelo regional de clima, sentando las bases de la regionalización usada en gran parte de la literatura posterior sobre ciclones extratropicales de Sudamérica.
+
+2. METODOLOGÍA
+- Modelo: RegCM3 (núcleo dinámico hidrostático NCAR-PSU MM5), resolución horizontal de 60 km, 18 niveles sigma-presión, esquema BATS para superficie, esquema de Zeng para flujos oceánicos, esquema Grell con cierre Fritsch-Chappell para convección.
+- Forzante: reanálisis NCEP/DOE (R2), resolución 2.5°, 17 niveles, 4 salidas diarias; SST de Reynolds et al. (2002), resolución 1°.
+- Dominio de simulación: 5°-60°S, 84°W-15°E; período simulado 1989 (spin-up)-1999, análisis 1990-1999 (10 años).
+- Algoritmo de seguimiento: basado en Sugahara (2000), adaptado de Sinclair (1994/1995/1997); identifica mínimos de vorticidad relativa del viento a 10 m mediante búsqueda de vecino más cercano (24 puntos de grilla), con suavizado previo por método de Cressman.
+- Umbrales probados: ζ10 ≤ -1.5×10⁻⁵ s⁻¹ ("f-1.5", todos los sistemas) y ζ10 ≤ -2.5×10⁻⁵ s⁻¹ ("f-2.5", sistemas inicialmente más intensos); vida mínima 24 h, vida máxima 10 días.
+- Densidad de ciclogénesis calculada en celdas de 5°×5°, normalizada y multiplicada por 10⁴ para visualización.
+
+3. HALLAZGOS CLAVE
+- En 10 años se detectaron 2,760 (RegCM3) y 2,787 (NCEP) ciclogénesis con umbral f-1.5 (medias anuales de 276.0±11.2 y 278.7±11.1 respectivamente), una subestimación media del RegCM3 de solo -1%.
+- Para los sistemas inicialmente más intensos (f-2.5): 948 (RegCM3) vs 1,047 (NCEP) en 10 años (medias anuales 94.8±9.8 vs 104.7±14.3), una subestimación de -9.5%: el modelo subestima más a los sistemas intensos que a los débiles.
+- Se confirman tres regiones ciclogenéticas: RG1 (sur/sureste de Brasil), RG2 (La Plata/Uruguay, ~35°S) y RG3 (sureste de Argentina, ~42-48°S).
+- Tabla 3: total de ciclogénesis 1990-1999 por región y umbral — RG1: 225/296 (76%) con f-1.5; RG2: 276/325 (85%); RG3: 390/417 (94%); proporción de sistemas intensos sobre el total: RG1 14% (RegCM3) vs 12% (NCEP), RG2 26% vs 41%, RG3 38% vs 36%.
+- La mayor subestimación del RegCM3 en sistemas f-1.5 ocurre en RG1 (-24%); el mejor acuerdo se da en RG3 (-6%); para los sistemas más intensos, el RegCM3 es menos hábil en RG2 (sesgo relativo de -47%).
+- Las características medias de la ciclogénesis en toda el área (vorticidad inicial, vida, distancia recorrida, velocidad media) fueron bien simuladas: vorticidad inicial media -2.5×10⁻⁵ (NCEP) vs -2.4×10⁻⁵ s⁻¹ (RegCM3); vida 2.6 días (NCEP) vs 2.7 días (RegCM3); distancia recorrida 2,437 km (NCEP) vs 2,377 km (RegCM3); velocidad media 11.0 m/s (NCEP) vs 10.5 m/s (RegCM3).
+
+4. RELACIÓN CON TU TESIS
+- Cap01-Introducción (L28): "\citet{reboita2010south} proporcionaron una de las primeras climatologías para el Atlántico Sur, identificando tres centros preferenciales de ciclogénesis vinculados a la interacción entre el flujo perturbado por los Andes y los gradientes térmicos oceánicos" — cita fundacional de la regionalización.
+- Cap01-Introducción (L37): incluido en la lista de autores que documentan las regiones SBR/LPB/ARG usadas para estructurar el análisis regional propio de la tesis.
+- Cap02-Fundamentación (L86): "\citet{reboita2010south} emplearon la vorticidad relativa en niveles bajos para delimitar estos focos en Sudamerica" — antecedente metodológico del uso de vorticidad de niveles bajos (aunque a 10 m, no a 850 hPa como en la tesis y en trabajos posteriores del mismo grupo).
+- Cap02-Fundamentación (L101): se cita para sustentar la alta frecuencia de sistemas ciclónicos en esa región y su interacción con el transporte de humedad desde latitudes tropicales.
+- Cap04-Viento (L78) y Cap06-MEOF (L35): se cita para sustentar la "alta variabilidad en la intensidad de los sistemas" durante las fases iniciales — la tesis usa esta evidencia para argumentar que la baja y dispersa varianza explicada por el EOF1 univariado durante la fase incipiente de sus propios composites no es un artefacto metodológico, sino un rasgo físico ya documentado desde 2010.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Este es el trabajo fundacional de Michelle S. Reboita (con da Rocha y Ambrizzi de la USP, y Sugahara) que establece el marco RG1/RG2/RG3 adoptado por prácticamente toda la literatura posterior del grupo citada en esta tesis: reboita2018extratropical, reboita2022from y reboita2026meteorology reutilizan y refinan la misma regionalización, al igual que grupos afines (Gramcianinov, Crespo, Padilha Reinke, Gozzo). Es, en ese sentido, el "tronco" del que desciende el marco regional tripartito usado transversalmente en la tesis.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Los propios autores reconocen que el RegCM3 subestima la ciclogénesis intensa, especialmente en RG1 y RG2, atribuido a vaguadas transitorias de niveles medios-altos más débiles en el modelo y a una subestimación del transporte de humedad de niveles bajos.
+- Período de análisis corto (10 años, 1990-1999) y reanálisis forzante de baja resolución (NCEP/DOE, 2.5°).
+- El seguimiento usa vorticidad del viento a 10 m (no a 850 hPa, como prefieren estudios posteriores más recientes), variable que los propios autores señalan como sensible a errores de análisis y a la resolución horizontal.
+- La malla de seguimiento se degrada a 2.5° para hacer comparables RegCM3 y NCEP, lo que —según los propios autores— filtra la ciclogénesis de pequeña escala del RegCM3 de mayor resolución.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué Reboita et al. (2010) usan vorticidad a 10 m y no a 850 hPa como en tu tesis? R: Siguieron la metodología original de Sugahara (2000); estudios posteriores del mismo grupo (y la propia tesis) migraron a niveles de 850-925 hPa por su menor sensibilidad al ruido de superficie y a efectos orográficos locales.
+- P: ¿El modelo reproduce bien las tres regiones de ciclogénesis? R: Sí en el patrón espacial general, pero subestima la densidad y, sobre todo, la intensidad de los sistemas en RG1 y RG2, por deficiencias en la simulación de vaguadas de niveles medios-altos y del transporte de humedad.
+- P: ¿Por qué citas un estudio de 2010 sobre el Atlántico Sur completo para hablar de la variabilidad de intensidad en la fase incipiente de tus propios ciclones? R: Porque documenta empíricamente, a escala de toda la climatología del Atlántico Sur, una alta dispersión en la intensidad inicial de los sistemas ciclónicos, lo que respalda que la heterogeneidad observada en el EOF1 de la fase incipiente de la tesis es un rasgo físico conocido y no un artefacto del método.
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/reboita2010south.md

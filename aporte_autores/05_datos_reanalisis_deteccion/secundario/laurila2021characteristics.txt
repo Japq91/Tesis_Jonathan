@@ -1,0 +1,100 @@
+============================================================
+CARTILLA DE ESTUDIO — Laurila et al. 2021 — ciclones y precursores de windstorms en Europa
+============================================================
+
+REFERENCIA COMPLETA
+Laurila, T. K., Gregow, H., Corner, J., & Sinclair, V. A. (2021). Characteristics of
+extratropical cyclones and precursors to windstorms in northern Europe. Weather and
+Climate Dynamics, 2(4), 1111-1130. Copernicus Publications.
+DOI: 10.5194/wcd-2-1111-2021
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Secundario
+Se cita 3 veces (Cap. 2 Fundamentación, Cap. 4 Viento, Cap. 5 Precipitación); sustenta
+tanto el marco metodológico lagrangiano de composites como un hallazgo específico sobre
+la migración espacial de las rachas de viento hacia el sector posterior del sistema.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (⚠ NO es Hemisferio Sur)
+VARIABLE DE RASTREO DE CICLONES: Presión a nivel del mar (MSLP; TRACK de Hodges aplicado sobre MSLP, no sobre vorticidad) — distinta a la ζ850 de la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio caracteriza los ciclones extratropicales y las "windstorms" (tormentas de
+viento) en el norte de Europa (Noruega, Suecia, Finlandia, Estonia y partes de los mares
+Báltico, de Noruega y de Barents), una región situada al final del storm track del
+Atlántico Norte y menos estudiada que otras. Usa un enfoque lagrangiano de tracking y
+compositing de ciclones, y aplica un método novedoso de análisis de sensibilidad de
+conjunto (ensemble sensitivity analysis) para identificar qué variables precursoras (a
+24, 48 y 72 h antes) predicen mejor la intensidad de una windstorm, medida por la MSLP
+mínima y la racha máxima de viento a 10 m.
+
+2. METODOLOGÍA
+Datos: reanálisis ERA5 cada 3 h, 1980-2019 (40 años), variables MSLP, racha máxima de
+viento a 10 m, temperatura a 850 hPa, TCWV (vapor de agua columnar), viento a 300 hPa y
+PV a 300 hPa. Tracking con el algoritmo TRACK (Hodges) sobre MSLP suavizada a resolución
+T63 (~180 km). Se retienen solo trayectorias de duración ≥1 día y desplazamiento ≥500 km.
+Clasificación en tres clases: todos los ciclones extratropicales, "windstorms" (racha
+asociada ≥ percentil 90 anual = 27.2 m/s) y "no-windstorms". Se separan estaciones fría
+(oct-mar) y cálida (abr-sep). Composites cicloide-relativos sobre rejilla esférica
+rotada (igual metodología que Dacre et al. 2012 y Sinclair et al. 2020). El análisis de
+sensibilidad de conjunto calcula la pendiente de regresión lineal entre un campo
+precursor y una función de respuesta (MSLP mínima o racha máxima), corregida por un
+factor de correlación y multiplicada por la desviación estándar del precursor.
+
+3. HALLAZGOS CLAVE
+- En promedio 149 ciclones extratropicales/año alcanzan el norte de Europa; de ellos, 35
+  (23%) califican como windstorms.
+- El percentil 90 de racha de viento usado como umbral es 27.2 m/s (año completo), 29.4
+  m/s en estación fría y 23.6 m/s en estación cálida; los valores máximos van de 51.6 m/s
+  (fría) a 38.1 m/s (cálida).
+- Durante la evolución de la windstorm, la racha máxima de viento se desplaza desde el
+  sector cálido hacia detrás del frente frío, siguiendo el gradiente de presión más
+  fuerte; ocurre casi al mismo tiempo que el mínimo de MSLP.
+- Las windstorms de estación fría tienen mayores sensibilidades (son más predecibles) que
+  las de estación cálida; tanto la MSLP mínima como la racha máxima son más sensibles a
+  la anomalía de temperatura potencial a 850 hPa (gradiente térmico), lo que la señala
+  como el precursor más relevante.
+- Genesis de windstorms concentrada sobre el mar de Noruega y el mar de Barents (más
+  alejada de la región de estudio que la de los no-windstorms, que se origina sobre
+  tierra en el norte de Europa).
+- No hay tendencia lineal significativa (Mann-Kendall, 5%) en el número anual de
+  ciclones 1980-2019, aunque existe una tendencia decreciente marginal (p=0.067).
+
+4. RELACIÓN CON TU TESIS
+En el Cap. 2 (Fundamentación, L30) se usa para legitimar el marco lagrangiano de
+composites: "\citet{laurila2021characteristics} demostraron que el marco lagrangiano
+permite transformar trayectorias individuales a una rejilla esférica, construir
+composites y analizar estadísticamente la evolución de los sistemas en el Hemisferio
+Norte." En el Cap. 5 (Precipitación, L40) respalda la idea de que las firmas dinámicas
+distinguibles desde etapas tempranas predicen mejor el viento que la precipitación
+máxima. En el Cap. 4 (Viento, L112) se usa junto con Hodges et al. (2011) para sustentar
+que las rachas migran hacia el sector posterior, detrás del frente frío, un patrón que
+tu tesis encuentra también en el Atlántico Sudoccidental.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Pertenece a la línea de climatología lagrangiana de ciclones del Instituto Meteorológico
+Finlandés y la Universidad de Helsinki (grupo de V. A. Sinclair), que combina tracking
+tipo TRACK/Hodges con compositing cicloide-relativo, en la tradición de Dacre et al.
+(2012, 2019) y Sinclair et al. (2020). Es un estudio de Hemisferio Norte que tu tesis usa
+por analogía metodológica y por el patrón físico de migración de rachas, no como
+evidencia directa del Atlántico Sur.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+El propio estudio reconoce que el análisis de sensibilidad de conjunto asume una
+relación lineal entre precursor y respuesta, válida solo a plazos cortos (a plazos
+largos dominarían efectos no lineales). Además, la resolución T63 (~180 km) para el
+tracking de MSLP es relativamente gruesa y el estudio se limita al norte de Europa, sin
+generalización directa a otras regiones del storm track.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- ¿Por qué usar un estudio del Hemisferio Norte (Europa) para justificar composites en el
+  Atlántico Sudoccidental? Respuesta: se cita por la metodología lagrangiana genérica
+  (TRACK + compositing esférico), no por especificidad regional.
+- ¿Qué es el "ensemble sensitivity analysis" y por qué no se usó en tu tesis? Respuesta:
+  es un método de regresión lineal entre precursores y variables de respuesta; tu tesis
+  usa EOF/MEOF y prototipos compuestos en lugar de sensibilidad lineal.
+- ¿El patrón de migración de rachas hacia atrás del frente frío es consistente con lo que
+  hallaste en el Atlántico Sur? Respuesta: sí, es uno de los patrones robustos citados
+  junto con Hodges et al. (2011) para sustentar la ubicación del máximo de viento.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/laurila2021characteristics.md

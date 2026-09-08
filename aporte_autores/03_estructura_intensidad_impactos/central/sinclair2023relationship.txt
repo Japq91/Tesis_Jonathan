@@ -1,0 +1,139 @@
+============================================================
+CARTILLA DE ESTUDIO — Sinclair & Catto 2023 — relación intensidad-precipitación en ciclones
+============================================================
+
+REFERENCIA COMPLETA
+Sinclair, V. A., & Catto, J. L. (2023). The relationship between extra-tropical cyclone
+intensity and precipitation in idealised current and future climates. Weather and Climate
+Dynamics, 4(3), 567-589. Copernicus Publications. DOI: 10.5194/wcd-4-567-2023
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Central
+Se cita 4 veces en 3 capítulos distintos (Introducción, Viento y Precipitación); sustenta el
+argumento conceptual central de que la intensidad ciclónica y la precipitación no escalan
+linealmente, y que dicho acoplamiento depende de la estructura espacial del sistema.
+
+HEMISFERIO DE ESTUDIO: No aplica (simulación idealizada, sin hemisferio real) (simulación aqua-planet, sin continentes)
+VARIABLE DE RASTREO DE CICLONES: Vorticidad relativa (TRACK, Hodges) — misma variable que la tesis
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER?
+El estudio cuantifica la relación lineal entre la vorticidad máxima de ciclones
+extratropicales (ETCs) y la precipitación asociada a ellos, en un clima actual idealizado y
+en dos climas futuros idealizados (calentamiento uniforme y amplificación polar). Utiliza
+tres simulaciones aqua-planet de 10 años con el modelo OpenIFS y clasifica los ETCs en
+cuatro tipos estructurales mediante clustering k-means sobre el campo de precipitación. El
+objetivo es responder si el aumento proyectado de precipitación asociada a ciclones se
+traduce en una mayor intensidad dinámica de los mismos, y si esta relación depende del tipo
+estructural de ETC. Es relevante para la tesis porque desmonta la idea de que "más intenso"
+implica automáticamente "más lluvia": ambas magnitudes covarían con correlaciones
+moderadas (no perfectas) y de manera heterogénea según el tipo de sistema.
+
+2. METODOLOGÍA
+- Modelo: OpenIFS Cy43r3v1 (versión de investigación del IFS del ECMWF) configurado como
+  aqua-planet (sin continentes), resolución T255 (~80 km), 60 niveles verticales, salida
+  cada 6 h, 11 años simulados (se descarta el primer año por spin-up).
+- Tres experimentos que solo difieren en la distribución de temperatura superficial del mar
+  (SST): Control (distribución QObs de Neale & Hoskins 2000), SST4 (calentamiento uniforme
+  de +4 K) y AA (amplificación polar/ártica, con calentamiento poleward de 45°N/S y SST fija
+  de 5°C en los polos).
+- Identificación y seguimiento de ETCs con TRACK (Hodges 1994, 1995) sobre la vorticidad
+  relativa a 850 hPa truncada a T42; se retienen solo trayectorias ≥2 días y ≥1000 km de
+  desplazamiento, con vorticidad máxima >1×10⁻⁵ s⁻¹ y ocurrencia al norte de 30°N.
+- Clustering k-means (k=4, seleccionado por puntaje de silueta) sobre el campo de
+  precipitación normalizado por quantile mapping dentro de un radio de 12° del centro del
+  ciclón, 12 h antes del máximo de vorticidad, generando 4 tipos de ETC: "cold-front",
+  "warm-front", "centre" y "weak".
+- Análisis estadístico: regresión lineal y coeficiente de correlación de Pearson entre
+  vorticidad máxima y precipitación en distintos tiempos relativos al máximo de intensidad;
+  bootstrapping (5000 remuestreos) para comparar pendientes entre experimentos; ANCOVA para
+  comparar precipitación entre experimentos controlando por vorticidad máxima.
+
+3. HALLAZGOS CLAVE
+- En los tres experimentos existe una correlación positiva entre la vorticidad máxima a
+  850 hPa y la precipitación promedio del ETC, pero la pendiente de la regresión y el
+  coeficiente de correlación varían: a -12 h del máximo de vorticidad, Control tiene
+  pendiente 0.275 mm(6h)⁻¹/10⁻⁵s⁻¹ (r=0.586), SST4 0.331 (r=0.574) y AA 0.311 (r=0.635).
+- El ANCOVA muestra que, tras controlar por vorticidad máxima, los ETCs del experimento AA
+  producen significativamente más precipitación que los del Control para la misma
+  intensidad (p=2.21×10⁻²⁶); es decir, ciclones más débiles en AA generan tanta o más
+  lluvia que ciclones más fuertes en Control.
+- No todos los tipos de ETC muestran la misma dependencia precipitación-vorticidad: los
+  ETCs "weak" (que ocurren en latitudes altas con poca humedad disponible) y los ETCs
+  "centre" (intensos en convección pero de vorticidad máxima débil) exhiben las pendientes
+  y correlaciones más bajas, evidenciando que un ciclón dinámicamente intenso puede generar
+  poca lluvia si el suministro de humedad es insuficiente, y viceversa.
+- El porcentaje de ETCs con vorticidad máxima >10×10⁻⁵ s⁻¹ es 10.3% en Control, 12.1% en
+  SST4 y solo 6.7% en AA, mientras que el número total de ETCs es 10669 (Control), 10121
+  (SST4, diferencia no significativa) y 11139 (AA, diferencia significativa al 95%).
+- El aumento global de precipitación por grado de calentamiento es de 3.5%/K en SST4
+  (ligeramente superior al rango 2-3%/K reportado por modelos CMIP más completos).
+
+4. RELACIÓN CON TU TESIS
+Este paper es la base conceptual de la argumentación en tres capítulos. En el Capítulo 1
+(Introducción, L57) se cita para establecer que "un ciclón puede ser dinámicamente intenso
+pero generar poca lluvia si carece del suministro de humedad adecuado, subrayando que los
+máximos alcanzados no necesariamente coinciden con el mínimo de presión ocurrido" — esto
+corresponde directamente a los hallazgos sobre los ETCs "weak" y "centre" del paper. En el
+Capítulo 5 (Precipitación, L20) se usa para fundamentar que "los ciclones extratropicales
+son la causa principal de la precipitación en estas latitudes" (parafraseando el abstract
+del paper: "ETCs are the main cause of precipitation in the mid-latitudes"), motivando el
+estudio del acoplamiento intensidad-precipitación. En L27 del mismo capítulo se vincula la
+mayor actividad convectiva en entornos húmedos (SBR, LPB) con el desarrollo de ciclones más
+intensos, análogo a los ETCs "cold-front" del paper (los más convectivos e intensos). En el
+Capítulo 4 (Viento, L338) se cierra el capítulo señalando que "el acoplamiento
+intensidad-precipitación está fuertemente condicionado por la estructura espacial del
+sistema", que es precisamente el resultado central del paper: la relación entre vorticidad
+y precipitación depende del tipo estructural del ETC, no es una relación única y universal.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+Victoria Sinclair (Universidad de Helsinki) y Jennifer Catto (Universidad de Exeter) tienen
+líneas de investigación consolidadas en dinámica de ciclones extratropicales y su respuesta
+al cambio climático usando modelado idealizado (aqua-planet). El estudio construye
+directamente sobre Sinclair et al. (2020), que usó una configuración aqua-planet similar
+con OpenIFS, y dialoga con la literatura sobre el warm conveyor belt (WCB) como fuente de
+precipitación (Madonna et al. 2014; Pfahl et al. 2014; Binder et al. 2016), y con estudios
+de proyecciones de precipitación asociada a ETCs en climas futuros (Zhang & Colle 2018;
+Hawcroft et al. 2018; Kodama et al. 2019; Reboita et al. 2021). Es coherente con la línea de
+Sinclair sobre estructura tridimensional de ciclones (Sinclair y Revell 2000) y con el
+trabajo de Catto sobre frentes y precipitación extrema (Catto et al. 2012, 2015).
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+- Usa un modelo aqua-planet sin continentes, océanos ni topografía, lo que simplifica la
+  dinámica real y elimina interacciones tierra-mar relevantes para el Atlántico
+  Sudoccidental (p.ej. influencia de los Andes, contraste térmico costero).
+- Las simulaciones son idealizadas (distribución de SST solo en función de la latitud), por
+  lo que los resultados cuantitativos (pendientes, porcentajes) no son directamente
+  transferibles a cuencas oceánicas reales sin validación adicional.
+- El análisis se circunscribe al Hemisferio Norte (ETCs que alcanzan su vorticidad máxima al
+  norte de 30°N); no hay evidencia directa para el Hemisferio Sur ni para el Atlántico
+  Sudoccidental en este paper.
+- Los propios autores reconocen que los coeficientes de correlación, aunque significativos,
+  "no son excepcionalmente grandes" (máximo 0.635), lo que implica que buena parte de la
+  varianza en la precipitación no es explicada por la vorticidad máxima únicamente.
+- El número de clusters (k=4) fue elegido por criterios estadísticos (silhouette score) y
+  prácticos (comparabilidad entre experimentos), no es un número "verdadero" único.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+- P: ¿Por qué usar un estudio de clima idealizado y del Hemisferio Norte para argumentar
+  sobre el Atlántico Sudoccidental?
+  R: Se usa como fundamento conceptual/mecanicista (la relación intensidad-precipitación no
+  es lineal ni universal, depende de la estructura y la disponibilidad de humedad), no como
+  fuente de cifras aplicables directamente a la región de estudio.
+- P: ¿Qué significa que la correlación entre vorticidad y precipitación sea "moderada" y no
+  perfecta?
+  R: Significa que factores adicionales —disponibilidad de humedad, tipo estructural del
+  ciclón, latitud, forzamiento en niveles altos— modulan cuánta precipitación produce un
+  ciclón de una intensidad dada; por eso métricas escalares de intensidad son insuficientes.
+- P: ¿Cómo se relacionan los 4 tipos de ETC (cold-front, warm-front, centre, weak) con los
+  ciclones de tu región de estudio?
+  R: No hay una correspondencia directa validada; se usa como evidencia de que la estructura
+  espacial (posición del frente, del WCB, de la humedad) condiciona el acoplamiento
+  intensidad-precipitación, motivando el análisis morfológico-espacial de tu tesis.
+- P: ¿El aumento de precipitación con el calentamiento implica un aumento proporcional en
+  la intensidad de los ciclones?
+  R: No; el paper muestra que la pendiente de la regresión aumenta con el calentamiento
+  (más precipitación por unidad de vorticidad), pero la vorticidad máxima no aumenta al
+  mismo ritmo, e incluso disminuye en el experimento de amplificación polar.
+
+------------------------------------------------------------
+Fuente verificada: /p1-swell/japq/Tesis_Jonathan/papers/files_MD/sinclair2023relationship.md

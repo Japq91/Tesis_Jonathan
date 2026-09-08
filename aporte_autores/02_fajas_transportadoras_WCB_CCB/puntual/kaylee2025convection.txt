@@ -1,0 +1,178 @@
+============================================================
+CARTILLA DE ESTUDIO — Lundstrom et al. 2025 — Convección elevada en ciclones invernales (IMPACTS), Parte II
+============================================================
+
+*** ADVERTENCIA DE FIDELIDAD — LEER ANTES DE USAR ESTA CARTILLA ***
+La entrada bibliográfica citada en tex_es/bibliografia.bib (clave kaylee2025convection) corresponde a
+la Parte II de una serie de dos artículos de Lundstrom et al. (2025): "Manifestation of Elevated
+Convection within Wintertime Extratropical Cyclones during IMPACTS. Part II: Hydrometeor Vertical
+Motions within and Outside of Elevated Potentially Unstable Layers", J. Atmos. Sci., 82(5), 979-998,
+DOI 10.1175/JAS-D-24-0199.1. SIN EMBARGO, el único archivo fuente disponible localmente en este
+repositorio —tanto papers/files_MD/kaylee2025convection.md (1882 líneas, texto completo legible) como,
+presumiblemente, papers/files_PDF/kaylee2025convection.pdf (no se pudo verificar el PDF directamente
+por exceder el límite de tamaño de lectura de 20 MB del entorno)— es en realidad la PARTE I de la
+misma serie: "Manifestation of Elevated Convection within Wintertime Extratropical Cyclones during
+IMPACTS. Part I: Analysis of Elevated Potential Instability", J. Atmos. Sci., 82(4), 955-978, DOI
+10.1175/JAS-D-24-0198.1 (confirmado literalmente en la cabecera del archivo .md: "MAY 2025 LUNDSTROM
+ET AL. 955 ... Part I: Analysis of Elevated Potential Instability"). Los autores de la Parte I
+disponible localmente son Lundstrom, Rauber, Heymsfield, McLinden y McMurdie; el .bib de la Parte II
+añade además a Joseph A. Finlon en la lista de autores, lo que es coherente con que se trate de un
+artículo distinto (aunque de la misma serie/campaña).
+
+EN CONSECUENCIA: las secciones 1 y 2 de esta cartilla describen el contexto compartido entre ambas
+partes (verificado con la Parte I disponible), pero la sección 3 (HALLAZGOS CLAVE) NO puede
+verificarse contra el texto de la Parte II, que es la efectivamente citada en la tesis, y se marca
+explícitamente como no verificada. Se recomienda al usuario descargar el PDF correcto de la Parte II
+(DOI 10.1175/JAS-D-24-0199.1) antes de la defensa, para poder responder con precisión a cualquier
+pregunta del jurado sobre los hallazgos específicos de ese artículo.
+
+REFERENCIA COMPLETA (según el .bib del proyecto, Parte II — NO verificada contra el texto completo)
+Lundstrom, K. H., Rauber, R. M., McLinden, M. W., Finlon, J. A., Heymsfield, G. M. y McMurdie, L.
+(2025). Manifestation of Elevated Convection within Wintertime Extratropical Cyclones during IMPACTS.
+Part II: Hydrometeor Vertical Motions within and Outside of Elevated Potentially Unstable Layers.
+Journal of the Atmospheric Sciences, 82(5), 979-998. DOI: 10.1175/JAS-D-24-0199.1
+
+REFERENCIA DEL ARCHIVO REALMENTE DISPONIBLE (Parte I, usada para el contexto de las secciones 1-2)
+Lundstrom, K. H., Rauber, R. M., Heymsfield, G. M., McLinden, M. W. y McMurdie, L. (2025).
+Manifestation of Elevated Convection within Wintertime Extratropical Cyclones during IMPACTS. Part I:
+Analysis of Elevated Potential Instability. Journal of the Atmospheric Sciences, 82(4), 955-978.
+DOI: 10.1175/JAS-D-24-0198.1
+
+NIVEL DE IMPORTANCIA EN TU TESIS: Puntual
+Se cita una sola vez, en la Introducción, como evidencia observacional (campaña aerotransportada) de
+que existe convección interna/embebida en ciclones extratropicales invernales que es invisible para
+productos de resolución convencional.
+
+HEMISFERIO DE ESTUDIO: Hemisferio Norte (costa este de Estados Unidos, campaña IMPACTS)
+VARIABLE DE RASTREO DE CICLONES: No aplica un algoritmo de rastreo objetivo de ciclones; el estudio
+analiza directamente trayectorias de vuelo de la aeronave ER-2 de la NASA dentro de la región de
+"comma head" (cabeza de coma) de 14 ciclones muestreados durante la campaña, usando temperatura
+potencial equivalente (θe) de inicializaciones del modelo HRRR — variable termodinámica, no cinemática
+
+------------------------------------------------------------
+1. ¿DE QUÉ TRATA ESTE PAPER? (contexto compartido con la Parte I, verificado; hallazgos específicos de
+   la Parte II NO verificados — ver advertencia)
+
+La serie de dos artículos (Parte I y Parte II) estudia la inestabilidad potencial elevada (EPI, por
+sus siglas en inglés) dentro de la región de "cabeza de coma" (comma head) de ciclones extratropicales
+invernales, usando datos de la campaña IMPACTS (Investigation of Microphysics and Precipitation for
+Atlantic Coast-Threatening Snowstorms) de la NASA. La EPI ocurre cuando aire dentro de la "dry slot"
+(ranura seca) del ciclón se desplaza por encima de una zona frontal cálida u ocluida; su elevación
+puede producir convección elevada, nevadas intensificadas y "thundersnow" (tormentas eléctricas con
+nieve). La Parte I (disponible localmente) analiza la distribución, frecuencia e intensidad de la EPI
+a lo largo de las trayectorias de vuelo del avión ER-2 dentro de 14 ciclones muestreados, usando
+valores de θe de inicializaciones del modelo HRRR (High-Resolution Rapid Refresh). Según el propio
+título de la Parte II citado en el .bib de la tesis, ese segundo artículo se enfoca específicamente en
+los MOVIMIENTOS VERTICALES DE HIDROMETEOROS dentro y fuera de las capas de EPI identificadas —
+presumiblemente usando observaciones de radar/lidar aerotransportado de la misma campaña para
+determinar si esas capas de inestabilidad potencial elevada efectivamente producen ascensos y
+convección que se traducen en estructuras verticales de precipitación observables, lo que conectaría
+más directamente con la afirmación de la tesis sobre "convección interna, invisible para los productos
+de resolución convencional". Esta inferencia sobre el contenido de la Parte II se basa únicamente en
+su título y en su condición de secuela directa de la Parte I; NO ha sido verificada contra su texto.
+
+2. METODOLOGÍA (de la Parte I, disponible; se asume una campaña y región de estudio compartidas con la
+   Parte II, pero su metodología específica de movimientos verticales de hidrometeoros NO se verificó)
+
+- Campaña: IMPACTS, tres temporadas de vuelo (invierno boreal), aeronave ER-2 de la NASA volando sobre
+  la región de cabeza de coma de ciclones invernales de la costa este de EE. UU.
+- Variable analizada (Parte I): temperatura potencial equivalente (θe) de inicializaciones del modelo
+  HRRR (resolución ~1 km), a lo largo de las trayectorias de vuelo del ER-2, en columnas verticales de
+  1 km de ancho.
+- Clasificación de los ciclones: se emplea la tipología de Miller (Miller type A, Miller type B) y
+  otras categorías sinópticas (Gulf Coast, Great Plains) para estratificar los resultados de EPI según
+  el tipo de sistema.
+- Muestra: 14 ciclones muestreados durante la campaña IMPACTS.
+
+3. HALLAZGOS CLAVE — SECCIÓN NO VERIFICABLE PARA LA REFERENCIA REALMENTE CITADA (PARTE II)
+
+No es posible reportar aquí hallazgos específicos de la Parte II ("Hydrometeor Vertical Motions within
+and Outside of Elevated Potentially Unstable Layers"), porque el archivo fuente disponible en el
+repositorio es la Parte I, que trata un tema relacionado pero distinto (distribución y caracterización
+de la inestabilidad EPI, no los movimientos verticales de hidrometeoros). Para referencia y contraste,
+los hallazgos verificados de la Parte I (disponible) son:
+- La EPI se encontró en el 53% de las columnas verticales de 1 km de ancho del HRRR a lo largo de los
+  tramos de vuelo del ER-2, típicamente entre 210 y 410 km del centro de baja presión dentro de la
+  región norte de la cabeza de coma, pero entre 0 y 400 km del centro en la región occidental de
+  ciclones fuertes (con gradientes de presión a nivel del mar > 4 hPa/100 km).
+- Las frecuencias más alta y más baja de EPI se dieron en ciclones tipo Miller B (MB) y tipo Great
+  Plains, respectivamente.
+- En el 67% de las columnas de 1 km con presencia de EPI, la inestabilidad ocurrió en una sola capa.
+- La base mediana de las capas potencialmente inestables (dθe/dz < 0) fue de 4.2 km, la profundidad
+  mediana fue de 0.59 km y el nivel de equilibrio mediano estuvo a 0.94 km sobre la base.
+- Los ciclones tipo MB presentaron más capas de EPI, pero más someras, en comparación con menos capas
+  pero más profundas en ciclones tipo Miller A y Gulf Coast.
+- El valor mediano de dθe/dz dentro de las capas potencialmente inestables fue de -0.6 K/km, el
+  percentil 95 fue de -2.8 K/km, y los mayores valores de EPI se dieron en ciclones tipo MB y con
+  gradientes de presión a nivel del mar > 2 hPa/100 km.
+ESTOS HALLAZGOS CORRESPONDEN A LA PARTE I, NO A LA PARTE II CITADA EN LA TESIS, Y SE INCLUYEN
+ÚNICAMENTE COMO CONTEXTO DE LA SERIE, NO COMO EVIDENCIA DE LO QUE AFIRMA LA PARTE II.
+
+4. RELACIÓN CON TU TESIS
+
+Se cita en el Capítulo 1 (Introducción, L68-69), inmediatamente después de mencionar la necesidad de
+marcos de clasificación que vinculen la evolución del sistema con sus manifestaciones de viento y
+precipitación (han2025system): "Campañas de observación aerotransportadas confirman la presencia de
+esta convección interna, invisible para los productos de resolución convencional
+\citep{kaylee2025convection}." Esta afirmación es plausible y consistente con el tema general de la
+serie Lundstrom et al. (2025) —campañas aerotransportadas de alta resolución que revelan estructuras
+de convección/inestabilidad dentro de ciclones invernales que los productos convencionales (satélite,
+reanálisis de baja resolución) no resuelven—, y en particular es coherente con el enfoque específico
+de la Parte II en los movimientos verticales de hidrometeoros. Sin embargo, dado que el texto completo
+de la Parte II no está disponible localmente, no se puede confirmar con certeza si la oración de la
+tesis refleja fielmente un hallazgo textual específico de ese artículo o si es una síntesis razonable
+del tema general de la serie.
+
+5. CONTEXTO EN LA LITERATURA / LÍNEA DEL AUTOR
+
+Kaylee H. Lundstrom, Robert M. Rauber (Universidad de Illinois Urbana-Champaign), Lynn McMurdie
+(Universidad de Washington) y colaboradores de NASA Goddard forman parte del equipo científico de la
+campaña IMPACTS, un esfuerzo observacional de tres temporadas dedicado a caracterizar la microfísica y
+las estructuras de mesoescala de la nieve en ciclones invernales de la costa este de EE. UU. Esta
+pareja de artículos (Parte I y Parte II) es el análisis más reciente del fenómeno de inestabilidad
+potencial elevada (EPI) dentro de la campaña, y se relaciona temáticamente con otros estudios de
+convección embebida y estructura interna de ciclones que cita la tesis en el bloque de fajas
+transportadoras (p. ej. oertel2021warm, gentile2023observed), aunque IMPACTS se enfoca en el Hemisferio
+Norte y en fenomenología de nieve, a diferencia del enfoque de la tesis en el Atlántico Sudoccidental.
+
+6. LIMITACIONES DEL ESTUDIO CITADO
+
+- ADVERTENCIA DE FIDELIDAD PRINCIPAL: el archivo fuente disponible localmente para esta clave
+  bibliográfica corresponde a la Parte I (DOI .../JAS-D-24-0198.1) y NO a la Parte II efectivamente
+  citada en el .bib de la tesis (DOI .../JAS-D-24-0199.1); los hallazgos específicos de la Parte II no
+  han podido verificarse. Se recomienda obtener el PDF/texto completo correcto antes de la defensa.
+- El estudio (ambas partes) se circunscribe al Hemisferio Norte (costa este de EE. UU.) y a ciclones
+  de tipo invernal productores de nieve, un contexto geográfico y estacional distinto al del Atlántico
+  Sudoccidental que aborda la tesis; su aplicabilidad directa a ciclones subtropicales/extratropicales
+  del Hemisferio Sur no está establecida.
+- El análisis depende de inicializaciones de un modelo (HRRR) para el campo termodinámico (θe), no de
+  observaciones directas en toda la columna, lo que introduce dependencia de la representación del
+  modelo en la región de estudio (limitación explícita de la Parte I).
+- La muestra de 14 ciclones, aunque considerable para una campaña aerotransportada, sigue siendo
+  pequeña en términos climatológicos, y los propios autores estratifican los resultados en subtipos
+  (Miller A, Miller B, Gulf Coast, Great Plains) que reducen aún más el tamaño de muestra por categoría.
+
+7. POSIBLES PREGUNTAS DEL JURADO
+
+- "¿Puede describir con precisión el hallazgo de kaylee2025convection que sustenta la afirmación sobre
+  convección interna invisible para productos convencionales?" — Respuesta honesta recomendada: la
+  fuente disponible en el repositorio de trabajo corresponde a la Parte I de la serie (distribución y
+  caracterización de la inestabilidad potencial elevada, EPI), mientras que la cita bibliográfica
+  corresponde a la Parte II (movimientos verticales de hidrometeoros); se recomienda consultar el
+  artículo correcto antes de responder con el hallazgo textual específico.
+- "¿En qué hemisferio y con qué tipo de ciclones se realizó este estudio?" — Respuesta: Hemisferio
+  Norte, costa este de Estados Unidos, ciclones invernales productores de nieve muestreados durante la
+  campaña aerotransportada IMPACTS de la NASA; no es un estudio del Hemisferio Sur.
+- "¿Por qué la tesis no distingue entre la Parte I y la Parte II de este artículo?" — Respuesta: son
+  dos artículos complementarios de la misma serie y campaña; la tesis cita específicamente la Parte II
+  por su enfoque en movimientos verticales de hidrometeoros, más directamente relacionado con la
+  afirmación sobre convección interna que la Parte I (centrada en la distribución de la inestabilidad
+  potencial, no en los movimientos verticales resultantes).
+
+------------------------------------------------------------
+Fuente verificada: papers/files_MD/kaylee2025convection.md (1882 líneas, texto completo de la PARTE I,
+no de la Parte II citada en el .bib), revisado en resumen, declaración de significancia, introducción y
+metodología (Sección 2). El archivo papers/files_PDF/kaylee2025convection.pdf no pudo leerse
+directamente por exceder el límite de tamaño de 20 MB del entorno de lectura; no se pudo confirmar de
+forma independiente si ese PDF corresponde a la Parte I o a la Parte II. Esta cartilla NO debe usarse
+como fuente de hallazgos específicos de la Parte II sin antes verificar el texto completo correcto.
