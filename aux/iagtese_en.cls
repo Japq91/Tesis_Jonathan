@@ -1299,8 +1299,8 @@
 
 
 
-  \usepackage[brazil]{babel}
-  \usepackage[latin1]{inputenc}
+  \usepackage[english]{babel}
+  \usepackage[utf8]{inputenc}
   \usepackage{epsfig}
   \usepackage{graphicx}  
   \usepackage{float}
@@ -1406,8 +1406,8 @@
     heightrounded,
   ]{geometry}
  \usepackage{epstopdf}
-  \usepackage[brazil]{babel}
-  \usepackage[latin1]{inputenc}
+  \usepackage[english]{babel}
+  \usepackage[utf8]{inputenc}
   \usepackage{epsfig}
   \usepackage{graphicx}  
   \usepackage{float}
