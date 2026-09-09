@@ -123,7 +123,6 @@ Esta heterogeneidad explica por qué la intensidad de los máximos de viento no 
 Este mismo patrón se repite en la costa SE de Brasil, donde \citet{cardoso2020wind} lo asociaron al Anticiclón Subtropical del Atlántico Sur, \citet{dejesus2021multimodel} confirmaron que el sector cálido (NE en el HS) concentra los vientos en la etapa temprana de desarrollo del ciclón, y \citet{gramcianinov2024early} localizaron los vientos del noroeste más intensos al este del centro en SBR y LPB, reforzados en el cuadrante noreste de LPB por su combinación con el Chorro de Capas Bajas de Sudamérica.
 
 \subsection{Fases del ciclo de vida}\label{subsec:tb_fases}
-
 Para caracterizar la evolución temporal del viento y la precipitación, este estudio adopta la segmentación del ciclo de vida en cuatro fases discretas mediante la metodología objetiva del paquete computacional \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}, aplicado por \citet{coutodesouza2024new}. 
 Este algoritmo utiliza la tasa de cambio de la vorticidad relativa $\zeta_{850}$, conectando así directamente con el fundamento de detección establecido en la Sección~\ref{subsec:tb_zeta}, para definir los siguientes regímenes estructurales. 
 Cabe notar que cada fase no es homogénea internamente. Los instantes próximos a sus transiciones comparten rasgos de la etapa adyacente, por lo que la condición estructural más representativa de cada régimen corresponde al núcleo temporal de la fase, alejado de ambos bordes de transición.
@@ -133,39 +132,37 @@ Cabe notar que cada fase no es homogénea internamente. Los instantes próximos 
     En el contexto regional, esta fase suele asociarse a la interacción entre una vaguada en altura y forzantes de superficie, como la orografía de los Andes o gradientes térmicos costeros.
 
     \item \textit{Intensificación:} Período caracterizado por el rápido crecimiento de la vorticidad ciclónica.
-    Esta etapa está impulsada por una retroalimentación entre la inestabilidad dinámica y los flujos de calor latente y sensible, según estableció el análisis energético de \citet{coutodesouza2024thesis}.
+    Esta etapa está impulsada por una retroalimentación entre la inestabilidad dinámica y los flujos de calor latente y sensible \citep{gozzo2013air, reboita2022from}.
 
     \item \textit{Madurez:} Etapa donde el sistema alcanza su intensidad máxima (pico de vorticidad) y su mayor extensión horizontal. El radio de los ciclones en superficie tiende a incrementarse sistemáticamente al evolucionar hacia la madurez en ambos hemisferios, como demostró \citet{simmonds2000size}, lo que exige que el dominio de análisis lagrangiano sea suficientemente amplio para capturar la circulación completa del sistema.
     Es precisamente durante esta fase donde los ciclones oceánicos intensos consolidan la evolución estructural documentada por \citet{shapiro1999bridge}. La deformación del flujo genera la fractura del frente frío y aísla una masa de aire cálido en el núcleo del vórtice (\textit{warm seclusion}).
     Al completarse este proceso, las huellas de precipitación y viento quedan espacialmente desacopladas.
 
-    \item \textit{Decaimiento:} Fase final marcada por la disminución progresiva de la magnitud de $\zeta_{850}$, reflejo del debilitamiento del vórtice por la fricción superficial y el cese de la conversión de energía baroclínica una vez que el sistema se ha ocluido completamente o ha entrado en una zona barotrópica \citep{coutodesouza2024thesis}.
+    \item \textit{Decaimiento:} Fase final marcada por la disminución progresiva de la magnitud de $\zeta_{850}$, reflejo del debilitamiento dinámico del vórtice \citep{coutodesouza2024thesis}.
 \end{enumerate}
 
 % ============================================================
 %  BLOQUE E — ACOPLAMIENTO ESTRUCTURAL Y HERRAMIENTAS
 % ============================================================
 
-\section{Acoplamiento estructural y herramientas de caracterización}\label{sec:tb_compuestos}
-
-\subsection{Acoplamiento estructural}\label{subsec:tb_compound_def}
+\section{Acoplamiento estructural}\label{sec:tb_compound_def}
 
 Los campos de viento y precipitación en superficie no son independientes, están físicamente acoplados a través de la estructura tridimensional del ciclón, de modo que sus máximos pueden ocurrir en sectores próximos o solapados durante determinadas fases del ciclo de vida.
 Viento y precipitación son, además, las dos variables de superficie más empleadas para caracterizar los impactos de un ciclón, por lo que su análisis conjunto es el punto de partida natural para caracterizar la morfología del sistema, en línea con otros enfoques que analizan la co-ocurrencia de extremos de superficie \citep{zscheischler2018future}. 
 Esta co-ocurrencia no es estadísticamente aleatoria, sino consecuencia del acoplamiento dinámico entre el WCB y el CCB descrito en la Sección~\ref{subsec:tb_modelos}. \citet{chen2025characteristics} establecieron que esta configuración conjunta responde a mecanismos físicos acoplados que dependen de la posición relativa de las estructuras internas de mesoescala dentro del ciclón, lo que justifica el análisis integrado de ambas variables mediante MEOF para caracterizar la morfología ciclónica.
 No obstante, ERA5 presenta sesgos documentados en la representación de los extremos más intensos \citep{chen2024evaluation}, cuya magnitud y consecuencias para el subconjunto $p90$ se discuten en la Sección~\ref{sec:datos_era5}.
 
-\subsection{Herramientas de caracterización}\label{subsec:tb_herramientas}
+\section{Herramientas de caracterización}\label{sec:tb_herramientas}
 
 Entender la estructura del viento y precipitación de los ciclones requiere sintetizar información de múltiples eventos en una representación coherente.
 La elección de las técnicas descritas a continuación responde a las propiedades de asimetría, no normalidad y covariabilidad física que caracterizan los campos de viento y precipitación en estos sistemas.
 
-\subsubsection{Compositing centrado en el sistema}\label{subsubsec:tb_compositing}
+\subsection{Compositing centrado en el sistema}\label{subsec:tb_compositing}
 
 La técnica de compositing centrado en el sistema consiste en superponer los campos de distintos eventos en coordenadas relativas al centro de cada ciclón, preservando las asimetrías estructurales, bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estructural estadísticamente representativo que el promedio de sus campos lagrangianos revela.
 Su validez metodológica fue demostrada por \citet{priestley2022improved}, quienes aplicaron compositing para aislar estructuras representativas, y por \citet{han2025system}, quienes mostraron que esta estrategia revela cómo los campos extremos cambian de ubicación o extensión a lo largo del ciclo de vida del sistema.
 
-\subsubsection{Estimación de densidad por kernel (KDE): PDF de magnitudes y de posición}\label{subsubsec:tb_kde}
+\subsection{Estimación de densidad por kernel (KDE): PDF de magnitudes y de posición}\label{subsec:tb_kde}
 
 Para caracterizar la distribución estadística de las magnitudes máximas sin imponer supuestos distribucionales a priori, se adopta la Estimación de Densidad por Kernel (KDE) unidimensional, que transforma las observaciones discretas de magnitud $\{x_i\}$ en una función de densidad de probabilidad continua $\hat{f}(x)$, permitiendo contrastar cuantitativamente las distribuciones de precipitación y viento.
 Este enfoque evita el sesgo inherente al agrupamiento en clases de un histograma, preservando la ubicación exacta de cada observación, como señaló \citet{weglarczyk2018kernel}.
@@ -199,7 +196,7 @@ La moda del campo $\hat{f}(\mathbf{s})$ indica la posición relativa al centro d
 estadísticamente es más frecuente encontrar el máximo de la variable.
 Los niveles de contorno adoptados para la visualización y la implementación computacional de ambos estimadores se detallan en las Secciones~\ref{subsec:extraccion_pdf} y~\ref{subsec:kde_localizacion}.
 
-\subsubsection{Descomposición modal EOF y MEOF}\label{subsubsec:tb_eof}
+\subsection{Descomposición modal EOF y MEOF}\label{subsec:tb_eof}
 El análisis de Funciones Ortogonales Empíricas (EOF) descompone la variabilidad de un campo en modos ortogonales de varianza máxima, separando la señal física del ruido o variabilidad de menor escala \citep{hannachi2007empirical}.
 Esta técnica admite extensiones para tratar simultáneamente múltiples grupos de datos: por un lado, el EOF común, orientado a comparar la estructura compartida de un mismo campo entre distintos modelos o reanálisis \citep{hannachi2023eof}; por otro, el EOF combinado o multivariado (MEOF), que concatena campos físicamente distintos en un único vector de estado para capturar su covariabilidad conjunta \citep{liang2018multivariate}. Para aislar los patrones espaciales coherentes del acoplamiento físico entre viento y precipitación, este estudio adopta esta segunda variante, que llamaremos MEOF.
 
@@ -217,7 +214,7 @@ La misma descomposición espectral se aplica a la matriz de covarianza de $\math
 El primer modo multivariado (MEOF$_1$) produce simultáneamente un patrón espacial para precipitación ($\text{EOF}_{1,P}$) y otro para viento ($\text{EOF}_{1,W}$), ambos extraídos del mismo modo dominante de covariabilidad conjunta.
 La especificación formal de la descomposición, el procedimiento de normalización y los criterios de umbralización de contornos se detallan en las Secciones~\ref{subsec:eof_univariado} y~\ref{subsec:eof_multivariado}.
 
-\subsubsection{Significancia estadística mediante Bootstrap-t}\label{subsubsec:tb_bootstrap}
+\subsection{Significancia estadística mediante Bootstrap-t}\label{subsec:tb_bootstrap}
 
 Para evaluar la robustez estadística de los patrones espaciales derivados del análisis EOF y aislar las señales físicas del ruido estocástico, se adopta el método de remuestreo no paramétrico Bootstrap-t.
 A diferencia de las pruebas paramétricas estándar, que asumen distribuciones normales, el Bootstrap-t no impone supuestos distribucionales, lo que lo hace apropiado para las distribuciones de precipitación y viento ciclónico, intrínsecamente asimétricas y de cola pesada.

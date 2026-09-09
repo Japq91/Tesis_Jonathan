@@ -23,7 +23,7 @@ El análisis se realiza a partir de campos horarios de ERA5, con las siguientes 
     \item Magnitud del viento en superficie a 10 m (\texttt{wind10}, en m\,s$^{-1}$).
 \end{itemize}
 
-La elección de ambas variables responde a la naturaleza morfológica de los ciclones extratropicales y a la estructura de sus campos de precipitación y viento, fundamentada en la Sección~\ref{subsec:tb_compound_def} de los Fundamentos.
+La elección de ambas variables responde a la naturaleza morfológica de los ciclones extratropicales y a la estructura de sus campos de precipitación y viento, fundamentada en la Sección~\ref{sec:tb_compound_def} de los Fundamentos.
 Este enfoque describe la configuración espacial típica de los campos de superficie en cada fase evolutiva y permite evaluar la eventual co-ocurrencia de los máximos de ambas variables, como primer acercamiento al análisis multivariado (MEOF) detallado en la Sección~\ref{subsec:eof_multivariado}.
 
 \subsection{Base de trayectorias y fases}\label{sec:bd_ciclones}
@@ -125,7 +125,7 @@ A diferencia de la PDF de magnitudes (Sección~\ref{subsec:extraccion_pdf}), la 
 
 \subsection{Análisis de Funciones Ortogonales Empíricas (EOF) univariado}\label{subsec:eof_univariado}
 
-Para identificar los patrones espaciales dominantes de variabilidad estructural se aplica un análisis EOF sobre el conjunto de $m$ campos promedio por ciclón--fase, por separado para cada variable (precipitación, viento), región y fase. Las referencias previas de este enfoque se presentaron en la Sección~\ref{subsubsec:tb_eof}. Previo al análisis, a cada campo se le resta la media del ensamble en cada punto de grilla para obtener las anomalías estructurales:
+Para identificar los patrones espaciales dominantes de variabilidad estructural se aplica un análisis EOF sobre el conjunto de $m$ campos promedio por ciclón--fase, por separado para cada variable (precipitación, viento), región y fase. Las referencias previas de este enfoque se presentaron en la Sección~\ref{subsec:tb_eof}. Previo al análisis, a cada campo se le resta la media del ensamble en cada punto de grilla para obtener las anomalías estructurales:
 
 \begin{equation}
     X'(\tau, \mathbf{s}) = X(\tau, \mathbf{s}) - \frac{1}{m}\sum_{\tau=1}^{m}X(\tau, \mathbf{s}),
@@ -143,7 +143,7 @@ Cabe señalar que el tamaño muestral $m$ difiere sustancialmente entre regiones
 
 \subsection{Significancia espacial: Bootstrap-t}\label{subsec:bootstrap_significancia}
 
-Para evaluar la robustez estadística de los autovectores del EOF y aislar las señales físicas del ruido estocástico, se implementa el remuestreo no paramétrico Bootstrap-t; su elección y ventajas frente al Bootstrap percentílico estándar para distribuciones asimétricas y de cola pesada se fundamentaron en la Sección~\ref{subsubsec:tb_bootstrap} de los Fundamentos. Se generan $R = 15{,}000$ submuestras con reemplazo, garantizando error de Monte Carlo insignificante en la estimación de las colas de la distribución.
+Para evaluar la robustez estadística de los autovectores del EOF y aislar las señales físicas del ruido estocástico, se implementa el remuestreo no paramétrico Bootstrap-t; su elección y ventajas frente al Bootstrap percentílico estándar para distribuciones asimétricas y de cola pesada se fundamentaron en la Sección~\ref{subsec:tb_bootstrap} de los Fundamentos. Se generan $R = 15{,}000$ submuestras con reemplazo, garantizando error de Monte Carlo insignificante en la estimación de las colas de la distribución.
 
 Para cada iteración $b$ se recalcula el EOF sobre la submuestra y, en cada punto de grilla, se obtiene el estadístico cuasi-pivotal:
 
@@ -161,7 +161,7 @@ Los puntos de grilla se consideran estadísticamente significativos si su interv
 
 \subsection{Análisis de las Componentes Principales (PC1)}\label{subsec:analisis_pc}
 
-Además de la descomposición espacial, se analizan las propiedades estadísticas de la Componente Principal del primer modo (PC1), que representa la amplitud de cada ciclón sobre el patrón estructural dominante; la interpretación cualitativa de estos momentos estadísticos se estableció en la Sección~\ref{subsubsec:tb_eof} de los Fundamentos. Se calculan, para la serie de PC1 de cada variable, región y fase, la asimetría ($\gamma_1$):
+Además de la descomposición espacial, se analizan las propiedades estadísticas de la Componente Principal del primer modo (PC1), que representa la amplitud de cada ciclón sobre el patrón estructural dominante; la interpretación cualitativa de estos momentos estadísticos se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos. Se calculan, para la serie de PC1 de cada variable, región y fase, la asimetría ($\gamma_1$):
 \begin{equation}
     \gamma_1 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^3,
 \end{equation}
@@ -173,7 +173,7 @@ Para conectar físicamente la estructura de los campos de superficie con la inte
 \begin{equation}
     \rho\!\left(PC_1, \zeta_{850}^{\min}\right) = \frac{\text{cov}\!\left(PC_1, \zeta_{850}^{\min}\right)}{\sigma_{PC_1} \cdot \sigma_{\zeta}}.
 \end{equation}
-Su interpretación físico-estadística, el vínculo entre la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsubsec:tb_eof} de los Fundamentos.
+Su interpretación físico-estadística, el vínculo entre la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
 
 Para evaluar si los patrones dominantes de precipitación y viento varían conjuntamente, se calcula la correlación entre las PC1 de precipitación y viento dentro de cada región y fase:
 \begin{equation}
@@ -189,7 +189,7 @@ Valores cercanos a $+1$ indican que precipitación y viento se organizan espacia
 
 \subsection{EOF combinado (MEOF) precipitación--viento}\label{subsec:eof_multivariado}
 
-Para identificar los patrones espaciales dominantes de la estructura combinada de precipitación y viento se realiza un análisis EOF combinado (MEOF). A diferencia del análisis univariado, el MEOF captura modos de variabilidad conjunta que reflejan la organización morfológica típica de los campos de superficie asociados a la dinámica ciclónica. Los fundamentos de esta técnica, incluyendo la necesidad de normalizar variables con unidades físicas dispares y la lógica de la concatenación espacial del vector de estado, se expusieron en la Sección~\ref{subsubsec:tb_eof} de los Fundamentos. Aunque el MEOF es habitual en estudios de eventos simultáneos, aquí se emplea exclusivamente como herramienta de síntesis estructural, para aislar las configuraciones espaciales más recurrentes de los campos de superficie. El procedimiento consta de tres pasos:
+Para identificar los patrones espaciales dominantes de la estructura combinada de precipitación y viento se realiza un análisis EOF combinado (MEOF). A diferencia del análisis univariado, el MEOF captura modos de variabilidad conjunta que reflejan la organización morfológica típica de los campos de superficie asociados a la dinámica ciclónica. Los fundamentos de esta técnica, incluyendo la necesidad de normalizar variables con unidades físicas dispares y la lógica de la concatenación espacial del vector de estado, se expusieron en la Sección~\ref{subsec:tb_eof} de los Fundamentos. Aunque el MEOF es habitual en estudios de eventos simultáneos, aquí se emplea exclusivamente como herramienta de síntesis estructural, para aislar las configuraciones espaciales más recurrentes de los campos de superficie. El procedimiento consta de tres pasos:
 
 \paragraph{Paso 1 — Anomalías.} Se calcula el campo de anomalías de cada variable respecto a la media del conjunto (PG o p90) en cada punto de grilla.
 
@@ -215,7 +215,7 @@ Tanto la PG como el subconjunto p90 se procesan de forma independiente con este 
 
 \subsection{Construcción de los prototipos estructurales}\label{subsec:prototipos}
 
-Para cumplir con el Objetivo Específico 4, se desarrolla un procedimiento de síntesis visual que integra en un único panel, por cada combinación región-fase, cuatro fuentes de información estadística derivadas de los análisis anteriores. Cada prototipo se compone de cuatro capas superpuestas en coordenadas lagrangianas $(\Delta x, \Delta y)$, dentro del dominio de $9.5^{\circ}$ de radio. La lógica del compositing centrado en el sistema, que hace posible esta superposición, se presentó en la Sección~\ref{subsubsec:tb_compositing} de los Fundamentos.
+Para cumplir con el Objetivo Específico 4, se desarrolla un procedimiento de síntesis visual que integra en un único panel, por cada combinación región-fase, cuatro fuentes de información estadística derivadas de los análisis anteriores. Cada prototipo se compone de cuatro capas superpuestas en coordenadas lagrangianas $(\Delta x, \Delta y)$, dentro del dominio de $9.5^{\circ}$ de radio. La lógica del compositing centrado en el sistema, que hace posible esta superposición, se presentó en la Sección~\ref{subsec:tb_compositing} de los Fundamentos.
 
 Las dos primeras capas son las isolíneas de la PDFe de la ubicación de máximos de precipitación y viento. A partir de la superficie de densidad $\hat{f}(\mathbf{s})$ (Ecuación~\ref{eq:tb_kde_simple}) se extraen los contornos de los percentiles 75 y 90 de la densidad acumulada, y sobre cada superficie se señaliza con un marcador estelar la coordenada $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$, la posición donde es más frecuente encontrar el máximo de la variable.
 
