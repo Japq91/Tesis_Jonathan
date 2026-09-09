@@ -10,3 +10,6 @@ tex_es/antes_new/
 
 # PDFs de papers de referencia (pesados, material de consulta, no la tesis)
 papers/files_PDF/
+
+# PDFs generados de la tesis (pesados, se regeneran localmente)
+*.pdf
