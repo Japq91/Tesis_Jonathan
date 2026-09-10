@@ -1,0 +1,6 @@
+Valores cercanos a $+1$ indican que precipitación y viento se organizan espacialmente de manera
+  coherente; valores cercanos a $0$ sugieren que la variabilidad espacial de la precipitación está
+  controlada por procesos locales independientes de la configuración de mayor escala; valores
+  marcadamente negativos indicarían una relación inversa entre ambos campos, sin respaldo físico
+  claro dentro del marco de acoplamiento WCB--CCB descrito en la
+  Sección~\ref{subsec:tb_compound_def}, y ameritarían una revisión adicional del caso.

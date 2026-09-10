@@ -21,7 +21,7 @@ Esto concuerda con experimentos de sensibilidad numérica de \citet{reboita2022f
 \subsection{Marco de referencia semi-lagrangiano}\label{subsec:tb_lagrangiano}
 La variabilidad estructural de los ETCs del Atlántico Sur requiere un marco de referencia común que no diluya la señal en promedios geográficos ni incorpore ruido de sistemas adyacentes.
 El enfoque euleriano superpone campos de variables, dificultando observar asimetrías estructurales durante la evolución. El enfoque lagrangiano evita esta dilución centrando cada ETC en su núcleo de vorticidad con coordenadas relativas $(\Delta x, \Delta y)$, preservando la organización espacial y aislando su señal dentro de un dominio que se desplaza con la trayectoria.
-Un dominio de $20^{\circ} \times 20^{\circ}$ se empleó en el Atlántico Sudoccidental por \citet{cardoso2022synoptic}. Este enfoque lagrangiano ha demostrado utilidad a escala global: \citet{laurila2021characteristics} muestran que permite construir composites en el Hemisferio Norte, mientras \citet{priestley2022improved} lo aplicaron en ambos hemisferios para cuantificar la estructura e intensidad de los vientos, \citet{pepler2020dimensional} lo emplearon con un radio equivalente de $10^{\circ}$ en el sureste de Australia para estudiar la severidad de vientos y lluvia, y \citet{dacre2012atlas} lo utilizaron con un radio de $20^{\circ}$ en el Atlántico Norte para construir un atlas de compuestos que documenta sistemáticamente la estructura y evolución del ciclón.
+Un dominio de $20^{\circ} \times 20^{\circ}$ se empleó en el Atlántico Sudoccidental por \citet{cardoso2022synoptic}. Este enfoque lagrangiano ha demostrado utilidad a escala global: \citet{laurila2021characteristics} muestran que permite construir composites en el Hemisferio Norte, mientras \citet{priestley2022improved} lo aplicaron en ambos hemisferios para cuantificar la estructura e intensidad de los vientos, \citet{pepler2020dimensional} lo emplearon con un radio de $10^{\circ}$ en el sureste de Australia para estudiar la severidad de vientos y lluvia, y \citet{dacre2012atlas} lo utilizaron con un radio de $20^{\circ}$ en el Atlántico Norte para construir un atlas de compuestos que documenta sistemáticamente la estructura y evolución del ciclón.
 
 \subsection{Vorticidad relativa en 850 hPa}\label{subsec:tb_zeta}
 En el enfoque de seguimiento lagrangiano, la vorticidad relativa en 850 hPa ($\zeta_{850}$) se ha establecido como la variable para identificar y rastrear ciclones extratropicales.
@@ -153,27 +153,29 @@ Esta co-ocurrencia no es estadísticamente aleatoria, sino consecuencia del acop
 No obstante, ERA5 presenta sesgos documentados en la representación de los extremos más intensos \citep{chen2024evaluation}, cuya magnitud y consecuencias para el subconjunto $p90$ se discuten en la Sección~\ref{sec:datos_era5}.
 
 \section{Herramientas de caracterización}\label{sec:tb_herramientas}
+Caracterizar el viento y precipitación de los ETCs requiere integrar múltiples eventos en una representación coherente. 
+Las técnicas elegidas responden a propiedades intrínsecas de estos campos: asimetría, no normalidad y covariabilidad física.
 
-Entender la estructura del viento y precipitación de los ciclones requiere sintetizar información de múltiples eventos en una representación coherente.
-La elección de las técnicas descritas a continuación responde a las propiedades de asimetría, no normalidad y covariabilidad física que caracterizan los campos de viento y precipitación en estos sistemas.
+\subsection{ETCs Compositing}\label{subsec:tb_compositing}
+La técnica de compositing centrado en el sistema consiste en superponer los campos de distintos eventos en coordenadas relativas al centro de cada ETC, preservando las asimetrías estructurales, bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estructural estadísticamente representativo que el promedio de sus campos lagrangianos revela.
+Esta lógica de alineación, que extrae los campos dentro de un radio fijo respecto al centro, ha sido empleada en la evaluación de la estructura ciclónica en modelos climáticos, como lo hizo \citet{catto2010climate} al comparar la representación de ETCs entre un modelo climático de alta resolución y el reanálisis ERA-40.
+Su validez metodológica fue reafirmada por \citet{priestley2022improved}, quienes aplicaron compositing para aislar estructuras representativas de las corrientes en aire cálida (WCB) y fría (CCB), cuantificando así sesgos sistemáticos de intensidad del viento entre generaciones de modelos climáticos frente a ERA5.
+Más allá de la estructura promedio estática, la técnica permite rastrear cómo los campos se configuran, desplazan y contraen a lo largo del ciclo de vida del sistema, al particionar los composites por fase de desarrollo.
+\citet{mcerlich2023extremes}, aplicando esta estrategia a ETCs del Hemisferio Sur mediante ERA5, mostraron que la extensión espacial de la precipitación extrema se restringe hacia el centro del ciclón a medida que aumenta el umbral de intensidad.
+En el Atlántico Sur en particular, \citet{gramcianinov2019properties} emplearon composites centrados en el ciclón para caracterizar la estructura de los ETCs durante su génesis, mostrando que los mecanismos dominantes de desarrollo difieren según la región de formación.
 
-\subsection{Compositing centrado en el sistema}\label{subsec:tb_compositing}
-
-La técnica de compositing centrado en el sistema consiste en superponer los campos de distintos eventos en coordenadas relativas al centro de cada ciclón, preservando las asimetrías estructurales, bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estructural estadísticamente representativo que el promedio de sus campos lagrangianos revela.
-Su validez metodológica fue demostrada por \citet{priestley2022improved}, quienes aplicaron compositing para aislar estructuras representativas, y por \citet{han2025system}, quienes mostraron que esta estrategia revela cómo los campos extremos cambian de ubicación o extensión a lo largo del ciclo de vida del sistema.
-
-\subsection{Estimación de densidad por kernel (KDE): PDF de magnitudes y de posición}\label{subsec:tb_kde}
+\subsection{PDF de magnitudes y de posición}\label{subsec:tb_kde}
 
 Para caracterizar la distribución estadística de las magnitudes máximas sin imponer supuestos distribucionales a priori, se adopta la Estimación de Densidad por Kernel (KDE) unidimensional, que transforma las observaciones discretas de magnitud $\{x_i\}$ en una función de densidad de probabilidad continua $\hat{f}(x)$, permitiendo contrastar cuantitativamente las distribuciones de precipitación y viento.
 Este enfoque evita el sesgo inherente al agrupamiento en clases de un histograma, preservando la ubicación exacta de cada observación, como señaló \citet{weglarczyk2018kernel}.
 
 La selección del ancho de banda $h$ constituye el parámetro crítico del estimador. Se adopta la regla
-de Scott,
+de Scott, una técnica de selección de ancho de banda ampliamente conocida y también empleada por \citet{weglarczyk2018kernel} entre los métodos de tipo \textit{rule-of-thumb} disponibles para este propósito,
 \begin{equation}\label{eq:scott_rule}
 h = \hat{\sigma} \cdot m^{-1/5},
 \end{equation}
 donde $\hat{\sigma}$ es la desviación estándar muestral de las magnitudes.
-Este tipo de reglas de ancho de banda ofrece, en general, un compromiso asintóticamente óptimo entre sesgo y varianza para distribuciones aproximadamente unimodales \citep{weglarczyk2018kernel}, condición razonablemente satisfecha por las distribuciones de viento y precipitación dentro de cada combinación región--fase.
+
 Formalmente, el estimador unidimensional se define como:
 \begin{equation}\label{eq:tb_kde_pdf}
 \hat{f}(x) = \frac{1}{m h} \sum_{i=1}^{m} K\!\left(\frac{x - x_i}{h}\right),
@@ -194,7 +196,7 @@ K_h(\mathbf{u}) = \frac{1}{2\pi h^2} \exp\!\left(-\frac{\|\mathbf{u}\|^2}{2h^2}\
 
 La moda del campo $\hat{f}(\mathbf{s})$ indica la posición relativa al centro del ciclón donde
 estadísticamente es más frecuente encontrar el máximo de la variable.
-Los niveles de contorno adoptados para la visualización y la implementación computacional de ambos estimadores se detallan en las Secciones~\ref{subsec:extraccion_pdf} y~\ref{subsec:kde_localizacion}.
+Los niveles de contorno adoptados para la visualización y la implementación computacional de ambos estimadores se detallan en la Sección~\ref{subsec:prototipos}.
 
 \subsection{Descomposición modal EOF y MEOF}\label{subsec:tb_eof}
 El análisis de Funciones Ortogonales Empíricas (EOF) descompone la variabilidad de un campo en modos ortogonales de varianza máxima, separando la señal física del ruido o variabilidad de menor escala \citep{hannachi2007empirical}.
@@ -209,17 +211,19 @@ Las amplitudes de proyección de cada evento sobre el modo dominante, las compon
 Una distribución de PC$_1$ con asimetría positiva o leptocurtosis sugiere la existencia de un subconjunto de sistemas que se proyecta con especial intensidad sobre el modo dominante; una correlación negativa entre PC$_1$ y el mínimo de vorticidad $\zeta_{850}^{\min}$ indicaría que los ciclones más intensos son también los más estructuralmente organizados en ese patrón.
 Estas propiedades se evalúan empíricamente en la Sección~\ref{subsec:analisis_pc}.
 
-En el caso multivariado (MEOF), los campos normalizados de precipitación y viento se concatenan en un vector de estado combinado $\mathbf{Y}(\tau) = [Z_1(\tau), Z_2(\tau), \dots, Z_N(\tau)]$ de longitud $Np$, siguiendo el enfoque de \citet{bretherton1992intercomparison}.
+En el caso multivariado (MEOF), los campos normalizados de precipitación y viento se concatenan en un vector de estado combinado $\mathbf{Y}(\tau) = [Z_1(\tau), Z_2(\tau), \dots, Z_N(\tau)]$ de longitud $Np$, siguiendo el enfoque de PCA combinada (CPCA) formalizado por \citet{bretherton1992intercomparison}.
 La misma descomposición espectral se aplica a la matriz de covarianza de $\mathbf{Y}$, obteniendo modos acoplados que describen la covariabilidad conjunta de las variables.
+\citet{bretherton1992intercomparison} advirtieron que este enfoque puede sesgarse hacia el EOF dominante de un único campo cuando la razón señal--ruido es baja o el tamaño muestral es reducido, favoreciendo un modo que en realidad refleja la variabilidad individual de precipitación o de viento por separado en lugar de la señal de acoplamiento genuina. 
+Por ello, la significancia estadística de los patrones MEOF obtenidos se somete al remuestreo no paramétrico descrito en la Sección~\ref{subsec:tb_bootstrap} antes de interpretarlos como estructuras físicamente robustas.
 El primer modo multivariado (MEOF$_1$) produce simultáneamente un patrón espacial para precipitación ($\text{EOF}_{1,P}$) y otro para viento ($\text{EOF}_{1,W}$), ambos extraídos del mismo modo dominante de covariabilidad conjunta.
 La especificación formal de la descomposición, el procedimiento de normalización y los criterios de umbralización de contornos se detallan en las Secciones~\ref{subsec:eof_univariado} y~\ref{subsec:eof_multivariado}.
 
-\subsection{Significancia estadística mediante Bootstrap-t}\label{subsec:tb_bootstrap}
+\subsection{Bootstrap-t}\label{subsec:tb_bootstrap}
 
 Para evaluar la robustez estadística de los patrones espaciales derivados del análisis EOF y aislar las señales físicas del ruido estocástico, se adopta el método de remuestreo no paramétrico Bootstrap-t.
 A diferencia de las pruebas paramétricas estándar, que asumen distribuciones normales, el Bootstrap-t no impone supuestos distribucionales, lo que lo hace apropiado para las distribuciones de precipitación y viento ciclónico, intrínsecamente asimétricas y de cola pesada.
 
-Esta variante corrige dicha asimetría al estandarizar cada muestra de remuestreo por su propio error estándar, generando estadísticos cuasi-pivotales que producen intervalos de confianza con cobertura más precisa que el Bootstrap percentílico estándar, como estableció \citet{hesterberg2015bootstrap}.
+Esta variante corrige dicha asimetría al estandarizar cada muestra de remuestreo por su propio error estándar, lo que estabiliza la distribución del estadístico frente a la forma de la población y produce intervalos de confianza con cobertura más precisa que el Bootstrap percentílico estándar, como estableció \citet{hesterberg2015bootstrap}.
 Si $\hat{\theta}$ es el estimador original (carga del EOF en un punto de grilla) y $\hat{\theta}^*_b$ su réplica en la $b$-ésima muestra bootstrap, el estadístico pivotal se define como
 \begin{equation}\label{eq:bootstrap_t}
 t^*_b = \frac{\hat{\theta}^*_b - \hat{\theta}}{\widehat{SE}^*_b},

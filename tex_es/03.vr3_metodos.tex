@@ -5,17 +5,14 @@ La estrategia sigue cinco etapas: (1) definición de las fuentes de datos; (2) c
 Los prototipos se organizan en $3 \times 4$ paneles (3 regiones de ciclogénesis $\times$ 4 fases evolutivas) para la Población Global (PG) y el subconjunto p90.
 
 %  SECCIÓN M1 — DATOS
-\section{Datos}\label{sec:datos}
-
+\section{Datos}\label{sec:datos} 
 \subsection{Reanálisis ERA5}\label{sec:datos_era5}
-
 Se utiliza el reanálisis de quinta generación del ECMWF, ERA5 \citep{hersbach2020era5}, mediante el conjunto de datos \textit{``ERA5 hourly data on single levels from 1940 to present''} \citep{hersbach_era5_2023b} para el período 1979--2020.
 La justificación de ERA5, resolución espacial ($\sim$31 km) y temporal (horaria), y su mayor densidad de trayectorias y representación de estructuras de mesoescala frente a reanálisis previos \citep{gramcianinov2020analysis}, es la base de la elección de este reanálisis para el catálogo de trayectorias.
 No obstante, \citet{chen2024evaluation} demuestran que ERA5 subestima sistemáticamente los extremos del 5\% de ciclones extratropicales más intensos, con sesgos del $-10.2\%$ en viento y $-22.6\%$ en precipitación respecto a observaciones en Estados Unidos de América.
 Por ello, los resultados obtenidos para p90 deben interpretarse como estimaciones conservadoras de la intensidad real de los eventos.
 
 \subsection{Variables meteorológicas}\label{subsec:variables}
-
 El análisis se realiza a partir de campos horarios de ERA5, con las siguientes variables de superficie:
 
 \begin{itemize}
@@ -39,12 +36,11 @@ Los fundamentos físicos de esta elección de $\zeta_{850}$ y de la segmentació
 
 %  SECCIÓN M2 — POBLACIONES DE ESTUDIO
 
-\section{Construcción de las poblaciones de estudio}\label{sec:poblaciones_estudio}
+\section{Poblaciones de estudio}\label{sec:poblaciones_estudio}
 
-La segmentación de la muestra sigue los criterios de la Sección~\ref{subsec:tb_poblaciones} de los Fundamentos.
-La base de trayectorias se divide en una población de referencia y, a partir de ella, un subconjunto de alta intensidad ($p90$).
-Ambas poblaciones se construyen de forma independiente para cada una de las tres regiones de ciclogénesis (SBR, LPB y ARG), delimitadas según la taxonomía de \citet{gramcianinov2019properties} y detalladas en la Tabla~\ref{tab:regiones_coords}.
-Esta estratificación geográfica responde a que las regiones presentan regímenes dinámicos diferenciados, discutidos en la Sección~\ref{sec:tb_regiones} de los Fundamentos.
+La base de trayectorias se divide en una población de referencia y, a partir de ella, un subconjunto de alta intensidad ($p90$), como se detalla en la Sección~\ref{subsec:tb_poblaciones}
+Ambas poblaciones se construyen de forma independiente para cada una de las tres regiones de ciclogénesis (SBR, LPB y ARG), delimitadas mediante dominios geográficos fijos basados en la taxonomía de \citet{gramcianinov2019properties} y detallados en la Tabla~\ref{tab:regiones_coords}.
+Esta estratificación geográfica responde a que las regiones presentan regímenes dinámicos diferenciados, discutidos en la Sección~\ref{sec:tb_regiones}.
 
 \input{tabelas_es/tab_regiones_coords.tex}
 
@@ -59,7 +55,7 @@ Se aplica un criterio de coherencia evolutiva, seleccionando únicamente los sis
 \end{enumerate}
 
 Esto elimina el ruido de sistemas efímeros o de evolución errática.
-Para cada ciclón de la PG se identifica el registro temporal de su máxima intensidad, el extremo absoluto de vorticidad relativa a 850 hPa, $\zeta_{850}^{\min}$, como métrica de intensidad para la extracción posterior del subconjunto p90.
+Para cada ciclón de la PG se identifica el valor más negativo de vorticidad relativa a 850 hPa, $\zeta_{850}^{\min}$, alcanzado en algún momento de su vida, como métrica de intensidad para la extracción posterior del subconjunto p90.
 
 La Figura~\ref{fig:loc_vort_global} sintetiza la densidad de probabilidad de la ubicación donde los ciclones de la PG alcanzan su $\zeta_{850}^{\min}$ a lo largo de su ciclo de vida, con el número de ciclones detallado en la Tabla~\ref{tab:conteo_ciclones}.
 
@@ -73,7 +69,7 @@ La Figura~\ref{fig:loc_vort_global} sintetiza la densidad de probabilidad de la 
 
 \subsection{Subconjunto de alta intensidad (p90)}\label{subsec:subconjuntos_intensidad}
 
-Para evaluar los patrones espaciales frente a la severidad dinámica del sistema, se extrae de la PG el 10\% de ciclones con los valores más negativos de $\zeta_{850}^{\min}$ (un decil de la distribución), obteniendo el subconjunto $p90$ (detallado en \ref{subsec:tb_poblaciones}).
+Para evaluar los patrones espaciales frente a la severidad dinámica del sistema, se extrae de la PG, de forma independiente para cada región de ciclogénesis, el 10\% de ciclones con los valores más negativos de $\zeta_{850}^{\min}$ (un decil de la distribución), obteniendo el subconjunto $p90$ (detallado en \ref{subsec:tb_poblaciones}).
 
 La Tabla~\ref{tab:conteo_ciclones} documenta la reducción del tamaño muestral desde la base cruda hasta la PG y el subconjunto p90.
 
@@ -103,7 +99,7 @@ Sobre el subconjunto p90, comparándolo sistemáticamente con la PG, se aplica �
 
 Para caracterizar la estructura de los sistemas independientemente de su ubicación geográfica, se adopta el marco lagrangiano expuesto en la Sección~\ref{subsec:tb_lagrangiano} de los Fundamentos, un dominio móvil de $20^{\circ} \times 20^{\circ}$ centrado en la posición del mínimo de vorticidad para cada instante $t$ de la trayectoria, en coordenadas relativas $(\Delta x, \Delta y)$ respecto al núcleo ciclónico. Este dominio aísla la señal de mesoescala y representa físicamente la extensión espacial de los brazos frontales del sistema, dimensiones tambien usadas por \citet{pepler2020dimensional, cardoso2022synoptic}. El procesamiento se realiza por separado para cada combinación de región de ciclogénesis y fase del ciclo de vida.
 
-Siguiendo la técnica de compositing centrado en el sistema (Sección~\ref{subsubsec:tb_compositing}), y para reducir la variabilidad de alta frecuencia de los datos horarios y aislar la condición estructural más representativa de cada fase, se aplica un promediado centrado. Para cada ciclón y fase se seleccionan los registros horarios del núcleo temporal de la fase, dos tiempos cuando el número de horas es par, tres cuando es impar, y se promedian sus campos espaciales. Así, el campo resultante refleja la condición arquetípica del régimen (incipiente, intensificación, madurez o decaimiento) y no una mezcla de dos estados sucesivos, generando un único campo promedio por ciclón--fase que constituye la unidad de análisis de todas las etapas estadísticas subsiguientes. En consecuencia, cada ciclón aporta un campo independiente a cada una de las cuatro poblaciones fase-específicas de su región, de modo que el tamaño muestral $m$ de los análisis estadísticos de las secciones siguientes es constante entre fases dentro de una misma región e igual al número de ciclones reportado en la Tabla~\ref{tab:conteo_ciclones}.
+Siguiendo la técnica de compositing centrado en el sistema (Sección~\ref{subsec:tb_compositing}), se aplica un promediado temporal centrado para reducir la variabilidad de alta frecuencia de los datos horarios y obtener el campo más representativo de cada fase. Para cada ciclón y fase, se promedian únicamente los registros horarios más próximos al punto medio temporal de esa fase: dos registros cuando su duración total es par (los dos pasos centrales, equidistantes del punto medio), y tres cuando es impar (el paso central exacto más uno adyacente a cada lado). Este criterio evita que el promedio mezcle dos regímenes evolutivos distintos, de modo que el campo resultante representa la condición arquetípica de la fase (incipiente, intensificación, madurez o decaimiento) y no una transición entre estados sucesivos. El resultado es un único campo promedio por combinación ciclón--fase, unidad de análisis de todas las etapas estadísticas subsiguientes. En consecuencia, cada ciclón aporta exactamente un campo a cada una de las cuatro poblaciones fase-específicas de su región, por lo que el tamaño muestral $m$ es constante entre fases dentro de una misma región e igual al número de ciclones reportado en la Tabla~\ref{tab:conteo_ciclones}.
 
 % ============================================================
 %  SECCIÓN M4 — CARACTERIZACIÓN ESTADÍSTICA UNIVARIADA
@@ -115,11 +111,11 @@ Siguiendo la técnica de compositing centrado en el sistema (Sección~\ref{subsu
 
 Sobre el campo promedio por ciclón--fase se aplica un suavizado espacial bidimensional con filtro gaussiano ($\sigma = 0.25$, biblioteca \texttt{scipy}) para evitar valores aislados a escala de punto de grilla. Luego se delimita el área de análisis con una máscara circular de $9.5^{\circ}$ de radio centrada en el núcleo del sistema, inscrita en el dominio lagrangiano de $20^{\circ} \times 20^{\circ}$, de modo que una franja perimetral de $0.5^{\circ}$ en cada borde queda excluida. Dentro de este radio se identifican: (i) la magnitud del valor máximo absoluto de la variable de interés, $x_i$, y (ii) su ubicación en coordenadas relativas al centro del ciclón, $\mathbf{s}_i = (\Delta x_i, \Delta y_i)$. El procedimiento genera, para cada combinación de región, fase evolutiva y variable, un conjunto de $m$ pares magnitud--ubicación (uno por evento ciclónico).
 
-Para caracterizar la distribución de las magnitudes máximas extraídas $\{x_i\}_{i=1}^{m}$ se estima la función de densidad de probabilidad (PDF) mediante KDE; su justificación frente a histogramas y su formulación matemática se presentan en la Sección~\ref{subsubsec:tb_kde} de los Fundamentos. La implementación usa la clase \texttt{gaussian\_kde} de \texttt{scipy.stats}, con ancho de banda $h$ según la regla de Scott \ref{eq:tb_kde_pdf} y el núcleo gaussiano de la Ecuación~\ref{eq:tb_gaussian_kernel} de los Fundamentos. Las curvas PDF permiten contrastar cuantitativamente cómo evolucionan las magnitudes a lo largo del ciclo de vida y cómo difieren entre la PG y p90.
+Para caracterizar la distribución de las magnitudes máximas extraídas $\{x_i\}_{i=1}^{m}$ se estima la función de densidad de probabilidad (PDF) mediante KDE; su justificación frente a histogramas y su formulación matemática se presentan en la Sección~\ref{subsec:tb_kde} de los Fundamentos. La implementación usa la clase \texttt{gaussian\_kde} de \texttt{scipy.stats}, con ancho de banda $h$ según la regla de Scott (Ecuación~\ref{eq:scott_rule}) y el núcleo gaussiano (Ecuación~\ref{eq:tb_gaussian_kernel}) de los Fundamentos. Las curvas PDF permiten contrastar cuantitativamente cómo evolucionan las magnitudes a lo largo del ciclo de vida y cómo difieren entre la PG y p90.
 
 \subsection{Distribución espacial de los máximos}\label{subsec:kde_localizacion}
 
-Para caracterizar la ubicación preferencial de los máximos respecto al centro del ciclón, la posición relativa de cada máximo se trata como variable aleatoria bidimensional $\mathbf{S} = (\Delta x, \Delta y)$. A partir del conjunto de $m$ ubicaciones relativas $\{\mathbf{s}_i\}_{i=1}^{m}$ de la etapa anterior, se estima la función de densidad de probabilidad de la posición (PDFe), $\hat{f}(\mathbf{s})$, mediante el estimador kernel bidimensional de la Sección~\ref{subsubsec:tb_kde} (Ecuaciones~\ref{eq:tb_kde_simple}--\ref{eq:tb_gauss_kernel_2d_simple}).
+Para caracterizar la ubicación preferencial de los máximos respecto al centro del ciclón, la posición relativa de cada máximo se trata como variable aleatoria bidimensional $\mathbf{S} = (\Delta x, \Delta y)$. A partir del conjunto de $m$ ubicaciones relativas $\{\mathbf{s}_i\}_{i=1}^{m}$ de la etapa anterior, se estima la función de densidad de probabilidad de la posición (PDFe), $\hat{f}(\mathbf{s})$, mediante el estimador kernel bidimensional de la Sección~\ref{subsec:tb_kde} (Ecuaciones~\ref{eq:tb_kde_simple}--\ref{eq:tb_gauss_kernel_2d_simple}).
 
 A diferencia de la PDF de magnitudes (Sección~\ref{subsec:extraccion_pdf}), la PDFe cuantifica la densidad de probabilidad de que el máximo ocurra en una posición relativa dada $\mathbf{s} = (\Delta x, \Delta y)$, independientemente del valor numérico de precipitación o viento en ese punto. El resultado es un campo continuo de densidad de probabilidad sobre el dominio centrado.
 
@@ -127,13 +123,13 @@ A diferencia de la PDF de magnitudes (Sección~\ref{subsec:extraccion_pdf}), la 
 
 Para identificar los patrones espaciales dominantes de variabilidad estructural se aplica un análisis EOF sobre el conjunto de $m$ campos promedio por ciclón--fase, por separado para cada variable (precipitación, viento), región y fase. Las referencias previas de este enfoque se presentaron en la Sección~\ref{subsec:tb_eof}. Previo al análisis, a cada campo se le resta la media del ensamble en cada punto de grilla para obtener las anomalías estructurales:
 
-\begin{equation}
-    X'(\tau, \mathbf{s}) = X(\tau, \mathbf{s}) - \frac{1}{m}\sum_{\tau=1}^{m}X(\tau, \mathbf{s}),
+\begin{equation}\label{eq:eof_anomalia}
+    X'(\tau, \mathbf{s}) = X(\tau, \mathbf{s}) - \frac{1}{m}\sum_{\tau'=1}^{m}X(\tau', \mathbf{s}),
 \end{equation}
 
 donde $X(\tau, \mathbf{s})$ es el campo de la variable para el ciclón $\tau$ en la posición relativa $\mathbf{s} = (x,y)$. De la matriz de anomalías se calcula la matriz de covarianza espacial, cuya diagonalización produce los modos ortogonales ($\text{EOF}_k$) y sus amplitudes ($\text{PC}_k$):
 
-\begin{equation}
+\begin{equation}\label{eq:eof_reconstruccion}
     X'(\tau, \mathbf{s}) = \sum_{k=1}^{K} \text{PC}_k(\tau) \cdot \text{EOF}_k(\mathbf{s}).
 \end{equation}
 
@@ -145,41 +141,41 @@ Cabe señalar que el tamaño muestral $m$ difiere sustancialmente entre regiones
 
 Para evaluar la robustez estadística de los autovectores del EOF y aislar las señales físicas del ruido estocástico, se implementa el remuestreo no paramétrico Bootstrap-t; su elección y ventajas frente al Bootstrap percentílico estándar para distribuciones asimétricas y de cola pesada se fundamentaron en la Sección~\ref{subsec:tb_bootstrap} de los Fundamentos. Se generan $R = 15{,}000$ submuestras con reemplazo, garantizando error de Monte Carlo insignificante en la estimación de las colas de la distribución.
 
-Para cada iteración $b$ se recalcula el EOF sobre la submuestra y, en cada punto de grilla, se obtiene el estadístico cuasi-pivotal:
+Para cada iteración $b$ se recalcula el EOF sobre la submuestra y, en cada punto de grilla, se calcula el estadístico:
 
-\begin{equation}
+\begin{equation}\label{eq:bootstrap_t_espacial}
     t^*_b(\mathbf{s}) = \frac{\hat{\theta}^*_b(\mathbf{s}) - \hat{\theta}(\mathbf{s})}{SE^*_b(\mathbf{s})},
 \end{equation}
 
-donde $\hat{\theta}(\mathbf{s})$ es la carga espacial original en $\mathbf{s}$, $\hat{\theta}^*_b(\mathbf{s})$ su estimación en la submuestra y $SE^*_b(\mathbf{s})$ su error estándar estimado. Los intervalos de confianza al 95\% se obtienen invirtiendo los cuantiles empíricos $q_{\alpha/2}$ y $q_{1-\alpha/2}$ de la distribución de $t^*$ (con $\alpha = 0.05$):
+donde $\hat{\theta}(\mathbf{s})$ es la carga espacial original en $\mathbf{s}$, $\hat{\theta}^*_b(\mathbf{s})$ su estimación en la submuestra, $SE^*_b(\mathbf{s})$ el error estándar de dicha submuestra, y $SE(\mathbf{s})$ el error estándar de la carga original (calculado sobre la muestra completa, sin remuestrear). Los intervalos de confianza al 95\% se obtienen invirtiendo los cuantiles empíricos $q_{\alpha/2}$ y $q_{1-\alpha/2}$ de la distribución de $t^*$ (con $\alpha = 0.05$):
 
-\begin{equation}
+\begin{equation}\label{eq:bootstrap_ci_espacial}
     \left(\hat{\theta}(\mathbf{s}) - q_{1-\alpha/2}\,SE(\mathbf{s}),\; \hat{\theta}(\mathbf{s}) - q_{\alpha/2}\,SE(\mathbf{s})\right).
 \end{equation}
 
-Los puntos de grilla se consideran estadísticamente significativos si su intervalo de confianza excluye el cero.
+Un punto de grilla se considera estadísticamente significativo cuando su intervalo de confianza excluye el cero, lo que equivale a rechazar, al nivel $\alpha = 0.05$ ya definido, la hipótesis nula de que la carga espacial en ese punto no difiere de cero por azar de muestreo.
 
 \subsection{Análisis de las Componentes Principales (PC1)}\label{subsec:analisis_pc}
 
 Además de la descomposición espacial, se analizan las propiedades estadísticas de la Componente Principal del primer modo (PC1), que representa la amplitud de cada ciclón sobre el patrón estructural dominante; la interpretación cualitativa de estos momentos estadísticos se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos. Se calculan, para la serie de PC1 de cada variable, región y fase, la asimetría ($\gamma_1$):
-\begin{equation}
+\begin{equation}\label{eq:pc1_asimetria}
     \gamma_1 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^3,
 \end{equation}
 y la curtosis ($\gamma_2$):
-\begin{equation}
+\begin{equation}\label{eq:pc1_curtosis}
     \gamma_2 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^4 - 3.
 \end{equation}
 Para conectar físicamente la estructura de los campos de superficie con la intensidad del sistema, se evalúa la correlación de Pearson entre la PC1 de cada variable y el mínimo de vorticidad relativa $\zeta_{850}^{\min}$ (negativa en el Hemisferio Sur):
-\begin{equation}
+\begin{equation}\label{eq:pc1_correlacion_zeta}
     \rho\!\left(PC_1, \zeta_{850}^{\min}\right) = \frac{\text{cov}\!\left(PC_1, \zeta_{850}^{\min}\right)}{\sigma_{PC_1} \cdot \sigma_{\zeta}}.
 \end{equation}
 Su interpretación físico-estadística, el vínculo entre la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
 
 Para evaluar si los patrones dominantes de precipitación y viento varían conjuntamente, se calcula la correlación entre las PC1 de precipitación y viento dentro de cada región y fase:
-\begin{equation}
+\begin{equation}\label{eq:pc1_correlacion_precip_viento}
     \rho = \text{corr}\!\left(PC_1^{\text{precip}},\; PC_1^{\text{viento}}\right).
 \end{equation}
-Valores cercanos a $+1$ indican que precipitación y viento se organizan espacialmente de manera coherente; valores cercanos a $0$ sugieren que la variabilidad espacial de la precipitación está controlada por procesos locales independientes de la configuración de mayor escala.
+Valores cercanos a $+1$ indican que precipitación y viento se organizan espacialmente de manera coherente; valores cercanos a $0$ sugieren que la variabilidad espacial de la precipitación está controlada por procesos locales independientes de la configuración de mayor escala; valores marcadamente negativos indicarían una relación inversa entre ambos campos, sin respaldo físico claro dentro del marco de acoplamiento WCB--CCB descrito en la Sección~\ref{subsec:tb_compound_def}, y ameritarían una revisión adicional del caso.
 
 % ============================================================
 %  SECCIÓN M5 — ANÁLISIS MULTIVARIADO Y PROTOTIPOS
@@ -193,15 +189,14 @@ Para identificar los patrones espaciales dominantes de la estructura combinada d
 
 \paragraph{Paso 1 — Anomalías.} Se calcula el campo de anomalías de cada variable respecto a la media del conjunto (PG o p90) en cada punto de grilla.
 
-\paragraph{Paso 2 — Normalización por desviación estándar espacialmente promediada.} Para preservar los gradientes espaciales nativos de cada campo, la normalización usa un escalar global único por variable:
-\begin{equation}
+\paragraph{Paso 2 — Normalización por desviación estándar espacialmente promediada.} Para preservar los gradientes espaciales nativos de cada campo, la normalización usa un escalar global por variable, en lugar de la estandarización punto a punto de la PCA sobre matriz de correlación:
+\begin{equation}\label{eq:meof_normalizacion}
     Z_{V}(\tau, \mathbf{s}) =
         \frac{V'(\tau, \mathbf{s})}{\bar{\sigma}_{V}},
     \qquad
     \bar{\sigma}_{V} = \frac{1}{N_s} \sum_{i=1}^{N_s} \sigma_{V}(\mathbf{s}_i),
 \end{equation}
-donde $V'$ es el campo de anomalías, $\sigma_{V}(\mathbf{s}_i)$ la desviación estándar temporal en el punto de grilla $\mathbf{s}_i$, y $N_s$ el número total de puntos de grilla del dominio. La media se calcula como promedio aritmético simple de los puntos de grilla.
-Este factor escalar preserva la estructura espacial de los gradientes mientras equilibra el peso de ambas variables en la matriz de covarianza, evitando que el campo de mayor varianza domine artificialmente la descomposición conjunta \citep{wilks2019statistical_ch13}.
+donde $V'$ es el campo de anomalías, $\sigma_{V}(\mathbf{s}_i)$ la desviación estándar entre eventos en el punto de grilla $\mathbf{s}_i$, y $N_s$ el número de puntos de grilla del dominio. Este escalar preserva los gradientes espaciales mientras equilibra el peso de ambas variables en la matriz de covarianza, evitando que el campo de mayor varianza domine la descomposición conjunta, problema documentado para variables de unidades dispares en \citet{wilks2019statistical_ch13}.
 
 \paragraph{Paso 3 — Concatenación espacial.} Los campos normalizados se concatenan para formar el vector de estado combinado:
 
@@ -217,7 +212,7 @@ Tanto la PG como el subconjunto p90 se procesan de forma independiente con este 
 
 Para cumplir con el Objetivo Específico 4, se desarrolla un procedimiento de síntesis visual que integra en un único panel, por cada combinación región-fase, cuatro fuentes de información estadística derivadas de los análisis anteriores. Cada prototipo se compone de cuatro capas superpuestas en coordenadas lagrangianas $(\Delta x, \Delta y)$, dentro del dominio de $9.5^{\circ}$ de radio. La lógica del compositing centrado en el sistema, que hace posible esta superposición, se presentó en la Sección~\ref{subsec:tb_compositing} de los Fundamentos.
 
-Las dos primeras capas son las isolíneas de la PDFe de la ubicación de máximos de precipitación y viento. A partir de la superficie de densidad $\hat{f}(\mathbf{s})$ (Ecuación~\ref{eq:tb_kde_simple}) se extraen los contornos de los percentiles 75 y 90 de la densidad acumulada, y sobre cada superficie se señaliza con un marcador estelar la coordenada $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$, la posición donde es más frecuente encontrar el máximo de la variable.
+Las dos primeras capas son las isolíneas de la PDFe de la ubicación de máximos de precipitación y viento. A partir de la superficie de densidad $\hat{f}(\mathbf{s})$ (Ecuación~\ref{eq:tb_kde_simple}) se extraen los contornos de los percentiles 75 y 90 de la densidad acumulada, y sobre cada superficie se señaliza con un marcador la coordenada $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$, la posición donde es más frecuente encontrar el máximo de la variable.
 
 Las capas tercera y cuarta muestran las isolíneas de los patrones espaciales del primer modo multivariado (MEOF$_1$), obtenidos según la Sección~\ref{subsec:eof_multivariado} para precipitación ($\text{EOF}_{1,P}$) y viento ($\text{EOF}_{1,W}$).
 Previo al trazado de contornos se aplica un suavizado gaussiano ($\sigma = 2$) a cada campo. Los niveles de contorno se determinan mediante percentiles aplicados por separado sobre los valores positivos (percentiles 33 y 66, línea sólida) y negativos (percentiles 33 y 66 del valor absoluto, línea discontinua).
@@ -225,9 +220,8 @@ Esta umbralización relativa garantiza comparabilidad entre distintas combinacio
 Las regiones de carga positiva indican sectores donde la variable tiende a presentar anomalías positivas respecto a la media cuando el modo dominante se activa; las de carga negativa, supresión relativa.
 
 El resultado se organiza en una figura matricial de $3 \times 4$ paneles (3 regiones de ciclogénesis $\times$ 4 fases evolutivas), donde cada panel integra las cuatro capas descritas: PDFe de precipitación, PDFe de viento, $\text{EOF}_{1,P}$ de precipitación y $\text{EOF}_{1,W}$ de viento.
-La superposición permite identificar el grado de organización espacial entre ambos campos en el entorno del ciclón.
-Una alta coincidencia entre el núcleo del PDFe de precipitación y la región de carga positiva del EOF de viento indica una estructura frontal compacta; un desacoplamiento revela asimetrías en la distribución de los máximos, posiblemente asociadas a procesos locales de interacción océano-atmósfera o a la geometría del frente.
-Este análisis ofrece, además, un marco de referencia para detectar configuraciones que podrían favorecer eventos simultáneos, aunque su objetivo principal es la caracterización morfológica de la fase.
+La superposición permite leer el grado de organización espacial entre ambos campos en el entorno del ciclón: una alta coincidencia entre el núcleo del PDFe de precipitación y la región de carga positiva del EOF de viento indica una estructura frontal compacta; un desacoplamiento revela asimetrías en la distribución de los máximos.
+Este análisis caracteriza la morfología de la fase y, de forma secundaria, ofrece un marco de referencia para identificar configuraciones que favorecerían eventos simultáneos de viento y precipitación.
 
 La coordenada de cada variable, anotada en la leyenda interna de cada panel como $(\Delta x, \Delta y)$ en grados, cuantifica el desplazamiento preferencial de los máximos respecto al centro del vórtice. 
 Este procedimiento se ejecuta de forma independiente para la PG y el subconjunto p90, permitiendo la comparación directa de los patrones estructurales entre ambos estratos de intensidad.
