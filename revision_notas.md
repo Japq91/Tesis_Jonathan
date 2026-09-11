@@ -30,7 +30,17 @@ convención de signo por defecto podría ser distinta y hay que verificarla espe
   $|\rho|$ en vez del signo cuando se comparen paneles distintos, dejando la interpretación de
   signo solo dentro de un mismo panel.
 
-### 2. `detrend()` — RESUELTO
+### 2. Cifras de varianza explicada (EOF1) — RESUELTO
+En `sec:var_exp_wind10` el texto citaba valores (57.4% SBR-Madurez, 57.1% LPB-Madurez, 30.9-43.3%
+ARG) que no se pudieron verificar contra el heatmap `all_expvar_wind10_mean2times.png` por
+saturación de la barra de color (topa en 40%). **Se confirmaron exactos** al revisar la siguiente
+subsección (`subsec:eof1_wind10_global`), cuya figura `pca1_wind10_global_fasesxreg.png` imprime el
+`exp_var` explícito en cada uno de los 12 paneles — los 12 valores coinciden con el texto sin
+excepción (incluido el rango completo de ARG: 30.9/37.3/43.3/37.2%). Sigue pendiente, eso sí, si
+vale la pena extender la escala de color del heatmap original (p. ej. hasta 60%) para que comunique
+visualmente lo que ya está correcto numéricamente — es una mejora estética opcional, no una corrección.
+
+### 3. `detrend()` — RESUELTO
 El usuario confirmó que la versión real (swell) **no aplica `detrend()`**. Coincide con lo que ya
 dice el texto ("No se aplica remoción de tendencia temporal"). No se requiere ninguna acción sobre
 el texto por este punto. (La versión local con `detrend()` en `axis=-1` —que detrenderaba el eje
@@ -169,9 +179,95 @@ archivos activos "vr" del proyecto. Nota: este capítulo está comentado/deshabi
   distinguir clúster, pico visual ~17-18 m/s), conectada explícitamente con el valor de la Población
   Global del propio estudio (~12-15 m/s) — más precisa y mejor anclada que la comparación por clúster.
 
+- `sec:kde_espacial_global` (Distribución espacial de máximos PDFe, Población Global): revisión
+  exhaustiva incluyendo **inspección visual directa de la imagen** `images/w10/kde_wind10_global_fasesxreg.png`
+  (12 paneles, 3 regiones × 4 fases) contra la descripción textual. Hallazgos:
+  - Layout (columnas=región, filas=fase) confirmado correcto.
+  - La narrativa de migración del núcleo "este → oeste → noroeste" a través de las fases no se pudo
+    confirmar con certeza visual en la transición incipiente→intensificación (las manchas incipientes
+    son muy difusas para fijar una posición de núcleo precisa); **pendiente de verificar con los
+    valores exactos $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$** si el usuario los tiene
+    disponibles (no resuelto en esta sesión).
+  - Contradicción aparente resuelta: "se consolida en las tres regiones" (línea 70) vs. "SBR/LPB
+    tienen dos focos" (línea 73) — el usuario aclaró que en SBR y LPB el foco de **mayor densidad**
+    sí cumple la consolidación al noroeste, y el segundo foco (menor densidad) es adicional. Se
+    aplicó ajuste de redacción: "se consolida el desplazamiento **del foco de mayor densidad**
+    hacia el cuadrante noroeste" para hacerlo explícito y blindarlo ante lecturas apuradas.
+  - Las 10 citas de esta subsección (`simmonds2000mean`, `sinclair1994objective`, `reboita2010south`,
+    `gramcianinov2019properties`, `dossantos2023response`, `yanase2014parameter`,
+    `gozzo2014subtropical`, `cardoso2020wind`, `corner2025classification`,
+    `eisenstein2023identification`) verificadas razonables a excelentes. Dos cifras exactas
+    confirmadas: Gozzo (2014) "300–450 km" y Cardoso (2020) "400–500 km" para la distancia del
+    viento máximo al centro (ambos sobre ciclones subtropicales, no ETC en general — usado como
+    referencia de orden de magnitud, razonable pero no idéntica población).
+
+- `sec:kde_espacial_p90` (Subconjunto p90, PDFe): revisión exhaustiva con **inspección visual** de
+  `images/w10/kde_wind10_p90_fasesxreg.png`. La posición del núcleo en madurez (entre $-1°$ y $-3°$
+  de longitud, $+2°$ a $+3°$ de latitud) coincide bien con la imagen para los 3 paneles. **Corrección
+  aplicada**: la magnitud de ARG (i) en madurez decía "concentración similar" a SBR/LPB
+  (23-27/23-25$\times10^{-4}$), pero el panel muestra un núcleo verde-amarillo, no rojo/naranja —
+  corregido a "notablemente menor (${\approx}$17-19$\times10^{-4}$)".
+  ~18 citas revisadas, con **~7 cifras numéricas de alto riesgo verificadas exactas**:
+  `catto2010climate` (39.1±3.5 m/s a 5.1°±2.7°, 100 ciclones más intensos HN), `gray2020prototype`
+  (tormenta Brendan, 49 hPa, ASCAT), `gray2024global` (15% HS vs. 27% HN, tabla exacta),
+  `priestley2022improved` (~3-3.5° del centro), `hyeok2024extrem` (15% más frecuente al suroeste),
+  `shapiro1990life` (935 hPa, ~40 m/s dentro del rango 35-50 citado, evento ERICA Atlántico Norte),
+  `stankovic2025surface` (extremos mayores en HN por baroclinicidad). Resto de citas
+  (`clark2005sting`, `clark2018sting`, `martinez2014cold`, `gentile2023observed`,
+  `reboita2018extratropical`) verificadas temáticamente sin cifra puntual. **No verificadas a fondo
+  por volumen**: `hodges2011comparison`, `schemm2014linkage`, `blanchard2021warm` — pendiente si se
+  quiere profundizar.
+
+- `sec:var_exp_wind10` (Fraccionamiento de varianza, EOF1-EOF5): revisada la **lógica frente a las
+  dos subsecciones PDFe anteriores** (PG y p90) — es coherente, no contradictoria: PG combina PDFe
+  difusa + EOF1 dominante (consistente con un gradiente suave de gran escala reproducible entre
+  eventos); p90 combina PDFe hiperconcentrada + EOF1 NO dominante (consistente con que la posición
+  del máximo es reproducible pero el resto del campo varía más por complejidad mesoescalar —
+  sting jets, frentes, seclusiones — que exige más modos). Buen argumento, sin inconsistencia.
+  Cifras exactas **verificadas después** contra `subsec:eof1_wind10_global` — ver más abajo.
+
+- `subsec:eof1_wind10_global` (EOF1 --- Población Global): revisión con **inspección visual** de
+  `images/w10/pca1_wind10_global_fasesxreg.png` (12 paneles, cada uno con `exp_var` impreso). Las 12
+  cifras coinciden exactamente con el texto (30.9% a 57.4%), lo que además **resolvió el pendiente
+  nº 2** de la subsección anterior (ver arriba). La excepción morfológica de LPB en intensificación
+  (panel e, núcleo compacto centrado en el vórtice) se confirma visualmente. Citas nuevas
+  verificadas con exactitud: `hoskins2005new` (75% de ciclogénesis en superficie con contraparte a
+  500 hPa — cita textual) y `simmonds2000size` (*"radius of surface cyclonic systems increases as
+  they evolve to maturity"* — casi textual). Nota menor sin aplicar: el texto llama "débil dipolo
+  norte-sur" al patrón, pero ningún panel muestra valores negativos (azul) — es más un gradiente
+  monopolar de cero a positivo que un dipolo estricto; no se corrigió, queda a criterio del usuario.
+
+- `subsec:eof1_wind10_p90` (EOF1 --- Subconjunto p90): revisión con **inspección visual** de
+  `images/w10/pca1_wind10_p90_fasesxreg.png` (12 paneles con `exp_var` impreso). Rango numérico
+  "25.4%-37.6%" confirmado exacto (mín f=ARG-Int 25.4%, máx e=LPB-Int 37.6%). Morfología por fase
+  confirmada en general (incipiente difuso, intensificación con dipolo emergente, decaimiento con
+  contornos negativos solo en SBR/LPB). **Corrección aplicada**: el texto decía que el núcleo
+  negativo de madurez era "particularmente intenso en LPB (h) y ARG (i)", pero visualmente LPB es
+  claramente el más oscuro/intenso, mientras que ARG se ve tenue, comparable a SBR — se corrigió a
+  "particularmente intenso en LPB (h); en SBR (g) y ARG (i)... más tenues". Citas nuevas
+  verificadas: `hart2003cyclone` (título exacto sobre asimetría térmica/thermal wind) y
+  `schultz2021antecedents` (confirma el mecanismo del "anillo de vientos"/bent-back front
+  envolvente); `shapiro1999bridge` temáticamente compatible sin frase textual encontrada.
+
 ### Pendiente inmediato (próxima sesión/turno)
-Siguiente tramo: `sec:kde_espacial_global` (línea 53, "Distribución espacial de máximos (PDFe),
-Población Global") — no revisada todavía.
+Siguiente tramo: `subsec:pc1_global_wind10` (línea 207, "Población Global: Patrón sinóptico
+dominante", dentro de `\section{Componentes principales (PC1)}\label{subsec:res_dinamica_pc1}`) —
+no revisada todavía. Recordar también verificar la dirección este/oeste de intensificación de la PG
+con los valores $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$ si el usuario los consigue
+(pendiente de `sec:kde_espacial_global`).
+
+- `subsec:res_significancia_madurez` (Significancia estadística, Bootstrap-t): revisión exhaustiva
+  con **inspección visual de las dos figuras grandes** (18 paneles c/u) `xeof_global_wind10_mature.png`
+  y `xeof_p90_wind10_mature.png`. **Corrección aplicada**: la oración "SBR concentra mayor
+  variabilidad explicada por EOF2 (8.7%) que LPB (7.5%) y ARG (11.5%)" era una contradicción
+  aritmética (8.7% no es mayor que 11.5%) — confirmado con las cifras impresas en la figura que es
+  **ARG** quien tiene el valor más alto; corregido a "ARG concentra mayor variabilidad... que SBR
+  (8.7%) y LPB (7.5%)". Resto de cifras verificadas exactas (EOF1 madurez 43.3-57.4%, EOF3
+  5.4-6.3%). Verificación espacial del achurado (significancia 95%) confirmada en detalle: EOF1
+  cubre casi todo el dominio en PG; hueco de significancia en cuadrante noreste de LPB-EOF2 (PG)
+  confirmado; en p90, el núcleo negativo de LPB-EOF1 aparece sin achurado (a diferencia de SBR/ARG,
+  que sí tienen algo de cobertura) — distinción fina que el texto capta correctamente; orientación
+  sureste (no solo sur) del núcleo significativo de ARG-EOF1 en p90 también confirmada.
 
 Recordar también el pendiente abierto de la sección "Pendientes por verificar" arriba (librería de
 PCA en swell / convención de signo del EOF) — no resuelto aún.
