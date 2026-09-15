@@ -165,17 +165,9 @@ y la curtosis ($\gamma_2$):
 \begin{equation}\label{eq:pc1_curtosis}
     \gamma_2 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^4 - 3.
 \end{equation}
-Para conectar físicamente la estructura de los campos de superficie con la intensidad del sistema, se evalúa la correlación de Pearson entre la PC1 de cada variable y el mínimo de vorticidad relativa $\zeta_{850}^{\min}$ (negativa en el Hemisferio Sur):
-\begin{equation}\label{eq:pc1_correlacion_zeta}
-    \rho\!\left(PC_1, \zeta_{850}^{\min}\right) = \frac{\text{cov}\!\left(PC_1, \zeta_{850}^{\min}\right)}{\sigma_{PC_1} \cdot \sigma_{\zeta}}.
-\end{equation}
-Su interpretación físico-estadística, el vínculo entre la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
+Para conectar físicamente la estructura de los campos de superficie con la intensidad del sistema, se evalúa la correlación de Spearman entre el valor absoluto de la PC1 de cada variable, $|PC_1|$, y la vorticidad relativa a 850 hPa asociada a la fase. Esta última se obtiene de los mismos instantes centrales usados para construir los campos compuestos (Sección~\ref{sec:procesamiento_lagrangiano}), tomando, en lugar del promedio, el de mayor magnitud entre ellos como representativo de la intensidad del sistema en esa fase; no debe confundirse con el $\zeta_{850}^{\min}$ de toda la vida del ciclón empleado en la Sección~\ref{subsec:grupo_global} para la selección del subconjunto p90. Se utiliza el valor absoluto en ambas variables porque el signo de la PC1 depende de una convención arbitraria del análisis EOF (Sección~\ref{subsec:tb_eof} de los Fundamentos), y porque la vorticidad relativa se registra en la base de datos en magnitud, sin signo; el interés aquí es la fuerza de la proyección sobre el modo dominante, no su fase. Se emplea un coeficiente de correlación de rangos, no paramétrico, por no asumirse normalidad en la distribución de $|PC_1|$. Su interpretación físico-estadística, el vínculo entre la fuerza de la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
 
-Para evaluar si los patrones dominantes de precipitación y viento varían conjuntamente, se calcula la correlación entre las PC1 de precipitación y viento dentro de cada región y fase:
-\begin{equation}\label{eq:pc1_correlacion_precip_viento}
-    \rho = \text{corr}\!\left(PC_1^{\text{precip}},\; PC_1^{\text{viento}}\right).
-\end{equation}
-Valores cercanos a $+1$ indican que precipitación y viento se organizan espacialmente de manera coherente; valores cercanos a $0$ sugieren que la variabilidad espacial de la precipitación está controlada por procesos locales independientes de la configuración de mayor escala; valores marcadamente negativos indicarían una relación inversa entre ambos campos, sin respaldo físico claro dentro del marco de acoplamiento WCB--CCB descrito en la Sección~\ref{subsec:tb_compound_def}, y ameritarían una revisión adicional del caso.
+Para evaluar si la fuerza de los patrones dominantes de precipitación y viento varía conjuntamente, se calcula la correlación de Spearman entre $|PC_1^{\text{precip}}|$ y $|PC_1^{\text{viento}}|$ dentro de cada región y fase. Valores cercanos a $+1$ indican que, cuando el patrón dominante de un campo está fuertemente marcado en un evento, el del otro campo también lo está; valores cercanos a $0$ sugieren que la fuerza de ambos modos varía de forma independiente; valores marcadamente negativos indicarían que la fuerza de un modo tiende a ser alta cuando la del otro es baja, relación que ameritaría una revisión adicional del caso dentro del marco de acoplamiento WCB--CCB descrito en la Sección~\ref{subsec:tb_compound_def}.
 
 % ============================================================
 %  SECCIÓN M5 — ANÁLISIS MULTIVARIADO Y PROTOTIPOS
