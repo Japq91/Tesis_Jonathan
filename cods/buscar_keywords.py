@@ -50,6 +50,9 @@ def search_keywords_in_bib(bib_file, keywords):
     df = pd.DataFrame(results)
     df = df.fillna(0).astype({col: int for col in keywords})
     
+    # Filtrar: solo mantener autores que tengan al menos una palabra clave
+    df = df[df[keywords].sum(axis=1) > 0]
+    
     return df
 
 

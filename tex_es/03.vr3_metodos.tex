@@ -155,9 +155,10 @@ donde $\hat{\theta}(\mathbf{s})$ es la carga espacial original en $\mathbf{s}$, 
 
 Un punto de grilla se considera estadísticamente significativo cuando su intervalo de confianza excluye el cero, lo que equivale a rechazar, al nivel $\alpha = 0.05$ ya definido, la hipótesis nula de que la carga espacial en ese punto no difiere de cero por azar de muestreo.
 
-\subsection{Análisis de las Componentes Principales (PC1)}\label{subsec:analisis_pc}
+\subsection{Análisis de las Componentes Principales (PC1--PC3)}\label{subsec:analisis_pc}
 
-Además de la descomposición espacial, se analizan las propiedades estadísticas de la Componente Principal del primer modo (PC1), que representa la amplitud de cada ciclón sobre el patrón estructural dominante; la interpretación cualitativa de estos momentos estadísticos se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos. Se calculan, para la serie de PC1 de cada variable, región y fase, la asimetría ($\gamma_1$):
+Además de la descomposición espacial, se usará la Componente Principal del primer modo (PC1), que representa la amplitud de cada ciclón sobre el patrón estructural dominante; la interpretación de estos estadísticos se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos. 
+Se calculan, para la serie de PC1 de cada variable, región y fase, la asimetría ($\gamma_1$):
 \begin{equation}\label{eq:pc1_asimetria}
     \gamma_1 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^3,
 \end{equation}
@@ -165,9 +166,17 @@ y la curtosis ($\gamma_2$):
 \begin{equation}\label{eq:pc1_curtosis}
     \gamma_2 = \frac{1}{m} \sum_{\tau=1}^{m} \left(\frac{PC_{1,\tau} - \overline{PC_1}}{\sigma_{PC_1}}\right)^4 - 3.
 \end{equation}
-Para conectar físicamente la estructura de los campos de superficie con la intensidad del sistema, se evalúa la correlación de Spearman entre el valor absoluto de la PC1 de cada variable, $|PC_1|$, y la vorticidad relativa a 850 hPa asociada a la fase. Esta última se obtiene de los mismos instantes centrales usados para construir los campos compuestos (Sección~\ref{sec:procesamiento_lagrangiano}), tomando, en lugar del promedio, el de mayor magnitud entre ellos como representativo de la intensidad del sistema en esa fase; no debe confundirse con el $\zeta_{850}^{\min}$ de toda la vida del ciclón empleado en la Sección~\ref{subsec:grupo_global} para la selección del subconjunto p90. Se utiliza el valor absoluto en ambas variables porque el signo de la PC1 depende de una convención arbitraria del análisis EOF (Sección~\ref{subsec:tb_eof} de los Fundamentos), y porque la vorticidad relativa se registra en la base de datos en magnitud, sin signo; el interés aquí es la fuerza de la proyección sobre el modo dominante, no su fase. Se emplea un coeficiente de correlación de rangos, no paramétrico, por no asumirse normalidad en la distribución de $|PC_1|$. Su interpretación físico-estadística, el vínculo entre la fuerza de la proyección sobre el modo dominante y la intensidad dinámica del sistema, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
 
-Para evaluar si la fuerza de los patrones dominantes de precipitación y viento varía conjuntamente, se calcula la correlación de Spearman entre $|PC_1^{\text{precip}}|$ y $|PC_1^{\text{viento}}|$ dentro de cada región y fase. Valores cercanos a $+1$ indican que, cuando el patrón dominante de un campo está fuertemente marcado en un evento, el del otro campo también lo está; valores cercanos a $0$ sugieren que la fuerza de ambos modos varía de forma independiente; valores marcadamente negativos indicarían que la fuerza de un modo tiende a ser alta cuando la del otro es baja, relación que ameritaría una revisión adicional del caso dentro del marco de acoplamiento WCB--CCB descrito en la Sección~\ref{subsec:tb_compound_def}.
+Para conectar físicamente la estructura de los campos de superficie con la intensidad del sistema, se evalúa la correlación de Spearman entre la PC1, la PC2 y la PC3 de cada variable, y la vorticidad relativa a 850 hPa asociada. 
+Esta última se obtiene de los mismos instantes centrales usados para construir los campos compuestos (Sección~\ref{sec:procesamiento_lagrangiano}), tomando el de mayor magnitud entre ellos como representativo de la intensidad del sistema en esa fase; no debe confundirse con el $\zeta_{850}^{\min}$ de toda la vida del ciclón empleado en la Sección~\ref{subsec:grupo_global} para la selección del subconjunto p90.
+
+El signo de la PC indica de forma reproducible a qué lado del patrón dominante cae cada ciclón. 
+Correlacionar la PC con signo contra una variable externa prueba entonces si ese lado del patrón está asociado a la intensidad del sistema, más allá de qué tan marcada esté la proyección. 
+Se emplea a Spearman para no asumir normalidad en la distribución de las PC. 
+Su interpretación físico-estadística, el vínculo entre el lado del patrón dominante en que cae un ciclón y su intensidad dinámica, se estableció en la Sección~\ref{subsec:tb_eof} de los Fundamentos.
+
+Para evaluar si los patrones dominantes de precipitación y viento varían conjuntamente, se calcula la correlación de Spearman entre la PC1 de precipitación y la PC1 del viento, dentro de cada región y fase. 
+Valores cercanos a $+1$ o a $-1$ indican que el lado del patrón dominante de un campo está sistemáticamente asociado al lado del patrón dominante del otro; valores cercanos a $0$ sugieren que ambos patrones varían de forma independiente entre sí.
 
 % ============================================================
 %  SECCIÓN M5 — ANÁLISIS MULTIVARIADO Y PROTOTIPOS
