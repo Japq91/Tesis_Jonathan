@@ -8,7 +8,7 @@ Los prototipos se organizan en $3 \times 4$ paneles (3 regiones de ciclogénesis
 \section{Datos}\label{sec:datos} 
 \subsection{Reanálisis ERA5}\label{sec:datos_era5}
 Se utiliza el reanálisis de quinta generación del ECMWF, ERA5 \citep{hersbach2020era5}, mediante el conjunto de datos \textit{``ERA5 hourly data on single levels from 1940 to present''} \citep{hersbach_era5_2023b} para el período 1979--2020.
-La justificación de ERA5, resolución espacial ($\sim$31 km) y temporal (horaria), y su mayor densidad de trayectorias y representación de estructuras de mesoescala frente a reanálisis previos \citep{gramcianinov2020analysis}, es la base de la elección de este reanálisis para el catálogo de trayectorias.
+La resolución espacial ($\sim$31 km) y temporal (horaria) de ERA5, junto con su mayor densidad de trayectorias y representación de estructuras de mesoescala frente a reanálisis previos \citep{gramcianinov2020analysis}, justifican su elección para el catálogo de trayectorias.
 No obstante, \citet{chen2024evaluation} demuestran que ERA5 subestima sistemáticamente los extremos del 5\% de ciclones extratropicales más intensos, con sesgos del $-10.2\%$ en viento y $-22.6\%$ en precipitación respecto a observaciones en Estados Unidos de América.
 Por ello, los resultados obtenidos para p90 deben interpretarse como estimaciones conservadoras de la intensidad real de los eventos.
 
@@ -97,7 +97,7 @@ Sobre el subconjunto p90, comparándolo sistemáticamente con la PG, se aplica �
 
 \section{Procesamiento lagrangiano}\label{sec:procesamiento_lagrangiano}
 
-Para caracterizar la estructura de los sistemas independientemente de su ubicación geográfica, se adopta el marco lagrangiano expuesto en la Sección~\ref{subsec:tb_lagrangiano} de los Fundamentos, un dominio móvil de $20^{\circ} \times 20^{\circ}$ centrado en la posición del mínimo de vorticidad para cada instante $t$ de la trayectoria, en coordenadas relativas $(\Delta x, \Delta y)$ respecto al núcleo ciclónico. Este dominio aísla la señal de mesoescala y representa físicamente la extensión espacial de los brazos frontales del sistema, dimensiones tambien usadas por \citet{pepler2020dimensional, cardoso2022synoptic}. El procesamiento se realiza por separado para cada combinación de región de ciclogénesis y fase del ciclo de vida.
+Para caracterizar la estructura de los sistemas independientemente de su ubicación geográfica, se adopta el marco lagrangiano expuesto en la Sección~\ref{subsec:tb_lagrangiano} de los Fundamentos, un dominio móvil de $20^{\circ} \times 20^{\circ}$ centrado en la posición del mínimo de vorticidad para cada instante $t$ de la trayectoria, en coordenadas relativas $(\Delta x, \Delta y)$ respecto al núcleo ciclónico. Este dominio aísla la señal de mesoescala y representa físicamente la extensión espacial de los brazos frontales del sistema, dimensión también usada por \citet{cardoso2022synoptic} en el Atlántico Sur. El procesamiento se realiza por separado para cada combinación de región de ciclogénesis y fase del ciclo de vida.
 
 Siguiendo la técnica de compositing centrado en el sistema (Sección~\ref{subsec:tb_compositing}), se aplica un promediado temporal centrado para reducir la variabilidad de alta frecuencia de los datos horarios y obtener el campo más representativo de cada fase. Para cada ciclón y fase, se promedian únicamente los registros horarios más próximos al punto medio temporal de esa fase: dos registros cuando su duración total es par (los dos pasos centrales, equidistantes del punto medio), y tres cuando es impar (el paso central exacto más uno adyacente a cada lado). Este criterio evita que el promedio mezcle dos regímenes evolutivos distintos, de modo que el campo resultante representa la condición arquetípica de la fase (incipiente, intensificación, madurez o decaimiento) y no una transición entre estados sucesivos. El resultado es un único campo promedio por combinación ciclón--fase, unidad de análisis de todas las etapas estadísticas subsiguientes. En consecuencia, cada ciclón aporta exactamente un campo a cada una de las cuatro poblaciones fase-específicas de su región, por lo que el tamaño muestral $m$ es constante entre fases dentro de una misma región e igual al número de ciclones reportado en la Tabla~\ref{tab:conteo_ciclones}.
 
@@ -127,15 +127,31 @@ Para identificar los patrones espaciales dominantes de variabilidad estructural 
     X'(\tau, \mathbf{s}) = X(\tau, \mathbf{s}) - \frac{1}{m}\sum_{\tau'=1}^{m}X(\tau', \mathbf{s}),
 \end{equation}
 
-donde $X(\tau, \mathbf{s})$ es el campo de la variable para el ciclón $\tau$ en la posición relativa $\mathbf{s} = (x,y)$. De la matriz de anomalías se calcula la matriz de covarianza espacial, cuya diagonalización produce los modos ortogonales ($\text{EOF}_k$) y sus amplitudes ($\text{PC}_k$):
+donde $X(\tau, \mathbf{s})$ es el campo de la variable para el ciclón $\tau$ en la posición relativa $\mathbf{s} = (x,y)$.
+
+El análisis EOF univariado se aplica en dos instancias, con un tratamiento ligeramente distinto de esta anomalía según el propósito.
+
+\paragraph{Modos dominantes y varianza explicada.} Para las figuras de EOF1 y de fraccionamiento de varianza (Secciones~\ref{subsec:eof1_wind10_global}--\ref{subsec:eof1_wind10_p90}, \ref{subsec:eof1_tp_global}--\ref{subsec:eof1_tp_p90}, \ref{sec:var_exp_wind10} y \ref{subsec:var_exp_tp}), la anomalía se normaliza por un escalar global, con la misma lógica aplicada al MEOF (Sección~\ref{subsec:eof_multivariado}, Ecuación~\ref{eq:meof_normalizacion}):
+
+\begin{equation}\label{eq:eof_normalizacion}
+    Z(\tau, \mathbf{s}) = \frac{X'(\tau, \mathbf{s})}{\bar{\sigma}_X}, \qquad \bar{\sigma}_X = \frac{1}{N_s}\sum_{i=1}^{N_s} \sigma_X(\mathbf{s}_i),
+\end{equation}
+
+donde $\sigma_X(\mathbf{s}_i)$ es la desviación estándar entre ciclones en el punto de grilla $\mathbf{s}_i$. Este escalar único preserva la forma espacial de la anomalía mientras normaliza su magnitud, y se calcula de forma independiente para cada variable, región y fase mediante \texttt{scikit-learn}. Como consecuencia, las cargas de EOF$_k$ mostradas en los mapas son adimensionales (en unidades de $\bar\sigma_X$), no la magnitud física original de la variable.
+
+\paragraph{Significancia estadística.} Para el test Bootstrap-t (Sección~\ref{subsec:bootstrap_significancia}), el EOF se calcula directamente sobre la anomalía $X'(\tau,\mathbf{s})$ sin este paso de normalización, mediante la biblioteca \texttt{xeofs} \citep{rieger2024xeofs} sobre estructuras \texttt{xarray}. Dado que ambos procedimientos difieren únicamente por un factor de escala constante, igual para todo el dominio y todos los ciclones de un grupo, el porcentaje de varianza explicada por cada modo es idéntico entre ambos; solo cambia la unidad de las cargas espaciales, que en este caso conservan la magnitud física original de la variable.
+
+En ambos casos, la reconstrucción del campo a partir de los modos ortogonales sigue la misma expresión general:
 
 \begin{equation}\label{eq:eof_reconstruccion}
     X'(\tau, \mathbf{s}) = \sum_{k=1}^{K} \text{PC}_k(\tau) \cdot \text{EOF}_k(\mathbf{s}).
 \end{equation}
 
-No se aplica remoción de tendencia temporal (\textit{detrend}). El eje muestral es un índice de eventos discretos con espaciado temporal irregular entre 1979--2020, por lo que un ajuste lineal cronológico asumiría erróneamente un espaciado constante. El objetivo físico es aislar las características morfológicas de la variabilidad inter-sistémica dentro de cada fase, no las tendencias climáticas de baja frecuencia. La implementación utiliza la biblioteca \texttt{xeofs} \citep{rieger2024xeofs} sobre estructuras \texttt{xarray}.
+No se aplica remoción de tendencia temporal (\textit{detrend}). El eje muestral es un índice de eventos discretos con espaciado temporal irregular entre 1979--2020, por lo que un ajuste lineal cronológico asumiría erróneamente un espaciado constante. El objetivo físico es aislar las características morfológicas de la variabilidad inter-sistémica dentro de cada fase, no las tendencias climáticas de baja frecuencia.
 
 Cabe señalar que el tamaño muestral $m$ difiere sustancialmente entre regiones (Tabla~\ref{tab:conteo_ciclones}). ARG cuenta con la muestra más numerosa (1980 en la PG, 198 en p90), mientras que SBR y LPB presentan muestras considerablemente menores (641/64 y 669/67, respectivamente). Esta asimetría implica que los autovectores de SBR y LPB están sujetos a mayor incertidumbre de muestreo que los de ARG, lo que motiva la evaluación de significancia estadística mediante Bootstrap-t descrita en la Sección~\ref{subsec:bootstrap_significancia}.
+
+La interpretación física de cada modo --como flujo sinóptico de fondo o como circulación de mesoescala-- se apoya en la escala espacial del patrón, su ubicación relativa al centro del ciclón y su comparación cualitativa con la literatura; no se contrasta aquí contra viento vectorial, diagnósticos frontales independientes o índices de circulación de gran escala. Estas atribuciones se leen, por tanto, como lecturas físicamente plausibles y no como identificaciones confirmadas.
 
 \subsection{Significancia espacial: Bootstrap-t}\label{subsec:bootstrap_significancia}
 
