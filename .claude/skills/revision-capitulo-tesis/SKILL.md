@@ -1,15 +1,19 @@
 ---
 name: revision-capitulo-tesis
-description: Auditoría rigurosa de un capítulo de resultados de esta tesis (viento/precipitación/MEOF/prototipos) — verifica figuras contra las cuatro preguntas, fidelidad de citas contra las fuentes reales, consistencia numérica tabla-vs-texto, sobreinterpretación de mecanismos no probados, y conexiones lógicas entre secciones y entre regiones/poblaciones. Úsala cuando el usuario pida revisar, auditar o verificar a fondo un capítulo de resultados de la tesis (ej. "revisa el capítulo 6 con la misma lógica").
+description: Auditoría rigurosa de un capítulo de esta tesis (introducción, fundamentos, métodos, resultados de viento/precipitación/MEOF/prototipos, conclusiones, consideraciones finales o abstract) — verifica figuras contra las cuatro preguntas, fidelidad de citas contra las fuentes reales (incluyendo re-verificar contra el código/datos cuando la cifra es propia), consistencia numérica tabla-vs-texto y entre capítulos, sobreinterpretación de mecanismos no probados, conexiones lógicas entre secciones/regiones/poblaciones, y calibración de lenguaje (hilación de ideas, palabras innecesarias, afirmaciones que exceden el sustento de los resultados). Úsala cuando el usuario pida revisar, auditar o verificar a fondo cualquier capítulo de la tesis, incluida una segunda pasada sobre uno ya revisado (ej. "revisa el capítulo 6 con la misma lógica", "revisemos el capítulo 2 una vez más", "evalúa la hilación de ideas del capítulo 4").
 ---
 
-Esta skill documenta el método desarrollado y validado sobre los capítulos 4 (viento) y 5 (precipitación) de la tesis. Al aplicarla a un nuevo capítulo (ej. capítulo 6, MEOF), sigue este orden. Es un proceso largo y de varias rondas — no hay que hacerlo todo en un solo turno; conviene ir bloque por bloque y dejar que el usuario decida qué aplicar en cada paso.
+Esta skill documenta el método desarrollado y validado, capítulo por capítulo, sobre toda la tesis (introducción, fundamentos, métodos, los cuatro capítulos de resultados, conclusiones, consideraciones finales y abstract). Al aplicarla a un capítulo nuevo o a una segunda pasada de uno ya revisado, sigue este orden. Es un proceso largo y de varias rondas — no hay que hacerlo todo en un solo turno; conviene ir bloque por bloque y dejar que el usuario decida qué aplicar en cada paso. Una primera pasada limpia **no** significa que el capítulo esté terminado: varios de los hallazgos más serios de esta tesis aparecieron en segundas o terceras pasadas, con un enfoque distinto (ver Regla de oro y puntos 9-10).
 
 ## Regla de oro: profundidad real, no superficial
 
-Este es el error más grave que cometí y el usuario corrigió a mitad de la revisión: tras verificar varios autores a fondo (leyendo abstracts y párrafos completos), empecé a apurar el ritmo — un solo `grep` por autor, una coincidencia de palabra clave, y declaraba "confirmado" para las 4-5 citas de ese autor sin leer cada una por separado. El usuario lo notó y pidió rehacerlo.
+Este es el error más grave que cometí y el usuario corrigió varias veces a lo largo de la revisión: tras verificar varios autores a fondo (leyendo abstracts y párrafos completos), empecé a apurar el ritmo — un solo `grep` por autor, una coincidencia de palabra clave, y declaraba "confirmado" para las 4-5 citas de ese autor sin leer cada una por separado. El usuario lo notó y pidió rehacerlo, más de una vez, en capítulos distintos.
 
 **Por cada afirmación atribuida a un autor**, lee el párrafo o abstract real de la fuente (no solo una línea aislada) antes de dar un veredicto. Si un autor tiene 5 citas distintas en el capítulo, verifica las 5 por separado — no extrapoles de una a las demás. Es lento a propósito.
+
+**Nunca confíes en tu memoria de la conversación sobre el estado del archivo — vuelve a leerlo.** Varias veces esta revisión, correcciones que yo mismo había "propuesto y aplicado" según el resumen de la conversación en realidad **no estaban en el archivo actual** (capítulos 1 y 4: tres citas ya "corregidas" antes seguían mal atribuidas cuando volví a leer el archivo). La causa probable es que el resumen automático de una sesión larga puede describir una intención o una propuesta como si ya se hubiera aplicado. Antes de dar por bueno un capítulo, `Read` el archivo completo tal como está ahora — no asumas que coincide con lo que recuerdas haber hecho.
+
+**Cuando el usuario dice "no parece que estés revisando a profundidad", tómalo literalmente: busca en otro lugar.** La forma más productiva de responder no es releer el mismo capítulo con más cuidado, sino **cruzarlo contra otras fuentes**: otros capítulos, las tablas, o el código/los datos reales. Los hallazgos más serios de esta sesión (ver punto 9) aparecieron así, no releyendo el capítulo en aislamiento.
 
 ## 0. Verificación de compilación (antes y después)
 
@@ -49,6 +53,8 @@ Las secciones de Componentes Principales (`\input{tabelas_es/tab_stat_*.tex}`) c
 
 Este chequeo encontró errores reales en ambos capítulos ya revisados (rango de curtosis y significancia de PC2 en cap. 4; un "salto" descrito al revés en cap. 5) — es uno de los más rentables.
 
+Si una cifra citada en el texto proviene de datos propios del usuario (ej. "este criterio retiene aproximadamente el 60% de los sistemas"), y no solo de una tabla ya generada en el LaTeX, no te conformes con que "suene razonable" — **verifica contra el código y los datos reales**, ejecutando el filtro relevante en Python si hace falta (los notebooks/scripts están en `/home/jonathan/defensa/cods`, con datos en `input_csv/`). Así se encontró que una cifra de retención (60%) no correspondía a ningún cálculo real sobre el catálogo de esta tesis — el número correcto (43-52%) solo apareció al correr el filtro real con pandas.
+
 ## 4. Sobreinterpretación de mecanismos no probados (el "problema EOF")
 
 Buscar dónde el texto afirma que un resultado estadístico propio (patrón EOF, concentración espacial, salto de varianza) **es** o **confirma** un mecanismo físico nombrado de la literatura (WCB, CCB, sting jet, etc.) sin que la metodología del capítulo lo valide independientemente (no se analizó viento vectorial, no se analizó un campo de flujos de calor, etc.).
@@ -79,9 +85,31 @@ Marcar párrafos donde se acumulan 4+ citas para un solo punto. Proponer conserv
 
 Revisar si hay contrastes o comparaciones ya presentes en los números del texto (ej. el EOF1 de una variable nunca supera el rango típico del EOF1 de otra) que no se nombran explícitamente como hallazgo — proponerlos como adiciones, no como correcciones.
 
+## 9. Calibración de lenguaje: hilación de ideas, palabras innecesarias y afirmaciones sin sustento
+
+Pedido explícito del usuario, como pasada **distinta y posterior** a los puntos 1-6 — se hace sobre un capítulo que ya pasó por fidelidad de citas y consistencia numérica, no en su lugar. Releer el capítulo completo buscando tres cosas a la vez:
+
+- **Palabras que afirman más de lo que el resultado estadístico sostiene**: "demuestra"/"confirma"/"valida"/"prueba" para hallazgos de covarianza o correlación moderada casi siempre deberían ser "muestra"/"indica"/"respalda"/"es consistente con". Una correlación de Spearman moderada (ej. r entre -0.3 y -0.45) descrita como "sistemáticamente" o una geometría llamada "predecible" sobreafirma. Revisar también generalizaciones de más alcance que la muestra real (ej. "Hemisferio Sur" cuando el estudio cubre solo 3 regiones del Atlántico Sudoccidental; "universal" para un patrón visto en 3 regiones).
+- **Imprecisión técnica repetida**: "linealmente"/"lineal" usado para describir una correlación de Spearman (que mide relación monótona, no lineal) aparece muchas veces a lo largo de la tesis — revisar cada instancia por separado, no asumir que ya quedó resuelta porque se corrigió en otro capítulo.
+- **Palabras complicadas, términos inventados o de registro informal**: "previsibilidad geométrica", "reducción dimensional efectiva" (redundante — un EOF que concentra varianza ya es por definición una reducción dimensional), "devela", "dramático", "se empaquetan", "esta historia" (metáfora narrativa fuera de lugar en un capítulo de conclusiones). Reemplazar por la palabra simple y directa equivalente; si el reemplazo obvio usa un concepto que el usuario no ha trabajado en su tesis (ej. "capa límite"), preguntar antes de introducirlo.
+- **Hilación de ideas**: párrafos que acumulan 3-4 citas de fuentes distintas sin un hilo explícito que conecte cada una con el resultado que debería sustentar, o una sola oración que mezcla dos mecanismos físicos distintos sin separarlos. Dividir en oraciones o párrafos más cortos sin cambiar el contenido ni usar guiones largos si el usuario ya pidió evitarlos.
+
+Aplica también al Abstract, Conclusiones y Consideraciones Finales — de hecho ahí es donde más rinde, porque son los capítulos que la banca lee primero y con más atención.
+
+## 10. Capítulos de síntesis (Abstract, Conclusiones, Consideraciones Finales): verificación cruzada, no solo interna
+
+Estos capítulos repiten cifras y comparaciones que ya aparecieron en los capítulos de resultados — por eso el error más grave no se encuentra releyendo el capítulo de síntesis solo, sino **cruzando cada cifra y cada comparación regional contra el capítulo de resultados de donde proviene**. Los dos hallazgos más serios de toda esta revisión aparecieron así, no releyendo un capítulo en aislamiento:
+- Un rango de viento (20--25~m/s) en Conclusiones y Abstract que no aparece en ninguna parte del capítulo de viento — la fuente real decía 20--23~m/s, y ni siquiera coincidía consigo misma entre el cuerpo del capítulo y su propia síntesis (20--22 vs. 20--23).
+- El orden regional de una comparación (SBR/LPB/ARG) invertido: Conclusiones y Abstract describían a ARG como "más atenuado" en una separación geométrica, cuando el capítulo de prototipos —la fuente del dato— dice explícitamente y dos veces que ARG tiene la mayor magnitud de las tres regiones.
+
+Ninguno de los dos se habría encontrado leyendo el capítulo de síntesis en aislamiento — ambos números "sonaban" razonables por sí solos. Por cada cifra o comparación regional en un capítulo de síntesis, ubicar la sección del capítulo de resultados de donde proviene y confirmar coincidencia exacta, no solo plausibilidad.
+
+Evaluar además el **Abstract específicamente por extensión y propósito**, no solo por exactitud: no debe repetir cada cifra de cada síntesis de capítulo (esta tesis tenía uno de ~1,166 palabras haciendo eso, comprimido después a ~450). Un abstract debe comunicar el problema, el vacío, el enfoque, 2-3 hallazgos centrales con pocas cifras ancla, y la implicación — el detalle granular (coordenadas exactas, cada percentil secundario) pertenece a los capítulos de resultados. Preguntar al usuario si el abstract cumple ese propósito antes de asumir que solo necesita corrección de cifras puntuales.
+
 ## Proceso de trabajo con el usuario
 
 - Mostrar siempre **original vs. propuesta** con una justificación breve antes de aplicar — nunca aplicar directamente sin mostrar primero, salvo que el usuario ya haya dicho "aplica todas" para un lote ya mostrado.
 - Clasificar hallazgos en **necesario** (afecta veracidad o es un error real) vs. **viable** (mejora de estilo/claridad, opcional) cuando el volumen es grande, para que el usuario priorice.
 - Con lotes largos (autores, secciones), ir contando y reportando progreso ("van 5 de 10"), y hacer pausas naturales para que el usuario decida si continuar.
 - Idioma: responder siempre en español, con lenguaje simple y moderado — esta tesis la va a leer una banca evaluadora, no busca terminología difícil.
+- Git: los cambios se comprometen (`git add` + `commit`) solo cuando el usuario lo pide explícitamente ("sube a GitHub", "commit"), agrupando en un commit todo lo aplicado desde el último push, con mensaje descriptivo y la línea `Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>`. Nunca hacer `push` sin que el usuario lo pida. Antes de compilar para verificar, revisar `git status`/`git diff` para saber exactamente qué cambió; después de compilar, revertir `tese_es.tex` a su estado base (capítulos comentados) con `git checkout -- tese_es.tex`, nunca a mano.
