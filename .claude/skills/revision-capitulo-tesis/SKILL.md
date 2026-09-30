@@ -106,6 +106,35 @@ Ninguno de los dos se habría encontrado leyendo el capítulo de síntesis en ai
 
 Evaluar además el **Abstract específicamente por extensión y propósito**, no solo por exactitud: no debe repetir cada cifra de cada síntesis de capítulo (esta tesis tenía uno de ~1,166 palabras haciendo eso, comprimido después a ~450). Un abstract debe comunicar el problema, el vacío, el enfoque, 2-3 hallazgos centrales con pocas cifras ancla, y la implicación — el detalle granular (coordenadas exactas, cada percentil secundario) pertenece a los capítulos de resultados. Preguntar al usuario si el abstract cumple ese propósito antes de asumir que solo necesita corrección de cifras puntuales.
 
+## 11. Lecciones de la revisión del Cap. 4 (septiembre 2026)
+
+### 11.1 Cifras: la figura manda sobre el texto
+- Contrastar **cada** cifra y cada descripción (ubicación, orden regional, forma de curva, signo) con la figura correspondiente, no solo con la tabla. En el Cap. 4 el texto decía pico p90 20–22 (figura: 23–25), moda PG 12–15 (datos: 16–19), "ARG más ancha y aplanada" (falso), núcleos PG "hacia el oeste" en intensificación (seguían al este), densidades de ARG sobreestimadas, "dipolo" en un EOF sin valores negativos.
+- Si hay datos originales, recalcular (modas de PG con los CSV de `defensa/freq`). Los datos p90 y KDE en `defensa/` están dañados (archivos vacíos o con contenido ajeno): en ese caso se usa la figura, declarando la precisión (un escalón de la barra de colores, ±0.5°, ±0.5 m/s).
+- **El achurado de significancia y las amplitudes de las PCs los lee el usuario.** Yo los leí mal repetidas veces. Pedir una tabla figura × región × modo y reescribir solo con esa descripción.
+- En tablas de correlación, contar cuántas celdas están en negrita por población antes de aceptar "mayor frecuencia" (en p90 había MENOS significativas que en PG), y buscar casos no mencionados (PC3 > PC1 en cuatro casos, no en uno).
+
+### 11.2 Citas: fidelidad y relevancia
+- **Fidelidad**: por cada afirmación, abrir el `.md` y leer resumen, conclusiones y el pasaje concreto. Veredicto confirmado / parcial / discrepancia. Nunca marcar "confirmado" sin haber abierto el `.md` (me pasó con Hart y Hesterberg; hay que declararlo si ocurre).
+- Contexto que suele faltar y hay que añadir: **hemisferio**, **nivel** (10 m, 925, 850 hPa), **tipo de viento** (relativo a tierra vs. al sistema), **región** (p. ej. modo subtropical ~30°S no es ARG), **tipo de ciclón** (subtropical vs. ETC), **número de casos** (un caso de estudio ≠ climatología), **media compuesta vs. umbral**.
+- Separar lo que dice el autor de la inferencia de la tesis (p. ej. Danilo sí dice que la conversión barotrópica es máxima en madurez; la tesis inventaba que eso explica la significancia del EOF1 del viento. Sus términos son integrados en un dominio de 15°, no espaciales).
+- **Relevancia** (criterio del usuario): en capítulos de resultados solo se mantiene un autor si confirma o contradice directamente un hallazgo propio (misma variable o comparable, ubicación, fase o magnitud comparable). Autores de génesis, flujos de calor, trayectorias, espacio de fases térmico o explicaciones en cadena no evaluadas son de riesgo alto: el jurado preguntará "¿qué tiene que ver?". Antes de quitarlos, buscar en su `.md` si contienen algo aprovechable sobre viento/precipitación en superficie, ubicación o sector.
+- Al leer los `.md` buscar también **hallazgos útiles no usados** (en el Cap. 4: Gentile 2025, secuencia sector cálido → posterior-ecuatorial; Gramcianinov 2023, oleaje extremo en sectores O/NO en el Atlántico Sur).
+- Correcciones de atribución **mínimas**, para no perder el hilo de la narración.
+
+### 11.3 Lenguaje
+- Registro académico sobrio: ni refinado ("merece una lectura diferenciada", "firma", "competencia energética", "fragmentación dinámica", "configuración prototípica") ni coloquial ("por eso varía mucho").
+- Sin ":" ni "---" en la prosa (sí `--` en rangos numéricos).
+- Mecanismos no evaluados en condicional ("podría", "compatible con", "en la zona donde la literatura sitúa"). Eliminar "demuestra", "confirma", "valida", "sistemáticamente", "inconfundible", "drásticamente".
+- Términos a unificar en toda la tesis: "alta concentración" / "núcleo de alta densidad" (no "hiperconcentración"), "frente curvado", "el CCB", "vaguada", "gradiente" cuando no hay valores negativos, "componentes principales" (no "series temporales": el eje es un índice de ciclones).
+- Propuestas breves, siempre texto actual vs. propuesta, un bloque o párrafo a la vez.
+
+### 11.4 Síntesis de un capítulo de resultados
+Debe: responder a cada objetivo del capítulo, con pocas cifras ancla; integrar los métodos (PDF, PDFe, EOF, PC) en un mensaje común; contrastar PG/p90, regiones y fases; dar límites en 1–2 frases; hacer la transición. No debe introducir citas o mecanismos nuevos ni repetir cifras secundarias. Revisar primero el fondo (datos contra el cuerpo corregido) y luego la forma.
+
+### 11.5 Cruce obligatorio
+Después de corregir un capítulo, buscar las mismas cifras, términos y citas en Introducción, Fundamentos, Métodos, Abstract, Resumo, Conclusiones y Consideraciones Finales (en el Cap. 4 así se corrigieron el 23–25 en Abstract/Resumo/Conclusiones, "mínima intensidad" en Métodos, la atribución de la base de datos y citas de Cardoso en Caps. 5 y 7).
+
 ## Proceso de trabajo con el usuario
 
 - Mostrar siempre **original vs. propuesta** con una justificación breve antes de aplicar — nunca aplicar directamente sin mostrar primero, salvo que el usuario ya haya dicho "aplica todas" para un lote ya mostrado.

@@ -24,13 +24,13 @@ La elección de ambas variables responde a la naturaleza morfológica de los cic
 Este enfoque describe la configuración espacial típica de los campos de superficie en cada fase evolutiva y permite evaluar la eventual co-ocurrencia de los máximos de ambas variables, como primer acercamiento al análisis multivariado (MEOF) detallado en la Sección~\ref{subsec:eof_multivariado}.
 
 \subsection{Base de trayectorias y fases}\label{sec:bd_ciclones}
-El punto de partida es el catálogo de trayectorias desarrollado por \citet{gramcianinov2020analysis} a partir de ERA5, cuya alta resolución permite capturar sistemas de mesoescala y ciclogénesis en la región de estudio.
-Los parámetros del algoritmo de seguimiento y los filtros aplicados se detallan en la Tabla~\ref{tab:tracking_params}.
+Esta tesis no realiza la detección, el seguimiento ni la clasificación de fases de los ciclones.
+Se emplea la base de trayectorias y fases desarrollada en \citet{coutodesouza2024thesis}, construida sobre el catálogo de \citet{gramcianinov2020analysis} (Tabla~\ref{tab:tracking_params}) y con las fases clasificadas mediante \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}.
 
 \input{tabelas_es/tab_tracking_params.tex}
 
-Sobre esta base, \citet{coutodesouza2024new} incorporan una clasificación objetiva de las fases evolutivas mediante el algoritmo \textit{CycloPhaser} \citep{deSouza2025CycloPhaser}, que evalúa la tasa de cambio de la vorticidad relativa en 850 hPa ($\zeta_{850}$) para segmentar matemáticamente el desarrollo y decaimiento de cada sistema.
-Los fundamentos físicos de esta elección de $\zeta_{850}$ y de la segmentación en cuatro fases se exponen en las Secciones~\ref{subsec:tb_zeta} y~\ref{subsec:tb_fases} de los Fundamentos. La Tabla~\ref{tab:fases_def} resume dichas fases.
+A partir de esta base se seleccionan los ciclones de estudio (Sección~\ref{sec:poblaciones_estudio}) y se extraen los campos de ERA5 en los mismos instantes de cada trayectoria.
+Los fundamentos físicos del uso de $\zeta_{850}$ y de la segmentación en cuatro fases se exponen en las Secciones~\ref{subsec:tb_zeta} y~\ref{subsec:tb_fases} de los Fundamentos. La Tabla~\ref{tab:fases_def} resume dichas fases.
 
 \input{tabelas_es/tab_fases_def.tex}
 
@@ -75,7 +75,7 @@ La Tabla~\ref{tab:conteo_ciclones} documenta la reducción del tamaño muestral 
 
 \input{tabelas_es/tab_conteo_ciclones.tex}
 
-El análisis de la fase en que se registra el pico de vorticidad (Tabla~\ref{tab:fase_max_intensidad}) confirma que p90 respeta la estructura dinámica dominante. Cerca del 83\% de los casos alcanza su mínima intensidad durante la fase de madurez, frente a menos del 5\% durante el decaimiento.
+El análisis de la fase en que se registra el pico de vorticidad (Tabla~\ref{tab:fase_max_intensidad}) muestra que p90 respeta la estructura dinámica dominante. Cerca del 83\% de los casos alcanza su máxima intensidad ($\zeta_{850}^{\min}$) durante la fase de madurez, frente a menos del 5\% durante el decaimiento.
 
 \input{tabelas_es/tab_fase_max_intensidad.tex}
 

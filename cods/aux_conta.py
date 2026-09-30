@@ -93,9 +93,9 @@ def cuenta(palabra,file,case_sensitive = False):
     if not archivos_tex:
         print(f"❌ No se encontraron archivos .tex en: {file}")
     else:
-        print(f"🔍 Buscando: \"{palabra}\"")    
+        # print(f"🔍 Buscando: \"{palabra}\"")    
         print(f"📄 Archivos .tex encontrados: {len(archivos_tex)}")
-        print(f"🔤 Case sensitive: {'Sí' if case_sensitive else 'No'}")
+        # print(f"🔤 Case sensitive: {'Sí' if case_sensitive else 'No'}")
         print("-" * 50)
         
         total = 0
