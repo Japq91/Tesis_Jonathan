@@ -1,0 +1,20 @@
+Los ciclones extratropicales (ETC) son sistemas recurrentes en la costa del Atlántico Sudoccidental que generan vientos y precipitaciones, cuya coincidencia espacial suele asumirse. 
+Mientras el Hemisferio Norte cuenta con estudios sistemáticos sobre cómo se distribuyen estos campos, en el Hemisferio Sur es mas limitado, el uso de densidad espacial, análisis de Funciones Ortogonales Empíricas (EOF) univariadas y multivariadas (MEOF) en diferentes fases del desarrollo de los ETCs.
+Esta tesis desarrolla dicha integración para evaluar si la intensidad dinámica del ETC predice la magnitud y ubicación de sus máximos de viento a 10 metros y precipitación, o si ambos campos desarrollan una organización estructural distinta según la fase evolutiva.
+
+El análisis se construye sobre el catálogo de trayectorias por vorticidad relativa a 850~hPa \citep{gramcianinov2020analysis} y la clasificación objetiva del ciclo de vida en cuatro fases mediante \textit{CycloPhaser} \citep{coutodesouza2024new, deSouza2025CycloPhaser}, sobre ERA5 (1979--2020). 
+Se estratificó la muestra por tres regiones de ciclogénesis (SBR, LPB, ARG) y dos estratos de intensidad: la Población Global y el subconjunto de ciclones más intensos (p90, extraído de la Población Global). 
+Sobre esta base se aplicaron, de forma progresiva, funciones de densidad de probabilidad (PDF) de magnitud, estimación de densidad espacial (PDFe) de ubicación, descomposición EOF univariada con evaluación de significancia mediante Bootstrap-$t$, y descomposición MEOF de la covarianza conjunta, integradas finalmente en prototipos estructurales.
+
+En la Población Global, el viento se comporta de forma pasiva y predecible, con un único modo EOF dominante (31--57\% de la varianza) correlacionado con la vorticidad; la precipitación, en cambio, se distribuye entre múltiples modos (EOF1 apenas 11--16\%). 
+Esta arquitectura se reorganiza drásticamente en el subconjunto p90, el viento se concentra fuertemente en el cuadrante noroeste (moda de 23--25~m\,s$^{-1}$, densidades de hasta $27\times10^{-4}$ en SBR), mientras la precipitación colapsa en el núcleo y se reorganiza en una estructura en arco hacia el sureste y sur. 
+El MEOF muestra que ambas transformaciones son una misma reorganización, en la Población Global captura 14.8--26.6\% de la covarianza conjunta, con los gradientes de precipitación y viento orientados en ejes perpendiculares, pero en p90 cae a 11.65--23.47\% y revela, desde la madurez, un patrón de anticovarianza geométrica, respaldado por una correlación significativa entre las componentes principales de ambos campos ($|r|$ entre $0.31$ y $0.45$). 
+Los prototipos estructurales cuantifican esta separación en más de $8^{\circ}$--$9^{\circ}$ durante la madurez y el decaimiento, con ARG alcanzando la mayor magnitud (${\sim}10$--$11^{\circ}$). 
+La magnitud de esta separación varía regionalmente sin un único factor identificado, aunque su dirección, precipitación al sureste, viento al noroeste, se mantiene consistente en las tres regiones.
+
+Estos resultados muestran que, en los ETC maduros del Atlántico Sudoccidental, los máximos de viento y precipitación operan en cuadrantes opuestos, y que su parametrización mediante métricas escalares de intensidad central subestima sistemáticamente tanto la magnitud como la ubicación de ambos forzantes. 
+Este documento combina PDFe espacial, EOF univariado y MEOF para cuantificar esta separación por fase evolutiva y región de génesis en el Hemisferio Sur, con implicaciones para el riesgo costero en Brasil, Uruguay y Argentina.
+
+\vspace{1cm}
+
+\noindent \textbf{Palabras clave:} South America; extratropical cyclones; wind at 10 meters; precipitation; spatial structure; multivariate EOF.
