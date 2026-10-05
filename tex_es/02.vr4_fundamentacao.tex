@@ -21,7 +21,7 @@ Esto concuerda con experimentos de sensibilidad numérica de \citet{reboita2022f
 \subsection{Marco de referencia semi-lagrangiano}\label{subsec:tb_lagrangiano}
 La variabilidad estructural de los ETCs del Atlántico Sur requiere un marco de referencia común que no diluya la señal en promedios geográficos ni incorpore ruido de sistemas adyacentes.
 El enfoque euleriano superpone campos de variables, dificultando observar asimetrías estructurales durante la evolución.
-El enfoque semi-lagrangiano evita esta dilución centrando cada ETC en su núcleo de vorticidad con coordenadas relativas $(\Delta x, \Delta y)$, preservando la organización espacial y aislando su señal dentro de un dominio que se desplaza con la trayectoria.
+El enfoque semi-lagrangiano evita esta dilución centrando cada ETC en su núcleo ciclónico con coordenadas relativas $(\Delta x, \Delta y)$, preservando la organización espacial y aislando su señal dentro de un dominio que se desplaza con la trayectoria.
 Un dominio de $20^{\circ} \times 20^{\circ}$ se empleó en el Atlántico Sudoccidental por \citet{cardoso2022synoptic}. 
 Este enfoque lagrangiano ha demostrado utilidad a escala global, \citet{laurila2021characteristics} muestran que permite construir composites en el Hemisferio Norte, mientras \citet{priestley2022improved} lo aplicaron en ambos hemisferios para cuantificar la estructura e intensidad de los vientos, \citet{pepler2020dimensional} lo emplearon con un radio de $10^{\circ}$ en el sureste de Australia para estudiar la severidad de vientos y lluvia, y \citet{dacre2012atlas} lo utilizaron con un radio de $20^{\circ}$ en el Atlántico Norte para construir un atlas de compuestos que documenta sistemáticamente la estructura y evolución del ciclón.
 
@@ -46,7 +46,7 @@ Esto sugiere que los sistemas más intensos, ya sea en términos de vorticidad o
 Se adopta un criterio percentílico ($p90$) para aislar los sistemas más intensos. 
 En el HS, donde la vorticidad ciclónica es negativa, seleccionar p90 en valor absoluto equivale al $\zeta_{850}^{\min}$ más negativo, osea el más intenso.
 Para garantizar comparabilidad estructural, la homogeneidad evolutiva requiere ciclo de vida completo como la secuencia de cuatro fases evolutivas (Sección~\ref{subsec:tb_fases}) sin re-intensificaciones que introduzcan ruido. 
-Este criterio retiene entre el 43\% y el 52\% de los sistemas por región (Tabla~\ref{tab:conteo_ciclones}), a partir de una versión actualizada de la base de trayectorias desarrollada originalmente por \citet{coutodesouza2024new}.
+Este criterio retiene entre el 43\% y el 52\% de los sistemas por región (Tabla~\ref{tab:conteo_ciclones}), a partir de una versión actualizada del catálogo de trayectorias de \citet{gramcianinov2020analysis}, con las fases clasificadas mediante \textit{CycloPhaser} \citep{coutodesouza2024new, deSouza2025CycloPhaser}.
 Los filtrados específicos se detallan en la Sección~\ref{sec:poblaciones_estudio}.
 De lo anterior emergen dos estratos de análisis complementarios:
 \begin{itemize}
@@ -127,15 +127,15 @@ Aunque el algoritmo asigna límites precisos a cada fase, la estructura del cicl
 Por ello, en esta tesis cada fase se representa únicamente por sus instantes centrales, donde la configuración de los campos de superficie propia de esa fase se expresa con mayor claridad (Sección~\ref{sec:procesamiento_lagrangiano}).
 
 \begin{enumerate}
-    \item \textit{Incipiente:} Corresponde a la aparición inicial del núcleo de vorticidad organizada.
+    \item \textit{Incipiente:} Corresponde a la aparición inicial de una circulación ciclónica organizada.
     En el contexto regional, esta fase suele asociarse a la interacción entre una vaguada en altura y forzantes de superficie, como la orografía de los Andes o gradientes térmicos costeros.
 
     \item \textit{Intensificación:} Período caracterizado por el rápido crecimiento de la vorticidad ciclónica.
     Esta etapa está impulsada por una retroalimentación entre la inestabilidad dinámica y los flujos de calor latente y sensible.
 
-    \item \textit{Madurez:} Etapa donde el sistema alcanza su intensidad máxima (pico de vorticidad) y su mayor extensión horizontal. El radio de los ciclones en superficie tiende a incrementarse sistemáticamente al evolucionar hacia la madurez en ambos hemisferios, como demostró \citet{simmonds2000size}, lo que exige que el dominio de análisis lagrangiano sea suficientemente amplio para capturar la circulación completa del sistema.
-    Es precisamente durante esta fase donde los ciclones oceánicos intensos consolidan la evolución estructural documentada por \citet{shapiro1999bridge}. La deformación del flujo genera la fractura del frente frío y aísla una masa de aire cálido en el núcleo del vórtice (\textit{warm seclusion}).
-    Al completarse este proceso, las huellas de precipitación y viento quedan espacialmente desacopladas.
+    \item \textit{Madurez:} Etapa donde el sistema alcanza su intensidad máxima (pico de vorticidad) y su mayor extensión horizontal. El radio de los ciclones en superficie tiende a incrementarse sistemáticamente al evolucionar hacia la madurez en ambos hemisferios, como demostró \citet{simmonds2000size}, lo que exige que el dominio de análisis centrado en el sistema sea suficientemente amplio para capturar la circulación completa del sistema.
+    Es en esta fase donde los ciclones oceánicos intensos podrían consolidar una evolución estructural similar a la documentada por \citet{shapiro1999bridge} para un caso del Hemisferio Norte. La deformación del flujo genera la fractura del frente frío y aísla una masa de aire cálido en el núcleo del vórtice (\textit{warm seclusion}).
+    De completarse este proceso, las huellas de precipitación y viento podrían quedar espacialmente desacopladas, hipótesis que se evalúa empíricamente en los capítulos de resultados de esta tesis.
 
     \item \textit{Decaimiento:} Fase final marcada por la disminución progresiva de la magnitud de $\zeta_{850}$, reflejo del debilitamiento dinámico del vórtice \citep{coutodesouza2024thesis}.
 \end{enumerate}
@@ -157,7 +157,7 @@ Las técnicas elegidas responden a propiedades intrínsecas de estos campos como
 
 \subsection{ETCs Compositing}\label{subsec:tb_compositing}
 
-La técnica de compositing centrado en el sistema superpone los campos de distintos eventos en coordenadas relativas al centro de cada ETC, preservando sus asimetrías estructurales, bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estadísticamente representativo que el promedio de sus campos lagrangianos revela.
+La técnica de compositing centrado en el sistema superpone los campos de distintos eventos en coordenadas relativas al centro de cada ETC, preservando sus asimetrías estructurales, bajo el supuesto de que los ciclones de una misma región y fase comparten un patrón estadísticamente representativo que el promedio de sus campos centrados en el sistema revela.
 Esta alineación dentro de un radio fijo se ha empleado para evaluar la estructura ciclónica en modelos climáticos, tanto al comparar un modelo de alta resolución con ERA-40 \citep{catto2010climate} como al cuantificar, a partir de las estructuras del WCB y el CCB, los sesgos de intensidad del viento de distintas generaciones de modelos frente a ERA5 \citep{priestley2022improved}.
 Al particionar los composites por fase de desarrollo, la técnica permite además rastrear cómo los campos se configuran, desplazan y contraen a lo largo del ciclo de vida, estrategia que \citet{mcerlich2023extremes} aplicaron a la precipitación extrema de los ETCs del HS con ERA5 (Sección~\ref{subsec:tb_kde_asimetria}).
 En el Atlántico Sur, \citet{gramcianinov2019properties} emplearon composites centrados en el ciclón durante la génesis para mostrar que los mecanismos dominantes de desarrollo difieren según la región de formación.
