@@ -1,27 +1,27 @@
 \begin{table}[htbp]
 \centering
-\caption[Coerência temporal entre precipitação e vento a 10m (Global e p90)]{Correlação de Pearson ($\rho$) e valores de significância (\textit{p-valor}) entre o primeiro componente principal (PC1) do campo de precipitação e o vento a 10 metros. Apresenta-se a evolução temporal desse acoplamento para a População Global e o subconjunto extremo (p90). Os valores em negrito indicam correlações estatisticamente significativas ($p < 0.05$).}
+\caption[Coerência entre os modos de precipitação e vento a 10m (Global e p90)]{Correlação de Spearman em valor absoluto ($|r|$) entre a PC1 de precipitação e a PC1 do vento a 10 metros, e seu valor de significância (\textit{p-valor}), para a População Global e o subconjunto extremo (p90). Reporta-se o valor absoluto porque cada PC1 provém de uma decomposição EOF univariada independente, com sua própria convenção de sinal arbitrária (Seção~\ref{subsec:analisis_pc}). Os valores em negrito indicam correlações estatisticamente significativas ($p < 0.05$).}
 \label{tab:meof_coherencia}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrr}
 \hline
 \textbf{Região} & \textbf{Fase} & \multicolumn{2}{c}{\textbf{População Global}} & \multicolumn{2}{c}{\textbf{Subconjunto p90}} \\
 \cline{3-4} \cline{5-6}
- & & \textbf{$\rho$} & \textbf{p-valor} & \textbf{$\rho$} & \textbf{p-valor} \\
+ & & \textbf{$|r|$} & \textbf{p-valor} & \textbf{$|r|$} & \textbf{p-valor} \\
 \hline
-\textbf{SBR} & Incipiente & \textbf{0.30} & $<$ 0.001 & \textbf{0.37} & 0.003 \\
- & Intensificação & \textbf{0.35} & $<$ 0.001 & -0.01 & 0.922 \\
- & Maturidade & \textbf{-0.17} & $<$ 0.001 & \textbf{-0.40} & $<$ 0.001 \\
- & Decaimento & \textbf{-0.16} & $<$ 0.001 & 0.15 & 0.238 \\
+\textbf{SBR} & Incipiente & \textbf{0.31} & $<$ 0.001 & \textbf{0.32} & 0.009 \\
+ & Intensificação & \textbf{0.39} & $<$ 0.001 & 0.01 & 0.946 \\
+ & Maturidade & \textbf{0.19} & $<$ 0.001 & \textbf{0.45} & $<$ 0.001 \\
+ & Decaimento & \textbf{0.19} & $<$ 0.001 & 0.07 & 0.571 \\
 \hline
-\textbf{LPB} & Incipiente & \textbf{0.25} & $<$ 0.001 & 0.06 & 0.630 \\
- & Intensificação & \textbf{0.34} & $<$ 0.001 & -0.02 & 0.903 \\
- & Maturidade & -0.07 & 0.073 & \textbf{-0.49} & $<$ 0.001 \\
- & Decaimento & -0.03 & 0.463 & -0.01 & 0.947 \\
+\textbf{LPB} & Incipiente & \textbf{0.25} & $<$ 0.001 & 0.13 & 0.285 \\
+ & Intensificação & \textbf{0.35} & $<$ 0.001 & 0.06 & 0.648 \\
+ & Maturidade & \textbf{0.08} & 0.029 & \textbf{0.37} & 0.002 \\
+ & Decaimento & \textbf{0.08} & 0.032 & 0.12 & 0.314 \\
 \hline
-\textbf{ARG} & Incipiente & \textbf{0.12} & $<$ 0.001 & -0.04 & 0.548 \\
- & Intensificação & \textbf{0.40} & $<$ 0.001 & -0.11 & 0.111 \\
- & Maturidade & \textbf{0.39} & $<$ 0.001 & \textbf{-0.28} & $<$ 0.001 \\
- & Decaimento & \textbf{0.17} & $<$ 0.001 & \textbf{0.30} & $<$ 0.001 \\
+\textbf{ARG} & Incipiente & \textbf{0.18} & $<$ 0.001 & 0.03 & 0.647 \\
+ & Intensificação & \textbf{0.47} & $<$ 0.001 & 0.08 & 0.236 \\
+ & Maturidade & \textbf{0.44} & $<$ 0.001 & \textbf{0.31} & $<$ 0.001 \\
+ & Decaimento & \textbf{0.23} & $<$ 0.001 & \textbf{0.35} & $<$ 0.001 \\
 \hline
 \end{tabular*}
 \end{table}

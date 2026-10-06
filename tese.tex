@@ -51,7 +51,7 @@
 \input{tex/resumo.tex}		%
 						%
 \Abstract					%
-\input{tex/abstract.tex}		%
+\input{tex/00.vr1_abstract.tex}		%
 						%
 \listoffigures 				% lista de figuras (opcional)
 \listoftables 				% lista de tabelas (opcional)
@@ -60,14 +60,15 @@
 \cleardoublepage			%
 \pagestyle{fancy}			% formatação para corpo do texto
 						%
-% \input{tex/01.introducao.tex}		%
-% \input{tex/02.fundamentacao.tex}    	% inserir os capítulos do seu
-% \input{tex/03.metodos.tex}		% trabalho.
-\input{tex/04.wind10_resultados.tex}		% trabalho.
-% \input{tex/05.tp_resultados.tex}		% trabalho.
-% \input{tex/06.meof_resultados.tex}		% trabalho.
-% \input{tex/07.prototipo_resultados.tex}		% trabalho.
-% \input{tex/08.conclusao.tex}		% 
+\input{tex/01.vr5_introducao.tex}		%
+\input{tex/02.vr4_fundamentacao.tex}    	% inserir os capítulos do seu
+\input{tex/03.vr3_metodos.tex}		% trabalho.
+\input{tex/04.vr2_result01_w10.tex}		% trabalho.
+\input{tex/05.vr2_result02_tp.tex}		% trabalho.
+\input{tex/06.vr1_result03_meof.tex}		% trabalho.
+\input{tex/07.vr1_result04_prototipo.tex}		% trabalho.
+\input{tex/08.vr1_conclusiones.tex}		%
+\input{tex/09.vr1_consideraciones.tex}		%
        						%
 						%
 %\begin{thebibliography}{99}	% referências bibliográficas (dê
@@ -80,9 +81,10 @@
 						% referente ao arquivo
 						% bibliografia.bib na pasta tex/
 						%
-%\begin{apendice}			% inicio do ambiente apendice
-%\input{tex/apendicea.tex}		% texto referente ao apendice
-%\end{apendice}				% fim do ambiente apendice. caso
+\begin{apendice}			% inicio do ambiente apendice
+% \input{tex/apendicea.tex}		% apendice anterior (no incluido)
+\input{tex/apendice_meof_bias.tex}	% verificacao do viés MEOF (Bretherton)
+\end{apendice}				% fim do ambiente apendice. caso
 						% nao utilize apendice, remova as
 						% 3 linhas de comando.
 						%

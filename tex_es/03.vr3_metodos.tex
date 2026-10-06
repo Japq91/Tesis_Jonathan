@@ -234,9 +234,9 @@ Para cumplir con el Objetivo Específico 4, se desarrolla un procedimiento de s�
 
 Las dos primeras capas son las isolíneas de la PDFe de la ubicación de máximos de precipitación y viento. A partir de la superficie de densidad $\hat{f}(\mathbf{s})$ (Ecuación~\ref{eq:tb_kde_simple}) se extraen los contornos de los percentiles 75 y 90 de la densidad acumulada, y sobre cada superficie se señaliza con un marcador la coordenada $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$, la posición donde es más frecuente encontrar el máximo de la variable.
 
-Las capas tercera y cuarta muestran las isolíneas de los patrones espaciales del primer modo multivariado (MEOF$_1$), obtenidos según la Sección~\ref{subsec:eof_multivariado} para precipitación ($\text{EOF}_{1,P}$) y viento ($\text{EOF}_{1,W}$).
+Las capas tercera y cuarta muestran las isolíneas de los patrones espaciales del primer modo EOF univariado de cada campo ($\text{EOF}_{1,P}$ para precipitación y $\text{EOF}_{1,W}$ para viento), obtenidos según la Sección~\ref{subsec:eof_univariado} y no del modo conjunto MEOF$_1$ (Sección~\ref{subsec:eof_multivariado}); esta elección se justifica en el Capítulo~\ref{cap:prototipos}.
 Previo al trazado de contornos se aplica un suavizado gaussiano ($\sigma = 2$) a cada campo. Los niveles de contorno se determinan mediante percentiles aplicados por separado sobre los valores positivos (percentiles 33 y 66, línea sólida) y negativos (percentiles 33 y 66 del valor absoluto, línea discontinua).
-Esta umbralización relativa garantiza comparabilidad entre distintas combinaciones región--fase, independientemente de la magnitud absoluta del patrón espacial del MEOF.
+Esta umbralización relativa garantiza comparabilidad entre distintas combinaciones región--fase, independientemente de la magnitud absoluta del patrón espacial del EOF.
 Las regiones de carga positiva indican sectores donde la variable tiende a presentar anomalías positivas respecto a la media cuando el modo dominante se activa; las de carga negativa, supresión relativa.
 
 El resultado se organiza en una figura matricial de $3 \times 4$ paneles (3 regiones de ciclogénesis $\times$ 4 fases evolutivas), donde cada panel integra las cuatro capas descritas: PDFe de precipitación, PDFe de viento, $\text{EOF}_{1,P}$ de precipitación y $\text{EOF}_{1,W}$ de viento.

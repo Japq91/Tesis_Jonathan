@@ -1,0 +1,79 @@
+\chapter{Introdução} \label{ch:introduccion}
+
+% ============================================================
+%  BLOCO 1 — CONTEXTO: RELEVÂNCIA DO FENÔMENO E ESTADO DA ARTE
+% ============================================================
+
+% --- 1.1: Papel climático e dinâmico global; algoritmos de rastreamento ---
+Os ciclones extratropicais (ETC, sigla em inglês) são sistemas sinóticos recorrentes em latitudes médias e altas que dominam o tempo severo dessas regiões.
+\citet{hoskins2005new} caracterizam os \textit{storm tracks} do HS, os corredores preferenciais por onde se concentra a atividade ciclônica do hemisfério.
+Para sua quantificação, foram desenvolvidos algoritmos de rastreamento objetivo, como propõe \citet{sinclair1994objective}, utilizando a vorticidade relativa para identificá-los e rastreá-los independentemente do fluxo de fundo, enquanto \citet{simmonds1999southern} desenvolveram um esquema complementar, usando a pressão ao nível do mar, para o rastreamento automático de sistemas no HS; e trabalhos atuais como o de \citet{padilhareinke2024objective} continuam optando pela abordagem de vorticidade relativa para a região.
+
+% --- 1.2: Estado da arte regional — climatologia, diversidade estrutural e regionalização ---
+Inicialmente, autores como \citet{gan1991surface} quantificaram que a ciclogênese na região sul-americana é mais frequente no inverno e que sua variabilidade interanual repercute na precipitação do sul do Brasil.
+Pouco depois, a climatologia hemisférica de \citet{jones1993climatology} confirmou esse sinal, identificando a região sul-americana como um núcleo de densidade ciclônica próprio das latitudes extratropicais, distinto das concentrações maiores em latitudes próximas ao polo.
+No Atlântico Sul ocidental, essa atividade ciclônica é particularmente intensa, sendo os ciclones extratropicais os sistemas mais frequentes da região \citep{reboita2026meteorology}.
+Diversos estudos, como o de \citet{reboita2010south}, construíram uma climatologia para o Atlântico Sul e identificaram três centros preferenciais de ciclogênese: um ao sul, vinculado à instabilidade baroclínica dos ventos de oeste, e dois mais ao norte, próximos ao Uruguai e ao sul do Brasil.
+Trabalhos posteriores refinaram essa climatologia por meio de comparações entre reanálises \citep{gramcianinov2020analysis} e da caracterização de sua variabilidade interanual \citep{padilhareinke2026characterization}.
+No entanto, essa atividade ciclônica não é dinamicamente uniforme. \citet{hart2003cyclone} demonstrou que os sistemas transitam ao longo de um contínuo estrutural, e não de categorias estáticas, e no Atlântico Sul essa heterogeneidade se manifesta em ciclones de estrutura térmica híbrida \citep{evans2012climatology} e em sistemas que seguem o modelo de Shapiro-Keyser, com fratura da frente fria e seclusão quente na maturidade \citep{gozzo2013air}.
+Essa diversidade regional também responde à Cordilheira dos Andes, cujo forçante orográfico aumenta a baroclinicidade a sotavento \citep{gan1994influence}, que, combinada com os gradientes de temperatura superficial do mar \citep{reboita2026meteorology}, consolida focos de atividade ciclogenética diferenciados na costa leste da América do Sul, cujos mecanismos são desenvolvidos na Seção~\ref{sec:tb_regiones} dos Fundamentos.
+\label{sec:definicion_regiones}%
+Pelo exposto, este estudo se concentra em três regiões de ciclogênese documentadas por diversos autores \citep{crespo2020potential, gramcianinov2019properties, reboita2026meteorology} e delimitadas seguindo a proposta de \citet{gramcianinov2019properties}: o Sul-Sudeste do Brasil (\textit{Southeast Brazil}, SBR), a bacia de drenagem do Rio da Prata (\textit{La Plata Basin}, LPB) e a costa sudeste da Argentina (\textit{Argentina}, ARG).
+
+% --- 1.3: Mecanismos dinâmicos internos já estabelecidos ---
+A leste dos Andes, a convergência de vento em níveis baixos favorece as condições que produzem precipitações intensas no sudeste da América do Sul, cuja liberação de calor latente retroalimenta e reforça a intensificação do sistema \citep{vera2002cold}.
+O transporte meridional de umidade dos trópicos até esses sistemas é mediado pelo Jato de Baixos Níveis da América do Sul \citep{reboita2026meteorology}, enquanto os fluxos turbulentos de calor superficiais oceano-atmosfera, como aponta \citet{reboita2022from}, não apenas desestabilizam a atmosfera, mas também atuam como fonte diabática que reforça a intensidade do sistema.
+Essa advecção quente se organiza em torno de estruturas de mesoescala conhecidas como cintas transportadoras, a Cinta Transportadora Quente e a Cinta Transportadora Fria (WCB e CCB, respectivamente), cujo papel na distribuição espacial de vento e precipitação é desenvolvido na Seção~\ref{subsec:tb_modelos}.
+O vento em superfície e a precipitação são, por isso, as variáveis escolhidas para caracterizar esses impactos, conforme detalhado na Seção~\ref{sec:tb_compound_def}.
+
+% ============================================================
+%  BLOCO 2 — PROBLEMA: A LACUNA NA CARACTERIZAÇÃO ESTRUTURAL
+% ============================================================
+Apesar desse conhecimento consolidado sobre onde, quando e por qual mecanismo se formam os ETC do Atlântico Sul, persistem lacunas sobre \emph{como} se distribuem espacialmente as magnitudes de superfície ao longo do ciclo de vida.
+Esse desconhecimento reside, em parte, no fato de que a intensidade de um ETC não pode ser capturada por uma única métrica. \citet{corner2025classification} mostram que, embora as medidas dinâmicas como a vorticidade, a pressão e o vento em superfície se relacionem linearmente entre si, seu vínculo com a precipitação e a severidade dos ventos é consideravelmente mais fraco e não linear, e \citet{sinclair2023relationship} confirmam esse limite ao advertir que um ETC pode ser dinamicamente intenso, mas gerar pouca chuva se não houver suprimento adequado de umidade.
+A essa insuficiência escalar soma-se uma insuficiência posicional.
+Os máximos de vento não se distribuem uniformemente em torno do centro do ciclone, mas se concentram em quadrantes específicos cuja localização varia com estruturas de mesoescala e com a fase de seu desenvolvimento \citep{eisenstein2023identification}, mecanismo desenvolvido na Seção~\ref{subsec:tb_kde_asimetria}.
+
+Os ETCs podem se desenvolver por meio de mecanismos atípicos para a região, como constataram \citet{gozzo2013air,reboita2022from}, o que impede assumir seus campos de superfície a priori.
+Embora vento e precipitação respondam a mecanismos distintos, \citet{chen2025characteristics} quantificam que a maioria dos extremos de vento e precipitação associados a ETC coocorrem, demandando uma análise conjunta de sua covariabilidade estrutural ao longo do ciclo de vida.
+Nessa mesma linha, \citet{han2025system} propõem um referencial de classificação que vincula a evolução do sistema a suas manifestações de vento e precipitação, superando a limitação de abordagens centradas apenas na estrutura térmica, necessidade reforçada por campanhas aerotransportadas que caracterizam camadas de convecção interna não capturadas por produtos convencionais de menor resolução \citep{kaylee2025convection}.
+Essa caracterização tem sido limitada pela resolução espacial disponível. \citet{priestley2022improved} mostram que modelos de baixa resolução subestimam ventos extremos por não resolverem as mesoescalas, enquanto \citet{neu2013intercomparison} apontam que a variabilidade na forma e no tamanho dos ETCs gera divergências de detecção, especialmente em topografia complexa.
+
+% ============================================================
+%  BLOCO 3 — JUSTIFICATIVA E IMPLICAÇÕES
+% ============================================================
+No Atlântico Sul ocidental, os ETCs modulam o estado do mar costeiro \citep{gramcianinov2023impact}, com variabilidade intrassazonal (~40 dias) \citep{sasaki2021intraseasonal}, sugerindo que o risco costeiro pode ser modulado em escalas que excedem eventos sinóticos individuais.
+Os registros de 40 anos mostram tendência a ciclones maiores e mais intensos no HS \citep{simmonds2000variability}, intensificação que projeções de aquecimento projetam particularmente na precipitação (~7\%/K) \citep{kodama2019perspective}, e que simulações de alta resolução também antecipam para o setor quente dos ETC mais intensos, com aumentos significativos de vento e precipitação durante suas etapas de desenvolvimento \citep{gentile2025response}.
+No litoral sul do Brasil, \citet{bartolomei2024extremos} documentam impactos socioeconômicos de ETCs invernais, confirmados como os principais motores de tempestades costeiras \citep{miranda2026patterns,bitencourt2010relating}.
+Caracterizar onde e em qual fase do ciclo se concentram os máximos de vento e precipitação, em vez de depender de métricas escalares, permitiria antecipar impactos costeiros com maior precisão e construir referenciais de classificação que vinculem a evolução do sistema a manifestações de superfície \citep{han2025system}.
+
+A viabilidade dessa caracterização se apoia em três desenvolvimentos recentes.
+Primeiro, a disponibilidade da reanálise ERA5 \citep{hersbach2020era5}, cujo espaçamento horizontal ($\sim$31 km) e temporal (horário) permite resolver os gradientes de pressão e os fluxos de umidade que gerações anteriores de dados suavizavam; validações específicas para a região \citep{gramcianinov2020analysis} e comparações com outras fontes de dados para a detecção de ciclogênese na América do Sul \citep{dalanhese2023new} respaldam essa escolha, embora o ERA5 apresente vieses conhecidos na representação dos extremos mais intensos, discutidos na Seção~\ref{sec:datos_era5}.
+Segundo, a base de dados de trajetórias de \citet{gramcianinov2020analysis}, fundamentada no rastreamento por vorticidade relativa a 850 hPa ($\zeta_{850}$) em vez da pressão ao nível do mar, cuja sustentação é desenvolvida na Seção~\ref{sec:tb_vorticidad}, e que além disso incorpora a segmentação objetiva do algoritmo \textit{CycloPhaser} \citep{coutodesouza2024new, deSouza2025CycloPhaser}, que define quatro fases dinâmicas discretas, incipiente, intensificação, maturidade e decaimento, e supera as limitações das classificações clássicas no contexto do Atlântico Sul \citep{deSouza2025CycloPhaser}, em sintonia com o referencial oferecido pelo modelo Shapiro-Keyser \citep{shapiro1990life,shapiro1999bridge} para interpretar a distribuição espacial dos máximos de vento e precipitação (Seção~\ref{subsec:tb_modelos}).
+Terceiro, a disponibilidade de técnicas estatísticas capazes de capturar simultaneamente a assimetria estrutural de cada campo e sua covariabilidade.
+Dado que a estrutura do ciclone apresenta uma variabilidade espacial contínua na qual a circulação do vento e os núcleos de precipitação podem covariar durante a evolução do sistema, a análise de Funções Ortogonais Empíricas Multivariadas (MEOF) permite extrair modos de variabilidade conjunta de variáveis fisicamente distintas \citep{liang2018multivariate}, diferentemente da análise univariada de EOF aplicada separadamente a cada campo, capturando assim a organização espacial conjunta de ambos.
+A utilidade desses padrões e de suas componentes principais transcende a caracterização descritiva, com aplicação prática inclusive na previsão de precipitação \citep{sun2022evaluation}, e sua robustez estatística pode ser avaliada mediante técnicas de reamostragem (\textit{bootstrap}) que distinguem os sinais físicos consistentes do ruído de amostragem próprio de cada subconjunto.
+
+% ============================================================
+%  BLOCO 4 — PERGUNTA DE PESQUISA, HIPÓTESE E OBJETIVO
+% ============================================================
+
+Os dados de ERA5, a detecção dinâmica por $\zeta_{850}$ \citep{gramcianinov2020analysis} e a classificação objetiva de fases mediante \textit{CycloPhaser} \citep{coutodesouza2024new, deSouza2025CycloPhaser}, juntamente com a análise univariada (EOF) e multivariada (MEOF) desenvolvida nesta investigação, constituem a base para quantificar a evolução da estrutura espacial dos campos de vento e precipitação na região, e para construir, a partir das fases previamente classificadas, protótipos estruturais que sintetizem as características típicas dos ETCs para cada região de gênese e fase evolutiva.
+Com esse referencial de dados, detecção dinâmica e ferramentas analíticas, propõe-se a pergunta que guia esta investigação: como evolui espacialmente a distribuição de vento e precipitação nos ETC do Atlântico Sul, e quais configurações caracterizam essa organização durante as fases incipiente, intensificação, maturidade e decaimento?
+Postula-se que os campos de vento e precipitação apresentam padrões de assimetria que variam entre fases evolutivas, entre regiões de gênese e entre estratos de intensidade dinâmica, contrastando a População Global de ciclones com o subconjunto p90, e que tais padrões não são capturáveis mediante métricas escalares de intensidade central.
+
+\section{Objetivos do Projeto de Pesquisa}
+
+\subsection{Objetivo Geral}
+Caracterizar a evolução da estrutura espacial do vento a 10 metros e da precipitação durante as fases do ciclo de vida dos ETC do Atlântico Sul, por meio de seus padrões de variabilidade e da densidade probabilística de seus máximos, estratificando por região de gênese e por intensidade dinâmica (População Global e subconjunto p90).
+
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+    \item Consolidar uma base de dados semilagrangeana dos ETC do Atlântico Sul que associe os campos horários de alta resolução de vento e precipitação (ERA5) às trajetórias e fases dinâmicas (incipiente, intensificação, maturidade e decaimento), estratificando a amostra resultante por região de gênese (SBR, LPB e ARG) e por intensidade dinâmica.
+
+    \item Quantificar a distribuição estatística e a assimetria espacial dos máximos de vento a 10 m e de precipitação mediante estimação de densidade por núcleos, caracterizando tanto a distribuição de probabilidade de suas magnitudes (PDF unidimensional) quanto a localização preferencial desses máximos em relação ao centro do ciclone (PDF espacial).
+
+    \item Identificar os modos dominantes de variabilidade espacial dos campos de vento e precipitação mediante Funções Ortogonais Empíricas univariadas (EOF) e multivariadas (MEOF), avaliando o padrão estrutural individual de cada variável e sua covariabilidade conjunta.
+
+    \item Construir protótipos estruturais sintéticos por fase evolutiva e região de gênese, integrando os padrões EOF1 univariados de cada campo com as densidades probabilísticas de localização de máximos (PDFe), para caracterizar a organização espacial conjunta dos máximos de vento e precipitação.
+\end{enumerate}
