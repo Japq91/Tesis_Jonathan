@@ -5,7 +5,9 @@ Archivo de seguimiento para la revisión de autoría/citas/coherencia de `Tesis_
 
 ## Pendientes por verificar
 
-### 1. Librería de PCA usada en el código real (servidor swell)
+### 1. Librería de PCA usada en el código real (servidor swell) — RESUELTO (2026-10-09)
+Verificado en `/p1-swell/japq/defensa/cods`: los mapas EOF/PC usan `sklearn.decomposition.PCA` (`pca_02_calculo.ipynb`, `py_files/aux_meof.py`), sin convención de signo post-hoc; el Bootstrap-t usa `xeofs` (`py_files/aux_xeof.py`), tal como dice Métodos. El EOF1 de ambas librerías coincide con r=+1.000 en los 48 paneles (2 variables × 3 regiones × 4 fases × 2 poblaciones), así que las figuras de EOF1 y las de significancia no tienen el signo invertido entre sí. La comparación de signo entre descomposiciones ya se resolvió reportando |r| (commit f58a5e2). Texto original de la nota, abajo.
+
 El código local revisado (`~/defensa/cods/pca_02_calculo.ipynb`, versión local desactualizada) usa
 `sklearn.decomposition.PCA()`. El usuario confirma que **el código real y final se ejecutó en el
 servidor "swell"**, no en esta máquina, y no está seguro si allá se usó `sklearn`, `xeofs`
@@ -948,3 +950,15 @@ Pendientes heredados de capítulos anteriores, aún abiertos:
    acceso del usuario al código de swell.
 2. Dirección este/oeste de migración del núcleo en `sec:kde_espacial_global` (Cap. 4) con valores
    $(\Delta x_{\text{moda}}, \Delta y_{\text{moda}})$ si el usuario los consigue.
+
+## Cierre de pendientes (2026-10-09)
+- Cap. 6 l.156: quitada la cláusula de `coutodesouza2024thesis` (G_E de ARG), reintroducida en f58a5e2 tras haberse quitado en A3; la referencia apuntaba además a `subsec:tb_arg`, que no menciona G_E.
+- Cap. 7 "banda de ARG más difusa" (l.59): verificado con el área real dentro de los contornos PDFe (archivos `kde2d_*.nc`, mismo suavizado y máscara que `prototipo_03.py`). En madurez p90 ARG es tan compacta como SBR y más que LPB, así que "más difusa" se quitó; se reemplazó por la estabilidad de la moda entre madurez y decaimiento (ARG ~1,1°, SBR ~1,7°, LPB ~2,9°).
+- Cap. 7 l.40 (Población Global): decía que SBR y LPB tienen la distribución de precipitación más extensa, pero ARG es la más extensa en las cuatro fases; corregido y quitada la explicación causal (humedad oceánica y "celdas de precipitación", no analizadas).
+- Librería PCA y signo: resuelto (ver pendiente 1).
+- Cap. 4 migración del núcleo (pendiente 2): verificada con los `.nc` de `defensa/kde/kde_data_{global,p90}` (mismo tratamiento que `aux_kde_plot.py`). Ic E (NE en ARG), It E en SBR/LPB y O-NO en ARG, M NO en las tres (secundario E en SBR y LPB), D E-NE en SBR y NO en LPB/ARG; densidades del texto correctas. Única corrección: la Población Global supera al p90 en densidad máxima en 5 de 9 casos fuera de la madurez (Ic LPB y ARG, It LPB, D SBR y ARG), no solo en 2.
+- Cap. 7 l.78: quitadas las oraciones de SBR/"humedad subtropical" y de gozzo2014subtropical (solo se cumplían en 1-2 fases y la causa no se analiza); el resto se unió al párrafo de Priestley.
+- Cap. 5 D6, oración de Flaounas 2018: descartada (decisión del usuario). Redundante con D4 (l.88), y la convección profunda de Flaounas se ubica "close to the cyclones' centre and to their eastern sides", mientras que los núcleos p90 de madurez están a 3,5-7° al este sin máximos en el centro.
+- Resumen/Resumo/Abstract (los tres eran traducción literal entre sí, en tex_es/ y tex/): corregidos N1 (viento "pasivo y predecible"), N2 ("colapsa en el núcleo... sureste y sur" -> se alejan del centro, al este y sureste; Cap. 5), N3 ("el MEOF muestra que ambas transformaciones son una misma reorganización" contradecía el Alcance del Cap. 6; "anticovarianza geométrica" y "desde la madurez" -> en la madurez, PC1 univariadas, con la salvedad de que el viento domina el MEOF1), N4 (este-sureste), N5 (párrafo final: "ETC maduros" -> más intensos; quitada la "parametrización que subestima la ubicación", no evaluada), V1 (gramática), V2 (palabras clave en el idioma de cada texto). Las Conclusiones ya tenían la salvedad del MEOF; sin cambios.
+- Pendiente detectado: síntesis del Cap. 7 (l.90) dice que la separación p90 "no tiene equivalente en la Población Global", pero ARG-PG ya separa 10,4° (M) y 10,7° (D); y ubica la precipitación "al sureste y sur" cuando las modas están al este-sureste.
+- Cap. 7 síntesis y cuerpo, Cap. 8 l.25, Cap. 9 l.23 (separaciones modales verificadas con `kde2d`): PG temprana sin co-localización en ARG-It (5,5°); SBR-PG re-aproxima en D (1,8°); "no tiene equivalente en la PG" falso para ARG (PG 10,4-10,7°); SBR-p90 9,5° en M y 9,3° en D (no "aumenta a más de 9°"); el decaimiento solo amplía la separación en LPB y ARG; precipitación al este-sureste (no "sureste y sur"); quitado "máxima profundidad dinámica".
